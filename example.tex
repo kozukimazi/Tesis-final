@@ -1817,13 +1817,13 @@ Con $W$ el ancho de la lorentziana y $\gamma_{0}$,$\gamma_{f}$ constantes. Para 
 Con estas igualdades se pueden determinar los valores de $\gamma_{0}$, $\gamma_{f}$ y $W$. Reemplazando $\gamma(\omega)$ en la función correlación se tendrá
 
 \begin{align*}
-    C^{\sigma}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma(\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma(\omega-\mu))
+    C^{\sigma}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu))
 \end{align*}
 
 La función correlación se puede separar en dos partes
 
 \begin{equation*}
-    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma(\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma(\omega-\mu))
+    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu))
 \end{equation*}
 
 Y podremos determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0},\tau_{Bf}\}$. Se partirá calculando una expresión analítica aproximada de la función correlación $C^{\sigma}_{f}(t)$, para realizar este integral se deberá localizar los polos en el plano complejo, para ello notemos que para \ref{apendix5:pade} los polos se ubican en $z= \pm i \xi_{l}/\beta + \mu $. Mientras que para la Lorentziana los polos se ubican en $z = \pm i W + \omega_{0}$. Para poder realizar este integral se usará el teorema del residuo \cite{riley2006mathematical}, tomando como zona de integración un semicírculo en el hemisferio positivo o negativo dependiendo del signo de $\sigma$, como sale en la Figura(HACER FIGURA). Primero encontremos el residuo de la Lorentziana para ello 
@@ -1866,7 +1866,11 @@ En donde
     \gamma_{\sigma,l} =  \left\{ \begin{array}{lc} W- \sigma i \omega_{0}  & l = 0 \\ \\ \frac{\xi_{l}}{\beta} - \sigma i \mu &  l \neq 0 \end{array} \right.
 \end{equation*}
 
-Esto permite una expresión numérica para la función correlación $C^{\sigma}_{f}(t)$ y así evaluar su tiempo de correlación $\tau_{Bf}$. Para la otra función correlación se podrá encontrar el integral de manera analítica,queso.
+Esto permite una expresión numérica para la función correlación $C^{\sigma}_{f}(t)$ y así evaluar su tiempo de correlación $\tau_{Bf}$. Para la otra función correlación se podrá encontrar el integral de manera analítica, es decir calcular
+
+\begin{align*}
+       C_{0}^{\sigma}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t }f_{F}(\sigma \beta (\omega -  \mu))
+\end{align*}    
 
 \label{appendix5final}
 
