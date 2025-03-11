@@ -1882,8 +1882,15 @@ Es decir podemos centrarnos en calcular la transformación
 
 \begin{align*}
     \mathcal{F}(f[\sigma \omega])(-\sigma t) &= \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega \frac{e^{i\sigma \omega t}}{e^{\sigma \beta \omega} +1 } \\
-        & = \frac{\gamma_{0}}{4\pi} \left[\int_{-\infty}^{\infty}d \omega e^{i\sigma \omega t} - \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} \tanh \left(\frac{ \sigma \beta \omega }{2} \right)   \right]
+        & = \frac{\gamma_{0}}{4\pi} \left[\int_{-\infty}^{\infty}d \omega e^{i\sigma \omega t} - \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} \tanh \left(\frac{ \sigma \beta \omega }{2} \right)   \right] \\
+        & =  \frac{\gamma_{0}}{2} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right]
 \end{align*}
+
+Y así finalmente
+
+\begin{equation*}
+    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right]
+\end{equation*}
 
 
 \label{appendix5final}
