@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1741660913 "main.aux" "main.bbl" "main" 1741661031 0
+["bibtex main"] 1741660913 "main.aux" "main.bbl" "main" 1741717481 0
   "./library.bib" 1741655937 9655 f48f86cc5280d743654223654fd63d0f ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1741661030 40717 1d2bc7cf90b90c4e221372d576f7fa63 "pdflatex"
+  "main.aux" 1741717479 40717 1d2bc7cf90b90c4e221372d576f7fa63 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1741661026 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1741661031 0
+["pdflatex"] 1741717476 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1741717481 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1733711233 81086 6fddea6b023469843de28035c851ec71 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -277,15 +277,15 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1741655937 2769 ce3b35c7821496972c0a8f6bb3a2998d ""
-  "example.tex" 1741661025 138078 785327a1586f4ec22b10affec109765f ""
+  "example.tex" 1741717476 138751 223478f2c3e78adaa04407fd2f68a0f0 ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/semilocal1.png" 1741655937 28282 da18a6e864e5fa1de5d2fd07af08a6f1 ""
-  "main.aux" 1741661030 40717 1d2bc7cf90b90c4e221372d576f7fa63 "pdflatex"
+  "main.aux" 1741717479 40717 1d2bc7cf90b90c4e221372d576f7fa63 "pdflatex"
   "main.bbl" 1741660914 7211 38ab2c9e1d8fec50a66eab11b9c037f7 "bibtex main"
-  "main.lof" 1741661030 875 ffbd36654e01031dff47a5629191f529 "pdflatex"
+  "main.lof" 1741717479 875 ffbd36654e01031dff47a5629191f529 "pdflatex"
   "main.tex" 1741655937 2769 ce3b35c7821496972c0a8f6bb3a2998d ""
-  "main.toc" 1741661030 4943 2d816652b4cff094c7d76ba5b6b3ef29 "pdflatex"
+  "main.toc" 1741717479 4943 2d816652b4cff094c7d76ba5b6b3ef29 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
