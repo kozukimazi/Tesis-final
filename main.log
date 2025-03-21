@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  19 MAR 2025 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  20 MAR 2025 21:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2301,7 +2301,7 @@ LaTeX Info: Redefining \% on input line 1.
 
  [6
 
-{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (example.tex
+{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] (example.tex
 Capítulo 1.
 [1
 
@@ -2310,13 +2310,13 @@ Capítulo 1.
 Capítulo 2.
 [2
 
-{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [3] [4] [5] [6]
+{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [3] [4] [5] [6]
 Capítulo 3.
 [7
 
 ] [8] [9] [10] [11] [12] [13] [14] [15] [16]
 Capítulo 4.
-<./img//ejemplos/Maxwelldemon1.pdf, id=363, 457.71pt x 168.63pt>
+<./img//ejemplos/Maxwelldemon1.pdf, id=362, 457.71pt x 168.63pt>
 File: ./img//ejemplos/Maxwelldemon1.pdf Graphic file (type pdf)
 <use ./img//ejemplos/Maxwelldemon1.pdf>
 Package pdftex.def Info: ./img//ejemplos/Maxwelldemon1.pdf  used on input line 716.
@@ -2325,7 +2325,7 @@ Package pdftex.def Info: ./img//ejemplos/Maxwelldemon1.pdf  used on input line 7
 
 ] [18 <./img//ejemplos/Maxwelldemon1.pdf>] [19] [20] [21] [22] [23] [24]
 Capítulo 5.
-<./img//ejemplos/semilocal1.png, id=451, 527.72156pt x 442.65375pt>
+<./img//ejemplos/semilocal1.png, id=450, 527.72156pt x 442.65375pt>
 File: ./img//ejemplos/semilocal1.png Graphic file (type png)
 <use ./img//ejemplos/semilocal1.png>
 Package pdftex.def Info: ./img//ejemplos/semilocal1.png  used on input line 931.
@@ -2333,23 +2333,23 @@ Package pdftex.def Info: ./img//ejemplos/semilocal1.png  used on input line 931.
 [25
 
  <./img//ejemplos/semilocal1.png>] [26] [27]
-<./img//ejemplos/diseño1.pdf, id=476, 381.26694pt x 247.53897pt>
+<./img//ejemplos/diseño1.pdf, id=475, 381.26694pt x 247.53897pt>
 File: ./img//ejemplos/diseño1.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño1.pdf>
 Package pdftex.def Info: ./img//ejemplos/diseño1.pdf  used on input line 1034.
 (pdftex.def)             Requested size: 228.76192pt x 148.5245pt.
-<./img//ejemplos/diseño2.pdf, id=478, 398.3386pt x 250.38426pt>
+<./img//ejemplos/diseño2.pdf, id=477, 398.3386pt x 250.38426pt>
 File: ./img//ejemplos/diseño2.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño2.pdf>
 Package pdftex.def Info: ./img//ejemplos/diseño2.pdf  used on input line 1038.
 (pdftex.def)             Requested size: 239.00499pt x 150.2317pt.
  [28 <./img//ejemplos/diseño1.pdf>]
-<./img//ejemplos/diseño3.pdf, id=580, 384.1122pt x 199.1693pt>
+<./img//ejemplos/diseño3.pdf, id=579, 384.1122pt x 199.1693pt>
 File: ./img//ejemplos/diseño3.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño3.pdf>
 Package pdftex.def Info: ./img//ejemplos/diseño3.pdf  used on input line 1042.
 (pdftex.def)             Requested size: 230.46909pt x 119.50249pt.
-<./img//ejemplos/figura1jiji.pdf, id=581, 594.66257pt x 549.13818pt>
+<./img//ejemplos/figura1jiji.pdf, id=580, 594.66257pt x 549.13818pt>
 File: ./img//ejemplos/figura1jiji.pdf Graphic file (type pdf)
 <use ./img//ejemplos/figura1jiji.pdf>
 Package pdftex.def Info: ./img//ejemplos/figura1jiji.pdf  used on input line 1045.
@@ -2385,10 +2385,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  113i,12n,110p,2916b,2579s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (61 pages, 674838 bytes).
+Output written on main.pdf (61 pages, 673939 bytes).
 PDF statistics:
- 1246 PDF objects out of 1440 (max. 8388607)
- 1007 compressed objects within 11 object streams
+ 1242 PDF objects out of 1440 (max. 8388607)
+ 1004 compressed objects within 11 object streams
  195 named destinations out of 1000 (max. 500000)
  494 words of extra memory for PDF output out of 10000 (max. 10000000)
 
