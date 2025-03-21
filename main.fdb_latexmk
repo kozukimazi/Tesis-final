@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1742575722.90937 "main.aux" "main.bbl" "main" 1742578254.25927 0
+["bibtex main"] 1742582009.64674 "main.aux" "main.bbl" "main" 1742582015.23539 0
   "./library.bib" 1741616338.6249 9329 f48f86cc5280d743654223654fd63d0f ""
   "./natnumurl.bst" 1741616338.63589 20221 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1742578253.62393 42353 f65937855b009f255651af731bba6cf9 "pdflatex"
+  "main.aux" 1742582014.20704 42844 eb4a3ebcd28d63a236a9dd64402e87ee "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1742578250.79948 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1742578254.25991 0
+["pdflatex"] 1742582009.92286 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1742582015.23608 0
   "/etc/texmf/web2c/texmf.cnf" 1736440629.37754 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/mazi/Desktop/Tesis-final/main.tex" 1741616338.63589 2657 ce3b35c7821496972c0a8f6bb3a2998d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -281,19 +281,20 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1736440671.36949 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736440750 8213355 ec0621fc55a519b6832cde314db671a6 ""
-  "example.tex" 1742578250.51451 142073 3a0c8af4062ea643868ec0a9aefabd73 ""
+  "example.tex" 1742582003.78367 142299 1372de4f26a5bc28fdd166b131526984 ""
   "img//departamentos/uchile2.pdf" 1741616338.6209 18772 45804d175d195d86f4f268558e529a29 ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741616338.6229 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/diseño1.pdf" 1742324295.03452 34307 d49f7823e1c3bad82e4966a9ee5d6d47 ""
   "img//ejemplos/diseño2.pdf" 1742324295.03452 31852 8543a2bae1fabcd87502f5dff6151b62 ""
   "img//ejemplos/diseño3.pdf" 1742324295.03452 29360 99a37a612d73dd9725161a58c6155841 ""
   "img//ejemplos/figura1jiji.pdf" 1742574886.76634 82398 9c1f8e8d41996fb23bf7b430ec046136 ""
+  "img//ejemplos/figuraentrop1.png" 1742580639.47707 33655 89426e4bc86f313b696215a02c490558 ""
   "img//ejemplos/semilocal1.png" 1741616338.6239 28282 109e5249c02d5c552500c3cfbc7f0efe ""
-  "main.aux" 1742578253.62393 42353 f65937855b009f255651af731bba6cf9 "pdflatex"
-  "main.bbl" 1742575723.04944 6931 0466044af0d05e71ab635fdccc1c1cb5 "bibtex main"
-  "main.lof" 1742578253.636 1855 36b3aa5126c77ee8b1976f6389f802d0 "pdflatex"
+  "main.aux" 1742582014.20704 42844 eb4a3ebcd28d63a236a9dd64402e87ee "pdflatex"
+  "main.bbl" 1742582009.89653 6931 0466044af0d05e71ab635fdccc1c1cb5 "bibtex main"
+  "main.lof" 1742582014.22803 2090 3c50d9d176b12370cbc1c2efe14687b8 "pdflatex"
   "main.tex" 1741616338.63589 2657 ce3b35c7821496972c0a8f6bb3a2998d ""
-  "main.toc" 1742578253.636 4943 a2d5742605dcd1f16e6a8133a981640a "pdflatex"
+  "main.toc" 1742582014.22803 4943 fe2a04579682dc9b69406215478386a2 "pdflatex"
   "template.tex" 1741616338.63889 281920 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741616338.63889 21577 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)

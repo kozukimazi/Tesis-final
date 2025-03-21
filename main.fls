@@ -561,6 +561,10 @@ INPUT ./img//ejemplos/figura1jiji.pdf
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT ./img//ejemplos/figuraentrop1.png
+INPUT ./img//ejemplos/figuraentrop1.png
+INPUT ./img//ejemplos/figuraentrop1.png
+INPUT ./img//ejemplos/figuraentrop1.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
