@@ -838,14 +838,14 @@ En donde el acoplamiento con distintos reservorios $\alpha$, consiste en $\mathc
 Definiendo primero, la cantidad $\dot{S}^{\alpha} = - \text{Tr}[(\mathcal{L}_{\alpha}\hat{\rho}_{S}) \ln \hat{\rho}_{S} ]$ como la razón de cambio de la entropía de Von Neumann $S = - \text{Tr}[\hat{\rho}_{S} \ln \hat{\rho}_{S} ]$ debido a la acción del disipador $\mathcal{L}_{\alpha}$, y identificando el flujo de calor en el segundo término de \ref{spohninfo}, se obtiene la razón de producción de entropía local
 
 \begin{equation}
-    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} \dot{Q}_{\alpha} \geq 0
+    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0
 \label{sec4:localentropy}
 \end{equation}
 
 Que actúa como una inecuación de Clausius parcial. Esto es importante, ya que localmente se puede separar la producción de entropía en cantidades mayor a cero, similar a como se hizo en la descripción clásica. De hecho si se suman todas las razones de cambio de entropía, se obtiene la derivada total $\partial_{t} S = \sum_{\alpha} \dot{S}^{\alpha}$, por lo tanto al sumar todas las producciones de entropía locales
 
 \begin{equation*}
-    \sum_{\alpha}\dot{\sigma}^{\alpha} = \partial_{t}S - \sum_{\alpha}\beta_{\alpha}\dot{Q}_{\alpha} = \dot{\sigma} \geq 0
+    \sum_{\alpha}\dot{\sigma}^{\alpha} = \partial_{t}S - \sum_{\alpha}\beta_{\alpha}J_{\alpha} = \dot{\sigma} \geq 0
 \end{equation*}
 
 Que corresponde a la inecuación de Clausius estándar. Se puede notar que para el caso estacionario $\partial_{t}S = 0$, sin embargo no necesariamente $\dot{S}^{\alpha}$ es cero. Sino que depende de el flujo de calor que entra localmente por el disipador $\alpha$. También se puede tratar la inecuación para la energía libre, primero definiendo la corriente de energía y calor correspondientes al baño $\alpha$
@@ -887,7 +887,7 @@ Supongamos la existencia de un sistema hecho por dos subsistemas acoplados
 Donde $H_{i}$ corresponde al Hamiltoniano del subsistema $i=X,Y$, mientras que $H_{XY}$ corresponde al Hamiltoniano de interacción entre los dos subsistemas. Además, se asumirá que cada subsistema se encuentra acoplado a reservorios separados, de tal manera que los reservorios conectados al subsistema $i$ serán denotados por $\alpha_{i}$. Esto permite describir la razón de producción de entropía local de cada subsistema como
 
 \begin{equation*}
-    \dot{\sigma}^{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}^{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} \dot{Q}_{\alpha_{i}} \geq 0
+    \dot{\sigma}^{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}^{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} J_{\alpha_{i}} \geq 0
 \end{equation*}
 
 Por lo tanto la razón de producción de entropía del sistema corresponde a $\dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}$. Similar a como se hizo en la descripción clásica, se buscará relacionar las producciones locales de entropía con la información, para ello se usará la información mutua entre los dos subsistemas $I_{xy} = S_{X} + S_{Y} - S_{XY}$. En donde $S_{i} = - \text{Tr}[ \hat{\rho}_{i}\ln \hat{\rho_{i}}]$ es la entropía de Von Neumann del subsistema $i$ ($\hat{\rho}_{i}$ consiste en la matriz densidad del subsistema $i$). Se puede separar la derivada temporal del flujo de información
@@ -902,8 +902,8 @@ Por lo tanto la razón de producción de entropía del sistema corresponde a $\d
 Definiendo la cantidad $\dot{I}^{i} = \partial_{t}S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} $, se puede separar la derivada total de la información mutua en dos contribuciones. En las razones de producción locales si se reemplaza $\sum_{\alpha_{i}}\dot{S}^{\alpha_{i}} \to \partial_{t}S_{i} - \dot{I}^{i} $ nos queda 
 
 \begin{align*}
-    \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} \dot{Q}_{\alpha_{X}} - \dot{I}^{X} \geq 0 \\
-    \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} \dot{Q}_{\alpha_{Y}} - \dot{I}^{Y} \geq 0
+    \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}^{X} \geq 0 \\
+    \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}^{Y} \geq 0
 \end{align*}
 
 Que coincide con el resultado en la descripción clásica. Aun así, este resultado permite incluir efectos cuánticos del sistema en el flujo de la información, es decir, contribuciones de las partes no diagonales de la matriz densidad. Para la razón de cambio de la energía libre, si consideramos que el subsistema $i$ está conectado a un reservorio isotérmico de temperatura $T_{i}$ podremos considerar
@@ -1041,11 +1041,15 @@ Por último, se produce una tercera etapa descrita por la Figura \ref{img:dinami
 
 \insertimage[\label{img:dinamica3}]{ejemplos/diseño3}{scale=0.6}{Esquema que representa el tercer paso en la dinámica.}
 
-Teniendo esta dinámica del sistema, podremos elegir distintos candidatos para las razones de transición sabiamente con el objetivo de lograr el comportamiento tipo Demonio. Para ello se estudiará el comportamiento de los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L}-\mu_{R}=eV$. En la Figura \ref{img:fig1resultado} se muestra en (a) el resultado los flujos de calor respectivos a cada reservorio, mientras que para la parte (b) se grafica las corrientes de partículas correspondiente a cada reservorio. Es importante mencionar que debido a que no hay hopping entre el sistema y el demonio la corriente $\dot{N}_{d}=0$, mientras que, debido a la conservación de partículas $\dot{N}_{L}=-\dot{N}_{R}$. Esto es importante, ya que nos permite aseverar que el Demonio sólo puede actuar a través del sistema mediante flujos de energía o información. Debido a que se tiene que $\mu_{L}-\mu_{R} = eV$ y $\dot{N}_{\alpha}$ corresponde a la corriente de partículas que libera el reservorio $\alpha$, lo esperable es que en todo el parámetro de valores de $eV$ la corriente $\dot{N}_{L}>0$, sin embargo en el rango de parámetros $eV/T<2.4$ la corriente de partículas es $\dot{N}_{L}<0$ y por ende existe un flujo de corriente en contra del gradiente de potencial. Si es que se analiza de manera aislada el sistema $LR$, este efecto constituye una violación aparente a la segunda ley considerando sólo el sistema $LR$ descrita por la ecuación $\dot{\sigma}^{o}_{LR}= d_{t}S_{LR} - \sum_{i=L,R}J_{i}/T$. Lo que se puede visualizar en la Figura 
+Teniendo esta dinámica del sistema, podremos elegir distintos candidatos para las razones de transición sabiamente con el objetivo de lograr el comportamiento tipo Demonio. Para ello se estudiará el comportamiento de los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L}-\mu_{R}=eV$. En la Figura \ref{img:fig1resultado} se muestra en (a) el resultado los flujos de calor respectivos a cada reservorio, mientras que para la parte (b) se grafica las corrientes de partículas correspondientes a cada reservorio. Es importante mencionar que debido a que no hay hopping entre el sistema y el demonio la corriente $\dot{N}_{d}=0$, mientras que, debido a la conservación de partículas $\dot{N}_{L}=-\dot{N}_{R}$. Esto es importante, ya que nos permite aseverar que el Demonio sólo puede actuar a través del sistema mediante flujos de energía o información. Debido a que se tiene que $\mu_{L}-\mu_{R} = eV$, lo esperable es que en todo el parámetro de valores de $eV$ la corriente $\dot{N}_{L}>0$, sin embargo en el rango de parámetros $eV/T<2.4$ la corriente de partículas es $\dot{N}_{L}<0$ y por ende existe un flujo de corriente en contra del gradiente de potencial. Si es que se analiza de manera aislada el sistema $LR$, este efecto constituye una violación aparente a la segunda ley considerando sólo el sistema $LR$.Ya que si consideramos la razón de producción de entropía aparente descrita por la ecuación $\dot{\sigma}^{o}_{LR}= d_{t}S_{LR} - \sum_{i=L,R}J_{i}/T$. Lo que se puede visualizar en la Figura \ref{img:fig2resultado}.
 
-\insertimage[\label{img:fig1resultado}]{ejemplos/figura1jiji}{scale=0.7}{(a)Flujos de corriente de calor que libera el reservorio $\alpha$. (b)Flujo de corriente de partículas correspondiente a cada reservorio. Para obtener estos resultados se usaron las temperaturas $T=100$, $T_{d}=2$, razones de transición de $\gamma_{L}=\gamma^{U}_{R}= 1/100$, $\gamma_{R}= \gamma^{U}_{L}=1/600$,$\gamma_{D}=\gamma^{U}_{D}=1/50$ , parámetro de acoplamiento $g=5/1000$, interacciones de Coulomb $U=40$,$U_{F} = 500$(dps los ajusto) y por último niveles de energía $\epsilon=4$.}
+\insertimage[\label{img:fig1resultado}]{ejemplos/figura1jiji}{scale=0.7}{(a)Flujos de corriente de calor que libera el reservorio $\alpha$. (b)Flujo de corriente de partículas correspondiente a cada reservorio. Para obtener estos resultados se usaron las temperaturas $T=100$, $T_{d}=2$, razones de transición de $\gamma_{L}=\gamma^{U}_{R}= 1/100$, $\gamma_{R}= \gamma^{U}_{L}=1/600$, $\gamma_{D}=\gamma^{U}_{D}=1/50$ , parámetro de acoplamiento $g=5/1000$, interacciones de Coulomb $U=40$, $U_{F} = 500$ y por último niveles de energía $\epsilon=4$.}
 
 \insertimage[\label{img:fig2resultado}]{ejemplos/figuraentrop1}{scale=0.4}{Gráfico de la razón de producción de entropía aparente del sistema $LR$ dada por $\dot{\sigma}^{o}_{LR}$ en función de $eV/T$.}
+
+En la Figura \ref{img:fig2resultado} se gráfica la razón de producción de entropía aparente en dónde se confirma que para el caso $eV/T<2.4$ hay un rompimiento aparente de la segunda Ley, sin embargo si se calcula la razón de producción de entropía que considerá la contribución de la información 
+
+
 
 % ------------------------------------------------------------------------------
 % NUEVO CAPÍTULO
