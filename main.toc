@@ -32,8 +32,8 @@
 \contentsline {section}{\numberline {5.2}Estudio del transporte}{27}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Demonio de Maxwell en 3 puntos cuánticos}{28}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Conclusiones}{33}{chapter.6}%
-\contentsline {chapter}{Bibliografía}{34}{chapter*.17}%
-\contentsline {chapter}{Anexos}{36}{appendix*.19}%
+\contentsline {chapter}{Bibliografía}{34}{chapter*.18}%
+\contentsline {chapter}{Anexos}{36}{appendix*.20}%
 \contentsline {section}{\numberline {A}Cálculos realizados sección 3}{36}{section.Alph0.1}%
 \contentsline {subsection}{\numberline {A.1}Matriz densidad en función del campo de conteo}{36}{subsection.Alph0.1.1}%
 \contentsline {subsection}{\numberline {A.2}Matriz densidad generalizada}{37}{subsection.Alph0.1.2}%
