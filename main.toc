@@ -8,15 +8,15 @@
 \contentsline {subsection}{\numberline {2.2.2}Ecuación maestra}{3}{subsection.2.2.2}%
 \contentsline {chapter}{\numberline {3}Estadística de conteo(FCS)}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Cantidades termodinámicas}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Leyes de la termodinámica}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Leyes de la termodinámica}{8}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Ley cero}{8}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Primera Ley}{8}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Segunda Ley}{8}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Estadística de medición en dos puntos}{9}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Formalismo de Superoperadores y Espacio de Liouville}{10}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Ecuación maestra generalizada}{11}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Ecuación maestra generalizada}{12}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Resolución finita de energía}{13}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Agrupación de frecuencias}{13}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.2}Agrupación de frecuencias}{14}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Consistencia termodinámica}{15}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Ley cero}{16}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Segunda ley}{16}{subsection.3.6.2}%
