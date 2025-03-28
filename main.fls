@@ -515,6 +515,7 @@ INPUT main.lof
 OUTPUT main.lof
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT ./example.tex
 INPUT ./example.tex
 INPUT ./example.tex
@@ -525,7 +526,6 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
@@ -573,6 +573,14 @@ INPUT ./img//ejemplos/drawing3.pdf
 INPUT ./img//ejemplos/drawing3.pdf
 INPUT ./img//ejemplos/drawing3.pdf
 INPUT ./img//ejemplos/drawing3.pdf
+INPUT ./img//ejemplos/concu1.png
+INPUT ./img//ejemplos/concu1.png
+INPUT ./img//ejemplos/concu1.png
+INPUT ./img//ejemplos/concu1.png
+INPUT ./img//ejemplos/systemg.pdf
+INPUT ./img//ejemplos/systemg.pdf
+INPUT ./img//ejemplos/systemg.pdf
+INPUT ./img//ejemplos/systemg.pdf
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
@@ -590,6 +598,7 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr5.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmri12.pfb
