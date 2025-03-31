@@ -573,6 +573,10 @@ INPUT ./img//ejemplos/drawing3.pdf
 INPUT ./img//ejemplos/drawing3.pdf
 INPUT ./img//ejemplos/drawing3.pdf
 INPUT ./img//ejemplos/drawing3.pdf
+INPUT ./img//ejemplos/info1.png
+INPUT ./img//ejemplos/info1.png
+INPUT ./img//ejemplos/info1.png
+INPUT ./img//ejemplos/info1.png
 INPUT ./img//ejemplos/concu1.png
 INPUT ./img//ejemplos/concu1.png
 INPUT ./img//ejemplos/concu1.png
@@ -581,6 +585,10 @@ INPUT ./img//ejemplos/systemg.pdf
 INPUT ./img//ejemplos/systemg.pdf
 INPUT ./img//ejemplos/systemg.pdf
 INPUT ./img//ejemplos/systemg.pdf
+INPUT ./img//ejemplos/concu.pdf
+INPUT ./img//ejemplos/concu.pdf
+INPUT ./img//ejemplos/concu.pdf
+INPUT ./img//ejemplos/concu.pdf
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
