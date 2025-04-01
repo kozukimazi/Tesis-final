@@ -1027,9 +1027,16 @@ Usando esta ecuación se podrá calcular la evolución del sistema númericament
 
 \label{sec5:modelo}
 
+\newpage
+
 \section{Estudio del transporte}
+Inicialmente consideramos el caso en que las razones de transición no dependen de la frecuencia, es decir $\gamma_{i}(\omega) = \gamma_{i}$. Se estudiará el flujo de corriente ante una diferencia de potencial $\mu_{L}-\mu_{R} = eV$, considerando las razones de transición $\gamma_{L}=\gamma_{R}=1/100$, $\gamma_{d}=1/50$. Se obtiene
+
+\insertimage[\label{img:transporte1}]{ejemplos/transprtcurrent.png}{scale=0.4}{Gráfico que representa la corriente de partículas en función de $eV/T$. Los parámetros son $E_{0}=4$, $E_{d}=\mu_{d}-U/2$, }
+
 
     
+
 \newpage
 
 \section{Demonio de Maxwell en 3 puntos cuánticos}
@@ -1065,24 +1072,27 @@ Por ende para hacer el análisis, se grafican estas cantidades termodinámicas p
 
 \insertimage[\label{img:fig4resultado}]{ejemplos/drawing3}{scale=0.74}{(a) Gráfico del flujo de energía, la razón de cambio de energía libre, contribución de información, potencia y flujo de calor del sistema LR. (b) Gráfico del flujo de energía, la razón de cambio de energía libre, contribución de información, potencia y flujo de calor del Demonio. }
 
-El gráfico de la Figura \ref{img:fig4resultado} nos muestra primero que el flujo de energía en comparación a la contribución de la información es pequeña. Es así que en la zona en que el sistema $LR$ realiza trabajo ($\dot{W}_{LR}<0$ y  $\dot{\mathcal{F}}_{LR}<0$) se cumple que $\dot{\mathcal{F}}_{LR}\approx T\dot{I}_{LR}$ y que $\dot{E}_{LR}\approx 0$, lo que promueve la interpretación de este dispositivo como Demonio. La potencia descrita por $\dot{W}_{LR}$ cumple que es menor a cero porque la corriente va en contra del gradiente del potencial, justamente esto es debido a que para producir esta corriente el sistema necesita realizar trabajo. Para poder realizar este trabajo, el sistema absorbe calor del baño $J_{LR}>0$. Por otro lado, debido a que no hay flujo de corriente en el Demonio, se tiene que $\dot{N}_{d}=0$ por lo tanto  $\dot{E}_{d} = J_{d}$. Y en el gráfico se visualiza que el flujo de energía del demonio es menor a cero, por ende el Demonio libera calor al baño descrito por la temperatura $T_{d}<T$. Este efecto también se puede ver como el de una máquina térmica, ya que si consideramos el sistema completo, este sistema recibe un flujo de calor $J_{LR}$ de un reservorio de mayor temperatura, el cuál una parte la transforma en potencia $\dot{W}_{LR}$ y otra la libera al baño de menor temperatura como calor $J_{d}$ de tal manera que $J_{d} + J_{LR} = - \dot{W}_{LR}$. También se pueden separar los flujos de información en contribuciónes individuales $\dot{I}_{LR} = \dot{I}_{L}+\dot{I}_{R}$ para hacer la interpretación de que punto cuántico entrega más información. El resultado es la Figura
+El gráfico de la Figura \ref{img:fig4resultado} nos muestra primero que el flujo de energía en comparación a la contribución de la información es pequeña. Es así que en la zona en que el sistema $LR$ realiza trabajo ($\dot{W}_{LR}<0$ y  $\dot{\mathcal{F}}_{LR}<0$) se cumple que $\dot{\mathcal{F}}_{LR}\approx T\dot{I}_{LR}$ y que $\dot{E}_{LR}\approx 0$, lo que promueve la interpretación de este dispositivo como Demonio. La potencia descrita por $\dot{W}_{LR}$ cumple que es menor a cero porque la corriente va en contra del gradiente del potencial, justamente esto es debido a que para producir esta corriente el sistema necesita realizar trabajo. Para poder realizar este trabajo, el sistema absorbe calor del baño $J_{LR}>0$. Por otro lado, debido a que no hay flujo de corriente en el Demonio, se tiene que $\dot{N}_{d}=0$ por lo tanto  $\dot{E}_{d} = J_{d}$. Y en el gráfico se visualiza que el flujo de energía del demonio es menor a cero, por ende el Demonio libera calor al baño descrito por la temperatura $T_{d}<T$. Este efecto también se puede ver como el de una máquina térmica, ya que si consideramos el sistema completo, este sistema recibe un flujo de calor $J_{LR}$ de un reservorio de mayor temperatura, el cuál una parte la transforma en potencia $\dot{W}_{LR}$ y otra la libera al baño de menor temperatura como calor $J_{d}$ de tal manera que $J_{d} + J_{LR} = - \dot{W}_{LR}$. También se pueden separar los flujos de información en contribuciónes individuales $\dot{I}_{LR} = \dot{I}_{L}+\dot{I}_{R}$ para hacer la interpretación de que punto cuántico entrega más información. El resultado es la Figura \ref{img:figinforesultado}
   
 \insertimage[\label{img:figinforesultado}]{ejemplos/info1.png}{scale=0.45}{(a) Gráfico del flujo de energía, la razón de cambio de energía libre, contribución de información, potencia y flujo de calor del sistema LR. (b) Gráfico del flujo de energía, la razón de cambio de energía libre, contribución de información, potencia y flujo de calor del Demonio. }
 
-
+Es interesante percatarse que cuando $eV/T>4$ se tiene que el punto cuántico que entrega más información es $R$, mientras que para $eV/T<4$ el punto cuántico $L$ entrega más información.  
 Otro factor importante que se puede considerar es si en está dinámica hay efectos cuánticos presentes. Para ello, se gráfica la norma-$l_{1}$ $\mathcal{C}_{l_{1}}$ de la coherencia y además se gráfica la concurrencia 
 
-\insertimage[\label{img:fig5resultado}]{ejemplos/concu1.png}{scale=0.45}{En líneas azul la norma-$l_{1}$ de la coherencia $\mathcal{C}_{l_{1}}$ y en líneas rojas la concurrencia $\mathcal{C}_{on}$.}
+\insertimage[\label{img:fig5resultado}]{ejemplos/concu1.png}{scale=0.40}{En líneas azul la norma-$l_{1}$ de la coherencia $\mathcal{C}_{l_{1}}$ y en líneas rojas la concurrencia $\mathcal{C}_{on}$.}
 
 Se pueden notar dos comportamientos interesantes, el primero es que para $eV/T \leq 1$ la concurrencia $\mathcal{C}_{on}>0$, por lo tanto hay entrelazamiento enntre los sitios $L$ y $R$. Segundo si se analiza la coherencia, para aproximadamente $eV/T<2.4$ esta disminuye hasta llegar a cero y luego empieza a crecer a medida que aumenta $eV/T$. Lo que es interesante, ya que el efecto de la coherencia se anula en un punto cercano al punto en donde la corriente de partículas cambia de dirección. Teniendo en consideración el comportamiento tipo Demonio, es interesante ver como estas cantidades son influenciadas por el acoplamiento $g$, se partirá por las cantidades termodinámicas 
 
-\insertimage[\label{img:fig6resultado}]{ejemplos/systemg.pdf}{scale=0.8}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
+\insertimage[\label{img:fig6resultado}]{ejemplos/systemg.pdf}{scale=0.80}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
 
-Se puede notar que a medida que $g\sim \gamma_{L}$ la potencia y la contribución de la información en el sistema $LR$ aumenta, lo cuál es interesante ya que permite ver como el acoplamiento favorece este hecho. Por otro lado, se puede ver las contribuciones individuales en los flujos de información y como este es influenciado debido al acoplamiento, es decir lo que se vee en la Figura \ref{img:fig7resultado}
+Se puede ver que a medida que $g\sim \gamma_{L}$, la potencia y la contribución de la información en el sistema $LR$ aumenta, lo cuál es interesante ya que permite ver como el acoplamiento favorece este hecho. Por otro lado, se puede ver las contribuciones individuales en los flujos de información y como este es influenciado debido al acoplamiento, es decir lo que se vee en la Figura \ref{img:fig7resultado}
 
 \insertimage[\label{img:fig7resultado}]{ejemplos/concu.pdf}{scale=0.8}{ (a)Gráfico de los flujos de información de cada sitio. (b)Gráfico de la concurrencia y la coherencia en función de $g/\gamma_{L}$. }
 
-Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencias y coherencias estan cerca de un peak, y a la vez los flujos de información del sitio $L$ y $R$ se vuelven $\dot{I}_{L} \approx \dot{I}_{R}$. Basicaménte a medida que el entrelazamiento y la coherencia actua en los dos sitios, los dos sitios entregan la misma información.
+Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencias y coherencias estan cerca de un peak, y a la vez los flujos de información del sitio $L$ y $R$ se vuelven $\dot{I}_{L} \approx \dot{I}_{R}$. Basicamente a medida que el entrelazamiento y la coherencia se hace presente entre los dos sitios, los dos sitios entregan casi la misma información.
+
+
+\subsection{Comparación caso clásico vs cuántico}
 
 
 % ------------------------------------------------------------------------------
