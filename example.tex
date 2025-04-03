@@ -1030,12 +1030,15 @@ Usando esta ecuación se podrá calcular la evolución del sistema númericament
 \newpage
 
 \section{Estudio del transporte}
-Inicialmente consideramos el caso en que las razones de transición no dependen de la frecuencia, es decir $\gamma_{i}(\omega) = \gamma_{i}$. Se estudiará el flujo de corriente ante una diferencia de potencial $\mu_{L}-\mu_{R} = eV$, considerando las razones de transición $\gamma_{L}=\gamma_{R}=1/100$, $\gamma_{d}=1/50$. Se obtiene
+Inicialmente consideramos el caso en que las razones de transición no dependen de la frecuencia, es decir $\gamma_{i}(\omega) = \gamma_{i}$. Se estudiará el flujo de corriente ante una diferencia de potencial $\mu_{L}-\mu_{R} = eV$, considerando las razones de transición $\gamma_{L}=\gamma_{R}=1/100$, $\gamma_{d}=1/50$. Se obtiene la Figura \ref{img:transporte1}
 
-\insertimage[\label{img:transporte1}]{ejemplos/transprtcurrent.png}{scale=0.4}{Gráfico que representa la corriente de partículas en función de $eV/T$. Los parámetros son $E_{0}=4$, $E_{d}=\mu_{d}-U/2$, }
+\insertimage[\label{img:transporte1}]{ejemplos/transprtcurrent.png}{scale=0.35}{Gráfico que representa la corriente de partículas en función de $eV/T$. Las temperaturas del sistema son $T_{L}=T_{R}= 100$, $T_{d} = 2$, el parámetro de acoplamiento es $g = 5/1000$, las energías de sitio son $\epsilon = 4$, $\epsilon_{d} = \mu_{d}- U/2$, y energías de Coulomb $U_{F}=500$, $U=40$.}
 
+Esta figura permite determinar que a medida que aumenta $eV$ la corriente de partículas $\dot{N}_{L} = -\dot{N}_{R}$ que va del baño $L$ al baño $R$ crece. Lo que es esperable, ya que la diferencia de potencial induce el transporte de partículas de un mayor potencial hacia un menor potencial. También se puede graficar la potencia que es entregada a este sistema 
 
+\insertimage[\label{img:transporte2}]{ejemplos/transportwork.png}{scale =0.35}{Gráfico de la potencia que entrega el reservorio conectado al sistema $LR$.}
     
+La Figura \ref{img:transporte2} nos dice que el reservorio entrega trabajo al sistema para poder realizar la corriente, lo que tmabién es esperable, dado que al pasar de un potencial mayor a uno menor el electró
 
 \newpage
 
@@ -1054,7 +1057,7 @@ Por último, se produce una tercera etapa descrita por la Figura \ref{img:dinami
 
 Teniendo esta dinámica del sistema, podremos elegir distintos candidatos para las razones de transición sabiamente con el objetivo de lograr el comportamiento tipo Demonio. Para ello se estudiará el comportamiento de los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L}-\mu_{R}=eV$. En la Figura \ref{img:fig1resultado} se muestra en (a) el resultado los flujos de calor respectivos a cada reservorio, mientras que para la parte (b) se grafica las corrientes de partículas correspondientes a cada reservorio. Es importante mencionar que debido a que no hay hopping entre el sistema y el demonio la corriente $\dot{N}_{d}=0$, mientras que, debido a la conservación de partículas $\dot{N}_{L}=-\dot{N}_{R}$. Esto es importante, ya que nos permite aseverar que el Demonio sólo puede actuar a través del sistema mediante flujos de energía o información. Debido a que se tiene que $\mu_{L}-\mu_{R} = eV$, lo esperable es que en todo el parámetro de valores de $eV$ la corriente $\dot{N}_{L}>0$, sin embargo en el rango de parámetros $eV/T<2.4$ la corriente de partículas es $\dot{N}_{L}<0$ y por ende existe un flujo de corriente en contra del gradiente de potencial. Si es que se analiza de manera aislada el sistema $LR$, este efecto constituye una violación aparente a la segunda ley. Ya que si consideramos la razón de producción de entropía aparente descrita por la ecuación $\dot{\sigma}^{o}_{LR}= d_{t}S_{LR} - \sum_{i=L,R}J_{i}/T$. La que se puede visualizar en la Figura \ref{img:fig2resultado}.
 
-\insertimage[\label{img:fig1resultado}]{ejemplos/drawing2}{scale=0.80}{(a)Flujos de corriente de calor que libera el reservorio $\alpha$. (b)Flujo de corriente de partículas correspondiente a cada reservorio. Para obtener estos resultados se usaron las temperaturas $T=100$, $T_{d}=2$, razones de transición de $\gamma_{L}=\gamma^{U}_{R}= 1/100$, $\gamma_{R}= \gamma^{U}_{L}=1/600$, $\gamma_{D}=\gamma^{U}_{D}=1/50$ , parámetro de acoplamiento $g=5/1000$, interacciones de Coulomb $U=40$, $U_{F} = 500$ y por último niveles de energía $\epsilon=4$.}
+\insertimage[\label{img:fig1resultado}]{ejemplos/drawing2}{scale=0.80}{(a)Flujos de corriente de calor que libera el reservorio $\alpha$. (b)Flujo de corriente de partículas correspondiente a cada reservorio. Para obtener estos resultados se usaron las temperaturas $T=100$, $T_{d}=2$, razones de transición de $\gamma_{L}=\gamma^{U}_{R}= 1/100$, $\gamma_{R}= \gamma^{U}_{L}=1/600$, $\gamma_{D}=\gamma^{U}_{D}=1/50$, potencial químico $\mu_{d}=2$ , parámetro de acoplamiento $g=5/1000$, interacciones de Coulomb $U=40$, $U_{F} = 500$ y por último niveles de energía $\epsilon=4$ y $\epsilon_{d} = \mu_{d}-U/2$.}
 
 \insertimage[\label{img:fig2resultado}]{ejemplos/figuraentrop1}{scale=0.45}{Gráfico de la razón de producción de entropía aparente del sistema $LR$ dada por $\dot{\sigma}^{o}_{LR}$ en función de $eV/T$.}
 

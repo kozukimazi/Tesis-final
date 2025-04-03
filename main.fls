@@ -512,10 +512,10 @@ OUTPUT main.toc
 INPUT ./main.lof
 INPUT ./main.lof
 INPUT main.lof
-OUTPUT main.lof
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
+OUTPUT main.lof
 INPUT ./example.tex
 INPUT ./example.tex
 INPUT ./example.tex
@@ -549,6 +549,10 @@ INPUT ./img//ejemplos/transprtcurrent.png
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT ./img//ejemplos/transportwork.png
+INPUT ./img//ejemplos/transportwork.png
+INPUT ./img//ejemplos/transportwork.png
+INPUT ./img//ejemplos/transportwork.png
 INPUT ./img//ejemplos/diseño1.pdf
 INPUT ./img//ejemplos/diseño1.pdf
 INPUT ./img//ejemplos/diseño1.pdf
