@@ -122,6 +122,16 @@ Prech, K., Johansson, P., Nyholm, E., Landi, G.~T., Verdozzi, C., Samuelsson, P.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
+\bibitem{hill1997entanglement}
+Hill, S.~A. y Wootters, W.~K., ``Entanglement of a pair of quantum bits'', {Physical review letters}, vol.~78, no.~26, p.~5022, 1997.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{wootters1998entanglement}
+Wootters, W.~K., ``Entanglement of formation of an arbitrary state of two qubits'', {Physical Review Letters}, vol.~80, no.~10, p.~2245, 1998.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
 \bibitem{esposito2009nonequilibrium}
 Esposito, M., Harbola, U., y Mukamel, S., ``Nonequilibrium fluctuations, fluctuation theorems, and counting statistics in quantum systems'', {Reviews of modern physics}, vol.~81, no.~4, pp.~1665--1702, 2009.
 \backrefprint\backrefparscantrue

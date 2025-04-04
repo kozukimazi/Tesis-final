@@ -1036,9 +1036,34 @@ Inicialmente consideramos el caso en que las razones de transición no dependen 
 
 Esta figura permite determinar que a medida que aumenta $eV$ la corriente de partículas $\dot{N}_{L} = -\dot{N}_{R}$ que va del baño $L$ al baño $R$ crece. Lo que es esperable, ya que la diferencia de potencial induce el transporte de partículas de un mayor potencial hacia un menor potencial. También se puede graficar la potencia que es entregada a este sistema 
 
-\insertimage[\label{img:transporte2}]{ejemplos/transportwork.png}{scale =0.35}{Gráfico de la potencia que entrega el reservorio conectado al sistema $LR$.}
+\insertimage[\label{img:transporte2}]{ejemplos/transportwork.png}{scale =0.35}{Gráfico de la potencia que entregan los reservorios en función de $eV/T$.}
     
-La Figura \ref{img:transporte2} nos dice que el reservorio entrega trabajo al sistema para poder realizar la corriente, lo que tmabién es esperable, dado que al pasar de un potencial mayor a uno menor el electró
+La Figura \ref{img:transporte2} nos dice que el reservorio $LR$ entrega trabajo al sistema para poder realizar la corriente, lo que también es esperable, dado que al pasar de un potencial mayor a uno menor, esa energía que tenía el electrón pasa a el sistema $LR$. Por otro lado debido a que el reservorio $D$ no intercambia partículas en promedio, la potencia que entrega el reservorio $D$ es cero. También se pueden revisar los flujos de energía del sistema $LR$ y el reservorio $D$
+
+
+\insertimage[\label{img:transporte3}]{ejemplos/transportenergy.png}{scale =0.35}{Gráfico de el flujo de energía entre los sistemas $LR$ y $D$.}
+    
+De la Figura \ref{img:transporte3} se puede notar que $\dot{E}_{LR} = -\dot{E}_{d}$ lo que es consistente, ya que en estado estacionario $d_{t}U = \dot{E}_{LR} + \dot{E}_{d} = 0$. Además esto permite notar que el sistema $D$ libera energía, la cuál es entregada al reservorio con temperatura $T_{d}$ como se ve en la línea roja de la Figura \ref{img:transporte4}
+
+\insertimage[\label{img:transporte4}]{ejemplos/transportheat.png}{scale =0.4}{Gráfico del flujo de calor que entregan los reservorios en función de $eV/T$.}
+    
+En el sistema $LR$ se puede notar que para cantidades $eV/T$ pequeñas, el sistema recibe calor del reservorio, mientras que a medida que se aumenta $eV/T$ el reservorio recibe calor. En el sistema $LR$ el flujo de energía positivo consiste en que se debe entregar energía al sistema para poblar los sitios, aun así a medida que se aumenta $eV/T$ esa contribución de energía termina siendo derrotada por el flujo de electrones, y por eso el flujo de calor se vuelve negativo. También resulta importante calcular si existen efectos cuánticos en este estado estacionario del sistema, para ello se calcularan dos cantidades, primero la norma-$l_{1}$ $\mathcal{C}_{l_{1}}$ que permite calcular las coherencias en el sistema $LR$ y consiste en 
+
+\begin{equation*}
+    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{s;i,j}|
+\end{equation*}
+
+Otro efecto cuántico que es interesante medir es el entrelazamiento, la cantidad que permite medir esto es la concurrencia $\mathcal{C}_{on}$ \cite{hill1997entanglement,wootters1998entanglement} que consiste en 
+
+\begin{equation*}
+    \mathcal{C}_{on} = \max \{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0 \}
+\end{equation*}
+
+En donde $p_{0}$ y $p_{D}$ consisten en la probabilidad de que el sistema $LR$ este vacío o doblemente ocupado respectivamente. Mientras que $\alpha$ consiste en la coherencia entre los estados $\{|1,0,0\rangle, |0,1,0\rangle \}$ y $\beta$ la coherencia entre los estados  $\{|1,0,1\rangle, |0,1,1\rangle\}$. Esta fórmula esta deducida en el ápendice \ref{appendix5final}. 
+
+\insertimage[\label{img:transporte5}]{ejemplos/concutransport.png}{scale =0.4}{La línea azul corresponde a la coherencia mientras que la línea roja la concurrencia, todo esto en función de $eV/T$.}
+    
+Para este caso la coherencia parte en cero y a medida que aumenta la diferencia de potencial está aumenta. El entrelazamiento por otro lado parte en cero, que coincide con el cero de la coherencia, y al aumentar el $eV/T$ la concurrencia se vuelve no nula, y por ende se hace presente entrelazamiento en el sistema $LR$.
 
 \newpage
 
@@ -1608,6 +1633,7 @@ Así podemos encontrar las funciones correlación espectral usando la transforma
 \end{equation*}
 
 Más adelante en el apéndice se profundizará en el aspecto Markoviano de la función correlación correspondiente a las funciones correlación espectral específicas.
+\label{apendix5bathcorre}
 
 \subsection{ Operadores de salto de sistema de 3 puntos cuánticos}
 Para poder obtener los operadores de salto, prmiero se buscará eliminar el término de acoplamiento en el Hamiltoniano del sistema, para ello se hará la transformación
@@ -1752,6 +1778,8 @@ Con lo que encontramos las frecuencias de Bohr correspondientes a
     \hat{d}_{R} & \to (\epsilon_{+},\epsilon_{-},\epsilon_{+}+U,\epsilon_{-}+U,\epsilon_{+}+U_{f},\epsilon_{-}+U_{f},\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})
 \end{align*}
 
+\label{apendix5jumpop}
+
 \subsection{Agrupación de frecuencias para 2 puntos cuánticos}
 En el caso en que $\epsilon_{L} = \epsilon_{R}$ se cumple que $\epsilon_{\pm} = \epsilon \pm g$. Aquí es que se invoca la agrupación de frecuencias, ya que si el parámetro $g$ es pequeño en relación al inverso del tiempo de correlación del baño, podremos agrupar las frecuencias tal que
 
@@ -1855,6 +1883,8 @@ Por lo tanto el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(
     &\epsilon +U_{f}\to \hat{d}_{R}\hat{n}_{L}(\textbf{1}-\hat{n}_{D})\\
     &\epsilon +U+U_{f}\to \hat{d}_{R}\hat{n}_{D}\hat{n}_{L}
 \end{align*}
+
+\label{apendix5frecuencygroup}
 
 \subsection{Aspecto Markoviano de las funciones correlación }
 Para que el sistema descrito en la sección \ref{sec5:modelo} tenga un comportamiento cercano a un Demonio de Maxwell autónomo, se necesita que las razones de transición $\gamma_{i}(\omega)$ modifiquen su respuesta dependiendo de si el punto cuántico del nivel $D$ este ocupado o desocupado. No todo comportamiento de las razones de transición aseguran que el comportamiento del sistema sea Markoviano, esto se puede determinar calculando la función correlación del reservorio y analizando el orden del tiempo de correlación $\tau_{B}$ que presenta este mismo. Para poder lograr hacer esto se deben calcular las funciónes correlación que para el caso de un ambiente fermiónico son de la forma
@@ -1963,6 +1993,11 @@ Y así finalmente
 \end{equation*}
 
 Gracias a que se tiene una expresión analítica para $C^{\sigma}_{0}(t)$ se puede determinar el $\tau_{B0}$. Se debe concentrar principalmente en la parte con $\sinh(\pi t/\beta \sigma)$m debido a que $\sigma=\pm 1$ sólo nos interesa analizar la cantidad $\pi t/\beta$, ya que para tiempos $t > \beta$ se podrá considerar que $1/\sinh(\pi t/\beta \sigma) \propto \exp(-t/\beta)$, por lo tanto para está función correlación el tiempo de correlación del baño consiste en el inverso de la temperatura $\tau_{B0} = \beta$. Con esto finalmente se podrá obtener el tiempo de correlación asociado a un sólo resrvorio como $\tau_{B} = \max \{\beta,\tau_{Bf} \}$.  
+
+\label{appendix5correlation}
+
+\subsection{Concurrencia}
+En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se partirá de la definición 
 
 
 

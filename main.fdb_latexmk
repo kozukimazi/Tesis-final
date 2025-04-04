@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1743707551.58629 "main.aux" "main.bbl" "main" 1743708517.13512 0
-  "./library.bib" 1741616338.6249 9329 f48f86cc5280d743654223654fd63d0f ""
+["bibtex main"] 1743791622.2015 "main.aux" "main.bbl" "main" 1743791628.40723 0
+  "./library.bib" 1743788751.98748 9837 4da0be461f350427af81bc2899516f50 ""
   "./natnumurl.bst" 1741616338.63589 20221 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1743708516.49415 48278 f48f3b021ec237612820a9522b4f8008 "pdflatex"
+  "main.aux" 1743791627.43797 50347 c21ce02f9a0f019a77e7c4ec9f9ff1b1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1743708513.43405 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1743708517.13584 0
+["pdflatex"] 1743791622.4678 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1743791628.40787 0
   "/etc/texmf/web2c/texmf.cnf" 1736440629.37754 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/mazi/Desktop/Tesis-final/main.tex" 1741616338.63589 2657 ce3b35c7821496972c0a8f6bb3a2998d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -282,11 +282,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1736440671.36949 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736440750 8213355 ec0621fc55a519b6832cde314db671a6 ""
-  "example.tex" 1743707547.49909 150313 3039da9cdd24fbe5b668161643c8bd20 ""
+  "example.tex" 1743791615.33206 153604 87de820524a071667f3d821523568046 ""
   "img//departamentos/uchile2.pdf" 1741616338.6209 18772 45804d175d195d86f4f268558e529a29 ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741616338.6229 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/concu.pdf" 1743105992.23032 74834 bf401e5b601c834a49759f7ccaac0d5d ""
   "img//ejemplos/concu1.png" 1742574886.76334 35424 f0ceca062561163bb16e3f2dab6d33d6 ""
+  "img//ejemplos/concutransport.png" 1743789700.97219 38097 1128ad7d7902fcd0034e7d74428b6117 ""
   "img//ejemplos/diseño1.pdf" 1742324295.03452 34307 d49f7823e1c3bad82e4966a9ee5d6d47 ""
   "img//ejemplos/diseño2.pdf" 1742324295.03452 31852 8543a2bae1fabcd87502f5dff6151b62 ""
   "img//ejemplos/diseño3.pdf" 1742324295.03452 29360 99a37a612d73dd9725161a58c6155841 ""
@@ -297,13 +298,15 @@
   "img//ejemplos/info1.png" 1743451729.81991 37915 ffa8fd8e98ddc0022867435e9ce3f8b8 ""
   "img//ejemplos/semilocal1.png" 1741616338.6239 28282 109e5249c02d5c552500c3cfbc7f0efe ""
   "img//ejemplos/systemg.pdf" 1743106362.68622 70189 987a63607339b861e6679b139a169b51 ""
+  "img//ejemplos/transportenergy.png" 1743708528.5472 27468 61f1c01e52fa22e8b8b98a149c478246 ""
+  "img//ejemplos/transportheat.png" 1743708543.94833 35870 c1568b658e2fdc67862a8d1595e13ca7 ""
   "img//ejemplos/transportwork.png" 1743708512.95805 35952 e727892847285d86869ef517766721a1 ""
   "img//ejemplos/transprtcurrent.png" 1743534110.72085 34484 c3f617deb6ea4317772baee0d6ec050f ""
-  "main.aux" 1743708516.49415 48278 f48f3b021ec237612820a9522b4f8008 "pdflatex"
-  "main.bbl" 1743707551.73723 6931 0466044af0d05e71ab635fdccc1c1cb5 "bibtex main"
-  "main.lof" 1743708516.51115 4368 4456508b1e85ad598bfe10f5569329a4 "pdflatex"
+  "main.aux" 1743791627.43797 50347 c21ce02f9a0f019a77e7c4ec9f9ff1b1 "pdflatex"
+  "main.bbl" 1743791622.43918 7384 79d0f34af3d5a3890a4260443f2df431 "bibtex main"
+  "main.lof" 1743791627.45997 4881 964d8ea6e4dcbdca674d6f123498dee3 "pdflatex"
   "main.tex" 1741616338.63589 2657 ce3b35c7821496972c0a8f6bb3a2998d ""
-  "main.toc" 1743708516.51115 5053 d8692bbe461f43805515800d55122926 "pdflatex"
+  "main.toc" 1743791627.45897 5138 88bb8f7f7d88fb8c12b273343d5149d4 "pdflatex"
   "template.tex" 1741616338.63889 281920 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741616338.63889 21577 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
