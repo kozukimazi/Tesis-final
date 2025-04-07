@@ -152,4 +152,14 @@ Riley, K.~F., Hobson, M.~P., y Bence, S.~J., {Mathematical methods for physics a
 \newblock Cambridge university press, 2006.
 \backrefprint\backrefparscantrue
 
+\backrefparscanfalse
+\bibitem{bartlett2007reference}
+Bartlett, S.~D., Rudolph, T., y Spekkens, R.~W., ``Reference frames, superselection rules, and quantum information'', {Reviews of Modern Physics}, vol.~79, no.~2, pp.~555--609, 2007.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{wick1997intrinsic}
+Wick, G.~C., Wightman, A.~S., y Wigner, E.~P., ``The intrinsic parity of elementary particles'', {Part I: Particles and Fields. Part II: Foundations of Quantum Mechanics}, pp.~102--106, 1997.
+\backrefprint\backrefparscantrue
+
 \end{thebibliography}

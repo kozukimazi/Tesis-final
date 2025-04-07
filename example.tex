@@ -1119,9 +1119,11 @@ Se puede ver que a medida que $g\sim \gamma_{L}$, la potencia y la contribución
 
 Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencias y coherencias estan cerca de un peak, y a la vez los flujos de información del sitio $L$ y $R$ se vuelven $\dot{I}_{L} \approx \dot{I}_{R}$. Basicamente a medida que el entrelazamiento y la coherencia se hace presente entre los dos sitios, los dos sitios entregan casi la misma información.
 
+\newpage 
 
 \subsection{Comparación caso clásico vs cuántico}
-Aqui va
+Para estudiar como actua el caso clásico sin coherencias en el estado estacionario, podremos comparar 2 $g$ distintos uno en la zona en que no hay coherencias(en donde es válida una aproximación secular) y otro en la cuál si hay coherencias
+
 
 % ------------------------------------------------------------------------------
 % NUEVO CAPÍTULO
@@ -1997,7 +1999,87 @@ Gracias a que se tiene una expresión analítica para $C^{\sigma}_{0}(t)$ se pue
 \label{appendix5correlation}
 
 \subsection{Concurrencia}
-En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se partirá de la definición 
+En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se requiere calcular la concurrencia en el subsistema $\hat{\rho}_{LR}$ por lo tanto se tiene que partir calculando 
+
+\begin{equation*}
+    \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{s}} \}
+\end{equation*}
+
+Usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$, la matriz densidad del sistema queda
+
+\begin{equation*}
+    \hat{\rho}_{s} = 
+    \begin{bmatrix}
+        p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & p_{100} & \alpha & 0 & 0 & 0 & 0 & 0 \\
+        0 & \alpha^{*} & p_{010} & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & p_{001} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & p_{110} & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & p_{101} & \beta & 0 \\
+        0 & 0 & 0 & 0 & 0 & \beta^{*} & p_{011} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & p_{111} 
+        \end{bmatrix}
+\end{equation*}
+
+En donde no aparecen coherencias entre estados con distinto número de partículas por el principio de superselección de carga \cite{bartlett2007reference,wick1997intrinsic}. Además debido a que el punto cuántico $D$ sólo interactua mediante interacción de Coulomb con los puntos $L$ y $R$ no aparecen coherencias del tipo $L-D$ y $R-D$. Se puede obtener la matriz densidad del sistema $LR$ en la base $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle \}$
+
+\begin{equation*}
+    \hat{\rho}_{LR} = 
+    \begin{bmatrix}
+        p_{000}+p_{001} & 0 & 0 & 0  \\
+        0 & p_{100} + p_{101} & \alpha + \beta & 0  \\
+        0 & \alpha^{*} +\beta^{*} & p_{010} + p_{011} & 0  \\
+        0 & 0 & 0 & p_{110} + p_{111} 
+        \end{bmatrix}
+\end{equation*}
+
+Así se podrá calcular la concurrencia 
+
+\begin{equation*}
+    \mathcal{C}_{on} = \max \{ 0,\lambda_{1} - \lambda_{2} - \lambda_{3} - \lambda_{4} \}
+\end{equation*}
+
+En donde $\lambda_{i}$ son la raíz cuadrada de los autovalores ordenados en forma decreciente de la matriz
+
+\begin{equation*}
+    B = \hat{\rho}_{LR} \tilde{\rho}_{LR} \hspace{10mm} \tilde{\rho}_{LR} = (\sigma_{y} \otimes \sigma_{y}) \hat{\rho}_{LR} (\sigma_{y} \otimes \sigma_{y})
+\end{equation*}
+
+En donde $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
+
+\begin{equation*}
+    \tilde{\rho}_{LR} = 
+    \begin{bmatrix}
+        p_{110}+p_{111} & 0 & 0 & 0  \\
+        0 & p_{010} + p_{011} & \alpha + \beta & 0  \\
+        0 & \alpha^{*} +\beta^{*} & p_{100} + p_{101} & 0  \\
+        0 & 0 & 0 & p_{000} + p_{001} 
+        \end{bmatrix}
+\end{equation*}
+
+Escribiendo $p_{0}=p_{000}+p_{001}$, $p_{L}=p_{100} + p_{101}$, $p_{R}=p_{010}+p_{011}$, $p_{D}=p_{110}+p_{111}$ la matriz $B$ quedarán
+
+\begin{equation*}
+    B = 
+    \begin{bmatrix}
+        p_{0}p_{D} & 0 & 0 & 0  \\
+        0 & p_{L}p_{R}+|\alpha+\beta|^{2} & 2(\alpha + \beta)p_{L} & 0  \\
+        0 & 2(\alpha^{*} +\beta^{*})p_{R} & p_{L}p_{R}+|\alpha+\beta|^{2}  & 0  \\
+        0 & 0 & 0 & p_{0}p_{D}
+        \end{bmatrix}
+\end{equation*}
+
+Suponiendo que $p_{D}$ y $p_{0}$ son pequeños, el orden decreciente de los autovalores corresponderá a
+
+\begin{equation*}
+    \lambda_{1} = p_{L}p_{R} + |\alpha + \beta| \hspace{10mm}  \lambda_{2} = p_{L}p_{R} - |\alpha + \beta| \hspace{10mm} \lambda_{3}=\lambda_{4} = \sqrt{p_{0}p_{D}}
+\end{equation*}
+
+Finalmente se obtiene
+
+\begin{equation*}
+    \mathcal{C}_{on} = \max\{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0\}
+\end{equation*}
 
 
 

@@ -5,45 +5,45 @@ The style file: natnumurl.bst
 Database file #1: library.bib
 Warning--vacio publisher en Maxwell_1871
 Warning--vacio journal en schinabeck2019hierarchical
-You've used 29 entries,
+You've used 31 entries,
             1986 wiz_defined-function locations,
-            629 strings with 7999 characters,
-and the built_in function-call counts, 8218 in all, are:
-= -- 876
-> -- 245
+            639 strings with 8362 characters,
+and the built_in function-call counts, 8932 in all, are:
+= -- 954
+> -- 267
 < -- 0
-+ -- 95
-- -- 66
-* -- 530
-:= -- 1068
-add.period$ -- 33
-call.type$ -- 29
-change.case$ -- 25
++ -- 103
+- -- 72
+* -- 582
+:= -- 1160
+add.period$ -- 35
+call.type$ -- 31
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 463
-empty$ -- 787
-format.name$ -- 66
-if$ -- 2099
+cite$ -- 33
+duplicate$ -- 497
+empty$ -- 853
+format.name$ -- 72
+if$ -- 2277
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 32
-newline$ -- 155
-num.names$ -- 29
-pop$ -- 80
+int.to.str$ -- 31
+missing$ -- 34
+newline$ -- 165
+num.names$ -- 31
+pop$ -- 84
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 362
+skip$ -- 390
 stack$ -- 0
-substring$ -- 424
-swap$ -- 235
+substring$ -- 488
+swap$ -- 253
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 68
-width$ -- 31
-write$ -- 357
+while$ -- 76
+width$ -- 33
+write$ -- 381
 (There were 2 warnings)
