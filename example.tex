@@ -33,16 +33,16 @@ En este capítulo se describen los conceptos básicos para poder describir la ev
 
 
 \section{Sistemas cuánticos cerrados}
-Un sistema cuántico cerrado puede ser descrito por la matriz densidad $\rho$, la evolución de la matriz densidad dependerá del Hamiltoniano del sistema $H(t)$, la cuál en el cuadro de Schrodinger consiste en la ecuación de Liouville-Von Neumman($\hbar = 1$)\cite{breuer2002theory}:
+Un sistema cuántico cerrado puede ser descrito por la matriz densidad $\hat{\rho}$, la evolución de la matriz densidad dependerá del Hamiltoniano del sistema $\hat{H}(t)$, la cuál en el cuadro de Schrodinger consiste en la ecuación de Liouville-Von Neumman($\hbar = 1$)\cite{breuer2002theory}:
 
 \begin{equation*}
-    \frac{d}{dt}\rho(t) = -i[H(t),\rho(t)]
+    \frac{d}{dt}\hat{\rho}(t) = -i[\hat{H}(t),\hat{\rho}(t)]
 \end{equation*}
 
 Y la solución descrita por la evolución unitaria 
 
 \begin{equation*}
-    U(t,t_{0}) = T_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t}ds H(s) \right] \implies \rho(t) = U(t,t_{0})\rho(t_{0})U^{\dagger}(t,t_{0})
+    U(t,t_{0}) = \hat{T}_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t}ds \hat{H}(s) \right] \implies \hat{\rho}(t) = U(t,t_{0})\hat{\rho}(t_{0})U^{\dagger}(t,t_{0})
 \end{equation*}
 
 En donde $T_{\leftarrow}$ consiste en el operador ordenación temporal cronológico que ordena los productos de operadores dependientes del tiempo, de tal manera que el tiempo en el que son evaluados los operadores va creciendo de derecha a izquierda.
@@ -51,32 +51,32 @@ En donde $T_{\leftarrow}$ consiste en el operador ordenación temporal cronológ
 Supongamos que el Hamiltoniano del sistema se puede separar en dos partes
 
 \begin{equation*}
-    H(t) = H_{0} + \hat{H}_{I}(t)
+    \hat{H}(t) = \hat{H}_{0} + \hat{H}_{I}(t)
 \end{equation*}
 
-En teoría esto se puede hacer de varias formas, pero por lo general, si tenemos el caso de dos subsistemas, $H_{0}$ contiene los Hamiltonianos de cada uno de ellos cuando no hay interacción, mientras que $H_{I}$ representa la interacción entre ellos. Si introducimos los operadores unitarios
+En teoría esto se puede hacer de varias formas, pero por lo general, si tenemos el caso de dos subsistemas, $\hat{H}_{0}$ contiene los Hamiltonianos de cada uno de ellos cuando no hay interacción, mientras que $\hat{H}_{I}$ representa la interacción entre ellos. Si introducimos los operadores unitarios
 
 \begin{equation*}
-    U_{0}(t,t_{0}) \equiv \exp[-iH_{0}(t-t_{0}) ]  \hspace{15mm} U_{I}(t,t_0) \equiv U^{\dagger}_{0}(t,t_{0})U(t,t_{0})
+    U_{0}(t,t_{0}) \equiv \exp[-i\hat{H}_{0}(t-t_{0}) ]  \hspace{15mm} U_{I}(t,t_0) \equiv U^{\dagger}_{0}(t,t_{0})U(t,t_{0})
 \end{equation*}
 
 Se puede describir la matriz densidad en el cuadro de interacción
 
 \begin{equation*}
-    \rho_{I}(t) \equiv U_{I}(t,t_{0})\rho(t_{0})U^{\dagger}_{I}(t,t_{0})
+    \hat{\rho}_{I}(t) \equiv U_{I}(t,t_{0})\hat{\rho}(t_{0})U^{\dagger}_{I}(t,t_{0})
 \end{equation*}
 
 Y la evolución en este cuadro de interacción
 
 \begin{equation}
-    \frac{d}{dt}\rho_{I}(t) = -i[H_{I}(t), \rho_{I}(t)]
+    \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\tilde{H}_{I}(t), \hat{\rho}_{I}(t)]
     \label{sec11:interactionp}
 \end{equation}
 
 Con 
 
 \begin{equation*}
-    H_{I}(t) = U^{\dagger}_{0}(t,t_{0})\hat{H}_{I}(t)U_{0}(t,t_{0})
+    \tilde{H}_{I}(t) = U^{\dagger}_{0}(t,t_{0})\hat{H}_{I}(t)U_{0}(t,t_{0})
 \end{equation*}
 
 \label{sec:closedQM}
@@ -87,92 +87,92 @@ Con
 
 \subsection{Dinámica de un sistema abierto}
 
-Un sistema abierto consiste en un sistema cuántico $S$ denominado el sistema reducido, el cuál está acoplado a un sistema $B$ denominado el ambiente. Estos representan  subsistemas del sistema total $S+B$. Sea $\mathcal{H}_{s}$ el espacio de Hilbert del sistema y $\mathcal{H}_{B}$ el espacio de Hilbert del ambiente, el espacio de Hilbert del sistema total $S+B$ es  $\mathcal{H} = \mathcal{H}_{s} \otimes \mathcal{H}_{B}$, el Hamiltoniano total se constituye por el Hamiltoniano del sistema $H_{s}$, el Hamiltoniano $H_{B}$ y la interacción $\hat{H}_{I}(t)$
+Un sistema abierto consiste en un sistema cuántico $S$ denominado el sistema reducido, el cuál está acoplado a un sistema $B$ denominado el ambiente. Estos representan  subsistemas del sistema total $S+B$. Sea $\mathcal{H}_{s}$ el espacio de Hilbert del sistema y $\mathcal{H}_{B}$ el espacio de Hilbert del ambiente, el espacio de Hilbert del sistema total $S+B$ es  $\mathcal{H} = \mathcal{H}_{s} \otimes \mathcal{H}_{B}$, el Hamiltoniano total se constituye por el Hamiltoniano del sistema $\hat{H}_{S}$, el Hamiltoniano $\hat{H}_{B}$ y la interacción $\hat{H}_{I}(t)$
 
 \begin{equation*}
-    H(t) = H_{s} \otimes \mathbf{I}_{B} + \mathbf{I}_{s} \otimes H_{B} + \hat{H}_{I}(t)
+    \hat{H}(t) = \hat{H}_{S} \otimes \mathbf{I}_{B} + \mathbf{I}_{s} \otimes \hat{H}_{B} + \hat{H}_{I}(t)
 \end{equation*}
 
-Junto a esto,  los observables que se estudian en el sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$, y su valor de expectación puede ser calculado mediante la ecuación
+Junto a esto,  los observables que se estudian en el sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$ y su valor de expectación puede ser calculado mediante la ecuación
 
 \begin{equation*}
-    \langle A \rangle = \text{Tr}_{s}\{A \rho_{s} \}
+    \langle A \rangle = \text{Tr}_{S}\{A \hat{\rho}_{S} \}
 \end{equation*}
 
 Donde 
 
 \begin{equation*}
-    \rho_{s} = \text{Tr}_{B}\{ \rho \}
+    \hat{\rho}_{S} = \text{Tr}_{B}\{ \hat{\rho} \}
 \end{equation*}
 
-Es la matriz densidad del sistema reducido. La expresión $\text{Tr}_{s}$ hace referencia a la traza con respecto al espacio de Hilbert del sistema, mientras que $\text{Tr}_{B}$  
-es la traza con respecto al espacio de Hilbert del ambiente. El objeto de estudio principalmente es $\rho_{s}$ y la ecuación de Lindblad será utilizada para describir su evolución.
+Es la matriz densidad del sistema reducido. La expresión $\text{Tr}_{S}$ hace referencia a la traza con respecto al espacio de Hilbert del sistema, mientras que $\text{Tr}_{B}$  
+es la traza con respecto al espacio de Hilbert del ambiente. El objeto de estudio principalmente es $\rho_{S}$ y la ecuación de Lindblad será utilizada para describir su evolución.
 
 \subsection{Ecuación maestra}
 Partiendo de un sistema $S$ acoplado débilmente a un reservorio $B$, en donde el Hamiltoniano total es descrito por 
 
 \begin{equation*}
-    H = H_{s} + H_{B} + H_{I}
+    \hat{H} = \hat{H}_{S} + \hat{H}_{B} + \hat{H}_{I}
 \end{equation*}
 
 La evolución en el cuadro de interacción del sistema total será
 
 \begin{equation}
-    \frac{d}{dt}\rho_{I}(t) = -i[H_{I}(t), \rho_{I}(t)]
+    \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\hat{H}_{I}(t), \hat{\rho}_{I}(t)]
     \label{eqsec2:linbladpic}
 \end{equation}
 
 Con solución de forma integral
 
 \begin{equation*}
-    \rho_{I}(t) = \rho(0) - i \int_{0}^{t} ds[H_{I}(s), \rho_{I}(s)]]
+    \hat{\rho}_{I}(t) = \hat{\rho}(0) - i \int_{0}^{t} ds[\hat{H}_{I}(s), \hat{\rho}_{I}(s)]
 \end{equation*}
 
 Reinsertando la forma integral en la ecuación \ref{eqsec2:linbladpic} y trazando los grados de libertad del reservorio, nos queda
 
 \begin{equation}
-    \frac{d}{dt}\rho_{Is}(t) = -i \text{Tr}_{B}\{[H_{I}(t),\rho_{0}] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[H_{I}(t), [H_{I}(s),\rho_{I}(s)]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}
 \end{equation}
 
-Ahora se asumirán dos cosas, primero que $\text{Tr}_{B}\{[H_{I}(t),\rho_{0}] \} = 0$. Segundo, debido a que todavía la ecuación depende de $\rho(t)$ del sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\rho_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, con esto
+Ahora se asumirán dos cosas, primero que $\text{Tr}_{B}\{[\hat{H}_{I}(t),\rho(0)] \} = 0$. Segundo, debido a que todavía la ecuación depende de $\hat{\rho}(t)$ correspondiente al sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir
 
 \begin{equation*}
-    \rho(t) = \rho_{s}(t)\otimes \rho_{B}
+    \hat{\rho}(t) = \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B}
 \end{equation*}
 
 Con lo cuál la ecuación \ref{eqsec2:linbladpic} se vuelve
 
 \begin{equation}
-    \frac{d}{dt}\rho_{Is}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[H_{I}(t), [H_{I}(s),\rho_{Is}(s) \otimes \rho_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}
 \end{equation} 
 
-Esta ecuación es no Markoviana, ya que requiere conocer todo el pasado de $\rho_{Is}(s)$, para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\rho_{Is}(t)$ dependa sólo del estado en que se encuentra en el presente, es decir
+Esta ecuación es lo que se denomina no Markoviana, ya que requiere conocer todo el pasado de $\rho_{IS}(s)$, para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\hat{\rho}_{IS}(t)$ dependa sólo del estado en que se encuentra en el instante de tiempo, es decir
 
 \begin{equation*}
-    \frac{d}{dt}\rho_{Is}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[H_{I}(t), [H_{I}(s),\rho_{Is}(t) \otimes \rho_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}
 \end{equation*} 
 
 Esta ecuación es denominada la ecuación de Redfield. Se puede hacer el cambio de variable $s= x = t-s$ con Jacobiano $|J| = -1$ y límites $s=0 \implies x = t$ y $s=t \implies x = 0$, el integral queda
 
 \begin{equation}
-    \frac{d}{dt}\rho_{Is}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[H_{I}(t), [H_{I}(t-s),\rho_{Is}(t) \otimes \rho_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}
     \label{eq3sec2:markov}
 \end{equation} 
 
-Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecerán las funciones correlación del baño, que decaen en el tiempo por el denominado tiempo de correlación $\tau_{B}$, en el cuál las funciones correlación del baño se vuelven cero. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, ya que él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito y finalmente quedará la evolución
+Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecerán las funciones correlación del baño que decaen en el tiempo por el denominado tiempo de correlación $\tau_{B}$, en el cuál las funciones correlación del baño se vuelven cero. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, ya que él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integral debido a las funciones correlación y finalmente quedará la evolución
 
 \begin{equation}
-    \frac{d}{dt}\rho_{Is}(t) = -  \int_{0}^{\infty}ds \text{Tr}_{B}\{[H_{I}(t), [H_{I}(t-s),\rho_{Is}(t) \otimes \rho_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{\infty}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}
     \label{eq3sec2:markov1}
 \end{equation} 
 
-La interacción en el cuadro de Schrodinger $H_{I}$ será de la forma general
+La interacción en el cuadro de Schrodinger $\hat{H}_{I}$ será de la forma general
 
 \begin{equation*}
-    H_{I} = \sum_{\alpha}A_{\alpha} \otimes B_{\alpha}
+    \hat{H}_{I} = \sum_{\alpha}A_{\alpha} \otimes B_{\alpha}
 \end{equation*}
 
-En donde los operadores $A_{\alpha} = A^{\dagger}_{\alpha}$ actuan en el espacio de Hilbert del sistema, mientras que $B_{\alpha}=B^{\dagger}_{\alpha}$ actua en el espacio de Hilbert del reservorio. Es conveniente escribir la interacción en función de los autoestados de $H_{s}$. Para ello, si tenemos los autovalores $\epsilon$ y sus respectivos operadores de proyección $\Pi(\epsilon) = |\epsilon\rangle \langle \epsilon|$, se podrán definir los operadores
+En donde los operadores $A_{\alpha} = A^{\dagger}_{\alpha}$ actuan en el espacio de Hilbert del sistema, mientras que $B_{\alpha}=B^{\dagger}_{\alpha}$ actua en el espacio de Hilbert del reservorio. Es conveniente escribir la interacción en función de los autoestados de $\hat{H}_{S}$. Para ello, si tenemos los autovalores $\epsilon$ y sus respectivos operadores de proyección $\Pi(\epsilon) = |\epsilon\rangle \langle \epsilon|$, se podrán definir los operadores
 
 \begin{equation*}
     A_{\alpha}(\omega) \equiv \sum_{\epsilon' - \epsilon}\Pi(\epsilon)A_{\alpha}\Pi(\epsilon') 
@@ -181,11 +181,11 @@ En donde los operadores $A_{\alpha} = A^{\dagger}_{\alpha}$ actuan en el espacio
 En donde a estos operadores se le denominan operadores globales, ya que utilizan los autoestados del sistema. Debido a esta definición, se cumplen las relaciones
 
 \begin{align*}
-    [H_{s},A_{\alpha}(\omega)] & = - \omega A_{\alpha}(\omega) \\
-    [H_{s},A^{\dagger}_{\alpha}(\omega)] & = \omega A^{\dagger}_{\alpha}(\omega)
+    [\hat{H}_{S},A_{\alpha}(\omega)] & = - \omega A_{\alpha}(\omega) \\
+    [\hat{H}_{S},A^{\dagger}_{\alpha}(\omega)] & = \omega A^{\dagger}_{\alpha}(\omega)
 \end{align*}
 
-Debido a que posteriormente, se deberá pasar al cuadro de interacción, se debe calcular $U^{\dagger}_{s}(t)H_{I}U_{s}(t)$ para ello, se utilizará la relación de Baker Campbell
+Debido a que posteriormente se deberá pasar al cuadro de interacción, se debe calcular $U^{\dagger}_{s}(t)\hat{H}_{I}U_{s}(t)$ para ello, se utilizará la relación de Baker Campbell
 
 \begin{equation}
     e^{A}Be^{-A} = B  + [A,B] + \frac{1}{2}[A,[A,B]] +..
@@ -195,8 +195,8 @@ Debido a que posteriormente, se deberá pasar al cuadro de interacción, se debe
 Y se puede derivar las relaciones 
 
 \begin{align*}
-    e^{iH_{s}t}A_{\alpha}(\omega) e^{-iH_{s}t} & = e^{-i\omega t} A_{\alpha}(\omega) \\
-    e^{iH_{s}t}A^{\dagger}_{\alpha}(\omega) e^{-iH_{s}t} & = e^{i\omega t} A^{\dagger}_{\alpha}(\omega)
+    e^{i\hat{H}_{S}t}A_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{-i\omega t} A_{\alpha}(\omega) \\
+    e^{i\hat{H}_{S}t}A^{\dagger}_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{i\omega t} A^{\dagger}_{\alpha}(\omega)
 \end{align*}
 
 De la relación de completitud $\sum_{\epsilon}\Pi(\epsilon) = \mathbf{I}$ podremos notar que
@@ -210,70 +210,70 @@ De la relación de completitud $\sum_{\epsilon}\Pi(\epsilon) = \mathbf{I}$ podre
 Con esto el Hamiltoniano de interacción en el cuadro de Schrodinger
 
 \begin{equation*}
-    H_{I} = \sum_{\alpha,\omega}A_{\alpha}(\omega) \otimes B_{\alpha} = \sum_{\alpha,\omega}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}
+    \hat{H}_{I} = \sum_{\alpha,\omega}A_{\alpha}(\omega) \otimes B_{\alpha} = \sum_{\alpha,\omega}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}
 \end{equation*}
 
 Aplicando las relaciones en el cuadro de interacción
 
 \begin{equation}
-    H_{I} = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t)
+    \hat{H}_{I} = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t)
     \label{seclindbladinteraction1}
 \end{equation}
 
-Donde $B_{\alpha}(t) = e^{iH_{B}t}B_{\alpha}e^{-iH_{B}t}$. La ecuación \ref{seclindbladinteraction1}, se puede introducir en la ecuación \ref{eq3sec2:markov1}
+Donde $B_{\alpha}(t) = e^{i\hat{H}_{B}t}B_{\alpha}e^{-i\hat{H}_{B}t}$. La ecuación \ref{seclindbladinteraction1} se puede introducir en la ecuación \ref{eq3sec2:markov1}
 
 \begin{align*}
-    \frac{d}{dt}\rho_{Is}(t) = \int_{0}^{\infty} ds \text{Tr}_{B}\left[  H_{I}(t-s)\rho_{Is}(t)\rho_{B}H_{I}(t) - \rho_{Is}(t)\rho_{B}H_{I}(t-s)H_{I}(t)    \right.\\
-    \left. + H_{I}(t)\rho_{Is}(t)\rho_{B}H_{I}(t-s) -  H_{I}(t)H_{I}(t-s)\rho_{Is}(t)\rho_{B}  \right]
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = \int_{0}^{\infty} ds \text{Tr}_{B}\left[  \hat{H}_{I}(t-s)\hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t) - \hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t-s)\hat{H}_{I}(t)    \right.\\
+    \left. + \hat{H}_{I}(t)\hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t-s) -  \hat{H}_{I}(t)\hat{H}_{I}(t-s)\hat{\rho}_{IS}(t)\hat{\rho}_{B}  \right]
 \end{align*}
 
-Y obtener 
+Reemplazando la forma explícita de la interacción  
 
 \begin{align*}
-    \frac{d}{dt}\rho_{Is}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{i\omega s}B_{\beta}(t-s)\rho_{B}B^{\dagger}_{\alpha}(t)]e^{i(\omega'- \omega)t}\left(A_{\beta}(\omega)\rho_{Is}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \rho_{Is}(t) \right) \\
-    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\rho_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\rho_{Is}(t)A^{\dagger}_{\beta}(\omega) - \rho_{Is}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right)
+    \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{i\omega s}B_{\beta}(t-s)\hat{\rho}_{B}B^{\dagger}_{\alpha}(t)]e^{i(\omega'- \omega)t}\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
+    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\hat{\rho}_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right)
 \end{align*}
 
-Se pueden definir las funciones correlación del reservorio
+Además, se pueden definir las funciones correlación del baño
 
 \begin{equation*}
-    \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\rho_{B}]
+    \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\hat{\rho}_{B}]
 \end{equation*}
 
 Y aplicando estas funciones
 
 \begin{align*}
-    \frac{d}{dt}\rho_{Is}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{i(\omega'- \omega)t}\Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\rho_{Is}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \rho_{Is}(t) \right) \\
-    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{-i(\omega'- \omega)t}\Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega')\rho_{Is}(t)A^{\dagger}_{\beta}(\omega) - \rho_{Is}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right)
+    \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{i(\omega'- \omega)t}\Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
+    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{-i(\omega'- \omega)t}\Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right)
 \end{align*}
 
-Si consideramos el tiempo de evolución del sistema $S$ como $\tau_{S}=|\omega-\omega'|^{-1}$, si se cumple que el tiempo de relajación del sistema $\tau_{R}\gg \tau_{S}$ los términos no seculares, es decir con $\omega \neq \omega'$ pueden ser despreciados, debido a que estos oscilan muy rápido durante el tiempo $\tau_{R}$, al tomar esta aproximación, la evolución queda
+Si consideramos el tiempo de evolución del sistema $S$ como $\tau_{S}=|\omega-\omega'|^{-1}$, y se cumple que el tiempo de relajación del sistema $\tau_{R}\gg \tau_{S}$ para los términos no seculares con $\omega \neq \omega'$, estos podrán ser despreciados, debido a que estos los términos $e^{i(\omega-\omega')t}$ oscilan muy rápido durante el tiempo $\tau_{R}$. Al tomar esta aproximación, la evolución queda
 
 \begin{align*}
-    \frac{d}{dt}\rho_{Is}(t) & = \sum_{\omega}\sum_{\alpha,\beta} \Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\rho_{Is}(t)A^{\dagger}_{\alpha}(\omega) - A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) \rho_{Is}(t) \right) \\
-    & + \sum_{\omega}\sum_{\alpha,\beta} \Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega)\rho_{Is}(t)A^{\dagger}_{\beta}(\omega) - \rho_{Is}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega) \right)
+    \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega}\sum_{\alpha,\beta} \Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
+    & + \sum_{\omega}\sum_{\alpha,\beta} \Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega) \right)
 \end{align*}
 
 Finalmente, separando la función correlación en una parte real y otra parte imaginaria $\Gamma_{\alpha \beta}(\omega) = \gamma_{\alpha \beta}(\omega)/2 + iS_{\alpha \beta}(\omega)$ queda la ecuación de Lindblad 
 
 \begin{equation}
-    \frac{d}{dt} \rho_{Is}(t) = -i[H_{LS},\rho_{Is}(t)] + \mathcal{D}(\rho_{Is}(t))
+    \frac{d}{dt} \hat{\rho}_{IS}(t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(t)] + \mathcal{D}(\hat{\rho}_{IS}(t))
     \label{seclindbladfinal}
 \end{equation}
 
-Con $H_{LS}$ el Hamiltoniano \textit{Lamb Shift}
+Con $\hat{H}_{LS}$ el Hamiltoniano \textit{Lamb Shift}
 
 \begin{equation*}
-    H_{LS} = \sum_{\omega} \sum_{\alpha,\beta} S_{\alpha,\beta}(\omega)A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) 
+    \hat{H}_{LS} = \sum_{\omega} \sum_{\alpha,\beta} S_{\alpha,\beta}(\omega)A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) 
 \end{equation*}
 
 Y el Disipador
 
 \begin{equation*}
-    \mathcal{D}(\rho_{Is}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\rho_{Is}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \rho_{Is}(t)  \} \right]
+    \mathcal{D}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right]
 \end{equation*}
 
-El poder escribir el disipador de esta manera es importante, ya que permite preservar la traza, la hermiticidad y que la matriz resultante de la evolución sea semidefinida positiva \cite{manzano2020short}.
+El poder escribir el disipador de esta manera es importante, ya que permite preservar la traza, la hermiticidad y que la matriz resultante de la evolución sea semidefinida positiva lo que se denmonia la Forma GKLS \cite{manzano2020short}.
 
 \label{sec:lindblad}
 
@@ -443,7 +443,7 @@ $\vec{\lambda}$ y $\vec{\chi}$ se denominan los parámetros de conteo o \textit{
 
 
 \section{Formalismo de Superoperadores y Espacio de Liouville}
-Un operador en el espacio de Hilbert dado por $\hat{\rho}$, el cuál tiene dimension $N\times N$ es mapeado al espacio de Liouville por un vector de dimension $N^{2}$ dado por $|\rho \rangle \rangle$  y un superoperador $\check{L}$ que actua en el vector $|\rho\rangle \rangle$ se convierte en una matriz $N^{2}\times N^{2}$. Este espacio tiene las siguientes definiciones
+Un operador en el espacio de Hilbert dado por $\hat{\rho}$ el cuál tiene dimension $N\times N$, es mapeado al espacio de Liouville por un vector de dimension $N^{2}\times 1$ dado por $|\rho \rangle \rangle$  y un superoperador $\check{L}$ que actua en el vector $|\rho\rangle \rangle$ se convierte en una matriz $N^{2}\times N^{2}$. Este espacio tiene las siguientes definiciones
 
 \begin{align*}
     &\langle \langle A|B\rangle \rangle  \equiv \text{Tr}\{\hat{A}^{\dagger}\hat{B}\} \\
@@ -472,7 +472,7 @@ La solución formal de esta ecuación
     \label{sec2liouvilleformal}
 \end{equation}
 
-Además existen los superoperadores de proyección Nakajima-Zwanzig\cite{zwanzig1966statistical}. Estos actuán en la matriz densidad total, en donde existe el operador  $\check{\mathcal{P}}$ que es el superoperador proyección que proyecta la parte relevante de la dinámica, mientras que $\check{\mathcal{Q}}$ proyecta la parte no relevante, con las propiedades
+Además existen los superoperadores de proyección Nakajima-Zwanzig\cite{zwanzig1966statistical}. Estos actuan en la matriz densidad total, en donde existe el operador  $\check{\mathcal{P}}$ que es el superoperador proyección que proyecta la parte relevante de la dinámica, mientras que $\check{\mathcal{Q}}$ proyecta la parte no relevante, con las propiedades
 
 \begin{align*}
     & \check{\mathcal{P}} + \check{\mathcal{Q}} = \check{1} \\
@@ -1113,11 +1113,11 @@ Se pueden notar dos comportamientos interesantes, el primero es que para $eV/T \
 
 \insertimage[\label{img:fig6resultado}]{ejemplos/systemg.pdf}{scale=0.80}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
 
-Se puede ver que a medida que $g\sim \gamma_{L}$, la potencia y la contribución de la información en el sistema $LR$ aumenta, lo cuál es interesante ya que permite ver como el acoplamiento favorece este hecho. Por otro lado, se puede ver las contribuciones individuales en los flujos de información y como este es influenciado debido al acoplamiento, es decir lo que se vee en la Figura \ref{img:fig7resultado}
+Se puede ver que a medida que $g\sim \gamma_{L}$, la potencia y la contribución de la información en el sistema $LR$ aumenta, lo cuál es interesante ya que permite ver como el acoplamiento favorece este hecho. Por otro lado, se pueden ver las contribuciones individuales en los flujos de información y como estas son influenciadas debido al acoplamiento, es decir lo que se ve en la Figura \ref{img:fig7resultado}
 
 \insertimage[\label{img:fig7resultado}]{ejemplos/concu.pdf}{scale=0.8}{ (a)Gráfico de los flujos de información de cada sitio. (b)Gráfico de la concurrencia y la coherencia en función de $g/\gamma_{L}$. }
 
-Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencias y coherencias estan cerca de un peak, y a la vez los flujos de información del sitio $L$ y $R$ se vuelven $\dot{I}_{L} \approx \dot{I}_{R}$. Basicamente a medida que el entrelazamiento y la coherencia se hace presente entre los dos sitios, los dos sitios entregan casi la misma información.
+Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencias y coherencias están cerca de un peak, y a la vez los flujos de información del sitio $L$ y $R$ se vuelven $\dot{I}_{L} \approx \dot{I}_{R}$. De alguna manera a medida que el entrelazamiento y la coherencia se hace presente entre los dos sitios, los dos sitios entregan casi la misma información.
 
 \newpage 
 
