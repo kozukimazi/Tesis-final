@@ -52,4 +52,5 @@
 \contentsline {subsection}{\numberline {C.2} Operadores de salto de sistema de 3 puntos cuánticos}{57}{subsection.Alph0.3.2}%
 \contentsline {subsection}{\numberline {C.3}Agrupación de frecuencias para 2 puntos cuánticos}{60}{subsection.Alph0.3.3}%
 \contentsline {subsection}{\numberline {C.4}Aspecto Markoviano de las funciones correlación }{63}{subsection.Alph0.3.4}%
-\contentsline {subsection}{\numberline {C.5}Concurrencia}{66}{subsection.Alph0.3.5}%
+\contentsline {subsection}{\numberline {C.5}Cálculo numérico para $\tau _{Bf}$}{66}{subsection.Alph0.3.5}%
+\contentsline {subsection}{\numberline {C.6}Concurrencia}{69}{subsection.Alph0.3.6}%

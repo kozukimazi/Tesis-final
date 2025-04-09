@@ -1902,14 +1902,14 @@ En donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. La distribución de Fer
     \label{apendix5:pade}
 \end{equation}
 
-Los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en una frecuencia $\epsilon_{0}$. Si se elige un comportamiento lorentziano
+Los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en una frecuencia $\epsilon_{0}$. Se puede elegir un comportamiento lorentziano de la forma
 
 
 \begin{equation*}
     \gamma(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}}
 \end{equation*}
 
-Con $W$ el ancho de la lorentziana y $\gamma_{0}$,$\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de transición en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$
+Con $W$ el ancho de la lorentziana y $\gamma_{0}$, $\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de transición en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$
 
 \begin{align*}
     \gamma(\epsilon_{0}) & = \gamma_{0} + \gamma_{f} \\
@@ -1928,16 +1928,16 @@ La función correlación se puede separar en dos partes
     C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu))
 \end{equation*}
 
-Y podremos determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0},\tau_{Bf}\}$. Se partirá calculando una expresión analítica aproximada de la función correlación $C^{\sigma}_{f}(t)$, para realizar este integral se deberá localizar los polos en el plano complejo, para ello notemos que para \ref{apendix5:pade} los polos se ubican en $z= \pm i \xi_{l}/\beta + \mu $. Mientras que para la Lorentziana los polos se ubican en $z = \pm i W + \omega_{0}$. Para poder realizar este integral se usará el teorema del residuo \cite{riley2006mathematical}, tomando como zona de integración un semicírculo en el hemisferio positivo o negativo dependiendo del signo de $\sigma$, como sale en la Figura(HACER FIGURA). Primero encontremos el residuo de la Lorentziana para ello 
+Y podremos determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0},\tau_{Bf}\}$. Se partirá calculando una expresión analítica aproximada de la función correlación $C^{\sigma}_{f}(t)$, para realizar este integral se deberá localizar los polos en el plano complejo, para ello notemos que para \ref{apendix5:pade} los polos se ubican en $\omega = \pm i \xi_{l}/\beta + \mu $. Mientras que para la Lorentziana los polos se ubican en $\omega = \pm i W + \omega_{0}$. Para poder realizar este integral se usará el teorema del residuo \cite{riley2006mathematical}, tomando como zona de integración un semicírculo en el hemisferio positivo o negativo dependiendo del signo de $\sigma$. Primero el residuo de la Lorentziana consiste en 
 
 \begin{align*}
    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\omega_{0}-\mu)]e^{i\sigma \omega_{0}t}) 
 \end{align*}
 
-Si se cumple que $\sigma > 0$ se toma el hemisferio inferior para la integración, mientras que para $\sigma<0$ se toma el hemosferio superior, así obteniendo
+Si se cumple que $\sigma > 0$ se toma el hemisferio inferior para la integración, mientras que para $\sigma<0$ se toma el hemosferio superior, para así obtener 
 
 \begin{align*}
-    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \omega_{0}t}e^{- \sigma Wt} f_{F}[i\beta W + \sigma \beta(\omega_{0}-\mu)]) 
+    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \omega_{0}t}e^{- Wt} f_{F}[i\beta W + \sigma \beta(\omega_{0}-\mu)]) 
  \end{align*}
 
 Para encontrar el residuo de los polos restantes, deberemos calcular 
@@ -1954,9 +1954,10 @@ Eligiendo la zona de integración dependiendo del signo de $\sigma$ obtendremos 
 
 Encontrando los residuos explícitamente se podrá escribir la función correlación como
 
-\begin{equation*}
+\begin{equation}
     C^{\sigma}_{f}(t) \approx \sum_{l=0}^{N} \eta^{\sigma,l} e^{-\gamma_{\sigma,l} t}
-\end{equation*}
+    \label{correlationf}
+\end{equation}
 
 En donde 
 
@@ -1994,9 +1995,26 @@ Y así finalmente
     C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right]
 \end{equation*}
 
-Gracias a que se tiene una expresión analítica para $C^{\sigma}_{0}(t)$ se puede determinar el $\tau_{B0}$. Se debe concentrar principalmente en la parte con $\sinh(\pi t/\beta \sigma)$m debido a que $\sigma=\pm 1$ sólo nos interesa analizar la cantidad $\pi t/\beta$, ya que para tiempos $t > \beta$ se podrá considerar que $1/\sinh(\pi t/\beta \sigma) \propto \exp(-t/\beta)$, por lo tanto para está función correlación el tiempo de correlación del baño consiste en el inverso de la temperatura $\tau_{B0} = \beta$. Con esto finalmente se podrá obtener el tiempo de correlación asociado a un sólo resrvorio como $\tau_{B} = \max \{\beta,\tau_{Bf} \}$.  
+Gracias a que se tiene una expresión analítica para $C^{\sigma}_{0}(t)$ se puede determinar el $\tau_{B0}$. Se debe concentrar principalmente en la parte con $\sinh(\pi t/\beta \sigma)$ debido a que $\sigma=\pm 1$ sólo nos interesa analizar la cantidad $\pi t/\beta$, ya que para tiempos $t > \beta$ se podrá considerar que $1/\sinh(\pi t/\beta \sigma) \propto \exp(-t/\beta)$, por lo tanto para está función correlación el tiempo de correlación del baño consiste en el inverso de la temperatura $\tau_{B0} = \beta$. Con esto finalmente se podrá obtener el tiempo de correlación asociado a un sólo reservorio como $\tau_{B} = \max \{\beta,\tau_{Bf} \}$.  
 
 \label{appendix5correlation}
+
+\subsection{Cálculo numérico para $\tau_{Bf}$}
+Para poder calcular los tiempos de correlación $\tau_{Bf}$ correspondiente a los baños $L$ y $R$ se podrá usar la expresión \ref{correlationf}. Para poder determinar este $\tau_{Bf}$ se busca el punto en que la función correlación se anula, y luego para poder determinar si sigue un comportamiento markoviano se debe tener que $\tau_{R}\gg \tau_{Bf}$, con esto dicho se procede a calcular las partes imaginarias y reales de las funciones correlación correspondientes a los baños $L$ y $R$ 
+
+\insertimage[\label{img:correlacion}]{ejemplos/corre.pdf}{scale=0.7}{Gráficos de la parte real e imaginaria de las funciones correlación en función del tiempo para los baños $L$ y $R$ con una diferencia de potencial correspondiente a $eV=20$ y $\sigma=+$.}
+\insertimage[\label{img:correlacionmin}]{ejemplos/correminus.pdf}{scale=0.7}{Gráficos de la parte real e imaginaria de las funciones correlación en función del tiempo para los baños $L$ y $R$ con una diferencia de potencial correspondiente a $eV=20$ y $\sigma=-$.}
+
+De la Figura \ref{img:correlacion} y \ref{img:correlacionmin} se puede notar que para $t>0.4$ las funciones correlación para ambos baños ya son practicamente cero. Ahora para poder analizar la Markovianeidad, se puede graficar la evolución del sistema y ver en que tiempo las componentes de la matriz densidad relajan al estado estacionario. Para ello se grafica 
+
+
+\insertimage[\label{img:probas}]{ejemplos/probas.png}{scale=0.4}{Gráficos de las partes diagonales de la matriz densidad del sistema $LRD$ en función del tiempo.}
+
+Con la Figura \ref{img:probas} que el tiempo de relajación del sistema es $\tau_{R}>1000$ y por lo tanto permite corrobar que con respecto a los tiempos $\tau_{Bf}$, se cumple que $\tau_{Bf}/\tau_{R} < 0.0004 $. Este análisis se probo para distintos valores de $eV$ los cuáles dieron valores similares para $\tau_{Bf}$ y el tiempo de relajación $\tau_{R}$. 
+
+\label{appendix5tauf}
+
+\newpage 
 
 \subsection{Concurrencia}
 En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se requiere calcular la concurrencia en el subsistema $\hat{\rho}_{LR}$ por lo tanto se tiene que partir calculando 
