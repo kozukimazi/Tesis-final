@@ -42,10 +42,10 @@ Un sistema cuántico cerrado puede ser descrito por la matriz densidad $\hat{\rh
 Y la solución descrita por la evolución unitaria 
 
 \begin{equation*}
-    U(t,t_{0}) = \hat{T}_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t}ds \hat{H}(s) \right] \implies \hat{\rho}(t) = U(t,t_{0})\hat{\rho}(t_{0})U^{\dagger}(t,t_{0})
+    \hat{U}(t,t_{0}) = \hat{T}_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t}ds \hat{H}(s) \right] \implies \hat{\rho}(t) = \hat{U}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}(t,t_{0})
 \end{equation*}
 
-En donde $T_{\leftarrow}$ consiste en el operador ordenación temporal cronológico que ordena los productos de operadores dependientes del tiempo, de tal manera que el tiempo en el que son evaluados los operadores va creciendo de derecha a izquierda.
+En donde $\hat{T}_{\leftarrow}$ consiste en el operador ordenación temporal cronológico que ordena los productos de operadores dependientes del tiempo, de tal manera que el tiempo en el que son evaluados los operadores va creciendo de derecha a izquierda.
 
 \subsection{Cuadro de interacción}
 Supongamos que el Hamiltoniano del sistema se puede separar en dos partes
@@ -57,13 +57,13 @@ Supongamos que el Hamiltoniano del sistema se puede separar en dos partes
 En teoría esto se puede hacer de varias formas, pero por lo general, si tenemos el caso de dos subsistemas, $\hat{H}_{0}$ contiene los Hamiltonianos de cada uno de ellos cuando no hay interacción, mientras que $\hat{H}_{I}$ representa la interacción entre ellos. Si introducimos los operadores unitarios
 
 \begin{equation*}
-    U_{0}(t,t_{0}) \equiv \exp[-i\hat{H}_{0}(t-t_{0}) ]  \hspace{15mm} U_{I}(t,t_0) \equiv U^{\dagger}_{0}(t,t_{0})U(t,t_{0})
+    \hat{U}_{0}(t,t_{0}) \equiv \exp[-i\hat{H}_{0}(t-t_{0}) ]  \hspace{15mm} \hat{U}_{I}(t,t_0) \equiv \hat{U}^{\dagger}_{0}(t,t_{0})\hat{U}(t,t_{0})
 \end{equation*}
 
 Se puede describir la matriz densidad en el cuadro de interacción
 
 \begin{equation*}
-    \hat{\rho}_{I}(t) \equiv U_{I}(t,t_{0})\hat{\rho}(t_{0})U^{\dagger}_{I}(t,t_{0})
+    \hat{\rho}_{I}(t) \equiv \hat{U}_{I}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}_{I}(t,t_{0})
 \end{equation*}
 
 Y la evolución en este cuadro de interacción
@@ -76,7 +76,7 @@ Y la evolución en este cuadro de interacción
 Con 
 
 \begin{equation*}
-    \tilde{H}_{I}(t) = U^{\dagger}_{0}(t,t_{0})\hat{H}_{I}(t)U_{0}(t,t_{0})
+    \tilde{H}_{I}(t) = \hat{U}^{\dagger}_{0}(t,t_{0})\hat{H}_{I}(t)\hat{U}_{0}(t,t_{0})
 \end{equation*}
 
 \label{sec:closedQM}
@@ -279,7 +279,7 @@ El poder escribir el disipador de esta manera es importante, ya que permite pres
 
 
 \chapter{Estadística de conteo(FCS)}
-En este capítulo se presenta el formalismo de FCS, el cuál permite calcular los momentos de mayor orden para un sistema descrito por ecuaciones maestras.En la sección \ref{sec3workheat} se describen las cantidades termodinámicas a estudiar. Mientras que en la sección \ref{sec3sub:leyestermo} se establecen las leyes de la termodinámica. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos. En la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. En la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada que permite describir los distintos momentos estadísticos. 
+En este capítulo se presenta el formalismo de FCS. En la sección \ref{sec3workheat} se describen las cantidades termodinámicas a estudiar. Mientras que en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos. En la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. En la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada. 
 
 \section{Cantidades termodinámicas}
 Se considera el sistema descrito por el Hamiltoniano
@@ -288,7 +288,7 @@ Se considera el sistema descrito por el Hamiltoniano
     \hat{H}_{tot}(t) = \hat{H}_{S}(t) + \sum_{\alpha}(\hat{H}_{\alpha} + \hat{V}_{\alpha})  = \hat{H}_{S}(t) + \hat{H}_{B} + \hat{V}
 \end{equation*}
 
-Donde el primer término describe el Hamiltoniano del sistema el cuál puede ser tiempo dependiente, la segunda parte describe los reservorios térmicos y por último la tercera parte constituye el acoplamiento entre sistema baño. El sistema intercambia energía y partículas con el reservorio, por ende el cambio de energía puede ser dividido por una contribución correspondiente al calor y otra correspondiente al trabajo. Así se define, el calor que libera el baño $\alpha$ durante el intervalo de tiempo $[0,t]$ es dado por
+Donde el primer término describe el Hamiltoniano del sistema el cuál puede ser tiempo dependiente, la segunda parte describe los reservorios térmicos y por último la tercera parte constituye el acoplamiento entre sistema-baño. El sistema intercambia energía y partículas con el reservorio, por ende el cambio de energía puede ser dividido por una contribución correspondiente al calor y otra correspondiente al trabajo. Así se define el calor que libera el baño $\alpha$ durante el intervalo de tiempo $[0,t]$ es dado por
 
 \begin{equation*}
     \langle Q_{\alpha}\rangle = - \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(t) \} + \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(0) \}
@@ -304,6 +304,7 @@ En donde $\hat{N}_{\alpha}$ corresponde al operador de número que describe el n
 \newpage
 
 \section{Leyes de la termodinámica}
+\label{Leyestermo}
 \subsection{Ley cero}
 Si se tiene un sistema total descrito por un sistema reducido y un baño, los cuáles están en equilibrio a temperatura inversa $\beta$ y potencial químico $\mu$. De tal manera que el estado del sistema en equilibrio es él equilibrio gran canónico
 
@@ -323,7 +324,7 @@ En el límite de acoplamiento débil entre el sistema y el baño, este equilibri
 \end{equation*}
 
 \subsection{Primera Ley}
-Primero, se debe escribir la corriente de calor y la potencia entregadas por el baño $\alpha$
+Para escribir la primera ley en un estado fuera de equilibrio, primero se debe escribir la corriente de calor y la potencia entregadas por el baño $\alpha$
 
 \begin{equation*}
     J_{\alpha}(t) = \partial_{t}\langle Q_{\alpha}\rangle \hspace{12mm}  P_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle
@@ -332,17 +333,17 @@ Primero, se debe escribir la corriente de calor y la potencia entregadas por el 
 Para el caso en que el Hamiltoniano del sistema no depende del tiempo y considerando que se cumple el acoplamiento débil, la primera ley consiste en
 
 \begin{equation*}
-    \partial_{t}U(t) = \sum_{\alpha}[J_{\alpha}(t) + P_{\alpha}(t) ] \hspace{12mm} U = \text{Tr}\{\hat{H}_{S}\hat{\rho}_{tot}(t) \}
+    \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha}(t) + P_{\alpha}(t) ] \hspace{12mm} E = \text{Tr}\{\hat{H}_{S}\hat{\rho}_{tot}(t) \}
 \end{equation*}
 
-Que en el límite de acoplamiento débil $U(t)$ consiste en la energía interna del sistema, mientras que la corriente de calor y la potencia entregada por el baño $\alpha$ en función de la matriz densidad del sistema, será 
+En el límite de acoplamiento débil $E(t)$ consiste en la energía interna del sistema, mientras que la corriente de calor y la potencia entregada por el baño $\alpha$ en función de la matriz densidad del sistema será 
 
 \begin{equation*}
     J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} 
 \end{equation*}
 
 \subsection{Segunda Ley}
-Para introducir la segunda Ley, se parte de la condición inicial en el que el sistema y el reservorio son sistemas no correlacionados
+Para introducir la segunda Ley se parte de la condición inicial en el que el sistema y el reservorio son sistemas no correlacionados, es decir 
 
 \begin{equation*}
     \hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0)\otimes_{\alpha}\hat{\tau}_{\alpha} \hspace{12mm} \hat{\tau}_{\alpha} = \frac{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) }}{ \text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\} }
@@ -366,12 +367,12 @@ Es decir, la producción de entropía se separa en una parte que corresponde al 
     \dot{\sigma}(t) \equiv \partial_{t}\Delta S(t) - \sum_{\alpha}\beta_{\alpha}J_{\alpha} \geq 0
 \end{equation*}
 
-En donde la igualdad se cumple para procesos reversibles. Con esto se han definido las leyes de la termodinámica en funcion de flujos continuos, que se podrán escribir a través de la matriz densidad reducidad. En esta tesis serán estudiados principalmente en el estado estacionario.
+En donde la igualdad se cumple para procesos reversibles. Con esto se han definido las leyes de la termodinámica en función de flujos continuos, que se podrán escribir a través de la matriz densidad reducida. En esta tesis estas cantidades serán estudiadas principalmente en el estado estacionario.
 
 \label{sec3sub:leyestermo}
 
 \section{Estadística de medición en dos puntos}
-Considere un sistema total descrito por la condición inicial $\rho_{tot}(0) = \rho_{s}(0) \otimes_{\alpha} \tau_{\alpha}$. En donde $\hat{\tau}_{\alpha}$ representa el equilibrio gran canónico del reservorio $\alpha$. A lo largo de este trabajo nos interesa calcular cantidades termodinámicas. Es importante calcular cantidades como el calor y trabajo. Al ser cantidades que dependen del incremento de variables aleatorias como la energía y número de partículas en el reservorio, estas cantidades se podrán describir en función de una distribución de probabilidad
+Considere un sistema total descrito por la condición inicial $\hat{\rho}_{tot}(0) = \hat{\rho}_{s}(0) \otimes_{\alpha} \hat{\tau}_{\alpha}$. En donde $\hat{\tau}_{\alpha}$ representa el equilibrio gran canónico del reservorio $\alpha$. A lo largo de este trabajo nos interesa calcular cantidades termodinámicas. Es importante calcular cantidades como el calor y trabajo. Al ser cantidades que dependen del incremento de variables aleatorias como la energía y número de partículas en el reservorio, estas cantidades se podrán describir en función de una distribución de probabilidad
 
 \begin{align*}
     P(\textbf{Q},\textbf{W}) & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'} P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) P_{0}(\textbf{E},\textbf{N})\\
@@ -384,22 +385,22 @@ La probabilidad conjunta de que cada baño $\alpha$ tenga energía $E_{\alpha}$ 
     P_{0}(\textbf{E},\textbf{N}) = \Pi_{\alpha}  \frac{e^{-\beta_{\alpha}(E_{\alpha} - \mu_{\alpha}N_{\alpha} )  }}{ \text{Tr}\{e^{-\beta_{\alpha}(E_{\alpha} - \mu_{\alpha}N_{\alpha} )  }\} } 
 \end{equation*}
 
-Ahora si se quiere medir la probabilidad condicional de que el reservorio tenga energía $E'_{\alpha}$ y número de partículas $N'_{\alpha}$ a tiempo $t$, dado que inicialmente se midio $E_{\alpha}$ y $N_{\alpha}$, primero se debe partir del estado al realizar la medición a $t=0$
+Ahora si se quiere medir la probabilidad condicional de que el reservorio tenga energía $E'_{\alpha}$ y número de partículas $N'_{\alpha}$ a tiempo $t$, dado que inicialmente se midio $E_{\alpha}$ y $N_{\alpha}$, primero se debe partir del estado medido a $t=0$
 
 \begin{equation*}
-    \rho'(0) = \frac{\hat{P}_{\textbf{E}, \textbf{N} }\rho(0) \hat{P}_{\textbf{E}, \textbf{N} } }{\text{Tr}\{\hat{P}_{\textbf{E}, \textbf{N} }\rho(0) \hat{P}_{\textbf{E}, \textbf{N} } \} }
+    \hat{\rho}'(0) = \frac{\hat{P}_{\textbf{E}, \textbf{N} }\hat{\rho}(0) \hat{P}_{\textbf{E}, \textbf{N} } }{\text{Tr}\{\hat{P}_{\textbf{E}, \textbf{N} }\hat{\rho}(0) \hat{P}_{\textbf{E}, \textbf{N} } \} }
 \end{equation*}
 
 En donde $\hat{P}_{\textbf{E}, \textbf{N} } = I_{S} \otimes \hat{P}^{B}_{\textbf{E}, \textbf{N} }$ es el proyector de haber medido la energía y el número de partículas en el reservorio, ahora se deja evolucionar el sistema a tiempo $t$, es decir
 
 \begin{equation*}
-    \rho'(t) = \hat{U}(t)\rho'(0)\hat{U}^{\dagger}(t)
+    \hat{\rho}'(t) = \hat{U}(t)\hat{\rho}'(0)\hat{U}^{\dagger}(t)
 \end{equation*}
 
 Y finalmente al medir en $t$ las energías $E'_{\alpha}$, $N'_{\alpha}$, la probabilidad condicional queda como
 
 \begin{equation*}
-    P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) = \text{Tr}\{\hat{P}_{\textbf{E}', \textbf{N}' }\rho'(t) \hat{P}_{\textbf{E}', \textbf{N}' } \}
+    P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) = \text{Tr}\{\hat{P}_{\textbf{E}', \textbf{N}' }\hat{\rho}'(t) \hat{P}_{\textbf{E}', \textbf{N}' } \}
 \end{equation*}
 
 Escribiendo los proyectores de manera explícita $\hat{P}^{B}_{\textbf{E}, \textbf{N} } = |\textbf{E}, \textbf{N} \rangle\langle \textbf{E}, \textbf{N}|$, con esto 
@@ -411,13 +412,13 @@ Escribiendo los proyectores de manera explícita $\hat{P}^{B}_{\textbf{E}, \text
         & = \text{Tr}_{s}\{ \text{Tr}_{B}\{|\textbf{E},\textbf{N}\rangle \langle \textbf{E}',\textbf{N}'|\hat{U}(t)  \} \rho_{s}(0) \text{Tr}_{B}\{\hat{U}^{\dagger}(t) |\textbf{E}',\textbf{N}' \rangle \langle \textbf{E},\textbf{N}| \}     \}
     \end{align*}    
 
-Por ende, la probabilidad condicional de que los reservorios tengan energía $E'_{\alpha}$ y número de partículas $N'_{\alpha}$ a tiempo $t$, dado que a tiempo cero sus energías y número de partículas son $E_{\alpha}$ y $N_{\alpha}$ es
+Por ende, la probabilidad condicional de que los reservorios tengan energía $E'_{\alpha}$ y número de partículas $N'_{\alpha}$ a tiempo $t$ dado que a tiempo cero sus energías y número de partículas son $E_{\alpha}$ y $N_{\alpha}$ se puede escribir como
 
 \begin{equation*}
-    P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) = \text{Tr}_{S}\{M \rho_{s}(0)M^{\dagger} \}  \hspace{10mm} M = \text{Tr}_{B}\{|\textbf{E},\textbf{N} \rangle \langle \textbf{E}',\textbf{N}' | U(t)\}
+    P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) = \text{Tr}_{S}\{M \hat{\rho}_{s}(0)M^{\dagger} \}  \hspace{10mm} M = \text{Tr}_{B}\{|\textbf{E},\textbf{N} \rangle \langle \textbf{E}',\textbf{N}' | \hat{U}(t)\}
 \end{equation*}
 
-Al tener una distribución de probabilidad, se puede acceder a la función generadora de momentos, para acceder a cantidades como el promedio o la varianza, esta función es
+Al tener una distribución de probabilidad se puede acceder a la función generadora de momentos para obtener cantidades como el promedio o la varianza, esta función es
 
 \begin{equation}
     \Lambda(\vec{\lambda},\vec{\chi}) \equiv \int d\textbf{Q} d\textbf{W}P(\textbf{Q},\textbf{W}) e^{-i\vec{\lambda}\cdot \textbf{Q} -i\vec{\chi}\cdot \textbf{W} }
@@ -427,7 +428,7 @@ Al tener una distribución de probabilidad, se puede acceder a la función gener
 Que se puede escribir en función de la evolución de una matriz densidad auxiliar \ref{apendix:fcs1}
 
 \begin{equation}
-    \Lambda(\vec{\lambda},\vec{\chi}) = \text{Tr}\{\rho_{tot}(\vec{\lambda},\vec{\chi};t) \}    \hspace{14mm} \rho_{tot}(\vec{\lambda},\vec{\chi};t) = \hat{U}(\vec{\lambda},\vec{\chi};t) \rho_{tot}(0) \hat{U}^{\dagger}(\vec{\lambda},\vec{\chi};t)
+    \Lambda(\vec{\lambda},\vec{\chi}) = \text{Tr}\{\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t) \}    \hspace{14mm} \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t) = \hat{U}(\vec{\lambda},\vec{\chi};t) \hat{\rho}_{tot}(0) \hat{U}^{\dagger}(\vec{\lambda},\vec{\chi};t)
     \label{sec2:evolucionconteo}
 \end{equation}
 
@@ -437,18 +438,19 @@ Y
     \hat{U}(\vec{\lambda},\vec{\chi};t) = e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha} ) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]  } \hat{U}(t) e^{\frac{i}{2}\sum_{\alpha}[ \lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]}
 \end{equation*}
 
-$\vec{\lambda}$ y $\vec{\chi}$ se denominan los parámetros de conteo o \textit{Counting Fields}, y $\rho(\vec{\lambda},\vec{\chi};t)$ se denomina la matriz densidad generalizada. El conocer la evolución de esta matriz permite acceder a los momentos del calor y el trabajo, y de manera general del observable que se quiera estudiar. Sin embargo esta es descrita en función de la matriz densidad total, por lo que el siguiente paso es encontrar una ecuación maestra para los grados de libertad del sistema reducido.
+$\vec{\lambda}$ y $\vec{\chi}$ se denominan los parámetros de conteo o \textit{Counting Fields}, y $\rho(\vec{\lambda},\vec{\chi};t)$ se denomina la matriz densidad generalizada. El conocer la evolución de esta matriz permite acceder a los momentos del calor y el trabajo y de manera general del observable que se quiera estudiar. Sin embargo esta es descrita en función de la matriz densidad total, por lo que el siguiente paso es encontrar una ecuación maestra para los grados de libertad del sistema reducido.
 
 \label{sec2:estadistica2puntos}
 
 
+
 \section{Formalismo de Superoperadores y Espacio de Liouville}
-Un operador en el espacio de Hilbert dado por $\hat{\rho}$ el cuál tiene dimension $N\times N$, es mapeado al espacio de Liouville por un vector de dimension $N^{2}\times 1$ dado por $|\rho \rangle \rangle$  y un superoperador $\check{L}$ que actua en el vector $|\rho\rangle \rangle$ se convierte en una matriz $N^{2}\times N^{2}$. Este espacio tiene las siguientes definiciones
+Un operador en el espacio de Hilbert dado por $\hat{\rho}$ el cuál tiene dimension $N\times N$, es mapeado al espacio de Liouville por un vector de dimension $N^{2}\times 1$ dado por $|\rho \rangle \rangle$  también un superoperador $\check{L}$ que actua en el vector $|\rho\rangle \rangle$ se convierte en una matriz $N^{2}\times N^{2}$. Este espacio tiene las siguientes definiciones
 
 \begin{align*}
-    &\langle \langle A|B\rangle \rangle  \equiv \text{Tr}\{\hat{A}^{\dagger}\hat{B}\} \\
-   &\check{1}  \equiv \sum_{n,n'}|nn'\rangle \rangle \langle \langle nn'| \\
-    & |nn'\rangle \rangle  \to |n\rangle \langle n'|  \hspace{10mm}  \langle \langle nn'| \to |n'\rangle \langle n|     
+    \langle \langle A|B\rangle \rangle  &\equiv \text{Tr}\{\hat{A}^{\dagger}\hat{B}\} \\
+   \check{1}  &\equiv \sum_{n,n'}|nn'\rangle \rangle \langle \langle nn'| \\
+     |nn'\rangle \rangle &  \to |n\rangle \langle n'|  \hspace{10mm}  \langle \langle nn'| \to |n'\rangle \langle n|     
 \end{align*}
 
 Además, se cumple que 
@@ -459,7 +461,7 @@ Además, se cumple que
     \langle \langle 1|A\rangle \rangle & = \text{Tr}\{\hat{A}\} 
 \end{align*}
 
-En este formalismo, si la evolución de la matriz densidad, esta descrita por el operador $\check{\mathcal{L}}$
+En este formalismo si la evolución de la matriz densidad esta descrita por el operador $\check{\mathcal{L}}$
 
 \begin{equation*}
     \frac{d|\rho(t) \rangle \rangle}{dt} = \check{\mathcal{L}}|\rho(t) \rangle \rangle
@@ -472,7 +474,7 @@ La solución formal de esta ecuación
     \label{sec2liouvilleformal}
 \end{equation}
 
-Además existen los superoperadores de proyección Nakajima-Zwanzig\cite{zwanzig1966statistical}. Estos actuan en la matriz densidad total, en donde existe el operador  $\check{\mathcal{P}}$ que es el superoperador proyección que proyecta la parte relevante de la dinámica, mientras que $\check{\mathcal{Q}}$ proyecta la parte no relevante, con las propiedades
+Además existen los superoperadores de proyección Nakajima-Zwanzig\cite{zwanzig1966statistical}. Estos actuan en la matriz densidad total, en donde existe el operador  $\check{\mathcal{P}}$ que es el superoperador proyección que proyecta la parte relevante de la dinámica, mientras que $\check{\mathcal{Q}}$ proyecta la parte no relevante. Que cumplen con las propiedades
 
 \begin{align*}
     & \check{\mathcal{P}} + \check{\mathcal{Q}} = \check{1} \\
@@ -481,7 +483,7 @@ Además existen los superoperadores de proyección Nakajima-Zwanzig\cite{zwanzig
     & \check{\mathcal{P}}\check{\mathcal{Q}} = \check{\mathcal{Q}}\check{\mathcal{P}} = 0 
 \end{align*}    
 
-La evolución temporal de la matriz densidad, a través de estos proyectores
+La evolución temporal de la matriz densidad a través de estos proyectores
 
 \begin{align*}
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) & = \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{Q}}\hat{\rho}(t) \\
@@ -496,16 +498,16 @@ La evolución temporal de la matriz densidad, a través de estos proyectores
 De la evolución descrita por \ref{sec2:evolucionconteo}, se deduce la ecuación diferencial
 
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{0},\hat{\rho}(\vec{\lambda},\vec{\chi},t)] - i\epsilon[\hat{V}_{\lambda} \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\hat{V}_{-\lambda}]
+    \frac{d}{dt}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{0},\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)] - i\epsilon[\hat{V}_{\lambda} \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\hat{V}_{-\lambda}]
 \end{equation*}
 
-Con el Hamiltoniano total $\hat{H} = \hat{H}_{s} + \hat{H}_{B} + \epsilon \hat{H}_{I} = \hat{H}_{0} + \epsilon \hat{H}_{I}$, en donde $\epsilon$ consiste en un parámetro adimensional para posteriormente aplicar acoplamiento débil. Además se tiene
+Con el Hamiltoniano total $\hat{H} = \hat{H}_{S} + \hat{H}_{B} + \epsilon \hat{H}_{I} = \hat{H}_{0} + \epsilon \hat{H}_{I}$, en donde $\epsilon$ consiste en un parámetro adimensional para posteriormente aplicar acoplamiento débil. Además se tiene
 
 \begin{equation*}
     \hat{V}_{\lambda} = e^{-\frac{i}{2}\hat{A}(\lambda,\chi)}\hat{H}_{I}e^{\frac{i}{2}\hat{A}(\lambda,\chi)} \hspace{14mm}  
 \end{equation*}
 
-Con $\hat{A}(\lambda,\chi) = \sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]$. Que en formalismo de superoperadores,se puede escribir
+Con $\hat{A}(\lambda,\chi) = \sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]$. Que en formalismo de superoperadores se puede escribir
 
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) & = \check{\mathcal{L}}_{\lambda}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) \\  
@@ -519,14 +521,14 @@ En el cuadro de interacción
     & = e^{i\hat{H}_{0}t}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)e^{-i\hat{H}_{0}t}
 \end{align*}
 
-El operador de Liouville que contiene el parámetro de conteo, en el cuadro de interaccion se vuelve $\check{\mathcal{L}}_{\lambda}(t) = e^{-\check{\mathcal{L}}_{0}t}\check{\mathcal{L}}_{\lambda}e^{\check{\mathcal{L}}_{0}t}$ y la evolución temporal
+El operador de Liouville que contiene el parámetro de conteo en el cuadro de interaccion se vuelve $\check{\mathcal{L}}_{\lambda}(t) = e^{-\check{\mathcal{L}}_{0}t}\check{\mathcal{L}}_{\lambda}e^{\check{\mathcal{L}}_{0}t}$ y la evolución temporal
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t) = \epsilon \check{\mathcal{L}}_{\lambda}(t)\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)
  \label{sec2FCS:evolution}
 \end{equation}
 
-La evolución de los grados de libertad del sistema reducido
+La evolución de los grados de libertad del sistema reducido queda 
 
 \begin{multline}
     \dot{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) =  \epsilon^{2}\int_{0}^{t}ds \left[- \text{Tr}_{B}\{\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} - \text{Tr}_{B}\{\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t) \} \right.\\
@@ -539,16 +541,16 @@ La demostración de esta ecuación se encuentra en el apéndice \ref{apendixsubs
 \begin{align*}
     \hat{V} & = \sum_{\alpha,k}\hat{S}_{\alpha,k}\hat{B}_{\alpha,k} \\
     \hat{V}_{\lambda} & = \sum_{\alpha,k}\hat{S}_{\alpha,k}\hat{B}_{\alpha,k,\lambda} \\
-    B_{\alpha,k,\lambda} & \equiv e^{-(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}\hat{B}_{\alpha,k}e^{(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}   
+    \hat{B}_{\alpha,k,\lambda} & \equiv e^{-(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}\hat{B}_{\alpha,k}e^{(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}   
 \end{align*}
 
-Utilizando también, en el cuadro de interacción
+Y utilizando también que en el cuadro de interacción
 
 \begin{equation*}
     \hat{U}^{\dagger}_{S}(t)\hat{S}_{\alpha,k}\hat{U}_{S}(t) = \sum_{j}e^{-i\omega_{j}t}\hat{S}_{\alpha,k;j}
 \end{equation*}
 
-En donde $\hat{S}_{\alpha,k;j}$ son operadores de salto y $\omega_{j}$ las frecuencias de Bohr del Hamiltoniano del sistema.Y finalmente, definiendo las funciones correlación $C^{\alpha}_{k,k'}(s) = \text{Tr}\{e^{is\hat{H}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}e^{-is\hat{H}_{\alpha} }\hat{B}_{\alpha,t}\hat{\tau}_{\alpha}\}$ nos queda la ecuación maestra generalizada, deducida en \ref{finalequation}
+En donde $\hat{S}_{\alpha,k;j}$ son operadores de salto y $\omega_{j}$ las frecuencias de Bohr del Hamiltoniano del sistema. Finalmente, definiendo las funciones correlación $C^{\alpha}_{k,k'}(s) = \text{Tr}\{e^{is\hat{H}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}e^{-is\hat{H}_{\alpha} }\hat{B}_{\alpha,t}\hat{\tau}_{\alpha}\}$ nos queda la ecuación maestra generalizada deducida en \ref{finalequation}
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}\int_{0}^{t}ds \mathcal{I}(s,t) 
@@ -558,14 +560,14 @@ En donde $\hat{S}_{\alpha,k;j}$ son operadores de salto y $\omega_{j}$ las frecu
 En donde
 
 \begin{multline*}
-    \mathcal{I}(s,t) = e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s)\hat{S}^{\dagger}_{\alpha,k;j}S_{\alpha,k',j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'} \\
+    \mathcal{I}(s,t) = e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k',j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'} \\
     - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha} - \chi_{\alpha})}\left[e^{i\omega_{j'}s}C^{\alpha}_{k,k'}(s+\lambda_{\alpha}) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s+\lambda_{\alpha})  \right]  \hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}
 \end{multline*}
 
 \label{sec2:master}
 
 \subsection{Resolución finita de energía}
-Similar a lo hecho en la sección de Ecuación de Lindblad, uno de los requisitos que se busca en la evolución de la ecuación maestra, es que sea Markoviana, para ello se necesita tomar el límite superior del integral en el tiempo de la ecuación \ref{ecmaestrafinal} a infinito. Para poder hacer esto se requiere nuevamente que el tiempo de correlación del baño $\tau_{B}$ sea mucho menor al tiempo de relajación del sistema $\tau_{R}$. Sin embargo, hay que notar que ahora en el argumento de las funciones correlación aparece el parámetro de conteo $\lambda_{\alpha}$, por ende la aproximación Markoviana también requiere que $C^{\alpha}_{k,k'}(\pm \tau + \lambda_\alpha) \approx 0$ para $\tau > \tau_{R}$, esto implica un nuevo régimen de validez
+Similar a lo hecho en la sección de Ecuación de Lindblad, uno de los requisitos que se busca en la evolución de la ecuación maestra es que sea Markoviana, para ello se necesita tomar el límite superior del integral en el tiempo de la ecuación \ref{ecmaestrafinal} a infinito. Para poder hacer esto se requiere nuevamente que el tiempo de correlación del baño $\tau_{B}$ sea mucho menor al tiempo de relajación del sistema $\tau_{R}$. Sin embargo, hay que notar que ahora en el argumento de las funciones correlación aparece el parámetro de conteo $\lambda_{\alpha}$, por ende la aproximación Markoviana también requiere que $C^{\alpha}_{k,k'}(\pm \tau + \lambda_\alpha) \approx 0$ para $\tau > \tau_{R}$, esto implica un nuevo régimen de validez
 
 \begin{equation*}
     \tau_{B} \ll \tau_{R} \hspace{10mm} |\lambda_{\alpha}| \ll \tau_{R}
@@ -1200,7 +1202,7 @@ Definiendo los superoperadores
     \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) & = \int_{0}^{t}dT \int_{0}^{T}ds \check{\mathcal{L}'}_{\lambda}(T)\check{\mathcal{L}'}_{\lambda}(T-s)
 \end{align*}
 
-Tomando hasta segundo orden, la inversa del superoperador $\check{\mathcal{W}}$
+Tomando hasta segundo orden la inversa del superoperador $\check{\mathcal{W}}$
 
 \begin{equation}
     \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t) =  \check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) - \epsilon  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) +  \epsilon^{2}[\check{\mathcal{W}}^{2}_{1}(\vec{\lambda},\vec{\chi},t) -  \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) ]
@@ -1214,47 +1216,47 @@ Se cumple la propiedad
     \label{apendix2Wproperty}
 \end{equation}
 
-Para encontrar la matriz densidad generalizada, se quiere rescatar la parte relevante de la matriz densidad total, es decir, trazar los grados de libertad del reservorio, por ende el proyector que usaremos
+Para encontrar la matriz densidad generalizada, se quiere rescatar la parte relevante de la matriz densidad total, es decir, trazar los grados de libertad del reservorio, por ende el proyector que se usará es 
 
 \begin{equation*}
     \check{\mathcal{P}} = \sum_{r}|\rho_{R}^{eq} \rangle \rangle \langle \langle rr|
 \end{equation*}
 
-En donde $\otimes_{\alpha} \hat{\tau}_{\alpha} \to  |\rho_{R}^{eq} \rangle \rangle$ es el superoperador que representa el equilibrio del reservorio. Al aplicar esto a la matriz densidad total
+En donde $\otimes_{\alpha} \hat{\tau}_{\alpha} \to  |\hat{\rho}_{R}^{eq} \rangle \rangle$ es el superoperador que representa el equilibrio del reservorio. Al aplicar esto a la matriz densidad total
 
 \begin{equation*}
-    \check{\mathcal{P}}|\hat{\rho}(\vec{\lambda},\vec{\chi},t) \rangle \rangle = |\rho_{s}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\rho^{eq}_{R}\rangle \rangle 
+    \check{\mathcal{P}}|\hat{\rho}(\vec{\lambda},\vec{\chi},t) \rangle \rangle = |\hat{\rho}_{s}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle 
 \end{equation*}
 
-La evolución de la matriz densidad generalizada, usando los operadores Nakajima-Zwanzig
+La evolución de la matriz densidad generalizada usando los operadores Nakajima-Zwanzig
 
 \begin{align}
-    \check{\mathcal{P}}|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & =  \check{\mathcal{P}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\rho_{tot}(0)\rangle \rangle  \label{apendix2proyectionev1} \\
-    \check{\mathcal{Q}}|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & = \check{\mathcal{Q}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\rho_{tot}(0)\rangle \rangle 
+    \check{\mathcal{P}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & =  \check{\mathcal{P}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\hat{\rho}_{tot}(0)\rangle \rangle  \label{apendix2proyectionev1} \\
+    \check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & = \check{\mathcal{Q}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\hat{\rho}_{tot}(0)\rangle \rangle 
 \label{apendix2proyectionev}
 \end{align}
 
-Dos indicaciones son importantes para seguir. Primero, debido a que se asume que la condición inicial del reservorio es diagonal, se tendrá que $\check{\mathcal{Q}}|\rho_{tot}(0)\rangle\rangle = 0 $. Segundo, 
- que $|\rho_{tot}(0)\rangle \rangle = \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)|\rho_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle$
+Dos indicaciones son importantes para seguir. Primero, debido a que se asume que la condición inicial del reservorio es diagonal, se tendrá que $\check{\mathcal{Q}}|\hat{\rho}_{tot}(0)\rangle\rangle = 0 $. Segundo 
+ que $|\hat{\rho}_{tot}(0)\rangle \rangle = \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle$
 
 \begin{align*}
-    |\rho_{totI}(0)\rangle \rangle & = (\check{\mathcal{P}} + \check{\mathcal{Q}} )\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
-        & = \check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle
+    |\hat{\rho}_{totI}(0)\rangle \rangle & = (\check{\mathcal{P}} + \check{\mathcal{Q}} )\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
+        & = \check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle
 \end{align*}
 
 Al derivar temporalmente las ecuaciones \ref{apendix2proyectionev1} y \ref{apendix2proyectionev} 
 
 \begin{align*}
-    \check{\mathcal{P}}|\dot{\rho}_{totI}(\vec{\lambda},\vec{\chi},t) \rangle \rangle & = \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
-     & = \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle 
+    \check{\mathcal{P}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t) \rangle \rangle & = \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
+     & = \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle 
 \end{align*}
 
 \begin{align*}
-    \check{\mathcal{Q}}|\dot{\rho}_{totI}(\vec{\lambda},\vec{\chi},t) \rangle \rangle & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
-     & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}|\rho_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle 
+    \check{\mathcal{Q}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t) \rangle \rangle & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
+     & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle 
 \end{align*}
 
-Estas ecuaciones son exactas, para utilizar la suposición de acoplamiento débil, se partirá usando la relación \ref{apendix2Wproperty}, así
+Estas ecuaciones son exactas. Para utilizar la suposición de acoplamiento débil, se partirá usando la relación \ref{apendix2Wproperty}, así
 
 \begin{align*}
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}} & = \epsilon \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}\check{\mathcal{Q}} \\
@@ -1265,17 +1267,17 @@ Estas ecuaciones son exactas, para utilizar la suposición de acoplamiento débi
 El primer y segundo término se hacen cero debido a que $\check{\mathcal{P}}\check{\mathcal{Q}}=0$, por otro lado
 
 \begin{align*}
-    \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \sum_{r,r'}|\rho^{eq}_{R} \rangle \rangle \langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)|\rho_{R}^{eq}\rangle \rangle \langle \langle r'r'|
+    \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \sum_{r,r'}|\hat{\rho}^{eq}_{R} \rangle \rangle \langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle \langle \langle r'r'|
 \end{align*}
 
-En donde el término $\langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\rho_{R}^{eq}\rangle \rangle$ será 
+En donde el término $\langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle$ será 
 
 \begin{align*}
-    \langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\rho_{R}^{eq}\rangle \rangle & = \text{Tr}_{B}\{\hat{\rho}^{eq}_{R}\hat{V}_{\lambda}(t)\} \\
+    \langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle & = \text{Tr}_{B}\{\hat{\rho}^{eq}_{R}\hat{V}_{\lambda}(t)\} \\
                     & - \text{Tr}_{B}\{\hat{V}_{-\lambda}(t)\hat{\rho}^{eq}_{R}\}
 \end{align*}
 
-Debido a que $\hat{\rho}^{eq}_{R}$ conmuta con $H_{R}$, tendremos que el estado de equilibrio conmuta con $\hat{A}(\lambda,\chi)$, por lo tanto se anula este término. Por último el término restante
+Debido a que $\hat{\rho}^{eq}_{R}$ conmuta con $\hat{H}_{R}$ tendremos que el estado de equilibrio conmuta con $\hat{A}(\lambda,\chi)$, por lo tanto se anula este término. Y el término restante queda como 
 
 \begin{align*}
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} & = \epsilon \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \\
@@ -1283,28 +1285,28 @@ Debido a que $\hat{\rho}^{eq}_{R}$ conmuta con $H_{R}$, tendremos que el estado 
     & - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}
 \end{align*}
 
-Con lo que finalmente
+De manera explícita
 
 \begin{equation*}
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \epsilon^{2}\check{\mathcal{P}}\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\check{\mathcal{P}} 
 \end{equation*}
 
-Aplicando $\check{\mathcal{P}}|\dot{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle = |\dot{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle$ y multiplicando por la izquierda por $\sum_{r}\langle \langle rr|$ para eliminar los grados de libertad del reservorio
+Aplicando $\check{\mathcal{P}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle = |\dot{\hat{\rho}}_{Is}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle$ y multiplicando a la izquierda por $\sum_{r}\langle \langle rr|$ para eliminar los grados de libertad del reservorio
 
 \begin{equation*}
-    \dot{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = \epsilon^{2} \sum_{r}\langle \langle rr|\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\rho_{R}^{eq}\rangle \rangle \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)
+    \dot{\hat{\rho}}_{Is}(\vec{\lambda},\vec{\chi},t) = \epsilon^{2} \sum_{r}\langle \langle rr|\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)
 \end{equation*}
 
-De aquí se podrán obtener las funciones correlación, calculando el producto
+De aquí se podrán obtener las funciones correlación calculando el producto
 
 \begin{align*}
-    \sum_{r}\langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = \text{Tr}_{B}\{\check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\rho_{R}^{eq}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \}
+    \sum_{r}\langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = \text{Tr}_{B}\{\check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{R}^{eq}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \}
 \end{align*}
 
 Por un lado se tendrá
 
 \begin{equation*}
-    \check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\rho_{R}^{eq} = -i[\hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} -  \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)]
+    \check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} = -i[\hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} -  \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)]
 \end{equation*}
 
 De manera explícita
@@ -1313,7 +1315,7 @@ De manera explícita
     & + \hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) - \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t)
 \end{align*}
 
-Finalmente, aplicando la traza en el reservorio a esta ecuación, se obtiene \ref{ecmaestraVlambda}.
+Finalmente, aplicando la traza en el reservorio a esta ecuación se obtiene \ref{ecmaestraVlambda}.
 
     \label{apendixsubsectionmatriz}
     
