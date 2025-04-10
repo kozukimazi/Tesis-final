@@ -531,8 +531,8 @@ El operador de Liouville que contiene el parámetro de conteo en el cuadro de in
 La evolución de los grados de libertad del sistema reducido queda 
 
 \begin{multline}
-    \dot{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) =  \epsilon^{2}\int_{0}^{t}ds \left[- \text{Tr}_{B}\{\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} - \text{Tr}_{B}\{\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t) \} \right.\\
-    \left. + \text{Tr}_{B}\{\hat{V}_{\lambda}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s) \} + \text{Tr}_{B}\{ \hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t) \}  \right]
+    \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) =  \epsilon^{2}\int_{0}^{t}ds \left[- \text{Tr}_{B}\{\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} - \text{Tr}_{B}\{\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t) \} \right.\\
+    \left. + \text{Tr}_{B}\{\hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s) \} + \text{Tr}_{B}\{ \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t) \}  \right]
 \label{ecmaestraVlambda}
 \end{multline}
 
@@ -553,15 +553,15 @@ Y utilizando también que en el cuadro de interacción
 En donde $\hat{S}_{\alpha,k;j}$ son operadores de salto y $\omega_{j}$ las frecuencias de Bohr del Hamiltoniano del sistema. Finalmente, definiendo las funciones correlación $C^{\alpha}_{k,k'}(s) = \text{Tr}\{e^{is\hat{H}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}e^{-is\hat{H}_{\alpha} }\hat{B}_{\alpha,t}\hat{\tau}_{\alpha}\}$ nos queda la ecuación maestra generalizada deducida en \ref{finalequation}
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}\int_{0}^{t}ds \mathcal{I}(s,t) 
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}\int_{0}^{t}ds \mathcal{I}(s,t) 
 \label{ecmaestrafinal}
 \end{equation}
 
 En donde
 
 \begin{multline*}
-    \mathcal{I}(s,t) = e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k',j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'} \\
-    - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha} - \chi_{\alpha})}\left[e^{i\omega_{j'}s}C^{\alpha}_{k,k'}(s+\lambda_{\alpha}) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s+\lambda_{\alpha})  \right]  \hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}
+    \mathcal{I}(s,t) = e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k',j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'} \\
+    - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha} - \chi_{\alpha})}\left[e^{i\omega_{j'}s}C^{\alpha}_{k,k'}(s+\lambda_{\alpha}) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s+\lambda_{\alpha})  \right]  \hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}
 \end{multline*}
 
 \label{sec2:master}
@@ -573,25 +573,25 @@ Similar a lo hecho en la sección de Ecuación de Lindblad, uno de los requisito
     \tau_{B} \ll \tau_{R} \hspace{10mm} |\lambda_{\alpha}| \ll \tau_{R}
 \end{equation*}
 
-Esto tiene repercusiones importantes, ya que genera que la resolución de diferencias de energía en el calor sea finita. Esto es debido a que el parámetro $\lambda_{\alpha}$ y el calor medido en el baño $Q_{\alpha}$ son variables conjugadas en la distribución de probabilidad de calor y trabajo, es por ello que cumplen con el principio de incertidumbre \cite{folland1997uncertainty}. Las diferencias de energía del orden de $1/\tau_{R}$ dejan de ser fiables, ya que en este rango de energías el valor promedio del calor es del orden de su varianza, es decir
+Esto tiene repercusiones importantes, ya que genera que la resolución de diferencias de energía en el calor sea finita. Esto es debido a que el parámetro $\lambda_{\alpha}$ y el calor medido en el baño $Q_{\alpha}$ son variables conjugadas en la distribución de probabilidad de calor y trabajo, lo que implica que estas variables cumplen con el principio de incertidumbre \cite{folland1997uncertainty}.Y conlleva que las diferencias de energía del orden de $1/\tau_{R}$ dejan de ser fiables, ya que en este rango de energías el valor promedio del calor es del orden de su varianza, es decir
 
 \begin{equation*}
     \langle \Delta \lambda^{2}_{\alpha} \rangle \langle (\Delta Q_{\alpha})^{2}\rangle \geq \gamma \implies \langle (\Delta Q_{\alpha})^{2}\rangle  \geq \frac{\gamma}{\tau^{2}_{R}}
 \end{equation*}
 
-Con $\gamma$ alguna constante positiva. La profundidad de este resultado es el hecho de que él realizar una aproximación Markoviana a la evolución, esta naturalmente sufre de una resolución limitada con respecto al calor intercambiado con los reservorios, lo que puede crear inconsistencias termodinámicas. Por ende para tener una evolución termodinámicamente consistente, se debe redefinir las leyes termodinámicas teniendo en cuenta la resolución finita de calor.
+Con $\gamma$ alguna constante positiva. La profundidad de este resultado es el hecho de que él realizar una aproximación Markoviana a la evolución esta naturalmente sufre de una resolución limitada con respecto al calor intercambiado con los reservorios, lo que puede crear inconsistencias termodinámicas. Por ende para tener una evolución termodinámicamente consistente, se debe redefinir las leyes termodinámicas teniendo en cuenta la resolución finita del calor.
 
 \label{sec2:finiteresol}
 
 \subsection{Agrupación de frecuencias}
-La ecuación de Redfield no siempre preserva positividad, lo que puede generar la aparición de probabilidades negativas en la matriz densidad del sistema reducido. La forma más común de asegurar la positividad es usar la aproximación secular vista en la sección \ref{sec:lindblad}, el problema de aplicar esta aproximación es que requiere que las frecuencias de Bohr estén bien separadas con respecto a $1/\tau_{R}$, por lo tanto el aplicar esta aproximación necesita que no hayan frecuencias de Bohr casi degeneradas, eliminando una parte de los efectos cuánticos, ya que se pierden las coherencias entre niveles de energías cercanos\cite{trushechkin2021unified}. Se puede considerar un esquema diferente que asegure positividad, partiendo del punto que la aproximación de Markov, asegura que para dos frecuencias de transición distintas, se cumple que $|\omega_{j} - \omega_{j'}|\ll 1/\tau_{B}$ o $|\omega_{j}-\omega_{j'}|\gg 1/\tau_{R}$. Incluso, se pueden cumplir las dos opciones. Dependiendo de cuál se cumpla, podemos agrupar las frecuencias de transición en conjuntos $x_{q}$, tal que si se cumple la primera o la segunda inecuación, estan en el mismo o en diferentes grupos, matemáticamente
+La ecuación de Redfield no siempre preserva positividad, lo que puede generar la aparición de probabilidades negativas en la matriz densidad del sistema reducido. La forma más común de asegurar la positividad es usar la aproximación secular vista en la sección \ref{sec:lindblad} para obtener la forma GKLS, el problema de aplicar esta aproximación es que requiere que las frecuencias de Bohr estén bien separadas con respecto a $1/\tau_{R}$, por lo tanto el aplicar esta aproximación necesita que no hayan frecuencias de Bohr casi degeneradas, eliminando una parte de los efectos cuánticos, ya que se pierden las coherencias entre niveles de energías cercanos\cite{trushechkin2021unified}. Se puede considerar un esquema diferente que asegure positividad, partiendo del punto que la aproximación de Markov asegura que para dos frecuencias de transición distintas, se cumple que $|\omega_{j} - \omega_{j'}|\ll 1/\tau_{B}$ o $|\omega_{j}-\omega_{j'}|\gg 1/\tau_{R}$. Incluso, se pueden cumplir las dos opciones. Dependiendo de cuál se cumpla, podemos agrupar las frecuencias de transición en conjuntos $x_{q}$, tal que si se cumple la primera o la segunda inecuación, estan en el mismo o en diferentes grupos, matemáticamente se traduce en
 
 \begin{align*}
     |\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}  &\hspace{10mm} \omega_{j} \in x_{q}, \omega_{j'} \in x_{q} \\
     |\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}  &\hspace{10mm} \omega_{j} \in x_{q}, \omega_{j'} \in x_{q'}
 \end{align*}
 
-Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente de tal manera que en promedio se anulan. Para frecuencias de transición en el mismo set $x_{q}$, primero deberemos notar que los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ entran después en las funciones correlación espectral del baño, y por ende influyen en las energías de transición que se intercambian con el reservorio. Sin embargo, se comentó anteriormente que existe una resolución finita en el calor intercambiado con el baño, lo que conlleva a que para frecuencias del mismo conjunto no siempre podremos determinar la diferencia entre $\omega_{j}$ y $\omega_{j'}$, esto produce que tendremos que sustituir estas frecuencias por una frecuencia auxiliar $\omega_{q}$ tal que
+Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente de tal manera que en promedio se anulan. Para frecuencias de transición en el mismo set $x_{q}$, primero deberemos notar que los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ posteriormente actuan en las funciones correlación espectral del baño, y por ende influyen en las energías de transición que se intercambian con el reservorio. Sin embargo, se comentó anteriormente que existe una resolución finita en el calor intercambiado con el baño, lo que conlleva a que para frecuencias del mismo conjunto no siempre podremos determinar la diferencia entre $\omega_{j}$ y $\omega_{j'}$, esto produce que tendremos que sustituir estas frecuencias por una frecuencia auxiliar $\omega_{q}$ tal que
 
 \begin{equation*}
     e^{i\omega_{j}s},e^{i\omega_{j'}s} \to e^{i\omega_{q}s} \hspace{10mm} |\omega_{q} - \omega_{j}| \ll 1/\tau_{B} \hspace{10mm} \forall \omega_{j} \in x_{q} 
@@ -600,7 +600,7 @@ Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos
 Usando este esquema en la ecuación \ref{ecmaestrafinal}, se obtiene la ecuación en la forma de Lindblad con el objetivo de asegura la positividad\cite{chruscinski2017brief}, descrita por
 
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{LS},\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)] + \sum_{\alpha}\tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha} \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)] + \sum_{\alpha}\tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha} \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)
 \end{equation*}
 
 Con
@@ -630,7 +630,7 @@ Con las cantidades
 En donde se asume por simplicidad $C^{\alpha}_{k,k'} \propto \delta_{k,k'}$. La demostración de esta ecuación está incluida en el apéndice \ref{apendixGKLSgeneral}. Después se puede usar la condición KMS \ref{apendixKMS} junto con el límite en que  los parámetros de conteo tienden a cero, para obtener
 
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}_{Is}(t) = - i[\hat{H}_{LS}(t),\hat{\rho}_{Is}(t)] + \sum_{\alpha}\tilde{\mathcal{L}}_{\alpha} \hat{\rho}_{Is}(t)
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = - i[\hat{H}_{LS}(t),\hat{\rho}_{IS}(t)] + \sum_{\alpha}\tilde{\mathcal{L}}_{\alpha} \hat{\rho}_{IS}(t)
 \end{equation*}
 
 Con
@@ -652,10 +652,10 @@ Con
 \label{sec2lindbladconsistency}
 \end{equation}
 
-Hay dos límites importantes, uno de ellos es, si se cumple el caso en que todas las frecuencias cumplen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{S}$, en ese caso se recupera la ecuación de Lindblad correspondiente a la aproximación secular, ya que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo, $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$ esto permite describir la ecuación maestra en función de operadores locales, y por ende no es necesario diagonalizar el Hamiltoniano $\hat{H}_{S}$\cite{wichterich2007modeling}. Por otro lado, la resolución finita de energía se hace presente, ya  que para un mismo grupo $x_{q}$, las funciones correlación espectral son evaluadas en la misma frecuencia $\omega_{q}$, que intuitivamente describe la energía con que las partículas se intercambian al reservorio.  
+Hay dos límites importantes, uno de ellos es si se cumple el caso en que todas las frecuencias cumplen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{S}$, en ese caso se recupera la ecuación de Lindblad correspondiente a la aproximación secular, ya que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo, $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$ esto permite describir la ecuación maestra en función de operadores locales, y por ende no es necesario diagonalizar el Hamiltoniano $\hat{H}_{S}$\cite{wichterich2007modeling}. Por otro lado, la resolución finita de energía se hace presente, ya  que para un mismo grupo $x_{q}$, las funciones correlación espectral son evaluadas en la misma frecuencia $\omega_{q}$, que intuitivamente describe la energía con que las partículas se intercambian al reservorio.  
 
 \section{Consistencia termodinámica}
-Debido a la resolución finita de energía, para asegurar consistencia termodinámica, se deben redefinir las leyes termodinámicas. Primero se define el Hamiltoniano termodinámico $\hat{H}_{TD}$ que cumpla la siguiente relación de conmutación
+Debido a la resolución finita de energía para asegurar consistencia termodinámica, se deben redefinir las leyes termodinámicas. Primero se define el Hamiltoniano termodinámico $\hat{H}_{TD}$ que cumpla la siguiente relación de conmutación
 
 \begin{equation*}
     [\hat{S}_{\alpha,k,j},\hat{H}_{TD}] = \omega_{q}\hat{S}_{\alpha,k,j}
@@ -664,7 +664,7 @@ Debido a la resolución finita de energía, para asegurar consistencia termodin�
 Para todas las frecuencias $\omega_{j} \in x_{q}$. Este Hamiltoniano se puede obtener mediante el Hamiltoniano $\hat{H}_{S}$, cambiando sus autovalores tal que las frecuencias $\omega_{j} \to \omega_{q}$ para $\omega_{j} \in x_{q}$. Para las leyes de la termodinámica, se redefine la energía interna
 
 \begin{equation*}
-    U(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t) \}
+    E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t) \}
 \end{equation*}
 
 Finalmente la corriente de calor y el trabajo entregado por el baño $\alpha$ se redefine por
@@ -673,10 +673,10 @@ Finalmente la corriente de calor y el trabajo entregado por el baño $\alpha$ se
     J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} 
 \end{equation*}
 
-Note que está definición automáticamente cumple con la primera ley de la termodinámica, ya que al derivar la energía interna $\partial_{t}U(t) = \text{Tr}\{ \hat{H}_{TD}\partial_{t}\hat{\rho}_{S}(t) \}$, y utilizar que el Hamiltoniano termodinámico cumple con la relación $[\hat{H}_{TD},\hat{H}_{s} + \hat{H}_{LS}] = 0$, se obtiene la primera ley
+Note que está definición automáticamente cumple con la primera ley de la termodinámica, ya que al derivar la energía interna $\partial_{t}E(t) = \text{Tr}\{ \hat{H}_{TD}\partial_{t}\hat{\rho}_{S}(t) \}$ y utilizar que el Hamiltoniano termodinámico cumple con la relación $[\hat{H}_{TD},\hat{H}_{s} + \hat{H}_{LS}] = 0$, se obtiene la primera ley
 
 \begin{equation*}
-    \partial_{t}U(t) = \sum_{\alpha}[J_{\alpha} + P_{\alpha}]
+    \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha} + P_{\alpha}]
 \end{equation*}
 
 \subsection{Ley cero}
@@ -701,7 +701,7 @@ La razón de producción de entropía en este caso es
 \label{sec2secondlaw}
 \end{equation}
 
-En donde en la última parte se usa la desigualdad de Spohn\cite{spohn2007irreversible}, considerando el hecho de que $\rho_{G}(\beta_{\alpha},\mu_{\alpha})$ es estado estacionario de $\mathcal{L}_{\alpha}$. La demostración de \ref{sec2cerolaw} y de \ref{sec2secondlaw} se encuentra en el apéndice \ref{apendix:thermolaws}. Con esto finalmente logramos obtener una descripción termodinámicamente consistente a él uso de la ecuación maestra \ref{sec2schrodingerthermo}.
+En donde en la última parte se considera el hecho de que $\rho_{G}(\beta_{\alpha},\mu_{\alpha})$ es estado estacionario de $\mathcal{L}_{\alpha}$, para utilizar la desigualdad de Spohn\cite{spohn2007irreversible}. La demostración de \ref{sec2cerolaw} y de \ref{sec2secondlaw} se encuentra en el apéndice \ref{apendix:thermolaws}. Con esto finalmente logramos obtener una descripción termodinámicamente consistente a él uso de la ecuación maestra \ref{sec2schrodingerthermo}.
 
 
 % ------------------------------------------------------------------------------
