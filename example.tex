@@ -708,8 +708,9 @@ En donde en la última parte se considera el hecho de que $\rho_{G}(\beta_{\alph
 % NUEVO CAPÍTULO
 % ------------------------------------------------------------------------------
 \chapter{Flujos de información}
+En este capítulo se introduce el concepto de información termodinámica, partiendo en la sección \ref{sec4:functionalcurrent} con la explicación del Demonio de Maxwell y finalizando en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} en donde se utiliza la termodinámica estocástica y la matriz densidad para definir los flujos de información en contexto clásico y cuántico respectivamente.
 \section{Demonio de Maxwell}
-El demonio de Maxwell consiste en un experimento mental esbozado por Maxwell en su libro \cite{Maxwell_1871}, el cuál consiste en una caja dividida en dos partes A y B, en donde cada compartimiento se encuentra lleno de un gas ideal a temperatura $T$ y presión $P$ como sale en la Figura \ref{img:demon}. Entre la división existe una puerta sin masa la cuál permite el intercambio de partículas entre compartimientos. La puerta es controlada por un Demonio, el cuál tiene la capacidad de abrir y cerrar la puerta sin ningún costo de energía. La cualidad principal de él, es que conoce las velocidades de cada partícula de los dos compartimientos. Debido a que la temperatura incide en la velocidad promedio de cada partícula. El demonio toma la decisión de dejar pasar las partículas con mayor velocidad al promedio de el compartimiento A a el B. Mientras que a las partículas con baja temperatura de él compartimiento B a él A. Asumiendo que queda el mismo número de partículas en cada compartimiento, él Demonio logra aumentar la temperatura del compartimiento A, por otro lado la temperatura del compartmiento B decrese una cantidad $\Delta T$. Si analizamos la entropía total del sistema
+El demonio de Maxwell consiste en un experimento mental esbozado por Maxwell en su libro \cite{Maxwell_1871}, el cuál consiste en una caja dividida en dos partes A y B, en donde cada compartimiento se encuentra lleno de un gas ideal a temperatura $T$ y presión $P$ como sale en la Figura \ref{img:demon}. Entre la división existe una puerta sin masa la cuál permite el intercambio de partículas entre compartimientos. La puerta es controlada por un Demonio, el cuál tiene la capacidad de abrir y cerrar la puerta sin ningún costo de energía. La cualidad principal de él, es que conoce las velocidades de cada partícula de los dos compartimientos. Debido a que la temperatura incide en la velocidad promedio de cada partícula. El demonio toma la decisión de dejar pasar las partículas con mayor velocidad que la correspondiente a la velocidad promedio, desde el compartimiento A a el B. Mientras que a las partículas con baja velocidad de él compartimiento B a él A. Asumiendo que queda el mismo número de partículas en cada compartimiento, él Demonio logra aumentar la temperatura del compartimiento A, por otro lado la temperatura del compartimiento B decrese una cantidad $\Delta T$. Si analizamos la entropía total del sistema
 
 
 \begin{align*}
@@ -717,7 +718,8 @@ El demonio de Maxwell consiste en un experimento mental esbozado por Maxwell en 
        & =  C_{V} \log \left( 1 - \frac{\Delta T^{2}}{T^{2}}  \right) < 0
 \end{align*}
 
-En donde $C_{V}$ es la capacidad calorífica a volumen constante. Del cálculo de la entropía total, se obtiene que sin realizar trabajo se logró una disminución de la entropía, lo que rompe aparentemente con la segunda ley de la termódinamica. Posteriormente, Landauer exorcisaría este demonio, percatandosé que para que el demonio conozca la velocidad de las partículas, este necesita medir, y el hecho de medir requiere de  disipación, volviendo a respetar la segunda ley\cite{Landauer_1961}. Para sistemas no autónomos, es decir sistemas manipulados por un agente externo a través del cambio de cantidades macroscópicas, como por ejemplo el motor de Szilard\cite{szilard1964decrease}. La descripción y exorcización del Demonio de Maxwell se ha descrito, mediante la cuantificación de la energía que cuesta hacer una medición como también por el máximo trabajo que se puede extraer de un motor de feedback\cite{maruyama2009colloquium,sagawa2008second}. Sin embargo el caso de sistemas autónomos merece ser visto con detención.
+En donde $C_{V}$ es la capacidad calorífica a volumen constante. Del cálculo de la entropía total, se obtiene que sin realizar trabajo se logró una disminución de la entropía, lo que rompe aparentemente con la segunda ley de la termódinamica. Posteriormente, Landauer exorcisaría este demonio, percatandosé que para que el demonio conozca la velocidad de las partículas, este necesita medir, y el hecho de medir requiere de  disipación, volviendo a respetar la segunda ley\cite{Landauer_1961}. \\
+Para sistemas no autónomos, es decir sistemas manipulados por un agente externo a través del cambio de cantidades macroscópicas, como por ejemplo el motor de Szilard\cite{szilard1964decrease}. La descripción y exorcización del Demonio de Maxwell se ha descrito, mediante la cuantificación de la energía que cuesta hacer una medición como también por el máximo trabajo que se puede extraer de un motor de feedback\cite{maruyama2009colloquium,sagawa2008second}. Sin embargo el caso de sistemas autónomos merece ser visto con detención.
 
 \insertimage[\label{img:demon}]{ejemplos/Maxwelldemon1}{scale=0.9}{Esquema que representa al Demonio de Maxwell. Primero, consiste en los dos compartimientos que poseen el gas ideal distribuido de manera homogénea. Por último al trasladar las partículas de un lado a otro, queda el compartimiento A con partículas frías mientras que el compartimiento B con partículas calientes. Esta figura fue usada de \cite{link1} .}
 
@@ -725,13 +727,13 @@ En donde $C_{V}$ es la capacidad calorífica a volumen constante. Del cálculo d
 Muchos procesos físicos requieren la interacción entre un conjunto de subsistemas que componen un sistema global. Esta interacción entre los subsistemas no sólo incluye un intercambio de energía o partículas, sino que también incluye un intercambio de información a medida que se correlacionan estos subsistemas entre sí de manera autónoma, es decir, sin un factor externo el cuál realize un feedback en él. Entender como son utilizados estos flujos de información para hacer tareas útiles es de gran importancia. Un ejemplo de ello es en sistemas biólogicos, los cuáles realizan adaptación sensorial, en donde un organismo continuamente monitorea su ambiente mientras simultáneamente cambia su respuesta a él\cite{lan2012energy}. Para poder caracterizar esto se partirá considerando un Demonio de Maxwell autónomo como un sistema bipartito en donde una parte consiste en el sistema controlado y la parte restante en el sistema que actua como detector, el cuál ejerce control mediante una interacción física con el sistema controlado. Este sistema debe ser autónomo, en el sentido de que el Hamiltoniano de todo el sistema es tiempo independiente e intervenciones externas tales como mediciones y feedback no son considerados.
 
 \section{Descripción clásica}
-Para poder describir un demonio de Maxwell autónomo, se debe ser capaz de calcular la evolución de un sistema conectado a uno o más resevorios, y por ende sujeto a las leyes de la termodinámica. Para ello, supongamos el caso de 2 sistemas independientes $X$ e $Y$, cada uno de ellos tiene distintos estados discretos representados por $x$ e $y$. Estos sistemas tiene su propia dinámica, la cuál corresponde a saltos aleatorios entre los estados del sistema, que obedecen distintas razones de transición las cuáles serán determinadas por los reservorios a los cuáles esta conectado localmente cada subsistema, que refiere a la condición de balance detallado local\cite{van2015ensemble}. Esta evolución entre estados, se modela como un proceso de Markov\cite{van1992stochastic}. Para poder describir el sistema en conjunto, se supondrá primero que el sistema se acopla de manera bipartita, que en este contexto consiste en que si se tiene un estado conjunto de los dos sistemas $(x,y)$ sólo pueden haber transiciones del tipo $(x,y) \to (x,y')$ o $(x,y) \to (x',y)$ y no $(x,y) \to (x',y')$. Esto permite que el sistema total $XY$ siga siendo markoviano, y por ende la probabilidad de estar en el estado $(x,y)$, es decir $p(x,y)$ podrá ser descrita por una ecuación maestra
+Para poder describir un demonio de Maxwell autónomo, se debe ser capaz de calcular la evolución de un sistema conectado a uno o más reservorios, y por ende sujeto a las leyes de la termodinámica. Para ello, supongamos el caso de 2 sistemas independientes $X$ e $Y$, cada uno de ellos tiene distintos estados discretos representados por $x$ e $y$. Estos sistemas tienen su propia dinámica, la cuál corresponde a saltos aleatorios entre los estados del sistema, que obedecen distintas razones de transición las cuáles serán determinadas por los reservorios a los cuáles esta conectado localmente cada subsistema, que refiere a la condición de balance detallado local\cite{van2015ensemble}. Esta evolución entre estados, se modela como un proceso de Markov\cite{van1992stochastic}. Para poder describir el sistema en conjunto se supondrá primero que el sistema se acopla de manera bipartita, que en este contexto consiste en que si se tiene un estado conjunto de los dos sistemas $(x,y)$ sólo pueden haber transiciones del tipo $(x,y) \to (x,y')$ o $(x,y) \to (x',y)$ y no $(x,y) \to (x',y')$. Esto permite que el sistema total $XY$ siga siendo markoviano, y por ende la probabilidad de estar en el estado $(x,y)$, es decir $p(x,y)$ podrá ser descrita por una ecuación maestra
 
 \begin{equation*}
     d_{t}p(x,y) = \sum_{x',y'} \left[ W_{x,x'}^{y,y'}p(x',y')  - W_{x',x}^{y',y}p(x,y) \right]
 \end{equation*}
 
-En donde $W_{x,x'}^{y,y'}$ es la razón de transición en la cuál el sistema salta de $(x',y') \to (x,y)$. La cuál obedece la condición de balance detallado local $\ln (W_{x,x'}^{y,y'}/W_{x',x}^{y',y}) = - (\epsilon_{x,y} - \epsilon_{x',y'})/T$ que corresponde al cambio de energía durante un salto, el cuál es suministrado por el reservorio a través del calor. Debido a que el sistema es bipartito, la forma de las razones de transición corresponden a
+En donde $W_{x,x'}^{y,y'}$ es la razón de transición en la cuál el sistema salta de $(x',y') \to (x,y)$. La cuál obedece la condición de balance detallado local $\ln (W_{x,x'}^{y,y'}/W_{x',x}^{y',y}) = - (\epsilon_{x,y} - \epsilon_{x',y'})/T$, que corresponde al cambio de energía durante un salto, el cuál es suministrado por el reservorio a través del calor. Debido a que el sistema es bipartito, la forma de las razones de transición corresponden a
 
 \begin{equation*}
     W_{x,x'}^{y,y'} = \left\{ \begin{array}{lcc} w_{x,x'}^{y} & si & x \neq x'; y=y' \\ \\ w_{x}^{y,y'} & si & x=x';y\neq y'\\ \\ 0 & si & x \neq x'; y \neq y' \end{array} \right.
@@ -743,16 +745,16 @@ En función de la corriente de probabilidad $J_{x,x'}^{y,y'} = W_{x,x'}^{y,y'}p(
     d_{t}p(x,y) = \sum_{x',y'}J_{x,x'}^{y,y'} = \sum_{x'}J_{x,x'}^{y} + \sum_{y'}J_{x}^{y,y'}
 \end{equation*}
 
-En donde $J_{x}^{y,y'} = w_{x}^{y,y'}p(x,y') - w_{x}^{y',y}p(x,y)$ la corriente desde $y'$ e $y$ a lo largo de $x$. Esto es importante, ya que la estructura bipartita permite separar las corrientes de probabilidad, uno que va en la dirección $X$ y otro en la dirección $Y$. Este hecho puede ser explotado, ya que cualquier funcional de la corriente, es decir una cantidad $\mathcal{A}(J) = \sum J_{x,x'}^{y,y'}A_{x,x'}^{y,y'}$, se puede dividir en dos contribuciones\cite{horowitz2014thermodynamics}
+En donde $J_{x}^{y,y'} = w_{x}^{y,y'}p(x,y') - w_{x}^{y',y}p(x,y)$ la corriente desde $y'$ e $y$ a lo largo de $x$. Esto es importante, ya que la estructura bipartita permite separar las corrientes de probabilidad, una parte que va en la dirección $X$ y otra en la dirección $Y$. Este hecho puede ser explotado, ya que cualquier funcional de la corriente, es decir una cantidad $\mathcal{A}(J) = \sum J_{x,x'}^{y,y'}A_{x,x'}^{y,y'}$, se puede dividir en dos contribuciones\cite{horowitz2014thermodynamics}
 
 \begin{equation}
     \mathcal{A}(J) = \sum_{x\geq x';y \geq y'} J_{x,x'}^{y}A_{x,x'}^{y,y'} + \sum_{x \geq x'; y \geq y'}J_{x}^{y,y'} A_{x,x'}^{y,y'}
 \label{sec4:functionalcurrent}
 \end{equation}
 
-Con esto, se puede separar la variación de $\mathcal{A}$, uno en la dirección $X$ y en la dirección $Y$. 
+Con esto, se puede separar la variación de $\mathcal{A}$ uno en la dirección $X$ y en la dirección $Y$. 
 
-
+\label{sec4:flujos}
 \section{Segunda Ley de la termodinámica y flujos de información}
 El sistema conjunto $XY$, es un sistema abierto el cuál satisface la segunda ley de la termodinámica, lo cuál exige que la razón de producción de entropía sea siempre positiva
 
@@ -760,7 +762,7 @@ El sistema conjunto $XY$, es un sistema abierto el cuál satisface la segunda le
     \dot{\sigma} = \partial_{t}S^{XY} + \dot{S}_{r} \geq 0 
 \end{equation*}
 
-En donde el cambio de entropía del sistema consiste
+En donde el cambio de entropía del sistema consiste en 
 
 \begin{equation*}
     \partial_{t}S^{XY} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)}
@@ -784,14 +786,14 @@ Estos resultados se demuestran en el apendice \ref{apendix4:secondlaw}. Ya defin
     I_{xy} = \sum_{x,y} p(x,y) \ln \frac{p(x,y)}{p(x)p(y)} \geq 0 
 \end{equation*}
 
-Tal que, cuando $I$ es grande, los dos sistemas son altamente correlacionados, mientras que $I_{xy}=0$ significa que los sistemas son estadísticamente independientes. Para definir los flujos de información, se necesita calcular la variación temporal de la información mutua $\partial_{t} I_{xy} = \dot{I}^{X} + \dot{I}^{Y}$, con
+Tal que, cuando $I_{xy}$ es grande los dos sistemas son altamente correlacionados, mientras que $I_{xy}=0$ significa que los sistemas son estadísticamente independientes. Para definir los flujos de información, se necesita calcular la variación temporal de la información mutua $\partial_{t} I_{xy} = \dot{I}^{X} + \dot{I}^{Y}$ con
 
 \begin{align*}
     \dot{I}^{X} & = \sum_{x\geq x'; y}J_{x,x'}^{y} \ln \frac{ p(y|x) }{p(y|x')} \\
     \dot{I}^{Y} & = \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y)}{ p(x|y') }
 \end{align*}
 
- La demostración de este resultado también está en el apendice \ref{apendix4:secondlaw}. $\dot{I}^{X}$ e $\dot{I}^{Y}$ cuantifica como la información fluye entre los dos subsistemas, si $\dot{I}^{X}>0$, un salto en la dirección $X$ en promedio, aumenta la información $I_{xy}$, es decir $X$ esta aprendiendo o midiendo $Y$. De manera contraria, $\dot{I}^{X}<0$ significa que los saltos en la dirección $X$ decrecen las correlaciones, lo que puede ser interpretado como consumo de información con el objetivo de extraer energía. Debido a que la razón de producción de entropía es un funcional de la corriente, podemos usar la ecuación \ref{sec4:functionalcurrent} y escribir
+ La demostración de este resultado también está en el apendice \ref{apendix4:secondlaw}. $\dot{I}^{X}$ e $\dot{I}^{Y}$ cuantifican como la información fluye entre los dos subsistemas, si $\dot{I}^{X}>0$ un salto en la dirección $X$ en promedio, aumenta la información $I_{xy}$, es decir $X$ esta aprendiendo o midiendo $Y$. De manera contraria, $\dot{I}^{X}<0$ significa que los saltos en la dirección $X$ decrecen las correlaciones, lo que puede ser interpretado como consumo de información con el objetivo de extraer energía. Debido a que la razón de producción de entropía es un funcional de la corriente, podemos usar la ecuación \ref{sec4:functionalcurrent} y escribir
 
  \begin{equation*}
     \dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}
@@ -811,21 +813,21 @@ En donde podemos identificar
     \dot{\sigma}^{Y} &  = \sum_{x;y \geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(y')}{p(y)}  + \ln \frac{w_{x}^{y,y'}}{ w_{x}^{y',y} } + \ln \frac{p(x|y')}{p(x|y)} \right] 
 \end{align*}
 
-Con lo que finalmente, para las razones de produccion locales
+Con lo que finalmente para las razones de produccion locales
 
 \begin{align*}
     \dot{\sigma}^{X} & = \partial_{t}S^{X} + \dot{S}_{r}^{X} - \dot{I}^{X} \geq 0 \\
     \dot{\sigma}^{Y} & = \partial_{t}S^{Y} + \dot{S}_{r}^{Y} - \dot{I}^{Y} \geq 0
 \end{align*}
 
-Estas dos ecuaciones, permiten visualizar como la contribución de la información actua en la producción de entropía local de cada subsistema. Supongamos que no se sabe que el subsistema $Y$ esta interactuando con $X$, y que sólo somos capaces de monitorear $X$, en ese caso asignaremos a este sistema la razón de producción de entropía $\dot{\sigma}^{X}_{0} = \partial_{t}S^{X} + \dot{S}_{r}^{X}$. Si el subsistema $X$ estuviera aislado, efectivamente se tendría $\dot{\sigma}^{X}_{0} \geq 0$, sin embargo por la interacción  con el subsistema $Y$ pueden suceder casos en que $\dot{\sigma}^{X}_{0}<0$. Esta violación aparente de la Segunda Ley se puede interpretar como el efecto de un Demonio de Maxwell. En la evolución de sistemas autónomos los cuáles relajan a un estado estacionario fuera del equilibrio, se cumple que al llegar a este estado estacionario $d_{t}I_{xy} = 0$. Por lo tanto, el flujo de información queda $\dot{\mathcal{I}} = \dot{I}^{X} = - \dot{I}^{Y}$ y la razón de producción de entropía local de cada subsistema se vuelve
+Estas dos ecuaciones permiten visualizar como la contribución de la información actua en la producción de entropía local de cada subsistema. Supongamos que no se sabe que el subsistema $Y$ esta interactuando con $X$, y que sólo somos capaces de monitorear $X$, en ese caso asignaremos a este sistema la razón de producción de entropía $\dot{\sigma}^{X}_{0} = \partial_{t}S^{X} + \dot{S}_{r}^{X}$. Si el subsistema $X$ estuviera aislado, efectivamente se tendría $\dot{\sigma}^{X}_{0} \geq 0$, sin embargo por la interacción  con el subsistema $Y$ pueden suceder casos en que $\dot{\sigma}^{X}_{0}<0$. Esta violación aparente de la Segunda Ley se puede interpretar como el efecto de un Demonio de Maxwell. En la evolución de sistemas autónomos los cuáles relajan a un estado estacionario fuera del equilibrio, se cumple que al llegar al estado estacionario $d_{t}I_{xy} = 0$. Por lo tanto, el flujo de información queda $\dot{\mathcal{I}} = \dot{I}^{X} = - \dot{I}^{Y}$ y la razón de producción de entropía local de cada subsistema se vuelve
 
 \begin{align*}
     \dot{\sigma}^{X} & = \dot{S}_{r}^{X} - \dot{\mathcal{I}} \geq 0 \\
     \dot{\sigma}^{Y} & =  \dot{S}_{r}^{Y} + \dot{\mathcal{I}} \geq 0  
 \end{align*}
 
-Supongamos el caso en que $\dot{\mathcal{I}}> 0$, en este caso se puede interpretar que $X$ está actuando como sensor a medida que monitorea el subsistema $Y$. Para poder realizar esta actividad, el subsistema $X$ necesita entregar una energía mínima $\dot{S}_{r}^{X} \geq \dot{\mathcal {I}}$. Por el otro lado el subsistema $Y$ está entregando información, la cuál puede ser utilizada para extraer energía $-\dot{S}_{r}^{Y} \leq \dot{\mathcal{I}}$, esto es importante, ya que se puede utilizar para realizar trabajo en sistemas fuera del equilibrio, o enfriar un reservorio caliente. Un ejemplo típico de ello, es en sistemas fuera del equilibrio sujetos a un gradiente de potencial, en este caso el Demonio de Maxwell se puede visualizr mediante la aparición de una corriente de partículas en contra del gradiente de potencial, Efecto que se analizará en detalle en secciones posteriores.
+Supongamos el caso en que $\dot{\mathcal{I}}> 0$, en este caso se puede interpretar que $X$ está actuando como sensor a medida que monitorea el subsistema $Y$. Para poder realizar esta actividad, el subsistema $X$ necesita entregar una energía mínima $\dot{S}_{r}^{X} \geq \dot{\mathcal {I}}$. Por el otro lado el subsistema $Y$ está entregando información, la cuál puede ser utilizada para extraer energía $-\dot{S}_{r}^{Y} \leq \dot{\mathcal{I}}$, esto es importante, ya que se puede utilizar para realizar trabajo en sistemas fuera del equilibrio, o enfriar un reservorio caliente. Un ejemplo típico de ello, es en sistemas fuera del equilibrio sujetos a un gradiente de potencial, en este caso el Demonio de Maxwell se puede visualizar mediante la aparición de una corriente de partículas en contra del gradiente de potencial. Efecto que se analizará en detalle en secciones posteriores.
 
 \section{Descripción cuántica}
 Para poder describir los flujos de información en un contexto cuántico, se necesita conocer la dinámica de un sistema cuántico abierto acoplado a uno o varios reservorios, para ello se útilizara la matriz densidad. La cuál describirá la evolución del sistema reducido. El sistema total estará descrito po el Hamiltoniano $H = H_{S}+H_{B}+ H_{I}$, como se vio en la sección \ref{sec:lindblad}, la evolución markoviana de este sistema resulta en la ecuación maestra
@@ -919,6 +921,7 @@ Que coincide con el resultado en la descripción clásica. Aun así, este result
 \end{align*}
 
 En el estado estacionario se puede reemplazar $\dot{I}^{i} = - \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}$ y así la razón de cambio de la energía libre
+\label{sec4:flujos0}
 
 \begin{equation*}
     \dot{\mathcal{F}}_{i} = \dot{U}_{i} + T_{i} \dot{I}^{i}
@@ -1385,18 +1388,18 @@ Reemplazando estos términos en \ref{ecmaestraVlambda} se obtiene la ecuación m
 Desarrollando la ecuación \ref{ecmaestrafinal} podremos escribir
 
 \begin{multline*}
-    \frac{d}{dt}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)  \right. \\
-    \left. +  e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\right. \\
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  \right. \\
+    \left. +  e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\right. \\
     \left. - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s+\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s+\lambda_{\alpha}) ) \right.\\
-    \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right]    
+    \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right]    
 \end{multline*}
 
 Tomando la condición que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$
 
 \begin{multline*}
-    \frac{d}{dt}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = \\
-     - \sum_{\alpha,k;q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)  +  e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t) \hat{S}_{\alpha,k;q}(t) \right. \\
-    \left. - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s+\lambda_{\alpha}) ) \hat{S}_{\alpha,k;q}(t) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t)    \right]    
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \\
+     - \sum_{\alpha,k;q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  +  e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t) \hat{S}_{\alpha,k;q}(t) \right. \\
+    \left. - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s+\lambda_{\alpha}) ) \hat{S}_{\alpha,k;q}(t) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t)    \right]    
 \end{multline*}
 
 Usando la identidad 
@@ -1407,11 +1410,11 @@ Usando la identidad
     & = \frac{1}{2}\Gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q})
 \end{align*}
 
-Y además que $\int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) = e^{-i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s+\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) $, nos queda finalmente
+Y usando que $\int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) = e^{-i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s+\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) $, nos queda finalmente
 
 \begin{multline*}
-    \frac{d}{dt}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}\Delta^{\alpha}_{k,k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
-    + \sum_{\alpha,k;q} \Gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{-i\lambda_{\alpha}\omega_{q} -i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \}     \right]
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}\Delta^{\alpha}_{k,k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
+    + \sum_{\alpha,k;q} \Gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{-i\lambda_{\alpha}\omega_{q} -i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \}     \right]
 \end{multline*}
 
 Que es la ecuación que se quiere demostrar.
@@ -1435,7 +1438,7 @@ Definiremos una función correlación auxiliar
    & = \langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha})\rangle_{N} 
 \end{align*}
 
-Se debe relacionar estas funciones correlación auxiliar con las funciones correlación, es decir
+Se debe relacionar esta función correlación auxiliar con las funciones correlación, es decir
 
 \begin{align*}
     C^{\alpha N}_{kk}(s) & = \text{Tr}\{e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}(s)e^{is\mu_{\alpha}\hat{N}_{\alpha}} \hat{B}_{\alpha,k}e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{\tau}_{\alpha}   \} \\
@@ -1453,6 +1456,9 @@ Ahora podremos estudiar como se comportan las funciones correlación espectral
     & = e^{\beta_{\alpha}(\omega - \mu_{\alpha}n_{\alpha,k})} \Gamma^{\alpha}_{k,k}(-\omega)
 \end{align*}
 
+
+Esta condición es importante, ya que permite que se cumpla la condición de balance detallado local. 
+
 \label{apendixKMS}
 
 
@@ -1462,7 +1468,7 @@ Ahora podremos estudiar como se comportan las funciones correlación espectral
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Redefinición leyes de la termodinámica}
-Para obtener la ley cero, calcularemos $\mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}$ y $\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}$, considerando la relación de conmutación
+Para obtener la ley cero calcularemos $\mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}$ y $\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}$, considerando la relación de conmutación
 
 \begin{align*}
     [\hat{S}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = (\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}_{\alpha,k;q}  \\
@@ -1483,13 +1489,13 @@ Podremos aplicar esto en el disipador
     \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} e^{\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q} 
 \end{align*}
 
-Finalmente al sumar los dos disipadores en el superoperador $\mathcal{L}_{\alpha}$, se demuestra que
+Finalmente al sumar los dos disipadores en el superoperador $\mathcal{L}_{\alpha}$ se demuestra que
 
 \begin{equation*}
     \mathcal{L}_{\alpha}e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \propto  \mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0
 \end{equation*}
 
-Con lo que se demuestra la ley cero.
+Con lo que se prueba la ley cero.
 
 \newpage
 
@@ -1501,7 +1507,7 @@ Con lo que se demuestra la ley cero.
 Para desarrollar el cálculo de la segunda Ley, se partirá de
 
 \begin{align*}
-    - \frac{d}{dt}\text{Tr}\{ \hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} & =  \text{Tr}\Big\{ \frac{d}{dt}\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \Big\} - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \}\\
+    - \frac{d}{dt}\text{Tr}\{ \hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} & =  -\text{Tr}\Big\{ \frac{d}{dt}\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \Big\} - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \}\\
   & = - i \text{Tr}\{[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)]\ln \hat{\rho}_{S}(t)  \} - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \}  \\
   & = -\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \}
 \end{align*}
@@ -1520,7 +1526,7 @@ Con lo que finalmente, redefinimos la segunda ley de la termodinámica como
     \dot{\sigma} = - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) [\ln \hat{\rho}_{S}(t) -\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha}) ] \} \geq 0
 \end{equation*}
 
-Y se obtiene que la razón de producción de entropía es mayor igual a cero, debido a que se redefine el estado de Gibbs, de tal manera que $\hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})$ es estado estacionario de $\mathcal{L}_{\alpha}$, por lo tanto se puede aplicar la desigualdad de Spohn.
+Y se obtiene que la razón de producción de entropía es mayor igual a cero.
 
 \label{apendix:thermolaws}
 	% Imagen, se numerará automáticamente con la letra del anexo según
@@ -1588,10 +1594,8 @@ Del teorema de bayes $p(x,y) = p(x)p(y|x)$, $p(x,y) = p(y)p(x|y)$ se tendrá
                        & = \dot{I}^{X} + \dot{I}^{Y} 
 \end{align*}
 
-\subsection{Equivalencia de descripción cuántica con  sistemas clásicos bipartitos}
-
     \label{apendix4:secondlaw}
-	\subsection{Resultados}
+
 	 % Desactiva el color de celda
 
 \newpage
@@ -1905,7 +1909,6 @@ En donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. La distribución de Fer
 \end{equation}
 
 Los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en una frecuencia $\epsilon_{0}$. Se puede elegir un comportamiento lorentziano de la forma
-
 
 \begin{equation*}
     \gamma(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}}

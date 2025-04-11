@@ -24,8 +24,8 @@
 \contentsline {section}{\numberline {4.1}Demonio de Maxwell}{18}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Demonio de Maxwell autónomo}{19}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Descripción clásica}{19}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Segunda Ley de la termodinámica y flujos de información}{20}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Descripción cuántica}{22}{section.4.5}%
+\contentsline {section}{\numberline {4.4}Segunda Ley de la termodinámica y flujos de información}{21}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Descripción cuántica}{23}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Flujos de información en contexto cuántico}{24}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}{26}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Modelo teórico}{26}{section.5.1}%
@@ -45,8 +45,6 @@
 \contentsline {subsection}{\numberline {A.7}Segunda Ley}{54}{subsection.Alph0.1.7}%
 \contentsline {section}{\numberline {B}Cálculos realizados sección 4}{55}{section.Alph0.2}%
 \contentsline {subsection}{\numberline {B.1}Producción de entropía y información}{55}{subsection.Alph0.2.1}%
-\contentsline {subsection}{\numberline {B.2}Equivalencia de descripción cuántica con sistemas clásicos bipartitos}{56}{subsection.Alph0.2.2}%
-\contentsline {subsection}{\numberline {B.3}Resultados}{56}{subsection.Alph0.2.3}%
 \contentsline {section}{\numberline {C}Cálculos realizados seccion 5}{57}{section.Alph0.3}%
 \contentsline {subsection}{\numberline {C.1}Funciones de correlación para un baño de fermiones libres}{57}{subsection.Alph0.3.1}%
 \contentsline {subsection}{\numberline {C.2} Operadores de salto de sistema de 3 puntos cuánticos}{57}{subsection.Alph0.3.2}%
