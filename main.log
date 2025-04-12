@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  11 APR 2025 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  11 APR 2025 23:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2423,29 +2423,29 @@ Package pdftex.def Info: ./img//ejemplos/drawing3.pdf  used on input line 1123.
 <./img//ejemplos/info1.png, id=924, 1071.7641pt x 551.4201pt>
 File: ./img//ejemplos/info1.png Graphic file (type png)
 <use ./img//ejemplos/info1.png>
-Package pdftex.def Info: ./img//ejemplos/info1.png  used on input line 1127.
+Package pdftex.def Info: ./img//ejemplos/info1.png  used on input line 1128.
 (pdftex.def)             Requested size: 482.2894pt x 248.13675pt.
 
-Overfull \hbox (10.25816pt too wide) in paragraph at lines 1127--1127
+Overfull \hbox (10.25816pt too wide) in paragraph at lines 1128--1128
  [][] 
  []
 
-<./img//ejemplos/concu1.png, id=925, 1110.0672pt x 544.9158pt>
+[37 <./img//ejemplos/info1.png>]
+<./img//ejemplos/concu1.png, id=931, 1110.0672pt x 544.9158pt>
 File: ./img//ejemplos/concu1.png Graphic file (type png)
 <use ./img//ejemplos/concu1.png>
-Package pdftex.def Info: ./img//ejemplos/concu1.png  used on input line 1132.
+Package pdftex.def Info: ./img//ejemplos/concu1.png  used on input line 1134.
 (pdftex.def)             Requested size: 444.01901pt x 217.96245pt.
-[37 <./img//ejemplos/info1.png>]
 <./img//ejemplos/systemg.pdf, id=932, 538.71338pt x 598.09526pt>
 File: ./img//ejemplos/systemg.pdf Graphic file (type pdf)
 <use ./img//ejemplos/systemg.pdf>
-Package pdftex.def Info: ./img//ejemplos/systemg.pdf  used on input line 1136.
+Package pdftex.def Info: ./img//ejemplos/systemg.pdf  used on input line 1138.
 (pdftex.def)             Requested size: 430.97128pt x 478.47685pt.
  [38 <./img//ejemplos/concu1.png>]
 <./img//ejemplos/concu.pdf, id=943, 570.93507pt x 583.59889pt>
 File: ./img//ejemplos/concu.pdf Graphic file (type pdf)
 <use ./img//ejemplos/concu.pdf>
-Package pdftex.def Info: ./img//ejemplos/concu.pdf  used on input line 1140.
+Package pdftex.def Info: ./img//ejemplos/concu.pdf  used on input line 1142.
 (pdftex.def)             Requested size: 456.74867pt x 466.87975pt.
  [39 <./img//ejemplos/systemg.pdf>] [40 <./img//ejemplos/concu.pdf>] [41]
 Capítulo 6.
@@ -2456,41 +2456,41 @@ Capítulo 6.
 ]) [44] [45
 
 ] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]
-LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 2027.
+LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 2029.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.39996> on input line 2027.
+(Font)              <14.39996> on input line 2029.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.07993> on input line 2027.
+(Font)              <10.07993> on input line 2029.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.19998> on input line 2027.
+(Font)              <7.19998> on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2027.
+(hyperref)                removing `math shift' on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2027.
+(hyperref)                removing `subscript' on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2027.
+(hyperref)                removing `math shift' on input line 2029.
 
 <./img//ejemplos/corre.pdf, id=1148, 564.99895pt x 600.94685pt>
 File: ./img//ejemplos/corre.pdf Graphic file (type pdf)
 <use ./img//ejemplos/corre.pdf>
-Package pdftex.def Info: ./img//ejemplos/corre.pdf  used on input line 2030.
+Package pdftex.def Info: ./img//ejemplos/corre.pdf  used on input line 2032.
 (pdftex.def)             Requested size: 395.49657pt x 420.65993pt.
 <./img//ejemplos/correminus.pdf, id=1149, 588.28517pt x 549.3058pt>
 File: ./img//ejemplos/correminus.pdf Graphic file (type pdf)
 <use ./img//ejemplos/correminus.pdf>
-Package pdftex.def Info: ./img//ejemplos/correminus.pdf  used on input line 2031.
+Package pdftex.def Info: ./img//ejemplos/correminus.pdf  used on input line 2033.
 (pdftex.def)             Requested size: 411.79681pt x 384.51144pt.
 [66 <./img//ejemplos/corre.pdf>]
 <./img//ejemplos/probas.png, id=1163, 1110.0672pt x 544.9158pt>
 File: ./img//ejemplos/probas.png Graphic file (type png)
 <use ./img//ejemplos/probas.png>
-Package pdftex.def Info: ./img//ejemplos/probas.png  used on input line 2036.
+Package pdftex.def Info: ./img//ejemplos/probas.png  used on input line 2038.
 (pdftex.def)             Requested size: 444.01901pt x 217.96245pt.
  [67 <./img//ejemplos/correminus.pdf>] [68 <./img//ejemplos/probas.png>] [69]) (C:\Users\kozuk\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
@@ -2512,7 +2512,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  113i,12n,110p,2916b,2596s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (78 pages, 1435297 bytes).
+Output written on main.pdf (78 pages, 1436068 bytes).
 PDF statistics:
  1510 PDF objects out of 1728 (max. 8388607)
  1210 compressed objects within 13 object streams
