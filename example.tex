@@ -1143,7 +1143,8 @@ Se pueden notar dos comportamientos interesantes, el primero es que para $eV/T \
 
 \insertimage[\label{img:fig6resultado}]{ejemplos/systemg.pdf}{scale=0.80}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
 
-Se puede ver que a medida que $g\sim \gamma_{L}$, la potencia y la contribución de la información en el sistema $LR$ aumenta, lo cuál es interesante ya que permite ver como el acoplamiento favorece este hecho. Por otro lado, se pueden ver las contribuciones individuales en los flujos de información y como estas son influenciadas debido al acoplamiento, es decir lo que se ve en la Figura \ref{img:fig7resultado}
+Se puede ver que a medida que $g\sim \gamma_{L}$, la potencia y la contribución de la información en el sistema $LR$ aumenta, lo cuál es interesante ya que permite ver como el acoplamiento favorece este hecho. También se puede ver que a medida que $g\sim \gamma_{L}$ el flujo de energía del demonio aumenta.\\
+Por otro lado, se pueden ver las contribuciones individuales en los flujos de información y como estas son influenciadas debido al acoplamiento, es decir lo que se ve en la Figura \ref{img:fig7resultado}
 
 \insertimage[\label{img:fig7resultado}]{ejemplos/concu.pdf}{scale=0.8}{ (a)Gráfico de los flujos de información de cada sitio. (b)Gráfico de la concurrencia y la coherencia en función de $g/\gamma_{L}$. }
 
@@ -1630,7 +1631,7 @@ Del teorema de bayes $p(x,y) = p(x)p(y|x)$, $p(x,y) = p(y)p(x|y)$ se tendrá
 
 \section{Cálculos realizados seccion 5}
 \subsection{Funciones de correlación para un baño de fermiones libres}
-Para partir obteniendo las funciones correlación espectral, se partira de calcular
+Para partir obteniendo las funciones correlación espectral, se partirá calculando
 
 \begin{equation*}
     C_{1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,1}\hat{\tau}_{\alpha}  ]  \hspace{10mm} C_{-1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,-1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,-1}\hat{\tau}_{\alpha}  ] 
@@ -1643,7 +1644,7 @@ Tendremos que
     ^{\alpha}_{-1}(s) = \sum_{l,l'}t_{\alpha,l}t_{\alpha,l'}e^{-i\epsilon_{\alpha,l}s} \langle \hat{c}_{\alpha,l}\hat{c}^{\dagger}_{\alpha,l'} \rangle
 \end{equation*}
 
-Debido a que el reservorio está en equilibrio gran canónico, tendremos que el valor de expectación $\langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l}\rangle = f_{\alpha}(\epsilon_{\alpha,l})$ la distribución de Fermi. 
+Debido a que el reservorio está en equilibrio gran canónico, tendremos que el valor de expectación $\langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l}\rangle$ es la distribución de Fermi $f_{\alpha}(\epsilon_{\alpha,l})$ y por ende  
 
 \begin{equation*}
     C_{1}^{\alpha}(s) = \sum_{l}t^{2}_{\alpha,l}e^{i\epsilon_{\alpha,l}s} f_{\alpha}(\epsilon_{\alpha,l}) \hspace{10mm} C
@@ -1668,7 +1669,7 @@ Así podemos encontrar las funciones correlación espectral usando la transforma
     \Gamma_{1}^{\alpha}(\omega) = \gamma_{\alpha}(-\omega)f_{\alpha}(-\omega)  \hspace{10mm} \Gamma_{-1}^{\alpha}(\omega) = \gamma_{\alpha}(\omega)[1-f_{\alpha}(\omega)]
 \end{equation*}
 
-Más adelante en el apéndice se profundizará en el aspecto Markoviano de la función correlación correspondiente a las funciones correlación espectral específicas.
+Más adelante en el apéndice se profundizará en el aspecto Markoviano de la función correlación correspondiente a las funciones correlación espectral.
 \label{apendix5bathcorre}
 
 \subsection{ Operadores de salto de sistema de 3 puntos cuánticos}
@@ -1726,7 +1727,7 @@ Por otro lado de $\hat{n}^{2}_{i} = \hat{n}_{i}$
     & = (\hat{n}_{+} +\hat{n}_{-})(\hat{n}_{+} +\hat{n}_{-}) - (\hat{n}_{+} + \hat{n}_{-})  = 2\hat{n}_{+}\hat{n}_{-}
 \end{align*}
 
-Definiendo $\epsilon_{\pm} = \bar{\epsilon} \pm \sqrt{\Delta^{2}+g^{2}}$ se obtendrá para el Hamiltoniano
+Definiendo $\epsilon_{\pm} = \bar{\epsilon} \pm \sqrt{\Delta^{2}+g^{2}}$, se obtendrá para el Hamiltoniano
 
 \begin{equation}
     H_{S} = \epsilon_{D}\hat{n}_{D} + \epsilon_{+}\hat{n}_{+} + \epsilon_{-}\hat{n}_{-} + U\hat{n}_{D}(\hat{n}_{+} + \hat{n}_{-}) + U_{f}\hat{n}_{+}\hat{n}_{-}
@@ -1747,7 +1748,7 @@ Partiremos primero por $\hat{d}_{D}$ para ello se usará la identidad
     \textbf{1} = (\textbf{1} - \hat{n}_{+})(\textbf{1}-\hat{n}_{-}) + (\textbf{1} - \hat{n}_{+})\hat{n}_{-} + (\textbf{1} - \hat{n}_{-})\hat{n}_{+} + \hat{n}_{+}\hat{n}_{-} 
 \end{equation*}
 
-Utilizando que $(\textbf{1} - \hat{n}_{i})\hat{n}_{i} = \textbf{0}$ así se tendrá que
+Utilizando que $(\textbf{1} - \hat{n}_{i})\hat{n}_{i} = \textbf{0}$ se tendrá que
 
 \begin{align*}
     [H_{S},\hat{d}_{D}(\textbf{1}-\hat{n}_{+})(\textbf{1} - \hat{n}_{-})] & = - \epsilon_{D}\hat{d}_{D}(\textbf{1}-\hat{n}_{+})(\textbf{1} - \hat{n}_{-}) \\
