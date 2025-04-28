@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1744582239 "main.aux" "main.bbl" "main" 1744583497 0
-  "./library.bib" 1744575410 11068 0bbce68b676abcf4e909f0c615375759 ""
+["bibtex main"] 1745806950 "main.aux" "main.bbl" "main" 1745806956 0
+  "./library.bib" 1745806618 11775 6be4f99486febfd3a3739d24812241a3 ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1744583497 51725 b49e7c18936e0e6036ee2c225d937aec "pdflatex"
+  "main.aux" 1745806954 52960 5abc9483530921ae83e97db480965c73 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1744583494 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1744583497 0
-  "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1733711233 81086 6fddea6b023469843de28035c851ec71 ""
+["pdflatex"] 1745806950 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1745806956 0
+  "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1697553611 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -289,7 +289,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1744574957 4037 361777f40d4594a92b4928b08b7b0280 ""
-  "example.tex" 1744583493 167385 b571522572462ca5e82405ef37a37b8d ""
+  "example.tex" 1745806943 169086 dbe6a9cf12173dcdb441a349b6e979f0 ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/concu.pdf" 1743124513 74834 5ce26394f37f7efea7616a0d4b6704d7 ""
@@ -313,11 +313,11 @@
   "img//ejemplos/transportheat.png" 1744074284 35870 7a31ecf97ef777a5a2a2a3808cf53d5d ""
   "img//ejemplos/transportwork.png" 1744074284 35952 8399a34f51fb50d149e8a5999d722ee1 ""
   "img//ejemplos/transprtcurrent.png" 1744074284 34484 dc2c49f767b5d5c4cffb50cc91f9c6b8 ""
-  "main.aux" 1744583497 51725 b49e7c18936e0e6036ee2c225d937aec "pdflatex"
-  "main.bbl" 1744582239 8247 1913afb838a1bb82a9dc0b63134a117e "bibtex main"
-  "main.lof" 1744583497 5756 40efc58859e0c4478a1dc950c129606b "pdflatex"
+  "main.aux" 1745806954 52960 5abc9483530921ae83e97db480965c73 "pdflatex"
+  "main.bbl" 1745806950 8805 4f5db886a3edd46f6223db7ca4aad26b "bibtex main"
+  "main.lof" 1745806954 5756 fe8d871c05dc77e63702953d5f13bf0a "pdflatex"
   "main.tex" 1744574957 4037 361777f40d4594a92b4928b08b7b0280 ""
-  "main.toc" 1744583497 4910 5b64bc3c9bee3389febe7b6fec479541 "pdflatex"
+  "main.toc" 1745806954 5089 30cb6f05c27d2f25aa0cb341fae6d23a "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)

@@ -1157,6 +1157,19 @@ Por otro lado, se pueden ver las contribuciones individuales en los flujos de in
 
 Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencias y coherencias están cerca de un peak, y a la vez los flujos de información del sitio $L$ y $R$ se vuelven $\dot{I}_{L} \approx \dot{I}_{R}$. De alguna manera a medida que el entrelazamiento y la coherencia se hace presente entre los dos sitios, los dos sitios entregan casi la misma información.
 
+
+\newpage 
+
+\section{Comparación con caso clásico}
+Una de las ventajas de usar el formalismo descrito en \cite{prech2023entanglement} es que se pueden considerar términos no seculares los que finalmente permiten que aparezcan coherencias y entrelazamiento no nulos en el régimen de $g\sim \gamma_{L}$. La pregunta ahora por hacerse es si estos efectos cuánticos resultan ser una ventaja para que el demonio opere como debe ser. Para hacer la comparación uno puede calcular una evolución clásica para las partes diagonales del sistema descrita por
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
+\end{equation*}
+
+En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}\hat{\rho}$ actua como $-ig[\hat{d}_{L}^{\dagger}d_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$ y $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current,scandi2019thermodynamic}.\\
+ La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}
+
 \label{sec5:demonio}
 
 
@@ -2135,8 +2148,11 @@ Finalmente se obtiene
     \mathcal{C}_{on} = \max\{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0\}
 \end{equation*}
 
-
-
 \label{appendix5final}
+
+\subsection{Modelo clásico}
+
+\label{appendix5clasic}
+
 
 \end{appendixs}
