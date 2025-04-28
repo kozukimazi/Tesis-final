@@ -1167,8 +1167,10 @@ Una de las ventajas de usar el formalismo descrito en \cite{prech2023entanglemen
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
 \end{equation*}
 
-En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}\hat{\rho}$ actua como $-ig[\hat{d}_{L}^{\dagger}d_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$ y $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current,scandi2019thermodynamic}.\\
- La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}
+En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}\hat{\rho}$ actua como $-ig[\hat{d}_{L}^{\dagger}\hat{d}_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$ y $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current,scandi2019thermodynamic} y $\check{\mathcal{L}}_{f}\hat{\rho} = -i[\hat{H}_{s},\hat{\rho}] + \mathcal{L}(\hat{\rho})$.\\
+ La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}. 
+
+
 
 \label{sec5:demonio}
 
@@ -2151,6 +2153,88 @@ Finalmente se obtiene
 \label{appendix5final}
 
 \subsection{Modelo clásico}
+Para partir derivando el modelo clásico para las partes diagonales de la matriz densidad $\rho_{ijk}$ con $i,j,k \in \{0,1\}$, primero se notará que la ecuación de operadores
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) + \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t)
+\end{equation*}
+
+Es equivalente a una ecuación no homogenea lineal de la forma
+
+\begin{equation*}
+    \frac{dy}{dt} - A(t)y = B(t)
+\end{equation*}
+
+Por lo tanto se puede solucionar utilizando factor integrante
+
+\begin{equation*}
+    \check{\mu}(t) = \exp\left( - \int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}ds \right)
+\end{equation*}
+
+Multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$ se tendrá
+
+\begin{equation*}
+    \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t)) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) 
+\end{equation*}
+
+Por lo tanto queda la solución
+
+\begin{equation*}
+    \check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+\end{equation*}
+
+Multiplicando por $\check{\mu}^{-1}(t)$ 
+
+\begin{equation*}
+    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}^{-1}(t)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}^{-1}(t)\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+\end{equation*}
+
+Para asi definir el operador
+
+\begin{equation*}
+    \check{\mathcal{G}}(t,s) = \exp\left(  \int_{s}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}dt' \right)
+\end{equation*}
+
+Con lo que finalmente
+
+\begin{equation*}
+    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+\end{equation*}
+
+Podremos reinsertar esto en la parte principal y quedará
+
+\begin{equation}
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+    \label{apendix5exactp}
+\end{equation}
+
+Estas ecuaciones son exactas, ya que hasta ahora no se ha hecho ninguna aproximación. La primera parte del lado derecho de la ecuación \ref{apendix5exactp} consiste en la evolución markoviana, mientras que la segunda y  tercera parte corresponden a un corrimiento inicial y a los efectos de memoria respectivamente. Para seguir la deducción se utilizarán las relaciones
+
+\begin{equation*}
+    \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{P}} = [\check{\mathcal{L}}_0,\check{\mathcal{P}}] = [\check{\mathcal{L}}_0,\check{\mathcal{Q}}] = 0 
+\end{equation*}
+
+Estas relaciones se pueden explicar intuitivamente, ya que al ser $\check{\mathcal{V}}$ la perturbación que genera el tunneling entre los puntos $L$ y $R$, está contribución es la que produce efectos de coherencias. Así se puede notar que $\check{\mathcal{V}}\check{\mathcal{P}}\hat{\rho}$ es no diagonal y por lo tanto al aplicar nuevamente el operador que proyecta en la diagonal este se anula.
+\\
+Para seguir con \ref{apendix5exactp}, primero supondremos que inicialmente no hay coherencias, es decir $\check{\mathcal{Q}}\hat{\rho}(0) = 0$. Segundo se sustituirá $\check{\mathcal{L}}_{f}$ en la ecuación \ref{apendix5exactp} y se usarán las propiedades de los operadores Nakajima-Zwanzig, partiendo por el integral
+
+\begin{align*}
+    \check{\mathcal{G}}(t,\tau) & = \exp\left(  \int_{\tau}^{t}\check{\mathcal{Q}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})dt' \right) \\
+        & = \exp\left(  \int_{\tau}^{t}\check{\mathcal{Q}}(\check{\mathcal{L}}_{0}+\check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}}) dt' \right) \\
+            & = \exp\left(  \int_{\tau}^{t}\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}}\right] dt' \right)       
+\end{align*}
+
+En donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$. Continuando con la ecuación principal
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}})\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau        
+\end{equation*}
+
+Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{G}}(t,\tau)=0$, ya que si extendemos el exponencial
+
+\begin{equation*}
+    \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]
+\end{equation*}
 
 \label{appendix5clasic}
 
