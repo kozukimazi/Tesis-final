@@ -1167,7 +1167,7 @@ Una de las ventajas de usar el formalismo descrito en \cite{prech2023entanglemen
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
 \end{equation*}
 
-En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}\hat{\rho}$ actua como $-ig[\hat{d}_{L}^{\dagger}\hat{d}_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$ y $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current,scandi2019thermodynamic} y $\check{\mathcal{L}}_{f}\hat{\rho} = -i[\hat{H}_{s},\hat{\rho}] + \mathcal{L}(\hat{\rho})$.\\
+En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}\hat{\rho}$ actua como $-ig[\hat{d}_{L}^{\dagger}\hat{d}_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$ y $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current} y $\check{\mathcal{L}}_{f}\hat{\rho} = -i[\hat{H}_{s},\hat{\rho}] + \mathcal{L}(\hat{\rho})$.\\
  La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}. 
 
 
@@ -2230,11 +2230,50 @@ En donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}})\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau        
 \end{equation*}
 
-Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{G}}(t,\tau)=0$, ya que si extendemos el exponencial
+Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{G}}(t,\tau)= \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau)$, ya que si extendemos el exponencial
 
 \begin{equation*}
-    \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]
+    \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\int_{\tau}^{t}ds\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right] = \check{\mathcal{L}}_{0}\check{\mathcal{P}}\int_{\tau}^{t}\sum_{k=0}^{\infty}\left(\frac{1}{k!} \right)\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]^{k}ds = \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau) 
 \end{equation*}
+
+Posteriormente esta contribución se anula y la ecuación principal se reduce a
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau        
+\end{equation*}
+
+De manera similar se puede notar que el término de la exponencial $\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}$ no actua en la ecuación por ende queda que 
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (t-\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau        
+\end{equation*}
+
+Haciendo el cambio de variable $\tau \to t-\tau$
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau        
+\end{equation*}
+
+En este momento es donde se hacen aproximaciones, ya que si consideramos el acoplamiento $g$ pequeño, es decir $g \ll \gamma_{i}$. Sabiendo que los autovalores de los superoperadores $\check{\mathcal{V}}$ y $\check{\mathcal{L}}_{0}$ serán proporcionales a $g$ y $\gamma_{i}$ respectivamente,  podremos despreciar la contribución de $\check{\mathcal{V}}$ en la exponencial, así queda
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau        
+\end{equation*}
+
+Finalmente, para aplicar aproximación de Markov suponemos que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho en escalas de tiempo de $1/\gamma_{i}$, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$ y el integral de $0$ a el infinito con lo que se obtiene
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{\infty}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]d\tau \check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t)        
+\end{equation*}
+
+Y finalmente se recupera la ecuación 
+
+\begin{equation*}
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
+\end{equation*}
+
+\subsection{ Inverso de Drazin }
+
 
 \label{appendix5clasic}
 
