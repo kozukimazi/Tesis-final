@@ -1163,9 +1163,10 @@ Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencia
 \section{Comparación con caso clásico}
 Una de las ventajas de usar el formalismo descrito en \cite{prech2023entanglement} es que se pueden considerar términos no seculares los que finalmente permiten que aparezcan coherencias y entrelazamiento no nulos en el régimen de $g\sim \gamma_{L}$. La pregunta ahora por hacerse es si estos efectos cuánticos resultan ser una ventaja para que el demonio opere como debe ser. Para hacer la comparación uno puede calcular una evolución clásica para las partes diagonales del sistema descrita por
 
-\begin{equation*}
+\begin{equation}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
-\end{equation*}
+\label{ec5:classicalmodel}
+\end{equation}
 
 En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}\hat{\rho}$ actua como $-ig[\hat{d}_{L}^{\dagger}\hat{d}_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$ y $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current} y $\check{\mathcal{L}}_{f}\hat{\rho} = -i[\hat{H}_{s},\hat{\rho}] + \mathcal{L}(\hat{\rho})$.\\
  La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}. 
@@ -2272,10 +2273,43 @@ Y finalmente se recupera la ecuación
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
 \end{equation*}
 
-\subsection{ Inverso de Drazin }
-
-
 \label{appendix5clasic}
+
+\subsection{ Inverso de Drazin }
+El inverso de Drazin es un tipo de inverso generalizado y consiste en la única matriz que cumple que dado la matriz $\check{\mathcal{L}}_{0}$
+
+\begin{align*}
+    \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0} \\
+    \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} & = \check{\mathcal{L}}_{0}^{+} \\
+    \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}
+\end{align*}
+
+Considerando la ecuación \ref{ec5:classicalmodel} se puede probar que 
+
+\begin{equation*}
+    \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} = - \int_{0}^{\infty}d\tau \check{\mathcal{L}}_{0}\exp[ \check{\mathcal{L}}_{0}\tau] \check{Q}= - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau]\check{\mathcal{L}}_{0} \check{Q} = - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau] \check{Q} \check{\mathcal{L}}_{0} = \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0}
+\end{equation*}
+
+De manera similar se pueden probar las otras 2 ecuaciones.\\
+ Finalmente para poder ocupar el inverso de Drazin, este se puede calcular numéricamente mediante descomposición espectral usando los autovalores por la izquierda y derecha dados por 
+
+\begin{equation*}
+    \check{\mathcal{L}}_{0}|x_{j}\rangle \rangle = \lambda_{j} |x_{j}\rangle \rangle \hspace{10mm}  \langle \langle y_{j}|\check{\mathcal{L}}_{0} = \langle \langle y_{j}|\lambda_{j}
+\end{equation*}
+
+En donde $\langle \langle y_{i}|x_{j}\rangle \rangle = \delta_{ij}$. Si se toma $\lambda_{0}$ como el autovalor cero del operador de Lindblad, se podrá escribir la descomposición espectral como
+
+\begin{equation*}
+    \check{\mathcal{L}}_{0} = \sum_{j\neq 0}\lambda_{j}|x_{j}\rangle \rangle \langle \langle y_{j}|
+\end{equation*}
+
+Y así poder calcular el inverso de Drazin usando
+
+\begin{equation*}
+    \check{\mathcal{L}}^{+}_{0} = \sum_{j\neq 0}\frac{1}{\lambda_{j}}|x_{j}\rangle \rangle \langle \langle y_{j}|
+\end{equation*}
+
+\label{appendix5drazin}
 
 
 \end{appendixs}
