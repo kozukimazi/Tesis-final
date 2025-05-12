@@ -2081,7 +2081,7 @@ En está sección se incluye la demostración de la fórmula de concurrencia. Pa
 
 Usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$, la matriz densidad del sistema queda
 
-\begin{equation*}
+\begin{equation}
     \hat{\rho}_{s} = 
     \begin{bmatrix}
         p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -2093,7 +2093,8 @@ Usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1
         0 & 0 & 0 & 0 & 0 & \beta^{*} & p_{011} & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & 0 & p_{111} 
         \end{bmatrix}
-\end{equation*}
+        \label{appendix5rhoconcu}
+\end{equation}
 
 En donde no aparecen coherencias entre estados con distinto número de partículas por el principio de superselección de carga \cite{bartlett2007reference,wick1997intrinsic}. Además debido a que el punto cuántico $D$ sólo interactua mediante interacción de Coulomb con los puntos $L$ y $R$ no aparecen coherencias del tipo $L-D$ y $R-D$. Se puede obtener la matriz densidad del sistema $LR$ en la base $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle \}$
 
@@ -2316,6 +2317,136 @@ Y así poder calcular el inverso de Drazin usando
 \end{equation*}
 
 \label{appendix5drazin}
+
+\subsection{Expresión para los flujos de información}
+Para poder calcular los flujos de información, primero se debe ser capaces de calcular $\ln \hat{\rho}_{s}$. Se puede partir de la matriz densidad descrita en la ecuación \ref{appendix5rhoconcu} la cuál ya viene diagonal excepto por los bloques
+
+\begin{equation*}
+    \begin{bmatrix}
+        p_{100} & \alpha \\
+        \alpha^{*} & p_{010}
+    \end{bmatrix}
+    \hspace{10mm}
+    \begin{bmatrix}
+        p_{101} & \beta \\
+        \beta^{*} & p_{011}
+    \end{bmatrix} 
+\end{equation*}
+
+En donde los autovalores estarán dados por
+
+\begin{equation*}
+    \lambda_{0\pm} = \frac{ p_{100} +p_{010} }{2} \pm \frac{( [p_{100} - p_{010}]^{2} + 4|\alpha|^{2} )^{1/2} }{ 2 }  \hspace{10mm}      \lambda_{1\pm} = \frac{ p_{101} +p_{011} }{2} \pm \frac{( [p_{101} - p_{011}]^{2} + 4|\beta|^{2} )^{1/2} }{ 2 } 
+\end{equation*}
+
+Considerando $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$, los autovectores que diagonalizan los bloques serán
+
+\begin{align*}
+    v_{0+} &  = [0,0,\cos(\theta_{0}/2)e^{i\phi_{0}/2},\sen(\theta_{0}/2)e^{-i\phi_{0}/2},0,0,0,0]^{T} \\
+    v_{0-} &  = [0,0,-\sen(\theta_{0}/2)e^{i\phi_{0}/2},\cos(\theta_{0}/2)e^{-i\phi_{0}/2},0,0,0,0]^{T} \\
+    v_{1+} &  = [0,0,0,0,\cos(\theta_{1}/2)e^{i\phi_{1}/2},\sen(\theta_{1}/2)e^{-i\phi_{1}/2},0,0]^{T} \\
+    v_{1-} &  = [0,0,0,0,-\sen(\theta_{1}/2)e^{i\phi_{1}/2},\cos(\theta_{1}/2)e^{-i\phi_{1}/2},0,0]^{T}                   
+\end{align*}
+
+Con $\tan(\theta_{0}) = |\alpha|/\sqrt{\Delta^{2}_{0} + |\alpha|^{2}}$ y $\tan(\theta_{1}) = |\beta|/\sqrt{\Delta^{2}_{1} + |\beta|^{2}}$ y
+
+\begin{equation*}
+    \Delta_{i} = \frac{(p_{10i} - p_{01i})}{2}
+\end{equation*}
+
+Con esto se podrá obtener el logaritmo natural de la matriz mediante
+
+\begin{equation*}
+    \ln \hat{\rho}_{S} = \hat{V}\ln \hat{\rho}_{D} \hat{V}^{-1}
+\end{equation*}
+    
+En donde $\ln \hat{\rho}_{D}$ es la matriz diagonal 
+
+\begin{equation*}
+    \ln \hat{\rho}_{D} = 
+    \begin{bmatrix}
+        \ln p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & \ln \lambda_{0+} & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & \ln \lambda_{0-} & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & \ln p_{001} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & \ln p_{110} & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & \ln \lambda_{1+} & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & \ln \lambda_{1-} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln p_{111} 
+        \end{bmatrix}
+\end{equation*}
+
+La matriz $\hat{V} = [e_{1},v_{0+},v_{0-},e_{4},e_{5},v_{1+},v_{1-},e_{8}]$ y $e_{i}$ corresponden a los vectores de la base canónica, es decir 
+
+\begin{equation*}
+    \hat{V} = 
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & \cos(\theta_{0}/2)e^{i\phi_{0}/2} & -\sen(\theta_{0}/2)e^{i\phi_{0}/2} & 0 & 0 & 0 & 0 & 0 \\
+        0 & \sen(\theta_{0}/2)e^{-i\phi_{0}/2} & \cos(\theta_{0}/2)e^{-i\phi_{0}/2} & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 &  \cos(\theta_{1}/2)e^{i\phi_{1}/2} & -\sen(\theta_{1}/2)e^{i\phi_{1}/2} & 0 \\
+        0 & 0 & 0 & 0 & 0 & \sen(\theta_{1}/2)e^{-i\phi_{1}/2} & \cos(\theta_{1}/2)e^{-i\phi_{1}/2} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 
+        \end{bmatrix}
+\end{equation*}
+
+Finalmente se obtiene
+
+\begin{equation*}
+    \ln \hat{\rho}_{S} = 
+    \begin{bmatrix}
+        \ln p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & a_{0} & c_{0} & 0 & 0 & 0 & 0 & 0 \\
+        0 & c^{*}_{0} & b_{0} & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & \ln p_{001} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & \ln p_{110} & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & a_{1} & c_{1} & 0 \\
+        0 & 0 & 0 & 0 & 0 & c^{*}_{1} & b_{1} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln p_{111} 
+        \end{bmatrix}
+\end{equation*}
+
+Con las cantidades 
+
+\begin{align*}
+    a_{i} & = \cos^{2}(\theta_{i}/2) \ln \lambda_{i+} + \sen^{2}(\theta_{i}/2) \ln \lambda_{i-} \\
+    b_{i} & = \sen^{2}(\theta_{i}/2) \ln \lambda_{i+} + \cos^{2}(\theta_{i}/2) \ln \lambda_{i-}  \\
+    c_{i} & = \frac{\sin(\theta_{i})}{2}e^{i\phi_{i}} (\ln \lambda_{i+} - \ln \lambda_{i-})     
+\end{align*}
+
+Así el logaritmo de la matriz densidad
+
+\begin{align*}
+    \ln \hat{\rho}_{S} & = \ln p_{111}|111\rangle \langle 111| + \ln p_{110}|110\rangle \langle 110| + \ln p_{001}|001\rangle \langle 001| \\ 
+     & + \ln p_{000}|000\rangle \langle 000| + a_{0}|100\rangle \langle 100| + b_{0}|010\rangle \langle 010|  \\  
+     & + a_{1}|101\rangle \langle 101| + b_{1}|011\rangle\langle 011| + c_{0}|100\rangle \langle 010| \\ 
+     & + c^{*}_{0}|010\rangle \langle 100| + c_{1}|101\rangle \langle 011| + c^{*}_{1}|011\rangle \langle 101|
+\end{align*}
+
+Por otro lado los disipadores que actuan en los operadores de Lindblad $\mathcal{L}_{L}$ y $\mathcal{L}_{R}$ se pueden expresar 
+
+\begin{align*}
+    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
+    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{100}|000\rangle \langle 000| - p_{100}|100\rangle \langle 100|\\ 
+    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{010}|000\rangle \langle 000| - p_{010}|010\rangle \langle 010| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D} \hat{n}_{R}\hat{\rho}_{S}] & = p_{011}|111\rangle \langle 111| - p_{011}|011\rangle \langle 011| \\  
+    \mathcal{D}[\hat{d}^{\dagger}_{R} \hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = p_{101}|111\rangle \langle 111| - p_{101}|101\rangle \langle 101| \\ 
+     \mathcal{D}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R}\hat{\rho}_{S}] & = p_{111}|011\rangle \langle 011| - p_{111}|111\rangle \langle 111|  \\    
+      \mathcal{D}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = p_{111}|101\rangle \langle 101| - p_{111}|111\rangle \langle 111|  \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{010}|110\rangle \langle 110| - p_{010}|010\rangle \langle 010| - \frac{1}{2}( \alpha|010\rangle \langle 100| + \alpha^{*}|100\rangle \langle 010|) \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
+    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
+    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
+    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
+    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000|    
+\end{align*}
+
+
 
 
 \end{appendixs}
