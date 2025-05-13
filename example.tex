@@ -2446,10 +2446,30 @@ Por otro lado los disipadores que actuan en los operadores de Lindblad $\mathcal
     \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{011}|010\rangle \langle 010| - p_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  )    
 \end{align*}
 
-Finalmente se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ dado por
+Con estas cantidades se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ dado por
 
 \begin{align*}
-    \dot{I}_{L} = 
+    \dot{I}_{L} &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}p_{000} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - a_{0}p_{100} ] )  \\ 
+      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[a_{1}p_{001} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -a_{1}p_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -b_{0}p_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}p_{110} - p_{110}\ln p_{110} ] ) \\  
+      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- b_{1}p_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}p_{111} - p_{111}\ln p_{111}]  ) 
+\end{align*}
+
+\begin{align*}
+    \dot{I}_{R} &  =  \gamma_{R}(\epsilon)(f_{L}(\epsilon)[b_{0}p_{000} - p_{000}\ln p_{000}] + (1-f_{R}(\epsilon))[p_{010}\ln p_{000} - b_{0}p_{010} ] )  \\ 
+      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[b_{1} p_{001} - p_{001}\ln p_{001}] + (1-f_{R}(\epsilon + U))[p_{011}\ln p_{001} -a_{1}p_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[p_{100}\ln p_{110} -a_{0}p_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}p_{110} - p_{110}\ln p_{110} ] ) \\  
+      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[p_{101}\ln p_{111}- a_{1}p_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}p_{111} - p_{111}\ln p_{111}]  ) 
+\end{align*}
+
+Si bien el cálculo de los flujos de información se puede hacer númerico, escribir estas expresiones analíticas nos permite determinar que existe contribución de las coherencias en la información. También es importante destacar que en el  límite en que las coherencias se anulan se recupera el resultado para un sistema clásico
+
+\begin{align*}
+ \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[p_{000}\ln p_{100} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - p_{100}\ln p_{100} ] )  \\ 
+      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[p_{001}\ln p_{101} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -p_{101}\ln p_{101} ]   ) \\  
+      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -p_{010}\ln p_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[p_{110}\ln p_{010} - p_{110}\ln p_{110} ] ) \\  
+      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- p_{011}\ln p_{011}]) \\   
+      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[p_{111}\ln p_{011} - p_{111}\ln p_{111}])   
 \end{align*}
 
 
