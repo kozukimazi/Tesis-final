@@ -2076,13 +2076,13 @@ Con la Figura \ref{img:probas} que el tiempo de relajación del sistema es $\tau
 En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se requiere calcular la concurrencia en el subsistema $\hat{\rho}_{LR}$ por lo tanto se tiene que partir calculando 
 
 \begin{equation*}
-    \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{s}} \}
+    \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{S}} \}
 \end{equation*}
 
 Usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$, la matriz densidad del sistema queda
 
 \begin{equation}
-    \hat{\rho}_{s} = 
+    \hat{\rho}_{S} = 
     \begin{bmatrix}
         p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
         0 & p_{100} & \alpha & 0 & 0 & 0 & 0 & 0 \\
@@ -2436,17 +2436,21 @@ Por otro lado los disipadores que actuan en los operadores de Lindblad $\mathcal
     \mathcal{D}[\hat{d}^{\dagger}_{R} \hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = p_{101}|111\rangle \langle 111| - p_{101}|101\rangle \langle 101| \\ 
      \mathcal{D}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R}\hat{\rho}_{S}] & = p_{111}|011\rangle \langle 011| - p_{111}|111\rangle \langle 111|  \\    
       \mathcal{D}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = p_{111}|101\rangle \langle 101| - p_{111}|111\rangle \langle 111|  \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{010}|110\rangle \langle 110| - p_{010}|010\rangle \langle 010| - \frac{1}{2}( \alpha|010\rangle \langle 100| + \alpha^{*}|100\rangle \langle 010|) \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
-    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
-    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
-    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
-    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000|    
+    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{010}|110\rangle \langle 110| - p_{010}|010\rangle \langle 010| - \frac{1}{2}( \alpha|100\rangle \langle 010| + \alpha^{*}|010\rangle \langle 100|) \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{100}|110\rangle \langle 110| - p_{100}|100\rangle \langle 100| - \frac{1}{2}( \alpha |100\rangle \langle 010| + \alpha^{*}|010\rangle \langle 100| )  \\  
+    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{110}|010\rangle \langle 010| - p_{110}|110\rangle \langle 110| \\ 
+    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{110}|100\rangle \langle 100| - p_{110}|110\rangle \langle 110| \\  
+    \mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{001}|101\rangle \langle 101| - p_{001}|001\rangle \langle 001| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{001}|011\rangle \langle 011| - p_{001}|001\rangle \langle 001| \\  
+    \mathcal{D}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{101}|001\rangle \langle 001| - p_{101}|101\rangle \langle 101| - \frac{1}{2}(\beta |101\rangle \langle 011| + \beta^{*}|011\rangle \langle 101| ) \\ 
+    \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{011}|010\rangle \langle 010| - p_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  )    
 \end{align*}
 
+Finalmente se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ dado por
 
+\begin{align*}
+    \dot{I}_{L} = 
+\end{align*}
 
 
 \end{appendixs}
