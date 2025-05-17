@@ -11,52 +11,70 @@ Breuer, H.-P. y Petruccione, F., {The theory of open quantum systems}.
 
 \backrefparscanfalse
 \bibitem{manzano2020short}
-Manzano, D., ``A short introduction to the lindblad master equation'', {Aip advances}, vol.~10, no.~2, 2020.
+Manzano, D., ``A short introduction to the lindblad master equation'', {Aip
+  advances}, vol.~10, no.~2, 2020.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{geva2000second}
-Geva, E., Rosenman, E., y Tannor, D., ``On the second-order corrections to the quantum canonical equilibrium density matrix'', {The Journal of Chemical Physics}, vol.~113, no.~4, pp.~1380--1390, 2000.
+Geva, E., Rosenman, E., y Tannor, D., ``On the second-order corrections to the
+  quantum canonical equilibrium density matrix'', {The Journal of Chemical
+  Physics}, vol.~113, no.~4, pp.~1380--1390, 2000.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{esposito2010entropy}
-Esposito, M., Lindenberg, K., y Van~den Broeck, C., ``Entropy production as correlation between system and reservoir'', {New Journal of Physics}, vol.~12, no.~1, p.~013013, 2010.
+Esposito, M., Lindenberg, K., y Van~den Broeck, C., ``Entropy production as
+  correlation between system and reservoir'', {New Journal of Physics},
+  vol.~12, no.~1, p.~013013, 2010.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{strasberg2019non}
-Strasberg, P. y Esposito, M., ``Non-markovianity and negative entropy production rates'', {Physical Review E}, vol.~99, no.~1, p.~012120, 2019.
+Strasberg, P. y Esposito, M., ``Non-markovianity and negative entropy
+  production rates'', {Physical Review E}, vol.~99, no.~1, p.~012120, 2019.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{zwanzig1966statistical}
-Zwanzig, R.~W., ``Statistical mechanics of irreversibility'', {Quantum Statistical Mechanics}, p.~139, 1966.
+Zwanzig, R.~W., ``Statistical mechanics of irreversibility'', {Quantum
+  Statistical Mechanics}, p.~139, 1966.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{folland1997uncertainty}
-Folland, G.~B. y Sitaram, A., ``The uncertainty principle: a mathematical survey'', {Journal of Fourier analysis and applications}, vol.~3, pp.~207--238, 1997.
+Folland, G.~B. y Sitaram, A., ``The uncertainty principle: a mathematical
+  survey'', {Journal of Fourier analysis and applications}, vol.~3,
+  pp.~207--238, 1997.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{trushechkin2021unified}
-Trushechkin, A., ``Unified gorini-kossakowski-lindblad-sudarshan quantum master equation beyond the secular approximation'', {Physical Review A}, vol.~103, no.~6, p.~062226, 2021.
+Trushechkin, A., ``Unified gorini-kossakowski-lindblad-sudarshan quantum master
+  equation beyond the secular approximation'', {Physical Review A}, vol.~103,
+  no.~6, p.~062226, 2021.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{chruscinski2017brief}
-Chru{\'s}ci{\'n}ski, D. y Pascazio, S., ``A brief history of the gkls equation'', {Open Systems \& Information Dynamics}, vol.~24, no.~03, p.~1740001, 2017.
+Chru{\'s}ci{\'n}ski, D. y Pascazio, S., ``A brief history of the gkls
+  equation'', {Open Systems \& Information Dynamics}, vol.~24, no.~03,
+  p.~1740001, 2017.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{wichterich2007modeling}
-Wichterich, H., Henrich, M.~J., Breuer, H.-P., Gemmer, J., y Michel, M., ``Modeling heat transport through completely positive maps'', {Physical Review E—Statistical, Nonlinear, and Soft Matter Physics}, vol.~76, no.~3, p.~031115, 2007.
+Wichterich, H., Henrich, M.~J., Breuer, H.-P., Gemmer, J., y Michel, M.,
+  ``Modeling heat transport through completely positive maps'', {Physical
+  Review E—Statistical, Nonlinear, and Soft Matter Physics}, vol.~76, no.~3,
+  p.~031115, 2007.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{spohn2007irreversible}
-Spohn, H. y Lebowitz, J.~L., ``Irreversible thermodynamics for quantum systems weakly coupled to thermal reservoirs'', {Adv. Chem. Phys}, vol.~38, pp.~109--142, 2007.
+Spohn, H. y Lebowitz, J.~L., ``Irreversible thermodynamics for quantum systems
+  weakly coupled to thermal reservoirs'', {Adv. Chem. Phys}, vol.~38,
+  pp.~109--142, 2007.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
@@ -67,37 +85,52 @@ Maxwell, J.~C., {Theory of Heat}.
 
 \backrefparscanfalse
 \bibitem{Landauer_1961}
-Landauer, R., ``Irreversibility and heat generation in the computing process'', {IBM Journal of Research and Development}, vol.~5, p.~183–191, Jul 1961, \href{https://dx.doi.org/10.1147/rd.53.0183} {\nolinkurl{doi:\detokenize{10.1147/rd.53.0183}}}.
+Landauer, R., ``Irreversibility and heat generation in the computing process'',
+  {IBM Journal of Research and Development}, vol.~5, p.~183–191, Jul 1961,
+  \href{https://dx.doi.org/10.1147/rd.53.0183}
+  {\nolinkurl{doi:\detokenize{10.1147/rd.53.0183}}}.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{szilard1964decrease}
-Szilard, L., ``On the decrease of entropy in a thermodynamic system by the intervention of intelligent beings'', {Behavioral Science}, vol.~9, no.~4, pp.~301--310, 1964.
+Szilard, L., ``On the decrease of entropy in a thermodynamic system by the
+  intervention of intelligent beings'', {Behavioral Science}, vol.~9, no.~4,
+  pp.~301--310, 1964.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{maruyama2009colloquium}
-Maruyama, K., Nori, F., y Vedral, V., ``Colloquium: The physics of maxwell’s demon and information'', {Reviews of Modern Physics}, vol.~81, no.~1, pp.~1--23, 2009.
+Maruyama, K., Nori, F., y Vedral, V., ``Colloquium: The physics of maxwell’s
+  demon and information'', {Reviews of Modern Physics}, vol.~81, no.~1,
+  pp.~1--23, 2009.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{sagawa2008second}
-Sagawa, T. y Ueda, M., ``Second law of thermodynamics with discrete quantum feedback control'', {Physical review letters}, vol.~100, no.~8, p.~080403, 2008.
+Sagawa, T. y Ueda, M., ``Second law of thermodynamics with discrete quantum
+  feedback control'', {Physical review letters}, vol.~100, no.~8, p.~080403,
+  2008.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{link1}
-Htkym, ``Maxwell's demon'', 2007, \href{http://creativecommons.org/licenses/by-sa/3.0/} {\nolinkurl{\detokenize{http://creativecommons.org/licenses/by-sa/3.0/}}}.
+Htkym, ``Maxwell's demon'', 2007,
+  \href{http://creativecommons.org/licenses/by-sa/3.0/}
+  {\nolinkurl{\detokenize{http://creativecommons.org/licenses/by-sa/3.0/}}}.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{lan2012energy}
-Lan, G., Sartori, P., Neumann, S., Sourjik, V., y Tu, Y., ``The energy--speed--accuracy trade-off in sensory adaptation'', {Nature physics}, vol.~8, no.~5, pp.~422--428, 2012.
+Lan, G., Sartori, P., Neumann, S., Sourjik, V., y Tu, Y., ``The
+  energy--speed--accuracy trade-off in sensory adaptation'', {Nature physics},
+  vol.~8, no.~5, pp.~422--428, 2012.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{van2015ensemble}
-Van~den Broeck, C. y Esposito, M., ``Ensemble and trajectory thermodynamics: A brief introduction'', {Physica A: Statistical Mechanics and its Applications}, vol.~418, pp.~6--16, 2015.
+Van~den Broeck, C. y Esposito, M., ``Ensemble and trajectory thermodynamics: A
+  brief introduction'', {Physica A: Statistical Mechanics and its
+  Applications}, vol.~418, pp.~6--16, 2015.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
@@ -108,63 +141,84 @@ Van~Kampen, N., {Stochastic Processes in Physics and Chemistry}.
 
 \backrefparscanfalse
 \bibitem{horowitz2014thermodynamics}
-Horowitz, J.~M. y Esposito, M., ``Thermodynamics with continuous information flow'', {Physical Review X}, vol.~4, no.~3, p.~031015, 2014.
+Horowitz, J.~M. y Esposito, M., ``Thermodynamics with continuous information
+  flow'', {Physical Review X}, vol.~4, no.~3, p.~031015, 2014.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{spohn1978entropy}
-Spohn, H., ``Entropy production for quantum dynamical semigroups'', {Journal of Mathematical Physics}, vol.~19, no.~5, pp.~1227--1230, 1978.
+Spohn, H., ``Entropy production for quantum dynamical semigroups'', {Journal of
+  Mathematical Physics}, vol.~19, no.~5, pp.~1227--1230, 1978.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{prech2023entanglement}
-Prech, K., Johansson, P., Nyholm, E., Landi, G.~T., Verdozzi, C., Samuelsson, P., y Potts, P.~P., ``Entanglement and thermokinetic uncertainty relations in coherent mesoscopic transport'', {Physical Review Research}, vol.~5, no.~2, p.~023155, 2023.
+Prech, K., Johansson, P., Nyholm, E., Landi, G.~T., Verdozzi, C., Samuelsson,
+  P., y Potts, P.~P., ``Entanglement and thermokinetic uncertainty relations in
+  coherent mesoscopic transport'', {Physical Review Research}, vol.~5, no.~2,
+  p.~023155, 2023.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{hill1997entanglement}
-Hill, S.~A. y Wootters, W.~K., ``Entanglement of a pair of quantum bits'', {Physical review letters}, vol.~78, no.~26, p.~5022, 1997.
+Hill, S.~A. y Wootters, W.~K., ``Entanglement of a pair of quantum bits'',
+  {Physical review letters}, vol.~78, no.~26, p.~5022, 1997.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{wootters1998entanglement}
-Wootters, W.~K., ``Entanglement of formation of an arbitrary state of two qubits'', {Physical Review Letters}, vol.~80, no.~10, p.~2245, 1998.
+Wootters, W.~K., ``Entanglement of formation of an arbitrary state of two
+  qubits'', {Physical Review Letters}, vol.~80, no.~10, p.~2245, 1998.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{landi2024current}
-Landi, G.~T., Kewming, M.~J., Mitchison, M.~T., y Potts, P.~P., ``Current fluctuations in open quantum systems: Bridging the gap between quantum continuous measurements and full counting statistics'', {PRX Quantum}, vol.~5, no.~2, p.~020201, 2024.
+Landi, G.~T., Kewming, M.~J., Mitchison, M.~T., y Potts, P.~P., ``Current
+  fluctuations in open quantum systems: Bridging the gap between quantum
+  continuous measurements and full counting statistics'', {PRX Quantum},
+  vol.~5, no.~2, p.~020201, 2024.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{esposito2009nonequilibrium}
-Esposito, M., Harbola, U., y Mukamel, S., ``Nonequilibrium fluctuations, fluctuation theorems, and counting statistics in quantum systems'', {Reviews of modern physics}, vol.~81, no.~4, pp.~1665--1702, 2009.
+Esposito, M., Harbola, U., y Mukamel, S., ``Nonequilibrium fluctuations,
+  fluctuation theorems, and counting statistics in quantum systems'', {Reviews
+  of modern physics}, vol.~81, no.~4, pp.~1665--1702, 2009.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{hu2011pade}
-Hu, J., Luo, M., Jiang, F., Xu, R.-X., y Yan, Y., ``Pad{\'e} spectrum decompositions of quantum distribution functions and optimal hierarchical equations of motion construction for quantum open systems'', {The Journal of chemical physics}, vol.~134, no.~24, 2011.
+Hu, J., Luo, M., Jiang, F., Xu, R.-X., y Yan, Y., ``Pad{\'e} spectrum
+  decompositions of quantum distribution functions and optimal hierarchical
+  equations of motion construction for quantum open systems'', {The Journal of
+  chemical physics}, vol.~134, no.~24, 2011.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{schinabeck2019hierarchical}
-Schinabeck, C., ``Hierarchical quantum master equation approaches to nonequilibrium charge transport through single-molecule junctions'', 2019.
+Schinabeck, C., ``Hierarchical quantum master equation approaches to
+  nonequilibrium charge transport through single-molecule junctions'', 2019.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{riley2006mathematical}
-Riley, K.~F., Hobson, M.~P., y Bence, S.~J., {Mathematical methods for physics and engineering: a comprehensive guide}.
+Riley, K.~F., Hobson, M.~P., y Bence, S.~J., {Mathematical methods for physics
+  and engineering: a comprehensive guide}.
 \newblock Cambridge university press, 2006.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{bartlett2007reference}
-Bartlett, S.~D., Rudolph, T., y Spekkens, R.~W., ``Reference frames, superselection rules, and quantum information'', {Reviews of Modern Physics}, vol.~79, no.~2, pp.~555--609, 2007.
+Bartlett, S.~D., Rudolph, T., y Spekkens, R.~W., ``Reference frames,
+  superselection rules, and quantum information'', {Reviews of Modern Physics},
+  vol.~79, no.~2, pp.~555--609, 2007.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
 \bibitem{wick1997intrinsic}
-Wick, G.~C., Wightman, A.~S., y Wigner, E.~P., ``The intrinsic parity of elementary particles'', {Part I: Particles and Fields. Part II: Foundations of Quantum Mechanics}, pp.~102--106, 1997.
+Wick, G.~C., Wightman, A.~S., y Wigner, E.~P., ``The intrinsic parity of
+  elementary particles'', {Part I: Particles and Fields. Part II: Foundations
+  of Quantum Mechanics}, pp.~102--106, 1997.
 \backrefprint\backrefparscantrue
 
 \end{thebibliography}
