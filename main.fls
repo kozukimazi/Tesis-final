@@ -651,6 +651,11 @@ INPUT .\img\\ejemplos\concu.pdf
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
+INPUT .\img\\ejemplos\gammmas.pdf
+INPUT .\img\\ejemplos\gammmas.pdf
+INPUT .\img\\ejemplos\gammmas.pdf
+INPUT .\img\\ejemplos\gammmas.pdf
+INPUT .\img\\ejemplos\gammmas.pdf
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm

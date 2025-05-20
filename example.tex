@@ -1164,7 +1164,7 @@ Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencia
 Una de las ventajas de usar el formalismo descrito en \cite{prech2023entanglement} es que se pueden considerar términos no seculares los que finalmente permiten que aparezcan coherencias y entrelazamiento no nulos en el régimen de $g\sim \gamma_{L}$. La pregunta ahora por hacerse es si estos efectos cuánticos resultan ser una ventaja para que el demonio opere como debe ser. Para hacer la comparación uno puede calcular una evolución clásica para las partes diagonales del sistema descrita por
 
 \begin{equation}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle, 
 \label{ec5:classicalmodel}
 \end{equation}
 
@@ -1172,10 +1172,10 @@ En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operador
 El hecho de tener una ecuación maestra sólo para las partes diagonales permite modelar el sistema de manera estócastica, a través de un vector para las probabilidades de ocupación $\textbf{P} = [\rho_{000},\rho_{100},\rho_{010},\rho_{001},\rho_{110},\rho_{101},\rho_{011},\rho_{111}]^{T}$ y la ecuación maestra
 
 \begin{equation*}
-    \frac{d}{dt}\textbf{P} = \textbf{W}\textbf{P}
+    \frac{d}{dt}\textbf{P} = \textbf{W}\textbf{P},
 \end{equation*}
 
-En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:classicalmodel}. Finalmente flujos de corriente e información podrán ser calculadas usando la ecuación \ref{sec4:functionalcurrent}.
+En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:classicalmodel}. Finalmente flujos de corriente e información podrán ser calculadas usando la ecuación \ref{sec4:functionalcurrent}. Principalmente 
 
 \label{sec5:demonio}
 
@@ -1949,63 +1949,67 @@ Por lo tanto el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(
 Para que el sistema descrito en la sección \ref{sec5:modelo} tenga un comportamiento cercano a un Demonio de Maxwell autónomo, se necesita que las razones de transición $\gamma_{i}(\omega)$ modifiquen su respuesta dependiendo de si el punto cuántico del nivel $D$ este ocupado o desocupado. No todo comportamiento de las razones de transición aseguran que el comportamiento del sistema sea Markoviano, esto se puede determinar calculando la función correlación del reservorio y analizando el orden del tiempo de correlación $\tau_{B}$ que presenta este mismo. Para poder lograr hacer esto se deben calcular las funciónes correlación que para el caso de un ambiente fermiónico son de la forma
 
 \begin{equation*}
-    C^{\sigma}(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t} \gamma(\omega) f_{F}(\sigma \beta(\omega-\mu))
+    C^{\sigma}(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t} \gamma(\omega) f_{F}(\sigma \beta(\omega-\mu)),
 \end{equation*}
 
 En donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. La distribución de Fermi puede ser aproximada utilizando aproximantes de Padé \cite{hu2011pade,schinabeck2019hierarchical} que permite escribir la distribución como sumatoria
 
 \begin{equation}
-    f_{F}(x) \approx \frac{1}{2} - \sum_{l=0}^{N} \frac{ 2 \kappa_{l}x }{ x^{2} + \xi^{2}_{l} }
+    f_{F}(x) \approx \frac{1}{2} - \sum_{l=0}^{N} \frac{ 2 \kappa_{l}x }{ x^{2} + \xi^{2}_{l} },
     \label{apendix5:pade}
 \end{equation}
 
-Los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en una frecuencia $\epsilon_{0}$. Se puede elegir un comportamiento lorentziano de la forma
+Los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en alguna frecuencia $\epsilon_{0}$. Se puede elegir un comportamiento lorentziano de la forma
 
 \begin{equation*}
-    \gamma(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}}
+    \gamma(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}},
 \end{equation*}
 
-Con $W$ el ancho de la lorentziana y $\gamma_{0}$, $\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de transición en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$
+Con $W$ el ancho de la lorentziana y $\gamma_{0}$, $\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de transición en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$ como aparece en la Figura \ref{img:gammas}
+
+\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.5}{Descripción gráfica de las razones de transición en función de las frecuencias $\omega$.}
+
+Para obtener razones de transición que cumplan estos valores, se puede realizar el sistema de ecuaciones 
 
 \begin{align*}
     \gamma(\epsilon_{0}) & = \gamma_{0} + \gamma_{f} \\
-    \gamma(\epsilon_{0} + U) & = \gamma_{0} + \frac{\gamma_{f} W^{2} }{U^{2} + W^{2}}
+    \gamma(\epsilon_{0} + U) & = \gamma_{0} + \frac{\gamma_{f} W^{2} }{U^{2} + W^{2}}.
 \end{align*}
 
 Con estas igualdades se pueden determinar los valores de $\gamma_{0}$, $\gamma_{f}$ y $W$. Reemplazando $\gamma(\omega)$ en la función correlación se tendrá
 
 \begin{align*}
-    C^{\sigma}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu))
+    C^{\sigma}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
 \end{align*}
 
 La función correlación se puede separar en dos partes
 
 \begin{equation*}
-    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu))
+    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
 \end{equation*}
 
 Y podremos determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0},\tau_{Bf}\}$. Se partirá calculando una expresión analítica aproximada de la función correlación $C^{\sigma}_{f}(t)$, para realizar este integral se deberá localizar los polos en el plano complejo, para ello notemos que para \ref{apendix5:pade} los polos se ubican en $\omega = \pm i \xi_{l}/\beta + \mu $. Mientras que para la Lorentziana los polos se ubican en $\omega = \pm i W + \omega_{0}$. Para poder realizar este integral se usará el teorema del residuo \cite{riley2006mathematical}, tomando como zona de integración un semicírculo en el hemisferio positivo o negativo dependiendo del signo de $\sigma$. Primero el residuo de la Lorentziana consiste en 
 
 \begin{align*}
-   \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\omega_{0}-\mu)]e^{i\sigma \omega_{0}t}) 
+   \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\omega_{0}-\mu)]e^{i\sigma \omega_{0}t}). 
 \end{align*}
 
 Si se cumple que $\sigma > 0$ se toma el hemisferio inferior para la integración, mientras que para $\sigma<0$ se toma el hemosferio superior, para así obtener 
 
 \begin{align*}
-    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \omega_{0}t}e^{- Wt} f_{F}[i\beta W + \sigma \beta(\omega_{0}-\mu)]) 
+    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \omega_{0}t}e^{- Wt} f_{F}[i\beta W + \sigma \beta(\omega_{0}-\mu)]), 
  \end{align*}
 
 Para encontrar el residuo de los polos restantes, deberemos calcular 
 
 \begin{align*}
-    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm \kappa_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } 
+    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm \kappa_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } ,
 \end{align*}
 
 Eligiendo la zona de integración dependiendo del signo de $\sigma$ obtendremos que 
 
 \begin{align*}
-    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{ \xi_{l}}{\beta}t} e^{i\sigma \mu t} \kappa_{l} }{ [ \frac{ \sigma i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } 
+    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{ \xi_{l}}{\beta}t} e^{i\sigma \mu t} \kappa_{l} }{ [ \frac{ \sigma i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} }. 
 \end{align*}
 
 Encontrando los residuos explícitamente se podrá escribir la función correlación como
@@ -2028,13 +2032,13 @@ En donde
 Esto permite una expresión numérica para la función correlación $C^{\sigma}_{f}(t)$ y así evaluar su tiempo de correlación $\tau_{Bf}$. Para la otra función correlación se podrá encontrar el integral de manera analítica, es decir calcular
 
 \begin{align*}
-       C_{0}^{\sigma}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t }f_{F}(\sigma \beta (\omega -  \mu))
+       C_{0}^{\sigma}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t }f_{F}(\sigma \beta (\omega -  \mu)).
 \end{align*}    
 
 Se puede partir notando que esto consiste en calcular la Transformada de Fourier de $\mathcal{F}(f[\sigma (\omega - \mu)])(-\sigma t)$ de la función $f(\sigma(\omega-\mu))= f_{F}(\sigma \beta (\omega-\mu) )$, utilizando la propiedad
 
 \begin{equation*}
-\mathcal{F}(f[\sigma (\omega - \mu)])(-\sigma t) = e^{-i \sigma \mu t}\mathcal{F}(f[\sigma \omega])(-\sigma t)
+\mathcal{F}(f[\sigma (\omega - \mu)])(-\sigma t) = e^{-i \sigma \mu t}\mathcal{F}(f[\sigma \omega])(-\sigma t),
 \end{equation*}
 
 Es decir podemos centrarnos en calcular la transformación
@@ -2042,13 +2046,13 @@ Es decir podemos centrarnos en calcular la transformación
 \begin{align*}
     \mathcal{F}(f[\sigma \omega])(-\sigma t) &= \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega \frac{e^{i\sigma \omega t}}{e^{\sigma \beta \omega} +1 } \\
         & = \frac{\gamma_{0}}{4\pi} \left[\int_{-\infty}^{\infty}d \omega e^{i\sigma \omega t} - \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} \tanh \left(\frac{ \sigma \beta \omega }{2} \right)   \right] \\
-        & =  \frac{\gamma_{0}}{2} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right]
+        & =  \frac{\gamma_{0}}{2} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right],
 \end{align*}
 
 Y así finalmente
 
 \begin{equation*}
-    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right]
+    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right].
 \end{equation*}
 
 Gracias a que se tiene una expresión analítica para $C^{\sigma}_{0}(t)$ se puede determinar el $\tau_{B0}$. Se debe concentrar principalmente en la parte con $\sinh(\pi t/\beta \sigma)$ debido a que $\sigma=\pm 1$ sólo nos interesa analizar la cantidad $\pi t/\beta$, ya que para tiempos $t > \beta$ se podrá considerar que $1/\sinh(\pi t/\beta \sigma) \propto \exp(-t/\beta)$, por lo tanto para está función correlación el tiempo de correlación del baño consiste en el inverso de la temperatura $\tau_{B0} = \beta$. Con esto finalmente se podrá obtener el tiempo de correlación asociado a un sólo reservorio como $\tau_{B} = \max \{\beta,\tau_{Bf} \}$.  
@@ -2066,17 +2070,17 @@ De la Figura \ref{img:correlacion} y \ref{img:correlacionmin} se puede notar que
 
 \insertimage[\label{img:probas}]{ejemplos/probas.png}{scale=0.4}{Gráficos de las partes diagonales de la matriz densidad del sistema $LRD$ en función del tiempo.}
 
-Con la Figura \ref{img:probas} que el tiempo de relajación del sistema es $\tau_{R}>1000$ y por lo tanto permite corrobar que con respecto a los tiempos $\tau_{Bf}$, se cumple que $\tau_{Bf}/\tau_{R} < 0.0004 $. Este análisis se probo para distintos valores de $eV$ los cuáles dieron valores similares para $\tau_{Bf}$ y el tiempo de relajación $\tau_{R}$. 
+Con la Figura \ref{img:probas} se puede visualizar que el tiempo de relajación del sistema es $\tau_{R}>1000$ y por lo tanto permite corrobar que con respecto a los tiempos $\tau_{Bf}$, se cumple que $\tau_{Bf}/\tau_{R} < 0.0004 $. Este análisis se probo para distintos valores de $eV$ los cuáles dieron valores similares para $\tau_{Bf}$ y el tiempo de relajación $\tau_{R}$. 
 
 \label{appendix5tauf}
 
 \newpage 
 
 \subsection{Concurrencia}
-En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se requiere calcular la concurrencia en el subsistema $\hat{\rho}_{LR}$ por lo tanto se tiene que partir calculando 
+En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se requiere calcular la concurrencia en el subsistema $\hat{\rho}_{LR}$, por lo tanto se tiene que partir calculando 
 
 \begin{equation*}
-    \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{S}} \}
+    \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{S}} \},
 \end{equation*}
 
 Usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$, la matriz densidad del sistema queda
@@ -2092,11 +2096,11 @@ Usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1
         0 & 0 & 0 & 0 & 0 & p_{101} & \beta & 0 \\
         0 & 0 & 0 & 0 & 0 & \beta^{*} & p_{011} & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & 0 & p_{111} 
-        \end{bmatrix}
+        \end{bmatrix}.
         \label{appendix5rhoconcu}
 \end{equation}
 
-En donde no aparecen coherencias entre estados con distinto número de partículas por el principio de superselección de carga \cite{bartlett2007reference,wick1997intrinsic}. Además debido a que el punto cuántico $D$ sólo interactua mediante interacción de Coulomb con los puntos $L$ y $R$ no aparecen coherencias del tipo $L-D$ y $R-D$. Se puede obtener la matriz densidad del sistema $LR$ en la base $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle \}$
+En esta matriz no aparecen coherencias entre estados con distinto número de partículas por el principio de superselección de carga \cite{bartlett2007reference,wick1997intrinsic}. Además debido a que el punto cuántico $D$ sólo interactua mediante interacción de Coulomb con los puntos $L$ y $R$, no aparecen coherencias del tipo $L-D$ y $R-D$. Así se puede obtener la matriz densidad del sistema $LR$ en la base $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle \}$
 
 \begin{equation*}
     \hat{\rho}_{LR} = 
@@ -2105,19 +2109,19 @@ En donde no aparecen coherencias entre estados con distinto número de partícul
         0 & p_{100} + p_{101} & \alpha + \beta & 0  \\
         0 & \alpha^{*} +\beta^{*} & p_{010} + p_{011} & 0  \\
         0 & 0 & 0 & p_{110} + p_{111} 
-        \end{bmatrix}
+        \end{bmatrix},
 \end{equation*}
 
 Así se podrá calcular la concurrencia 
 
 \begin{equation*}
-    \mathcal{C}_{on} = \max \{ 0,\lambda_{1} - \lambda_{2} - \lambda_{3} - \lambda_{4} \}
+    \mathcal{C}_{on} = \max \{ 0,\lambda_{1} - \lambda_{2} - \lambda_{3} - \lambda_{4} \},
 \end{equation*}
 
 En donde $\lambda_{i}$ son la raíz cuadrada de los autovalores ordenados en forma decreciente de la matriz
 
 \begin{equation*}
-    B = \hat{\rho}_{LR} \tilde{\rho}_{LR} \hspace{10mm} \tilde{\rho}_{LR} = (\sigma_{y} \otimes \sigma_{y}) \hat{\rho}_{LR} (\sigma_{y} \otimes \sigma_{y})
+    B = \hat{\rho}_{LR} \tilde{\rho}_{LR} \hspace{10mm} \tilde{\rho}_{LR} = (\sigma_{y} \otimes \sigma_{y}) \hat{\rho}_{LR} (\sigma_{y} \otimes \sigma_{y}),
 \end{equation*}
 
 En donde $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
@@ -2125,14 +2129,14 @@ En donde $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
 \begin{equation*}
     \tilde{\rho}_{LR} = 
     \begin{bmatrix}
-        p_{110}+p_{111} & 0 & 0 & 0  \\
-        0 & p_{010} + p_{011} & \alpha + \beta & 0  \\
-        0 & \alpha^{*} +\beta^{*} & p_{100} + p_{101} & 0  \\
-        0 & 0 & 0 & p_{000} + p_{001} 
-        \end{bmatrix}
+        p_{D} & 0 & 0 & 0  \\
+        0 & p_{R} & \alpha + \beta & 0  \\
+        0 & \alpha^{*} +\beta^{*} & p_{L} & 0  \\
+        0 & 0 & 0 & p_{0} 
+        \end{bmatrix}.
 \end{equation*}
 
-Escribiendo $p_{0}=p_{000}+p_{001}$, $p_{L}=p_{100} + p_{101}$, $p_{R}=p_{010}+p_{011}$, $p_{D}=p_{110}+p_{111}$ la matriz $B$ quedarán
+En donde $p_{0}=p_{000}+p_{001}$, $p_{L}=p_{100} + p_{101}$, $p_{R}=p_{010}+p_{011}$, $p_{D}=p_{110}+p_{111}$ la matriz $B$ quedará
 
 \begin{equation*}
     B = 
@@ -2141,19 +2145,19 @@ Escribiendo $p_{0}=p_{000}+p_{001}$, $p_{L}=p_{100} + p_{101}$, $p_{R}=p_{010}+p
         0 & p_{L}p_{R}+|\alpha+\beta|^{2} & 2(\alpha + \beta)p_{L} & 0  \\
         0 & 2(\alpha^{*} +\beta^{*})p_{R} & p_{L}p_{R}+|\alpha+\beta|^{2}  & 0  \\
         0 & 0 & 0 & p_{0}p_{D}
-        \end{bmatrix}
+        \end{bmatrix}.
 \end{equation*}
 
 Suponiendo que $p_{D}$ y $p_{0}$ son pequeños, el orden decreciente de los autovalores corresponderá a
 
 \begin{equation*}
-    \lambda_{1} = p_{L}p_{R} + |\alpha + \beta| \hspace{10mm}  \lambda_{2} = p_{L}p_{R} - |\alpha + \beta| \hspace{10mm} \lambda_{3}=\lambda_{4} = \sqrt{p_{0}p_{D}}
+    \lambda_{1} = p_{L}p_{R} + |\alpha + \beta| \hspace{10mm}  \lambda_{2} = p_{L}p_{R} - |\alpha + \beta| \hspace{10mm} \lambda_{3}=\lambda_{4} = \sqrt{p_{0}p_{D}},
 \end{equation*}
 
 Finalmente se obtiene
 
 \begin{equation*}
-    \mathcal{C}_{on} = \max\{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0\}
+    \mathcal{C}_{on} = \max\{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0\}.
 \end{equation*}
 
 \label{appendix5final}
@@ -2162,62 +2166,62 @@ Finalmente se obtiene
 Para partir derivando el modelo clásico para las partes diagonales de la matriz densidad $\rho_{ijk}$ con $i,j,k \in \{0,1\}$, primero se notará que la ecuación de operadores
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) + \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t)
+    \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) + \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t),
 \end{equation*}
 
 Es equivalente a una ecuación no homogenea lineal de la forma
 
 \begin{equation*}
-    \frac{dy}{dt} - A(t)y = B(t)
+    \frac{dy}{dt} - A(t)y = B(t),
 \end{equation*}
 
 Por lo tanto se puede solucionar utilizando factor integrante
 
 \begin{equation*}
-    \check{\mu}(t) = \exp\left( - \int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}ds \right)
+    \check{\mu}(t) = \exp\left( - \int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}ds \right),
 \end{equation*}
 
 Multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$ se tendrá
 
 \begin{equation*}
-    \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t)) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) 
+    \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t)) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) ,
 \end{equation*}
 
 Por lo tanto queda la solución
 
 \begin{equation*}
-    \check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+    \check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,   
 \end{equation*}
 
 Multiplicando por $\check{\mu}^{-1}(t)$ 
 
 \begin{equation*}
-    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}^{-1}(t)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}^{-1}(t)\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}^{-1}(t)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}^{-1}(t)\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,    
 \end{equation*}
 
 Para asi definir el operador
 
 \begin{equation*}
-    \check{\mathcal{G}}(t,s) = \exp\left(  \int_{s}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}dt' \right)
+    \check{\mathcal{G}}(t,s) = \exp\left(  \int_{s}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}dt' \right),
 \end{equation*}
 
-Con lo que finalmente
+Finalmente
 
 \begin{equation*}
-    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,    
 \end{equation*}
 
 Podremos reinsertar esto en la parte principal y quedará
 
 \begin{equation}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau    
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau.    
     \label{apendix5exactp}
 \end{equation}
 
 Estas ecuaciones son exactas, ya que hasta ahora no se ha hecho ninguna aproximación. La primera parte del lado derecho de la ecuación \ref{apendix5exactp} consiste en la evolución markoviana, mientras que la segunda y  tercera parte corresponden a un corrimiento inicial y a los efectos de memoria respectivamente. Para seguir la deducción se utilizarán las relaciones
 
 \begin{equation*}
-    \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{P}} = [\check{\mathcal{L}}_0,\check{\mathcal{P}}] = [\check{\mathcal{L}}_0,\check{\mathcal{Q}}] = 0 
+    \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{P}} = [\check{\mathcal{L}}_0,\check{\mathcal{P}}] = [\check{\mathcal{L}}_0,\check{\mathcal{Q}}] = 0, 
 \end{equation*}
 
 Estas relaciones se pueden explicar intuitivamente, ya que al ser $\check{\mathcal{V}}$ la perturbación que genera el tunneling entre los puntos $L$ y $R$, está contribución es la que produce efectos de coherencias. Así se puede notar que $\check{\mathcal{V}}\check{\mathcal{P}}\hat{\rho}$ es no diagonal y por lo tanto al aplicar nuevamente el operador que proyecta en la diagonal este se anula.
@@ -2227,55 +2231,55 @@ Para seguir con \ref{apendix5exactp}, primero supondremos que inicialmente no ha
 \begin{align*}
     \check{\mathcal{G}}(t,\tau) & = \exp\left(  \int_{\tau}^{t}\check{\mathcal{Q}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})dt' \right) \\
         & = \exp\left(  \int_{\tau}^{t}\check{\mathcal{Q}}(\check{\mathcal{L}}_{0}+\check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}}) dt' \right) \\
-            & = \exp\left(  \int_{\tau}^{t}\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}}\right] dt' \right)       
+            & = \exp\left(  \int_{\tau}^{t}\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}}\right] dt' \right),       
 \end{align*}
 
 En donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$. Continuando con la ecuación principal
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}})\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau        
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}})\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau.       
 \end{equation*}
 
-Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{G}}(t,\tau)= \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau)$, ya que si extendemos el exponencial
+Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{G}}(t,\tau)$ se obtiene $\check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau)$, ya que si extendemos el exponencial
 
 \begin{equation*}
-    \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\int_{\tau}^{t}ds\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right] = \check{\mathcal{L}}_{0}\check{\mathcal{P}}\int_{\tau}^{t}\sum_{k=0}^{\infty}\left(\frac{1}{k!} \right)\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]^{k}ds = \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau) 
+    \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\int_{\tau}^{t}ds\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right] = \check{\mathcal{L}}_{0}\check{\mathcal{P}}\int_{\tau}^{t}\sum_{k=0}^{\infty}\left(\frac{1}{k!} \right)\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]^{k}ds = \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau), 
 \end{equation*}
 
 Posteriormente esta contribución se anula y la ecuación principal se reduce a
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau        
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,        
 \end{equation*}
 
 De manera similar se puede notar que el término de la exponencial $\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}$ no actua en la ecuación por ende queda que 
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (t-\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau        
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (t-\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,        
 \end{equation*}
 
 Haciendo el cambio de variable $\tau \to t-\tau$
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau        
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau,        
 \end{equation*}
 
 En este momento es donde se hacen aproximaciones, ya que si consideramos el acoplamiento $g$ pequeño, es decir $g \ll \gamma_{i}$. Sabiendo que los autovalores de los superoperadores $\check{\mathcal{V}}$ y $\check{\mathcal{L}}_{0}$ serán proporcionales a $g$ y $\gamma_{i}$ respectivamente,  podremos despreciar la contribución de $\check{\mathcal{V}}$ en la exponencial, así queda
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau        
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau,        
 \end{equation*}
 
 Finalmente, para aplicar aproximación de Markov suponemos que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho en escalas de tiempo de $1/\gamma_{i}$, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$ y el integral de $0$ a el infinito con lo que se obtiene
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{\infty}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]d\tau \check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t)        
+    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{\infty}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]d\tau \check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t),        
 \end{equation*}
 
-Y finalmente se recupera la ecuación 
+Y finalmente se recupera la ecuación en formalismo de superoperadores  
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle 
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle. 
 \end{equation*}
 
 
