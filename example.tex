@@ -444,7 +444,7 @@ Que se puede escribir en función de la evolución de una matriz densidad auxili
 Y 
 
 \begin{equation*}
-    \hat{U}(\vec{\lambda},\vec{\chi};t) = e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha} ) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]  } \hat{U}(t) e^{\frac{i}{2}\sum_{\alpha}[ \lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]}
+    \hat{U}(\vec{\lambda},\vec{\chi};t) = e^{\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha} ) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]  } \hat{U}(t) e^{-\frac{i}{2}\sum_{\alpha}[ \lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]}
 \end{equation*}
 
 $\vec{\lambda}$ y $\vec{\chi}$ se denominan los parámetros de conteo o \textit{Counting Fields}, y $\rho(\vec{\lambda},\vec{\chi};t)$ se denomina la matriz densidad generalizada. El conocer la evolución de esta matriz permite acceder a los momentos del calor y el trabajo y de manera general del observable que se quiera estudiar. Sin embargo esta es descrita en función de la matriz densidad total, por lo que el siguiente paso es encontrar una ecuación maestra para los grados de libertad del sistema reducido.
@@ -495,8 +495,8 @@ Además existen los superoperadores de proyección Nakajima-Zwanzig\cite{zwanzig
 La evolución temporal de la matriz densidad a través de estos proyectores
 
 \begin{align*}
-    \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) & = \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{Q}}\hat{\rho}(t) \\
-    \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) & = \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{Q}}\hat{\rho}(t) + \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{P}}\hat{\rho}(t)
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle & = \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle \\
+    \frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  & = \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle 
 \end{align*}
 
 \label{sec2:superop}
@@ -516,11 +516,11 @@ Con el Hamiltoniano total $\hat{H} = \hat{H}_{S} + \hat{H}_{B} + \epsilon \hat{H
     \hat{V}_{\lambda} = e^{-\frac{i}{2}\hat{A}(\lambda,\chi)}\hat{H}_{I}e^{\frac{i}{2}\hat{A}(\lambda,\chi)} \hspace{14mm}  
 \end{equation*}
 
-Con $\hat{A}(\lambda,\chi) = \sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]$. Que en formalismo de superoperadores se puede escribir
+Con $\hat{A}(\lambda,\chi) = -\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]$. Que en formalismo de superoperadores se puede escribir
 
 \begin{align*}
-    \frac{d}{dt}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) & = \check{\mathcal{L}}_{\lambda}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) \\  
-        & = (\check{\mathcal{L}}_{0} + \epsilon \check{\mathcal{L}}'_{\lambda} )\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) 
+    \frac{d}{dt}|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  & = \check{\mathcal{L}}_{\lambda}|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  \\  
+        & = (\check{\mathcal{L}}_{0} + \epsilon \check{\mathcal{L}}'_{\lambda} )|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  
 \end{align*}
 
 En el cuadro de interacción 
@@ -550,7 +550,7 @@ La demostración de esta ecuación se encuentra en el apéndice \ref{apendixsubs
 \begin{align*}
     \hat{V} & = \sum_{\alpha,k}\hat{S}_{\alpha,k}\hat{B}_{\alpha,k} \\
     \hat{V}_{\lambda} & = \sum_{\alpha,k}\hat{S}_{\alpha,k}\hat{B}_{\alpha,k,\lambda} \\
-    \hat{B}_{\alpha,k,\lambda} & \equiv e^{-(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}\hat{B}_{\alpha,k}e^{(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}   
+    \hat{B}_{\alpha,k,\lambda} & \equiv e^{(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}\hat{B}_{\alpha,k}e^{-(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}   
 \end{align*}
 
 Y utilizando también que en el cuadro de interacción
@@ -570,7 +570,7 @@ En donde
 
 \begin{multline*}
     \mathcal{I}(s,t) = e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k',j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'} \\
-    - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha} - \chi_{\alpha})}\left[e^{i\omega_{j'}s}C^{\alpha}_{k,k'}(s+\lambda_{\alpha}) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s+\lambda_{\alpha})  \right]  \hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}
+    - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha} - \chi_{\alpha})}\left[e^{i\omega_{j'}s}C^{\alpha}_{k,k'}(s-\lambda_{\alpha}) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s-\lambda_{\alpha})  \right]  \hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}
 \end{multline*}
 
 \label{sec2:master}
@@ -615,7 +615,7 @@ Usando este esquema en la ecuación \ref{ecmaestrafinal}, se obtiene la ecuació
 Con
 
 \begin{equation*}
-    \tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha}\hat{\rho} = \sum_{k,q}\Gamma^{\alpha}_{k}(\omega_{q}) \left[e^{-i\lambda_{\alpha}\omega_{q} - i(\chi_{\alpha}-\lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho} \} \right] 
+    \tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha}\hat{\rho} = \sum_{k,q}\Gamma^{\alpha}_{k}(\omega_{q}) \left[e^{i\lambda_{\alpha}\omega_{q} + i(\chi_{\alpha}-\lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho} \} \right] 
 \end{equation*}
 
 Los operadores de salto consisten en
@@ -1209,10 +1209,10 @@ En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:clas
 
     \begin{align*}
         \Lambda(\vec{\lambda},\vec{\chi}) & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'} \int d\textbf{Q}d\textbf{W} P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) P_{0}(\textbf{E},\textbf{N})  \\
-        & \times \Pi_{\alpha} \delta(W_{\alpha} - \mu_{\alpha}(N'_{\alpha} - N_{\alpha}) ) \delta(Q_{\alpha} + W_{\alpha} -(E'_{\alpha} - E_{\alpha})) e^{-i\vec{\lambda}\cdot \textbf{Q}} e^{-i\vec{\chi}\cdot \textbf{W}} \\
-        & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'}P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})P_{0}(\textbf{E},\textbf{N}) \Pi_{\alpha}e^{i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }  \\
+        & \times \Pi_{\alpha} \delta(W_{\alpha} - \mu_{\alpha}(N_{\alpha} - N'_{\alpha}) ) \delta(Q_{\alpha} + W_{\alpha} -(E_{\alpha} - E'_{\alpha})) e^{-i\vec{\lambda}\cdot \textbf{Q}} e^{-i\vec{\chi}\cdot \textbf{W}} \\
+        & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'}P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})P_{0}(\textbf{E},\textbf{N}) \Pi_{\alpha}e^{-i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{-i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }  \\
         & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'} \text{Tr}\{\hat{P}_{\textbf{E}',\textbf{N}'}\hat{U}(t)\hat{P}_{\textbf{E},\textbf{N}}(\hat{\rho}_{s}(0) \otimes \Pi_{\alpha}\hat{\tau}_{\alpha} )\hat{P}_{\textbf{E},\textbf{N}}\hat{U}^{\dagger}(t)\hat{P}_{\textbf{E}',\textbf{N}'}   \} \\
-        & \times \Pi_{\alpha} e^{i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }
+        & \times \Pi_{\alpha} e^{-i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{-i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }
     \end{align*}
 
 Considerando un observable $\hat{A}(0)$ y proyectores $\hat{P}_{a_{0}}$ para un estado diagonal $\hat{\rho}_{diag}$\cite{esposito2009nonequilibrium}, se cumple que
@@ -1225,8 +1225,8 @@ Considerando un observable $\hat{A}(0)$ y proyectores $\hat{P}_{a_{0}}$ para un 
 Usando la relación \ref{apendixobservable} en la función generadora
 
 \begin{align*}
-    \Lambda(\vec{\lambda},\vec{\chi}) & = \sum_{\textbf{E}',\textbf{N}'}\text{Tr}\{ \hat{P}_{\textbf{E}',\textbf{N}'} \hat{U}(t) e^{\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}  ]}  \}\hat{\rho}_{tot}(0) e^{\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ] }\hat{U}^{\dagger}(t) \hat{P}_{\textbf{E}',\textbf{N}'} \} \\
-    & \times \Pi_{\alpha}e^{-i\chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}}e^{-i\lambda_{\alpha}(\hat{H}_{\alpha} -\mu_{\alpha}\hat{N}_{\alpha})} \\
+    \Lambda(\vec{\lambda},\vec{\chi}) & = \sum_{\textbf{E}',\textbf{N}'}\text{Tr}\{ \hat{P}_{\textbf{E}',\textbf{N}'} \hat{U}(t) e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}  ]}  \}\hat{\rho}_{tot}(0) e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ] }\hat{U}^{\dagger}(t) \hat{P}_{\textbf{E}',\textbf{N}'} \} \\
+    & \times \Pi_{\alpha}e^{i\chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}}e^{i\lambda_{\alpha}(\hat{H}_{\alpha} -\mu_{\alpha}\hat{N}_{\alpha})} \\
     & = \text{Tr}\{ \hat{U}(\vec{\lambda},\vec{\chi};t)\hat{\rho}_{tot}(0)\hat{U}^{\dagger}(-\vec{\lambda},-\vec{\chi};t)  \}
 \end{align*}
 
@@ -1236,15 +1236,15 @@ Usando la relación \ref{apendixobservable} en la función generadora
     Se puede realizar una expansión a segundo orden de la ecuación \ref{sec2FCS:evolution} y tener la evolución
 
     \begin{equation*}
-        \hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t) = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(t_{1})dt_{1} + \epsilon^{2}\int_{0}^{t}dt_{1}\int_{0}^{t_{1}}\check{\mathcal{L}}'_{\lambda}(t_{1})\check{\mathcal{L}}'_{\lambda}(t_{2})dt_{2} \right) \hat{\rho}_{tot}(0)
+        |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(t_{1})dt_{1} + \epsilon^{2}\int_{0}^{t}dt_{1}\int_{0}^{t_{1}}\check{\mathcal{L}}'_{\lambda}(t_{1})\check{\mathcal{L}}'_{\lambda}(t_{2})dt_{2} \right) |\hat{\rho}_{tot}(0)\rangle \rangle 
     \end{equation*}
 
 Al hacer el cambio de variable $t_{1}=T$ y $t_{2}=T-s$ 
 
 \begin{align*}
-    \hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t) & = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(T)dT + \epsilon^{2}\int_{0}^{t}dT\int_{0}^{T}ds \check{\mathcal{L}}'_{\lambda}(T)\check{\mathcal{L}}'_{\lambda}(T-s) \right)\hat{\rho}_{tot}(0) \\
-    & = \check{\mathcal{W}}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{tot}(0) \\
-    & =  [\check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) + \epsilon \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) + \epsilon^{2}\check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t)] \hat{\rho}_{tot}(0)
+    |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  & = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(T)dT + \epsilon^{2}\int_{0}^{t}dT\int_{0}^{T}ds \check{\mathcal{L}}'_{\lambda}(T)\check{\mathcal{L}}'_{\lambda}(T-s) \right)|\hat{\rho}_{tot}(0)\rangle \rangle  \\
+    & = \check{\mathcal{W}}(\vec{\lambda},\vec{\chi},t)|\hat{\rho}_{tot}(0)\rangle \rangle \\
+    & =  [\check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) + \epsilon \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) + \epsilon^{2}\check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t)] |\hat{\rho}_{tot}(0)\rangle \rangle 
 \end{align*}
 
 Definiendo los superoperadores
@@ -1410,19 +1410,19 @@ Con $C$ una constante, podremos utilizar esto para obtener
 Por último, analizando el término
 
 \begin{align*}
-    e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)} & = e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})} \hat{B}_{\alpha,k}(t-\lambda_{\alpha}) 
+    e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)} & = e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})} \hat{B}_{\alpha,k}(t+\lambda_{\alpha}) 
 \end{align*}
 
 Con esto se tiene
 
 \begin{align*}
  & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} = \\
- & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(-s+\lambda_{\alpha})e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
+ & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(-s-\lambda_{\alpha})e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
  \end{align*}
 
  \begin{align*}
     & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) \} = \\
-    & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(s+\lambda_{\alpha})e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
+    & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(s-\lambda_{\alpha})e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
     \end{align*}
    
 Reemplazando estos términos en \ref{ecmaestraVlambda} se obtiene la ecuación maestra generalizada.   
@@ -1440,7 +1440,7 @@ Desarrollando la ecuación \ref{ecmaestrafinal} podremos escribir
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  \right. \\
     \left. +  e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\right. \\
-    \left. - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s+\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s+\lambda_{\alpha}) ) \right.\\
+    \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s-\lambda_{\alpha}) ) \right.\\
     \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right]    
 \end{multline*}
 
@@ -1449,7 +1449,7 @@ Tomando la condición que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \\
      - \sum_{\alpha,k;q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  +  e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t) \hat{S}_{\alpha,k;q}(t) \right. \\
-    \left. - e^{i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s+\lambda_{\alpha}) ) \hat{S}_{\alpha,k;q}(t) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t)    \right]    
+    \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s-\lambda_{\alpha}) ) \hat{S}_{\alpha,k;q}(t) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t)    \right]    
 \end{multline*}
 
 Usando la identidad 
@@ -1460,11 +1460,11 @@ Usando la identidad
     & = \frac{1}{2}\Gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q})
 \end{align*}
 
-Y usando que $\int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) = e^{-i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s+\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s+\lambda_{\alpha}) $, nos queda finalmente
+Y usando que $\int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) = e^{i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s-\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) $, nos queda finalmente
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}\Delta^{\alpha}_{k,k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
-    + \sum_{\alpha,k;q} \Gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{-i\lambda_{\alpha}\omega_{q} -i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \}     \right]
+    + \sum_{\alpha,k;q} \Gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \}     \right]
 \end{multline*}
 
 Que es la ecuación que se quiere demostrar.
