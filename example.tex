@@ -1212,13 +1212,13 @@ En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:clas
         & \times \Pi_{\alpha} \delta(W_{\alpha} - \mu_{\alpha}(N_{\alpha} - N'_{\alpha}) ) \delta(Q_{\alpha} + W_{\alpha} -(E_{\alpha} - E'_{\alpha})) e^{-i\vec{\lambda}\cdot \textbf{Q}} e^{-i\vec{\chi}\cdot \textbf{W}} \\
         & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'}P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})P_{0}(\textbf{E},\textbf{N}) \Pi_{\alpha}e^{-i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{-i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }  \\
         & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'} \text{Tr}\{\hat{P}_{\textbf{E}',\textbf{N}'}\hat{U}(t)\hat{P}_{\textbf{E},\textbf{N}}(\hat{\rho}_{s}(0) \otimes \Pi_{\alpha}\hat{\tau}_{\alpha} )\hat{P}_{\textbf{E},\textbf{N}}\hat{U}^{\dagger}(t)\hat{P}_{\textbf{E}',\textbf{N}'}   \} \\
-        & \times \Pi_{\alpha} e^{-i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{-i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }
+        & \times \Pi_{\alpha} e^{-i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{-i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }.
     \end{align*}
 
-Considerando un observable $\hat{A}(0)$ y proyectores $\hat{P}_{a_{0}}$ para un estado diagonal $\hat{\rho}_{diag}$\cite{esposito2009nonequilibrium}, se cumple que
+Si se considera un observable $\hat{A}(0)$ y proyectores del tipo $\hat{P}_{a_{0}}$ y se aplican para un estado diagonal $\hat{\rho}_{diag}$\cite{esposito2009nonequilibrium}, se cumple que
 
 \begin{equation}
-    \sum_{a_{0}}e^{-i\lambda a_{0}}\hat{P}_{a_{0}}\hat{\rho}_{diag}\hat{P}_{a_{0}} = e^{-i(\lambda/2)\hat{A}(0)}\hat{\rho}_{diag}e^{-i(\lambda/2)\hat{A}(0)}
+    \sum_{a_{0}}e^{-i\lambda a_{0}}\hat{P}_{a_{0}}\hat{\rho}_{diag}\hat{P}_{a_{0}} = e^{-i(\lambda/2)\hat{A}(0)}\hat{\rho}_{diag}e^{-i(\lambda/2)\hat{A}(0)}.
 \label{apendixobservable}
 \end{equation}
 
@@ -1227,7 +1227,7 @@ Usando la relación \ref{apendixobservable} en la función generadora
 \begin{align*}
     \Lambda(\vec{\lambda},\vec{\chi}) & = \sum_{\textbf{E}',\textbf{N}'}\text{Tr}\{ \hat{P}_{\textbf{E}',\textbf{N}'} \hat{U}(t) e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}  ]}  \}\hat{\rho}_{tot}(0) e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ] }\hat{U}^{\dagger}(t) \hat{P}_{\textbf{E}',\textbf{N}'} \} \\
     & \times \Pi_{\alpha}e^{i\chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}}e^{i\lambda_{\alpha}(\hat{H}_{\alpha} -\mu_{\alpha}\hat{N}_{\alpha})} \\
-    & = \text{Tr}\{ \hat{U}(\vec{\lambda},\vec{\chi};t)\hat{\rho}_{tot}(0)\hat{U}^{\dagger}(-\vec{\lambda},-\vec{\chi};t)  \}
+    & = \text{Tr}\{ \hat{U}(\vec{\lambda},\vec{\chi};t)\hat{\rho}_{tot}(0)\hat{U}^{\dagger}(-\vec{\lambda},-\vec{\chi};t)  \}.
 \end{align*}
 
 \newpage 
@@ -1236,7 +1236,7 @@ Usando la relación \ref{apendixobservable} en la función generadora
     Se puede realizar una expansión a segundo orden de la ecuación \ref{sec2FCS:evolution} y tener la evolución
 
     \begin{equation*}
-        |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(t_{1})dt_{1} + \epsilon^{2}\int_{0}^{t}dt_{1}\int_{0}^{t_{1}}\check{\mathcal{L}}'_{\lambda}(t_{1})\check{\mathcal{L}}'_{\lambda}(t_{2})dt_{2} \right) |\hat{\rho}_{tot}(0)\rangle \rangle 
+        |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(t_{1})dt_{1} + \epsilon^{2}\int_{0}^{t}dt_{1}\int_{0}^{t_{1}}\check{\mathcal{L}}'_{\lambda}(t_{1})\check{\mathcal{L}}'_{\lambda}(t_{2})dt_{2} \right) |\hat{\rho}_{tot}(0)\rangle \rangle, 
     \end{equation*}
 
 Al hacer el cambio de variable $t_{1}=T$ y $t_{2}=T-s$ 
@@ -1244,57 +1244,57 @@ Al hacer el cambio de variable $t_{1}=T$ y $t_{2}=T-s$
 \begin{align*}
     |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  & = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(T)dT + \epsilon^{2}\int_{0}^{t}dT\int_{0}^{T}ds \check{\mathcal{L}}'_{\lambda}(T)\check{\mathcal{L}}'_{\lambda}(T-s) \right)|\hat{\rho}_{tot}(0)\rangle \rangle  \\
     & = \check{\mathcal{W}}(\vec{\lambda},\vec{\chi},t)|\hat{\rho}_{tot}(0)\rangle \rangle \\
-    & =  [\check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) + \epsilon \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) + \epsilon^{2}\check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t)] |\hat{\rho}_{tot}(0)\rangle \rangle 
+    & =  [\check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) + \epsilon \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) + \epsilon^{2}\check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t)] |\hat{\rho}_{tot}(0)\rangle \rangle,
 \end{align*}
 
-Definiendo los superoperadores
+Con los superoperadores definidos por 
 
 \begin{align*}
     \check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) &  = \textbf{1}\\
     \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) & = \int_{0}^{t}dT \check{\mathcal{L}'}_{\lambda}(T) \\
-    \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) & = \int_{0}^{t}dT \int_{0}^{T}ds \check{\mathcal{L}'}_{\lambda}(T)\check{\mathcal{L}'}_{\lambda}(T-s)
+    \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) & = \int_{0}^{t}dT \int_{0}^{T}ds \check{\mathcal{L}'}_{\lambda}(T)\check{\mathcal{L}'}_{\lambda}(T-s).
 \end{align*}
 
 Tomando hasta segundo orden la inversa del superoperador $\check{\mathcal{W}}$
 
 \begin{equation}
-    \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t) =  \check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) - \epsilon  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) +  \epsilon^{2}[\check{\mathcal{W}}^{2}_{1}(\vec{\lambda},\vec{\chi},t) -  \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) ]
+    \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t) =  \check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) - \epsilon  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) +  \epsilon^{2}[\check{\mathcal{W}}^{2}_{1}(\vec{\lambda},\vec{\chi},t) -  \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) ],
 \label{apendix2inverseW}
 \end{equation}
 
 Se cumple la propiedad
 
 \begin{equation}
-    \dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{A}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t) = \epsilon \dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{A} + \epsilon^{2}[\dot{\check{\mathcal{W}}}_{2}(\vec{\lambda},\vec{\chi},t)\check{A} - \dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{A}\check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) ]
+    \dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{A}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t) = \epsilon \dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{A} + \epsilon^{2}[\dot{\check{\mathcal{W}}}_{2}(\vec{\lambda},\vec{\chi},t)\check{A} - \dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{A}\check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) ].
     \label{apendix2Wproperty}
 \end{equation}
 
-Para encontrar la matriz densidad generalizada, se quiere rescatar la parte relevante de la matriz densidad total, es decir, trazar los grados de libertad del reservorio, por ende el proyector que se usará es 
+Para encontrar la matriz densidad generalizada se quiere rescatar la parte relevante de la matriz densidad total, es decir, trazar los grados de libertad del reservorio, por ende el proyector que se usará es 
 
 \begin{equation*}
-    \check{\mathcal{P}} = \sum_{r}|\rho_{R}^{eq} \rangle \rangle \langle \langle rr|
+    \check{\mathcal{P}} = \sum_{r}|\rho_{R}^{eq} \rangle \rangle \langle \langle rr|,
 \end{equation*}
 
-En donde $\otimes_{\alpha} \hat{\tau}_{\alpha} \to  |\hat{\rho}_{R}^{eq} \rangle \rangle$ es el superoperador que representa el equilibrio del reservorio. Al aplicar esto a la matriz densidad total
+En donde $\otimes_{\alpha} \hat{\tau}_{\alpha} \to  |\hat{\rho}_{R}^{eq} \rangle \rangle$ es el vector en el espacio de Liouville que representa el equilibrio del reservorio. Al aplicar esto a la matriz densidad total
 
 \begin{equation*}
-    \check{\mathcal{P}}|\hat{\rho}(\vec{\lambda},\vec{\chi},t) \rangle \rangle = |\hat{\rho}_{s}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle 
+    \check{\mathcal{P}}|\hat{\rho}(\vec{\lambda},\vec{\chi},t) \rangle \rangle = |\hat{\rho}_{S}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle ,
 \end{equation*}
 
-La evolución de la matriz densidad generalizada usando los operadores Nakajima-Zwanzig
+La evolución de la matriz densidad generalizada usando los operadores Nakajima-Zwanzig se vuelve 
 
 \begin{align}
     \check{\mathcal{P}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & =  \check{\mathcal{P}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\hat{\rho}_{tot}(0)\rangle \rangle  \label{apendix2proyectionev1} \\
-    \check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & = \check{\mathcal{Q}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\hat{\rho}_{tot}(0)\rangle \rangle 
+    \check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & = \check{\mathcal{Q}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\hat{\rho}_{tot}(0)\rangle \rangle. 
 \label{apendix2proyectionev}
 \end{align}
 
-Dos indicaciones son importantes para seguir. Primero, debido a que se asume que la condición inicial del reservorio es diagonal, se tendrá que $\check{\mathcal{Q}}|\hat{\rho}_{tot}(0)\rangle\rangle = 0 $. Segundo 
- que $|\hat{\rho}_{tot}(0)\rangle \rangle = \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle$
+Dos indicaciones son importantes para seguir. Primero, debido a que se asume que la condición inicial del reservorio es diagonal se tendrá que $\check{\mathcal{Q}}|\hat{\rho}_{tot}(0)\rangle\rangle = 0 $. Segundo 
+ que $|\hat{\rho}_{tot}(0)\rangle \rangle = \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle$ y
 
 \begin{align*}
     |\hat{\rho}_{totI}(0)\rangle \rangle & = (\check{\mathcal{P}} + \check{\mathcal{Q}} )\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
-        & = \check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle
+        & = \check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle.
 \end{align*}
 
 Al derivar temporalmente las ecuaciones \ref{apendix2proyectionev1} y \ref{apendix2proyectionev} 
@@ -1306,7 +1306,7 @@ Al derivar temporalmente las ecuaciones \ref{apendix2proyectionev1} y \ref{apend
 
 \begin{align*}
     \check{\mathcal{Q}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t) \rangle \rangle & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
-     & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle 
+     & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle, 
 \end{align*}
 
 Estas ecuaciones son exactas. Para utilizar la suposición de acoplamiento débil, se partirá usando la relación \ref{apendix2Wproperty}, así
@@ -1314,58 +1314,58 @@ Estas ecuaciones son exactas. Para utilizar la suposición de acoplamiento débi
 \begin{align*}
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}} & = \epsilon \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}\check{\mathcal{Q}} \\
      & + \epsilon^{2} \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{2}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}\check{\mathcal{Q}} \\
-     & - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}
+     & - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}},
 \end{align*}
 
 El primer y segundo término se hacen cero debido a que $\check{\mathcal{P}}\check{\mathcal{Q}}=0$, por otro lado
 
 \begin{align*}
-    \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \sum_{r,r'}|\hat{\rho}^{eq}_{R} \rangle \rangle \langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle \langle \langle r'r'|
+    \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \sum_{r,r'}|\hat{\rho}^{eq}_{R} \rangle \rangle \langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle \langle \langle r'r'|,
 \end{align*}
 
-En donde el término $\langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle$ será 
+En donde el término $\langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle$ equivale a 
 
-\begin{align*}
-    \langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle & = \text{Tr}_{B}\{\hat{\rho}^{eq}_{R}\hat{V}_{\lambda}(t)\} \\
-                    & - \text{Tr}_{B}\{\hat{V}_{-\lambda}(t)\hat{\rho}^{eq}_{R}\}
-\end{align*}
+\begin{equation}
+    \langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle  = \text{Tr}_{B}\{\hat{\rho}^{eq}_{R}\hat{V}_{\lambda}(t)\} - \text{Tr}_{B}\{\hat{V}_{-\lambda}(t)\hat{\rho}^{eq}_{R}\}.
+    \label{sec3:ecrandom}
+\end{equation}
 
-Debido a que $\hat{\rho}^{eq}_{R}$ conmuta con $\hat{H}_{R}$ tendremos que el estado de equilibrio conmuta con $\hat{A}(\lambda,\chi)$, por lo tanto se anula este término. Y el término restante queda como 
+Debido a que $\hat{\rho}^{eq}_{R}$ conmuta con $\hat{H}_{R}$ tendremos que el estado de equilibrio conmuta con $\hat{A}(\lambda,\chi)$, por lo tanto se anula \ref{sec3:ecrandom}. Y el término restante queda como 
 
 \begin{align*}
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} & = \epsilon \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \\
     & + \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{2}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \\
-    & - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}
+    & - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}.
 \end{align*}
 
-De manera explícita
+De manera explícita esto es
 
 \begin{equation*}
-    \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \epsilon^{2}\check{\mathcal{P}}\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\check{\mathcal{P}} 
+    \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \epsilon^{2}\check{\mathcal{P}}\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\check{\mathcal{P}}, 
 \end{equation*}
 
-Aplicando $\check{\mathcal{P}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle = |\dot{\hat{\rho}}_{Is}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle$ y multiplicando a la izquierda por $\sum_{r}\langle \langle rr|$ para eliminar los grados de libertad del reservorio
+Aplicando $\check{\mathcal{P}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle = |\dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle$ y multiplicando a la izquierda por $\sum_{r}\langle \langle rr|$ para eliminar los grados de libertad del reservorio
 
 \begin{equation*}
-    \dot{\hat{\rho}}_{Is}(\vec{\lambda},\vec{\chi},t) = \epsilon^{2} \sum_{r}\langle \langle rr|\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)
+    \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) = \epsilon^{2} \sum_{r}\langle \langle rr|\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
 \end{equation*}
 
 De aquí se podrán obtener las funciones correlación calculando el producto
 
 \begin{align*}
-    \sum_{r}\langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) = \text{Tr}_{B}\{\check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{R}^{eq}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \}
+    \sum_{r}\langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \text{Tr}_{B}\{\check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{R}^{eq}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \},
 \end{align*}
 
-Por un lado se tendrá
+Desarrollando paso por paso
 
 \begin{equation*}
-    \check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} = -i[\hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} -  \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)]
+    \mathcal{L}'_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} = -i[\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} -  \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)],
 \end{equation*}
 
-De manera explícita
+Y así de manera explícita
 \begin{align*}
-    \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}  = &  -\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} + \hat{V}_{\lambda}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \\
-    & + \hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) - \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t)
+    \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}  = &  -\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} + \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \\
+    & + \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) - \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t).
 \end{align*}
 
 Finalmente, aplicando la traza en el reservorio a esta ecuación se obtiene \ref{ecmaestraVlambda}.
@@ -1378,51 +1378,50 @@ Finalmente, aplicando la traza en el reservorio a esta ecuación se obtiene \ref
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Funciones correlación}
-Para escribir la ecuación maestra generalizada a través de las funciones correlación, se tendrá
-
+Para escribir la ecuación maestra generalizada a través de las funciones correlación, se partirá de la expresión
 \begin{align*}
-& \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \}  =\\
-&  - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{e^{-(i/2)\hat{A}(\lambda,\chi)}\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)e^{(i/2)\hat{A}(\lambda,\chi)}\hat{\rho}^{eq}_{R}\} 
+& \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \}  =\\
+&  - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{e^{-(i/2)\hat{A}(\lambda,\chi)}\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)e^{(i/2)\hat{A}(\lambda,\chi)}\hat{\rho}^{eq}_{R}\},
 \end{align*}    
 
-Suponiendo que las funciones de correlación son homogéneas,tendremos que
+Suponiendo que las funciones de correlación son homogéneas, esto se vuelve
 
 \begin{align*}
-    \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} & = \\
-    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{\hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k}\hat{\tau}_{\alpha} \} \\
-    \text{Tr}_{B}\{ \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t) \} & = \\
-    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'} \text{Tr}_{B}\{ \hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k}\hat{\tau}_{\alpha} \}   
+    \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} & = \\
+    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{\hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k}\hat{\tau}_{\alpha} \} \\
+    \text{Tr}_{B}\{ \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t) \} & = \\
+    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'} \text{Tr}_{B}\{ \hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k}\hat{\tau}_{\alpha} \}.   
 \end{align*}    
 
-Analizaremos el término $\text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \}$ para ello se utilizará la relación de conmutación $[\hat{B}_{\alpha,k},\hat{N}_{\alpha}] = n_{\alpha,k}\hat{B}_{\alpha,k}$, esto conlleva a que
+Analizaremos el término $\text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \}$ para ello se utilizará la relación de conmutación $[\hat{B}_{\alpha,k},\hat{N}_{\alpha}] = n_{\alpha,k}\hat{B}_{\alpha,k}$ que conlleva que
 
 \begin{equation*}
-    e^{C\hat{N}_{\alpha}}\hat{B}_{\alpha,k}e^{-C\hat{N}_{\alpha}} = e^{-Cn_{\alpha,k}}\hat{B}_{\alpha,k} 
+    e^{C\hat{N}_{\alpha}}\hat{B}_{\alpha,k}e^{-C\hat{N}_{\alpha}} = e^{-Cn_{\alpha,k}}\hat{B}_{\alpha,k},
 \end{equation*}
 
-Con $C$ una constante, podremos utilizar esto para obtener
+Con $C$ una constante. Se podrá utilizar esto para obtener
 
 \begin{align*}
-   & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} \\
-   & = \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} \text{Tr}_{B}\{e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)}\hat{\rho}_{R}^{eq}\hat{B}^{\dagger}_{\alpha,k}(t-s) \}
+   & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} \\
+   & = \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} \text{Tr}_{B}\{e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)}\hat{\rho}_{R}^{eq}\hat{B}^{\dagger}_{\alpha,k}(t-s) \}.
 \end{align*}
 
-Por último, analizando el término
+Por último, se puede notar que 
 
 \begin{align*}
-    e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)} & = e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})} \hat{B}_{\alpha,k}(t+\lambda_{\alpha}) 
+    e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)} & = e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})} \hat{B}_{\alpha,k}(t+\lambda_{\alpha}), 
 \end{align*}
 
 Con esto se tiene
 
 \begin{align*}
- & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} = \\
- & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(-s-\lambda_{\alpha})e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
+ & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} = \\
+ & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(-s-\lambda_{\alpha})e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
  \end{align*}
 
  \begin{align*}
-    & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t-s)\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) \} = \\
-    & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(s-\lambda_{\alpha})e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
+    & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) \} = \\
+    & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(s-\lambda_{\alpha})e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}.
     \end{align*}
    
 Reemplazando estos términos en \ref{ecmaestraVlambda} se obtiene la ecuación maestra generalizada.   
@@ -1967,7 +1966,7 @@ Los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se
 
 Con $W$ el ancho de la lorentziana y $\gamma_{0}$, $\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de transición en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$ como aparece en la Figura \ref{img:gammas}
 
-\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.5}{Descripción gráfica de las razones de transición en función de las frecuencias $\omega$.}
+\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.65}{Descripción gráfica de las razones de transición en función de las frecuencias $\omega$.}
 
 Para obtener razones de transición que cumplan estos valores, se puede realizar el sistema de ecuaciones 
 
@@ -2287,43 +2286,43 @@ Y finalmente se recupera la ecuación en formalismo de superoperadores
 \label{appendix5clasic}
 
 \subsection{ Inverso de Drazin }
-El inverso de Drazin es un tipo de inverso generalizado y consiste en la única matriz que cumple que, dado la matriz $\check{\mathcal{L}}_{0}$
+El inverso de Drazin es un tipo de inverso generalizado que consiste en la única matriz que  dado la matriz $\check{\mathcal{L}}_{0}$ cumple que 
 
 \begin{align*}
     \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0} \\
     \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} & = \check{\mathcal{L}}_{0}^{+} \\
-    \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}
+    \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}.
 \end{align*}
 
 Considerando la ecuación \ref{ec5:classicalmodel} se puede probar que 
 
 \begin{equation*}
-    \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} = - \int_{0}^{\infty}d\tau \check{\mathcal{L}}_{0}\exp[ \check{\mathcal{L}}_{0}\tau] \check{Q}= - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau]\check{\mathcal{L}}_{0} \check{Q} = - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau] \check{Q} \check{\mathcal{L}}_{0} = \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0}
+    \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} = - \int_{0}^{\infty}d\tau \check{\mathcal{L}}_{0}\exp[ \check{\mathcal{L}}_{0}\tau] \check{Q}= - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau]\check{\mathcal{L}}_{0} \check{Q} = - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau] \check{Q} \check{\mathcal{L}}_{0} = \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0},
 \end{equation*}
 
 De manera similar se pueden probar las otras 2 ecuaciones.\\
  Finalmente para poder ocupar el inverso de Drazin, este se puede calcular numéricamente mediante descomposición espectral usando los autovalores por la izquierda y derecha dados por 
 
 \begin{equation*}
-    \check{\mathcal{L}}_{0}|x_{j}\rangle \rangle = \lambda_{j} |x_{j}\rangle \rangle \hspace{10mm}  \langle \langle y_{j}|\check{\mathcal{L}}_{0} = \langle \langle y_{j}|\lambda_{j}
+    \check{\mathcal{L}}_{0}|x_{j}\rangle \rangle = \lambda_{j} |x_{j}\rangle \rangle \hspace{10mm}  \langle \langle y_{j}|\check{\mathcal{L}}_{0} = \langle \langle y_{j}|\lambda_{j},
 \end{equation*}
 
-En donde $\langle \langle y_{i}|x_{j}\rangle \rangle = \delta_{ij}$. Si se toma $\lambda_{0}$ como el autovalor cero del operador de Lindblad, se podrá escribir la descomposición espectral como
+En donde $\langle \langle y_{i}|x_{j}\rangle \rangle = \delta_{ij}$. Si se toma $\lambda_{0}$ como el único autovalor cero del operador $\check{\mathcal{L}}_{0}$, se podrá escribir la descomposición espectral como
 
 \begin{equation*}
-    \check{\mathcal{L}}_{0} = \sum_{j\neq 0}\lambda_{j}|x_{j}\rangle \rangle \langle \langle y_{j}|
+    \check{\mathcal{L}}_{0} = \sum_{j\neq 0}\lambda_{j}|x_{j}\rangle \rangle \langle \langle y_{j}|,
 \end{equation*}
 
 Y así poder calcular el inverso de Drazin usando
 
 \begin{equation*}
-    \check{\mathcal{L}}^{+}_{0} = \sum_{j\neq 0}\frac{1}{\lambda_{j}}|x_{j}\rangle \rangle \langle \langle y_{j}|
+    \check{\mathcal{L}}^{+}_{0} = \sum_{j\neq 0}\frac{1}{\lambda_{j}}|x_{j}\rangle \rangle \langle \langle y_{j}|.
 \end{equation*}
 
 \label{appendix5drazin}
 
 \subsection{Expresión para los flujos de información}
-Para poder calcular los flujos de información, primero se debe ser capaces de calcular $\ln \hat{\rho}_{s}$. Se puede partir de la matriz densidad descrita en la ecuación \ref{appendix5rhoconcu} la cuál ya viene diagonal excepto por los bloques
+Para poder calcular los flujos de información, primero se debe ser capaces de calcular $\ln \hat{\rho}_{s}$. Se puede partir de la matriz densidad descrita en la ecuación \ref{appendix5rhoconcu} la cuál ya viene diagonal, excepto por los bloques
 
 \begin{equation*}
     \begin{bmatrix}
@@ -2334,37 +2333,37 @@ Para poder calcular los flujos de información, primero se debe ser capaces de c
     \begin{bmatrix}
         p_{101} & \beta \\
         \beta^{*} & p_{011}
-    \end{bmatrix} 
+    \end{bmatrix}.
 \end{equation*}
 
-En donde los autovalores estarán dados por
+Los autovalores estarán dados por
 
 \begin{equation*}
-    \lambda_{0\pm} = \frac{ p_{100} +p_{010} }{2} \pm \frac{( [p_{100} - p_{010}]^{2} + 4|\alpha|^{2} )^{1/2} }{ 2 }  \hspace{10mm}      \lambda_{1\pm} = \frac{ p_{101} +p_{011} }{2} \pm \frac{( [p_{101} - p_{011}]^{2} + 4|\beta|^{2} )^{1/2} }{ 2 } 
+    \lambda_{0\pm} = \frac{ p_{100} +p_{010} }{2} \pm \frac{( [p_{100} - p_{010}]^{2} + 4|\alpha|^{2} )^{1/2} }{ 2 }  \hspace{10mm}      \lambda_{1\pm} = \frac{ p_{101} +p_{011} }{2} \pm \frac{( [p_{101} - p_{011}]^{2} + 4|\beta|^{2} )^{1/2} }{ 2 }, 
 \end{equation*}
 
-Considerando $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$, los autovectores que diagonalizan los bloques serán
+Si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$ podremos escribir los autovectores como
 
 \begin{align*}
     v_{0+} &  = [0,0,\cos(\theta_{0}/2)e^{i\phi_{0}/2},\sen(\theta_{0}/2)e^{-i\phi_{0}/2},0,0,0,0]^{T} \\
     v_{0-} &  = [0,0,-\sen(\theta_{0}/2)e^{i\phi_{0}/2},\cos(\theta_{0}/2)e^{-i\phi_{0}/2},0,0,0,0]^{T} \\
     v_{1+} &  = [0,0,0,0,\cos(\theta_{1}/2)e^{i\phi_{1}/2},\sen(\theta_{1}/2)e^{-i\phi_{1}/2},0,0]^{T} \\
-    v_{1-} &  = [0,0,0,0,-\sen(\theta_{1}/2)e^{i\phi_{1}/2},\cos(\theta_{1}/2)e^{-i\phi_{1}/2},0,0]^{T}                   
+    v_{1-} &  = [0,0,0,0,-\sen(\theta_{1}/2)e^{i\phi_{1}/2},\cos(\theta_{1}/2)e^{-i\phi_{1}/2},0,0]^{T},                   
 \end{align*}
 
-Con $\cos(\theta_{0}) = |\alpha|/\sqrt{\Delta^{2}_{0} + |\alpha|^{2}}$ y $\cos(\theta_{1}) = |\beta|/\sqrt{\Delta^{2}_{1} + |\beta|^{2}}$ y
+Con $\cos(\theta_{0}) = |\alpha|/\sqrt{\Delta^{2}_{0} + |\alpha|^{2}}$, $\cos(\theta_{1}) = |\beta|/\sqrt{\Delta^{2}_{1} + |\beta|^{2}}$ y
 
 \begin{equation*}
-    \Delta_{i} = \frac{(p_{10i} - p_{01i})}{2}
+    \Delta_{i} = \frac{(p_{10i} - p_{01i})}{2},
 \end{equation*}
 
 Con esto se podrá obtener el logaritmo natural de la matriz mediante
 
 \begin{equation*}
-    \ln \hat{\rho}_{S} = \hat{V}\ln \hat{\rho}_{D} \hat{V}^{-1}
+    \ln \hat{\rho}_{S} = \hat{V}\ln \hat{\rho}_{D} \hat{V}^{-1}.
 \end{equation*}
     
-En donde $\ln \hat{\rho}_{D}$ es la matriz diagonal 
+$\ln \hat{\rho}_{D}$ es la matriz diagonal 
 
 \begin{equation*}
     \ln \hat{\rho}_{D} = 
@@ -2377,10 +2376,10 @@ En donde $\ln \hat{\rho}_{D}$ es la matriz diagonal
         0 & 0 & 0 & 0 & 0 & \ln \lambda_{1+} & 0 & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & \ln \lambda_{1-} & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln p_{111} 
-        \end{bmatrix}
+        \end{bmatrix},
 \end{equation*}
 
-La matriz $\hat{V} = [e_{1},v_{0+},v_{0-},e_{4},e_{5},v_{1+},v_{1-},e_{8}]$ y $e_{i}$ corresponden a los vectores de la base canónica, es decir 
+Y 
 
 \begin{equation*}
     \hat{V} = 
@@ -2393,7 +2392,7 @@ La matriz $\hat{V} = [e_{1},v_{0+},v_{0-},e_{4},e_{5},v_{1+},v_{1-},e_{8}]$ y $e
         0 & 0 & 0 & 0 & 0 &  \cos(\theta_{1}/2)e^{i\phi_{1}/2} & -\sen(\theta_{1}/2)e^{i\phi_{1}/2} & 0 \\
         0 & 0 & 0 & 0 & 0 & \sen(\theta_{1}/2)e^{-i\phi_{1}/2} & \cos(\theta_{1}/2)e^{-i\phi_{1}/2} & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 
-        \end{bmatrix}
+        \end{bmatrix}.
 \end{equation*}
 
 Finalmente se obtiene
@@ -2409,7 +2408,7 @@ Finalmente se obtiene
         0 & 0 & 0 & 0 & 0 & a_{1} & c_{1} & 0 \\
         0 & 0 & 0 & 0 & 0 & c^{*}_{1} & b_{1} & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln p_{111} 
-        \end{bmatrix}
+        \end{bmatrix},
 \end{equation*}
 
 Con las cantidades 
@@ -2417,10 +2416,10 @@ Con las cantidades
 \begin{align*}
     a_{i} & = \cos^{2}(\theta_{i}/2) \ln \lambda_{i+} + \sen^{2}(\theta_{i}/2) \ln \lambda_{i-} \\
     b_{i} & = \sen^{2}(\theta_{i}/2) \ln \lambda_{i+} + \cos^{2}(\theta_{i}/2) \ln \lambda_{i-}  \\
-    c_{i} & = \frac{\sin(\theta_{i})}{2}e^{i\phi_{i}} (\ln \lambda_{i+} - \ln \lambda_{i-})     
+    c_{i} & = \frac{\sin(\theta_{i})}{2}e^{i\phi_{i}} (\ln \lambda_{i+} - \ln \lambda_{i-}),    
 \end{align*}
 
-Así el logaritmo de la matriz densidad
+Así el logaritmo de la matriz densidad es 
 
 \begin{align*}
     \ln \hat{\rho}_{S} & = \ln p_{111}|111\rangle \langle 111| + \ln p_{110}|110\rangle \langle 110| + \ln p_{001}|001\rangle \langle 001| \\ 
@@ -2450,13 +2449,13 @@ Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathca
     \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{011}|010\rangle \langle 010| - p_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  ),   
 \end{align*}
 
-Con estas cantidades se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ dado por
+Con estas cantidades se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ lo que permite obtener
 
 \begin{align*}
     \dot{I}_{L} &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}p_{000} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - a_{0}p_{100} ] )  \\ 
       & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[a_{1}p_{001} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -a_{1}p_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
       & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -b_{0}p_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}p_{110} - p_{110}\ln p_{110} ] ) \\  
-      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- b_{1}p_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}p_{111} - p_{111}\ln p_{111}]  ), 
+      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- b_{1}p_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}p_{111} - p_{111}\ln p_{111}]  ) 
 \end{align*}
 
 \begin{align*}
@@ -2473,7 +2472,7 @@ Si bien el cálculo de los flujos de información se puede hacer númerico, escr
       & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[p_{001}\ln p_{101} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -p_{101}\ln p_{101} ]   ) \\  
       & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -p_{010}\ln p_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[p_{110}\ln p_{010} - p_{110}\ln p_{110} ] ) \\  
       & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- p_{011}\ln p_{011}]) \\   
-      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[p_{111}\ln p_{011} - p_{111}\ln p_{111}]),   
+      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[p_{111}\ln p_{011} - p_{111}\ln p_{111}])   
 \end{align*}
 
 \begin{align*}
