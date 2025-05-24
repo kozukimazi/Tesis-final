@@ -1365,7 +1365,7 @@ Desarrollando paso por paso
 Y así de manera explícita
 \begin{align*}
     \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}  = &  -\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} + \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \\
-    & + \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) - \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t).
+    & + \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t).
 \end{align*}
 
 Finalmente, aplicando la traza en el reservorio a esta ecuación se obtiene \ref{ecmaestraVlambda}.
@@ -1440,15 +1440,15 @@ Desarrollando la ecuación \ref{ecmaestrafinal} podremos escribir
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  \right. \\
     \left. +  e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)\left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\right. \\
     \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s-\lambda_{\alpha}) ) \right.\\
-    \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right]    
+    \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right],   
 \end{multline*}
 
 Tomando la condición que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \\
-     - \sum_{\alpha,k;q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  +  e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s) \hat{\rho}_{Is}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t) \hat{S}_{\alpha,k;q}(t) \right. \\
-    \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s-\lambda_{\alpha}) ) \hat{S}_{\alpha,k;q}(t) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t)    \right]    
+     - \sum_{\alpha,k;q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  +  e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t) \hat{S}_{\alpha,k;q}(t) \right. \\
+    \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s-\lambda_{\alpha}) ) \hat{S}_{\alpha,k;q}(t) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t)    \right].  
 \end{multline*}
 
 Usando la identidad 
@@ -1456,14 +1456,14 @@ Usando la identidad
 \begin{align*}
     \int_{0}^{\infty}ds e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) & = \int_{-\infty}^{\infty}ds e^{i\omega_{q}s}(1+\text{sgn}(s))C^{\alpha}_{k,k}(s)/2 \\
     & = \int_{-\infty}^{\infty}ds e^{i\omega_{q}s}C^{\alpha}_{k,k}(s)/2 + i \left(-\frac{i}{2} \right) \int_{-\infty}^{\infty}ds e^{i\omega_{q}s} \text{sgn}(s)C^{\alpha}_{k,k}(s) \\
-    & = \frac{1}{2}\Gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q})
+    & = \frac{1}{2}\Gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q}),
 \end{align*}
 
 Y usando que $\int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) = e^{i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s-\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) $, nos queda finalmente
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}\Delta^{\alpha}_{k,k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
-    + \sum_{\alpha,k;q} \Gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \}     \right]
+    + \sum_{\alpha,k;q} \Gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right].
 \end{multline*}
 
 Que es la ecuación que se quiere demostrar.
@@ -1477,22 +1477,22 @@ Que es la ecuación que se quiere demostrar.
 
 
 \subsection{Condición KMS y funciones correlación espectral}
-Definiremos una función correlación auxiliar
+Definiremos una función correlación auxiliar de la forma
 
 \begin{align*}
     C^{\alpha N}_{kk}(s) & =  \langle \hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k} \rangle_{N} \\
    &  = \text{Tr}\{e^{is(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{B}^{\dagger}_{\alpha,k}e^{-is(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{B}_{\alpha,k}\hat{\tau}_{\alpha}  \} \\
    & = \frac{1}{Z}\text{Tr}\{\hat{B}_{\alpha,k} e^{-\beta_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})} e^{is(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{B}^{\dagger}_{\alpha,k}e^{-is(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\} \\
    & = \text{Tr}\{\hat{B}_{\alpha,k}e^{i(s+i\beta_{\alpha})(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{B}^{\dagger}_{\alpha,k}e^{-i(s+i\beta_{\alpha})(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{\tau}_{\alpha} \} \\
-   & = \langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha})\rangle_{N} 
+   & = \langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha})\rangle_{N},
 \end{align*}
 
-Se debe relacionar esta función correlación auxiliar con las funciones correlación, es decir
+Además, se puede notar que
 
 \begin{align*}
     C^{\alpha N}_{kk}(s) & = \text{Tr}\{e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}(s)e^{is\mu_{\alpha}\hat{N}_{\alpha}} \hat{B}_{\alpha,k}e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{\tau}_{\alpha}   \} \\
  & = \text{Tr}\{\hat{B}^{\dagger}_{\alpha,k}(s)e^{is\mu_{\alpha}\hat{N}_{\alpha}} \hat{B}_{\alpha,k}e^{-is\mu_{\alpha}\hat{N}_{\alpha}}\hat{\tau}_{\alpha}   \}\\
- & = e^{-i\mu_{\alpha}n_{\alpha,k}s} C^{\alpha}_{kk}(s)
+ & = e^{-i\mu_{\alpha}n_{\alpha,k}s} C^{\alpha}_{kk}(s).
 \end{align*}
 
 Ahora podremos estudiar como se comportan las funciones correlación espectral
@@ -1502,7 +1502,7 @@ Ahora podremos estudiar como se comportan las funciones correlación espectral
     & = \int_{-\infty}^{\infty}ds e^{i\mu_{\alpha}n_{\alpha,k}s} e^{i\omega s}\langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle_{N} \\
     & = \int_{-\infty}^{\infty}ds e^{-i(i\beta \mu_{\alpha}n_{\alpha,k})} e^{i\omega s} \langle \hat{B}_{\alpha,k}\hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle \\
     & = e^{\beta_{\alpha}\mu_{\alpha}n_{\alpha,k}}e^{\beta \omega} \int_{-\infty}^{\infty} ds e^{i\omega(s+i\beta_{\alpha})} \langle \hat{B}_{\alpha,k}\hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle \\
-    & = e^{\beta_{\alpha}(\omega - \mu_{\alpha}n_{\alpha,k})} \Gamma^{\alpha}_{k,k}(-\omega)
+    & = e^{\beta_{\alpha}(\omega - \mu_{\alpha}n_{\alpha,k})} \Gamma^{\alpha}_{k,k}(-\omega).
 \end{align*}
 
 
@@ -1521,27 +1521,27 @@ Para obtener la ley cero calcularemos $\mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\bet
 
 \begin{align*}
     [\hat{S}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = (\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}_{\alpha,k;q}  \\
-    [\hat{S}^{\dagger}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = -(\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}^{\dagger}_{\alpha,k;q}
+    [\hat{S}^{\dagger}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = -(\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}^{\dagger}_{\alpha,k;q},
 \end{align*}
 
  Por ende se tendrá
 
  \begin{align*}
     e^{\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\hat{S}_{\alpha,k;q} e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = \hat{S}_{\alpha,k;q}e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})} \\
-    e^{\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\hat{S}^{\dagger}_{\alpha,k;q} e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = \hat{S}^{\dagger}_{\alpha,k;q}e^{\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}
+    e^{\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\hat{S}^{\dagger}_{\alpha,k;q} e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = \hat{S}^{\dagger}_{\alpha,k;q}e^{\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}.
  \end{align*}
 
 Podremos aplicar esto en el disipador
 
 \begin{align*}
     \mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & =  e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q} e^{-\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} \\
-    \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} e^{\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q} 
+    \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} e^{\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q}, 
 \end{align*}
 
 Finalmente al sumar los dos disipadores en el superoperador $\mathcal{L}_{\alpha}$ se demuestra que
 
 \begin{equation*}
-    \mathcal{L}_{\alpha}e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \propto  \mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0
+    \mathcal{L}_{\alpha}e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \propto  \mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0.
 \end{equation*}
 
 Con lo que se prueba la ley cero.
@@ -1558,24 +1558,24 @@ Para desarrollar el cálculo de la segunda Ley, se partirá de
 \begin{align*}
     - \frac{d}{dt}\text{Tr}\{ \hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} & =  -\text{Tr}\Big\{ \frac{d}{dt}\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \Big\} - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \}\\
   & = - i \text{Tr}\{[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)]\ln \hat{\rho}_{S}(t)  \} - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \}  \\
-  & = -\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \}
+  & = -\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \},
 \end{align*}
 
 Por otro lado
 
 \begin{align*}
     J_{\alpha} & = \text{Tr}\{ (\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})\mathcal{L}_{\alpha}(\hat{\rho}_{S}(t)) \} \\
-    & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \} - -\frac{\text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \} }{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \} \\
-    & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \}
+    & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \} + \frac{\text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \} }{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \} \\
+    & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \},
 \end{align*}
 
 Con lo que finalmente, redefinimos la segunda ley de la termodinámica como
 
 \begin{equation*}
-    \dot{\sigma} = - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) [\ln \hat{\rho}_{S}(t) -\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha}) ] \} \geq 0
+    \dot{\sigma} = - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) [\ln \hat{\rho}_{S}(t) -\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha}) ] \} \geq 0.
 \end{equation*}
 
-Y se obtiene que la razón de producción de entropía es mayor igual a cero.
+Así se obtiene que la razón de producción de entropía es mayor igual a cero.
 
 \label{apendix:thermolaws}
 	% Imagen, se numerará automáticamente con la letra del anexo según
@@ -1588,43 +1588,43 @@ Y se obtiene que la razón de producción de entropía es mayor igual a cero.
     Partiendo de la definición de la entropía conjunta
 
     \begin{equation*}
-        S^{XY} = - \sum_{x,y}p(x,y) \ln p(x,y)
+        S^{XY} = - \sum_{x,y}p(x,y) \ln p(x,y),
     \end{equation*}
 
-    Al derivar y utilizar $J_{x,x'}^{y,y'} = - J_{x',x}^{y',y}$
+    Al derivar y utilizar $J_{x,x'}^{y,y'} = - J_{x',x}^{y',y}$ se obtiene
 
     \begin{align*}
         \partial_{t}S^{XY} & = - \sum_{x,y} \dot{p}(x,y) \ln p(x,y) - \sum_{x,y} \dot{p}(x,y) \\
                            & = - \sum_{x,x';y,y'} J_{x,x'}^{y,y'} \ln p(x,y)  \\
                            & = \sum_{x \geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)} \\
                            & = \sum_{x \geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{W_{x,x'}^{y,y'} p(x',y')}{W_{x',x}^{y',y} p(x,y)} +  \sum_{x \geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{W_{x',x}^{y',y} }{W_{x,x'}^{y,y'} } \\
-                           & = \dot{\sigma} - \dot{S}_{r}
+                           & = \dot{\sigma} - \dot{S}_{r}.
     \end{align*}
 
 Para notar que la producción de entropía es mayor a cero, notemos que si $J_{x,x'}^{y,y'} > 0$, entonces $W_{x,x'}^{y,y'}p(x',y') > W_{x',x}^{y',y}p(x,y) $  y por ende
 
 \begin{equation*}
-    J_{x,x'}^{y,y'} \ln \frac{ W_{x,x'}^{y,y'}p(x',y') }{ W_{x',x}^{y',y}p(x,y) } > 0
+    J_{x,x'}^{y,y'} \ln \frac{ W_{x,x'}^{y,y'}p(x',y') }{ W_{x',x}^{y',y}p(x,y) } > 0,
 \end{equation*}
 
 Sucede de manera similar si $J_{x,x'}^{y,y'}<0$.\\
  Para la derivada temporal de la información mutua 
 
 \begin{align*}
-    \partial_{t} I_{xy} = \sum_{x,y}\dot{p}(x,y) \ln \frac{p(x,y) }{ p(x)p(y) } + \sum_{x,y}p(x)p(y) \frac{\partial}{\partial t} \left( \frac{p(x,y)}{p(x)p(y)} \right)
+    \partial_{t} I_{xy} = \sum_{x,y}\dot{p}(x,y) \ln \frac{p(x,y) }{ p(x)p(y) } + \sum_{x,y}p(x)p(y) \frac{\partial}{\partial t} \left( \frac{p(x,y)}{p(x)p(y)} \right),
  \end{align*}
 
  Calculando la derivada
 
 \begin{align*}
     \frac{\partial }{\partial t} \left( \frac{p(x,y)}{p(x)p(y)} \right) & = \frac{ \dot{p}(x,y)p(x)p(y) - (p(x)\dot{p}(y) + p(y)\dot{p}(x))p(x,y)   }{ (p(x)p(y))^{2} } \\
-    & = \frac{\dot{p}(x,y)}{p(x)p(y) } - \frac{\dot{p}(y)p(x,y)  }{ p(x)p(y)^{2} } - \frac{\dot{p}(x)p(x,y)  }{ p(x)^{2}p(y) }  
+    & = \frac{\dot{p}(x,y)}{p(x)p(y) } - \frac{\dot{p}(y)p(x,y)  }{ p(x)p(y)^{2} } - \frac{\dot{p}(x)p(x,y)  }{ p(x)^{2}p(y) },  
 \end{align*}
 
-Con esto tendremos que
+Tendremos que
 
 \begin{equation*}
-    \partial_{t}I_{xy} = \sum_{x,y}\dot{p}(x,y) \ln \frac{p(x,y)}{ p(x)p(y) } + \sum_{x,y} \dot{p}(x,y) - \sum_{x,y} \dot{p}(y) \frac{p(x,y)}{p(y)} - \sum_{x,y} \dot{p}(x) \frac{p(x,y)}{p(x)} 
+    \partial_{t}I_{xy} = \sum_{x,y}\dot{p}(x,y) \ln \frac{p(x,y)}{ p(x)p(y) } + \sum_{x,y} \dot{p}(x,y) - \sum_{x,y} \dot{p}(y) \frac{p(x,y)}{p(y)} - \sum_{x,y} \dot{p}(x) \frac{p(x,y)}{p(x)}. 
 \end{equation*}
 
 Utilizando de las probabilidades conjuntas $\sum_{y}p(x,y) = p(x)$, $\sum_{x}p(x,y)  = p(y)$ y la conservación de la probabilidad
@@ -1634,14 +1634,14 @@ Utilizando de las probabilidades conjuntas $\sum_{y}p(x,y) = p(x)$, $\sum_{x}p(x
     & = \sum_{x,x';y,y'}J_{x,x'}^{y,y'} \ln \frac{p(x,y)}{ p(x)p(y) } \\
     & = \sum_{x,x';y}J_{x,x'}^{y} \ln \frac{p(x,y)}{p(x)p(y)} + \sum_{x;y,y'}J_{x}^{y,y'} \ln \frac{p(x,y)}{p(x)p(y)} \\
     & = \sum_{x\geq x';y}J_{x,x'}^{y} \left[ \ln \frac{p(x,y)}{p(x)p(y)} - \ln \frac{p(x',y)}{p(x')p(y)}  \right] \\
-    & + \sum_{x;y\geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(x,y)}{p(x)p(y)} - \ln \frac{p(x,y')}{p(x)p(y')} \right]
+    & + \sum_{x;y\geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(x,y)}{p(x)p(y)} - \ln \frac{p(x,y')}{p(x)p(y')} \right],
 \end{align*}
 
-Del teorema de bayes $p(x,y) = p(x)p(y|x)$, $p(x,y) = p(y)p(x|y)$ se tendrá
+Y del teorema de bayes $p(x,y) = p(x)p(y|x)$, $p(x,y) = p(y)p(x|y)$ se tendrá
 
 \begin{align*}
     \partial_{t}I_{xy} & = \sum_{x \geq x';y} J_{x,x'}^{y} \ln \frac{p(y|x) }{p(y|x')} + \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y) }{p(x|y')} \\
-                       & = \dot{I}^{X} + \dot{I}^{Y} 
+                       & = \dot{I}^{X} + \dot{I}^{Y}. 
 \end{align*}
 
     \label{apendix4:secondlaw}
@@ -1943,6 +1943,10 @@ Por lo tanto el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(
 \end{align*}
 
 \label{apendix5frecuencygroup}
+
+\subsection{Límitaciones de la aproximación semilocal}
+
+\label{apendix5límites}
 
 \subsection{Aspecto Markoviano de las funciones correlación }
 Para que el sistema descrito en la sección \ref{sec5:modelo} tenga un comportamiento cercano a un Demonio de Maxwell autónomo, se necesita que las razones de transición $\gamma_{i}(\omega)$ modifiquen su respuesta dependiendo de si el punto cuántico del nivel $D$ este ocupado o desocupado. No todo comportamiento de las razones de transición aseguran que el comportamiento del sistema sea Markoviano, esto se puede determinar calculando la función correlación del reservorio y analizando el orden del tiempo de correlación $\tau_{B}$ que presenta este mismo. Para poder lograr hacer esto se deben calcular las funciónes correlación que para el caso de un ambiente fermiónico son de la forma
