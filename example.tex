@@ -43,47 +43,47 @@ En este capítulo se describen los conceptos básicos para poder describir la ev
 Un sistema cuántico cerrado puede ser descrito por la matriz densidad $\hat{\rho}$, la evolución de la matriz densidad dependerá del Hamiltoniano del sistema $\hat{H}(t)$, la cuál en el cuadro de Schrodinger consiste en la ecuación de Liouville-Von Neumman($\hbar = 1$)\cite{breuer2002theory}:
 
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}(t) = -i[\hat{H}(t),\hat{\rho}(t)]
+    \frac{d}{dt}\hat{\rho}(t) = -i[\hat{H}(t),\hat{\rho}(t)].
 \end{equation*}
 
 Y la solución descrita por la evolución unitaria 
 
 \begin{equation*}
-    \hat{U}(t,t_{0}) = \hat{T}_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t}ds \hat{H}(s) \right] \implies \hat{\rho}(t) = \hat{U}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}(t,t_{0})
+    \hat{U}(t,t_{0}) = \hat{T}_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t}ds \hat{H}(s) \right] \implies \hat{\rho}(t) = \hat{U}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}(t,t_{0}),
 \end{equation*}
 
-En donde $\hat{T}_{\leftarrow}$ consiste en el operador ordenación temporal cronológico que ordena los productos de operadores dependientes del tiempo, de tal manera que el tiempo en el que son evaluados los operadores va creciendo de derecha a izquierda.
+en donde $\hat{T}_{\leftarrow}$ consiste en el operador ordenación temporal cronológico que ordena los productos de operadores dependientes del tiempo, de tal manera que el tiempo en el que son evaluados los operadores va creciendo de derecha a izquierda.
 
 \subsection{Cuadro de interacción}
 Supongamos que el Hamiltoniano del sistema se puede separar en dos partes
 
 \begin{equation*}
-    \hat{H}(t) = \hat{H}_{0} + \hat{H}_{I}(t)
+    \hat{H}(t) = \hat{H}_{0} + \hat{H}_{I}(t),
 \end{equation*}
 
-En teoría esto se puede hacer de varias formas, pero por lo general, si tenemos el caso de dos subsistemas, $\hat{H}_{0}$ contiene los Hamiltonianos de cada uno de ellos cuando no hay interacción, mientras que $\hat{H}_{I}$ representa la interacción entre ellos. Si introducimos los operadores unitarios
+en teoría esto se puede hacer de varias formas, pero por lo general, si tenemos el caso de dos subsistemas, $\hat{H}_{0}$ contiene los Hamiltonianos de cada uno de ellos cuando no hay interacción, mientras que $\hat{H}_{I}$ representa la interacción entre ellos. Si introducimos los operadores unitarios
 
 \begin{equation*}
-    \hat{U}_{0}(t,t_{0}) \equiv \exp[-i\hat{H}_{0}(t-t_{0}) ]  \hspace{15mm} \hat{U}_{I}(t,t_0) \equiv \hat{U}^{\dagger}_{0}(t,t_{0})\hat{U}(t,t_{0})
+    \hat{U}_{0}(t,t_{0}) \equiv \exp[-i\hat{H}_{0}(t-t_{0}) ]  \hspace{15mm} \hat{U}_{I}(t,t_0) \equiv \hat{U}^{\dagger}_{0}(t,t_{0})\hat{U}(t,t_{0}),
 \end{equation*}
 
-Se puede describir la matriz densidad en el cuadro de interacción
+se puede describir la matriz densidad en el cuadro de interacción
 
 \begin{equation*}
-    \hat{\rho}_{I}(t) \equiv \hat{U}_{I}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}_{I}(t,t_{0})
+    \hat{\rho}_{I}(t) \equiv \hat{U}_{I}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}_{I}(t,t_{0}).
 \end{equation*}
 
-Y la evolución en este cuadro de interacción
+Y la evolución en este cuadro de interacción es 
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\tilde{H}_{I}(t), \hat{\rho}_{I}(t)]
+    \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\tilde{H}_{I}(t), \hat{\rho}_{I}(t)],
     \label{sec11:interactionp}
 \end{equation}
 
-Con 
+con 
 
 \begin{equation*}
-    \tilde{H}_{I}(t) = \hat{U}^{\dagger}_{0}(t,t_{0})\hat{H}_{I}(t)\hat{U}_{0}(t,t_{0})
+    \tilde{H}_{I}(t) = \hat{U}^{\dagger}_{0}(t,t_{0})\hat{H}_{I}(t)\hat{U}_{0}(t,t_{0}).
 \end{equation*}
 
 \label{sec:closedQM}
@@ -97,113 +97,113 @@ Con
 Un sistema abierto consiste en un sistema cuántico $S$ denominado el sistema reducido, el cuál está acoplado a un sistema $B$ denominado el ambiente. Estos representan  subsistemas del sistema total $S+B$. Sea $\mathcal{H}_{s}$ el espacio de Hilbert del sistema y $\mathcal{H}_{B}$ el espacio de Hilbert del ambiente, el espacio de Hilbert del sistema total $S+B$ es  $\mathcal{H} = \mathcal{H}_{s} \otimes \mathcal{H}_{B}$, el Hamiltoniano total se constituye por el Hamiltoniano del sistema $\hat{H}_{S}$, el Hamiltoniano $\hat{H}_{B}$ y la interacción $\hat{H}_{I}(t)$
 
 \begin{equation*}
-    \hat{H}(t) = \hat{H}_{S} \otimes \mathbf{I}_{B} + \mathbf{I}_{s} \otimes \hat{H}_{B} + \hat{H}_{I}(t)
+    \hat{H}(t) = \hat{H}_{S} \otimes \mathbf{I}_{B} + \mathbf{I}_{s} \otimes \hat{H}_{B} + \hat{H}_{I}(t).
 \end{equation*}
 
 Junto a esto,  los observables que se estudian en el sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$ y su valor de expectación puede ser calculado mediante la ecuación
 
 \begin{equation*}
-    \langle A \rangle = \text{Tr}_{S}\{A \hat{\rho}_{S} \}
+    \langle A \rangle = \text{Tr}_{S}\{A \hat{\rho}_{S} \},
 \end{equation*}
 
-Donde 
+donde 
 
 \begin{equation*}
-    \hat{\rho}_{S} = \text{Tr}_{B}\{ \hat{\rho} \}
+    \hat{\rho}_{S} = \text{Tr}_{B}\{ \hat{\rho} \},
 \end{equation*}
 
-Es la matriz densidad del sistema reducido. La expresión $\text{Tr}_{S}$ hace referencia a la traza con respecto al espacio de Hilbert del sistema, mientras que $\text{Tr}_{B}$  
+es la matriz densidad del sistema reducido. La expresión $\text{Tr}_{S}$ hace referencia a la traza con respecto al espacio de Hilbert del sistema, mientras que $\text{Tr}_{B}$  
 es la traza con respecto al espacio de Hilbert del ambiente. El objeto de estudio principalmente es $\rho_{S}$ y la ecuación de Lindblad será utilizada para describir su evolución.
 
 \subsection{Ecuación maestra}
 Partiendo de un sistema $S$ acoplado débilmente a un reservorio $B$, en donde el Hamiltoniano total es descrito por 
 
 \begin{equation*}
-    \hat{H} = \hat{H}_{S} + \hat{H}_{B} + \hat{H}_{I}
+    \hat{H} = \hat{H}_{S} + \hat{H}_{B} + \hat{H}_{I},
 \end{equation*}
 
-La evolución en el cuadro de interacción del sistema total será
+la evolución en el cuadro de interacción del sistema total será
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\hat{H}_{I}(t), \hat{\rho}_{I}(t)]
+    \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\hat{H}_{I}(t), \hat{\rho}_{I}(t)],
     \label{eqsec2:linbladpic}
 \end{equation}
 
-Con solución de forma integral
+o en su forma integral
 
 \begin{equation*}
-    \hat{\rho}_{I}(t) = \hat{\rho}(0) - i \int_{0}^{t} ds[\hat{H}_{I}(s), \hat{\rho}_{I}(s)]
+    \hat{\rho}_{I}(t) = \hat{\rho}(0) - i \int_{0}^{t} ds[\hat{H}_{I}(s), \hat{\rho}_{I}(s)].
 \end{equation*}
 
 Reinsertando la forma integral en la ecuación \ref{eqsec2:linbladpic} y trazando los grados de libertad del reservorio, nos queda
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}.
 \end{equation}
 
 Ahora se asumirán dos cosas, primero que $\text{Tr}_{B}\{[\hat{H}_{I}(t),\rho(0)] \} = 0$. Segundo, debido a que todavía la ecuación depende de $\hat{\rho}(t)$ correspondiente al sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir
 
 \begin{equation*}
-    \hat{\rho}(t) = \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B}
+    \hat{\rho}(t) = \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B},
 \end{equation*}
 
-Con lo cuál la ecuación \ref{eqsec2:linbladpic} se vuelve
+con lo cuál la ecuación \ref{eqsec2:linbladpic} se vuelve
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}.
 \end{equation} 
 
 Esta ecuación es lo que se denomina no Markoviana, ya que requiere conocer todo el pasado de $\rho_{IS}(s)$, para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\hat{\rho}_{IS}(t)$ dependa sólo del estado en que se encuentra en el instante de tiempo, es decir
 
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\},
 \end{equation*} 
 
 Esta ecuación es denominada la ecuación de Redfield. Se puede hacer el cambio de variable $s= x = t-s$ con Jacobiano $|J| = -1$ y límites $s=0 \implies x = t$ y $s=t \implies x = 0$, el integral queda
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
     \label{eq3sec2:markov}
 \end{equation} 
 
-Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecerán las funciones correlación del baño que decaen en el tiempo por el denominado tiempo de correlación $\tau_{B}$, en el cuál las funciones correlación del baño se vuelven cero. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, ya que él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integral debido a las funciones correlación y finalmente quedará la evolución
+Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecerán las funciones correlación del baño que decaen en el tiempo por el denominado tiempo de correlación $\tau_{B}$ en el cuál las funciones correlación del baño se vuelven cero. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, ya que él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integral debido a las funciones correlación. Y finalmente quedará la evolución
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{\infty}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{\infty}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
     \label{eq3sec2:markov1}
 \end{equation} 
 
 La interacción en el cuadro de Schrodinger $\hat{H}_{I}$ será de la forma general
 
 \begin{equation*}
-    \hat{H}_{I} = \sum_{\alpha}A_{\alpha} \otimes B_{\alpha}
+    \hat{H}_{I} = \sum_{\alpha}A_{\alpha} \otimes B_{\alpha},
 \end{equation*}
 
-En donde los operadores $A_{\alpha} = A^{\dagger}_{\alpha}$ actuan en el espacio de Hilbert del sistema, mientras que $B_{\alpha}=B^{\dagger}_{\alpha}$ actua en el espacio de Hilbert del reservorio. Es conveniente escribir la interacción en función de los autoestados de $\hat{H}_{S}$. Para ello, si tenemos los autovalores $\epsilon$ y sus respectivos operadores de proyección $\Pi(\epsilon) = |\epsilon\rangle \langle \epsilon|$, se podrán definir los operadores
+en donde los operadores $A_{\alpha} = A^{\dagger}_{\alpha}$ actuan en el espacio de Hilbert del sistema, mientras que $B_{\alpha}=B^{\dagger}_{\alpha}$ actua en el espacio de Hilbert del reservorio. Es conveniente escribir la interacción en función de los autoestados de $\hat{H}_{S}$. Para ello, si tenemos los autovalores $\epsilon$ y sus respectivos operadores de proyección $\Pi(\epsilon) = |\epsilon\rangle \langle \epsilon|$, se podrán definir los operadores
 
 \begin{equation*}
-    A_{\alpha}(\omega) \equiv \sum_{\epsilon' - \epsilon}\Pi(\epsilon)A_{\alpha}\Pi(\epsilon') 
+    A_{\alpha}(\omega) \equiv \sum_{\epsilon' - \epsilon}\Pi(\epsilon)A_{\alpha}\Pi(\epsilon'), 
 \end{equation*}
 
-En donde a estos operadores se le denominan operadores globales, ya que utilizan los autoestados del sistema. Debido a esta definición, se cumplen las relaciones
+estos operadores se denominan operadores globales, ya que utilizan los autoestados del sistema. Debido a esta definición, se cumplen las relaciones
 
 \begin{align*}
     [\hat{H}_{S},A_{\alpha}(\omega)] & = - \omega A_{\alpha}(\omega) \\
-    [\hat{H}_{S},A^{\dagger}_{\alpha}(\omega)] & = \omega A^{\dagger}_{\alpha}(\omega)
+    [\hat{H}_{S},A^{\dagger}_{\alpha}(\omega)] & = \omega A^{\dagger}_{\alpha}(\omega),
 \end{align*}
 
-Debido a que posteriormente se deberá pasar al cuadro de interacción, se debe calcular $U^{\dagger}_{s}(t)\hat{H}_{I}U_{s}(t)$ para ello, se utilizará la relación de Baker Campbell
+debido a que posteriormente se deberá pasar al cuadro de interacción, se debe calcular $U^{\dagger}_{s}(t)\hat{H}_{I}U_{s}(t)$ para ello, se utilizará la relación de Baker Campbell
 
 \begin{equation}
-    e^{A}Be^{-A} = B  + [A,B] + \frac{1}{2}[A,[A,B]] +..
+    e^{A}Be^{-A} = B  + [A,B] + \frac{1}{2}[A,[A,B]] +..,
     \label{sec2lind:baker}
 \end{equation}
 
-Y se puede derivar las relaciones 
+y se puede derivar las relaciones 
 
 \begin{align*}
     e^{i\hat{H}_{S}t}A_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{-i\omega t} A_{\alpha}(\omega) \\
-    e^{i\hat{H}_{S}t}A^{\dagger}_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{i\omega t} A^{\dagger}_{\alpha}(\omega)
+    e^{i\hat{H}_{S}t}A^{\dagger}_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{i\omega t} A^{\dagger}_{\alpha}(\omega).
 \end{align*}
 
 De la relación de completitud $\sum_{\epsilon}\Pi(\epsilon) = \mathbf{I}$ podremos notar que
@@ -211,76 +211,76 @@ De la relación de completitud $\sum_{\epsilon}\Pi(\epsilon) = \mathbf{I}$ podre
 \begin{align*}
    \sum_{\omega}A_{\alpha}(\omega) & =  \sum_{\omega,\epsilon'-\epsilon  = \omega} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon') \\
    & = \sum_{\omega,\epsilon} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon + \omega) \\
-   & = A_{\alpha} = \sum_{\omega}A^{\dagger}_{\alpha}(\omega)
+   & = A_{\alpha} = \sum_{\omega}A^{\dagger}_{\alpha}(\omega),
 \end{align*}
 
-Con esto el Hamiltoniano de interacción en el cuadro de Schrodinger
+con esto el Hamiltoniano de interacción en el cuadro de Schrodinger
 
 \begin{equation*}
-    \hat{H}_{I} = \sum_{\alpha,\omega}A_{\alpha}(\omega) \otimes B_{\alpha} = \sum_{\alpha,\omega}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}
+    \hat{H}_{I} = \sum_{\alpha,\omega}A_{\alpha}(\omega) \otimes B_{\alpha} = \sum_{\alpha,\omega}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}.
 \end{equation*}
 
 Aplicando las relaciones en el cuadro de interacción
 
 \begin{equation}
-    \hat{H}_{I} = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t)
+    \hat{H}_{I} = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t),
     \label{seclindbladinteraction1}
 \end{equation}
 
-Donde $B_{\alpha}(t) = e^{i\hat{H}_{B}t}B_{\alpha}e^{-i\hat{H}_{B}t}$. La ecuación \ref{seclindbladinteraction1} se puede introducir en la ecuación \ref{eq3sec2:markov1}
+donde $B_{\alpha}(t) = e^{i\hat{H}_{B}t}B_{\alpha}e^{-i\hat{H}_{B}t}$. La ecuación \ref{seclindbladinteraction1} se puede introducir en la ecuación \ref{eq3sec2:markov1} y se obtiene 
 
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = \int_{0}^{\infty} ds \text{Tr}_{B}\left[  \hat{H}_{I}(t-s)\hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t) - \hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t-s)\hat{H}_{I}(t)    \right.\\
-    \left. + \hat{H}_{I}(t)\hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t-s) -  \hat{H}_{I}(t)\hat{H}_{I}(t-s)\hat{\rho}_{IS}(t)\hat{\rho}_{B}  \right]
+    \left. + \hat{H}_{I}(t)\hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t-s) -  \hat{H}_{I}(t)\hat{H}_{I}(t-s)\hat{\rho}_{IS}(t)\hat{\rho}_{B}  \right],
 \end{align*}
 
-Reemplazando la forma explícita de la interacción  
+así reemplazando la forma explícita de la interacción  
 
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{i\omega s}B_{\beta}(t-s)\hat{\rho}_{B}B^{\dagger}_{\alpha}(t)]e^{i(\omega'- \omega)t}\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
-    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\hat{\rho}_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right)
+     + & \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\hat{\rho}_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
 \end{align*}
 
-Además, se pueden definir las funciones correlación del baño
+Se pueden definir las funciones correlación del baño
 
 \begin{equation*}
-    \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\hat{\rho}_{B}]
+    \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\hat{\rho}_{B}],
 \end{equation*}
 
-Y aplicando estas funciones
+y aplicando estas funciones queda 
 
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{i(\omega'- \omega)t}\Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
-    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{-i(\omega'- \omega)t}\Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right)
+    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{-i(\omega'- \omega)t}\Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
 \end{align*}
 
-Si consideramos el tiempo de evolución del sistema $S$ como $\tau_{S}=|\omega-\omega'|^{-1}$, y se cumple que el tiempo de relajación del sistema $\tau_{R}\gg \tau_{S}$ para los términos no seculares con $\omega \neq \omega'$, estos podrán ser despreciados, debido a que estos los términos $e^{i(\omega-\omega')t}$ oscilan muy rápido durante el tiempo $\tau_{R}$. Al tomar esta aproximación, la evolución queda
+Si consideramos el tiempo de evolución del sistema $S$ como $\tau_{S}=|\omega-\omega'|^{-1}$, y se cumple que el tiempo de relajación del sistema $\tau_{R}\gg \tau_{S}$ para los términos no seculares con $\omega \neq \omega'$, estos podrán ser despreciados, debido a que los términos $e^{i(\omega-\omega')t}$ oscilan muy rápido durante el tiempo $\tau_{R}$. Al tomar esta aproximación, la evolución queda
 
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega}\sum_{\alpha,\beta} \Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
-    & + \sum_{\omega}\sum_{\alpha,\beta} \Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega) \right)
+    & + \sum_{\omega}\sum_{\alpha,\beta} \Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega) \right),
 \end{align*}
 
-Finalmente, separando la función correlación en una parte real y otra parte imaginaria $\Gamma_{\alpha \beta}(\omega) = \gamma_{\alpha \beta}(\omega)/2 + iS_{\alpha \beta}(\omega)$ queda la ecuación de Lindblad 
+finalmente, separando la función correlación en una parte real y otra parte imaginaria $\Gamma_{\alpha \beta}(\omega) = \gamma_{\alpha \beta}(\omega)/2 + iS_{\alpha \beta}(\omega)$ queda la ecuación de Lindblad 
 
 \begin{equation}
-    \frac{d}{dt} \hat{\rho}_{IS}(t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(t)] + \mathcal{D}(\hat{\rho}_{IS}(t))
+    \frac{d}{dt} \hat{\rho}_{IS}(t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(t)] + \mathcal{D}(\hat{\rho}_{IS}(t)),
     \label{seclindbladfinal}
 \end{equation}
 
-Con $\hat{H}_{LS}$ el Hamiltoniano \textit{Lamb Shift}
+con $\hat{H}_{LS}$ el Hamiltoniano \textit{Lamb Shift}
 
 \begin{equation*}
-    \hat{H}_{LS} = \sum_{\omega} \sum_{\alpha,\beta} S_{\alpha,\beta}(\omega)A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) 
+    \hat{H}_{LS} = \sum_{\omega} \sum_{\alpha,\beta} S_{\alpha,\beta}(\omega)A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), 
 \end{equation*}
 
-Y el Disipador
+y el Disipador
 
 \begin{equation*}
-    \mathcal{D}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right]
+    \mathcal{D}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right].
 \end{equation*}
 
-El poder escribir el disipador de esta manera es importante, ya que permite preservar la traza, la hermiticidad y que la matriz resultante de la evolución sea semidefinida positiva lo que se denmonia la Forma GKLS \cite{manzano2020short}.
+El poder escribir el disipador de esta manera es importante, ya que permite preservar la traza, la hermiticidad y que la matriz resultante de la evolución sea semidefinida positiva,ya que esta evolucion se encuentra en la forma GKLS \cite{manzano2020short}.
 
 \label{sec:lindblad}
 
@@ -1239,7 +1239,7 @@ Usando la relación \ref{apendixobservable} en la función generadora
         |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(t_{1})dt_{1} + \epsilon^{2}\int_{0}^{t}dt_{1}\int_{0}^{t_{1}}\check{\mathcal{L}}'_{\lambda}(t_{1})\check{\mathcal{L}}'_{\lambda}(t_{2})dt_{2} \right) |\hat{\rho}_{tot}(0)\rangle \rangle, 
     \end{equation*}
 
-Al hacer el cambio de variable $t_{1}=T$ y $t_{2}=T-s$ 
+al hacer el cambio de variable $t_{1}=T$ y $t_{2}=T-s$ 
 
 \begin{align*}
     |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  & = \left( \textbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(T)dT + \epsilon^{2}\int_{0}^{t}dT\int_{0}^{T}ds \check{\mathcal{L}}'_{\lambda}(T)\check{\mathcal{L}}'_{\lambda}(T-s) \right)|\hat{\rho}_{tot}(0)\rangle \rangle  \\
@@ -1247,7 +1247,7 @@ Al hacer el cambio de variable $t_{1}=T$ y $t_{2}=T-s$
     & =  [\check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) + \epsilon \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) + \epsilon^{2}\check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t)] |\hat{\rho}_{tot}(0)\rangle \rangle,
 \end{align*}
 
-Con los superoperadores definidos por 
+con los superoperadores definidos por 
 
 \begin{align*}
     \check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) &  = \textbf{1}\\
@@ -1262,7 +1262,7 @@ Tomando hasta segundo orden la inversa del superoperador $\check{\mathcal{W}}$
 \label{apendix2inverseW}
 \end{equation}
 
-Se cumple la propiedad
+se cumple la propiedad
 
 \begin{equation}
     \dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{A}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t) = \epsilon \dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{A} + \epsilon^{2}[\dot{\check{\mathcal{W}}}_{2}(\vec{\lambda},\vec{\chi},t)\check{A} - \dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{A}\check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) ].
@@ -1275,13 +1275,13 @@ Para encontrar la matriz densidad generalizada se quiere rescatar la parte relev
     \check{\mathcal{P}} = \sum_{r}|\rho_{R}^{eq} \rangle \rangle \langle \langle rr|,
 \end{equation*}
 
-En donde $\otimes_{\alpha} \hat{\tau}_{\alpha} \to  |\hat{\rho}_{R}^{eq} \rangle \rangle$ es el vector en el espacio de Liouville que representa el equilibrio del reservorio. Al aplicar esto a la matriz densidad total
+en donde $\otimes_{\alpha} \hat{\tau}_{\alpha} \to  |\hat{\rho}_{R}^{eq} \rangle \rangle$ es el vector en el espacio de Liouville que representa el equilibrio del reservorio. Al aplicar esto a la matriz densidad total
 
 \begin{equation*}
     \check{\mathcal{P}}|\hat{\rho}(\vec{\lambda},\vec{\chi},t) \rangle \rangle = |\hat{\rho}_{S}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle ,
 \end{equation*}
 
-La evolución de la matriz densidad generalizada usando los operadores Nakajima-Zwanzig se vuelve 
+la evolución de la matriz densidad generalizada usando los operadores Nakajima-Zwanzig se vuelve 
 
 \begin{align}
     \check{\mathcal{P}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle & =  \check{\mathcal{P}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\hat{\rho}_{tot}(0)\rangle \rangle  \label{apendix2proyectionev1} \\
@@ -1309,7 +1309,7 @@ Al derivar temporalmente las ecuaciones \ref{apendix2proyectionev1} y \ref{apend
      & = \check{\mathcal{Q}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle, 
 \end{align*}
 
-Estas ecuaciones son exactas. Para utilizar la suposición de acoplamiento débil, se partirá usando la relación \ref{apendix2Wproperty}, así
+estas ecuaciones son exactas. Para utilizar la suposición de acoplamiento débil, se partirá usando la relación \ref{apendix2Wproperty}, así
 
 \begin{align*}
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}} & = \epsilon \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}\check{\mathcal{Q}} \\
@@ -1317,13 +1317,13 @@ Estas ecuaciones son exactas. Para utilizar la suposición de acoplamiento débi
      & - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}},
 \end{align*}
 
-El primer y segundo término se hacen cero debido a que $\check{\mathcal{P}}\check{\mathcal{Q}}=0$, por otro lado
+el primer y segundo término se hacen cero debido a que $\check{\mathcal{P}}\check{\mathcal{Q}}=0$, por otro lado
 
 \begin{align*}
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \sum_{r,r'}|\hat{\rho}^{eq}_{R} \rangle \rangle \langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle \langle \langle r'r'|,
 \end{align*}
 
-En donde el término $\langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle$ equivale a 
+en donde el término $\langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle$ equivale a 
 
 \begin{equation}
     \langle \langle rr|\check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle  = \text{Tr}_{B}\{\hat{\rho}^{eq}_{R}\hat{V}_{\lambda}(t)\} - \text{Tr}_{B}\{\hat{V}_{-\lambda}(t)\hat{\rho}^{eq}_{R}\}.
@@ -1344,25 +1344,25 @@ De manera explícita esto es
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \epsilon^{2}\check{\mathcal{P}}\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\check{\mathcal{P}}, 
 \end{equation*}
 
-Aplicando $\check{\mathcal{P}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle = |\dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle$ y multiplicando a la izquierda por $\sum_{r}\langle \langle rr|$ para eliminar los grados de libertad del reservorio
+aplicando $\check{\mathcal{P}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle = |\dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle$ y multiplicando a la izquierda por $\sum_{r}\langle \langle rr|$ para eliminar los grados de libertad del reservorio
 
 \begin{equation*}
     \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) = \epsilon^{2} \sum_{r}\langle \langle rr|\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
 \end{equation*}
 
-De aquí se podrán obtener las funciones correlación calculando el producto
+de aquí se podrán obtener las funciones correlación calculando el producto
 
 \begin{align*}
     \sum_{r}\langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \text{Tr}_{B}\{\check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{R}^{eq}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \},
 \end{align*}
 
-Desarrollando paso por paso
+desarrollando paso por paso
 
 \begin{equation*}
     \mathcal{L}'_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} = -i[\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} -  \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)],
 \end{equation*}
 
-Y así de manera explícita
+y así de manera explícita
 \begin{align*}
     \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}  = &  -\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} + \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \\
     & + \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t).
@@ -1384,7 +1384,7 @@ Para escribir la ecuación maestra generalizada a través de las funciones corre
 &  - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{e^{-(i/2)\hat{A}(\lambda,\chi)}\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)e^{(i/2)\hat{A}(\lambda,\chi)}\hat{\rho}^{eq}_{R}\},
 \end{align*}    
 
-Suponiendo que las funciones de correlación son homogéneas, esto se vuelve
+suponiendo que las funciones de correlación son homogéneas, esto se vuelve
 
 \begin{align*}
     \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} & = \\
@@ -1399,7 +1399,7 @@ Analizaremos el término $\text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\v
     e^{C\hat{N}_{\alpha}}\hat{B}_{\alpha,k}e^{-C\hat{N}_{\alpha}} = e^{-Cn_{\alpha,k}}\hat{B}_{\alpha,k},
 \end{equation*}
 
-Con $C$ una constante. Se podrá utilizar esto para obtener
+con $C$ una constante. Se podrá utilizar esto para obtener
 
 \begin{align*}
    & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} \\
@@ -1412,7 +1412,7 @@ Por último, se puede notar que
     e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)} & = e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})} \hat{B}_{\alpha,k}(t+\lambda_{\alpha}), 
 \end{align*}
 
-Con esto se tiene
+con esto se tiene
 
 \begin{align*}
  & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} = \\
@@ -1443,7 +1443,7 @@ Desarrollando la ecuación \ref{ecmaestrafinal} podremos escribir
     \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right],   
 \end{multline*}
 
-Tomando la condición que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$
+tomando la condición que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \\
@@ -1459,7 +1459,7 @@ Usando la identidad
     & = \frac{1}{2}\Gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q}),
 \end{align*}
 
-Y usando que $\int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) = e^{i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s-\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) $, nos queda finalmente
+y usando que $\int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) = e^{i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s-\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) $, nos queda finalmente
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}\Delta^{\alpha}_{k,k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
@@ -1487,7 +1487,7 @@ Definiremos una función correlación auxiliar de la forma
    & = \langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha})\rangle_{N},
 \end{align*}
 
-Además, se puede notar que
+además, se puede notar que
 
 \begin{align*}
     C^{\alpha N}_{kk}(s) & = \text{Tr}\{e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}(s)e^{is\mu_{\alpha}\hat{N}_{\alpha}} \hat{B}_{\alpha,k}e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{\tau}_{\alpha}   \} \\
@@ -1524,7 +1524,7 @@ Para obtener la ley cero calcularemos $\mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\bet
     [\hat{S}^{\dagger}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = -(\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}^{\dagger}_{\alpha,k;q},
 \end{align*}
 
- Por ende se tendrá
+ por ende se tendrá
 
  \begin{align*}
     e^{\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\hat{S}_{\alpha,k;q} e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = \hat{S}_{\alpha,k;q}e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})} \\
@@ -1538,7 +1538,7 @@ Podremos aplicar esto en el disipador
     \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} e^{\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q}, 
 \end{align*}
 
-Finalmente al sumar los dos disipadores en el superoperador $\mathcal{L}_{\alpha}$ se demuestra que
+finalmente al sumar los dos disipadores en el superoperador $\mathcal{L}_{\alpha}$ se demuestra que
 
 \begin{equation*}
     \mathcal{L}_{\alpha}e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \propto  \mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0.
@@ -1561,7 +1561,7 @@ Para desarrollar el cálculo de la segunda Ley, se partirá de
   & = -\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \},
 \end{align*}
 
-Por otro lado
+por otro lado
 
 \begin{align*}
     J_{\alpha} & = \text{Tr}\{ (\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})\mathcal{L}_{\alpha}(\hat{\rho}_{S}(t)) \} \\
@@ -1569,7 +1569,7 @@ Por otro lado
     & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \},
 \end{align*}
 
-Con lo que finalmente, redefinimos la segunda ley de la termodinámica como
+con lo que finalmente, redefinimos la segunda ley de la termodinámica como
 
 \begin{equation*}
     \dot{\sigma} = - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) [\ln \hat{\rho}_{S}(t) -\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha}) ] \} \geq 0.
@@ -1591,7 +1591,7 @@ Así se obtiene que la razón de producción de entropía es mayor igual a cero.
         S^{XY} = - \sum_{x,y}p(x,y) \ln p(x,y),
     \end{equation*}
 
-    Al derivar y utilizar $J_{x,x'}^{y,y'} = - J_{x',x}^{y',y}$ se obtiene
+    al derivar y utilizar $J_{x,x'}^{y,y'} = - J_{x',x}^{y',y}$ se obtiene
 
     \begin{align*}
         \partial_{t}S^{XY} & = - \sum_{x,y} \dot{p}(x,y) \ln p(x,y) - \sum_{x,y} \dot{p}(x,y) \\
@@ -1607,21 +1607,21 @@ Para notar que la producción de entropía es mayor a cero, notemos que si $J_{x
     J_{x,x'}^{y,y'} \ln \frac{ W_{x,x'}^{y,y'}p(x',y') }{ W_{x',x}^{y',y}p(x,y) } > 0,
 \end{equation*}
 
-Sucede de manera similar si $J_{x,x'}^{y,y'}<0$.\\
+sucede de manera similar si $J_{x,x'}^{y,y'}<0$.\\
  Para la derivada temporal de la información mutua 
 
 \begin{align*}
     \partial_{t} I_{xy} = \sum_{x,y}\dot{p}(x,y) \ln \frac{p(x,y) }{ p(x)p(y) } + \sum_{x,y}p(x)p(y) \frac{\partial}{\partial t} \left( \frac{p(x,y)}{p(x)p(y)} \right),
  \end{align*}
 
- Calculando la derivada
+calculando la derivada
 
 \begin{align*}
     \frac{\partial }{\partial t} \left( \frac{p(x,y)}{p(x)p(y)} \right) & = \frac{ \dot{p}(x,y)p(x)p(y) - (p(x)\dot{p}(y) + p(y)\dot{p}(x))p(x,y)   }{ (p(x)p(y))^{2} } \\
     & = \frac{\dot{p}(x,y)}{p(x)p(y) } - \frac{\dot{p}(y)p(x,y)  }{ p(x)p(y)^{2} } - \frac{\dot{p}(x)p(x,y)  }{ p(x)^{2}p(y) },  
 \end{align*}
 
-Tendremos que
+tendremos que
 
 \begin{equation*}
     \partial_{t}I_{xy} = \sum_{x,y}\dot{p}(x,y) \ln \frac{p(x,y)}{ p(x)p(y) } + \sum_{x,y} \dot{p}(x,y) - \sum_{x,y} \dot{p}(y) \frac{p(x,y)}{p(y)} - \sum_{x,y} \dot{p}(x) \frac{p(x,y)}{p(x)}. 
@@ -1637,7 +1637,7 @@ Utilizando de las probabilidades conjuntas $\sum_{y}p(x,y) = p(x)$, $\sum_{x}p(x
     & + \sum_{x;y\geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(x,y)}{p(x)p(y)} - \ln \frac{p(x,y')}{p(x)p(y')} \right],
 \end{align*}
 
-Y del teorema de bayes $p(x,y) = p(x)p(y|x)$, $p(x,y) = p(y)p(x|y)$ se tendrá
+y del teorema de bayes $p(x,y) = p(x)p(y|x)$, $p(x,y) = p(y)p(x|y)$ se tendrá
 
 \begin{align*}
     \partial_{t}I_{xy} & = \sum_{x \geq x';y} J_{x,x'}^{y} \ln \frac{p(y|x) }{p(y|x')} + \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y) }{p(x|y')} \\
@@ -1655,71 +1655,71 @@ Y del teorema de bayes $p(x,y) = p(x)p(y|x)$, $p(x,y) = p(y)p(x|y)$ se tendrá
 Para partir obteniendo las funciones correlación espectral, se partirá calculando
 
 \begin{equation*}
-    C_{1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,1}\hat{\tau}_{\alpha}  ]  \hspace{10mm} C_{-1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,-1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,-1}\hat{\tau}_{\alpha}  ] 
+    C_{1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,1}\hat{\tau}_{\alpha}  ]  \hspace{10mm} C_{-1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,-1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,-1}\hat{\tau}_{\alpha}  ], 
 \end{equation*}
 
-Tendremos que
+tendremos que
 
 \begin{equation*}
-    C_{1}^{\alpha}(s) = \sum_{l,l'}t_{\alpha,l}t_{\alpha,l'}e^{i\epsilon_{\alpha,l}s} \langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l} \rangle \hspace{10mm} C
-    ^{\alpha}_{-1}(s) = \sum_{l,l'}t_{\alpha,l}t_{\alpha,l'}e^{-i\epsilon_{\alpha,l}s} \langle \hat{c}_{\alpha,l}\hat{c}^{\dagger}_{\alpha,l'} \rangle
+    C_{1}^{\alpha}(s) = \sum_{l,l'}t_{\alpha,l}t_{\alpha,l'}e^{i\epsilon_{\alpha,l}s} \langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l'} \rangle \hspace{10mm} C
+    ^{\alpha}_{-1}(s) = \sum_{l,l'}t_{\alpha,l}t_{\alpha,l'}e^{-i\epsilon_{\alpha,l}s} \langle \hat{c}_{\alpha,l}\hat{c}^{\dagger}_{\alpha,l'} \rangle,
 \end{equation*}
 
-Debido a que el reservorio está en equilibrio gran canónico, tendremos que el valor de expectación $\langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l}\rangle$ es la distribución de Fermi $f_{\alpha}(\epsilon_{\alpha,l})$ y por ende  
+debido a que el reservorio está en equilibrio gran canónico, tendremos que el valor de expectación $\langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l}\rangle$ es la distribución de Fermi $f_{\alpha}(\epsilon_{\alpha,l})$ y por ende  
 
 \begin{equation*}
     C_{1}^{\alpha}(s) = \sum_{l}t^{2}_{\alpha,l}e^{i\epsilon_{\alpha,l}s} f_{\alpha}(\epsilon_{\alpha,l}) \hspace{10mm} C
-    ^{\alpha}_{-1}(s) = \sum_{l}t^{2}_{\alpha,l}e^{-i\epsilon_{\alpha,l}s} [1-f_{\alpha}(\epsilon_{\alpha,l})]
+    ^{\alpha}_{-1}(s) = \sum_{l}t^{2}_{\alpha,l}e^{-i\epsilon_{\alpha,l}s} [1-f_{\alpha}(\epsilon_{\alpha,l})].
 \end{equation*}
 
-Definiendo las razones de transición
+Definiendo la razón de tuneleo correspondiente al baño $\alpha$
 
 \begin{equation*}
-    \gamma_{\alpha}(\omega) = 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})
+    \gamma_{\alpha}(\omega) = 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l}),
 \end{equation*}
 
-Podremos escribir de manera integral las funciones correlación usando las razones de transición
+podremos escribir de manera integral las funciones correlación usando la razón de tuneleo
 
 \begin{equation*}
-    C_{1}^{\alpha}(s) = \frac{1}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\omega s} \gamma_{\alpha}(\omega) f_{\alpha}(\omega)  \hspace{10mm} C_{-1}^{\alpha}(s) = \frac{1}{2\pi} \int_{-\infty}^{\infty}d\omega e^{-i\omega s} \gamma_{\alpha}(\omega) [1-f_{\alpha}(\omega)]
+    C_{1}^{\alpha}(s) = \frac{1}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\omega s} \gamma_{\alpha}(\omega) f_{\alpha}(\omega)  \hspace{10mm} C_{-1}^{\alpha}(s) = \frac{1}{2\pi} \int_{-\infty}^{\infty}d\omega e^{-i\omega s} \gamma_{\alpha}(\omega) [1-f_{\alpha}(\omega)],
 \end{equation*}
 
-Así podemos encontrar las funciones correlación espectral usando la transformada de Fourier
+así podemos encontrar las funciones correlación espectral usando la transformada de Fourier
 
 \begin{equation*}
-    \Gamma_{1}^{\alpha}(\omega) = \gamma_{\alpha}(-\omega)f_{\alpha}(-\omega)  \hspace{10mm} \Gamma_{-1}^{\alpha}(\omega) = \gamma_{\alpha}(\omega)[1-f_{\alpha}(\omega)]
+    \Gamma_{1}^{\alpha}(\omega) = \gamma_{\alpha}(-\omega)f_{\alpha}(-\omega)  \hspace{10mm} \Gamma_{-1}^{\alpha}(\omega) = \gamma_{\alpha}(\omega)[1-f_{\alpha}(\omega)].
 \end{equation*}
 
 Más adelante en el apéndice se profundizará en el aspecto Markoviano de la función correlación correspondiente a las funciones correlación espectral.
 \label{apendix5bathcorre}
 
 \subsection{ Operadores de salto de sistema de 3 puntos cuánticos}
-Para poder obtener los operadores de salto, prmiero se buscará eliminar el término de acoplamiento en el Hamiltoniano del sistema, para ello se hará la transformación
+Para poder obtener los operadores de salto, primero se buscará eliminar el término de acoplamiento en el Hamiltoniano del sistema, para ello se hará la transformación
 
 \begin{align*}
     \hat{d}_{-} & = \cos(\theta/2)\hat{d}_{R} - \sin(\theta/2)\hat{d}_{L} \\
-    \hat{d}_{+} & = \sin(\theta/2)\hat{d}_{R} + \cos(\theta/2)\hat{d}_{L}
+    \hat{d}_{+} & = \sin(\theta/2)\hat{d}_{R} + \cos(\theta/2)\hat{d}_{L},
 \end{align*}
 
 
-Con $\cos \theta = \Delta/\sqrt{ \Delta^{2} + g^{2} }$ y $\Delta = (\epsilon_{L} - \epsilon_{R})/2$, además  
+con $\cos \theta = \Delta/\sqrt{ \Delta^{2} + g^{2} }$ y $\Delta = (\epsilon_{L} - \epsilon_{R})/2$, además  
 
 \begin{align*}
     \hat{d}_{R} & = \cos(\theta/2)\hat{d}_{-} + \sin(\theta/2)\hat{d}_{+} \\
-    \hat{d}_{L} & = -\sin(\theta/2)\hat{d}_{-} + \cos(\theta/2)\hat{d}_{+}
+    \hat{d}_{L} & = -\sin(\theta/2)\hat{d}_{-} + \cos(\theta/2)\hat{d}_{+},
 \end{align*}
 
-Bajo estas definiciones, notemos que se cumplen las relaciones de anticonmutación entre los operadores $\hat{d}_{+}$ y $\hat{d}_{-}$ por otro lado
+bajo estas definiciones, notemos que se cumplen las relaciones de anticonmutación entre los operadores $\hat{d}_{+}$ y $\hat{d}_{-}$. Por otro lado
 
 \begin{align*}
     \hat{d}^{\dagger}_{R}\hat{d}_{R} & = \cos^{2}(\theta/2) \hat{d}^{\dagger}_{-}\hat{d}_{-} + \sin^{2}(\theta/2) \hat{d}^{\dagger}_{+}\hat{d}_{+} + \cos(\theta/2)\sin(\theta/2)[\hat{d}^{\dagger}_{+}\hat{d}_{-} + \hat{d}^{\dagger}_{-}\hat{d}_{+} ] \\
-    \hat{d}^{\dagger}_{L}\hat{d}_{L} & = \sin^{2}(\theta/2) \hat{d}^{\dagger}_{-}\hat{d}_{-} + \cos^{2}(\theta/2) \hat{d}^{\dagger}_{+}\hat{d}_{+} - \cos(\theta/2)\sin(\theta/2)[\hat{d}^{\dagger}_{+}\hat{d}_{-} + \hat{d}^{\dagger}_{-}\hat{d}_{+} ]
+    \hat{d}^{\dagger}_{L}\hat{d}_{L} & = \sin^{2}(\theta/2) \hat{d}^{\dagger}_{-}\hat{d}_{-} + \cos^{2}(\theta/2) \hat{d}^{\dagger}_{+}\hat{d}_{+} - \cos(\theta/2)\sin(\theta/2)[\hat{d}^{\dagger}_{+}\hat{d}_{-} + \hat{d}^{\dagger}_{-}\hat{d}_{+} ],
 \end{align*}
 
-Así se tendrá $\hat{n}_{L} + \hat{n}_{R} = \hat{n}_{+} + \hat{n}_{-}$ usando esta relación y la cantidad definida por $\bar{\epsilon} = (\epsilon_{R} + \epsilon_{L})/2$ 
+así se tendrá que $\hat{n}_{L} + \hat{n}_{R} = \hat{n}_{+} + \hat{n}_{-}$. Usando esta relación y la cantidad definida por $\bar{\epsilon} = (\epsilon_{R} + \epsilon_{L})/2$ 
 
 \begin{equation}
-    \epsilon_{R} \hat{n}_{R} + \epsilon_{L} \hat{n}_{L}  = \bar{\epsilon}( \hat{n}_{+} + \hat{n}_{-} ) - \Delta \sin(\theta) [\hat{d}^{\dagger}_{+}\hat{d}_{-} + \hat{d}^{\dagger}_{-}\hat{d}_{+}] - \Delta \cos(\theta) [\hat{d}^{\dagger}_{-}\hat{d}_{-} - \hat{d}^{\dagger}_{+}\hat{d}_{+}]
+    \epsilon_{R} \hat{n}_{R} + \epsilon_{L} \hat{n}_{L}  = \bar{\epsilon}( \hat{n}_{+} + \hat{n}_{-} ) - \Delta \sin(\theta) [\hat{d}^{\dagger}_{+}\hat{d}_{-} + \hat{d}^{\dagger}_{-}\hat{d}_{+}] - \Delta \cos(\theta) [\hat{d}^{\dagger}_{-}\hat{d}_{-} - \hat{d}^{\dagger}_{+}\hat{d}_{+}].
 \label{apendix5:ec1}
 \end{equation}
 
@@ -1731,109 +1731,109 @@ Por otro lado
 \end{equation}
 
 \begin{equation}
-    \hat{d}^{\dagger}_{L}\hat{d}_{R} = \cos^{2}(\theta/2)\hat{d}^{\dagger}_{-}\hat{d}_{+} - \sin^{2}(\theta/2) \hat{d}^{\dagger}_{+}\hat{d}_{-}  + \sin(\theta/2)\cos(\theta/2)[ \hat{d}^{\dagger}_{+}\hat{d}_{+} - \hat{d}^{\dagger}_{-}\hat{d}_{-} ]
+    \hat{d}^{\dagger}_{L}\hat{d}_{R} = \cos^{2}(\theta/2)\hat{d}^{\dagger}_{-}\hat{d}_{+} - \sin^{2}(\theta/2) \hat{d}^{\dagger}_{+}\hat{d}_{-}  + \sin(\theta/2)\cos(\theta/2)[ \hat{d}^{\dagger}_{+}\hat{d}_{+} - \hat{d}^{\dagger}_{-}\hat{d}_{-} ],
     \label{apendix5:ec3}
 \end{equation}
 
-De la combinación de \ref{apendix5:ec1}, \ref{apendix5:ec2} y \ref{apendix5:ec3} obtenemos
+de la combinación de \ref{apendix5:ec1}, \ref{apendix5:ec2} y \ref{apendix5:ec3} obtenemos
 
 \begin{equation*}
-    \epsilon_{R} \hat{n}_{R} + \epsilon_{L} \hat{n}_{L} = (\bar{\epsilon} + \sqrt{\Delta^{2} + g^{2}})\hat{n}_{+} +  (\bar{\epsilon} - \sqrt{\Delta^{2} + g^{2}})\hat{n}_{-}
+    \epsilon_{R} \hat{n}_{R} + \epsilon_{L} \hat{n}_{L} = (\bar{\epsilon} + \sqrt{\Delta^{2} + g^{2}})\hat{n}_{+} +  (\bar{\epsilon} - \sqrt{\Delta^{2} + g^{2}})\hat{n}_{-},
 \end{equation*}
 
-Por otro lado de $\hat{n}^{2}_{i} = \hat{n}_{i}$
+además de $\hat{n}^{2}_{i} = \hat{n}_{i}$ se obtiene 
 
 \begin{align*}
     2 \hat{n}_{R}\hat{n}_{L} & = (\hat{n}_{R} +\hat{n}_{L})(\hat{n}_{R} +\hat{n}_{L}) - (\hat{n}_{R} + \hat{n}_{L}) \\
-    & = (\hat{n}_{+} +\hat{n}_{-})(\hat{n}_{+} +\hat{n}_{-}) - (\hat{n}_{+} + \hat{n}_{-})  = 2\hat{n}_{+}\hat{n}_{-}
+    & = (\hat{n}_{+} +\hat{n}_{-})(\hat{n}_{+} +\hat{n}_{-}) - (\hat{n}_{+} + \hat{n}_{-})  = 2\hat{n}_{+}\hat{n}_{-}.
 \end{align*}
 
 Definiendo $\epsilon_{\pm} = \bar{\epsilon} \pm \sqrt{\Delta^{2}+g^{2}}$, se obtendrá para el Hamiltoniano
 
 \begin{equation}
-    H_{S} = \epsilon_{D}\hat{n}_{D} + \epsilon_{+}\hat{n}_{+} + \epsilon_{-}\hat{n}_{-} + U\hat{n}_{D}(\hat{n}_{+} + \hat{n}_{-}) + U_{f}\hat{n}_{+}\hat{n}_{-}
+    \hat{H}_{S} = \epsilon_{D}\hat{n}_{D} + \epsilon_{+}\hat{n}_{+} + \epsilon_{-}\hat{n}_{-} + U\hat{n}_{D}(\hat{n}_{+} + \hat{n}_{-}) + U_{f}\hat{n}_{+}\hat{n}_{-}.
     \label{apendix5:ec4}
 \end{equation}
 
 Con el Hamiltoniano escrito en función de los operadores $\hat{d}_{+}$ y $\hat{d}_{-}$ podremos calcular los operadores de salto, es decir
 
 \begin{align*}
-    e^{i H_{S}t}\hat{d}_{D}e^{-iH_{S}t} & = \hat{d}_{D} + it[H_{S},\hat{d}_{D}] + \frac{(it)^{2}}{2} [H_{S},[H_{S},\hat{d}_{D}]] +... \\
-    e^{i H_{S}t}\hat{d}_{+}e^{-iH_{S}t} & = \hat{d}_{+} + it[H_{S},\hat{d}_{+}] + \frac{(it)^{2}}{2} [H_{S},[H_{S},\hat{d}_{+}]] +... \\
-    e^{i H_{S}t}\hat{d}_{-}e^{-iH_{S}t} & = \hat{d}_{-} + it[H_{S},\hat{d}_{-}] + \frac{(it)^{2}}{2} [H_{S},[H_{S},\hat{d}_{-}]] +... 
+    e^{i \hat{H}_{S}t}\hat{d}_{D}e^{-i\hat{H}_{S}t} & = \hat{d}_{D} + it[\hat{H}_{S},\hat{d}_{D}] + \frac{(it)^{2}}{2} [\hat{H}_{S},[\hat{H}_{S},\hat{d}_{D}]] +... \\
+    e^{i \hat{H}_{S}t}\hat{d}_{+}e^{-i\hat{H}_{S}t} & = \hat{d}_{+} + it[\hat{H}_{S},\hat{d}_{+}] + \frac{(it)^{2}}{2} [\hat{H}_{S},[\hat{H}_{S},\hat{d}_{+}]] +... \\
+    e^{i \hat{H}_{S}t}\hat{d}_{-}e^{-i\hat{H}_{S}t} & = \hat{d}_{-} + it[\hat{H}_{S},\hat{d}_{-}] + \frac{(it)^{2}}{2} [\hat{H}_{S},[\hat{H}_{S},\hat{d}_{-}]] +...,
 \end{align*}
 
-Partiremos primero por $\hat{d}_{D}$ para ello se usará la identidad
+partiremos primero por $\hat{d}_{D}$ para ello se usará la identidad
 
 \begin{equation*}
-    \textbf{1} = (\textbf{1} - \hat{n}_{+})(\textbf{1}-\hat{n}_{-}) + (\textbf{1} - \hat{n}_{+})\hat{n}_{-} + (\textbf{1} - \hat{n}_{-})\hat{n}_{+} + \hat{n}_{+}\hat{n}_{-} 
+    \textbf{1} = (\textbf{1} - \hat{n}_{+})(\textbf{1}-\hat{n}_{-}) + (\textbf{1} - \hat{n}_{+})\hat{n}_{-} + (\textbf{1} - \hat{n}_{-})\hat{n}_{+} + \hat{n}_{+}\hat{n}_{-},
 \end{equation*}
 
-Utilizando que $(\textbf{1} - \hat{n}_{i})\hat{n}_{i} = \textbf{0}$ se tendrá que
+utilizando que $(\textbf{1} - \hat{n}_{i})\hat{n}_{i} = \textbf{0}$ se tendrá que
 
 \begin{align*}
-    [H_{S},\hat{d}_{D}(\textbf{1}-\hat{n}_{+})(\textbf{1} - \hat{n}_{-})] & = - \epsilon_{D}\hat{d}_{D}(\textbf{1}-\hat{n}_{+})(\textbf{1} - \hat{n}_{-}) \\
-    [H_{S},\hat{d}_{D}(\textbf{1}-\hat{n}_{+})\hat{n}_{-}] & = - (\epsilon_{D} + U)\hat{d}_{D}(\textbf{1} - \hat{n}_{+})\hat{n}_{-} \\
-    [H_{S},\hat{d}_{D}(\textbf{1}-\hat{n}_{-})\hat{n}_{+}] & = - (\epsilon_{D} + U)\hat{d}_{D}(\textbf{1} - \hat{n}_{-})\hat{n}_{+} \\
-    [H_{S},\hat{d}_{D}\hat{n}_{+}\hat{n}_{-}] & = - (\epsilon_{D} + 2U)\hat{d}_{D}\hat{n}_{+}\hat{n}_{-} 
+    [\hat{H}_{S},\hat{d}_{D}(\textbf{1}-\hat{n}_{+})(\textbf{1} - \hat{n}_{-})] & = - \epsilon_{D}\hat{d}_{D}(\textbf{1}-\hat{n}_{+})(\textbf{1} - \hat{n}_{-}) \\
+    [\hat{H}_{S},\hat{d}_{D}(\textbf{1}-\hat{n}_{+})\hat{n}_{-}] & = - (\epsilon_{D} + U)\hat{d}_{D}(\textbf{1} - \hat{n}_{+})\hat{n}_{-} \\
+    [\hat{H}_{S},\hat{d}_{D}(\textbf{1}-\hat{n}_{-})\hat{n}_{+}] & = - (\epsilon_{D} + U)\hat{d}_{D}(\textbf{1} - \hat{n}_{-})\hat{n}_{+} \\
+    [\hat{H}_{S},\hat{d}_{D}\hat{n}_{+}\hat{n}_{-}] & = - (\epsilon_{D} + 2U)\hat{d}_{D}\hat{n}_{+}\hat{n}_{-}, 
 \end{align*}
 
-Lo que permite notar que
+lo que permite notar que
 
 \begin{align*}
-    [H_{S},[H_{S},\hat{d}_{D}]] & = (\epsilon_{D})^{2}\hat{d}_{D}(\textbf{1} - \hat{n}_{+}) (\textbf{1} - \hat{n}_{-}) + (\epsilon_{D} + U)^{2}\hat{d}_{D}(\textbf{1} - \hat{n}_{+})\hat{n}_{-} \\
-        & + (\epsilon_{D}+U)^{2}\hat{d}_{D}(\textbf{1} - \hat{n}_{-})\hat{n}_{+} + (\epsilon_{D} + 2U)^{2}\hat{d}_{D}\hat{n}_{+}\hat{n}_{-}
+    [\hat{H}_{S},[\hat{H}_{S},\hat{d}_{D}]] & = (\epsilon_{D})^{2}\hat{d}_{D}(\textbf{1} - \hat{n}_{+}) (\textbf{1} - \hat{n}_{-}) + (\epsilon_{D} + U)^{2}\hat{d}_{D}(\textbf{1} - \hat{n}_{+})\hat{n}_{-} \\
+        & + (\epsilon_{D}+U)^{2}\hat{d}_{D}(\textbf{1} - \hat{n}_{-})\hat{n}_{+} + (\epsilon_{D} + 2U)^{2}\hat{d}_{D}\hat{n}_{+}\hat{n}_{-}.
 \end{align*}
 
 Y así obtener de manera recursiva
 
 \begin{align*}
-    e^{i H_{S}t}\hat{d}_{D}e^{-iH_{S}t}  & = e^{-i\epsilon_{D}t} \hat{d}_{D}(\textbf{1} - \hat{n}_{+}) (\textbf{1} - \hat{n}_{-}) +  e^{-i(\epsilon_{D}+U)t} \hat{d}_{D}[(\textbf{1} - \hat{n}_{+})\hat{n}_{-} + (\textbf{1} - \hat{n}_{-})\hat{n}_{+}] \\
-    & + e^{-i(\epsilon_{D} + 2U)t}\hat{d}_{D} \hat{n}_{+}\hat{n}_{-}
+    e^{i \hat{H}_{S}t}\hat{d}_{D}e^{-i\hat{H}_{S}t}  & = e^{-i\epsilon_{D}t} \hat{d}_{D}(\textbf{1} - \hat{n}_{+}) (\textbf{1} - \hat{n}_{-}) +  e^{-i(\epsilon_{D}+U)t} \hat{d}_{D}[(\textbf{1} - \hat{n}_{+})\hat{n}_{-} + (\textbf{1} - \hat{n}_{-})\hat{n}_{+}] \\
+    & + e^{-i(\epsilon_{D} + 2U)t}\hat{d}_{D} \hat{n}_{+}\hat{n}_{-}.
 \end{align*}
 
 Para poder describir los operadores de salto de $\hat{d}_{+}$ se usará el 1 conveniente
 
 \begin{equation*}
-    \textbf{1} = (\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-}) + (\textbf{1}-\hat{n}_{-})\hat{n}_{D} + (\textbf{1}-\hat{n}_{D})\hat{n}_{-} + \hat{n}_{D}\hat{n}_{-}
+    \textbf{1} = (\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-}) + (\textbf{1}-\hat{n}_{-})\hat{n}_{D} + (\textbf{1}-\hat{n}_{D})\hat{n}_{-} + \hat{n}_{D}\hat{n}_{-},
 \end{equation*}
 
-Los conmutadores quedarán
+los conmutadores quedarán
 
 \begin{align*}
-    [H_{S},\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1} - \hat{n}_{-})] & = - \epsilon_{+}\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1} - \hat{n}_{-}) \\
-    [H_{S},\hat{d}_{+}(\textbf{1}-\hat{n}_{D})\hat{n}_{-}] & = - (\epsilon_{+} + U)\hat{d}_{+}(\textbf{1} - \hat{n}_{-})\hat{n}_{D} \\
-    [H_{S},\hat{d}_{+}(\textbf{1}-\hat{n}_{-})\hat{n}_{D}] & = - (\epsilon_{+} + U_{f})\hat{d}_{+}(\textbf{1} - \hat{n}_{D})\hat{n}_{-} \\
-    [H_{S},\hat{d}_{+}\hat{n}_{D}\hat{n}_{-}] & = - (\epsilon_{+} + U + U_{f})\hat{d}_{+}\hat{n}_{D}\hat{n}_{-} 
+    [\hat{H}_{S},\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1} - \hat{n}_{-})] & = - \epsilon_{+}\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1} - \hat{n}_{-}) \\
+    [\hat{H}_{S},\hat{d}_{+}(\textbf{1}-\hat{n}_{D})\hat{n}_{-}] & = - (\epsilon_{+} + U)\hat{d}_{+}(\textbf{1} - \hat{n}_{-})\hat{n}_{D} \\
+    [\hat{H}_{S},\hat{d}_{+}(\textbf{1}-\hat{n}_{-})\hat{n}_{D}] & = - (\epsilon_{+} + U_{f})\hat{d}_{+}(\textbf{1} - \hat{n}_{D})\hat{n}_{-} \\
+    [\hat{H}_{S},\hat{d}_{+}\hat{n}_{D}\hat{n}_{-}] & = - (\epsilon_{+} + U + U_{f})\hat{d}_{+}\hat{n}_{D}\hat{n}_{-}, 
 \end{align*}
 
-De manera recursiva se obtendrá que los operadores de salto
+de manera recursiva se obtendrá que los operadores de salto
 
 \begin{align*}
-    e^{i H_{S}t}\hat{d}_{+}e^{-iH_{S}t} & = e^{-i\epsilon_{+}t}\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-}) + e^{-i(\epsilon_{+}+U_{f})t} \hat{d}_{+}(\textbf{1}-\hat{n}_{D})\hat{n}_{-} \\
-    & + e^{-i(\epsilon_{+}+U)t}\hat{d}_{+}(\textbf{1}-\hat{n}_{-})\hat{n}_{D} + e^{-i(\epsilon_{+}+U+U_{f})t}\hat{d}_{+}\hat{n}_{-}\hat{n}_{D}
+    e^{i \hat{H}_{S}t}\hat{d}_{+}e^{-i\hat{H}_{S}t} & = e^{-i\epsilon_{+}t}\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-}) + e^{-i(\epsilon_{+}+U_{f})t} \hat{d}_{+}(\textbf{1}-\hat{n}_{D})\hat{n}_{-} \\
+    & + e^{-i(\epsilon_{+}+U)t}\hat{d}_{+}(\textbf{1}-\hat{n}_{-})\hat{n}_{D} + e^{-i(\epsilon_{+}+U+U_{f})t}\hat{d}_{+}\hat{n}_{-}\hat{n}_{D},
 \end{align*}
 
-Debido a la simetría, tendremos que
+debido a la simetría, tendremos que
 
 \begin{align*}
-    e^{i H_{S}t}\hat{d}_{-}e^{-iH_{S}t} & = e^{-i\epsilon_{-}t}\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+}) + e^{-i(\epsilon_{-}+U_{f})t} \hat{d}_{-}(\textbf{1}-\hat{n}_{D})\hat{n}_{+} \\
-    & + e^{-i(\epsilon_{-}+U)t}\hat{d}_{-}(\textbf{1}-\hat{n}_{+})\hat{n}_{D} + e^{-i(\epsilon_{-}+U+U_{f})t}\hat{d}_{-}\hat{n}_{+}\hat{n}_{D}
+    e^{i \hat{H}_{S}t}\hat{d}_{-}e^{-i\hat{H}_{S}t} & = e^{-i\epsilon_{-}t}\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+}) + e^{-i(\epsilon_{-}+U_{f})t} \hat{d}_{-}(\textbf{1}-\hat{n}_{D})\hat{n}_{+} \\
+    & + e^{-i(\epsilon_{-}+U)t}\hat{d}_{-}(\textbf{1}-\hat{n}_{+})\hat{n}_{D} + e^{-i(\epsilon_{-}+U+U_{f})t}\hat{d}_{-}\hat{n}_{+}\hat{n}_{D}.
 \end{align*}
 
 Ahora se puede regresar a los operadores locales del sistema $\hat{d}_{L}$ y $\hat{d}_{R}$
 
 \begin{align*}
-    e^{iH_{S}t}\hat{d}_{R}e^{-iH_{S}t} & = \cos(\theta/2)e^{iH_{S}t}\hat{d}_{-}e^{-iH_{S}t} + \sin(\theta/2)e^{iH_{S}t}\hat{d}_{+}e^{-iH_{S}t}  \\
-    e^{iH_{S}t}\hat{d}_{L}e^{-iH_{S}t} & = -\sin(\theta/2)e^{iH_{S}t}\hat{d}_{-}e^{-iH_{S}t} + \cos(\theta/2)e^{iH_{S}t}\hat{d}_{+}e^{-iH_{S}t}
+    e^{i\hat{H}_{S}t}\hat{d}_{R}e^{-i\hat{H}_{S}t} & = \cos(\theta/2)e^{i\hat{H}_{S}t}\hat{d}_{-}e^{-i\hat{H}_{S}t} + \sin(\theta/2)e^{i\hat{H}_{S}t}\hat{d}_{+}e^{-i\hat{H}_{S}t}  \\
+    e^{i\hat{H}_{S}t}\hat{d}_{L}e^{-i\hat{H}_{S}t} & = -\sin(\theta/2)e^{i\hat{H}_{S}t}\hat{d}_{-}e^{-i\hat{H}_{S}t} + \cos(\theta/2)e^{i\hat{H}_{S}t}\hat{d}_{+}e^{-i\hat{H}_{S}t},
 \end{align*}
 
-Con lo que encontramos las frecuencias de Bohr correspondientes a
+con lo que encontramos las frecuencias de Bohr correspondientes a
 
 \begin{align*}
     \hat{d}_{D} & \to (\epsilon_{D}, \epsilon_{D}+U,\epsilon_{D}+2U) \\
     \hat{d}_{L} & \to (\epsilon_{+},\epsilon_{-},\epsilon_{+}+U,\epsilon_{-}+U,\epsilon_{+}+U_{f},\epsilon_{-}+U_{f},\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f}) \\
-    \hat{d}_{R} & \to (\epsilon_{+},\epsilon_{-},\epsilon_{+}+U,\epsilon_{-}+U,\epsilon_{+}+U_{f},\epsilon_{-}+U_{f},\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})
+    \hat{d}_{R} & \to (\epsilon_{+},\epsilon_{-},\epsilon_{+}+U,\epsilon_{-}+U,\epsilon_{+}+U_{f},\epsilon_{-}+U_{f},\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f}).
 \end{align*}
 
 \label{apendix5jumpop}
@@ -1845,48 +1845,48 @@ En el caso en que $\epsilon_{L} = \epsilon_{R}$ se cumple que $\epsilon_{\pm} = 
     &(\epsilon_{+},\epsilon_{-})  \to \epsilon \\
     &(\epsilon_{+}+U,\epsilon_{-}+U)  \to \epsilon+U \\
     &(\epsilon_{+}+U_{f},\epsilon_{-}+U_{f})  \to \epsilon+U_{f} \\
-    &(\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})  \to \epsilon+U+U_{f} 
+    &(\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})  \to \epsilon+U+U_{f}.
 \end{align*}
 
 Para encontrar los nuevos operadores de salto de $\hat{d}_{L}$, para el primer caso se deberá sumar los operadores de salto respectivos a las frecuencias $\epsilon_{+},\epsilon_{-}$ 
 
 \begin{align*}
-    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-})}{\sqrt{2}} - \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+})}{\sqrt{2}} & = \frac{(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} [\hat{d}_{+}(\textbf{1}-\hat{n}_{-}) - \hat{d}_{-}(\textbf{1}-\hat{n}_{+}) ]
+    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-})}{\sqrt{2}} - \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+})}{\sqrt{2}} & = \frac{(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} [\hat{d}_{+}(\textbf{1}-\hat{n}_{-}) - \hat{d}_{-}(\textbf{1}-\hat{n}_{+}) ],
 \end{align*}
 
-Por otro lado
+por otro lado
 
 \begin{align*}
     \hat{d}_{+}(\textbf{1}-\hat{n}_{-}) - \hat{d}_{-}(\textbf{1}-\hat{n}_{+}) & = \frac{\hat{d}_{L} + \hat{d}_{R}}{\sqrt{2}} (\textbf{1} - \hat{n}_{-}) - \frac{\hat{d}_{R} - \hat{d}_{L}}{\sqrt{2}}(\textbf{1}-\hat{n}_{+}) \\
     & = \frac{\hat{d}_{L}}{\sqrt{2}}(\textbf{2} - \hat{n}_{+} -\hat{n}_{-} ) + \frac{\hat{d}_{R}}{\sqrt{2}}(\hat{n}_{+} -\hat{n}_{-}) \\
-    & = \frac{\hat{d}_{L}}{\sqrt{2}}(\textbf{2}-\hat{n}_{L} -\hat{n}_{R}) + \frac{\hat{d}_{R}}{\sqrt{2}}(\hat{d}^{\dagger}_{R}\hat{d}_{L}+\hat{d}^{\dagger}_{L}\hat{d}_{R})
+    & = \frac{\hat{d}_{L}}{\sqrt{2}}(\textbf{2}-\hat{n}_{L} -\hat{n}_{R}) + \frac{\hat{d}_{R}}{\sqrt{2}}(\hat{d}^{\dagger}_{R}\hat{d}_{L}+\hat{d}^{\dagger}_{L}\hat{d}_{R}),
 \end{align*}
 
-De $\hat{d}_{L}(\textbf{1} - \hat{n}_{L}) = \hat{d}_{L}\hat{d}_{L}\hat{d}^{\dagger}_{L} = 0$ y de $\hat{d}_{R}(\hat{d}^{\dagger}_{R}\hat{d}_{L} + \hat{d}^{\dagger}_{L}\hat{d}_{R}) = \hat{d}_{L}(\textbf{1}-\hat{n}_{R})$ nos queda
+de $\hat{d}_{L}(\textbf{1} - \hat{n}_{L}) = \hat{d}_{L}\hat{d}_{L}\hat{d}^{\dagger}_{L} = 0$ y de $\hat{d}_{R}(\hat{d}^{\dagger}_{R}\hat{d}_{L} + \hat{d}^{\dagger}_{L}\hat{d}_{R}) = \hat{d}_{L}(\textbf{1}-\hat{n}_{R})$ nos queda
 
 \begin{equation*}
-    \hat{d}_{+}(\textbf{1}-\hat{n}_{-}) - \hat{d}_{-}(\textbf{1}-\hat{n}_{+})  = \hat{d}_{L}(\textbf{1} - \hat{n}_{R})
+    \hat{d}_{+}(\textbf{1}-\hat{n}_{-}) - \hat{d}_{-}(\textbf{1}-\hat{n}_{+})  = \hat{d}_{L}(\textbf{1} - \hat{n}_{R}),
 \end{equation*}
 
-Con lo que podremos asignar a la frecuencia $\epsilon$ el operador $\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})$, siguiendo con las frecuencias $(\epsilon_{-}+U,\epsilon_{+}+U) \to \epsilon + U$
+con lo que podremos asignar a la frecuencia $\epsilon$ el operador $\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})$. Siguiendo con las frecuencias $(\epsilon_{-}+U,\epsilon_{+}+U) \to \epsilon + U$ se obtiene
 
 \begin{align*}
-    \frac{\hat{d}_{+}\hat{n}_{D}(\textbf{1}-\hat{n}_{-})}{\sqrt{2}} - \frac{\hat{d}_{-}\hat{n}_{D}(\textbf{1}-\hat{n}_{+})}{\sqrt{2}} = \hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) 
+    \frac{\hat{d}_{+}\hat{n}_{D}(\textbf{1}-\hat{n}_{-})}{\sqrt{2}} - \frac{\hat{d}_{-}\hat{n}_{D}(\textbf{1}-\hat{n}_{+})}{\sqrt{2}} = \hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}). 
 \end{align*}
 
 Para las frecuencias $(\epsilon_{-}+U_{f},\epsilon_{+}+U_{f}) \to \epsilon+U_{f}$ tendremos que sumar
 
 \begin{align*}
-    \frac{\hat{d}_{+}\hat{n}_{-}(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} - \frac{\hat{d}_{-}\hat{n}_{+}(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} & = \frac{(\textbf{1}-\hat{n}_{D})}{\sqrt{2}}[\hat{d}_{+}\hat{n}_{-} -\hat{d}_{-}\hat{n}_{+}] 
+    \frac{\hat{d}_{+}\hat{n}_{-}(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} - \frac{\hat{d}_{-}\hat{n}_{+}(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} & = \frac{(\textbf{1}-\hat{n}_{D})}{\sqrt{2}}[\hat{d}_{+}\hat{n}_{-} -\hat{d}_{-}\hat{n}_{+}],
 \end{align*}
 
-Es así que
+es así que
 
 \begin{align*}
     \hat{d}_{+}\hat{n}_{-} -\hat{d}_{-}\hat{n}_{+} & = \frac{\hat{d}_{R}+\hat{d}_{L}}{\sqrt{2}}\hat{n}_{-} - \frac{\hat{d}_{R}-\hat{d}_{L}}{\sqrt{2}}\hat{n}_{+} \\
     & = - \frac{\hat{d}_{R}}{\sqrt{2}}(\hat{d}^{\dagger}_{R}\hat{d}_{L}+ \hat{d}^{\dagger}_{L}\hat{d}_{R}) + \frac{\hat{d}_{L}}{\sqrt{2}}(\hat{n}_{L}+\hat{n}_{R}) \\
     & = \frac{2\hat{d}_{L}}{\sqrt{2}}\hat{n}_{R} - \frac{\hat{d}_{L}}{\sqrt{2}}(\textbf{1}-\hat{n}_{L}) \\
-    & = \frac{2\hat{d}_{L}}{\sqrt{2}}\hat{n}_{R}
+    & = \frac{2\hat{d}_{L}}{\sqrt{2}}\hat{n}_{R}.
 \end{align*}
 
 Con lo que el operador de salto respectivo a la frecuencia $(\epsilon+U_{f})$ es $\hat{d}_{L}\hat{n}_{R}(\textbf{1}-\hat{n}_{D})$, usando este mismo análisis se obtiene que el operador de salto de la frecuencia $\epsilon+U+U_{f}$ corresponde a $\hat{d}_{L}\hat{n}_{D}\hat{n}_{R}$. Finalmente recapitulando
@@ -1895,51 +1895,51 @@ Con lo que el operador de salto respectivo a la frecuencia $(\epsilon+U_{f})$ es
     &\epsilon \to \hat{d}_{L}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{D})\\
    &\epsilon + U \to \hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\\
     &\epsilon +U_{f}\to \hat{d}_{L}\hat{n}_{R}(\textbf{1}-\hat{n}_{D})\\
-    &\epsilon +U+U_{f}\to \hat{d}_{L}\hat{n}_{D}\hat{n}_{R}
+    &\epsilon +U+U_{f}\to \hat{d}_{L}\hat{n}_{D}\hat{n}_{R},
 \end{align*}
 
-De manera similar, para el operador local $\hat{d}_{R}$ se puede partir agrupando las energías $(\epsilon_{+},\epsilon_{-})$ en donde
+de manera similar, para el operador local $\hat{d}_{R}$ se puede partir agrupando las energías $(\epsilon_{+},\epsilon_{-})$ en donde
 
 \begin{align*}
-    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-}) }{\sqrt{2}} + \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+}) }{\sqrt{2}} & = \frac{(\textbf{1} - \hat{n}_{D})}{\sqrt{2}}[\hat{d}_{+}(\textbf{1}-\hat{n}_{-}) + \hat{d}_{-}(\textbf{1}-\hat{n}_{+})]
+    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-}) }{\sqrt{2}} + \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+}) }{\sqrt{2}} & = \frac{(\textbf{1} - \hat{n}_{D})}{\sqrt{2}}[\hat{d}_{+}(\textbf{1}-\hat{n}_{-}) + \hat{d}_{-}(\textbf{1}-\hat{n}_{+})],
 \end{align*}
 
-Se deberá calcular 
+se deberá calcular 
 
 \begin{align*}
     \hat{d}_{+}(\textbf{1}-\hat{n}_{-}) + \hat{d}_{-}(\textbf{1}-\hat{n}_{+}) & =  \frac{\hat{d}_{R} + \hat{d}_{L}}{\sqrt{2}}(\textbf{1} - \hat{n}_{-}) + \frac{\hat{d}_{R} - \hat{d}_{L}}{\sqrt{2}}(\textbf{1} - \hat{n}_{+})   \\
     & = \frac{\hat{d}_{R}}{\sqrt{2}}(\textbf{2} - (\hat{n}_{L} + \hat{n}_{R})) + \frac{\hat{d}_{L}}{\sqrt{2}} (\hat{n}_{+}-\hat{n}_{-}) \\
     & = \frac{\hat{d}_{R}}{\sqrt{2}}(\textbf{1} -  \hat{n}_{R}) + \frac{\hat{d}_{L}}{\sqrt{2}} (\hat{d}^{\dagger}_{R}\hat{d}_{L} + \hat{d}^{\dagger}_{L}\hat{d}_{R}) \\
-    & = \sqrt{2}\hat{d}_{R}(\textbf{1}-\hat{n}_{R})
+    & = \sqrt{2}\hat{d}_{R}(\textbf{1}-\hat{n}_{R}),
 \end{align*}
 
-Por lo tanto el operador de salto asociado a la agrupación $(\epsilon_{+},\epsilon_{-})\to \epsilon$ es $\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})$. Por el mismo motivo al calcular el operador que corresponde a agrupar las frecuencias $(\epsilon_{+}+U,\epsilon_{-}+U)$ 
+por lo tanto el operador de salto asociado a la agrupación $(\epsilon_{+},\epsilon_{-})\to \epsilon$ es $\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})$. Por el mismo motivo al calcular el operador que corresponde a agrupar las frecuencias $(\epsilon_{+}+U,\epsilon_{-}+U)$ 
 
 \begin{equation*}
-    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{-})\hat{n}_{D}}{\sqrt{2}} + \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{+})\hat{n}_{D}}{\sqrt{2}}  = \hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})
+    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{-})\hat{n}_{D}}{\sqrt{2}} + \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{+})\hat{n}_{D}}{\sqrt{2}}  = \hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}).
 \end{equation*}
 
 Para las frecuencias $(\epsilon_{+}+U_{f},\epsilon_{-}+U_{f})\to \epsilon + U_{f}$ tendremos que sumar los operadores
 
 \begin{equation*}
-    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})\hat{n}_{-} }{\sqrt{2}} + \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})\hat{n}_{+} }{\sqrt{2}} = \frac{(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} [\hat{d}_{+}\hat{n}_{-} + \hat{d}_{-}\hat{n}_{+}]
+    \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})\hat{n}_{-} }{\sqrt{2}} + \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})\hat{n}_{+} }{\sqrt{2}} = \frac{(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} [\hat{d}_{+}\hat{n}_{-} + \hat{d}_{-}\hat{n}_{+}],
 \end{equation*}
 
-Calculando la suma
+calculando la suma
 
 \begin{align*}
     \hat{d}_{+}\hat{n}_{-} + \hat{d}_{-}\hat{n}_{+} & = \frac{\hat{d}_{R}+\hat{d}_{L}}{\sqrt{2}}\hat{n}_{-} + \frac{\hat{d}_{R}-\hat{d}_{L}}{\sqrt{2}}\hat{n}_{+}  \\
     & = \frac{\hat{d}_{R}}{\sqrt{2}}(\hat{n}_{L}+\hat{n}_{R}) - \frac{\hat{d}_{L}}{\sqrt{2}}(\hat{d}^{\dagger}_{L}\hat{d}_{R}+\hat{d}^{\dagger}_{R}\hat{d}_{L}) \\
-    & = \sqrt{2}\hat{d}_{R}\hat{n}_{L}
+    & = \sqrt{2}\hat{d}_{R}\hat{n}_{L},
 \end{align*}
 
-Por lo tanto el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(\epsilon_{+}+U_{f},\epsilon_{-}+U_{f})$ es $\hat{d}_{R}(\textbf{1}-\hat{d}_{D})\hat{n}_{L}$, realizando el mismo cálculo se encuentra que para las frecuencias $(\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})$ el operador de salto corresponde a $\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}$. Por ende recapitulando, para el operador $\hat{d}_{R}$ se tendrá
+por lo tanto el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(\epsilon_{+}+U_{f},\epsilon_{-}+U_{f})$ es $\hat{d}_{R}(\textbf{1}-\hat{d}_{D})\hat{n}_{L}$, realizando el mismo cálculo se encuentra que para las frecuencias $(\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})$ el operador de salto corresponde a $\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}$. Por ende recapitulando, para el operador $\hat{d}_{R}$ se tendrá
 
 \begin{align*}
     &\epsilon \to \hat{d}_{R}(\textbf{1}-\hat{n}_{L})(\textbf{1}-\hat{n}_{D})\\
    &\epsilon + U \to \hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\\
     &\epsilon +U_{f}\to \hat{d}_{R}\hat{n}_{L}(\textbf{1}-\hat{n}_{D})\\
-    &\epsilon +U+U_{f}\to \hat{d}_{R}\hat{n}_{D}\hat{n}_{L}
+    &\epsilon +U+U_{f}\to \hat{d}_{R}\hat{n}_{D}\hat{n}_{L}.
 \end{align*}
 
 \label{apendix5frecuencygroup}
@@ -1949,30 +1949,30 @@ Por lo tanto el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(
 \label{apendix5límites}
 
 \subsection{Aspecto Markoviano de las funciones correlación }
-Para que el sistema descrito en la sección \ref{sec5:modelo} tenga un comportamiento cercano a un Demonio de Maxwell autónomo, se necesita que las razones de transición $\gamma_{i}(\omega)$ modifiquen su respuesta dependiendo de si el punto cuántico del nivel $D$ este ocupado o desocupado. No todo comportamiento de las razones de transición aseguran que el comportamiento del sistema sea Markoviano, esto se puede determinar calculando la función correlación del reservorio y analizando el orden del tiempo de correlación $\tau_{B}$ que presenta este mismo. Para poder lograr hacer esto se deben calcular las funciónes correlación que para el caso de un ambiente fermiónico son de la forma
+Para que el sistema descrito en la sección \ref{sec5:modelo} tenga un comportamiento cercano a un Demonio de Maxwell autónomo, se necesita que las razones de tuneleo $\gamma_{i}(\omega)$ modifiquen su respuesta dependiendo de si el punto cuántico del nivel $D$ este ocupado o desocupado. No todo comportamiento de la razón de tuneleo aseguran que el comportamiento del sistema sea Markoviano, esto se puede determinar calculando la función correlación del reservorio y analizando el orden del tiempo de correlación $\tau_{B}$ que presenta este mismo. Para poder lograr hacer esto se deben calcular las funciones correlación que para el caso de un ambiente fermiónico son de la forma
 
 \begin{equation*}
     C^{\sigma}(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t} \gamma(\omega) f_{F}(\sigma \beta(\omega-\mu)),
 \end{equation*}
 
-En donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. La distribución de Fermi puede ser aproximada utilizando aproximantes de Padé \cite{hu2011pade,schinabeck2019hierarchical} que permite escribir la distribución como sumatoria
+en donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. La distribución de Fermi puede ser aproximada utilizando aproximantes de Padé \cite{hu2011pade,schinabeck2019hierarchical}. Esto permite escribir la distribución como sumatoria
 
 \begin{equation}
     f_{F}(x) \approx \frac{1}{2} - \sum_{l=0}^{N} \frac{ 2 \kappa_{l}x }{ x^{2} + \xi^{2}_{l} },
     \label{apendix5:pade}
 \end{equation}
 
-Los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en alguna frecuencia $\epsilon_{0}$. Se puede elegir un comportamiento lorentziano de la forma
+los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en alguna frecuencia $\epsilon_{0}$. Se puede elegir un comportamiento lorentziano de la forma
 
 \begin{equation*}
     \gamma(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}},
 \end{equation*}
 
-Con $W$ el ancho de la lorentziana y $\gamma_{0}$, $\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de transición en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$ como aparece en la Figura \ref{img:gammas}
+con $W$ el ancho de la lorentziana y $\gamma_{0}$, $\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de tuneleo en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$ como aparece en la Figura \ref{img:gammas}
 
-\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.65}{Descripción gráfica de las razones de transición en función de las frecuencias $\omega$.}
+\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.65}{Descripción gráfica de las razones de tuneleo en función de las frecuencias $\omega$.}
 
-Para obtener razones de transición que cumplan estos valores, se puede realizar el sistema de ecuaciones 
+Para obtener razones de tuneleo que cumplan estos valores, se puede realizar el sistema de ecuaciones 
 
 \begin{align*}
     \gamma(\epsilon_{0}) & = \gamma_{0} + \gamma_{f} \\
@@ -1985,13 +1985,13 @@ Con estas igualdades se pueden determinar los valores de $\gamma_{0}$, $\gamma_{
     C^{\sigma}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
 \end{align*}
 
-La función correlación se puede separar en dos partes
+la función correlación se puede separar en dos partes
 
 \begin{equation*}
     C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
 \end{equation*}
 
-Y podremos determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0},\tau_{Bf}\}$. Se partirá calculando una expresión analítica aproximada de la función correlación $C^{\sigma}_{f}(t)$, para realizar este integral se deberá localizar los polos en el plano complejo, para ello notemos que para \ref{apendix5:pade} los polos se ubican en $\omega = \pm i \xi_{l}/\beta + \mu $. Mientras que para la Lorentziana los polos se ubican en $\omega = \pm i W + \omega_{0}$. Para poder realizar este integral se usará el teorema del residuo \cite{riley2006mathematical}, tomando como zona de integración un semicírculo en el hemisferio positivo o negativo dependiendo del signo de $\sigma$. Primero el residuo de la Lorentziana consiste en 
+y podremos determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0},\tau_{Bf}\}$. Se partirá calculando una expresión analítica aproximada de la función correlación $C^{\sigma}_{f}(t)$, para realizar este integral se deberá localizar los polos en el plano complejo, para ello notemos que para \ref{apendix5:pade} los polos se ubican en $\omega = \pm i \xi_{l}/\beta + \mu $. Mientras que para la Lorentziana los polos se ubican en $\omega = \pm i W + \omega_{0}$. Para poder realizar este integral se usará el teorema del residuo \cite{riley2006mathematical}, tomando como zona de integración un semicírculo en el hemisferio positivo o negativo dependiendo del signo de $\sigma$. Primero el residuo de la Lorentziana consiste en 
 
 \begin{align*}
    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\omega_{0}-\mu)]e^{i\sigma \omega_{0}t}). 
@@ -2003,13 +2003,13 @@ Si se cumple que $\sigma > 0$ se toma el hemisferio inferior para la integració
     \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \omega_{0}t}e^{- Wt} f_{F}[i\beta W + \sigma \beta(\omega_{0}-\mu)]), 
  \end{align*}
 
-Para encontrar el residuo de los polos restantes, deberemos calcular 
+para encontrar el residuo de los polos restantes, deberemos calcular 
 
 \begin{align*}
     \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm \kappa_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } ,
 \end{align*}
 
-Eligiendo la zona de integración dependiendo del signo de $\sigma$ obtendremos que 
+eligiendo la zona de integración dependiendo del signo de $\sigma$ obtendremos que 
 
 \begin{align*}
     \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{ \xi_{l}}{\beta}t} e^{i\sigma \mu t} \kappa_{l} }{ [ \frac{ \sigma i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} }. 
@@ -2018,18 +2018,18 @@ Eligiendo la zona de integración dependiendo del signo de $\sigma$ obtendremos 
 Encontrando los residuos explícitamente se podrá escribir la función correlación como
 
 \begin{equation}
-    C^{\sigma}_{f}(t) \approx \sum_{l=0}^{N} \eta^{\sigma,l} e^{-\gamma_{\sigma,l} t}
+    C^{\sigma}_{f}(t) \approx \sum_{l=0}^{N} \eta^{\sigma,l} e^{-\gamma_{\sigma,l} t},
     \label{correlationf}
 \end{equation}
 
-En donde 
+en donde 
 
 \begin{equation*}
     \eta^{\sigma,l} = \left\{ \begin{array}{lc} \frac{\gamma_{f}W}{2} f_{F}[i\beta W + \sigma \beta (\omega_{0}-\mu)]  & l = 0 \\ \\ - \frac{i\kappa_{l}}{\beta} \left(\frac{\gamma_{f}W^{2}}{ (\frac{i\sigma \xi_{l}}{\beta} + (\mu-\omega_{0}))^{2} + W^{2} } \right) &  l \neq 0 \end{array} \right.
 \end{equation*}
 
 \begin{equation*}
-    \gamma_{\sigma,l} =  \left\{ \begin{array}{lc} W- \sigma i \omega_{0}  & l = 0 \\ \\ \frac{\xi_{l}}{\beta} - \sigma i \mu &  l \neq 0 \end{array} \right.
+    \gamma_{\sigma,l} =  \left\{ \begin{array}{lc} W- \sigma i \omega_{0}  & l = 0 \\ \\ \frac{\xi_{l}}{\beta} - \sigma i \mu &  l \neq 0 \end{array} \right..
 \end{equation*}
 
 Esto permite una expresión numérica para la función correlación $C^{\sigma}_{f}(t)$ y así evaluar su tiempo de correlación $\tau_{Bf}$. Para la otra función correlación se podrá encontrar el integral de manera analítica, es decir calcular
@@ -2044,7 +2044,7 @@ Se puede partir notando que esto consiste en calcular la Transformada de Fourier
 \mathcal{F}(f[\sigma (\omega - \mu)])(-\sigma t) = e^{-i \sigma \mu t}\mathcal{F}(f[\sigma \omega])(-\sigma t),
 \end{equation*}
 
-Es decir podemos centrarnos en calcular la transformación
+es decir, podemos centrarnos en calcular la transformación
 
 \begin{align*}
     \mathcal{F}(f[\sigma \omega])(-\sigma t) &= \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega \frac{e^{i\sigma \omega t}}{e^{\sigma \beta \omega} +1 } \\
@@ -2052,7 +2052,7 @@ Es decir podemos centrarnos en calcular la transformación
         & =  \frac{\gamma_{0}}{2} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right],
 \end{align*}
 
-Y así finalmente
+y así finalmente
 
 \begin{equation*}
     C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right].
@@ -2086,7 +2086,7 @@ En está sección se incluye la demostración de la fórmula de concurrencia. Pa
     \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{S}} \},
 \end{equation*}
 
-Usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$, la matriz densidad del sistema queda
+usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$, la matriz densidad del sistema queda
 
 \begin{equation}
     \hat{\rho}_{S} = 
@@ -2115,19 +2115,19 @@ En esta matriz no aparecen coherencias entre estados con distinto número de par
         \end{bmatrix},
 \end{equation*}
 
-Así se podrá calcular la concurrencia 
+así se podrá calcular la concurrencia 
 
 \begin{equation*}
     \mathcal{C}_{on} = \max \{ 0,\lambda_{1} - \lambda_{2} - \lambda_{3} - \lambda_{4} \},
 \end{equation*}
 
-En donde $\lambda_{i}$ son la raíz cuadrada de los autovalores ordenados en forma decreciente de la matriz
+en donde $\lambda_{i}$ son la raíz cuadrada de los autovalores ordenados en forma decreciente de la matriz
 
 \begin{equation*}
     B = \hat{\rho}_{LR} \tilde{\rho}_{LR} \hspace{10mm} \tilde{\rho}_{LR} = (\sigma_{y} \otimes \sigma_{y}) \hat{\rho}_{LR} (\sigma_{y} \otimes \sigma_{y}),
 \end{equation*}
 
-En donde $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
+en la cuál $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
 
 \begin{equation*}
     \tilde{\rho}_{LR} = 
@@ -2139,7 +2139,7 @@ En donde $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
         \end{bmatrix}.
 \end{equation*}
 
-En donde $p_{0}=p_{000}+p_{001}$, $p_{L}=p_{100} + p_{101}$, $p_{R}=p_{010}+p_{011}$, $p_{D}=p_{110}+p_{111}$ la matriz $B$ quedará
+Con  $p_{0}=p_{000}+p_{001}$, $p_{L}=p_{100} + p_{101}$, $p_{R}=p_{010}+p_{011}$, $p_{D}=p_{110}+p_{111}$ la matriz $B$ quedará
 
 \begin{equation*}
     B = 
@@ -2157,7 +2157,7 @@ Suponiendo que $p_{D}$ y $p_{0}$ son pequeños, el orden decreciente de los auto
     \lambda_{1} = p_{L}p_{R} + |\alpha + \beta| \hspace{10mm}  \lambda_{2} = p_{L}p_{R} - |\alpha + \beta| \hspace{10mm} \lambda_{3}=\lambda_{4} = \sqrt{p_{0}p_{D}},
 \end{equation*}
 
-Finalmente se obtiene
+finalmente se obtiene
 
 \begin{equation*}
     \mathcal{C}_{on} = \max\{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0\}.
@@ -2172,46 +2172,46 @@ Para partir derivando el modelo clásico para las partes diagonales de la matriz
     \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) + \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t),
 \end{equation*}
 
-Es equivalente a una ecuación no homogenea lineal de la forma
+es equivalente a una ecuación no homogenea lineal de la forma
 
 \begin{equation*}
     \frac{dy}{dt} - A(t)y = B(t),
 \end{equation*}
 
-Por lo tanto se puede solucionar utilizando factor integrante
+por lo tanto se puede solucionar utilizando factor integrante
 
 \begin{equation*}
     \check{\mu}(t) = \exp\left( - \int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}ds \right),
 \end{equation*}
 
-Multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$ se tendrá
+multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$ se tendrá
 
 \begin{equation*}
     \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}\hat{\rho}(t) - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t)) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}\hat{\rho}(t) ,
 \end{equation*}
 
-Por lo tanto queda la solución
+por lo tanto queda la solución
 
 \begin{equation*}
     \check{\mu}(t)\check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}(0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,   
 \end{equation*}
 
-Multiplicando por $\check{\mu}^{-1}(t)$ 
+multiplicando por $\check{\mu}^{-1}(t)$ 
 
 \begin{equation*}
     \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mu}^{-1}(t)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mu}^{-1}(t)\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,    
 \end{equation*}
 
-Para asi definir el operador
+para asi definir el operador
 
 \begin{equation*}
     \check{\mathcal{G}}(t,s) = \exp\left(  \int_{s}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}dt' \right),
 \end{equation*}
 
-Finalmente
+finalmente
 
 \begin{equation*}
-    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,    
+    \check{\mathcal{Q}}\hat{\rho}(t) = \check{\mathcal{G}}(t,0)\check{\mathcal{Q}}\hat{\rho}(0) + \int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau.    
 \end{equation*}
 
 Podremos reinsertar esto en la parte principal y quedará
@@ -2227,7 +2227,7 @@ Estas ecuaciones son exactas, ya que hasta ahora no se ha hecho ninguna aproxima
     \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{P}} = [\check{\mathcal{L}}_0,\check{\mathcal{P}}] = [\check{\mathcal{L}}_0,\check{\mathcal{Q}}] = 0, 
 \end{equation*}
 
-Estas relaciones se pueden explicar intuitivamente, ya que al ser $\check{\mathcal{V}}$ la perturbación que genera el tunneling entre los puntos $L$ y $R$, está contribución es la que produce efectos de coherencias. Así se puede notar que $\check{\mathcal{V}}\check{\mathcal{P}}\hat{\rho}$ es no diagonal y por lo tanto al aplicar nuevamente el operador que proyecta en la diagonal este se anula.
+estas relaciones se pueden explicar intuitivamente, ya que al ser $\check{\mathcal{V}}$ la perturbación que genera el tuneleo entre los puntos $L$ y $R$, está contribución es la que produce efectos de coherencias. Así se puede notar que $\check{\mathcal{V}}\check{\mathcal{P}}\hat{\rho}$ es no diagonal y por lo tanto al aplicar nuevamente el operador que proyecta en la diagonal este se anula.
 \\
 Para seguir con \ref{apendix5exactp}, primero supondremos que inicialmente no hay coherencias, es decir $\check{\mathcal{Q}}\hat{\rho}(0) = 0$. Segundo se sustituirá $\check{\mathcal{L}}_{f}$ en la ecuación \ref{apendix5exactp} y se usarán las propiedades de los operadores Nakajima-Zwanzig, partiendo por el integral
 
@@ -2237,7 +2237,7 @@ Para seguir con \ref{apendix5exactp}, primero supondremos que inicialmente no ha
             & = \exp\left(  \int_{\tau}^{t}\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}}\right] dt' \right),       
 \end{align*}
 
-En donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$. Continuando con la ecuación principal
+en donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$. Continuando con la ecuación principal
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}})\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau.       
@@ -2249,37 +2249,37 @@ Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\m
     \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\int_{\tau}^{t}ds\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right] = \check{\mathcal{L}}_{0}\check{\mathcal{P}}\int_{\tau}^{t}\sum_{k=0}^{\infty}\left(\frac{1}{k!} \right)\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]^{k}ds = \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau), 
 \end{equation*}
 
-Posteriormente esta contribución se anula y la ecuación principal se reduce a
+posteriormente esta contribución se anula y la ecuación principal se reduce a
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,        
 \end{equation*}
 
-De manera similar se puede notar que el término de la exponencial $\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}$ no actua en la ecuación por ende queda que 
+de manera similar se puede notar que el término de la exponencial $\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}$ no actua en la ecuación por ende queda que 
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (t-\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(\tau)d\tau,        
 \end{equation*}
 
-Haciendo el cambio de variable $\tau \to t-\tau$
+haciendo el cambio de variable $\tau \to t-\tau$
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau,        
 \end{equation*}
 
-En este momento es donde se hacen aproximaciones, ya que si consideramos el acoplamiento $g$ pequeño, es decir $g \ll \gamma_{i}$. Sabiendo que los autovalores de los superoperadores $\check{\mathcal{V}}$ y $\check{\mathcal{L}}_{0}$ serán proporcionales a $g$ y $\gamma_{i}$ respectivamente,  podremos despreciar la contribución de $\check{\mathcal{V}}$ en la exponencial, así queda
+en este momento es donde se hacen aproximaciones, ya que si consideramos el acoplamiento $g$ pequeño, es decir $g \ll \gamma_{i}$. Sabiendo que los autovalores de los superoperadores $\check{\mathcal{V}}$ y $\check{\mathcal{L}}_{0}$ serán proporcionales a $g$ y $\gamma_{i}$ respectivamente,  podremos despreciar la contribución de $\check{\mathcal{V}}$ en la exponencial, así queda
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t-\tau)d\tau,        
 \end{equation*}
 
-Finalmente, para aplicar aproximación de Markov suponemos que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho en escalas de tiempo de $1/\gamma_{i}$, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$ y el integral de $0$ a el infinito con lo que se obtiene
+finalmente, para aplicar aproximación de Markov suponemos que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho en escalas de tiempo de $1/\gamma_{i}$, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$ y el integral de $0$ a el infinito con lo que se obtiene
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}\hat{\rho}(t) = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}\hat{\rho}(t) + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{\infty}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]d\tau \check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}\hat{\rho}(t),        
 \end{equation*}
 
-Y finalmente se recupera la ecuación en formalismo de superoperadores  
+y finalmente se recupera la ecuación en formalismo de superoperadores  
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle. 
@@ -2304,20 +2304,20 @@ Considerando la ecuación \ref{ec5:classicalmodel} se puede probar que
     \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} = - \int_{0}^{\infty}d\tau \check{\mathcal{L}}_{0}\exp[ \check{\mathcal{L}}_{0}\tau] \check{Q}= - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau]\check{\mathcal{L}}_{0} \check{Q} = - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau] \check{Q} \check{\mathcal{L}}_{0} = \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0},
 \end{equation*}
 
-De manera similar se pueden probar las otras 2 ecuaciones.\\
+de manera similar se pueden probar las otras 2 ecuaciones.\\
  Finalmente para poder ocupar el inverso de Drazin, este se puede calcular numéricamente mediante descomposición espectral usando los autovalores por la izquierda y derecha dados por 
 
 \begin{equation*}
     \check{\mathcal{L}}_{0}|x_{j}\rangle \rangle = \lambda_{j} |x_{j}\rangle \rangle \hspace{10mm}  \langle \langle y_{j}|\check{\mathcal{L}}_{0} = \langle \langle y_{j}|\lambda_{j},
 \end{equation*}
 
-En donde $\langle \langle y_{i}|x_{j}\rangle \rangle = \delta_{ij}$. Si se toma $\lambda_{0}$ como el único autovalor cero del operador $\check{\mathcal{L}}_{0}$, se podrá escribir la descomposición espectral como
+en donde $\langle \langle y_{i}|x_{j}\rangle \rangle = \delta_{ij}$. Si se toma $\lambda_{0}$ como el único autovalor cero del operador $\check{\mathcal{L}}_{0}$, se podrá escribir la descomposición espectral como
 
 \begin{equation*}
     \check{\mathcal{L}}_{0} = \sum_{j\neq 0}\lambda_{j}|x_{j}\rangle \rangle \langle \langle y_{j}|,
 \end{equation*}
 
-Y así poder calcular el inverso de Drazin usando
+y así poder calcular el inverso de Drazin usando
 
 \begin{equation*}
     \check{\mathcal{L}}^{+}_{0} = \sum_{j\neq 0}\frac{1}{\lambda_{j}}|x_{j}\rangle \rangle \langle \langle y_{j}|.
@@ -2346,7 +2346,7 @@ Los autovalores estarán dados por
     \lambda_{0\pm} = \frac{ p_{100} +p_{010} }{2} \pm \frac{( [p_{100} - p_{010}]^{2} + 4|\alpha|^{2} )^{1/2} }{ 2 }  \hspace{10mm}      \lambda_{1\pm} = \frac{ p_{101} +p_{011} }{2} \pm \frac{( [p_{101} - p_{011}]^{2} + 4|\beta|^{2} )^{1/2} }{ 2 }, 
 \end{equation*}
 
-Si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$ podremos escribir los autovectores como
+si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$ podremos escribir los autovectores como
 
 \begin{align*}
     v_{0+} &  = [0,0,\cos(\theta_{0}/2)e^{i\phi_{0}/2},\sen(\theta_{0}/2)e^{-i\phi_{0}/2},0,0,0,0]^{T} \\
@@ -2355,19 +2355,19 @@ Si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}
     v_{1-} &  = [0,0,0,0,-\sen(\theta_{1}/2)e^{i\phi_{1}/2},\cos(\theta_{1}/2)e^{-i\phi_{1}/2},0,0]^{T},                   
 \end{align*}
 
-Con $\cos(\theta_{0}) = |\alpha|/\sqrt{\Delta^{2}_{0} + |\alpha|^{2}}$, $\cos(\theta_{1}) = |\beta|/\sqrt{\Delta^{2}_{1} + |\beta|^{2}}$ y
+con $\cos(\theta_{0}) = |\alpha|/\sqrt{\Delta^{2}_{0} + |\alpha|^{2}}$, $\cos(\theta_{1}) = |\beta|/\sqrt{\Delta^{2}_{1} + |\beta|^{2}}$ y
 
 \begin{equation*}
     \Delta_{i} = \frac{(p_{10i} - p_{01i})}{2},
 \end{equation*}
 
-Con esto se podrá obtener el logaritmo natural de la matriz mediante
+con esto se podrá obtener el logaritmo natural de la matriz mediante
 
 \begin{equation*}
     \ln \hat{\rho}_{S} = \hat{V}\ln \hat{\rho}_{D} \hat{V}^{-1}.
 \end{equation*}
     
-$\ln \hat{\rho}_{D}$ es la matriz diagonal 
+En donde $\ln \hat{\rho}_{D}$ es la matriz diagonal 
 
 \begin{equation*}
     \ln \hat{\rho}_{D} = 
@@ -2383,7 +2383,7 @@ $\ln \hat{\rho}_{D}$ es la matriz diagonal
         \end{bmatrix},
 \end{equation*}
 
-Y 
+y 
 
 \begin{equation*}
     \hat{V} = 
@@ -2415,7 +2415,7 @@ Finalmente se obtiene
         \end{bmatrix},
 \end{equation*}
 
-Con las cantidades 
+con las cantidades 
 
 \begin{align*}
     a_{i} & = \cos^{2}(\theta_{i}/2) \ln \lambda_{i+} + \sen^{2}(\theta_{i}/2) \ln \lambda_{i-} \\
@@ -2423,7 +2423,7 @@ Con las cantidades
     c_{i} & = \frac{\sin(\theta_{i})}{2}e^{i\phi_{i}} (\ln \lambda_{i+} - \ln \lambda_{i-}),    
 \end{align*}
 
-Así el logaritmo de la matriz densidad es 
+así el logaritmo de la matriz densidad es 
 
 \begin{align*}
     \ln \hat{\rho}_{S} & = \ln p_{111}|111\rangle \langle 111| + \ln p_{110}|110\rangle \langle 110| + \ln p_{001}|001\rangle \langle 001| \\ 
@@ -2453,7 +2453,7 @@ Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathca
     \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{011}|010\rangle \langle 010| - p_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  ),   
 \end{align*}
 
-Con estas cantidades se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ lo que permite obtener
+con estas cantidades se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ lo que permite obtener
 
 \begin{align*}
     \dot{I}_{L} &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}p_{000} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - a_{0}p_{100} ] )  \\ 
@@ -2469,7 +2469,7 @@ Con estas cantidades se podrán obtener los flujos de información en el estado 
       & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[p_{101}\ln p_{111}- a_{1}p_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}p_{111} - p_{111}\ln p_{111}]  ), 
 \end{align*}
 
-Si bien el cálculo de los flujos de información se puede hacer númerico, escribir estas expresiones analíticas nos permite determinar que existe contribución de las coherencias en la información, tanto en los parámetros $a_{i},b_{i}$ como en los términos $Re(\alpha c^{*}_{0}),Re(b^{*}_{1} \beta)$ . Es importante destacar que en el  límite en que las coherencias se anulan se recupera el resultado para un sistema clásico
+si bien el cálculo de los flujos de información se puede hacer númerico, escribir estas expresiones analíticas nos permite determinar que existe contribución de las coherencias en la información, tanto en los parámetros $a_{i},b_{i}$ como en los términos $Re(\alpha c^{*}_{0}),Re(b^{*}_{1} \beta)$ . Es importante destacar que en el  límite en que las coherencias se anulan se recupera el resultado para un sistema clásico
 
 \begin{align*}
  \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[p_{000}\ln p_{100} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - p_{100}\ln p_{100} ] )  \\ 
