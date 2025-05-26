@@ -956,14 +956,14 @@ El sistema reducido consiste en 3 puntos cuánticos, uno de ellos constituye el 
 El Hamiltoniano del sistema corresponde a 
 
 \begin{align*}
-    \hat{H}_{S} & = \epsilon_{D}\hat{d}^{\dagger}_{D}\hat{d}_{D} + \epsilon \hat{d}^{\dagger}_{L}\hat{d}_{L} + \epsilon \hat{d}^{\dagger}_{R}\hat{d}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
-          & + U(\hat{n}_{D}\hat{n}_{L} + \hat{n}_{D}\hat{n}_{R} )  + U_{f}\hat{n}_{R}\hat{n}_{L} 
+    \hat{H}_{S} & = \epsilon_{d}\hat{d}^{\dagger}_{D}\hat{d}_{D} + \epsilon \hat{d}^{\dagger}_{L}\hat{d}_{L} + \epsilon \hat{d}^{\dagger}_{R}\hat{d}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
+          & + U(\hat{n}_{D}\hat{n}_{L} + \hat{n}_{D}\hat{n}_{R} )  + U_{f}\hat{n}_{R}\hat{n}_{L},
 \end{align*}
 
-En donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ y los operadores $\hat{d}_{i}$ cumplen con las relaciones de anticonmutación
+en donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ y los operadores $\hat{d}_{i}$ cumplen con las relaciones de anticonmutación
 
 \begin{equation*}
-    \{\hat{d}_{\alpha},\hat{d}_{\beta} \} = 0  \hspace{10mm} \{\hat{d}^{\dagger}_{\alpha}, \hat{d}_{\beta} \} = \delta_{\alpha \beta}
+    \{\hat{d}_{\alpha},\hat{d}_{\beta} \} = 0  \hspace{10mm} \{\hat{d}^{\dagger}_{\alpha}, \hat{d}_{\beta} \} = \delta_{\alpha \beta}.
 \end{equation*}
 
 Usando la base de Fock $|n_{L},n_{R},n_{D} \rangle = (\hat{d}^{\dagger}_{L})^{n_{L}}(\hat{d}^{\dagger}_{R})^{n_{R}}(\hat{d}^{\dagger}_{D})^{n_{D}}|0,0,0\rangle$ y escribiendo el Hamiltoniano en el orden 
@@ -975,38 +975,38 @@ $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1
         0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
         0 & \epsilon_{L} & g & 0 & 0 & 0 & 0 & 0 \\
         0 & g & \epsilon_{R} & 0 & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & \epsilon_{D} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & \epsilon_{d} & 0 & 0 & 0 & 0 \\
         0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{R}  + U_{f} & 0 & 0 & 0 \\
-        0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{D} + U & g & 0 \\
-        0 & 0 & 0 & 0 & 0 & g & \epsilon_{R} + \epsilon_{D} + U & 0 \\
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{R}  + \epsilon_{D} + 2U + U_{f} 
-        \end{bmatrix}
+        0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{d} + U & g & 0 \\
+        0 & 0 & 0 & 0 & 0 & g & \epsilon_{R} + \epsilon_{d} + U & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{R}  + \epsilon_{d} + 2U + U_{f} 
+        \end{bmatrix}.
 \end{equation*}
 
 Por otro lado, el Hamiltoniano del baño $\hat{H}_{B} = \hat{H}_{L} + \hat{H}_{R} + \hat{H}_{D}$ e interacción $\hat{V} = \hat{V}_{L} + \hat{V}_{R} + \hat{V}_{D}$ consisten en
 
 \begin{equation*}
-    \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha l} \hat{c}^{\dagger}_{\alpha l}\hat{c}_{\alpha l} \hspace{10mm} \hat{V}_{\alpha} = \sum_{l} t_{\alpha l} ( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha l} + \hat{c}^{\dagger}_{\alpha l} \hat{d}_{\alpha} )
+    \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha l} \hat{c}^{\dagger}_{\alpha l}\hat{c}_{\alpha l} \hspace{10mm} \hat{V}_{\alpha} = \sum_{l} t_{\alpha l} ( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha l} + \hat{c}^{\dagger}_{\alpha l} \hat{d}_{\alpha} ),
 \end{equation*}
 
-Teniendo esto en consideración, para poder describir la dinámica disipativa del sistema se debe ser capaces de obtener los operadores de salto, para ello estarán los operadores que describen la interacción
+teniendo esto en consideración, para poder describir la dinámica disipativa del sistema se debe ser capaces de obtener los operadores de salto, para ello estarán los operadores que describen la interacción
 
 \begin{equation*}
     \hat{S}_{\alpha,1} = \hat{d}^{\dagger}_{\alpha} \hspace{10mm} \hat{S}_{\alpha,-1} = \hat{d}_{\alpha}
 \end{equation*}
 
 \begin{equation*}
-    \hat{B}_{\alpha,1} = \sum_{l}t_{\alpha l} \hat{c}_{\alpha l} \hspace{10mm} \hat{B}_{\alpha,-1} = \sum_{l}t_{\alpha l} \hat{c}^{\dagger}_{\alpha l}
+    \hat{B}_{\alpha,1} = \sum_{l}t_{\alpha l} \hat{c}_{\alpha l} \hspace{10mm} \hat{B}_{\alpha,-1} = \sum_{l}t_{\alpha l} \hat{c}^{\dagger}_{\alpha l}.
 \end{equation*}
 
 La evolución disipativa del sistema de 3 puntos cuánticos estará descrita por el Lindbladiano 
 
 \begin{equation}
-    \mathcal{L} = \mathcal{L}_{R} + \mathcal{L}_{L} + \mathcal{L}_{D}
+    \mathcal{L} = \mathcal{L}_{R} + \mathcal{L}_{L} + \mathcal{L}_{D},
     \label{Lindbladsec5}
 \end{equation}
 
-En donde explícitamenre cada operador de Lindblad consiste en
+en la cuál explícitamente cada operador de Lindblad consiste en
 
 \begin{align*}
     \mathcal{L}_{R} & = \gamma_{R}(\epsilon)(f_{R}(\epsilon)\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
@@ -1023,16 +1023,16 @@ En donde explícitamenre cada operador de Lindblad consiste en
 \end{align*}
 
 \begin{align*}
-    \mathcal{L}_{D} & = \gamma_{D}(\epsilon_{D})(f_{D}(\epsilon_{D})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \gamma_{D}(\epsilon+U)f_{D}(\epsilon_{D}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
-                    & + \gamma_{D}(\epsilon+U)[1-f_{D}(\epsilon+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
-                   & + \gamma_{D}(\epsilon+2U)(f_{D}(\epsilon_{D}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{R}(\epsilon_{D}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  )    
+    \mathcal{L}_{D} & = \gamma_{D}(\epsilon_{d})(f_{D}(\epsilon_{d})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{d})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
+                    & + \gamma_{D}(\epsilon_{d}+U)f_{D}(\epsilon_{d}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
+                    & + \gamma_{D}(\epsilon_{d}+U)[1-f_{D}(\epsilon_{d}+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
+                   & + \gamma_{D}(\epsilon_{d}+2U)(f_{D}(\epsilon_{d}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{d}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ),   
 \end{align*}
 
-En donde el superoperador 
+aquí el superoperador consiste en 
 
 \begin{equation*}
-    \mathcal{D}_{0}[\hat{A}]\hat{\rho} = \hat{A}\hat{\rho}\hat{A}^{\dagger}- \frac{1}{2} \{\hat{A }^{\dagger}\hat{A},\hat{\rho} \}
+    \mathcal{D}_{0}[\hat{A}]\hat{\rho} = \hat{A}\hat{\rho}\hat{A}^{\dagger}- \frac{1}{2} \{\hat{A }^{\dagger}\hat{A},\hat{\rho} \}.
 \end{equation*}
 
 La demostración de la ecuación \ref{Lindbladsec5} se encuentra en el apendice \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}.\\
@@ -1040,10 +1040,10 @@ La demostración de la ecuación \ref{Lindbladsec5} se encuentra en el apendice 
 Despreciando el $\hat{H}_{LS}$ \cite{prech2023entanglement} la evolución de los 3 puntos cuánticos es
 
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}_{S}(t) = -i[\hat{H}_{S},\hat{\rho}_{S}(t)] + \mathcal{L}(\hat{\rho}_{S}(t))
+    \frac{d}{dt}\hat{\rho}_{S}(t) = -i[\hat{H}_{S},\hat{\rho}_{S}(t)] + \mathcal{L}(\hat{\rho}_{S}(t)),
 \end{equation*}
 
-Usando esta ecuación se podrá calcular la evolución del sistema númericamente y calcular las cantidades termodinámicas.
+usando esta ecuación se podrá calcular la evolución del sistema númericamente y calcular las cantidades termodinámicas.
 
 
 \label{sec5:modelo}
@@ -1072,19 +1072,19 @@ De la Figura \ref{img:transporte3} se puede notar que $\dot{E}_{LR} = -\dot{E}_{
     
 En el sistema $LR$ se puede notar que para cantidades $eV/T$ pequeñas, el sistema recibe calor del reservorio, mientras que a medida que se aumenta $eV/T$ el reservorio recibe calor. En el sistema $LR$ el flujo de energía positivo consiste en que se debe entregar energía al sistema para poblar los sitios, aun así a medida que se aumenta $eV/T$ esa contribución de energía termina siendo derrotada por el flujo de electrones, y por eso el flujo de calor se vuelve negativo.\\
 
- También resulta importante calcular si existen efectos cuánticos en este estado estacionario del sistema, para ello se calcularan dos cantidades, primero la norma-$l_{1}$ $\mathcal{C}_{l_{1}}$ que permite calcular las coherencias en el sistema $LR$ y consiste en 
+ También resulta importante calcular si existen efectos cuánticos en este estado estacionario del sistema, para ello se calcularan dos cantidades. Uno de ellos es la norma-$l_{1}$ $\mathcal{C}_{l_{1}}$ que permite calcular las coherencias en el sistema $LR$ y consiste en 
 
 \begin{equation*}
-    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{s;i,j}|
+    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{s;i,j}|,
 \end{equation*}
 
-Otro efecto cuántico que es interesante medir es el entrelazamiento, la cantidad que permite medir esto es la concurrencia $\mathcal{C}_{on}$ \cite{hill1997entanglement,wootters1998entanglement} que consiste en 
+otro efecto cuántico que es interesante medir es el entrelazamiento entre los modos $|1,0,0\rangle,|0,1,0\rangle$ y además entre $|1,0,1\rangle,|0,1,1\rangle$. La cantidad que permite medir esto es la concurrencia $\mathcal{C}_{on}$ \cite{hill1997entanglement,wootters1998entanglement} que consiste en 
 
 \begin{equation*}
-    \mathcal{C}_{on} = \max \{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0 \}
+    \mathcal{C}_{on} = \max \{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0 \},
 \end{equation*}
 
-En donde $p_{0}$ y $p_{D}$ consisten en la probabilidad de que el sistema $LR$ este vacío o doblemente ocupado respectivamente. Mientras que $\alpha$ consiste en la coherencia entre los estados $\{|1,0,0\rangle, |0,1,0\rangle \}$ y $\beta$ la coherencia entre los estados  $\{|1,0,1\rangle, |0,1,1\rangle\}$. Esta fórmula esta deducida en el ápendice \ref{appendix5final}. 
+en donde $p_{0}$ y $p_{D}$ consisten en la probabilidad de que el sistema $LR$ este vacío o doblemente ocupado respectivamente. Mientras que $\alpha$ consiste en la coherencia entre los estados $\{|1,0,0\rangle, |0,1,0\rangle \}$ y $\beta$ la coherencia entre los estados  $\{|1,0,1\rangle, |0,1,1\rangle\}$. Esta fórmula esta deducida en el ápendice \ref{appendix5final}. 
 
 \insertimage[\label{img:transporte5}]{ejemplos/concutransport.png}{scale =0.4}{La línea azul corresponde a la coherencia mientras que la línea roja la concurrencia, todo esto en función de $eV/T$.}
     
@@ -1167,14 +1167,52 @@ Una de las ventajas de usar el formalismo descrito en \cite{prech2023entanglemen
 \label{ec5:classicalmodel}
 \end{equation}
 
-En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}\hat{\rho}$ actua como $-ig[\hat{d}_{L}^{\dagger}\hat{d}_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$ y $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current} y $\check{\mathcal{L}}_{f}\hat{\rho} = -i[\hat{H}_{S},\hat{\rho}] + \mathcal{L}(\hat{\rho})$. La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}. \\
+En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}|\hat{\rho}\rangle \rangle$ actua como $-ig[\hat{d}_{L}^{\dagger}\hat{d}_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$, $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current} y $\check{\mathcal{L}}_{f}|\hat{\rho}\rangle \rangle = -i[\hat{H}_{S},\hat{\rho}] + \mathcal{L}(\hat{\rho})$. La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}. \\
 El hecho de tener una ecuación maestra sólo para las partes diagonales permite modelar el sistema de manera estócastica, a través de un vector para las probabilidades de ocupación $\textbf{P} = [\rho_{000},\rho_{100},\rho_{010},\rho_{001},\rho_{110},\rho_{101},\rho_{011},\rho_{111}]^{T}$ y la ecuación maestra
 
 \begin{equation*}
     \frac{d}{dt}\textbf{P} = \textbf{W}\textbf{P},
 \end{equation*}
 
-En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:classicalmodel}. Finalmente flujos de corriente e información podrán ser calculadas usando la ecuación \ref{sec4:functionalcurrent}. Principalmente 
+En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:classicalmodel}. Finalmente flujos de corriente e información correspondientes al baño $\alpha$ podrán ser calculadas usando que 
+
+\begin{equation*}
+    \dot{N}_{\alpha} = -(\textbf{N})^{T} \textbf{W}_{\alpha}\textbf{P}
+\end{equation*}
+
+\begin{equation*}
+    \dot{I}_{\alpha} = -(\log \textbf{P})^{T} \textbf{W}_{\alpha}\textbf{P},
+\end{equation*}
+
+
+en donde los vectores $\textbf{N}$ y $\log \textbf{P}$ están escritos en la base de Fock usada para el vector $\textbf{P}$. La expresión analítica para el flujo de corriente de partículas para el baño $L$ es equivalente tanto en el clásico como en el cuántico y es 
+
+\begin{align*}
+    \dot{N}_{L} & = \gamma_{L}(\epsilon)(f_{L}(\epsilon)p_{000} - [1-f_{L}(\epsilon)]p_{100} ) \\
+        & + \gamma_{L}(\epsilon + U) (f_{L}(\epsilon+U)p_{001} - [1-f_{L}(\epsilon+U)]p_{101} )  \\
+        & + \gamma_{L}(\epsilon + U_{f}) (f_{L}(\epsilon+U_{f})p_{010} - [1-f_{L}(\epsilon+U_{f})]p_{110} )  \\  
+        & + \gamma_{L}(\epsilon + U + U_{f}) (f_{L}(\epsilon+U + U_{f})p_{011} - [1-f_{L}(\epsilon+U+U_{f})]p_{111} ).
+\end{align*}
+
+Por otro lado, los flujos de información clásicos corresponden a 
+
+\begin{align*}
+  \dot{I}_{L}  &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[p_{000}\ln p_{100} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - p_{100}\ln p_{100} ] )  \\ 
+      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[p_{001}\ln p_{101} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -p_{101}\ln p_{101} ]   ) \\  
+      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -p_{010}\ln p_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[p_{110}\ln p_{010} - p_{110}\ln p_{110} ] ) \\  
+      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- p_{011}\ln p_{011}]) \\   
+      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[p_{111}\ln p_{011} - p_{111}\ln p_{111}])   
+\end{align*}
+
+\begin{align*}
+ \dot{I}_{R} & =  \gamma_{R}(\epsilon)(f_{R}(\epsilon)[p_{000}\ln p_{010} - p_{000}\ln p_{000}] + (1-f_{R}(\epsilon))[p_{010}\ln p_{000} - p_{010}\ln p_{010} ] )  \\ 
+      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[p_{001}\ln p_{011} - p_{001}\ln p_{001}] + (1-f_{R}(\epsilon + U))[p_{011}\ln p_{001} -p_{011}\ln p_{011} ]   ) \\  
+      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[p_{100}\ln p_{110} -p_{100}\ln p_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[p_{110}\ln p_{100} - p_{110}\ln p_{110} ] ) \\  
+      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[p_{101}\ln p_{111}- p_{101}\ln p_{101}]) \\   
+      & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[p_{111}\ln p_{101} - p_{111}\ln p_{111}]).   
+\end{align*}
+
+La versión cuántica de los flujos de información se encuentra calculada en el ápendice \ref{apendix5infoflow}. Se pueden graficar estas cantidades tanto en el caso clásico y en el caso cuántico como se vee en la Figura 
 
 \label{sec5:demonio}
 
@@ -2486,5 +2524,6 @@ si bien el cálculo de los flujos de información se puede hacer númerico, escr
       & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[p_{111}\ln p_{101} - p_{111}\ln p_{111}]).   
 \end{align*}
 
+\label{apendix5infoflow}
 
 \end{appendixs}
