@@ -724,10 +724,10 @@ El demonio de Maxwell consiste en un experimento mental esbozado por Maxwell en 
 
 \begin{align*}
     \Delta S & = \Delta S_{A} + \Delta S_{B} = C_{V}\left( \log \frac{T-\Delta T}{T} + \log \frac{T+\Delta T}{T} \right) \\
-       & =  C_{V} \log \left( 1 - \frac{\Delta T^{2}}{T^{2}}  \right) < 0
+       & =  C_{V} \log \left( 1 - \frac{\Delta T^{2}}{T^{2}}  \right) < 0,
 \end{align*}
 
-En donde $C_{V}$ es la capacidad calorífica a volumen constante. Del cálculo de la entropía total, se obtiene que sin realizar trabajo se logró una disminución de la entropía, lo que rompe aparentemente con la segunda ley de la termódinamica. Posteriormente, Landauer exorcisaría este demonio, percatandosé que para que el demonio conozca la velocidad de las partículas, este necesita medir, y el hecho de medir requiere de  disipación, volviendo a respetar la segunda ley\cite{Landauer_1961}. \\
+en donde $C_{V}$ es la capacidad calorífica a volumen constante. Del cálculo de la entropía total, se obtiene que sin realizar trabajo se logró una disminución de la entropía, lo que rompe aparentemente con la segunda ley de la termódinamica. Posteriormente, Landauer exorcisaría este demonio, percatandosé que para que el demonio conozca la velocidad de las partículas, este necesita medir, y el hecho de medir requiere de  disipación, volviendo a respetar la segunda ley\cite{Landauer_1961}. \\
 Para sistemas no autónomos, es decir sistemas manipulados por un agente externo a través del cambio de cantidades macroscópicas, como por ejemplo el motor de Szilard\cite{szilard1964decrease}. La descripción y exorcización del Demonio de Maxwell se ha descrito, mediante la cuantificación de la energía que cuesta hacer una medición como también por el máximo trabajo que se puede extraer de un motor de feedback\cite{maruyama2009colloquium,sagawa2008second}. Sin embargo el caso de sistemas autónomos merece ser visto con detención.
 
 \insertimage[\label{img:demon}]{ejemplos/Maxwelldemon1}{scale=0.9}{Esquema que representa al Demonio de Maxwell. Primero, consiste en los dos compartimientos que poseen el gas ideal distribuido de manera homogénea. Por último al trasladar las partículas de un lado a otro, queda el compartimiento A con partículas frías mientras que el compartimiento B con partículas calientes. Esta figura fue usada de \cite{link1} .}
@@ -739,25 +739,24 @@ Muchos procesos físicos requieren la interacción entre un conjunto de subsiste
 Para poder describir un demonio de Maxwell autónomo, se debe ser capaz de calcular la evolución de un sistema conectado a uno o más reservorios, y por ende sujeto a las leyes de la termodinámica. Para ello, supongamos el caso de 2 sistemas independientes $X$ e $Y$, cada uno de ellos tiene distintos estados discretos representados por $x$ e $y$. Estos sistemas tienen su propia dinámica, la cuál corresponde a saltos aleatorios entre los estados del sistema, que obedecen distintas razones de transición las cuáles serán determinadas por los reservorios a los cuáles esta conectado localmente cada subsistema, que refiere a la condición de balance detallado local\cite{van2015ensemble}. Esta evolución entre estados, se modela como un proceso de Markov\cite{van1992stochastic}. Para poder describir el sistema en conjunto se supondrá primero que el sistema se acopla de manera bipartita, que en este contexto consiste en que si se tiene un estado conjunto de los dos sistemas $(x,y)$ sólo pueden haber transiciones del tipo $(x,y) \to (x,y')$ o $(x,y) \to (x',y)$ y no $(x,y) \to (x',y')$. Esto permite que el sistema total $XY$ siga siendo markoviano, y por ende la probabilidad de estar en el estado $(x,y)$, es decir $p(x,y)$ podrá ser descrita por una ecuación maestra
 
 \begin{equation*}
-    d_{t}p(x,y) = \sum_{x',y'} \left[ W_{x,x'}^{y,y'}p(x',y')  - W_{x',x}^{y',y}p(x,y) \right]
+    d_{t}p(x,y) = \sum_{x',y'} \left[ W_{x,x'}^{y,y'}p(x',y')  - W_{x',x}^{y',y}p(x,y) \right],
 \end{equation*}
-
-En donde $W_{x,x'}^{y,y'}$ es la razón de transición en la cuál el sistema salta de $(x',y') \to (x,y)$. La cuál obedece la condición de balance detallado local $\ln (W_{x,x'}^{y,y'}/W_{x',x}^{y',y}) = - (\epsilon_{x,y} - \epsilon_{x',y'})/T$, que corresponde al cambio de energía durante un salto, el cuál es suministrado por el reservorio a través del calor. Debido a que el sistema es bipartito, la forma de las razones de transición corresponden a
+En la cuál $W_{x,x'}^{y,y'}$ es la razón de transición en la cuál el sistema salta de $(x',y') \to (x,y)$. La cuál obedece la condición de balance detallado local $\ln (W_{x,x'}^{y,y'}/W_{x',x}^{y',y}) = - (\epsilon_{x,y} - \epsilon_{x',y'})/T$, que corresponde al cambio de energía durante un salto, el cuál es suministrado por el reservorio a través del calor. Debido a que el sistema es bipartito, la forma de las razones de transición corresponde a
 
 \begin{equation*}
-    W_{x,x'}^{y,y'} = \left\{ \begin{array}{lcc} w_{x,x'}^{y} & si & x \neq x'; y=y' \\ \\ w_{x}^{y,y'} & si & x=x';y\neq y'\\ \\ 0 & si & x \neq x'; y \neq y' \end{array} \right.
+    W_{x,x'}^{y,y'} = \left\{ \begin{array}{lcc} w_{x,x'}^{y} & si & x \neq x'; y=y' \\ \\ w_{x}^{y,y'} & si & x=x';y\neq y'\\ \\ 0 & si & x \neq x'; y \neq y' \end{array} \right..
 \end{equation*}
 
 En función de la corriente de probabilidad $J_{x,x'}^{y,y'} = W_{x,x'}^{y,y'}p(x',y') - W_{x',x}^{y',y}p(x,y)$, la ecuación maestra queda como 
 
 \begin{equation*}
-    d_{t}p(x,y) = \sum_{x',y'}J_{x,x'}^{y,y'} = \sum_{x'}J_{x,x'}^{y} + \sum_{y'}J_{x}^{y,y'}
+    d_{t}p(x,y) = \sum_{x',y'}J_{x,x'}^{y,y'} = \sum_{x'}J_{x,x'}^{y} + \sum_{y'}J_{x}^{y,y'},
 \end{equation*}
 
-En donde $J_{x}^{y,y'} = w_{x}^{y,y'}p(x,y') - w_{x}^{y',y}p(x,y)$ la corriente desde $y'$ e $y$ a lo largo de $x$. Esto es importante, ya que la estructura bipartita permite separar las corrientes de probabilidad, una parte que va en la dirección $X$ y otra en la dirección $Y$. Este hecho puede ser explotado, ya que cualquier funcional de la corriente, es decir una cantidad $\mathcal{A}(J) = \sum J_{x,x'}^{y,y'}A_{x,x'}^{y,y'}$, se puede dividir en dos contribuciones\cite{horowitz2014thermodynamics}
+en donde $J_{x}^{y,y'} = w_{x}^{y,y'}p(x,y') - w_{x}^{y',y}p(x,y)$ la corriente desde $y'$ e $y$ a lo largo de $x$. Esto es importante, ya que la estructura bipartita permite separar las corrientes de probabilidad, una parte que va en la dirección $X$ y otra en la dirección $Y$. Este hecho puede ser explotado, ya que cualquier funcional de la corriente, es decir una cantidad $\mathcal{A}(J) = \sum J_{x,x'}^{y,y'}A_{x,x'}^{y,y'}$, se puede dividir en dos contribuciones\cite{horowitz2014thermodynamics}
 
 \begin{equation}
-    \mathcal{A}(J) = \sum_{x\geq x';y \geq y'} J_{x,x'}^{y}A_{x,x'}^{y,y'} + \sum_{x \geq x'; y \geq y'}J_{x}^{y,y'} A_{x,x'}^{y,y'}
+    \mathcal{A}(J) = \sum_{x\geq x';y \geq y'} J_{x,x'}^{y}A_{x,x'}^{y,y'} + \sum_{x \geq x'; y \geq y'}J_{x}^{y,y'} A_{x,x'}^{y,y'}.
 \label{sec4:functionalcurrent}
 \end{equation}
 
@@ -765,28 +764,28 @@ Con esto, se puede separar la variación de $\mathcal{A}$ uno en la dirección $
 
 \label{sec4:flujos}
 \section{Segunda Ley de la termodinámica y flujos de información}
-El sistema conjunto $XY$, debido a que está en contacto con un baño es un sistema abierto el cuál satisface la segunda ley de la termodinámica, lo cuál exige que la razón de producción de entropía sea siempre positiva
+El sistema conjunto $XY$ debido a que está en contacto con un baño, es un sistema abierto el cuál satisface la segunda ley de la termodinámica, lo cuál exige que la razón de producción de entropía sea siempre positiva
 
 \begin{equation*}
-    \dot{\sigma} = \partial_{t}S^{XY} + \dot{S}_{r} \geq 0 
+    \dot{\sigma} = \partial_{t}S^{XY} + \dot{S}_{r} \geq 0. 
 \end{equation*}
 
-En donde el cambio de entropía del sistema corresponde a 
+El cambio de entropía del sistema corresponde a 
 
 \begin{equation*}
-    \partial_{t}S^{XY} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)}
+    \partial_{t}S^{XY} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)},
 \end{equation*}
 
-Y el cambio de entropía debido al ambiente es
+y el cambio de entropía debido al ambiente es
 
 \begin{equation*}
-    \dot{S}_{r} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}}
+    \dot{S}_{r} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}},
 \end{equation*}
 
-Debido a esto
+por ende
 
 \begin{equation*}
-    \dot{\sigma} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{ W_{x,x'}^{y,y'}p(x',y')  }{ W_{x',x}^{y',y}p(x,y) } \geq 0
+    \dot{\sigma} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{ W_{x,x'}^{y,y'}p(x',y')  }{ W_{x',x}^{y',y}p(x,y) } \geq 0.
 \end{equation*}
 
 Estos resultados se demuestran en el apendice \ref{apendix4:secondlaw}. \\ 
@@ -794,48 +793,48 @@ Estos resultados se demuestran en el apendice \ref{apendix4:secondlaw}. \\
 Ya definida la razón de producción de entropía, se necesita cuantificar la información entre los dos sistemas. La cantidad que permite medir las correlaciones entre los dos sistemas es la información mutua
 
 \begin{equation*}
-    I_{xy} = \sum_{x,y} p(x,y) \ln \frac{p(x,y)}{p(x)p(y)} \geq 0 
+    I_{xy} = \sum_{x,y} p(x,y) \ln \frac{p(x,y)}{p(x)p(y)} \geq 0, 
 \end{equation*}
 
-Tal que, cuando $I_{xy}$ es grande los dos sistemas son altamente correlacionados, mientras que $I_{xy}=0$ significa que los sistemas son estadísticamente independientes. Para definir los flujos de información, se necesita calcular la variación temporal de la información mutua y separarla en dos contribuciones $\partial_{t} I_{xy} = \dot{I}^{X} + \dot{I}^{Y}$ con
+tal que, cuando $I_{xy}$ es grande los dos sistemas son altamente correlacionados, mientras que $I_{xy}=0$ significa que los sistemas son estadísticamente independientes. Para definir los flujos de información, se necesita calcular la variación temporal de la información mutua y separarla en dos contribuciones $\partial_{t} I_{xy} = \dot{I}^{X} + \dot{I}^{Y}$ con
 
 \begin{align*}
     \dot{I}^{X} & = \sum_{x\geq x'; y}J_{x,x'}^{y} \ln \frac{ p(y|x) }{p(y|x')} \\
-    \dot{I}^{Y} & = \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y)}{ p(x|y') }
+    \dot{I}^{Y} & = \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y)}{ p(x|y') }.
 \end{align*}
 
  La demostración de este resultado también está en el apendice \ref{apendix4:secondlaw}. $\dot{I}^{X}$ e $\dot{I}^{Y}$ cuantifican como la información fluye entre los dos subsistemas, si $\dot{I}^{X}>0$ un salto en la dirección $X$ en promedio, aumenta la información $I_{xy}$, es decir $X$ esta aprendiendo o midiendo $Y$. De manera contraria, $\dot{I}^{X}<0$ significa que los saltos en la dirección $X$ decrecen las correlaciones, lo que puede ser interpretado como consumo de información con el objetivo de extraer energía. Debido a que la razón de producción de entropía es un funcional de la corriente, podemos usar la ecuación \ref{sec4:functionalcurrent} y escribir
 
  \begin{equation*}
-    \dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}
+    \dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y},
  \end{equation*}
 
-Así
+así
 
 \begin{align*}
     \dot{\sigma}^{X} & = \sum_{x \geq x';y} J_{x,x'}^{y} \ln  \frac{w_{x,x'}^{y} p(x',y) }{w_{x',x}^{y} p(x,y) } \geq 0 \\
-    \dot{\sigma}^{Y} & = \sum_{x;y\geq y'}J_{x}^{y,y'} \ln \frac{w_{x}^{y,y'} p(x,y') }{ w_{x}^{y',y} p(x,y) } \geq 0 
+    \dot{\sigma}^{Y} & = \sum_{x;y\geq y'}J_{x}^{y,y'} \ln \frac{w_{x}^{y,y'} p(x,y') }{ w_{x}^{y',y} p(x,y) } \geq 0, 
 \end{align*}
 
-En donde podemos identificar
+en donde podemos identificar
 
 \begin{align*}
     \dot{\sigma}^{X} &  = \sum_{x \geq x';y} J_{x,x'}^{y} \left[ \ln \frac{p(x')}{p(x)}  +\ln \frac{w_{x,x'}^{y}}{ w_{x',x}^{y} } + \ln \frac{p(y|x')}{p(y|x)} \right] \\
-    \dot{\sigma}^{Y} &  = \sum_{x;y \geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(y')}{p(y)}  + \ln \frac{w_{x}^{y,y'}}{ w_{x}^{y',y} } + \ln \frac{p(x|y')}{p(x|y)} \right] 
+    \dot{\sigma}^{Y} &  = \sum_{x;y \geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(y')}{p(y)}  + \ln \frac{w_{x}^{y,y'}}{ w_{x}^{y',y} } + \ln \frac{p(x|y')}{p(x|y)} \right].
 \end{align*}
 
 Con lo que finalmente para las razones de produccion locales
 
 \begin{align*}
     \dot{\sigma}^{X} & = \partial_{t}S^{X} + \dot{S}_{r}^{X} - \dot{I}^{X} \geq 0 \\
-    \dot{\sigma}^{Y} & = \partial_{t}S^{Y} + \dot{S}_{r}^{Y} - \dot{I}^{Y} \geq 0
+    \dot{\sigma}^{Y} & = \partial_{t}S^{Y} + \dot{S}_{r}^{Y} - \dot{I}^{Y} \geq 0.
 \end{align*}
 
 Estas dos ecuaciones permiten visualizar como la contribución de la información actua en la producción de entropía local de cada subsistema. Supongamos que no se sabe que el subsistema $Y$ esta interactuando con $X$, y que sólo somos capaces de monitorear $X$, en ese caso asignaremos a este sistema la razón de producción de entropía $\dot{\sigma}^{X}_{0} = \partial_{t}S^{X} + \dot{S}_{r}^{X}$. Si el subsistema $X$ estuviera aislado, efectivamente se tendría $\dot{\sigma}^{X}_{0} \geq 0$, sin embargo por la interacción  con el subsistema $Y$ pueden suceder casos en que $\dot{\sigma}^{X}_{0}<0$. Esta violación aparente de la Segunda Ley se puede interpretar como el efecto de un Demonio de Maxwell. En la evolución de sistemas autónomos los cuáles relajan a un estado estacionario fuera del equilibrio, se cumple que al llegar al estado estacionario $d_{t}I_{xy} = 0$. Por lo tanto, el flujo de información queda $\dot{\mathcal{I}} = \dot{I}^{X} = - \dot{I}^{Y}$ y la razón de producción de entropía local de cada subsistema se vuelve
 
 \begin{align*}
     \dot{\sigma}^{X} & = \dot{S}_{r}^{X} - \dot{\mathcal{I}} \geq 0 \\
-    \dot{\sigma}^{Y} & =  \dot{S}_{r}^{Y} + \dot{\mathcal{I}} \geq 0  
+    \dot{\sigma}^{Y} & =  \dot{S}_{r}^{Y} + \dot{\mathcal{I}} \geq 0 . 
 \end{align*}
 
 Supongamos el caso en que $\dot{\mathcal{I}}> 0$, en este caso se puede interpretar que $X$ está actuando como sensor a medida que monitorea el subsistema $Y$. Para poder realizar esta actividad, el subsistema $X$ necesita entregar una energía mínima $\dot{S}_{r}^{X} \geq \dot{\mathcal {I}}$. Por el otro lado el subsistema $Y$ está entregando información, la cuál puede ser utilizada para extraer energía $-\dot{S}_{r}^{Y} \leq \dot{\mathcal{I}}$, esto es importante, ya que se puede utilizar para realizar trabajo en sistemas fuera del equilibrio, o enfriar un reservorio caliente. Un ejemplo típico de ello, es en sistemas fuera del equilibrio sujetos a un gradiente de potencial, en este caso el Demonio de Maxwell se puede visualizar mediante la aparición de una corriente de partículas en contra del gradiente de potencial. Efecto que se analizará en detalle en secciones posteriores.
@@ -844,57 +843,57 @@ Supongamos el caso en que $\dot{\mathcal{I}}> 0$, en este caso se puede interpre
 Para poder describir los flujos de información en un contexto cuántico, se necesita conocer la dinámica de un sistema cuántico abierto acoplado a uno o varios reservorios, para ello se útilizara la matriz densidad. La cuál describirá la evolución del sistema reducido. El sistema total estará descrito po el Hamiltoniano $\hat{H} = \hat{H}_{S}+\hat{H}_{B}+ \hat{H}_{I}$, como se vio en la sección \ref{sec:lindblad}, la evolución markoviana de este sistema resulta en la ecuación maestra
 
 \begin{equation*}
-    \partial_{t}\hat{\rho}_{S}(t) = - i[\hat{H}_{S} + \hat{H}_{LS},\hat{\rho}_{S}] + \mathcal{L}(\hat{\rho}_{S})
+    \partial_{t}\hat{\rho}_{S}(t) = - i[\hat{H}_{S} + \hat{H}_{LS},\hat{\rho}_{S}] + \mathcal{L}(\hat{\rho}_{S}),
 \end{equation*}
 
-En donde el acoplamiento con distintos reservorios $\alpha$ consiste en $\mathcal{L} = \sum_{\alpha}\mathcal{L}_{\alpha}$. Si el estado de equilibrio local consiste en un estado de Gibbs $\hat{\rho}_{eq}^{\alpha} = Z_{\beta_{\alpha},\mu_{\alpha}}^{-1}e^{-\beta_{\alpha}(\hat{H}_{s} - \mu_{\alpha}\hat{N})}$, se puede usar la desigualdad de Spohn \cite{spohn1978entropy} para  obtener una inecuación de Clausius para la razón de producción de entropía local correspondiente al baño $\alpha$. Se partirá primero de (Los resultados son equivalentes si en él estado estacionario está el Hamiltoniano termodinámico $\hat{H}_{TD}$)
+y el acoplamiento con distintos reservorios $\alpha$ consiste en $\mathcal{L} = \sum_{\alpha}\mathcal{L}_{\alpha}$. Si el estado de equilibrio local consiste en un estado de Gibbs $\hat{\rho}_{eq}^{\alpha} = Z_{\beta_{\alpha},\mu_{\alpha}}^{-1}e^{-\beta_{\alpha}(\hat{H}_{s} - \mu_{\alpha}\hat{N})}$, se puede usar la desigualdad de Spohn \cite{spohn1978entropy} para  obtener una inecuación de Clausius para la razón de producción de entropía local correspondiente al baño $\alpha$. Se partirá primero de (Los resultados son equivalentes si en él estado estacionario está el Hamiltoniano termodinámico $\hat{H}_{TD}$)
 
 \begin{equation}
-    - \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq} )  ] \geq 0
+    - \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq} )  ] \geq 0,
 \label{spohninfo}
 \end{equation}
 
-Definiendo primero, la cantidad $\dot{S}^{\alpha} = - \text{Tr}[(\mathcal{L}_{\alpha}\hat{\rho}_{S}) \ln \hat{\rho}_{S} ]$ como la razón de cambio de la entropía de Von Neumann $S = - \text{Tr}[\hat{\rho}_{S} \ln \hat{\rho}_{S} ]$ debido a la acción del disipador $\mathcal{L}_{\alpha}$, y identificando el flujo de calor en el segundo término de \ref{spohninfo}, se obtiene la razón de producción de entropía local
+definiendo primero, la cantidad $\dot{S}^{\alpha} = - \text{Tr}[(\mathcal{L}_{\alpha}\hat{\rho}_{S}) \ln \hat{\rho}_{S} ]$ como la razón de cambio de la entropía de Von Neumann $S = - \text{Tr}[\hat{\rho}_{S} \ln \hat{\rho}_{S} ]$ debido a la acción del disipador $\mathcal{L}_{\alpha}$, y identificando el flujo de calor en el segundo término de \ref{spohninfo}, se obtiene la razón de producción de entropía local
 
 \begin{equation}
-    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0
+    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0,
 \label{sec4:localentropy}
 \end{equation}
 
-Que actúa como una inecuación de Clausius parcial. Esto es importante, ya que localmente se puede separar la producción de entropía en cantidades mayor a cero, similar a como se hizo en la descripción clásica. De hecho si se suman todas las razones de cambio de entropía, se obtiene la derivada total $\partial_{t} S = \sum_{\alpha} \dot{S}^{\alpha}$, por lo tanto al sumar todas las producciones de entropía locales
+que actúa como una inecuación de Clausius parcial. Esto es importante, ya que localmente se puede separar la producción de entropía en cantidades mayor a cero, similar a como se hizo en la descripción clásica. De hecho si se suman todas las razones de cambio de entropía, se obtiene la derivada total $\partial_{t} S = \sum_{\alpha} \dot{S}^{\alpha}$, por lo tanto al sumar todas las producciones de entropía locales
 
 \begin{equation*}
-    \sum_{\alpha}\dot{\sigma}^{\alpha} = \partial_{t}S - \sum_{\alpha}\beta_{\alpha}J_{\alpha} = \dot{\sigma} \geq 0
+    \sum_{\alpha}\dot{\sigma}^{\alpha} = \partial_{t}S - \sum_{\alpha}\beta_{\alpha}J_{\alpha} = \dot{\sigma} \geq 0,
 \end{equation*}
 
-Que corresponde a la inecuación de Clausius estándar.\\
+que corresponde a la inecuación de Clausius estándar.\\
 \\
 Se puede notar que para el caso estacionario $\partial_{t}S = 0$, no necesariamente $\dot{S}^{\alpha}$ es cero. Sino que depende del flujo de calor que entra localmente por el disipador $\alpha$. También se puede tratar la inecuación para la energía libre, primero definiendo la corriente de energía y calor correspondientes al baño $\alpha$
 
 \begin{align*}
     \dot{E}_{\alpha} & = \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{H}_{S}] \\
-    \dot{W}_{\alpha} & = \mu_{\alpha}\text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{N}]
+    \dot{W}_{\alpha} & = \mu_{\alpha}\text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{N}].
 \end{align*}
 
 En este caso usamos el Hamiltoniano $\hat{H}_{S}$, sin embargo si el estado estacionario contiene $\hat{H}_{TD}$, entonces para definir el flujo de energía se usa $\hat{H}_{TD}$ de manera consistente.\\
  Se cumplirá que la suma de las corrientes de energía es la derivada total de la energía interna $\sum_{\alpha} \dot{E}_{\alpha} = \partial_{t}E$. Para un Hamiltoniano tiempo independiente sólo se considera trabajo químico, por ende $\dot{E}_{\alpha} = \dot{Q}_{\alpha} + \dot{W}_{\alpha}$, si multiplicamos la ecuación \ref{sec4:localentropy} por $T_{\alpha}$ y reemplazamos $\dot{Q}_{\alpha}$, se obtendrá
 
 \begin{equation}
-    T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W}_{\alpha} - \dot{\mathcal{F}}_{\alpha} \geq 0
+    T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W}_{\alpha} - \dot{\mathcal{F}}_{\alpha} \geq 0,
 \label{sec4:localfreerate}
 \end{equation}
 
-En donde la razón de cambio de energía libre debido al reservorio $\alpha$ consiste en $\dot{\mathcal{F}}_{\alpha} = \dot{E}_{\alpha} - T_{\alpha}\dot{S}^{\alpha}$. Por otro lado, la inecuación \ref{sec4:localfreerate} consiste en una inecuación local de energía libre. Si sumamos todas estas inecuaciones se tendrá que
+en donde la razón de cambio de energía libre debido al reservorio $\alpha$ consiste en $\dot{\mathcal{F}}_{\alpha} = \dot{E}_{\alpha} - T_{\alpha}\dot{S}^{\alpha}$. Por otro lado, la inecuación \ref{sec4:localfreerate} consiste en una inecuación local de energía libre. Si sumamos todas estas inecuaciones se tendrá que
 
 \begin{equation}
-    \sum_{\alpha}T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W} - \dot{\mathcal{F}} \geq 0
+    \sum_{\alpha}T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W} - \dot{\mathcal{F}} \geq 0,
 \label{sec4:freeratefinal}
 \end{equation}
 
-En donde $\dot{W} = \sum_{\alpha}\dot{W}_{\alpha}$ y la razón de cambio de energía libre total
+en la cuál $\dot{W} = \sum_{\alpha}\dot{W}_{\alpha}$ y la razón de cambio de energía libre total es
 
 \begin{equation*}
-    \dot{\mathcal{F}} = \partial_{t}E - \sum_{\alpha}T_{\alpha} \dot{S}^{\alpha}
+    \dot{\mathcal{F}} = \partial_{t}E - \sum_{\alpha}T_{\alpha} \dot{S}^{\alpha}.
 \end{equation*}
 
 Para el caso particular en qué todas las temperaturas son iguales $T_{\alpha} = T$, la razón $\dot{\mathcal{F}}$ se vuelve equivalente a la derivada temporal de la energía libre $\partial_{t}F = \partial_{t}(E-TS)$. Sólo en este caso \ref{sec4:localentropy} y \ref{sec4:freeratefinal} son equivalentes. En el caso $T_{\alpha}=T$ si se analiza \ref{sec4:freeratefinal} al considerar el estado estacionario, se tendrá $\dot{\mathcal{F}} = \partial_{t}F = 0$, lo que implica que $\dot{W}>0$. Por ende el sistema es incapaz de hacer un trabajo, si sólo se va a absorber calor de reservorios isotérmicos. La única forma de realizar trabajo en el estado estacionario, o sea $\dot{W}<0$ es que hayan reservorios con distinta temperatura, ya que para ese caso $\dot{\mathcal{F}} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha} \neq 0$.   
@@ -903,43 +902,43 @@ Para el caso particular en qué todas las temperaturas son iguales $T_{\alpha} =
 Supongamos la existencia de un sistema hecho por dos subsistemas acoplados
 
 \begin{equation*}
-    \hat{H}_{S} = \hat{H}_{X} + \hat{H}_{Y} + \hat{H}_{XY} 
+    \hat{H}_{S} = \hat{H}_{X} + \hat{H}_{Y} + \hat{H}_{XY}, 
 \end{equation*}
 
-Donde $\hat{H}_{i}$ corresponde al Hamiltoniano del subsistema $i=X,Y$, mientras que $\hat{H}_{XY}$ corresponde al Hamiltoniano de interacción entre los dos subsistemas. Además, se asumirá que cada subsistema se encuentra acoplado a reservorios separados, de tal manera que los reservorios conectados al subsistema $i$ serán denotados por $\alpha_{i}$. Esto permite describir la razón de producción de entropía local de cada subsistema como
+donde $\hat{H}_{i}$ corresponde al Hamiltoniano del subsistema $i=X,Y$, mientras que $\hat{H}_{XY}$ corresponde al Hamiltoniano de interacción entre los dos subsistemas. Además, se asumirá que cada subsistema se encuentra acoplado a reservorios separados, de tal manera que los reservorios conectados al subsistema $i$ serán denotados por $\alpha_{i}$. Esto permite describir la razón de producción de entropía local de cada subsistema como
 
 \begin{equation*}
-    \dot{\sigma}^{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}^{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} J_{\alpha_{i}} \geq 0
+    \dot{\sigma}^{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}^{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} J_{\alpha_{i}} \geq 0,
 \end{equation*}
 
-Por lo tanto la razón de producción de entropía del sistema corresponde a $\dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}$. Similar a como se hizo en la descripción clásica, se buscará relacionar las producciones locales de entropía con la información, para ello se usará la información mutua entre los dos subsistemas $I_{xy} = S_{X} + S_{Y} - S_{XY}$. En donde $S_{i} = - \text{Tr}[ \hat{\rho}_{i}\ln \hat{\rho_{i}}]$ es la entropía de Von Neumann del subsistema $i$ ($\hat{\rho}_{i}$ consiste en la matriz densidad del subsistema $i$). Se puede separar la derivada temporal del flujo de información
+por lo tanto la razón de producción de entropía del sistema corresponde a $\dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}$. Similar a como se hizo en la descripción clásica, se buscará relacionar las producciones locales de entropía con la información, para ello se usará la información mutua entre los dos subsistemas $I_{xy} = S_{X} + S_{Y} - S_{XY}$. En donde $S_{i} = - \text{Tr}[ \hat{\rho}_{i}\ln \hat{\rho_{i}}]$ es la entropía de Von Neumann del subsistema $i$ ($\hat{\rho}_{i}$ consiste en la matriz densidad del subsistema $i$). Se puede separar la derivada temporal del flujo de información
 
 \begin{align*}
     \partial_{t}I_{xy} & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \partial_{t}S_{XY} \\
         & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \sum_{i=X,Y;\alpha_{i}}\dot{S}^{\alpha_{i}} \\
         & =  \partial_{t}S_{X} - \sum_{\alpha_{X}} \dot{S}^{\alpha_{X}} + \partial_{t}S_{Y} - \sum_{\alpha_{Y}} \dot{S}^{\alpha_{Y}} \\
-        & = \dot{I}^{X} + \dot{I}^{Y}
+        & = \dot{I}^{X} + \dot{I}^{Y}.
 \end{align*}
 
 Definiendo la cantidad $\dot{I}^{i} = \partial_{t}S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} $, se puede separar la derivada total de la información mutua en dos contribuciones. Luego, en las razones de producción locales si se reemplaza $\sum_{\alpha_{i}}\dot{S}^{\alpha_{i}} \to \partial_{t}S_{i} - \dot{I}^{i} $ nos queda 
 
 \begin{align*}
     \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}^{X} \geq 0 \\
-    \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}^{Y} \geq 0
+    \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}^{Y} \geq 0,
 \end{align*}
 
-Que coincide con el resultado en la descripción clásica. Aun así, este resultado permite incluir efectos cuánticos del sistema en el flujo de la información.\\
+que coincide con el resultado en la descripción clásica. Aun así, este resultado permite incluir efectos cuánticos del sistema en el flujo de la información.\\
 Para la razón de cambio de la energía libre, si consideramos que el subsistema $i$ está conectado a un reservorio isotérmico de temperatura $T_{i}$ podremos considerar
 
 \begin{align*}
-    \dot{\mathcal{F}}_{i} & = \dot{E}_{i} - T_{i} \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}} 
+    \dot{\mathcal{F}}_{i} & = \dot{E}_{i} - T_{i} \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}, 
 \end{align*}
 
-En el estado estacionario se puede reemplazar $\dot{I}^{i} = - \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}$ y así la razón de cambio de la energía libre
+en el estado estacionario se puede reemplazar $\dot{I}^{i} = - \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}$ y así la razón de cambio de la energía libre
 \label{sec4:flujos0}
 
 \begin{equation*}
-    \dot{\mathcal{F}}_{i} = \dot{E}_{i} + T_{i} \dot{I}^{i}
+    \dot{\mathcal{F}}_{i} = \dot{E}_{i} + T_{i} \dot{I}^{i}.
 \end{equation*}
 
 En este caso la razón de cambio de energía libre tiene una contribución correspondiente a la energía y una nueva contribución correspondiente a la información. Si consideramos el caso del estado estacionario $\partial_{t}E = \dot{E}^{X} + \dot{E}^{Y} = 0$, se pueden considerar $\dot{E}^{i}$ como el flujo de energía entre los dos subsistemas, por ende en el estado estacionario la razón de energía libre se divide en un flujo de energía entre los subsistemas y otro correspondiente al flujo de información entre estos mismos. Esto permite que el sistema sea capaz de realizar trabajo por una contribución predominate de la información, lo que consiste en una máquina de la información. La equivalencia de este formalismo con el descrito en la sección anterior se encuentra en el apéndice \ref{apendix4:secondlaw}.
