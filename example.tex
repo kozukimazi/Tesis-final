@@ -1188,28 +1188,28 @@ En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:clas
 en donde los vectores $\textbf{N}$ y $\log \textbf{P}$ están escritos en la base de Fock usada para el vector $\textbf{P}$. La expresión analítica para el flujo de corriente de partículas para el baño $L$ es equivalente tanto en el clásico como en el cuántico y es 
 
 \begin{align*}
-    \dot{N}_{L} & = \gamma_{L}(\epsilon)(f_{L}(\epsilon)p_{000} - [1-f_{L}(\epsilon)]p_{100} ) \\
-        & + \gamma_{L}(\epsilon + U) (f_{L}(\epsilon+U)p_{001} - [1-f_{L}(\epsilon+U)]p_{101} )  \\
-        & + \gamma_{L}(\epsilon + U_{f}) (f_{L}(\epsilon+U_{f})p_{010} - [1-f_{L}(\epsilon+U_{f})]p_{110} )  \\  
-        & + \gamma_{L}(\epsilon + U + U_{f}) (f_{L}(\epsilon+U + U_{f})p_{011} - [1-f_{L}(\epsilon+U+U_{f})]p_{111} ).
+    \dot{N}_{L} & = \gamma_{L}(\epsilon)(f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} ) \\
+        & + \gamma_{L}(\epsilon + U) (f_{L}(\epsilon+U)\rho_{001} - [1-f_{L}(\epsilon+U)]\rho_{101} )  \\
+        & + \gamma_{L}(\epsilon + U_{f}) (f_{L}(\epsilon+U_{f})\rho_{010} - [1-f_{L}(\epsilon+U_{f})]\rho_{110} )  \\  
+        & + \gamma_{L}(\epsilon + U + U_{f}) (f_{L}(\epsilon+U + U_{f})\rho_{011} - [1-f_{L}(\epsilon+U+U_{f})]\rho_{111} ).
 \end{align*}
 
 Por otro lado, los flujos de información clásicos corresponden a 
 
 \begin{align*}
-  \dot{I}_{L}  &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[p_{000}\ln p_{100} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - p_{100}\ln p_{100} ] )  \\ 
-      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[p_{001}\ln p_{101} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -p_{101}\ln p_{101} ]   ) \\  
-      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -p_{010}\ln p_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[p_{110}\ln p_{010} - p_{110}\ln p_{110} ] ) \\  
-      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- p_{011}\ln p_{011}]) \\   
-      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[p_{111}\ln p_{011} - p_{111}\ln p_{111}])   
+  \dot{I}_{L}  &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
+      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
+      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
+      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
 \end{align*}
 
 \begin{align*}
- \dot{I}_{R} & =  \gamma_{R}(\epsilon)(f_{R}(\epsilon)[p_{000}\ln p_{010} - p_{000}\ln p_{000}] + (1-f_{R}(\epsilon))[p_{010}\ln p_{000} - p_{010}\ln p_{010} ] )  \\ 
-      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[p_{001}\ln p_{011} - p_{001}\ln p_{001}] + (1-f_{R}(\epsilon + U))[p_{011}\ln p_{001} -p_{011}\ln p_{011} ]   ) \\  
-      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[p_{100}\ln p_{110} -p_{100}\ln p_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[p_{110}\ln p_{100} - p_{110}\ln p_{110} ] ) \\  
-      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[p_{101}\ln p_{111}- p_{101}\ln p_{101}]) \\   
-      & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[p_{111}\ln p_{101} - p_{111}\ln p_{111}]).   
+ \dot{I}_{R} & =  \gamma_{R}(\epsilon)(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
+      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
+      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} - \rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
+      & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
 \end{align*}
 
 La versión cuántica de los flujos de información se encuentra calculada en el ápendice \ref{apendix5infoflow}. Se pueden graficar estas cantidades tanto en el caso clásico y en el caso cuántico como se ve en la Figura \ref{img:P4clqm}
@@ -1219,11 +1219,11 @@ La versión cuántica de los flujos de información se encuentra calculada en el
 Primero analizando el flujo de corriente, se puede notar que la corriente para el caso cuántico es menor en todo momento con respecto al caso clásico. Si se considera el caso en que $U_{f}\gg U,\epsilon$ esta corriente se puede aproximar a  
 
 \begin{equation}
-    \dot{N}_{L} \approx  \gamma_{L}(\epsilon)( f_{L}(\epsilon)p_{000} - [1-f_{L}(\epsilon)]p_{100} ) +  \gamma_{L}(\epsilon+U)(f_{L}(\epsilon+U)p_{001} - [1-f_{L}(\epsilon+U)]p_{101} )
+    \dot{N}_{L} \approx  \gamma_{L}(\epsilon)( f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} ) +  \gamma_{L}(\epsilon+U)(f_{L}(\epsilon+U)\rho_{001} - [1-f_{L}(\epsilon+U)]\rho_{101} )
     ,\label{sec:clqmeq1}
 \end{equation}
 
-esto nos permite verificar que las probabilidades que permiten que el flujo de corriente vaya en la dirección contraria a la diferencia de potencial son principalmente $p_{101}$ y $p_{100}$. De hecho, si graficamos algunas probabilidades de ocupación
+esto nos permite verificar que las probabilidades que permiten que el flujo de corriente vaya en la dirección contraria a la diferencia de potencial son principalmente $\rho_{101}$ y $\rho_{100}$. De hecho, si graficamos algunas probabilidades de ocupación
 \insertimage[\label{img:P1clqm}]{ejemplos/P1clqm.pdf}{scale=0.45}{}
 
 \insertimage[\label{img:P2clqm}]{ejemplos/P2clqm.pdf}{scale=0.45}{}
@@ -1233,7 +1233,7 @@ esto nos permite verificar que las probabilidades que permiten que el flujo de c
 \insertimage[\label{img:P5clqm}]{ejemplos/P5clqm.pdf}{scale=0.45}{}
 
 
-Resulta relevante analizar para el régimen $eV/T<2.4$ considerando la asimetría en las razones de tuneleo $\gamma_{L}(\epsilon)/\gamma_{L}(\epsilon + U) = 6$, ya que si consideramos \ref{sec:clqmeq1} la probabilidad que realiza mayor contribución a que $\dot{N}_{L}<0$ es $p_{100}$ el cuál es mayor para el caso cuántico, en el régimen $eV/T<2.4$. Por otro lado, para los flujos de información se obtuvo que la información que recibe el punto cuántico $D$ es mayor para el caso clásico con respecto al caso cuántico, esto puede ser por dos razones, una de ellas es si consideramos la interpretación tipo Demonio, ya que este Demonio debe ser capaz de distinguir bien si es que el punto cuántico esta en el modo $L$ o el modo $R$, sin embargo el hecho de que haya coherencias no nulas entre estos dos modos dificulta el hecho de distinguir en que modo está el electrón, lo que a su vez afecta en el desarrollo de las correlacciones entre los estados del sistema. 
+Resulta relevante analizar para el régimen $eV/T<2.4$ considerando la asimetría en las razones de tuneleo $\gamma_{L}(\epsilon)/\gamma_{L}(\epsilon + U) = 6$, ya que si consideramos \ref{sec:clqmeq1} la probabilidad que realiza mayor contribución a que $\dot{N}_{L}<0$ es $\rho_{100}$ el cuál es mayor para el caso cuántico, en el régimen $eV/T<2.4$. Por otro lado, para los flujos de información se obtuvo que la información que recibe el punto cuántico $D$ es mayor para el caso clásico con respecto al caso cuántico, esto puede ser por dos razones, una de ellas es si consideramos la interpretación tipo Demonio, ya que este Demonio debe ser capaz de distinguir bien si es que el punto cuántico esta en el modo $L$ o el modo $R$, sin embargo el hecho de que haya coherencias no nulas entre estos dos modos dificulta el hecho de distinguir en que modo está el electrón, lo que a su vez afecta en el desarrollo de las correlacciones entre los estados del sistema. 
 
 
 
@@ -2151,14 +2151,14 @@ usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1
 \begin{equation}
     \hat{\rho}_{S} = 
     \begin{bmatrix}
-        p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-        0 & p_{100} & \alpha & 0 & 0 & 0 & 0 & 0 \\
-        0 & \alpha^{*} & p_{010} & 0 & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & p_{001} & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & 0 & p_{110} & 0 & 0 & 0 \\
-        0 & 0 & 0 & 0 & 0 & p_{101} & \beta & 0 \\
-        0 & 0 & 0 & 0 & 0 & \beta^{*} & p_{011} & 0 \\
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & p_{111} 
+        \rho_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & \rho_{100} & \alpha & 0 & 0 & 0 & 0 & 0 \\
+        0 & \alpha^{*} & \rho_{010} & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & \rho_{001} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & \rho_{110} & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & \rho_{101} & \beta & 0 \\
+        0 & 0 & 0 & 0 & 0 & \beta^{*} & \rho_{011} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \rho_{111} 
         \end{bmatrix}.
         \label{appendix5rhoconcu}
 \end{equation}
@@ -2168,10 +2168,10 @@ En esta matriz no aparecen coherencias entre estados con distinto número de par
 \begin{equation*}
     \hat{\rho}_{LR} = 
     \begin{bmatrix}
-        p_{000}+p_{001} & 0 & 0 & 0  \\
-        0 & p_{100} + p_{101} & \alpha + \beta & 0  \\
-        0 & \alpha^{*} +\beta^{*} & p_{010} + p_{011} & 0  \\
-        0 & 0 & 0 & p_{110} + p_{111} 
+        \rho_{000}+\rho_{001} & 0 & 0 & 0  \\
+        0 & \rho_{100} + \rho_{101} & \alpha + \beta & 0  \\
+        0 & \alpha^{*} +\beta^{*} & \rho_{010} + \rho_{011} & 0  \\
+        0 & 0 & 0 & \rho_{110} + \rho_{111} 
         \end{bmatrix},
 \end{equation*}
 
@@ -2199,7 +2199,7 @@ en la cuál $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
         \end{bmatrix}.
 \end{equation*}
 
-Con  $p_{0}=p_{000}+p_{001}$, $p_{L}=p_{100} + p_{101}$, $p_{R}=p_{010}+p_{011}$, $p_{D}=p_{110}+p_{111}$ la matriz $B$ quedará
+Con  $p_{0}=\rho_{000}+\rho_{001}$, $p_{L}=\rho_{100} + \rho_{101}$, $p_{R}=\rho_{010}+\rho_{011}$, $p_{D}=\rho_{110}+\rho_{111}$ la matriz $B$ quedará
 
 \begin{equation*}
     B = 
@@ -2390,20 +2390,20 @@ Para poder calcular los flujos de información, primero se debe ser capaces de c
 
 \begin{equation*}
     \begin{bmatrix}
-        p_{100} & \alpha \\
-        \alpha^{*} & p_{010}
+        \rho_{100} & \alpha \\
+        \alpha^{*} & \rho_{010}
     \end{bmatrix}
     \hspace{10mm}
     \begin{bmatrix}
-        p_{101} & \beta \\
-        \beta^{*} & p_{011}
+        \rho_{101} & \beta \\
+        \beta^{*} & \rho_{011}
     \end{bmatrix}.
 \end{equation*}
 
 Los autovalores estarán dados por
 
 \begin{equation*}
-    \lambda_{0\pm} = \frac{ p_{100} +p_{010} }{2} \pm \frac{( [p_{100} - p_{010}]^{2} + 4|\alpha|^{2} )^{1/2} }{ 2 }  \hspace{10mm}      \lambda_{1\pm} = \frac{ p_{101} +p_{011} }{2} \pm \frac{( [p_{101} - p_{011}]^{2} + 4|\beta|^{2} )^{1/2} }{ 2 }, 
+    \lambda_{0\pm} = \frac{ \rho_{100} +\rho_{010} }{2} \pm \frac{( [\rho_{100} - \rho_{010}]^{2} + 4|\alpha|^{2} )^{1/2} }{ 2 }  \hspace{10mm}      \lambda_{1\pm} = \frac{ \rho_{101} +\rho_{011} }{2} \pm \frac{( [\rho_{101} - \rho_{011}]^{2} + 4|\beta|^{2} )^{1/2} }{ 2 }, 
 \end{equation*}
 
 si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$ podremos escribir los autovectores como
@@ -2418,7 +2418,7 @@ si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}
 con $\cos(\theta_{0}) = |\alpha|/\sqrt{\Delta^{2}_{0} + |\alpha|^{2}}$, $\cos(\theta_{1}) = |\beta|/\sqrt{\Delta^{2}_{1} + |\beta|^{2}}$ y
 
 \begin{equation*}
-    \Delta_{i} = \frac{(p_{10i} - p_{01i})}{2},
+    \Delta_{i} = \frac{(\rho_{10i} - \rho_{01i})}{2},
 \end{equation*}
 
 con esto se podrá obtener el logaritmo natural de la matriz mediante
@@ -2432,14 +2432,14 @@ En donde $\ln \hat{\rho}_{D}$ es la matriz diagonal
 \begin{equation*}
     \ln \hat{\rho}_{D} = 
     \begin{bmatrix}
-        \ln p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        \ln \rho_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
         0 & \ln \lambda_{0+} & 0 & 0 & 0 & 0 & 0 & 0 \\
         0 & 0 & \ln \lambda_{0-} & 0 & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & \ln p_{001} & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & 0 & \ln p_{110} & 0 & 0 & 0 \\
+        0 & 0 & 0 & \ln \rho_{001} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & \ln \rho_{110} & 0 & 0 & 0 \\
         0 & 0 & 0 & 0 & 0 & \ln \lambda_{1+} & 0 & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & \ln \lambda_{1-} & 0 \\
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln p_{111} 
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln \rho_{111} 
         \end{bmatrix},
 \end{equation*}
 
@@ -2464,14 +2464,14 @@ Finalmente se obtiene
 \begin{equation*}
     \ln \hat{\rho}_{S} = 
     \begin{bmatrix}
-        \ln p_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        \ln \rho_{000} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
         0 & a_{0} & c_{0} & 0 & 0 & 0 & 0 & 0 \\
         0 & c^{*}_{0} & b_{0} & 0 & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & \ln p_{001} & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & 0 & \ln p_{110} & 0 & 0 & 0 \\
+        0 & 0 & 0 & \ln \rho_{001} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & \ln \rho_{110} & 0 & 0 & 0 \\
         0 & 0 & 0 & 0 & 0 & a_{1} & c_{1} & 0 \\
         0 & 0 & 0 & 0 & 0 & c^{*}_{1} & b_{1} & 0 \\
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln p_{111} 
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \ln \rho_{111} 
         \end{bmatrix},
 \end{equation*}
 
@@ -2486,8 +2486,8 @@ con las cantidades
 así el logaritmo de la matriz densidad es 
 
 \begin{align*}
-    \ln \hat{\rho}_{S} & = \ln p_{111}|111\rangle \langle 111| + \ln p_{110}|110\rangle \langle 110| + \ln p_{001}|001\rangle \langle 001| \\ 
-     & + \ln p_{000}|000\rangle \langle 000| + a_{0}|100\rangle \langle 100| + b_{0}|010\rangle \langle 010|  \\  
+    \ln \hat{\rho}_{S} & = \ln \rho_{111}|111\rangle \langle 111| + \ln \rho_{110}|110\rangle \langle 110| + \ln \rho_{001}|001\rangle \langle 001| \\ 
+     & + \ln \rho_{000}|000\rangle \langle 000| + a_{0}|100\rangle \langle 100| + b_{0}|010\rangle \langle 010|  \\  
      & + a_{1}|101\rangle \langle 101| + b_{1}|011\rangle\langle 011| + c_{0}|100\rangle \langle 010| \\ 
      & + c^{*}_{0}|010\rangle \langle 100| + c_{1}|101\rangle \langle 011| + c^{*}_{1}|011\rangle \langle 101|.
 \end{align*}
@@ -2495,56 +2495,56 @@ así el logaritmo de la matriz densidad es
 Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathcal{L}_{L}$ y $\mathcal{L}_{R}$ se pueden expresar 
 
 \begin{align*}
-    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{000}|100\rangle \langle 100| - p_{000}|000\rangle \langle 000| \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{000}|010\rangle \langle 010| - p_{000}|000\rangle \langle 000| \\  
-    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{100}|000\rangle \langle 000| - p_{100}|100\rangle \langle 100|\\ 
-    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{010}|000\rangle \langle 000| - p_{010}|010\rangle \langle 010| \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D} \hat{n}_{R}\hat{\rho}_{S}] & = p_{011}|111\rangle \langle 111| - p_{011}|011\rangle \langle 011| \\  
-    \mathcal{D}[\hat{d}^{\dagger}_{R} \hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = p_{101}|111\rangle \langle 111| - p_{101}|101\rangle \langle 101| \\ 
-     \mathcal{D}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R}\hat{\rho}_{S}] & = p_{111}|011\rangle \langle 011| - p_{111}|111\rangle \langle 111|  \\    
-      \mathcal{D}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = p_{111}|101\rangle \langle 101| - p_{111}|111\rangle \langle 111|  \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{010}|110\rangle \langle 110| - p_{010}|010\rangle \langle 010| - \frac{1}{2}( \alpha|100\rangle \langle 010| + \alpha^{*}|010\rangle \langle 100|) \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{100}|110\rangle \langle 110| - p_{100}|100\rangle \langle 100| - \frac{1}{2}( \alpha |100\rangle \langle 010| + \alpha^{*}|010\rangle \langle 100| )  \\  
-    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = p_{110}|010\rangle \langle 010| - p_{110}|110\rangle \langle 110| \\ 
-    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = p_{110}|100\rangle \langle 100| - p_{110}|110\rangle \langle 110| \\  
-    \mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{001}|101\rangle \langle 101| - p_{001}|001\rangle \langle 001| \\ 
-    \mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{001}|011\rangle \langle 011| - p_{001}|001\rangle \langle 001| \\  
-    \mathcal{D}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = p_{101}|001\rangle \langle 001| - p_{101}|101\rangle \langle 101| - \frac{1}{2}(\beta |101\rangle \langle 011| + \beta^{*}|011\rangle \langle 101| ) \\ 
-    \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = p_{011}|010\rangle \langle 010| - p_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  ),   
+    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{000}|100\rangle \langle 100| - \rho_{000}|000\rangle \langle 000| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{000}|010\rangle \langle 010| - \rho_{000}|000\rangle \langle 000| \\  
+    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{100}|000\rangle \langle 000| - \rho_{100}|100\rangle \langle 100|\\ 
+    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{010}|000\rangle \langle 000| - \rho_{010}|010\rangle \langle 010| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D} \hat{n}_{R}\hat{\rho}_{S}] & = \rho_{011}|111\rangle \langle 111| - \rho_{011}|011\rangle \langle 011| \\  
+    \mathcal{D}[\hat{d}^{\dagger}_{R} \hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = \rho_{101}|111\rangle \langle 111| - \rho_{101}|101\rangle \langle 101| \\ 
+     \mathcal{D}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R}\hat{\rho}_{S}] & = \rho_{111}|011\rangle \langle 011| - \rho_{111}|111\rangle \langle 111|  \\    
+      \mathcal{D}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}\hat{\rho}_{S}] & = \rho_{111}|101\rangle \langle 101| - \rho_{111}|111\rangle \langle 111|  \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = \rho_{010}|110\rangle \langle 110| - \rho_{010}|010\rangle \langle 010| - \frac{1}{2}( \alpha|100\rangle \langle 010| + \alpha^{*}|010\rangle \langle 100|) \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = \rho_{100}|110\rangle \langle 110| - \rho_{100}|100\rangle \langle 100| - \frac{1}{2}( \alpha |100\rangle \langle 010| + \alpha^{*}|010\rangle \langle 100| )  \\  
+    \mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R}\hat{\rho}_{S}] & = \rho_{110}|010\rangle \langle 010| - \rho_{110}|110\rangle \langle 110| \\ 
+    \mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L}\hat{\rho}_{S}] & = \rho_{110}|100\rangle \langle 100| - \rho_{110}|110\rangle \langle 110| \\  
+    \mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{001}|101\rangle \langle 101| - \rho_{001}|001\rangle \langle 001| \\ 
+    \mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{001}|011\rangle \langle 011| - \rho_{001}|001\rangle \langle 001| \\  
+    \mathcal{D}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{101}|001\rangle \langle 001| - \rho_{101}|101\rangle \langle 101| - \frac{1}{2}(\beta |101\rangle \langle 011| + \beta^{*}|011\rangle \langle 101| ) \\ 
+    \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{011}|010\rangle \langle 010| - \rho_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  ),   
 \end{align*}
 
 con estas cantidades se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ lo que permite obtener
 
 \begin{align*}
-    \dot{I}_{L} &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}p_{000} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - a_{0}p_{100} ] )  \\ 
-      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[a_{1}p_{001} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -a_{1}p_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
-      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -b_{0}p_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}p_{110} - p_{110}\ln p_{110} ] ) \\  
-      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- b_{1}p_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}p_{111} - p_{111}\ln p_{111}]  ) 
+    \dot{I}_{L} &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - a_{0}\rho_{100} ] )  \\ 
+      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[a_{1}\rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -a_{1}\rho_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -b_{0}\rho_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- b_{1}\rho_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ) 
 \end{align*}
 
 \begin{align*}
-    \dot{I}_{R} &  =  \gamma_{R}(\epsilon)(f_{L}(\epsilon)[b_{0}p_{000} - p_{000}\ln p_{000}] + (1-f_{R}(\epsilon))[p_{010}\ln p_{000} - b_{0}p_{010} ] )  \\ 
-      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[b_{1} p_{001} - p_{001}\ln p_{001}] + (1-f_{R}(\epsilon + U))[p_{011}\ln p_{001} -a_{1}p_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
-      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[p_{100}\ln p_{110} -a_{0}p_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}p_{110} - p_{110}\ln p_{110} ] ) \\  
-      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[p_{101}\ln p_{111}- a_{1}p_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}p_{111} - p_{111}\ln p_{111}]  ), 
+    \dot{I}_{R} &  =  \gamma_{R}(\epsilon)(f_{L}(\epsilon)[b_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - b_{0}\rho_{010} ] )  \\ 
+      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[b_{1} \rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -a_{1}\rho_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -a_{0}\rho_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ), 
 \end{align*}
 
 si bien el cálculo de los flujos de información se puede hacer númerico, escribir estas expresiones analíticas nos permite determinar que existe contribución de las coherencias en la información, tanto en los parámetros $a_{i},b_{i}$ como en los términos $Re(\alpha c^{*}_{0}),Re(b^{*}_{1} \beta)$ . Es importante destacar que en el  límite en que las coherencias se anulan se recupera el resultado para un sistema clásico
 
 \begin{align*}
- \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[p_{000}\ln p_{100} - p_{000}\ln p_{000}] + (1-f_{L}(\epsilon))[p_{100}\ln p_{000} - p_{100}\ln p_{100} ] )  \\ 
-      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[p_{001}\ln p_{101} - p_{001}\ln p_{001}] + (1-f_{L}(\epsilon + U))[p_{101}\ln p_{001} -p_{101}\ln p_{101} ]   ) \\  
-      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[p_{010}\ln p_{110} -p_{010}\ln p_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[p_{110}\ln p_{010} - p_{110}\ln p_{110} ] ) \\  
-      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[p_{011}\ln p_{111}- p_{011}\ln p_{011}]) \\   
-      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[p_{111}\ln p_{011} - p_{111}\ln p_{111}])   
+ \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
+      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
+      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
+      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
 \end{align*}
 
 \begin{align*}
- \lim_{\alpha,\beta \to 0}  & \dot{I}_{R}  = \dot{I}_{Rclassic}   =  \gamma_{R}(\epsilon)(f_{R}(\epsilon)[p_{000}\ln p_{010} - p_{000}\ln p_{000}] + (1-f_{R}(\epsilon))[p_{010}\ln p_{000} - p_{010}\ln p_{010} ] )  \\ 
-      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[p_{001}\ln p_{011} - p_{001}\ln p_{001}] + (1-f_{R}(\epsilon + U))[p_{011}\ln p_{001} -p_{011}\ln p_{011} ]   ) \\  
-      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[p_{100}\ln p_{110} -p_{100}\ln p_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[p_{110}\ln p_{100} - p_{110}\ln p_{110} ] ) \\  
-      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[p_{101}\ln p_{111}- p_{101}\ln p_{101}]) \\   
-      & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[p_{111}\ln p_{101} - p_{111}\ln p_{111}]).   
+ \lim_{\alpha,\beta \to 0}  & \dot{I}_{R}  = \dot{I}_{Rclassic}   =  \gamma_{R}(\epsilon)(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
+      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
+      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -\rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
+      & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
 \end{align*}
 
 \label{apendix5infoflow}

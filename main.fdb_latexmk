@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1748394628 "main.aux" "main.bbl" "main" 1748399927 0
+["bibtex main"] 1748394628 "main.aux" "main.bbl" "main" 1748450274 0
   "./library.bib" 1745954735 11455 b4453b21af0547abcf28bfa1f31ace50 ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1748399926 56606 348fc616dfe77ec82bdef4e79e3dfe2e "pdflatex"
+  "main.aux" 1748450273 56606 348fc616dfe77ec82bdef4e79e3dfe2e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748399923 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1748399927 0
+["pdflatex"] 1748450270 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1748450274 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -289,7 +289,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1744574957 4037 361777f40d4594a92b4928b08b7b0280 ""
-  "example.tex" 1748399922 200885 8c9e8fc4a8156666f82d0f0fb2a6322d ""
+  "example.tex" 1748450270 201705 c40033d8fa33e8da73ccc396f2ac3f33 ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/P1clqm.pdf" 1748302639 16998 b8317b0322fdb3035ec7afdebc9f288e ""
@@ -319,11 +319,11 @@
   "img//ejemplos/transportheat.png" 1744074284 35870 7a31ecf97ef777a5a2a2a3808cf53d5d ""
   "img//ejemplos/transportwork.png" 1744074284 35952 8399a34f51fb50d149e8a5999d722ee1 ""
   "img//ejemplos/transprtcurrent.png" 1744074284 34484 dc2c49f767b5d5c4cffb50cc91f9c6b8 ""
-  "main.aux" 1748399926 56606 348fc616dfe77ec82bdef4e79e3dfe2e "pdflatex"
+  "main.aux" 1748450273 56606 348fc616dfe77ec82bdef4e79e3dfe2e "pdflatex"
   "main.bbl" 1748394629 8591 07649a339351f6657017fe5f841db170 "bibtex main"
-  "main.lof" 1748399926 6246 589b0508c14a5b3fe01a571c6c04c9e7 "pdflatex"
+  "main.lof" 1748450273 6246 589b0508c14a5b3fe01a571c6c04c9e7 "pdflatex"
   "main.tex" 1744574957 4037 361777f40d4594a92b4928b08b7b0280 ""
-  "main.toc" 1748399926 5414 6ae6e75a45733791e69832c7ad13d2b5 "pdflatex"
+  "main.toc" 1748450273 5414 6ae6e75a45733791e69832c7ad13d2b5 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
