@@ -1212,7 +1212,30 @@ Por otro lado, los flujos de información clásicos corresponden a
       & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[p_{111}\ln p_{101} - p_{111}\ln p_{111}]).   
 \end{align*}
 
-La versión cuántica de los flujos de información se encuentra calculada en el ápendice \ref{apendix5infoflow}. Se pueden graficar estas cantidades tanto en el caso clásico y en el caso cuántico como se vee en la Figura 
+La versión cuántica de los flujos de información se encuentra calculada en el ápendice \ref{apendix5infoflow}. Se pueden graficar estas cantidades tanto en el caso clásico y en el caso cuántico como se ve en la Figura \ref{img:P4clqm}
+
+\insertimage[\label{img:P4clqm}]{ejemplos/P4clqm.pdf}{scale=0.50}{En línea azul el cálculo realizado con el modelo cuántico que permite coherencias no nulas, mientras que la línea roja corresponde al cálculo semiclásico. En estos gráfico el único dato que se modifico es el de $\epsilon = 0$.}
+
+Primero analizando el flujo de corriente, se puede notar que la corriente para el caso cuántico es menor en todo momento con respecto al caso clásico. Si se considera el caso en que $U_{f}\gg U,\epsilon$ esta corriente se puede aproximar a  
+
+\begin{equation}
+    \dot{N}_{L} \approx  \gamma_{L}(\epsilon)( f_{L}(\epsilon)p_{000} - [1-f_{L}(\epsilon)]p_{100} ) +  \gamma_{L}(\epsilon+U)(f_{L}(\epsilon+U)p_{001} - [1-f_{L}(\epsilon+U)]p_{101} )
+    ,\label{sec:clqmeq1}
+\end{equation}
+
+esto nos permite verificar que las probabilidades que permiten que el flujo de corriente vaya en la dirección contraria a la diferencia de potencial son principalmente $p_{101}$ y $p_{100}$. De hecho, si graficamos algunas probabilidades de ocupación
+\insertimage[\label{img:P1clqm}]{ejemplos/P1clqm.pdf}{scale=0.45}{}
+
+\insertimage[\label{img:P2clqm}]{ejemplos/P2clqm.pdf}{scale=0.45}{}
+
+\insertimage[\label{img:P3clqm}]{ejemplos/P3clqm.pdf}{scale=0.45}{}
+
+\insertimage[\label{img:P5clqm}]{ejemplos/P5clqm.pdf}{scale=0.45}{}
+
+
+Resulta relevante analizar para el régimen $eV/T<2.4$ considerando la asimetría en las razones de tuneleo $\gamma_{L}(\epsilon)/\gamma_{L}(\epsilon + U) = 6$, ya que si consideramos \ref{sec:clqmeq1} la probabilidad que realiza mayor contribución a que $\dot{N}_{L}<0$ es $p_{100}$ el cuál es mayor para el caso cuántico, en el régimen $eV/T<2.4$. Por otro lado, para los flujos de información se obtuvo que la información que recibe el punto cuántico $D$ es mayor para el caso clásico con respecto al caso cuántico, esto puede ser por dos razones, una de ellas es si consideramos la interpretación tipo Demonio, ya que este Demonio debe ser capaz de distinguir bien si es que el punto cuántico esta en el modo $L$ o el modo $R$, sin embargo el hecho de que haya coherencias no nulas entre estos dos modos dificulta el hecho de distinguir en que modo está el electrón, lo que a su vez afecta en el desarrollo de las correlacciones entre los estados del sistema. 
+
+
 
 \label{sec5:demonio}
 
