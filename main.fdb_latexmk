@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1750704605.97026 "main.aux" "main.bbl" "main" 1750704612.11462 0
+["bibtex main"] 1750947183.52335 "main.aux" "main.bbl" "main" 1750947195.69283 0
   "./library.bib" 1746821775.15908 11063 b4453b21af0547abcf28bfa1f31ace50 ""
   "./natnumurl.bst" 1741616338.63589 20221 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1750704611.22788 56302 1fe154e9bbc5e1aa1a9550ab6330e75f "pdflatex"
+  "main.aux" 1750947193.58042 56302 87db95a71ad199efcfe278428e002264 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750704606.14839 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1750704612.11493 0
+["pdflatex"] 1750947183.97712 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1750947195.69434 0
   "/etc/texmf/web2c/texmf.cnf" 1736440629.37754 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/mazi/Desktop/Tesis-final/main.tex" 1744726389.50893 3925 361777f40d4594a92b4928b08b7b0280 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -290,7 +290,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1736440671.36949 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736440750 8213355 ec0621fc55a519b6832cde314db671a6 ""
-  "example.tex" 1750704598.99616 199420 a63595b9419672223c475db54676d999 ""
+  "example.tex" 1750947166.98848 199419 cc6f324e94a825ef82ef448d4f52eec6 ""
   "img//departamentos/uchile2.pdf" 1741616338.6209 18772 45804d175d195d86f4f268558e529a29 ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741616338.6229 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/P1clqm.pdf" 1748285928.25948 16998 b8317b0322fdb3035ec7afdebc9f288e ""
@@ -320,11 +320,11 @@
   "img//ejemplos/transportheat.png" 1744037498.40104 35870 c1568b658e2fdc67862a8d1595e13ca7 ""
   "img//ejemplos/transportwork.png" 1744037498.40204 35952 e727892847285d86869ef517766721a1 ""
   "img//ejemplos/transprtcurrent.png" 1744037498.40304 34484 c3f617deb6ea4317772baee0d6ec050f ""
-  "main.aux" 1750704611.22788 56302 1fe154e9bbc5e1aa1a9550ab6330e75f "pdflatex"
-  "main.bbl" 1750704606.13617 8259 da4bdc40dd207ef478401640462eb49c "bibtex main"
-  "main.lof" 1750704611.25989 6290 5aa9f13f197c3c0f598774a28efabe64 "pdflatex"
+  "main.aux" 1750947193.58042 56302 87db95a71ad199efcfe278428e002264 "pdflatex"
+  "main.bbl" 1750947183.95844 8259 da4bdc40dd207ef478401640462eb49c "bibtex main"
+  "main.lof" 1750947193.61842 6290 5aa9f13f197c3c0f598774a28efabe64 "pdflatex"
   "main.tex" 1744726389.50893 3925 361777f40d4594a92b4928b08b7b0280 ""
-  "main.toc" 1750704611.25989 5414 6ae6e75a45733791e69832c7ad13d2b5 "pdflatex"
+  "main.toc" 1750947193.61842 5414 6ae6e75a45733791e69832c7ad13d2b5 "pdflatex"
   "template.tex" 1741616338.63889 281920 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741616338.63889 21577 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
