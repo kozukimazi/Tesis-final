@@ -146,19 +146,19 @@ con lo cuál la ecuación \ref{eqsec2:linbladpic} se vuelve
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}.
 \end{equation} 
 
-Esta ecuación es lo que se denomina no Markoviana, ya que requiere conocer todo el pasado de $\rho_{IS}(s)$, para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\hat{\rho}_{IS}(t)$ dependa sólo del estado en que se encuentra en el instante de tiempo, es decir
+Esta ecuación es lo que se denomina no Markoviana, ya que requiere conocer todo el pasado de $\hat{\rho}_{IS}(s)$. Para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\hat{\rho}_{IS}(t)$ dependa sólo del estado en que se encuentra en el instante de tiempo, es decir
 
 \begin{equation*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\},
 \end{equation*} 
-esta ecuación es denominada la ecuación de Redfield. Se puede hacer el cambio de variable $s= x = t-s$ con Jacobiano $\text{det}|J| = -1$ y límites $s=0 \implies x = t$ y $s=t \implies x = 0$, el integral queda
+esta ecuación es denominada la ecuación de Redfield. Se puede hacer el cambio de variable $s= x = t-s$, así el integral queda
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
     \label{eq3sec2:markov}
 \end{equation} 
 
-Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecerán las funciones correlación del baño que decaen en el tiempo por el denominado tiempo de correlación $\tau_{B}$ en el cuál las funciones correlación del baño se vuelven cero. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, ya que él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integral debido a las funciones correlación. Y finalmente quedará la evolución
+Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecen las funciones correlación del baño, las cuáles decaen en el tiempo con una escala característica dada por el denominado tiempo de correlación $\tau_{B}$, a partir del cual dichas funciones se vuelven despreciables. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, ya que él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integral debido a que las funciones correlación se vuelven practicamente nulas. Y finalmente quedará la evolución
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{\infty}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
@@ -181,7 +181,7 @@ estos operadores se denominan operadores globales, ya que utilizan los autoestad
     [\hat{H}_{S},A_{\alpha}(\omega)] & = - \omega A_{\alpha}(\omega) \\
     [\hat{H}_{S},A^{\dagger}_{\alpha}(\omega)] & = \omega A^{\dagger}_{\alpha}(\omega),
 \end{align*}
-debido a que posteriormente se deberá pasar al cuadro de interacción, se debe calcular $U^{\dagger}_{s}(t)\hat{H}_{I}U_{s}(t)$ para ello, se utilizará la relación de Baker Campbell
+posteriormente se deberá pasar al cuadro de interacción y calcular $U^{\dagger}_{s}(t)\hat{H}_{I}U_{s}(t)$. Para ello, se utilizará la relación de Baker Campbell
 
 \begin{equation}
     e^{A}Be^{-A} = B  + [A,B] + \frac{1}{2}[A,[A,B]] +..,
@@ -211,7 +211,7 @@ con esto el Hamiltoniano de interacción en el cuadro de Schrodinger
 Aplicando las relaciones en el cuadro de interacción
 
 \begin{equation}
-    \hat{H}_{I} = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t),
+    \hat{H}_{I}(t) = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t),
     \label{seclindbladinteraction1}
 \end{equation}
 donde $B_{\alpha}(t) = e^{i\hat{H}_{B}t}B_{\alpha}e^{-i\hat{H}_{B}t}$. La ecuación \ref{seclindbladinteraction1} se puede introducir en la ecuación \ref{eq3sec2:markov1} y se obtiene 
@@ -227,7 +227,7 @@ así reemplazando la forma explícita de la interacción
      + & \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\hat{\rho}_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
 \end{align*}
 
-Se pueden definir las funciones correlación del baño
+Se pueden definir las funciones correlación del baño por
 
 \begin{equation*}
     \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\hat{\rho}_{B}],
@@ -239,8 +239,8 @@ y aplicando estas funciones queda
     & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{-i(\omega'- \omega)t}\Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
 \end{align*}
 
-Si consideramos el tiempo de evolución del sistema $S$ como $\tau_{S}=|\omega-\omega'|^{-1}$, y se cumple que el tiempo de relajación del sistema $\tau_{R}\gg \tau_{S}$ para los términos no seculares con $\omega \neq \omega'$, estos podrán ser despreciados, debido a que los términos $e^{i(\omega-\omega')t}$ oscilan muy rápido durante el tiempo $\tau_{R}$. Al tomar esta aproximación, la evolución queda
-
+Si se considera el tiempo característico de evolución del sistema $S$ como $\tau_S = |\omega - \omega'|^{-1}$, y además se cumple que el tiempo de relajación $\tau_R \gg \tau_S$, entonces los términos no seculares (aquellos con $\omega \neq \omega'$) pueden despreciarse. Esto se debe a que los factores oscilatorios $e^{i(\omega - \omega')t}$ varían rápidamente en la escala de tiempo $\tau_R$, promediándose a cero.\\
+Al tomar esta aproximación, la evolución del sistema queda
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega}\sum_{\alpha,\beta} \Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
     & + \sum_{\omega}\sum_{\alpha,\beta} \Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega) \right),
@@ -262,7 +262,7 @@ y el Disipador
     \mathcal{D}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right].
 \end{equation*}
 
-El poder escribir el disipador de esta manera es importante, ya que permite preservar la traza, la hermiticidad y que la matriz resultante de la evolución sea semidefinida positiva,ya que esta evolucion se encuentra en la forma GKLS \cite{manzano2020short}.
+El poder escribir el disipador de esta manera es importante, ya que esta evolución se encuentra en la forma GKLS que permite preservar traza, hermiticidad y positividad de la matriz densidad\cite{manzano2020short}. 
 
 \label{sec:lindblad}
 
