@@ -1,49 +1,51 @@
-This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 10 items.
 The style file: natnumurl.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: library.bib
 Warning--vacio publisher en Maxwell_1871
 Warning--vacio journal en schinabeck2019hierarchical
-You've used 32 entries,
+You've used 34 entries,
             1986 wiz_defined-function locations,
-            645 strings with 8612 characters,
-and the built_in function-call counts, 9268 in all, are:
-= -- 989
-> -- 281
+            657 strings with 8994 characters,
+and the built_in function-call counts, 9940 in all, are:
+= -- 1059
+> -- 309
 < -- 0
-+ -- 108
-- -- 76
-* -- 604
-:= -- 1203
-add.period$ -- 36
-call.type$ -- 32
-change.case$ -- 28
++ -- 118
+- -- 84
+* -- 648
+:= -- 1289
+add.period$ -- 38
+call.type$ -- 34
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 518
-empty$ -- 880
-format.name$ -- 76
-if$ -- 2364
+cite$ -- 36
+duplicate$ -- 560
+empty$ -- 934
+format.name$ -- 84
+if$ -- 2538
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 35
-newline$ -- 170
-num.names$ -- 32
-pop$ -- 86
+int.to.str$ -- 34
+missing$ -- 37
+newline$ -- 180
+num.names$ -- 34
+pop$ -- 90
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 409
+skip$ -- 447
 stack$ -- 0
-substring$ -- 500
-swap$ -- 266
+substring$ -- 524
+swap$ -- 292
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 78
-width$ -- 34
-write$ -- 394
+while$ -- 82
+width$ -- 36
+write$ -- 420
 (There were 2 warnings)
