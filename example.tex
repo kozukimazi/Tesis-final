@@ -267,8 +267,8 @@ El escribir el disipador de esta manera es importante, ya que esta evolución se
 \label{sec:lindblad}
 
 
-\chapter{Estadística de conteo(\textit{Full Counting Statistics)} }
-En este capítulo se presenta el formalismo de FCS. En la sección \ref{sec3workheat} se describen las cantidades termodinámicas a estudiar. Mientras que en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica. Además en la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos. También en la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. Y en la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada. 
+\chapter{Estadística de conteo(\textit{Full Counting Statistics}) }
+En este capítulo se presenta el formalismo de \textit{Full Counting Statistics}(FCS). La sección \ref{sec3workheat} esta dedicada a la  descripción de las cantidades termodinámicas de interés, y en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica en el contexto del modelo. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos, mientras que en la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. Finalmente, en la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada. 
 
 \section{Cantidades termodinámicas}
 Se considera el sistema descrito por el Hamiltoniano
@@ -279,14 +279,16 @@ Se considera el sistema descrito por el Hamiltoniano
 donde el primer término describe el Hamiltoniano del sistema el cuál puede ser tiempo dependiente, la segunda parte describe los reservorios térmicos y por último la tercera parte constituye el acoplamiento entre sistema-baño.\\
 El sistema intercambia energía y partículas con el reservorio, por ende el cambio de energía puede ser dividido por una contribución correspondiente al calor y otra correspondiente al trabajo. Así, se define el calor que libera el baño $\alpha$ durante el intervalo de tiempo $[0,t]$ como
 
-\begin{equation*}
+\begin{equation}
     \langle Q_{\alpha}\rangle = - \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(t) \} + \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(0) \},
-\end{equation*}
-en la cuál $\hat{N}_{\alpha}$ corresponde al operador de número que describe el número de partículas en el baño $\alpha$ y $\mu_{\alpha}$ es su potencial químico. El trabajo promedio que entrega el reservorio $\alpha$ se define como
+\label{sec3:calor}
+\end{equation}
+en la cuál $\hat{N}_{\alpha}$ corresponde al operador de número que cuantifica el número de partículas en el baño $\alpha$ y $\mu_{\alpha}$ es su potencial químico. El trabajo promedio que entrega el reservorio $\alpha$ se define como
 
-\begin{equation*}
+\begin{equation}
     \langle W_{\alpha}\rangle = - \mu_{\alpha} (\text{Tr}\{\hat{N}_{\alpha} \hat{\rho}_{tot}(t) \} - \text{Tr}\{\hat{N}_{\alpha}\hat{\rho}_{tot}(0) \}  ).
-\end{equation*}
+    \label{sec3:trabajo}
+\end{equation}
 \label{sec3workheat}
 
 \newpage
@@ -294,7 +296,7 @@ en la cuál $\hat{N}_{\alpha}$ corresponde al operador de número que describe e
 \section{Leyes de la termodinámica}
 \label{Leyestermo}
 \subsection{Ley cero}
-Si se tiene un sistema total descrito por un sistema reducido y un baño, los cuáles están en equilibrio a temperatura inversa $\beta$ y potencial químico $\mu$. De tal manera que el estado del sistema en equilibrio es él equilibrio gran canónico
+Si se tiene un sistema total descrito por un sistema reducido y un baño, que se encuentran en equilibrio a temperatura inversa $\beta$ y potencial químico $\mu$. De tal manera que el estado del sistema en equilibrio es el equilibrio gran canónico
 
 \begin{equation*}
     \hat{\rho}^{eq}_{tot} = \frac{e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})}}{Z}  \hspace{28mm} Z = \text{Tr}\{e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \},
@@ -302,38 +304,37 @@ Si se tiene un sistema total descrito por un sistema reducido y un baño, los cu
 y por lo tanto el estado de equilibrio del sistema reducido es
 
 \begin{equation*}
-    \hat{\rho}_{S} = \frac{1}{Z}\text{Tr}_{B}\{ e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \}.
+    \hat{\rho}_{S} = \frac{1}{Z}\text{Tr}_{B}\{ e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \},
 \end{equation*}
-
-En el límite de acoplamiento débil entre el sistema y el baño, este equilibrio se convierte en \cite{geva2000second}
+que en el límite de acoplamiento débil entre el sistema y el baño, este equilibrio se convierte en \cite{geva2000second}
 \begin{equation*}
     \hat{\rho}_{S} = \frac{e^{-\beta(\hat{H}_{S} - \mu\hat{N}_{S})}}{\text{Tr}_{S}\{e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})} \} }.
 \end{equation*}
 
 \subsection{Primera Ley}
-Para escribir la primera ley en un estado fuera de equilibrio, primero se debe escribir la corriente de calor y la potencia entregadas por el baño $\alpha$
+Para escribir la primera ley, primero se debe introducir la corriente de calor y la potencia entregadas por el baño $\alpha$
 
 \begin{equation*}
-    J_{\alpha}(t) = \partial_{t}\langle Q_{\alpha}\rangle \hspace{12mm}  P_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle,
+    J_{\alpha}(t) = \partial_{t}\langle Q_{\alpha}\rangle \hspace{12mm}  P_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle.
 \end{equation*}
-para el caso en que el Hamiltoniano del sistema no depende del tiempo y considerando que se cumple el acoplamiento débil, la primera ley consiste en
 
+En el límite de acoplamiento débil para un Hamiltoniano tiempo independiente la primera ley consiste en 
 \begin{equation*}
     \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha}(t) + P_{\alpha}(t) ] \hspace{12mm} E = \text{Tr}\{\hat{H}_{S}\hat{\rho}_{tot}(t) \},
 \end{equation*}
-en el límite de acoplamiento débil $E(t)$ consiste en la energía interna del sistema, mientras que la corriente de calor y la potencia entregada por el baño $\alpha$ en función de la matriz densidad del sistema será 
+donde $E(t)$ consiste en la energía interna del sistema, mientras que la corriente de calor y la potencia entregada por el baño $\alpha$ en función de la matriz densidad del sistema será 
 
 \begin{equation*}
     J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \}. 
 \end{equation*}
 
 \subsection{Segunda Ley}
-Para introducir la segunda Ley se parte de la condición inicial en el que el sistema y el reservorio son sistemas no correlacionados, es decir 
+Para introducir la segunda ley se parte de la condición inicial en la que el sistema y el reservorio son sistemas no correlacionados, es decir 
 
 \begin{equation*}
     \hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0)\otimes_{\alpha}\hat{\tau}_{\alpha} \hspace{12mm} \hat{\tau}_{\alpha} = \frac{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) }}{ \text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\} },
 \end{equation*}
-en donde cada reservorio se encuentra en equilibrio gran canónico con respecto a su inverso de la temperatura $\beta_{\alpha}$ y su potencial químico $\mu_{\alpha}$. Con esta condición inicial, la segunda ley puede ser escrita en función de la producción de entropía $\sigma(t)$ como \cite{esposito2010entropy}
+donde cada reservorio se encuentra en equilibrio gran canónico con inverso de la temperatura $\beta_{\alpha}$ y potencial químico $\mu_{\alpha}$. Con esta condición inicial, la segunda ley puede ser escrita en función de la producción de entropía $\sigma(t)$ como \cite{esposito2010entropy}
 
 \begin{equation*}
     \sigma(t) \equiv \Delta S(t) - \sum_{\alpha}\beta_{\alpha}\langle Q_{\alpha}\rangle \geq 0.
@@ -345,22 +346,22 @@ $\Delta S$ denota el cambio en la entropía de Von Neumann del sistema
     \Delta S(t) = -  \text{Tr}\{\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} +  \text{Tr}\{ \hat{\rho}_{S}(0)\ln \hat{\rho}_{S}(0) \},
 \end{equation*}
 es decir, la producción de entropía se separa en una parte que corresponde al cambio de entropía del sistema, mientras que la segunda parte corresponde a la contribución debido al calor que entrega el ambiente.\\
-Como en este trabajo se hará análisis de flujos continuos tanto de energía como de partículas, es importante estudiar la razón de producción de entropía. Si bien, la producción de entropía siempre es positiva, la razón de producción de entropía no siempre lo es, aún así para sistemas markovianos se cumple que \cite{strasberg2019non}
+Como en este trabajo se hará análisis de flujos continuos tanto de energía como de partículas, es importante estudiar la taza de producción de entropía. Si bien, la producción de entropía siempre es positiva, la taza de producción de entropía no siempre lo es, aún así para sistemas markovianos se cumple que \cite{strasberg2019non}
 
 \begin{equation*}
     \dot{\sigma}(t) \equiv \partial_{t}\Delta S(t) - \sum_{\alpha}\beta_{\alpha}J_{\alpha} \geq 0.
 \end{equation*}
 
-Y la igualdad se cumple para procesos reversibles. Con esto se han definido las leyes de la termodinámica en función de flujos continuos, que se podrán escribir a través de la matriz densidad reducida. En esta tesis estas cantidades serán estudiadas principalmente en el estado estacionario.
+Y la igualdad se cumple para procesos reversibles. Con esto se han definido las leyes de la termodinámica en función de flujos continuos, que se podrán calcular a través de la matriz densidad reducida. En esta tesis estas cantidades serán estudiadas principalmente en el estado estacionario.
 
 \label{sec3sub:leyestermo}
 
 \section{Estadística de medición en dos puntos}
-Considere un sistema total descrito por la condición inicial $\hat{\rho}_{tot}(0) = \hat{\rho}_{s}(0) \otimes_{\alpha} \hat{\tau}_{\alpha}$. En donde $\hat{\tau}_{\alpha}$ representa el equilibrio gran canónico del reservorio $\alpha$. A lo largo de este trabajo nos interesa calcular cantidades termodinámicas. Es importante calcular cantidades como el calor y trabajo. Al ser cantidades que dependen del incremento de variables aleatorias como la energía y número de partículas en el reservorio, estas cantidades se podrán describir en función de una distribución de probabilidad
+A lo largo de este trabajo, se pretende calcular diversas cantidades termodinámicas asociadas a la dinámica del sistema, tales como la energía y el trabajo. Si bien los valores promedio de estas cantidades pueden obtenerse con las expresiones \ref{sec3:calor} y \ref{sec3:trabajo}, tanto el calor y el trabajo intercambiados con los reservorios deben considerarse como variables aleatorias, ya que su determinación implica medir sobre el estado de los reservorios. Debido a la naturaleza cuántica de la evolución, dichas mediciones pueden arrojar distintos resultados en diferentes repeticiones del experimento. Por lo tanto, para acceder a los valores promedio, es útil calcular la distribución de probabilidad del calor y el trabajo intercambiados por el reservorio. Para  un sistema total descrito por la condición inicial $\hat{\rho}_{tot}(0) = \hat{\rho}_{s}(0) \otimes_{\alpha} \hat{\tau}_{\alpha}$ la distribución de probabilidad es   
 
 \begin{align*}
     P(\textbf{Q},\textbf{W}) & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'} P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) P_{0}(\textbf{E},\textbf{N})\\
-                             & \times \Pi_{\alpha} \delta(W_{\alpha} - \mu_{\alpha}(N'_{\alpha} - N_{\alpha})) \delta(Q_{\alpha} + W_{\alpha}  - (E'_{\alpha} - E_{\alpha})).   
+                             & \times \Pi_{\alpha} \delta(W_{\alpha} - \mu_{\alpha}(N_{\alpha} - N'_{\alpha})) \delta(Q_{\alpha} + W_{\alpha}  - (E_{\alpha} - E'_{\alpha})).   
 \end{align*}
 
 La probabilidad conjunta de que cada baño $\alpha$ tenga energía $E_{\alpha}$ y número de partículas $N_{\alpha}$ a tiempo $t=0$ es
