@@ -592,7 +592,7 @@ Sin embargo, esta aproximación requiere que las frecuencias de Bohr estén bien
 \[
 |\omega_j - \omega_{j'}| \ll 1/\tau_B \quad \text{o} \quad |\omega_j - \omega_{j'}| \gg 1/\tau_R.
 \]
-Incluso, ambas pueden cumplirse simultáneamente. Es posible agrupar las frecuencias de transición en subconjuntos \( x_q \), tal que frecuencias que cumplen la primera desigualdad pertenezcan al mismo conjunto, mientras que aquellas que cumplen la segunda pertenezcan a conjuntos distintos. Esto se traduce matemáticamente en
+Incluso, ambas pueden cumplirse simultáneamente. Es posible agrupar las frecuencias de transición en subconjuntos \( x_q \), tal que frecuencias que cumplen la primera desigualdad pertenecen al mismo conjunto, mientras que aquellas que cumplen la segunda pertenecen a conjuntos distintos. Esto se traduce matemáticamente en
 
 
 \begin{align*}
@@ -600,13 +600,15 @@ Incluso, ambas pueden cumplirse simultáneamente. Es posible agrupar las frecuen
     |\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}  &\hspace{10mm} \omega_{j} \in x_{q}, \omega_{j'} \in x_{q'}.
 \end{align*}
 
-Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente, por ende en  promedio se anula ese término. Para frecuencias de transición en el mismo set $x_{q}$, si se considera las funciones de corrleación  espectral $\Gamma^{\alpha}_{k,k}(\omega) = \int_{-\infty}^{\infty} ds e^{i \omega s} C^{\alpha}_{k,k}(s)$ primero deberemos notar que los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ posteriormente actuan en las funciones correlación espectral del baño, y por ende influyen en las energías de transición que se intercambian con el reservorio. Sin embargo, se comentó anteriormente que existe una resolución finita en el calor intercambiado con el baño, lo que conlleva a que para frecuencias del mismo conjunto no siempre podremos determinar la diferencia entre $\omega_{j}$ y $\omega_{j'}$, esto produce que tendremos que sustituir estas frecuencias por una frecuencia auxiliar $\omega_{q}$ tal que
+Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente, por ende en  promedio se anulan.\\
+La funcion correlación  espectral $\Gamma^{\alpha}(\omega) = \int_{-\infty}^{\infty} ds e^{i \omega s} C^{\alpha}(s)$, representa la razón de transición del sistema entre estados con diferencia de energía $\omega$, inducida por el baño $\alpha$. Dentro de un mismo conjunto $x_{q}$, los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ contribuyen, respectivamente, a  $\Gamma^{\alpha}(\omega_{j})$ y $\Gamma^{\alpha}(\omega_{j'})$, es decir,  describen transiciones inducidas por el baño con energías cercanas $\omega_{j}$ y $\omega_{j'}$. Sin embargo, debido a la resolución finita del calor intercambiado con el reservorio, no es posible distinguir entre transiciones con frecuencias dentro del mismo conjunto $x_q$. Por lo tanto, en las funciones correlación espectral se deben sustituir las frecuencias individuales $\omega_{j} \in x_{q}$ por una frecuencia auxiliar $\omega_{q}$, es decir 
 
 \begin{equation*}
     e^{i\omega_{j}s},e^{i\omega_{j'}s} \to e^{i\omega_{q}s} \hspace{10mm} |\omega_{q} - \omega_{j}| \ll 1/\tau_{B} \hspace{10mm} \forall \omega_{j} \in x_{q}.
 \end{equation*}
 
-Usando este esquema en la ecuación \ref{ecmaestrafinal}, se obtiene la ecuación en la forma de Lindblad con el objetivo de asegura la positividad\cite{chruscinski2017brief}, descrita por
+Esta sustitución refleja la incapacidad de distinguir transiciones con energías dentro del mismo conjunto \( x_q \), y permite construir una descripción coarse-grained de la dinámica que respeta tanto la positividad como las limitaciones de resolución energética\cite{chruscinski2017brief}. \\
+Usando este esquema en la ecuación \ref{ecmaestrafinal}, se obtiene la ecuación en la forma GKLS
 
 \begin{equation*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)] + \sum_{\alpha}\tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha} \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
@@ -634,7 +636,8 @@ con las cantidades
     \Gamma_{k}^{\alpha}(\omega) = \int_{-\infty}^{\infty}ds e^{i\omega s}C^{\alpha}_{k,k}(s) \hspace{10mm} \Delta^{\alpha}_{k}(\omega) = - \frac{i}{2} \int^{\infty}_{-\infty}ds e^{i\omega s} \text{sign}(s)C^{\alpha}_{k,k}(s).
 \end{equation*}
 
-En donde se asume por simplicidad $C^{\alpha}_{k,k'} \propto \delta_{k,k'}$. La demostración de esta ecuación está incluida en el apéndice \ref{apendixGKLSgeneral}. Después se puede usar la condición KMS \ref{apendixKMS} junto con el límite en que  los parámetros de conteo tienden a cero, para obtener
+En donde se asume por simplicidad $C^{\alpha}_{k,k'} \propto \delta_{k,k'}$. La demostración de esta ecuación está incluida en el apéndice \ref{apendixGKLSgeneral}. \\
+En el límite en que los parámetros de conteo tienden a cero, se obtiene  
 
 \begin{equation*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = - i[\hat{H}_{LS}(t),\hat{\rho}_{IS}(t)] + \sum_{\alpha}\tilde{\mathcal{L}}_{\alpha} \hat{\rho}_{IS}(t),
@@ -644,7 +647,8 @@ con
     \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\Gamma^{\alpha}_{k,k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}(t)]  \right].
 \end{equation*}
 
-Para un Hamiltoniano tiempo independiente, la ecuación maestra en el cuadro de Schrodinger finalmente es
+La demostración de esta ecuación se encuentra en \ref{apendixKMS}.\\ 
+Para un Hamiltoniano tiempo independiente, la ecuación maestra en el cuadro de Schrodinger es
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{S} = -i [\hat{H}_{S}+ \hat{H}_{LS},\hat{\rho}_{S}(t)] + \sum_{\alpha}\mathcal{L}_{\alpha}(\hat{\rho}_{S}(t)),
@@ -657,76 +661,88 @@ con
 \label{sec2lindbladconsistency}
 \end{equation}
 
-Hay dos límites importantes, uno de ellos es si se cumple el caso en que todas las frecuencias cumplen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{S}$, en ese caso se recupera la ecuación de Lindblad correspondiente a la aproximación secular, ya que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo, $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$ esto permite describir la ecuación maestra en función de operadores locales, y por ende no es necesario diagonalizar el Hamiltoniano $\hat{H}_{S}$\cite{wichterich2007modeling}. Por otro lado, la resolución finita de energía se hace presente, ya  que para un mismo grupo $x_{q}$, las funciones correlación espectral son evaluadas en la misma frecuencia $\omega_{q}$, que intuitivamente describe la energía con que las partículas se intercambian al reservorio.  
-
+Hay dos límites importantes a considerar. El primero corresponde al caso en que todas las frecuencias satisfacen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{S}$, ya que se cumple que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$, lo que permite realizar la aproximación secular entre todas las frecuencias de Bohr y recuperar la ecuación de Lindblad. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo. Por lo tanto, los operadores del sistema cumplen que $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$, y la ecuación maestra queda descrita por operadores locales, lo que corresponde a la ecuación maestra local\cite{wichterich2007modeling}.
 \section{Consistencia termodinámica}
-Debido a la resolución finita de energía para asegurar consistencia termodinámica, se deben redefinir las leyes termodinámicas. Primero se define el Hamiltoniano termodinámico $\hat{H}_{TD}$ que cumpla la siguiente relación de conmutación
+Debido a la resolución finita de energía impuesta por la dinámica markoviana, para asegurar la consistencia termodinámica es necesario redefinir las leyes de la termodinámica. Como primer paso, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cual satisface la relación de conmutación
 
 \begin{equation*}
     [\hat{S}_{\alpha,k,j},\hat{H}_{TD}] = \omega_{q}\hat{S}_{\alpha,k,j},
 \end{equation*}
-para todas las frecuencias $\omega_{j} \in x_{q}$. Este Hamiltoniano se puede obtener mediante el Hamiltoniano $\hat{H}_{S}$, cambiando sus autovalores tal que las frecuencias $\omega_{j} \to \omega_{q}$ para $\omega_{j} \in x_{q}$. Para las leyes de la termodinámica, se redefine la energía interna
+para todas las frecuencias $\omega_{j} \in x_{q}$. Este Hamiltoniano puede construirse mediante el Hamiltoniano $\hat{H}_{S}$, modificando sus autovalores de modo que todas las transiciones dentro de un mismo conjunto $x_q$ compartan una frecuencia $\omega_{q}$ para $\omega_{j} \in x_{q}$. \\
+Para las leyes de la termodinámica, se redefine la energía interna
 
 \begin{equation*}
     E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t) \}.
 \end{equation*}
 
-Finalmente la corriente de calor y el trabajo entregado por el baño $\alpha$ se redefine por
+Finalmente, la corriente de calor y el trabajo entregado por el baño $\alpha$ se redefinen por
 
 \begin{equation*}
-    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} ,
+    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \}.
 \end{equation*}
-note que está definición automáticamente cumple con la primera ley de la termodinámica, ya que al derivar la energía interna $\partial_{t}E(t) = \text{Tr}\{ \hat{H}_{TD}\partial_{t}\hat{\rho}_{S}(t) \}$ y utilizar que el Hamiltoniano termodinámico cumple con la relación $[\hat{H}_{TD},\hat{H}_{s} + \hat{H}_{LS}] = 0$, se obtiene la primera ley
+
+Está definición automáticamente cumple con la primera ley de la termodinámica, ya que al derivar la energía interna $\partial_{t}E(t) = \text{Tr}\{ \hat{H}_{TD}\partial_{t}\hat{\rho}_{S}(t) \}$ y utilizar la relación de conmutación $[\hat{H}_{TD},\hat{H}_{S} + \hat{H}_{LS}] = 0$. Se obtiene la primera ley
 
 \begin{equation*}
     \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha} + P_{\alpha}].
 \end{equation*}
 
 \subsection{Ley cero}
-Usando la ecuación maestra con los superoperadores \ref{sec2lindbladconsistency} se cumple que
+Usando la ecuación maestra, con los superoperadores \ref{sec2lindbladconsistency} se cumple que
 
 \begin{equation}
     \mathcal{L}_{\alpha}e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0,
 \label{sec2cerolaw}
 \end{equation}
-además, si se tiene que todos los reservorios tienen la misma temperatura inversa $\beta$ y el mismo potencial químico $\mu$, el estado de Gibbs corresponde a 
+además, si los reservorios tienen la misma temperatura inversa $\beta$ y el mismo potencial químico $\mu$, el estado de Gibbs corresponde a 
 
 \begin{equation*}
     \hat{\rho}_G = \frac{e^{-\beta(\hat{H}_{TD} - \mu \hat{N}_{S})}}{\text{Tr}\{ e^{-\beta(\hat{H}_{TD} - \mu \hat{N}_{S})}\}}.
 \end{equation*}
 
 \subsection{Segunda ley}
-La razón de producción de entropía en este caso es 
+La taza de producción de entropía será 
 
 \begin{equation}
     \dot{\sigma} = - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \ln \hat{\rho}_{S}(t) \} - \sum_{\alpha} \beta_{\alpha} J_{\alpha}(t) = -\sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))[\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})] \} \geq 0.
 \label{sec2secondlaw}
 \end{equation}
 
-En donde en la última parte se considera el hecho de que $\rho_{G}(\beta_{\alpha},\mu_{\alpha})$ es estado estacionario de $\mathcal{L}_{\alpha}$, para utilizar la desigualdad de Spohn\cite{spohn2007irreversible}. La demostración de \ref{sec2cerolaw} y de \ref{sec2secondlaw} se encuentra en el apéndice \ref{apendix:thermolaws}. Con esto finalmente logramos obtener una descripción termodinámicamente consistente a él uso de la ecuación maestra \ref{sec2schrodingerthermo}.
+Donde en la última parte se considera el hecho de que $\rho_{G}(\beta_{\alpha},\mu_{\alpha})$ es estado estacionario de $\mathcal{L}_{\alpha}$, para utilizar la desigualdad de Spohn\cite{spohn2007irreversible}. La demostración de \ref{sec2cerolaw} y de \ref{sec2secondlaw} se encuentra en el apéndice \ref{apendix:thermolaws}. \\
+Con esto finalmente se logra definir las leyes de la termodinámica usando la ecuación maestra \ref{sec2schrodingerthermo}.
 
 
 % ------------------------------------------------------------------------------
 % NUEVO CAPÍTULO
 % ------------------------------------------------------------------------------
 \chapter{Flujos de información}
-En este capítulo se introduce el concepto de información termodinámica, partiendo en la sección \ref{sec4:functionalcurrent} con la explicación del Demonio de Maxwell y finalizando en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} en donde se utiliza la termodinámica estocástica y la matriz densidad para definir los flujos de información en contexto clásico y cuántico respectivamente.
+En este capítulo se introduce el concepto de información termodinámica, comenzando en la sección \ref{sec4:Demon} con una revisión del paradigma del Demonio de Maxwell. En la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se presenta el concepto de flujos de información, utilizando herramientas como la termodinámica estocástica en contexto clásico y la matriz densidad en contexto cuántico.
+
+
 \section{Demonio de Maxwell}
-El demonio de Maxwell consiste en un experimento mental esbozado por Maxwell en su libro \cite{Maxwell_1871}, el cuál consiste en una caja dividida en dos partes A y B, en donde cada compartimiento se encuentra lleno de un gas ideal a temperatura $T$ y presión $P$ como sale en la Figura \ref{img:demon}. Entre la división existe una puerta sin masa la cuál permite el intercambio de partículas entre compartimientos. La puerta es controlada por un Demonio, el cuál tiene la capacidad de abrir y cerrar la puerta sin ningún costo de energía. La cualidad principal de él, es que conoce las velocidades de cada partícula de los dos compartimientos. Debido a que la temperatura incide en la velocidad promedio de cada partícula. El demonio toma la decisión de dejar pasar las partículas con mayor velocidad que la correspondiente a la velocidad promedio, desde el compartimiento A a el B. Mientras que a las partículas con baja velocidad de él compartimiento B a él A. Asumiendo que queda el mismo número de partículas en cada compartimiento, él Demonio logra aumentar la temperatura del compartimiento A, por otro lado la temperatura del compartimiento B decrese una cantidad $\Delta T$. Si analizamos la entropía total del sistema
-
-
+El demonio de Maxwell es un experimento mental esbozado por James Clerk Maxwell en su obra\cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por una entidad denominada "Demonio", la cual tiene la capacidad de abrirla y cerrarla sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos. \\
+Dado que la temperatura se relaciona con la velocidad promedio de las partículas, el Demonio puede discriminar entre partículas rápidas y lentas. De este modo, permite pasar del compartimiento A al B solo aquellas partículas cuya velocidad es mayor que la velocidad promedio, mientras que deja pasar del compartimiento B al A las partículas más lentas. Si se mantiene constante el número de partículas en cada compartimiento, este proceso da lugar a un aumento de la temperatura en A y una disminución en B, es decir, una diferencia \( \Delta T \) entre ambos lados. \\
+El cambio de entropía del sistema es
+ 
 \begin{align*}
     \Delta S & = \Delta S_{A} + \Delta S_{B} = C_{V}\left( \log \frac{T-\Delta T}{T} + \log \frac{T+\Delta T}{T} \right) \\
        & =  C_{V} \log \left( 1 - \frac{\Delta T^{2}}{T^{2}}  \right) < 0,
 \end{align*}
-en donde $C_{V}$ es la capacidad calorífica a volumen constante. Del cálculo de la entropía total, se obtiene que sin realizar trabajo se logró una disminución de la entropía, lo que rompe aparentemente con la segunda ley de la termódinamica. Posteriormente, Landauer exorcisaría este demonio, percatandosé que para que el demonio conozca la velocidad de las partículas, este necesita medir, y el hecho de medir requiere de  disipación, volviendo a respetar la segunda ley\cite{Landauer_1961}. \\
-Para sistemas no autónomos, es decir sistemas manipulados por un agente externo a través del cambio de cantidades macroscópicas, como por ejemplo el motor de Szilard\cite{szilard1964decrease}. La descripción y exorcización del Demonio de Maxwell se ha descrito, mediante la cuantificación de la energía que cuesta hacer una medición como también por el máximo trabajo que se puede extraer de un motor de feedback\cite{maruyama2009colloquium,sagawa2008second}. Sin embargo el caso de sistemas autónomos merece ser visto con detención.
+Donde \( C_V \) representa la capacidad calorífica a volumen constante.
 
-\insertimage[\label{img:demon}]{ejemplos/Maxwelldemon1}{scale=0.9}{Esquema que representa al Demonio de Maxwell. Primero, consiste en los dos compartimientos que poseen el gas ideal distribuido de manera homogénea. Por último al trasladar las partículas de un lado a otro, queda el compartimiento A con partículas frías mientras que el compartimiento B con partículas calientes. Esta figura fue usada de \cite{link1} .}
+Del cálculo de la entropía total se concluye que, sin realizar trabajo externo, el Demonio logra una disminución de la entropía, lo cual representa una aparente violación de la segunda ley de la termodinámica.
+
+Sin embargo, esta paradoja fue resuelta posteriormente por Rolf Landauer, quien ``exorcizó'' al Demonio al señalar que, para que este pueda conocer la velocidad de las partículas, debe realizar mediciones. El proceso de medición, y en particular el borrado de la información asociada a dichas mediciones, implica una disipación de energía. Este resultado, conocido como el principio de Landauer, restablece la validez de la segunda ley\cite{Landauer_1961}. \\
+En sistemas no autónomos, es decir sistemas manipulados por un agente externo a través del control de cantidades macroscópicas, la paradoja de Maxwell ha sido abordada extensamente. Un ejemplo clásico es el motor de Szilard\cite{szilard1964decrease}, donde se ha logrado describir y ``exorcizar'' al Demonio cuantificando tanto la energía requerida para realizar una medición,  como el costo energético asociado al borrado de la memoria del Demonio, y el trabajo máximo que puede extraerse mediante retroalimentación (feedback) \cite{maruyama2009colloquium, sagawa2008second}. No obstante, el caso de sistemas autónomos, en los cuales no existe intervención externa y tanto la dinámica como la retroalimentación son generadas internamente, presenta características fundamentales que merecen un análisis más detallado.
+
+\insertimage[\label{img:demon}]{ejemplos/Maxwelldemon1}{scale=0.9}{Esquema que representa al Demonio de Maxwell. Primero, consiste en los dos compartimientos que poseen el gas ideal distribuido de manera homogénea. Por último, al trasladar las partículas de un lado a otro, queda el compartimiento A con partículas frías mientras que el compartimiento B con partículas calientes. Esta figura fue tomada de \cite{link1} .}
+
+\label{sec4:Demon}
 
 \section{Demonio de Maxwell autónomo}
 Muchos procesos físicos requieren la interacción entre un conjunto de subsistemas que componen un sistema global. Esta interacción entre los subsistemas no sólo incluye un intercambio de energía o partículas, sino que también incluye un intercambio de información a medida que se correlacionan estos subsistemas entre sí de manera autónoma, es decir, sin un factor externo el cuál realize un feedback en él. Entender como son utilizados estos flujos de información para hacer tareas útiles es de gran importancia. Un ejemplo de ello es en sistemas biólogicos, los cuáles realizan adaptación sensorial, en donde un organismo continuamente monitorea su ambiente mientras simultáneamente cambia su respuesta a él\cite{lan2012energy}. Para poder caracterizar esto se partirá considerando un Demonio de Maxwell autónomo como un sistema bipartito en donde una parte consiste en el sistema controlado y la parte restante en el sistema que actua como detector, el cuál ejerce control mediante una interacción física con el sistema controlado. Este sistema debe ser autónomo, en el sentido de que el Hamiltoniano de todo el sistema es tiempo independiente e intervenciones externas tales como mediciones y feedback no son considerados.
 
+\label{sec4:autonomo}
 \section{Descripción clásica}
 Para poder describir un demonio de Maxwell autónomo, se debe ser capaz de calcular la evolución de un sistema conectado a uno o más reservorios, y por ende sujeto a las leyes de la termodinámica. Para ello, supongamos el caso de 2 sistemas independientes $X$ e $Y$, cada uno de ellos tiene distintos estados discretos representados por $x$ e $y$. Estos sistemas tienen su propia dinámica, la cuál corresponde a saltos aleatorios entre los estados del sistema, que obedecen distintas razones de transición las cuáles serán determinadas por los reservorios a los cuáles esta conectado localmente cada subsistema, que refiere a la condición de balance detallado local\cite{van2015ensemble}. Esta evolución entre estados, se modela como un proceso de Markov\cite{van1992stochastic}. Para poder describir el sistema en conjunto se supondrá primero que el sistema se acopla de manera bipartita, que en este contexto consiste en que si se tiene un estado conjunto de los dos sistemas $(x,y)$ sólo pueden haber transiciones del tipo $(x,y) \to (x,y')$ o $(x,y) \to (x',y)$ y no $(x,y) \to (x',y')$. Esto permite que el sistema total $XY$ siga siendo markoviano, y por ende la probabilidad de estar en el estado $(x,y)$, es decir $p(x,y)$ podrá ser descrita por una ecuación maestra
 

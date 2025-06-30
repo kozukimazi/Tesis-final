@@ -19,11 +19,11 @@
 \contentsline {subsection}{\numberline {3.5.2}Agrupación de frecuencias}{16}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Consistencia termodinámica}{18}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Ley cero}{18}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Segunda ley}{18}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.2}Segunda ley}{19}{subsection.3.6.2}%
 \contentsline {chapter}{\numberline {4}Flujos de información}{20}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Demonio de Maxwell}{20}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Demonio de Maxwell autónomo}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Descripción clásica}{21}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Descripción clásica}{22}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Segunda Ley de la termodinámica y flujos de información}{23}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Descripción cuántica}{25}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Flujos de información en contexto cuántico}{26}{section.4.6}%
