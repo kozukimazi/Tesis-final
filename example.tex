@@ -962,20 +962,20 @@ Si se asume que cada reservorio induce un equilibrio local descrito por un estad
 \begin{equation*}
     \hat{\rho}_{\text{eq}}^{\alpha} = \frac{1}{Z_{\beta_\alpha, \mu_\alpha}} e^{-\beta_\alpha (\hat{H}_S - \mu_\alpha \hat{N})},
 \end{equation*}
-entonces es posible aplicar la desigualdad de Spohn~\cite{spohn1978entropy} para obtener una formulación generalizada de la segunda ley de la termodinámica, en términos de una desigualdad de Clausius para la tasa de producción de entropía local asociada al reservorio $\alpha$, es decir 
+entonces es posible aplicar la desigualdad de Spohn \cite{spohn1978entropy}, para obtener una formulación generalizada de la segunda ley de la termodinámica, en términos de una desigualdad de Clausius para la tasa de producción de entropía local asociada al reservorio $\alpha$, es decir 
 
 \begin{equation}
     - \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq} )  ] \geq 0.
 \label{spohninfo}
 \end{equation}
 
-Cabe señalar que este resultado se mantiene válido si, en el estado estacionario, se considera el Hamiltoniano termodinámico $\hat{H}_{\mathrm{TD}}$ en lugar del Hamiltoniano físico $\hat{H}_S$.
+Cabe señalar, que este resultado se mantiene válido si el estado estacionario esta descrito por el Hamiltoniano termodinámico $\hat{H}_{\mathrm{TD}}$, en lugar del Hamiltoniano físico $\hat{H}_S$.
 
 Si se define la cantidad
 \begin{equation}
     \dot{S}^{\alpha} = - \mathrm{Tr} \{ (\mathcal{L}_{\alpha} \hat{\rho}_S) \ln \hat{\rho}_S \},
 \end{equation}
-como la tasa de cambio de la entropía de von Neumann del sistema inducida por el acoplamiento al reservorio $\alpha$, con la entropía dada por
+como la tasa de cambio de la entropía de von Neumann del sistema inducida por el acoplamiento al reservorio $\alpha$, con la entropía definida por
 \begin{equation}
     S = - \mathrm{Tr} \{ \hat{\rho}_S \ln \hat{\rho}_S \},
 \end{equation}
@@ -1014,10 +1014,10 @@ Se cumple que la suma de las corrientes de energía provenientes de los distinto
 En el caso de un Hamiltoniano independiente del tiempo, no se realiza trabajo mecánico, por lo que sólo se considera trabajo químico. En consecuencia, la energía intercambiada con cada reservorio se descompone como
 
 \begin{equation*}
-    \dot{E}_{\alpha} = \dot{Q}_{\alpha} + \dot{W}_{\alpha}.
+    \dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}.
 \end{equation*}
 
-Multiplicando la ecuación \ref{sec4:localentropy} por la temperatura del reservorio $T_{\alpha}$ y reemplazando $\dot{Q}_{\alpha}$ mediante la expresión anterior, se obtiene
+Multiplicando la ecuación \ref{sec4:localentropy} por la temperatura del reservorio $T_{\alpha}$ y reemplazando $J_{\alpha}$ mediante la expresión anterior, se obtiene
 
 \begin{equation}
     T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W}_{\alpha} - \dot{\mathcal{F}}_{\alpha} \geq 0,
@@ -1043,52 +1043,73 @@ donde $\dot{W} = \sum_{\alpha}\dot{W}_{\alpha}$ y la tasa de cambio de energía 
 
 Para el caso particular, en qué todas las temperaturas son iguales, la tasa de cambio de energía libre $\dot{\mathcal{F}}$ se vuelve equivalente a la derivada temporal de la energía libre $\partial_{t}F = \partial_{t}(E-TS)$. Sólo en este caso \ref{sec4:localentropy} y \ref{sec4:freeratefinal} son equivalentes.
 
-En el caso isotérmico, se cumple que en el estado estacionario $\dot{\mathcal{F}} = \partial_{t}F = 0$ lo que implica que $\dot{W}>0$. Por lo tanto, el sistema no puede realizar trabajo neto si sólo se va a intercambiar  calor con reservorios a la misma temperatura. La única forma de obtener trabajo neto del sistema, o sea, lograr que $\dot{W}<0$, es mediante la presencia de reservorios con distinta temperatura,  En tal caso, la tasa de cambio de energía libre no se anula y es $\dot{\mathcal{F}} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha} \neq 0$.   
+En el caso isotérmico, se cumple en el estado estacionario que $\dot{\mathcal{F}} = \partial_{t}F = 0$, lo que implica $\dot{W}>0$. Por lo tanto, el sistema no puede realizar trabajo neto si sólo va a intercambiar  calor con reservorios a la misma temperatura. La única forma de obtener trabajo neto del sistema, o sea, lograr que $\dot{W}<0$, es mediante la presencia de reservorios con distinta temperatura.  En tal caso, la tasa de cambio de energía libre no se anula y es $\dot{\mathcal{F}} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha} \neq 0$.   
 
 \section{Flujos de información en contexto cuántico}
-Supongamos la existencia de un sistema hecho por dos subsistemas acoplados
+Suponga un sistema compuesto por dos subsistemas acoplados, descrito por el Hamiltoniano total
 
 \begin{equation*}
     \hat{H}_{S} = \hat{H}_{X} + \hat{H}_{Y} + \hat{H}_{XY}, 
 \end{equation*}
-donde $\hat{H}_{i}$ corresponde al Hamiltoniano del subsistema $i=X,Y$, mientras que $\hat{H}_{XY}$ corresponde al Hamiltoniano de interacción entre los dos subsistemas. Además, se asumirá que cada subsistema se encuentra acoplado a reservorios separados, de tal manera que los reservorios conectados al subsistema $i$ serán denotados por $\alpha_{i}$. Esto permite describir la razón de producción de entropía local de cada subsistema como
+donde $\hat{H}_{i}$ representa el Hamiltoniano del subsistema $i=X,Y$, y $\hat{H}_{XY}$ corresponde al término de interacción entre los dos subsistemas. Se asume, además, que cada subsistema está acoplado a un conjunto distinto de reservorios. En particular, los reservorios asociados al subsistema $i$ serán denotados por $\alpha_{i}$. Esto permite describir la tasa de producción de entropía local de cada subsistema como
 
 \begin{equation*}
     \dot{\sigma}^{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}^{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} J_{\alpha_{i}} \geq 0,
 \end{equation*}
-por lo tanto la razón de producción de entropía del sistema corresponde a $\dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}$. Similar a como se hizo en la descripción clásica, se buscará relacionar las producciones locales de entropía con la información, para ello se usará la información mutua entre los dos subsistemas $I_{xy} = S_{X} + S_{Y} - S_{XY}$. En donde $S_{i} = - \text{Tr}[ \hat{\rho}_{i}\ln \hat{\rho_{i}}]$ es la entropía de Von Neumann del subsistema $i$ ($\hat{\rho}_{i}$ consiste en la matriz densidad del subsistema $i$). Se puede separar la derivada temporal del flujo de información
+por lo tanto, la tasa de producción de entropía total del sistema corresponde a $\dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}$. 
+
+De forma análoga a lo realizado en la descripción clásica, se busca establecer una relación entre las producciones locales de entropía y la información compartida entre subsistemas. Para ello, se utilizará la información mutua entre los dos subsistemas, definida como
+ 
+\begin{equation*}
+    I_{xy} = S_{X} + S_{Y} - S_{XY},
+\end{equation*}
+donde $S_{i} = - \text{Tr}\{\hat{\rho}_{i}\ln \hat{\rho_{i}}\}$ es la entropía de Von Neumann del subsistema $i=X,Y$, y $\hat{\rho}_{i}$ consiste en la matriz densidad del subsistema $i$. 
+
+Se puede separar la derivada temporal de la información mutua
 
 \begin{align*}
     \partial_{t}I_{xy} & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \partial_{t}S_{XY} \\
         & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \sum_{i=X,Y;\alpha_{i}}\dot{S}^{\alpha_{i}} \\
         & =  \partial_{t}S_{X} - \sum_{\alpha_{X}} \dot{S}^{\alpha_{X}} + \partial_{t}S_{Y} - \sum_{\alpha_{Y}} \dot{S}^{\alpha_{Y}} \\
-        & = \dot{I}^{X} + \dot{I}^{Y}.
+        & = \dot{I}^{X} + \dot{I}^{Y},
 \end{align*}
-
-Definiendo la cantidad $\dot{I}^{i} = \partial_{t}S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} $, se puede separar la derivada total de la información mutua en dos contribuciones. Luego, en las razones de producción locales si se reemplaza $\sum_{\alpha_{i}}\dot{S}^{\alpha_{i}} \to \partial_{t}S_{i} - \dot{I}^{i} $ nos queda 
+donde aparece el flujo de información correspondiente a cada subsistema $i=X,Y$, como la cantidad $\dot{I}^{i} = \partial_{t}S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} $. Luego, si se reemplaza $\sum_{\alpha_{i}}\dot{S}^{\alpha_{i}} \to \partial_{t}S_{i} - \dot{I}^{i}$, en las tasas de producción de entropía locales, quedan las inecuaciones  
 
 \begin{align*}
     \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}^{X} \geq 0 \\
     \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}^{Y} \geq 0,
 \end{align*}
-que coincide con el resultado en la descripción clásica. Aun así, este resultado permite incluir efectos cuánticos del sistema en el flujo de la información.\\
-Para la tasa de cambio de la energía libre, si consideramos que el subsistema $i$ está conectado a un reservorio isotérmico de temperatura $T_{i}$ podremos considerar
+este resultado coincide con el obtenido en la descripción clásica. No obstante, su formulación en términos de entropía de von Neumann permite incorporar de forma natural los efectos cuánticos presentes en el sistema, lo cual resulta fundamental para caracterizar los flujos de información en regímenes donde las correlaciones cuánticas y las coherencias desempeñan un rol relevante.
 
+Si se considera que el subsistema $i$ esta conectado a a un reservorio isotermico de temperatura $T_i$, la tasa de cambio de la energía libre será
 \begin{align*}
-    \dot{\mathcal{F}}_{i} & = \dot{E}_{i} - T_{i} \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}, 
+    \dot{\mathcal{F}}_{i} & = \dot{E}_{i} - T_{i} \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}. 
 \end{align*}
-en el estado estacionario se puede reemplazar $\dot{I}^{i} = - \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}$ y así la razón de cambio de la energía libre
-\label{sec4:flujos0}
+
+En el estado estacionario se cumple la relación
+
+\begin{equation*}
+    \dot{I}^{i} = - \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}},
+\end{equation*}
+y la tasa de cambio de energía libre del subsistema $i$ es 
 
 \begin{equation*}
     \dot{\mathcal{F}}_{i} = \dot{E}_{i} + T_{i} \dot{I}^{i}.
 \end{equation*}
 
-En este caso la razón de cambio de energía libre tiene una contribución correspondiente a la energía y una nueva contribución correspondiente a la información. Si consideramos el caso del estado estacionario $\partial_{t}E = \dot{E}^{X} + \dot{E}^{Y} = 0$, se pueden considerar $\dot{E}^{i}$ como el flujo de energía entre los dos subsistemas, por ende en el estado estacionario la razón de energía libre se divide en un flujo de energía entre los subsistemas y otro correspondiente al flujo de información entre estos mismos. Esto permite que el sistema sea capaz de realizar trabajo por una contribución predominate de la información, lo que consiste en una máquina de la información. La equivalencia de este formalismo con el descrito en la sección anterior se encuentra en el apéndice \ref{apendix4:secondlaw}.
+Así, la tasa de cambio de la energía libre posee dos contribuciones: una correspondiente al intercambio de energía y otra asociada al flujo de información. Si se considera el régimen estacionario, donde la energía total permanece constante, es decir
+\begin{equation*}
+    \partial_{t}E = \dot{E}^{X} + \dot{E}^{Y} = 0,
+\end{equation*}
+entonces los términos $\dot{E}^{i}$ pueden interpretarse como flujos de energía entre los dos subsistemas. En este contexto, la tasa de cambio de energía libre para cada subsistema se descompone en una parte asociada al intercambio energético y otra vinculada al flujo de información generado por las correlaciones entre los subsistemas.
 
+En el caso $\dot{E}^{X} = \dot{E}^{Y} \approx 0 $, esta descomposición permite que el sistema realice trabajo a partir de una contribución dominante de la información, incluso en ausencia de diferencias térmicas significativas. Tal mecanismo constituye lo que se conoce como una máquina de la información, en la que los flujos de información entre subsistemas juegan un rol principal, permitiendo la extracción de trabajo en un régimen puramente informacional.
+
+
+\label{sec4:flujos0}
 
 \chapter{Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}
-En este capítulo se realiza una descripción del sistema a estudiar junto con la dinámica disipativa del sistema a través de la ecuación de Lindblad desarrollada en la sección \ref{sec2lindbladconsistency}. En la sección \ref{sec5:modelo} se describe el Hamiltoniano del sistema reducido.  En la sección \ref{sec5:transporte} se describe como actua este sistema en un caso típico de transporte y finalmente en la sección \ref{sec5:demonio} se describe el comportamiento tipo Demonio de Maxwell del sistema.
+En este capítulo se realiza una descripción del sistema a estudiar junto con la dinámica disipativa del sistema a través de la ecuación de Lindblad desarrollada en la sección \ref{sec2lindbladconsistency}. En la sección \ref{sec5:modelo} se describe el Hamiltoniano del sistema reducido.  En la sección \ref{sec5:transporte} se describe como actua este sistema en un caso típico de transporte, en la sección \ref{sec5:demonio1} se describe la dinámica del demonio  y finalmente en la sección \ref{sec5:demonio} se describe el comportamiento tipo Demonio de Maxwell del sistema en un contexto clásico como cuántico.
 
 \section{Modelo teórico}
 El sistema reducido consiste en 3 puntos cuánticos, uno de ellos constituye el nivel de energía $\epsilon_{d}$, mientras que los otros dos restantes poseen una energía $\epsilon$ los cualés están acoplados por la cantidad $g$. Entre estos dos puntos cuánticos se genera una interacción Coulombiana respectiva de $U_{f}$, mientras que el punto cuántico $\epsilon_{d}$ interactua con los dos restantes, a través de interacción coulombiana $U$, como se indica en la Figura \ref{img:sistema3puntos}.
@@ -1292,6 +1313,7 @@ Por otro lado, se pueden ver las contribuciones individuales en los flujos de in
 
 Aquí sucede algo interesante, ya que cuando $g\sim \gamma_{L}$ las concurrencias y coherencias están cerca de un peak, y a la vez los flujos de información del sitio $L$ y $R$ se vuelven $\dot{I}_{L} \approx \dot{I}_{R}$. De alguna manera a medida que el entrelazamiento y la coherencia se hace presente entre los dos sitios, los dos sitios entregan casi la misma información.
 
+\label{sec5:demonio1}
 
 \newpage 
 
