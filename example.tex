@@ -559,7 +559,9 @@ Y los operadores del sistema cumplen
 \begin{equation*}
     \hat{U}^{\dagger}_{S}(t)\hat{S}_{\alpha,k}\hat{U}_{S}(t) = \sum_{j}e^{-i\omega_{j}t}\hat{S}_{\alpha,k;j},
 \end{equation*}
-con $\hat{S}_{\alpha,k;j}$ los operadores de salto y $\omega_{j}$ las frecuencias de Bohr del Hamiltoniano del sistema.
+con $\hat{S}_{\alpha,k;j}$ los operadores de salto y $\omega_{j}$ las frecuencias de Bohr del Hamiltoniano del sistema. 
+
+Cabe mencionar que los operadores $\hat{S}_{\alpha,k}$ no es necesitan ser autoadjuntos, a diferencia de los  operadores de interacción considerados en \ref{sec:lindblad}.
 
 Si se definen las funciones correlación como $C^{\alpha}_{k,k'}(s) = \text{Tr}\{e^{is\hat{H}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}e^{-is\hat{H}_{\alpha} }\hat{B}_{\alpha,t}\hat{\tau}_{\alpha}\}$, se obtiene la ecuación maestra generalizada
 
@@ -1117,22 +1119,26 @@ El sistema reducido está compuesto por tres puntos cuánticos. Uno de ellos pos
 La configuración del sistema reducido se ilustra en la Figura~\ref{img:sistema3puntos}.
 
 
-\insertimage[\label{img:sistema3puntos}]{ejemplos/semilocal1}{scale=0.36}{Esquema que representa los 3 puntos cuánticos como 3 niveles de energía, los cuáles sienten interacción repulsiva entre ellos, cada uno de estos puntos cuánticos está acoplado a un baño distinto.}
+\insertimage[\label{img:sistema3puntos}]{ejemplos/semilocal1}{scale=0.36}{Esquema que representa el sistema reducido compuesto por tres puntos cuánticos, modelados como tres niveles de energía. Estos niveles presentan interacción de Coulomb repulsiva entre ellos, y cada uno está acoplado a un baño térmico distinto.}
 
-El Hamiltoniano del sistema corresponde a 
+El Hamiltoniano del sistema reducido esta dado por 
 
 \begin{align*}
     \hat{H}_{S} & = \epsilon_{d}\hat{d}^{\dagger}_{D}\hat{d}_{D} + \epsilon \hat{d}^{\dagger}_{L}\hat{d}_{L} + \epsilon \hat{d}^{\dagger}_{R}\hat{d}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
           & + U(\hat{n}_{D}\hat{n}_{L} + \hat{n}_{D}\hat{n}_{R} )  + U_{f}\hat{n}_{R}\hat{n}_{L},
 \end{align*}
-en donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ y los operadores $\hat{d}_{i}$ cumplen con las relaciones de anticonmutación
+donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ es el operador de número del sitio $i$, y los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
 
 \begin{equation*}
     \{\hat{d}_{\alpha},\hat{d}_{\beta} \} = 0  \hspace{10mm} \{\hat{d}^{\dagger}_{\alpha}, \hat{d}_{\beta} \} = \delta_{\alpha \beta}.
 \end{equation*}
 
-Usando la base de Fock $|n_{L},n_{R},n_{D} \rangle = (\hat{d}^{\dagger}_{L})^{n_{L}}(\hat{d}^{\dagger}_{R})^{n_{R}}(\hat{d}^{\dagger}_{D})^{n_{D}}|0,0,0\rangle$ y escribiendo el Hamiltoniano en el orden 
-$\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$ 
+Usando la base de Fock $|n_{L},n_{R},n_{D} \rangle = (\hat{d}^{\dagger}_{L})^{n_{L}}(\hat{d}^{\dagger}_{R})^{n_{R}}(\hat{d}^{\dagger}_{D})^{n_{D}}|0,0,0\rangle$, y escribiendo el Hamiltoniano en el orden de la base 
+
+\begin{equation*}
+     \{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\},
+\end{equation*}
+se puede representar el Hamiltoniano del sistema en forma matricial 
 
 \begin{equation*}
     \hat{H}_{S} = 
@@ -1148,12 +1154,14 @@ $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1
         \end{bmatrix}.
 \end{equation*}
 
-Por otro lado, el Hamiltoniano del baño $\hat{H}_{B} = \hat{H}_{L} + \hat{H}_{R} + \hat{H}_{D}$ e interacción $\hat{V} = \hat{V}_{L} + \hat{V}_{R} + \hat{V}_{D}$ consisten en
+Por otro lado, el Hamiltoniano del baño y la interacción con el sistema se descomponen como $\hat{H}_{B} = \hat{H}_{L}+\hat{H}_{R}+\hat{H}_{D}$ y $\hat{V} = \hat{V}_{L}+\hat{V}_{R}+\hat{V}_{D}$ respectivamente. Cada término esta dado por 
 
 \begin{equation*}
     \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha l} \hat{c}^{\dagger}_{\alpha l}\hat{c}_{\alpha l} \hspace{10mm} \hat{V}_{\alpha} = \sum_{l} t_{\alpha l} ( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha l} + \hat{c}^{\dagger}_{\alpha l} \hat{d}_{\alpha} ),
 \end{equation*}
-teniendo esto en consideración, para poder describir la dinámica disipativa del sistema se debe ser capaces de obtener los operadores de salto, para ello estarán los operadores que describen la interacción
+donde $\alpha = L,R,D$ denota los tres reservorios acoplados a cada punto cuántico, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha l}$ sus energías, y $t_{\alpha l}$ los parámetros de acoplamiento entre el sistema y baño. 
+ 
+Teniendo esto en consideración, para poder describir la dinámica disipativa del sistema, es necesario ser capaces de identificar los operadores de salto. Para ello, se deben analizar los operadores que describen la interacción entre el sistema y los respectivos baños
 
 \begin{equation*}
     \hat{S}_{\alpha,1} = \hat{d}^{\dagger}_{\alpha} \hspace{10mm} \hat{S}_{\alpha,-1} = \hat{d}_{\alpha}
