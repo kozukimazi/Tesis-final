@@ -1197,65 +1197,70 @@ donde el operador de Lindblad $\mathcal{L}$ se descompone como una suma de contr
     \mathcal{L}_{D} & = \gamma_{D}(\epsilon_{d})(f_{D}(\epsilon_{d})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{d})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
                     & + \gamma_{D}(\epsilon_{d}+U)f_{D}(\epsilon_{d}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
                     & + \gamma_{D}(\epsilon_{d}+U)[1-f_{D}(\epsilon_{d}+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
-                   & + \gamma_{D}(\epsilon_{d}+2U)(f_{D}(\epsilon_{d}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{d}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ),   
+                   & + \gamma_{D}(\epsilon_{d}+2U)(f_{D}(\epsilon_{d}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{d}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
 \end{align*}
-aquí el superoperador consiste en 
+
+Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ y el operador $\mathcal{D}_{0}$  
 
 \begin{equation*}
     \mathcal{D}_{0}[\hat{A}]\hat{\rho} = \hat{A}\hat{\rho}\hat{A}^{\dagger}- \frac{1}{2} \{\hat{A }^{\dagger}\hat{A},\hat{\rho} \}.
 \end{equation*}
 
-La demostración de la ecuación \ref{Lindbladsec5} se encuentra en el apendice \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}.\\
-\\
-Despreciando el $\hat{H}_{LS}$ \cite{prech2023entanglement} la evolución de los 3 puntos cuánticos es
+La demostración de la ecuación \ref{Lindbladsec5} se presenta en los apéndices \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}.
 
-\begin{equation*}
+Despreciando el término de \textit{Lamb Shift} $\hat{H}_{LS}$, como se discute en~\cite{prech2023entanglement}, la evolución del sistema de tres puntos cuánticos está dada por
+\begin{equation}
     \frac{d}{dt}\hat{\rho}_{S}(t) = -i[\hat{H}_{S},\hat{\rho}_{S}(t)] + \mathcal{L}(\hat{\rho}_{S}(t)),
-\end{equation*}
-usando esta ecuación se podrá calcular la evolución del sistema númericamente y calcular las cantidades termodinámicas.
-
+\end{equation}
+donde $\hat{\rho}_{S}(t)$ es la matriz densidad del sistema reducido. A partir de esta ecuación, es posible calcular numéricamente la evolución del sistema y obtener las magnitudes termodinámicas relevantes.
 
 \label{sec5:modelo}
 
 \newpage
 
 \section{Estudio del transporte}
-Inicialmente consideramos el caso en que las razones de tuneleo no dependen de la frecuencia, es decir $\gamma_{i}(\omega) = \gamma_{i}$. Se estudiará el flujo de corriente ante una diferencia de potencial $\mu_{L}-\mu_{R} = eV$, considerando las razones de transición $\gamma_{L}=\gamma_{R}=1/100$, $\gamma_{d}=1/50$. Se obtiene la Figura \ref{img:transporte1}
+Se aborda inicialmente el caso en que las razones de túnel no dependen de la frecuencia, es decir, $\gamma_{i}(\omega) = \gamma_{i}$. Y se estudia el flujo de corriente generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las razones de túnel $\gamma_{L} = \gamma_{R} = 1/100$ y $\gamma_{d} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
-\insertimage[\label{img:transporte1}]{ejemplos/transprtcurrent.png}{scale=0.35}{Gráfico que representa la corriente de partículas en función de $eV/T$. Las temperaturas del sistema son $T_{L}=T_{R}= 100$, $T_{d} = 2$, el parámetro de acoplamiento es $g = 5/1000$, las energías de sitio son $\epsilon = 4$, $\epsilon_{d} = \mu_{d}- U/2$, y energías de Coulomb $U_{F}=500$, $U=40$.}
+\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.35}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{d} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{d} = \mu_{d} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \).}
 
-Esta figura permite determinar que a medida que aumenta $eV$ la corriente de partículas $\dot{N}_{L} = -\dot{N}_{R}$ que va del baño $L$ al baño $R$ crece. Lo que es esperable, ya que la diferencia de potencial induce el transporte de partículas de un mayor potencial hacia un menor potencial. También se puede graficar la potencia que es entregada a este sistema 
+La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \), la corriente de partículas \( \dot{N}_L = -\dot{N}_R \) que fluye del baño \( L \) al baño \( R \) también aumenta. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio \( L \) impulsa el transporte hacia \( R \). Asimismo, se puede analizar la potencia suministrada al sistema en función de \( eV \).
 
-\insertimage[\label{img:transporte2}]{ejemplos/transportwork.png}{scale =0.35}{Gráfico de la potencia que entregan los reservorios en función de $eV/T$.}
+\insertimage[\label{img:transporte2}]{ejemplos/worktp.pdf}{scale =0.35}{Potencia entregada por los reservorios en función de $eV/T$.}
     
-La Figura \ref{img:transporte2} nos dice que el reservorio $LR$ entrega trabajo al sistema para poder realizar la corriente, lo que también es esperable, dado que al pasar de un potencial mayor a uno menor, esa energía que tenía el electrón pasa a el sistema $LR$. Por otro lado debido a que el reservorio $D$ no intercambia partículas en promedio, la potencia que entrega el reservorio $D$ es cero. \\
-\\
- También se pueden revisar los flujos de energía del sistema $LR$ y el reservorio $D$
+La Figura \ref{img:transporte2} muestra que el conjunto de reservorios \( L \) y \( R \) entrega trabajo al sistema para mantener la corriente de partículas. Este comportamiento es consistente desde el punto de vista físico, ya que el paso de electrones desde un potencial químico mayor hacia uno menor implica una transferencia de energía al sistema, que se manifiesta como trabajo. Por otro lado, dado que el reservorio \( D \) no intercambia partículas en promedio, la potencia que este entrega es nula.
+
+ Asimismo, pueden examinarse los flujos de calor que reciben los sistemas $LR$ y $D$
 
 
-\insertimage[\label{img:transporte3}]{ejemplos/transportenergy.png}{scale =0.35}{Gráfico de el flujo de energía entre los sistemas $LR$ y $D$.}
+\insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale =0.35}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
     
-De la Figura \ref{img:transporte3} se puede notar que $\dot{E}_{LR} = -\dot{E}_{d}$ lo que es consistente, ya que en estado estacionario $d_{t}E = \dot{E}_{LR} + \dot{E}_{d} = 0$. Además esto permite notar que el sistema $D$ libera energía, la cuál es entregada al reservorio con temperatura $T_{d}$ como se ve en la línea roja de la Figura \ref{img:transporte4} en donde $J_{d}<0$
+Como uno puede ver, para $eV/T \lessapprox 2$ , el sistema $LR$ en total recibe calor de los reservorios $L$ y $R$. Para $eV/T \gtrapprox 2$ el sistema $LR$ en total entrega calor a los reservorios $L$ y $R$. 
 
-\insertimage[\label{img:transporte4}]{ejemplos/transportheat.png}{scale =0.4}{Gráfico del flujo de calor que entregan los reservorios en función de $eV/T$.}
-    
-En el sistema $LR$ se puede notar que para cantidades $eV/T$ pequeñas, el sistema recibe calor del reservorio, mientras que a medida que se aumenta $eV/T$ el reservorio recibe calor. En el sistema $LR$ el flujo de energía positivo consiste en que se debe entregar energía al sistema para poblar los sitios, aun así a medida que se aumenta $eV/T$ esa contribución de energía termina siendo derrotada por el flujo de electrones, y por eso el flujo de calor se vuelve negativo.\\
+Para completar el análisis termodinámico a partir de la primera ley $\dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}$, se grafican a continuación los flujos de energía involucrados
 
- También resulta importante calcular si existen efectos cuánticos en este estado estacionario del sistema, para ello se calcularan dos cantidades. Uno de ellos es la norma-$l_{1}$ $\mathcal{C}_{l_{1}}$ que permite calcular las coherencias en el sistema $LR$ y consiste en 
+\insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale =0.4}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
+
+En el estado estacionario, la condición \( \partial_t E = 0 \) implica que \( \dot{E}_{LR} = -\dot{E}_d \), lo cual se observa en la Figura \ref{img:transporte4}. Allí, el flujo de energía hacia el sistema \( LR \) es positivo, mientras que el flujo desde el subsistema \( D \) es negativo. Esto indica que el sistema \( LR \) recibe energía proveniente de los reservorios \( L \) y \( R \), la cual es posteriormente transferida al subsistema \( D \) y desde allí al reservorio \( D \). Este comportamiento es coherente con el hecho de que la temperatura del reservorio \( D \) es menor (\( T_{d} < T_{L} = T_{R} \)), y por lo tanto, el flujo de calor se dirige desde los reservorios más calientes hacia el más frío.
+
+Para analizar la presencia de efectos cuánticos en el estado estacionario, se calcularán dos cantidades relevantes. La primera de ellas es la norma-\( l_{1} \), \( \mathcal{C}_{l_{1}} \), que permite cuantificar las coherencias en el sistema \( LR \).
+
 
 \begin{equation*}
-    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{s;i,j}|,
+    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{S;i,j}|,
 \end{equation*}
-otro efecto cuántico que es interesante medir es el entrelazamiento entre los modos $|1,0,0\rangle,|0,1,0\rangle$ y además entre $|1,0,1\rangle,|0,1,1\rangle$. La cantidad que permite medir esto es la concurrencia $\mathcal{C}_{on}$ \cite{hill1997entanglement,wootters1998entanglement} que consiste en 
+otro efecto cuántico relevante de estudiar es el entrelazamiento entre modos específicos del sistema. En particular, se analiza el entrelazamiento entre los pares de estados \(|1,0,0\rangle, |0,1,0\rangle\) y \(|1,0,1\rangle, |0,1,1\rangle\). Para cuantificar este tipo de correlaciones no clásicas se utiliza la concurrencia \( \mathcal{C}_{\text{on}} \) \cite{hill1997entanglement, wootters1998entanglement}, definida como
 
 \begin{equation*}
-    \mathcal{C}_{on} = \max \{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0 \},
+    \mathcal{C}_{\text{on}} = \max \left\{ 2|\alpha + \beta| - 2\sqrt{p_0 p_D},\, 0 \right\},
 \end{equation*}
-en donde $p_{0}$ y $p_{D}$ consisten en la probabilidad de que el sistema $LR$ este vacío o doblemente ocupado respectivamente. Mientras que $\alpha$ consiste en la coherencia entre los estados $\{|1,0,0\rangle, |0,1,0\rangle \}$ y $\beta$ la coherencia entre los estados  $\{|1,0,1\rangle, |0,1,1\rangle\}$. Esta fórmula esta deducida en el ápendice \ref{appendix5final}. 
+donde \( p_0 \) y \( p_D \) representan las probabilidades de que el sistema \( LR \) se encuentre vacío o doblemente ocupado, respectivamente. El término \( \alpha \) corresponde a la coherencia entre los estados \(|1,0,0\rangle\) y \(|0,1,0\rangle\), mientras que \( \beta \) representa la coherencia entre los estados \(|1,0,1\rangle\) y \(|0,1,1\rangle\). La deducción de esta fórmula se presenta en el Apéndice \ref{appendix5final}. 
 
-\insertimage[\label{img:transporte5}]{ejemplos/concutransport.png}{scale =0.4}{La línea azul corresponde a la coherencia mientras que la línea roja la concurrencia, todo esto en función de $eV/T$.}
+Finalmente, en la Figura \ref{img:transporte5} se analiza cómo varían la coherencia y la concurrencia en función de la diferencia de potencial
+
+\insertimage[\label{img:transporte5}]{ejemplos/quantumtp.pdf}{scale =0.4}{Coherencia(línea azul) y concurrencia(linea roja) en función de $eV/T$.}
     
-Para este caso la coherencia parte en cero y a medida que aumenta la diferencia de potencial está aumenta. El entrelazamiento por otro lado parte en cero, que coincide con el cero de la coherencia, se mantiene nulo hasta llegar a un punto en el que al aumentar el $eV/T$ la concurrencia crece, y por ende se hace presente entrelazamiento en el sistema $LR$, esto es importante ya que permite intuir que debe existir una corriente fluyendo en el sistema para que exista coherencia y entrelazamiento.
+En este caso, la coherencia comienza en cero y aumenta progresivamente a medida que se incrementa la diferencia de potencial. En cuanto al entrelazamiento, también parte desde cero —coincidiendo con el valor nulo de la coherencia— y se mantiene nulo hasta alcanzar un cierto umbral, a partir del cual la concurrencia comienza a crecer con el aumento de \( eV/T \). Esto indica la aparición de entrelazamiento en el sistema \( LR \). Este comportamiento es relevante, ya que sugiere que la presencia de una corriente en el sistema contribuye a que se desarrollen coherencia y entrelazamiento entre los sitios $L$ y $R$.  
+
 
 \label{sec5:transporte}
 

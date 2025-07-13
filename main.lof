@@ -6,11 +6,11 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Esquema que representa al Demonio de Maxwell. Primero, consiste en los dos compartimientos que poseen el gas ideal distribuido de manera homogénea. Por último, al trasladar las partículas de un lado a otro, queda el compartimiento A con partículas frías mientras que el compartimiento B con partículas calientes. Esta figura fue tomada de \cite {link1} . }}{21}{figure.caption.9}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Esquema que representa el sistema reducido compuesto por tres puntos cuánticos, modelados como tres niveles de energía. Estos niveles presentan interacción de Coulomb repulsiva entre ellos, y cada uno está acoplado a un baño térmico distinto. }}{32}{figure.caption.10}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico que representa la corriente de partículas en función de $eV/T$. Las temperaturas del sistema son $T_{L}=T_{R}= 100$, $T_{d} = 2$, el parámetro de acoplamiento es $g = 5/1000$, las energías de sitio son $\epsilon = 4$, $\epsilon _{d} = \mu _{d}- U/2$, y energías de Coulomb $U_{F}=500$, $U=40$. }}{35}{figure.caption.11}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de la potencia que entregan los reservorios en función de $eV/T$. }}{35}{figure.caption.12}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Gráfico de el flujo de energía entre los sistemas $LR$ y $D$. }}{36}{figure.caption.13}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Gráfico del flujo de calor que entregan los reservorios en función de $eV/T$. }}{36}{figure.caption.14}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces La línea azul corresponde a la coherencia mientras que la línea roja la concurrencia, todo esto en función de $eV/T$. }}{37}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{d} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac {5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon _{d} = \mu _{d} - \frac {U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \). }}{35}{figure.caption.11}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Potencia entregada por los reservorios en función de $eV/T$. }}{35}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$. }}{36}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Flujo de energía entregado por los reservorios en función de $eV/T$. }}{36}{figure.caption.14}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Coherencia(línea azul) y concurrencia(linea roja) en función de $eV/T$. }}{37}{figure.caption.15}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Esquema que representa el primer paso en la dinámica. }}{39}{figure.caption.16}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Esquema que representa el segundo paso en la dinámica. }}{40}{figure.caption.17}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Esquema que representa el tercer paso en la dinámica. }}{40}{figure.caption.18}%
