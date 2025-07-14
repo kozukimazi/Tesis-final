@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1752376615 "main.aux" "main.bbl" "main" 1752376681 0
+["bibtex main"] 1752450928 "main.aux" "main.bbl" "main" 1752451094 0
   "./library.bib" 1750993330 12118 03f3f6e58d357d3f62d559c8248b7672 ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1752376679 57867 8f6fcd69270217a444cbe6b75e880826 "pdflatex"
+  "main.aux" 1752451093 58077 3254c2ddd14295604eb3351e19b07a8b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1752376674 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1752376681 0
+["pdflatex"] 1752451090 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1752451094 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -290,7 +290,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "example.tex" 1752376673 213526 935cd289dc103a4b10c81f4c52193db7 ""
+  "example.tex" 1752451089 214377 ba122a4b650a6dbc99372cb62594fa49 ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/P1clqm.pdf" 1748302639 16998 b8317b0322fdb3035ec7afdebc9f288e ""
@@ -313,18 +313,18 @@
   "img//ejemplos/gammmas.pdf" 1745539020 35976 c82d8d32c377922cb6f7767a771a7e11 ""
   "img//ejemplos/heatlrdtp.pdf" 1752358950 12401 605d0535463dc05c6524e05a535b70aa ""
   "img//ejemplos/info1.png" 1744074284 37915 3686344c556e84017468ae20c8e13b32 ""
-  "img//ejemplos/matrizdiagf.png" 1744477301 65574 6521fcb06badb90b47312ef1cbe27f40 ""
+  "img//ejemplos/matrixdemon.pdf" 1752445487 12777 29f57f2f64d042fa3db39f1d1c66fbed ""
   "img//ejemplos/particletp.pdf" 1752353559 12838 cf7dbfc56a13bdbd97c8843101029765 ""
   "img//ejemplos/probas.png" 1744226205 81109 01abf6be36b4ddb840c9374ec3b1d3cb ""
   "img//ejemplos/quantumtp.pdf" 1752354256 14458 a0460237e8561b7fcb54c5c1aeda74ce ""
   "img//ejemplos/semilocal1.png" 1741655937 28282 da18a6e864e5fa1de5d2fd07af08a6f1 ""
   "img//ejemplos/systemg.pdf" 1743124513 70189 f13aee495cf6ee2f71d55f2127d12185 ""
   "img//ejemplos/worktp.pdf" 1752354307 12342 fe51ddb2748b35fc482ea538d1ebc988 ""
-  "main.aux" 1752376679 57867 8f6fcd69270217a444cbe6b75e880826 "pdflatex"
-  "main.bbl" 1752376616 8919 8b9e8fbb4b04738bb1c383e6b5e026c6 "bibtex main"
-  "main.lof" 1752376679 6380 29a95622ae0a1061835b7def7ad88124 "pdflatex"
+  "main.aux" 1752451093 58077 3254c2ddd14295604eb3351e19b07a8b "pdflatex"
+  "main.bbl" 1752450928 8919 8b9e8fbb4b04738bb1c383e6b5e026c6 "bibtex main"
+  "main.lof" 1752451093 6485 1da7d2cc7b9e971582f2d5899663765e "pdflatex"
   "main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "main.toc" 1752376679 5446 db489281d110a32503dfe86b2d203be8 "pdflatex"
+  "main.toc" 1752451093 5446 db489281d110a32503dfe86b2d203be8 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
