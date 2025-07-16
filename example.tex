@@ -1313,17 +1313,26 @@ Si se analiza únicamente el subsistema $LR$, la existencia de una corriente con
 
 \insertimage[\label{img:fig2resultado}]{ejemplos/entropyapparentdemon.pdf}{scale=0.45}{Tasa de producción de entropía aparente del sistema $LR$($\dot{\sigma}^{o}_{LR}$) en función de $eV/T$.}
 
-En la Figura \ref{img:fig2resultado} se grafica la tasa de producción de entropía aparente, donde se observa que para $eV/T \lessapprox 2.4$ la tasa de producción de entropía aparente $\dot{\sigma}^{o}_{LR}<0$, lo que implica una violación aparente de la segunda ley de la termodinámica. Sin embargo, al incorporar la contribución del flujo de información en el cálculo de la razón de producción de entropía, se obtiene la Figura \ref{img:fig3resultado}, en la cual se verifica que la producción total de entropía en el sistema $LR$ permanece siempre positiva.
+En la Figura \ref{img:fig2resultado} se grafica la tasa de producción de entropía aparente, donde se observa que para $eV/T \lessapprox 2.4$, la tasa de producción de entropía aparente $\dot{\sigma}^{o}_{LR}$ es menor a cero, lo que implica una violación aparente de la segunda ley de la termodinámica. Sin embargo, al incorporar la contribución del flujo de información en el cálculo de la tasa de producción de entropía, se obtiene la Figura \ref{img:fig3resultado}, en la cual se verifica que la producción total de entropía en el sistema $LR$ permanece siempre positiva.
 
-\insertimage[\label{img:fig3resultado}]{ejemplos/entropyLRrial}{scale=0.45}{Gráfico de la razón de producción de entropía aparente del sistema $LR$ dada por $\dot{\sigma}_{LR}$ en función de $eV/T$.}
+\insertimage[\label{img:fig3resultado}]{ejemplos/entropyrialdemon.pdf}{scale=0.45}{Tasa de producción de entropía del sistema $LR$($\dot{\sigma}_{LR}$) en función de $eV/T$.}
 
-En el rango de parámetros en que $eV/T<2.4$, el sistema $LR$ realiza un trabajo. Y para poder determinar si es que es un efecto principalmente de la información, partiremos usando que en él estado estacionario se tiene que $ \dot{E}_{L}+\dot{E}_{R}+\dot{E}_{d} = d_{t}E = \dot{E}_{LR} + \dot{E}_{d}=0$. Para considerar que este sistema se comporta como Demonio, el trabajo realizado por el sistema $LR$ debe ser predominantemente efecto del flujo de información, es decir
+En el régimen de parámetros en que \( eV/T \lessapprox 2.4 \), el subsistema \( LR \) realiza trabajo. Para determinar si este trabajo es impulsado principalmente por el flujo de información, es necesario analizar el intercambio energético entre el sistema y el demonio. En el estado estacionario se cumple:
 
-\begin{equation*}
-    \dot{\mathcal{F}}_{LR} =  \dot{E}_{LR} + T\dot{I}_{LR} = -\dot{E}_{d} + T\dot{I}_{LR} \approx T\dot{I}_{LR}  \hspace{13mm} \dot{W}_{LR} \geq \dot{\mathcal{F}}_{LR}
-\end{equation*}
+\[
+\dot{E}_{L} + \dot{E}_{R} + \dot{E}_{d} = \partial_{t}E = \dot{E}_{LR} + \dot{E}_{d} = 0.
+\]
 
-Por ende para hacer el análisis, se grafican estas cantidades termodinámicas para el sistema y el demonio 
+Para que el sistema pueda interpretarse como un Demonio de Maxwell, el trabajo realizado por el subsistema \( LR \) debe estar dominado por la contribución informacional. Esta condición se puede expresar como:
+
+\[
+\dot{\mathcal{F}}_{LR} = \dot{E}_{LR} + T\dot{I}_{LR} = -\dot{E}_{d} + T\dot{I}_{LR} \approx T\dot{I}_{LR}, \hspace{10mm} \dot{W}_{LR} \geq \dot{\mathcal{F}}_{LR},
+\]
+
+donde \( \dot{\mathcal{F}}_{LR} \) representa la tasa de cambio de energía libre del subsistema \( LR \), incluyendo una contribución informacional \( T\dot{I}_{LR} \).
+
+A fin de verificar este comportamiento, se grafican las cantidades termodinámicas relevantes tanto del sistema como del demonio.
+
 
 \insertimage[\label{img:fig4resultado}]{ejemplos/drawing3}{scale=0.74}{(a) Gráfico del flujo de energía, la razón de cambio de energía libre, contribución de información, potencia y flujo de calor del sistema LR. (b) Gráfico del flujo de energía, la razón de cambio de energía libre, contribución de información, potencia y flujo de calor del Demonio. }
 
