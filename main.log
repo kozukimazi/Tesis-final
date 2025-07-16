@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  15 JUL 2025 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  16 JUL 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2319,14 +2319,14 @@ Capítulo 4.
 [20
 
 ]
-<./img//ejemplos/Maxwelldemon1.pdf, id=485, 457.71pt x 168.63pt>
+<./img//ejemplos/Maxwelldemon1.pdf, id=481, 457.71pt x 168.63pt>
 File: ./img//ejemplos/Maxwelldemon1.pdf Graphic file (type pdf)
 <use ./img//ejemplos/Maxwelldemon1.pdf>
 Package pdftex.def Info: ./img//ejemplos/Maxwelldemon1.pdf  used on input line 766.
 (pdftex.def)             Requested size: 411.9352pt x 151.76558pt.
  [21 <./img//ejemplos/Maxwelldemon1.pdf>] [22] [23] [24] [25] [26] [27] [28] [29] [30]
 Capítulo 5.
-<./img//ejemplos/semilocal1.png, id=583, 527.72156pt x 442.65375pt>
+<./img//ejemplos/semilocal1.png, id=579, 527.72156pt x 442.65375pt>
 File: ./img//ejemplos/semilocal1.png Graphic file (type png)
 <use ./img//ejemplos/semilocal1.png>
 Package pdftex.def Info: ./img//ejemplos/semilocal1.png  used on input line 1122.
@@ -2334,46 +2334,46 @@ Package pdftex.def Info: ./img//ejemplos/semilocal1.png  used on input line 1122
 [31
 
 ] [32 <./img//ejemplos/semilocal1.png>] [33] [34]
-<./img//ejemplos/particletp.pdf, id=616, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/particletp.pdf, id=612, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/particletp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/particletp.pdf>
 Package pdftex.def Info: ./img//ejemplos/particletp.pdf  used on input line 1224.
 (pdftex.def)             Requested size: 388.52936pt x 190.82457pt.
-<./img//ejemplos/worktp.pdf, id=617, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/worktp.pdf, id=613, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/worktp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/worktp.pdf>
 Package pdftex.def Info: ./img//ejemplos/worktp.pdf  used on input line 1228.
 (pdftex.def)             Requested size: 388.52936pt x 190.82457pt.
  [35 <./img//ejemplos/particletp.pdf> <./img//ejemplos/worktp.pdf>]
-<./img//ejemplos/heatlrdtp.pdf, id=686, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/heatlrdtp.pdf, id=682, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/heatlrdtp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/heatlrdtp.pdf>
 Package pdftex.def Info: ./img//ejemplos/heatlrdtp.pdf  used on input line 1235.
 (pdftex.def)             Requested size: 388.52936pt x 190.82457pt.
-<./img//ejemplos/energytp.pdf, id=687, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/energytp.pdf, id=683, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/energytp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/energytp.pdf>
 Package pdftex.def Info: ./img//ejemplos/energytp.pdf  used on input line 1241.
 (pdftex.def)             Requested size: 444.01903pt x 218.0781pt.
  [36 <./img//ejemplos/heatlrdtp.pdf> <./img//ejemplos/energytp.pdf>]
-<./img//ejemplos/quantumtp.pdf, id=759, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/quantumtp.pdf, id=755, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/quantumtp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/quantumtp.pdf>
 Package pdftex.def Info: ./img//ejemplos/quantumtp.pdf  used on input line 1260.
 (pdftex.def)             Requested size: 444.01903pt x 218.0781pt.
  [37 <./img//ejemplos/quantumtp.pdf>] [38]
-<./img//ejemplos/diseño1.pdf, id=805, 381.26694pt x 247.53897pt>
+<./img//ejemplos/diseño1.pdf, id=801, 381.26694pt x 247.53897pt>
 File: ./img//ejemplos/diseño1.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño1.pdf>
 Package pdftex.def Info: ./img//ejemplos/diseño1.pdf  used on input line 1280.
 (pdftex.def)             Requested size: 228.76192pt x 148.5245pt.
-<./img//ejemplos/diseño2.pdf, id=807, 398.3386pt x 250.38426pt>
+<./img//ejemplos/diseño2.pdf, id=803, 398.3386pt x 250.38426pt>
 File: ./img//ejemplos/diseño2.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño2.pdf>
 Package pdftex.def Info: ./img//ejemplos/diseño2.pdf  used on input line 1285.
 (pdftex.def)             Requested size: 239.00499pt x 150.2317pt.
  [39 <./img//ejemplos/diseño1.pdf>]
-<./img//ejemplos/diseño3.pdf, id=908, 384.1122pt x 199.1693pt>
+<./img//ejemplos/diseño3.pdf, id=904, 384.1122pt x 199.1693pt>
 File: ./img//ejemplos/diseño3.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño3.pdf>
 Package pdftex.def Info: ./img//ejemplos/diseño3.pdf  used on input line 1290.
@@ -2382,12 +2382,12 @@ Package pdftex.def Info: ./img//ejemplos/diseño3.pdf  used on input line 1290.
 
 pdfTeX warning: pdflatex (file ./img//ejemplos/diseño3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./img//ejemplos/matrixdemon.pdf, id=1091, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/matrixdemon.pdf, id=1087, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/matrixdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/matrixdemon.pdf>
 Package pdftex.def Info: ./img//ejemplos/matrixdemon.pdf  used on input line 1303.
 (pdftex.def)             Requested size: 444.01903pt x 218.0781pt.
-<./img//ejemplos/heatparticledemon.pdf, id=1095, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/heatparticledemon.pdf, id=1091, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/heatparticledemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/heatparticledemon.pdf>
 Package pdftex.def Info: ./img//ejemplos/heatparticledemon.pdf  used on input line 1312.
@@ -2398,7 +2398,7 @@ Overfull \hbox (49.70045pt too wide) in paragraph at lines 1312--1312
  []
 
 [41 <./img//ejemplos/matrixdemon.pdf>]
-<./img//ejemplos/entropyapparentdemon.pdf, id=1126, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/entropyapparentdemon.pdf, id=1122, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/entropyapparentdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/entropyapparentdemon.pdf>
 Package pdftex.def Info: ./img//ejemplos/entropyapparentdemon.pdf  used on input line 1314.
@@ -2409,7 +2409,7 @@ Overfull \hbox (27.49442pt too wide) in paragraph at lines 1314--1314
  []
 
 [42 <./img//ejemplos/heatparticledemon.pdf> <./img//ejemplos/entropyapparentdemon.pdf>]
-<./img//ejemplos/entropyrialdemon.pdf, id=1202, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/entropyrialdemon.pdf, id=1198, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/entropyrialdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/entropyrialdemon.pdf>
 Package pdftex.def Info: ./img//ejemplos/entropyrialdemon.pdf  used on input line 1318.
@@ -2419,65 +2419,71 @@ Overfull \hbox (27.49442pt too wide) in paragraph at lines 1318--1318
  [][] 
  []
 
-<./img//ejemplos/drawing3.pdf, id=1203, 586.64053pt x 615.48045pt>
-File: ./img//ejemplos/drawing3.pdf Graphic file (type pdf)
-<use ./img//ejemplos/drawing3.pdf>
-Package pdftex.def Info: ./img//ejemplos/drawing3.pdf  used on input line 1337.
-(pdftex.def)             Requested size: 434.11615pt x 455.45781pt.
-[43 <./img//ejemplos/entropyrialdemon.pdf>] [44 <./img//ejemplos/drawing3.pdf>]
-<./img//ejemplos/info1.png, id=1255, 1071.7641pt x 551.4201pt>
-File: ./img//ejemplos/info1.png Graphic file (type png)
-<use ./img//ejemplos/info1.png>
-Package pdftex.def Info: ./img//ejemplos/info1.png  used on input line 1342.
-(pdftex.def)             Requested size: 482.2894pt x 248.13675pt.
+<./img//ejemplos/thermoquantitiesdemon.pdf, id=1199, 1110.06725pt x 545.20491pt>
+File: ./img//ejemplos/thermoquantitiesdemon.pdf Graphic file (type pdf)
+<use ./img//ejemplos/thermoquantitiesdemon.pdf>
+Package pdftex.def Info: ./img//ejemplos/thermoquantitiesdemon.pdf  used on input line 1337.
+(pdftex.def)             Requested size: 521.73169pt x 256.24634pt.
 
-Overfull \hbox (10.25816pt too wide) in paragraph at lines 1342--1342
+Overfull \hbox (49.70045pt too wide) in paragraph at lines 1337--1337
  [][] 
  []
 
-<./img//ejemplos/concu1.png, id=1260, 1110.0672pt x 544.9158pt>
-File: ./img//ejemplos/concu1.png Graphic file (type png)
-<use ./img//ejemplos/concu1.png>
-Package pdftex.def Info: ./img//ejemplos/concu1.png  used on input line 1348.
-(pdftex.def)             Requested size: 444.01901pt x 217.96245pt.
-[45 <./img//ejemplos/info1.png>]
-<./img//ejemplos/systemg.pdf, id=1267, 538.71338pt x 598.09526pt>
+[43 <./img//ejemplos/entropyrialdemon.pdf>]
+<./img//ejemplos/infolrddemon.pdf, id=1234, 1110.06725pt x 545.20491pt>
+File: ./img//ejemplos/infolrddemon.pdf Graphic file (type pdf)
+<use ./img//ejemplos/infolrddemon.pdf>
+Package pdftex.def Info: ./img//ejemplos/infolrddemon.pdf  used on input line 1350.
+(pdftex.def)             Requested size: 499.52565pt x 245.33994pt.
+
+Overfull \hbox (27.49442pt too wide) in paragraph at lines 1350--1350
+ [][] 
+ []
+
+[44 <./img//ejemplos/thermoquantitiesdemon.pdf>]
+<./img//ejemplos/quantumdemon.pdf, id=1289, 1110.06725pt x 545.20491pt>
+File: ./img//ejemplos/quantumdemon.pdf Graphic file (type pdf)
+<use ./img//ejemplos/quantumdemon.pdf>
+Package pdftex.def Info: ./img//ejemplos/quantumdemon.pdf  used on input line 1360.
+(pdftex.def)             Requested size: 444.01903pt x 218.0781pt.
+ [45 <./img//ejemplos/infolrddemon.pdf>]
+<./img//ejemplos/systemg.pdf, id=1326, 538.71338pt x 598.09526pt>
 File: ./img//ejemplos/systemg.pdf Graphic file (type pdf)
 <use ./img//ejemplos/systemg.pdf>
-Package pdftex.def Info: ./img//ejemplos/systemg.pdf  used on input line 1352.
+Package pdftex.def Info: ./img//ejemplos/systemg.pdf  used on input line 1366.
 (pdftex.def)             Requested size: 430.97128pt x 478.47685pt.
- [46 <./img//ejemplos/concu1.png>]
-<./img//ejemplos/concu.pdf, id=1278, 570.93507pt x 583.59889pt>
+ [46 <./img//ejemplos/quantumdemon.pdf>]
+<./img//ejemplos/concu.pdf, id=1367, 570.93507pt x 583.59889pt>
 File: ./img//ejemplos/concu.pdf Graphic file (type pdf)
 <use ./img//ejemplos/concu.pdf>
-Package pdftex.def Info: ./img//ejemplos/concu.pdf  used on input line 1357.
+Package pdftex.def Info: ./img//ejemplos/concu.pdf  used on input line 1372.
 (pdftex.def)             Requested size: 456.74867pt x 466.87975pt.
  [47 <./img//ejemplos/systemg.pdf>] [48 <./img//ejemplos/concu.pdf>] [49]
-<./img//ejemplos/P4clqm.pdf, id=1329, 867.24pt x 361.35pt>
+<./img//ejemplos/P4clqm.pdf, id=1417, 867.24pt x 361.35pt>
 File: ./img//ejemplos/P4clqm.pdf Graphic file (type pdf)
 <use ./img//ejemplos/P4clqm.pdf>
-Package pdftex.def Info: ./img//ejemplos/P4clqm.pdf  used on input line 1418.
+Package pdftex.def Info: ./img//ejemplos/P4clqm.pdf  used on input line 1433.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-<./img//ejemplos/P1clqm.pdf, id=1330, 867.24pt x 361.35pt>
+<./img//ejemplos/P1clqm.pdf, id=1418, 867.24pt x 361.35pt>
 File: ./img//ejemplos/P1clqm.pdf Graphic file (type pdf)
 <use ./img//ejemplos/P1clqm.pdf>
-Package pdftex.def Info: ./img//ejemplos/P1clqm.pdf  used on input line 1427.
+Package pdftex.def Info: ./img//ejemplos/P1clqm.pdf  used on input line 1442.
 (pdftex.def)             Requested size: 390.2544pt x 162.60599pt.
  [50 <./img//ejemplos/P4clqm.pdf>]
-<./img//ejemplos/P2clqm.pdf, id=1376, 867.24pt x 361.35pt>
+<./img//ejemplos/P2clqm.pdf, id=1464, 867.24pt x 361.35pt>
 File: ./img//ejemplos/P2clqm.pdf Graphic file (type pdf)
 <use ./img//ejemplos/P2clqm.pdf>
-Package pdftex.def Info: ./img//ejemplos/P2clqm.pdf  used on input line 1429.
+Package pdftex.def Info: ./img//ejemplos/P2clqm.pdf  used on input line 1444.
 (pdftex.def)             Requested size: 390.2544pt x 162.60599pt.
-<./img//ejemplos/P3clqm.pdf, id=1377, 867.24pt x 361.35pt>
+<./img//ejemplos/P3clqm.pdf, id=1465, 867.24pt x 361.35pt>
 File: ./img//ejemplos/P3clqm.pdf Graphic file (type pdf)
 <use ./img//ejemplos/P3clqm.pdf>
-Package pdftex.def Info: ./img//ejemplos/P3clqm.pdf  used on input line 1431.
+Package pdftex.def Info: ./img//ejemplos/P3clqm.pdf  used on input line 1446.
 (pdftex.def)             Requested size: 390.2544pt x 162.60599pt.
-<./img//ejemplos/P5clqm.pdf, id=1378, 867.24pt x 361.35pt>
+<./img//ejemplos/P5clqm.pdf, id=1466, 867.24pt x 361.35pt>
 File: ./img//ejemplos/P5clqm.pdf Graphic file (type pdf)
 <use ./img//ejemplos/P5clqm.pdf>
-Package pdftex.def Info: ./img//ejemplos/P5clqm.pdf  used on input line 1433.
+Package pdftex.def Info: ./img//ejemplos/P5clqm.pdf  used on input line 1448.
 (pdftex.def)             Requested size: 390.2544pt x 162.60599pt.
  [51 <./img//ejemplos/P1clqm.pdf> <./img//ejemplos/P2clqm.pdf> <./img//ejemplos/P3clqm.pdf>] [52 <./img//ejemplos/P5clqm.pdf>]
 Capítulo 6.
@@ -2488,47 +2494,47 @@ Capítulo 6.
 ] [55]) [56] [57
 
 ] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
-<./img//ejemplos/gammmas.pdf, id=1684, 554.03122pt x 324.57535pt>
+<./img//ejemplos/gammmas.pdf, id=1772, 554.03122pt x 324.57535pt>
 File: ./img//ejemplos/gammmas.pdf Graphic file (type pdf)
 <use ./img//ejemplos/gammmas.pdf>
-Package pdftex.def Info: ./img//ejemplos/gammmas.pdf  used on input line 2178.
+Package pdftex.def Info: ./img//ejemplos/gammmas.pdf  used on input line 2193.
 (pdftex.def)             Requested size: 360.11603pt x 210.97147pt.
  [75] [76 <./img//ejemplos/gammmas.pdf>] [77]
-LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 2263.
+LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 2278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.39996> on input line 2263.
+(Font)              <14.39996> on input line 2278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.07993> on input line 2263.
+(Font)              <10.07993> on input line 2278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.19998> on input line 2263.
+(Font)              <7.19998> on input line 2278.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2263.
+(hyperref)                removing `math shift' on input line 2278.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2263.
+(hyperref)                removing `subscript' on input line 2278.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2263.
+(hyperref)                removing `math shift' on input line 2278.
 
-<./img//ejemplos/corre.pdf, id=1710, 564.99895pt x 600.94685pt>
+<./img//ejemplos/corre.pdf, id=1799, 564.99895pt x 600.94685pt>
 File: ./img//ejemplos/corre.pdf Graphic file (type pdf)
 <use ./img//ejemplos/corre.pdf>
-Package pdftex.def Info: ./img//ejemplos/corre.pdf  used on input line 2266.
+Package pdftex.def Info: ./img//ejemplos/corre.pdf  used on input line 2281.
 (pdftex.def)             Requested size: 395.49657pt x 420.65993pt.
-<./img//ejemplos/correminus.pdf, id=1711, 588.28517pt x 549.3058pt>
+<./img//ejemplos/correminus.pdf, id=1800, 588.28517pt x 549.3058pt>
 File: ./img//ejemplos/correminus.pdf Graphic file (type pdf)
 <use ./img//ejemplos/correminus.pdf>
-Package pdftex.def Info: ./img//ejemplos/correminus.pdf  used on input line 2267.
+Package pdftex.def Info: ./img//ejemplos/correminus.pdf  used on input line 2282.
 (pdftex.def)             Requested size: 411.79681pt x 384.51144pt.
 [78] [79 <./img//ejemplos/corre.pdf>]
-<./img//ejemplos/probas.png, id=1731, 1110.0672pt x 544.9158pt>
+<./img//ejemplos/probas.png, id=1819, 1110.0672pt x 544.9158pt>
 File: ./img//ejemplos/probas.png Graphic file (type png)
 <use ./img//ejemplos/probas.png>
-Package pdftex.def Info: ./img//ejemplos/probas.png  used on input line 2272.
+Package pdftex.def Info: ./img//ejemplos/probas.png  used on input line 2287.
 (pdftex.def)             Requested size: 444.01901pt x 217.96245pt.
  [80 <./img//ejemplos/correminus.pdf>] [81 <./img//ejemplos/probas.png>] [82] [83] [84] [85] [86] [87] [88]) (C:\Users\kozuk\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
@@ -2543,17 +2549,17 @@ L3 programming layer <2023-10-10>
  ) 
 Here is how much of TeX's memory you used:
  33912 strings out of 474824
- 573437 string characters out of 5750976
- 1962043 words of memory out of 5000000
+ 573732 string characters out of 5750976
+ 1961043 words of memory out of 5000000
  54934 multiletter control sequences out of 15000+600000
  691006 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,110p,2916b,2596s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (97 pages, 1415314 bytes).
+Output written on main.pdf (97 pages, 1297119 bytes).
 PDF statistics:
- 2142 PDF objects out of 2487 (max. 8388607)
- 1508 compressed objects within 16 object streams
+ 2230 PDF objects out of 2487 (max. 8388607)
+ 1535 compressed objects within 16 object streams
  278 named destinations out of 1000 (max. 500000)
  644 words of extra memory for PDF output out of 10000 (max. 10000000)
 
