@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1752694386 "main.aux" "main.bbl" "main" 1752694418 0
+["bibtex main"] 1752720326 "main.aux" "main.bbl" "main" 1752721297 0
   "./library.bib" 1750993330 12118 03f3f6e58d357d3f62d559c8248b7672 ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1752694417 57322 0eba2f4e32087f4b01a3fa2d7d2ef875 "pdflatex"
+  "main.aux" 1752721296 57249 4f9df2f6a268bdd4cf8e4ae4c2ea3af9 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1752694415 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1752694418 0
+["pdflatex"] 1752721294 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1752721297 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -290,7 +290,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "example.tex" 1752694414 215330 6d66e517b1ae0fdda2da48c96bb27de9 ""
+  "example.tex" 1752721293 215988 cd34a93df0b2690434aa42fd0e61904b ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/P1clqm.pdf" 1748302639 16998 b8317b0322fdb3035ec7afdebc9f288e ""
@@ -320,11 +320,11 @@
   "img//ejemplos/systemg.pdf" 1743124513 70189 f13aee495cf6ee2f71d55f2127d12185 ""
   "img//ejemplos/thermoquantitiesdemon.pdf" 1752548301 20340 e89a42cf37ed6c99ff68659ca75ca39e ""
   "img//ejemplos/worktp.pdf" 1752354307 12342 fe51ddb2748b35fc482ea538d1ebc988 ""
-  "main.aux" 1752694417 57322 0eba2f4e32087f4b01a3fa2d7d2ef875 "pdflatex"
-  "main.bbl" 1752694386 8919 8b9e8fbb4b04738bb1c383e6b5e026c6 "bibtex main"
-  "main.lof" 1752694417 6107 32d309fcf50378664a2e3c2efb4b057e "pdflatex"
+  "main.aux" 1752721296 57249 4f9df2f6a268bdd4cf8e4ae4c2ea3af9 "pdflatex"
+  "main.bbl" 1752720326 8919 8b9e8fbb4b04738bb1c383e6b5e026c6 "bibtex main"
+  "main.lof" 1752721296 6071 498eed83204804b9ef61539859d046ed "pdflatex"
   "main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "main.toc" 1752694417 5446 db489281d110a32503dfe86b2d203be8 "pdflatex"
+  "main.toc" 1752721296 5446 db489281d110a32503dfe86b2d203be8 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
