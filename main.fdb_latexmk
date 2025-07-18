@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1752720326 "main.aux" "main.bbl" "main" 1752721297 0
-  "./library.bib" 1750993330 12118 03f3f6e58d357d3f62d559c8248b7672 ""
+["bibtex main"] 1752807304 "main.aux" "main.bbl" "main" 1752807308 0
+  "./library.bib" 1752807128 12475 bbac6b83552c2c0ec1f19e38e0a50f97 ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1752721296 57249 4f9df2f6a268bdd4cf8e4ae4c2ea3af9 "pdflatex"
+  "main.aux" 1752807307 57378 417908256b2bed70044800d6da69f5d7 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1752721294 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1752721297 0
+["pdflatex"] 1752807304 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1752807308 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -290,7 +290,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "example.tex" 1752721293 215988 cd34a93df0b2690434aa42fd0e61904b ""
+  "example.tex" 1752807296 216731 01a0eddd1f7747f9b490947741afdfff ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/P1clqm.pdf" 1748302639 16998 b8317b0322fdb3035ec7afdebc9f288e ""
@@ -298,7 +298,7 @@
   "img//ejemplos/P3clqm.pdf" 1748302639 15869 d56d0a62178736eb337fd468ba81c81d ""
   "img//ejemplos/P4clqm.pdf" 1748302639 16586 0ec76f31a58287a64481badfebb63df5 ""
   "img//ejemplos/P5clqm.pdf" 1748394310 17133 2aff4ee3fc8d36a2339f6184b3cff4b8 ""
-  "img//ejemplos/concu.pdf" 1743124513 74834 5ce26394f37f7efea7616a0d4b6704d7 ""
+  "img//ejemplos/concuinfodemon.pdf" 1752800564 21272 820d6165d7dd7a55dca1471b9f65befc ""
   "img//ejemplos/corre.pdf" 1744223320 83150 ab4843ba9371a2be6e332f4ae74bf3e7 ""
   "img//ejemplos/correminus.pdf" 1744225341 83174 ebb2ba24c3260c7b53425f881f68c43d ""
   "img//ejemplos/diseño1.pdf" 1742403021 34307 d49f7823e1c3bad82e4966a9ee5d6d47 ""
@@ -317,14 +317,14 @@
   "img//ejemplos/quantumdemon.pdf" 1752445916 13730 b141974db2b57f5e3829f8f199048e45 ""
   "img//ejemplos/quantumtp.pdf" 1752354256 14458 a0460237e8561b7fcb54c5c1aeda74ce ""
   "img//ejemplos/semilocal1.png" 1741655937 28282 da18a6e864e5fa1de5d2fd07af08a6f1 ""
-  "img//ejemplos/systemg.pdf" 1743124513 70189 f13aee495cf6ee2f71d55f2127d12185 ""
   "img//ejemplos/thermoquantitiesdemon.pdf" 1752548301 20340 e89a42cf37ed6c99ff68659ca75ca39e ""
+  "img//ejemplos/thermoquantum.pdf" 1752800564 20082 749ca37f9416af67c8526814123a3c14 ""
   "img//ejemplos/worktp.pdf" 1752354307 12342 fe51ddb2748b35fc482ea538d1ebc988 ""
-  "main.aux" 1752721296 57249 4f9df2f6a268bdd4cf8e4ae4c2ea3af9 "pdflatex"
-  "main.bbl" 1752720326 8919 8b9e8fbb4b04738bb1c383e6b5e026c6 "bibtex main"
-  "main.lof" 1752721296 6071 498eed83204804b9ef61539859d046ed "pdflatex"
+  "main.aux" 1752807307 57378 417908256b2bed70044800d6da69f5d7 "pdflatex"
+  "main.bbl" 1752807304 9223 c11607c5f72cf33df5502bd1e52ffec4 "bibtex main"
+  "main.lof" 1752807307 6071 498eed83204804b9ef61539859d046ed "pdflatex"
   "main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "main.toc" 1752721296 5446 db489281d110a32503dfe86b2d203be8 "pdflatex"
+  "main.toc" 1752807307 5446 db489281d110a32503dfe86b2d203be8 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)

@@ -276,7 +276,7 @@ El escribir el disipador de esta manera es importante, ya que esta evolución se
 
 
 \chapter{Estadística de conteo(\textit{Full Counting Statistics}) }
-En este capítulo se presenta el formalismo de \textit{Full Counting Statistics}(FCS). La sección \ref{sec3workheat} esta dedicada a la  descripción de las cantidades termodinámicas de interés, y en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica en el contexto del modelo. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos, mientras que en la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. Finalmente, en la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada. 
+En este capítulo se presenta el formalismo de \textit{Full Counting Statistics}(FCS). La sección \ref{sec3workheat} esta dedicada a la  descripción de las cantidades termodinámicas de interés, y en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica en el contexto del modelo. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos, mientras que en la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. Finalmente, en la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada deducida en \cite{potts2021thermodynamically}. 
 
 \section{Cantidades termodinámicas}
 Se considera el sistema descrito por el Hamiltoniano
@@ -1363,17 +1363,17 @@ Se observan dos comportamientos relevantes. Primero, para \( eV/T \lessapprox 1 
 
 Dado el comportamiento tipo Demonio de Maxwell del sistema, resulta pertinente examinar cómo estas cantidades cuánticas se ven influenciadas por el parámetro de acoplamiento \( g \). Para ello, se comenzará analizando las cantidades termodinámicas.
 
-\insertimage[\label{img:fig6resultado}]{ejemplos/systemg.pdf}{scale=0.80}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
+\insertimage[\label{img:fig6resultado}]{ejemplos/thermoquantum.pdf}{scale=0.47}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
 
-Se observa que cuando el acoplamiento \( g \) alcanza valores comparables con la tasa de túnel \( \gamma_{L} \), tanto la potencia generada como la contribución informacional del subsistema \( LR \) aumentan. Este resultado sugiere que un acoplamiento suficientemente fuerte entre el sistema y el demonio potencia la conversión de información en trabajo útil. 
+Se observa que cuando el acoplamiento \( g \) alcanza valores comparables con la tasa de túnel \( \gamma_{L} \), tanto la potencia generada como la contribución informacional del subsistema \( LR \) aumentan. Este resultado sugiere que un acoplamiento suficientemente fuerte entre el sistema y el demonio potencia la conversión de información en trabajo. 
 
-Además, bajo esta misma condición \( g \sim \gamma_{L} \), el valor absoluto del flujo de energía del demonio \( \dot{E}_{d} \) también se incrementa, lo que indica una participación energética más activa del demonio en el proceso.
+Además, bajo esta misma condición \( g \sim \gamma_{L} \), el valor absoluto del flujo de energía del demonio \( \dot{E}_{d} \) también se incrementa, lo que indica mayor transporte energético entre el demonio y el sistema $LR$.
 
 Por otra parte, el análisis de las contribuciones individuales a los flujos de información revela cómo el acoplamiento modifica la cantidad de información entregada por cada punto cuántico. Estos efectos se visualizan en la Figura \ref{img:fig7resultado}, donde se aprecia la dependencia de los flujos informacionales con respecto al parámetro \( g \).
 
-\insertimage[\label{img:fig7resultado}]{ejemplos/concu.pdf}{scale=0.8}{(a)Flujos de información de cada sitio. (b)Concurrencia y coherencia en función de $g/\gamma_{L}$. }
+\insertimage[\label{img:fig7resultado}]{ejemplos/concuinfodemon.pdf}{scale=0.47}{(a)Flujos de información de cada sitio. (b)Concurrencia y coherencia en función de $g/\gamma_{L}$. }
 
-Un comportamiento notable se presenta cuando el acoplamiento alcanza valores comparables a la tasa de túnel, es decir, \( g \sim \gamma_{L} \). En este régimen, tanto la concurrencia como la coherencia alcanzan valores cercanos a sus máximos, lo que indica una presencia significativa de efectos cuánticos entre los puntos \( L \) y \( R \). 
+Un comportamiento notable se presenta cuando el acoplamiento alcanza valores comparables a la tasa de túnel, es decir, \( g \sim \gamma_{L} \). En este régimen, tanto la concurrencia como la coherencia alcanzan valores cercanos a sus máximos, lo que indica una presencia significativa de efectos cuánticos entre los puntos \( L \) y \( R \), resultado que se asemeja a \cite{prech2023entanglement}. 
 
 Simultáneamente, los flujos de información individuales tienden a igualarse, es decir, \( \dot{I}_{L} \approx \dot{I}_{R} \), lo que sugiere que, en condiciones de entrelazamiento y coherencia elevadas, ambos puntos cuánticos contribuyen de manera equilibrada en el flujo de información del sistema $LR$. 
 
@@ -1383,14 +1383,27 @@ Simultáneamente, los flujos de información individuales tienden a igualarse, e
 \newpage 
 
 \section{Comparación con caso clásico}
-Una de las ventajas de usar el formalismo descrito en \cite{prech2023entanglement} es que se pueden considerar términos no seculares los que finalmente permiten que aparezcan coherencias y entrelazamiento no nulos en el régimen de $g\sim \gamma_{L}$. La pregunta ahora por hacerse es si estos efectos cuánticos resultan ser una ventaja para que el demonio opere como debe ser. Para hacer la comparación uno puede calcular una evolución clásica para las partes diagonales del sistema descrita por
+Una de las ventajas del formalismo presentado en \cite{potts2021thermodynamically} es que permite incluir términos no seculares en la dinámica del sistema. Esto posibilita la aparición de coherencias y entrelazamiento no nulos en el régimen \( g \sim \gamma_{L} \). La pregunta natural que surge es si estos efectos cuánticos representan una ventaja para el funcionamiento del demonio. Para abordar esta cuestión, se puede considerar una evolución puramente(semi) clásica, limitada a las componentes diagonales de la matriz de densidad del sistema, la cual está gobernada por
 
 \begin{equation}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle, 
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle, 
 \label{ec5:classicalmodel}
 \end{equation}
 
-En donde en este caso $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son operadores de Nakajima-Zwanzig que corresponden a la parte diagonal y no diagonal de la matriz densidad del sistema respectivamente. Además se cumple que $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}} $ en donde $\check{\mathcal{V}}|\hat{\rho}\rangle \rangle$ actua como $-ig[\hat{d}_{L}^{\dagger}\hat{d}_{R} + \hat{d}_{R}^{\dagger}\hat{d}_{L},\hat{\rho}]$, $\check{\mathcal{L}}_{0}^{-1} = - \int_{0}^{\infty}d\tau e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}} $ consiste en el inverso de Drazin de $\check{\mathcal{L}}_{0}$ \cite{landi2024current} y $\check{\mathcal{L}}_{f}|\hat{\rho}\rangle \rangle = -i[\hat{H}_{S},\hat{\rho}] + \mathcal{L}(\hat{\rho})$. La demostración de esta ecuación se encuentra en el ápendice \ref{appendix5clasic}. \\
+En este contexto, la evolución del sistema está gobernada por el superoperador total $\check{\mathcal{L}}_{f}$, definido como
+\begin{equation*}
+\check{\mathcal{L}}_{f}|\hat{\rho}\rangle\rangle = -i[\hat{H}_{S}, \hat{\rho}] + \mathcal{L}(\hat{\rho}),
+\end{equation*}
+que combina la dinámica coherente del sistema con la disipación inducida por los baños. Este superoperador puede descomponerse como $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}}$, donde el término $\check{\mathcal{V}}$ representa el acoplamiento entre los sitios y actúa como
+\begin{equation*}
+\check{\mathcal{V}}|\hat{\rho}\rangle\rangle = -ig[\hat{d}_{L}^{\dagger} \hat{d}_{R} + \hat{d}_{R}^{\dagger} \hat{d}_{L}, \hat{\rho}].
+\end{equation*}
+Por otro lado, el operador inverso $\check{\mathcal{L}}_{0}^{-1}$ se define a través del inverso de Drazin del operador $\check{\mathcal{L}}_{0}$ como:
+\begin{equation*}
+\check{\mathcal{L}}_{0}^{-1} = -\int_{0}^{\infty} d\tau\, e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}},
+\end{equation*}
+según lo discutido en~\cite{landi2024current}. Finalmente, $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son los operadores de proyección de Nakajima-Zwanzig sobre las partes diagonal y no diagonal de la matriz densidad del sistema, respectivamente. La demostración detallada de esta ecuación se encuentra en el Apéndice~\ref{appendix5clasic}.
+
 El hecho de tener una ecuación maestra sólo para las partes diagonales permite modelar el sistema de manera estócastica, a través de un vector para las probabilidades de ocupación $\textbf{P} = [\rho_{000},\rho_{100},\rho_{010},\rho_{001},\rho_{110},\rho_{101},\rho_{011},\rho_{111}]^{T}$ y la ecuación maestra
 
 \begin{equation*}

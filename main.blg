@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: library.bib
 Warning--vacio publisher en Maxwell_1871
 Warning--vacio journal en schinabeck2019hierarchical
-You've used 33 entries,
+You've used 34 entries,
             1986 wiz_defined-function locations,
-            651 strings with 8849 characters,
-and the built_in function-call counts, 9630 in all, are:
-= -- 1024
-> -- 301
+            656 strings with 9036 characters,
+and the built_in function-call counts, 9953 in all, are:
+= -- 1059
+> -- 312
 < -- 0
-+ -- 115
-- -- 82
-* -- 631
-:= -- 1252
-add.period$ -- 37
-call.type$ -- 33
-change.case$ -- 29
++ -- 119
+- -- 85
+* -- 651
+:= -- 1292
+add.period$ -- 38
+call.type$ -- 34
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 539
-empty$ -- 907
-format.name$ -- 82
-if$ -- 2455
+cite$ -- 36
+duplicate$ -- 560
+empty$ -- 934
+format.name$ -- 85
+if$ -- 2540
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 36
-newline$ -- 175
-num.names$ -- 33
-pop$ -- 88
+int.to.str$ -- 34
+missing$ -- 37
+newline$ -- 180
+num.names$ -- 34
+pop$ -- 90
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 427
+skip$ -- 446
 stack$ -- 0
-substring$ -- 512
-swap$ -- 279
+substring$ -- 524
+swap$ -- 292
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 80
-width$ -- 35
-write$ -- 407
+while$ -- 82
+width$ -- 36
+write$ -- 420
 (There were 2 warnings)

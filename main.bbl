@@ -30,6 +30,13 @@ Manzano, D., ``A short introduction to the lindblad master equation'', {Aip
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
+\bibitem{potts2021thermodynamically}
+Potts, P.~P., Kalaee, A. A.~S., y Wacker, A., ``A thermodynamically consistent
+  markovian master equation beyond the secular approximation'', {New Journal of
+  Physics}, vol.~23, no.~12, p.~123013, 2021.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
 \bibitem{geva2000second}
 Geva, E., Rosenman, E., y Tannor, D., ``On the second-order corrections to the
   quantum canonical equilibrium density matrix'', {The Journal of Chemical
