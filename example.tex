@@ -1404,22 +1404,29 @@ Por otro lado, el operador inverso $\check{\mathcal{L}}_{0}^{-1}$ se define a tr
 \end{equation*}
 según lo discutido en~\cite{landi2024current}. Finalmente, $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ son los operadores de proyección de Nakajima-Zwanzig sobre las partes diagonal y no diagonal de la matriz densidad del sistema, respectivamente. La demostración detallada de esta ecuación se encuentra en el Apéndice~\ref{appendix5clasic}.
 
-El hecho de tener una ecuación maestra sólo para las partes diagonales permite modelar el sistema de manera estócastica, a través de un vector para las probabilidades de ocupación $\textbf{P} = [\rho_{000},\rho_{100},\rho_{010},\rho_{001},\rho_{110},\rho_{101},\rho_{011},\rho_{111}]^{T}$ y la ecuación maestra
+El hecho de disponer de una ecuación maestra que describe únicamente la evolución de las partes diagonales de la matriz densidad permite modelar el sistema de manera estocástica. Esto se logra mediante un vector de probabilidades de ocupación definido como:
+\begin{equation*}
+\mathbf{P} = [\rho_{000}, \rho_{100}, \rho_{010}, \rho_{001}, \rho_{110}, \rho_{101}, \rho_{011}, \rho_{111}]^{T},
+\end{equation*}
+cuya dinámica está gobernada por la ecuación maestra
 
 \begin{equation*}
     \frac{d}{dt}\textbf{P} = \textbf{W}\textbf{P},
 \end{equation*}
+donde la matriz de transición $\mathbf{W}$ puede obtenerse a partir de la ecuación~(\ref{ec5:classicalmodel}), y se descompone como $\mathbf{W} = \sum_{\alpha} \mathbf{W}_{\alpha}$, donde $\mathbf{W}_{\alpha}$ representa la contribución del baño $\alpha$. 
 
-En donde la matriz de transición $\textbf{W}$ se puede obtener de \ref{ec5:classicalmodel}. Finalmente flujos de corriente e información correspondientes al baño $\alpha$ podrán ser calculadas usando que 
-
-\begin{equation*}
-    \dot{N}_{\alpha} = -(\textbf{N})^{T} \textbf{W}_{\alpha}\textbf{P}
-\end{equation*}
+A partir de la solución estacionaria del sistema, es posible calcular los flujos de corriente de partículas e información asociados al baño $\alpha$ mediante las expresiones
 
 \begin{equation*}
-    \dot{I}_{\alpha} = -(\log \textbf{P})^{T} \textbf{W}_{\alpha}\textbf{P},
+    \dot{N}_{\alpha} = -\mathbf{N}^{T} \mathbf{W}_{\alpha}\mathbf{P},
 \end{equation*}
-en donde los vectores $\textbf{N}$ y $\log \textbf{P}$ están escritos en la base de Fock usada para el vector $\textbf{P}$. La expresión analítica para el flujo de corriente de partículas para el baño $L$ es equivalente tanto en el clásico como en el cuántico y es 
+\begin{equation*}
+    \dot{I}_{\alpha} = -(\log \mathbf{P})^{T} \mathbf{W}_{\alpha}\mathbf{P},
+\end{equation*}
+
+donde $\mathbf{P}$ es el vector de probabilidades en la base de Fock utilizada, $\mathbf{N}$ contiene el número de partículas en cada estado, y $\log \mathbf{P}$ se refiere al logaritmo aplicado componente a componente.
+
+Cabe destacar que la expresión analítica para el flujo de corriente de partículas correspondiente al baño $L$ es idéntica en los modelos clásico y cuántico, y está dada por
 
 \begin{align*}
     \dot{N}_{L} & = \gamma_{L}(\epsilon)(f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} ) \\
