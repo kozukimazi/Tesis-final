@@ -1,40 +1,40 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Sistemas cuánticos abiertos}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Sistemas cuánticos cerrados}{2}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Cuadro de interacción}{2}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Ecuación de Lindblad}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Dinámica de un sistema abierto}{3}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Ecuación maestra}{3}{subsection.2.2.2}%
-\contentsline {chapter}{\numberline {3}Estadística de conteo(\textit {Full Counting Statistics}) }{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Cantidades termodinámicas}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Leyes de la termodinámica}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Ley cero}{9}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Primera Ley}{9}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Segunda Ley}{9}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Estadística de medición en dos puntos}{10}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Formalismo de Superoperadores y Espacio de Liouville}{12}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Ecuación maestra generalizada}{14}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Resolución finita de energía}{15}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Agrupación de frecuencias}{16}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Consistencia termodinámica}{18}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Ley cero}{18}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Segunda ley}{19}{subsection.3.6.2}%
-\contentsline {chapter}{\numberline {4}Flujos de información}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Demonio de Maxwell}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Demonio de Maxwell autónomo}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Descripción clásica}{22}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Segunda ley de la termodinámica y flujos de información}{23}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Descripción cuántica}{26}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Flujos de información en contexto cuántico}{28}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Modelo teórico}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Estudio del transporte}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Demonio de Maxwell en 3 puntos cuánticos}{39}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Comparación con caso clásico}{49}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{53}{chapter.6}%
-\contentsline {chapter}{Bibliografía}{54}{chapter*.31}%
-\contentsline {chapter}{Anexos}{57}{appendix*.33}%
+\contentsline {chapter}{Introducción}{1}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Sistemas cuánticos abiertos}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sistemas cuánticos cerrados}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Cuadro de interacción}{2}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Ecuación de Lindblad}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Dinámica de un sistema abierto}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Ecuación maestra}{3}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Estadística de conteo(\textit {Full Counting Statistics}) }{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cantidades termodinámicas}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Leyes de la termodinámica}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Ley cero}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Primera Ley}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Segunda Ley}{9}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Estadística de medición en dos puntos}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Formalismo de Superoperadores y Espacio de Liouville}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Ecuación maestra generalizada}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Resolución finita de energía}{15}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Agrupación de frecuencias}{16}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Consistencia termodinámica}{18}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Ley cero}{18}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Segunda ley}{19}{subsection.2.6.2}%
+\contentsline {chapter}{\numberline {3}Flujos de información}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Demonio de Maxwell}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Demonio de Maxwell autónomo}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Descripción clásica}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Segunda ley de la termodinámica y flujos de información}{23}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Descripción cuántica}{26}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Flujos de información en contexto cuántico}{28}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Modelo teórico}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Estudio del transporte}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Demonio de Maxwell en 3 puntos cuánticos}{39}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Comparación con caso clásico}{49}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{53}{chapter.5}%
+\contentsline {chapter}{Bibliografía}{54}{chapter*.33}%
+\contentsline {chapter}{Anexos}{57}{appendix*.35}%
 \contentsline {section}{\numberline {A}Cálculos realizados sección 3}{57}{section.Alph0.1}%
 \contentsline {subsection}{\numberline {A.1}Matriz densidad en función del campo de conteo}{57}{subsection.Alph0.1.1}%
 \contentsline {subsection}{\numberline {A.2}Matriz densidad generalizada}{58}{subsection.Alph0.1.2}%

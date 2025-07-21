@@ -13,7 +13,12 @@
 % NUEVO CAPÍTULO
 % ------------------------------------------------------------------------------
 % A diferencia de Template-Informe, Template-Tesis requiere el uso de capítulos; las secciones, subsecciones, etc son parte de un capítulo. Se recomienda el uso de un capítulo en un archivo distinto
-\chapter{Introducción}
+\chapteranum{Introducción}
+Uno de los aspectos principales que busca estudiar la termodinámica, es el carácter físico de la información. El problema lo planteó tempranamente Maxwell, creando un experimento teórico que rompe aparentemente con la segunda ley de la termodinámica y le da un cáracter físico a la información\cite{Maxwell_1871}. Los trabajos pioneros de Szilard\cite{szilard1964decrease}, Brillouin\cite{brillouin1951maxwell}, Landauer\cite{Landauer_1961} y Bennet\cite{bennett1982thermodynamics}, fueron esenciales para clarificar esta paradoja. 
+
+El avance experimental en nanotecnologías, ha permitido una gran comprensión en la física de sistemas pequeños\cite{douarche2005experimental,wang2005experimental}. Al ser sistemas de baja dimensión, las fluctuaciones pueden alterar bastante la dinámica, es por este motivo que plantear las leyes de la termodinámica resulta desafiante. En contexto clásico, el área que se encarga de abarcar esta problemática, es la termodinámica estocástica, la cual permite definir las leyes de la termodinámica en condiciones lejanas al equilibrio\cite{van2013stochastic,jarzynski1997nonequilibrium}. Junto con una descripción de las leyes de la termodinámica, cobra relevancia el rol de la información en estos sistemas a nanoescala. Se distinguen dos casos, uno de ellos corresponde a sistemas no autónomos, que corresponden a sistemas que varian sus parámetros macroscopicas por un agente externo, es decir que poseen un Hamiltoniano tiempo dependiente. En estos sistemas el rol de la información y el Demonio de Maxwell ha sido descrito de manera exitosa \cite{cao2009thermodynamics,sagawa2010generalized} 
+
+
 %Desde el siglo XVIII con el nacimiento del Demonio de Maxwell, a través de su experimento mental descrito en la obra de Maxwell\cite{Maxwell_1871}, el concepto de información ha sido 
 %de gran interés en torno a la comunidad de físicos. Con el avance de la tecnología, lo que
 %nació como un experimento mental ha pasado a ser capaz de replicarse en sistemas a nanoescala.
@@ -21,6 +26,7 @@
 %en los que el objetivo es inducir un estado fuera de equilibrio, ya sea mediante un gradiente de temperatura o de potencial entre los reservorios. Este estado fuera de equilibrio induce
  %flujo de corrientes de partículas y calor. Aun así, el sistema no sólo transmite un flujo continuo
 %de energía, sino también de información, debido a las correlaciones que se producen dentro del sistema. El concepto de información ha sido analizado principalmente en sistemas no autónomos en donde se tiene una clara interpretación en que sistema corresponde al demonio, ya que es el que realiza la medición, para sistemas autónomos es decir tiempo independientes, el uso de la información termodinamica no era claro hasta hace poco. El desarrollo de herramientas como la termodinámica estocástica \cite{van2013stochastic} ha permitido desarrollar con profundidad los flujos de información entre sistemas los cuáles se encuentran en un estado fuera de equilibrio.
+
 
 
 % SUB-SECCIÓN
@@ -741,7 +747,7 @@ Con esto finalmente se logra definir las leyes de la termodinámica usando la ec
 % NUEVO CAPÍTULO
 % ------------------------------------------------------------------------------
 \chapter{Flujos de información}
-En este capítulo se introduce el concepto de información termodinámica, comenzando en la sección \ref{sec4:Demon} con una revisión del paradigma del Demonio de Maxwell. En la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se presenta el concepto de flujos de información, utilizando herramientas como la termodinámica estocástica en contexto clásico y la matriz densidad en contexto cuántico.
+En este capítulo se introduce el concepto de información termodinámica, comenzando en la sección \ref{sec4:Demon} con una revisión del paradigma del Demonio de Maxwell. En la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se presenta el concepto de flujos de información, utilizando herramientas como la termodinámica estocástica en contexto clásico y la matriz densidad en contexto cuántico\cite{horowitz2014thermodynamics,ptaszynski2019thermodynamics}.
 
 
 \section{Demonio de Maxwell}
@@ -1334,7 +1340,7 @@ donde \( \dot{\mathcal{F}}_{LR} \) representa la tasa de cambio de energía libr
 A fin de verificar este comportamiento, se grafican las cantidades termodinámicas relevantes tanto del sistema como del demonio.
 
 
-\insertimage[\label{img:fig4resultado}]{ejemplos/thermoquantitiesdemon}{scale=0.47}{ Flujo de energía, tasa de cambio de energía libre, flujo de información, potencia y flujo de calor del sistema $LR$. (b)  Flujo de energía, tasa de cambio de energía libre, flujo de información y potencia del Demonio. }
+\insertimage[\label{img:fig4resultado}]{ejemplos/thermoquantitiesdemon}{scale=0.53}{ Flujo de energía, tasa de cambio de energía libre, flujo de información, potencia y flujo de calor del sistema $LR$. (b)  Flujo de energía, tasa de cambio de energía libre, flujo de información y potencia del Demonio. }
 
 La Figura \ref{img:fig4resultado} muestra que, en el régimen en el que el subsistema $LR$ realiza trabajo ($\dot{W}_{LR} < 0$ y $\dot{\mathcal{F}}_{LR} < 0$), la contribución informacional domina sobre el flujo energético, es decir, $\dot{\mathcal{F}}_{LR} \approx T \dot{I}_{LR}$ mientras que $\dot{E}_{LR} \approx 0$. Este resultado respalda la interpretación del dispositivo como un Demonio de Maxwell autónomo.
 
@@ -1371,7 +1377,7 @@ Además, bajo esta misma condición \( g \sim \gamma_{L} \), el valor absoluto d
 
 Por otra parte, el análisis de las contribuciones individuales a los flujos de información revela cómo el acoplamiento modifica la cantidad de información entregada por cada punto cuántico. Estos efectos se visualizan en la Figura \ref{img:fig7resultado}, donde se aprecia la dependencia de los flujos informacionales con respecto al parámetro \( g \).
 
-\insertimage[\label{img:fig7resultado}]{ejemplos/concuinfodemon.pdf}{scale=0.47}{(a)Flujos de información de cada sitio. (b)Concurrencia y coherencia en función de $g/\gamma_{L}$. }
+\insertimage[\label{img:fig7resultado}]{ejemplos/concuinfodemon.pdf}{scale=0.51}{(a)Flujos de información de cada sitio. (b)Concurrencia y coherencia en función de $g/\gamma_{L}$. }
 
 Un comportamiento notable se presenta cuando el acoplamiento alcanza valores comparables a la tasa de túnel, es decir, \( g \sim \gamma_{L} \). En este régimen, tanto la concurrencia como la coherencia alcanzan valores cercanos a sus máximos, lo que indica una presencia significativa de efectos cuánticos entre los puntos \( L \) y \( R \), resultado que se asemeja a \cite{prech2023entanglement}. 
 
@@ -1468,13 +1474,14 @@ Por otro lado, mediante la expresión \ref{sec5:infosemi} se obtienen los flujos
 
 La versión cuántica de los flujos de información se encuentra detallada en el apéndice~\ref{apendix5infoflow}. En la Figura~\ref{img:P4clqm} se muestra una comparación gráfica entre los casos clásico y cuántico para estas cantidades.
 
-\insertimage[\label{img:P4clqm}]{ejemplos/currentinfosemi.pdf}{scale=0.46}{En línea azul el cálculo realizado con el modelo cuántico que permite coherencias no nulas, mientras que la línea roja corresponde al cálculo semiclásico.}
+\insertimage[\label{img:P4clqm}]{ejemplos/currentinfosemi.pdf}{scale=0.54}{En línea azul el cálculo realizado con el modelo cuántico que permite coherencias no nulas, mientras que la línea roja corresponde al cálculo semiclásico.}
 
 Como se muestra en la Figura \ref{img:P4clqm}, en el régimen $eV/T\lessapprox 2.4$ la corriente de partículas calculada en el caso cuántico es menor a la del caso clásico. Por otro lado, para $eV/T \gtrapprox 2.4$ la corriente de partículas en el caso cuántico es mayor que en el caso clásico. Es decir, el comportamiento cuántico mejora el transporte de partículas, ya sea en contra o a favor del gradiente de potencial. 
 
-Como se observa en la Figura \ref{img:P4clqm}, el flujo de información asociado al sitio $D$ es mayor en el caso cuántico, mostrando una diferencia apreciable en las regiones $eV/T \lessapprox 1$ y $eV/T \gtrapprox 6$. Este resultado indica que la dinámica cuántica permite una mejora en el intercambio de información entre el sistema $D$ y el subsistema $LR$. Dicha mejora se explica porque el sitio $D$ no solo establece correlaciones clásicas a través de los elementos diagonales del estado, sino que, debido a la presencia de coherencia, también genera correlaciones cuánticas con el sistema $LR$, incluso cuando la interacción entre ellos es exclusivamente de tipo clásico, mediada por la energía de Coulomb. Este comportamiento se corrobora mediante los flujos de información cuánticos obtenidos analíticamente, los cuales se encuentran detallados en el Apéndice \ref{apendix5infoflow}. 
+Como se observa en la Figura \ref{img:P4clqm}, el flujo de información asociado al sitio $D$ es mayor en el caso cuántico, mostrando una diferencia apreciable en las regiones $eV/T \lessapprox 1$ y $eV/T \gtrapprox 6$. Este resultado indica que la dinámica cuántica permite una mejora en el intercambio de información entre el sistema $D$ y el subsistema $LR$. Dicha mejora se explica porque el sitio $D$ no solo establece correlaciones clásicas a través de los elementos diagonales del estado, sino que, debido a la presencia de coherencia, también genera correlaciones cuánticas con el sistema $LR$, incluso cuando la interacción entre ellos es exclusivamente de tipo clásico, mediada por la energía de Coulomb. Este comportamiento se corrobora con los flujos de información cuánticos obtenidos analíticamente, los cuales presentan contribuciones provenientes de los elementos no diagonales de la matriz densidad (ver Apéndice~\ref{apendix5infoflow}).
+ 
 
-Finalmente, debido a esta leve aumento en el flujo de información cuántico, la tasa de cambio de la energía libre $\dot{\mathcal{F}}_{LR} \approx T\dot{I}_{LR}$ decrece, y por ende aumenta la capacidad del sistema, de realizar trabajo.
+Finalmente, debido a este aumento en el flujo de información en el régimen cuántico, la tasa de cambio de la energía libre del subsistema $LR$, dada por $\dot{\mathcal{F}}_{LR} \approx T\dot{I}_{LR}$, disminuye. Como consecuencia, se incrementa la capacidad del sistema para realizar trabajo, lo cual evidencia el rol beneficioso de la coherencia cuántica como recurso termodinámico.
 
 
 \label{sec5:demonio}
