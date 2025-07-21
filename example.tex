@@ -1410,32 +1410,45 @@ El hecho de disponer de una ecuación maestra que describe únicamente la evoluc
 \end{equation*}
 cuya dinámica está gobernada por la ecuación maestra
 
-\begin{equation*}
+\begin{equation}
     \frac{d}{dt}\textbf{P} = \textbf{W}\textbf{P},
-\end{equation*}
+    \label{sec5:classicsemi}
+\end{equation}
 donde la matriz de transición $\mathbf{W}$ puede obtenerse a partir de la ecuación~(\ref{ec5:classicalmodel}), y se descompone como $\mathbf{W} = \sum_{\alpha} \mathbf{W}_{\alpha}$, donde $\mathbf{W}_{\alpha}$ representa la contribución del baño $\alpha$. 
+
+En lo que sigue, se estudiará el estado estacionario de la ecuación maestra presentada en la ecuación~\ref{sec5:classicsemi}. En particular, se compararán las probabilidades de ocupación obtenidas en este modelo clásico con aquellas resultantes del tratamiento cuántico, lo cual se muestra en las Figuras~\ref{img:rho100} y~\ref{img:rho011}. 
+
+\insertimage[\label{img:rho100}]{ejemplos/rho1004.pdf}{scale=0.46}{Elementos diagonales $\rho_{100}$, $\rho_{010}$, $\rho_{111}$ y $\rho_{110}$ en función de $eV/T$. Donde el caso clásico corresponde a la línea roja y el caso cuántico a la línea azul.}
+\insertimage[\label{img:rho011}]{ejemplos/rho1014.pdf}{scale=0.46}{Elementos diagonales $\rho_{101}$, $\rho_{000}$, $\rho_{011}$ y $\rho_{001}$ en función de $eV/T$.}
+
+De las Figuras \ref{img:rho100} y \ref{img:rho011} se observa que en los dos casos, las probabilidades de ocupación dominantes corresponden a $\rho_{100},\rho_{010}$ y $\rho_{001}$. Por el contrario, la probabilidad de ocupación más pequeña es $\rho_{111}$.
+ 
+Se puede notar que, cerca del punto $eV/T \approx 2.4$ donde la coherencia es casi nula, todas las probabilidades de ocupación clásicas se cruzan con sus contrapartes cuánticas. En cambio, para $eV/T \lessapprox 1$, los elementos $\rho_{100}$, $\rho_{010}$ y $\rho_{101}$ presentan una diferencia apreciable entre los comportamientos cuántico y clásico, lo cual se debe al efecto de la coherencia sobre estos elementos.
+
 
 A partir de la solución estacionaria del sistema, es posible calcular los flujos de corriente de partículas e información asociados al baño $\alpha$ mediante las expresiones
 
-\begin{equation*}
+\begin{equation}
     \dot{N}_{\alpha} = -\mathbf{N}^{T} \mathbf{W}_{\alpha}\mathbf{P},
-\end{equation*}
-\begin{equation*}
+    \label{sec5:currentsemi}
+\end{equation}
+\begin{equation}
     \dot{I}_{\alpha} = -(\log \mathbf{P})^{T} \mathbf{W}_{\alpha}\mathbf{P},
-\end{equation*}
+    \label{sec5:infosemi}
+\end{equation}
 
 donde $\mathbf{P}$ es el vector de probabilidades en la base de Fock utilizada, $\mathbf{N}$ contiene el número de partículas en cada estado, y $\log \mathbf{P}$ se refiere al logaritmo aplicado componente a componente.
 
-Cabe destacar que la expresión analítica para el flujo de corriente de partículas correspondiente al baño $L$ es idéntica en los modelos clásico y cuántico, y está dada por
+En el modelo clásico, la expresión analítica para el flujo de corriente de partículas correspondiente al baño $L$ es idéntica al cuántico. Usando la expresión \ref{sec5:currentsemi}, la corriente de partículas esta dada por  
 
 \begin{align*}
-    \dot{N}_{L} & = \gamma_{L}(\epsilon)(f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} ) \\
-        & + \gamma_{L}(\epsilon + U) (f_{L}(\epsilon+U)\rho_{001} - [1-f_{L}(\epsilon+U)]\rho_{101} )  \\
-        & + \gamma_{L}(\epsilon + U_{f}) (f_{L}(\epsilon+U_{f})\rho_{010} - [1-f_{L}(\epsilon+U_{f})]\rho_{110} )  \\  
-        & + \gamma_{L}(\epsilon + U + U_{f}) (f_{L}(\epsilon+U + U_{f})\rho_{011} - [1-f_{L}(\epsilon+U+U_{f})]\rho_{111} ).
+    \dot{N}_{L} & = \gamma_{L}(\epsilon)\big(f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} \big) \\
+        & + \gamma_{L}(\epsilon + U) \big(f_{L}(\epsilon+U)\rho_{001} - [1-f_{L}(\epsilon+U)]\rho_{101} \big)  \\
+        & + \gamma_{L}(\epsilon + U_{f}) \big(f_{L}(\epsilon+U_{f})\rho_{010} - [1-f_{L}(\epsilon+U_{f})]\rho_{110} \big)  \\  
+        & + \gamma_{L}(\epsilon + U + U_{f}) \big(f_{L}(\epsilon+U + U_{f})\rho_{011} - [1-f_{L}(\epsilon+U+U_{f})]\rho_{111} \big).
 \end{align*}
 
-Por otro lado, los flujos de información clásicos corresponden a 
+Por otro lado, mediante la expresión \ref{sec5:infosemi} se obtienen los flujos de información clásicos asociados a los baños $L$ y $R$, los cuales están descritos por
 
 \begin{align*}
   \dot{I}_{L}  &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
@@ -1453,28 +1466,15 @@ Por otro lado, los flujos de información clásicos corresponden a
       & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
 \end{align*}
 
-La versión cuántica de los flujos de información se encuentra calculada en el ápendice \ref{apendix5infoflow}. Se pueden graficar estas cantidades tanto en el caso clásico y en el caso cuántico como se ve en la Figura \ref{img:P4clqm}
+La versión cuántica de los flujos de información se encuentra detallada en el apéndice~\ref{apendix5infoflow}. En la Figura~\ref{img:P4clqm} se muestra una comparación gráfica entre los casos clásico y cuántico para estas cantidades.
 
-\insertimage[\label{img:P4clqm}]{ejemplos/P4clqm.pdf}{scale=0.50}{En línea azul el cálculo realizado con el modelo cuántico que permite coherencias no nulas, mientras que la línea roja corresponde al cálculo semiclásico. En estos gráficos el único dato que se modificó es el de $\epsilon = 0$ comparando con el de secciones anteriores.}
+\insertimage[\label{img:P4clqm}]{ejemplos/currentinfosemi.pdf}{scale=0.46}{En línea azul el cálculo realizado con el modelo cuántico que permite coherencias no nulas, mientras que la línea roja corresponde al cálculo semiclásico.}
 
-Primero analizando el flujo de corriente, se puede notar que la corriente para el caso cuántico es menor en todo momento con respecto al caso clásico. Si se considera el caso en que $U_{f}\gg U,\epsilon$ esta corriente se puede aproximar a  
+Como se muestra en la Figura \ref{img:P4clqm}, en el régimen $eV/T\lessapprox 2.4$ la corriente de partículas calculada en el caso cuántico es menor a la del caso clásico. Por otro lado, para $eV/T \gtrapprox 2.4$ la corriente de partículas en el caso cuántico es mayor que en el caso clásico. Es decir, el comportamiento cuántico mejora el transporte de partículas, ya sea en contra o a favor del gradiente de potencial. 
 
-\begin{equation}
-    \dot{N}_{L} \approx  \gamma_{L}(\epsilon)( f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} ) +  \gamma_{L}(\epsilon+U)(f_{L}(\epsilon+U)\rho_{001} - [1-f_{L}(\epsilon+U)]\rho_{101} )
-    ,\label{sec:clqmeq1}
-\end{equation}
-esto nos permite verificar que las probabilidades que permiten que el flujo de corriente vaya en la dirección contraria a la diferencia de potencial son principalmente $\rho_{101}$ y $\rho_{100}$. De hecho, si graficamos las probabilidades de ocupación
-\insertimage[\label{img:P1clqm}]{ejemplos/P1clqm.pdf}{scale=0.45}{}
+Como se observa en la Figura \ref{img:P4clqm}, el flujo de información asociado al sitio $D$ es mayor en el caso cuántico, mostrando una diferencia apreciable en las regiones $eV/T \lessapprox 1$ y $eV/T \gtrapprox 6$. Este resultado indica que la dinámica cuántica permite una mejora en el intercambio de información entre el sistema $D$ y el subsistema $LR$. Dicha mejora se explica porque el sitio $D$ no solo establece correlaciones clásicas a través de los elementos diagonales del estado, sino que, debido a la presencia de coherencia, también genera correlaciones cuánticas con el sistema $LR$, incluso cuando la interacción entre ellos es exclusivamente de tipo clásico, mediada por la energía de Coulomb. Este comportamiento se corrobora mediante los flujos de información cuánticos obtenidos analíticamente, los cuales se encuentran detallados en el Apéndice \ref{apendix5infoflow}. 
 
-\insertimage[\label{img:P2clqm}]{ejemplos/P2clqm.pdf}{scale=0.45}{}
-
-\insertimage[\label{img:P3clqm}]{ejemplos/P3clqm.pdf}{scale=0.45}{}
-
-\insertimage[\label{img:P5clqm}]{ejemplos/P5clqm.pdf}{scale=0.45}{}
-
-
-Resulta relevante analizar para el régimen $eV/T<2.4$ considerando la asimetría en las razones de tuneleo $\gamma_{L}(\epsilon)/\gamma_{L}(\epsilon + U) = 6$, ya que si consideramos \ref{sec:clqmeq1}. La probabilidad que realiza mayor contribución a que $\dot{N}_{L}<0$ es $\rho_{100}$ el cuál es mayor para el caso cuántico, en el régimen $eV/T<2.4$. Por otro lado, las probabilidades que presentan mayor diferencia a su simil clásico son efectivamente las que presentan coherencias entre ellas como se ve con $\rho_{100},\rho_{010}$ y $\rho_{101}$. [Este analasis aún no estoy seguro por algo que comentare] Para los flujos de información se obtuvo que la información que recibe el punto cuántico $D$ es mayor para el caso clásico con respecto al caso cuántico, esto puede ser por dos razones, una de ellas es si consideramos la interpretación tipo Demonio, ya que este Demonio debe ser capaz de distinguir bien si es que el punto cuántico esta en el modo $L$ o el modo $R$, sin embargo el hecho de que haya coherencias no nulas entre estos dos modos dificulta el hecho de distinguir en que modo está el electrón, lo que a su vez afecta en el desarrollo de las correlacciones entre los estados del sistema. 
-
+Finalmente, debido a esta leve aumento en el flujo de información cuántico, la tasa de cambio de la energía libre $\dot{\mathcal{F}}_{LR} \approx T\dot{I}_{LR}$ decrece, y por ende aumenta la capacidad del sistema, de realizar trabajo.
 
 
 \label{sec5:demonio}

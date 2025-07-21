@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1752942190 "main.aux" "main.bbl" "main" 1752942825 0
+["bibtex main"] 1753066729 "main.aux" "main.bbl" "main" 1753066735 0
   "./library.bib" 1752807128 12475 bbac6b83552c2c0ec1f19e38e0a50f97 ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1752942824 57378 1e071d34a17ae8e134cdc462c2188019 "pdflatex"
+  "main.aux" 1753066733 58276 13d33ad5159a7982a526bfe304e53e4b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1752942819 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1752942825 0
+["pdflatex"] 1753066729 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1753066735 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -290,17 +290,13 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "example.tex" 1752942818 217249 eff4848e4363596bfb8214de677f607d ""
+  "example.tex" 1753066722 218203 a9a6eea8a250d9ca0d06b5e6153c6b5e ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
-  "img//ejemplos/P1clqm.pdf" 1748302639 16998 b8317b0322fdb3035ec7afdebc9f288e ""
-  "img//ejemplos/P2clqm.pdf" 1748302639 16758 529ea695e89d1b3d6c76dd7eb92927cd ""
-  "img//ejemplos/P3clqm.pdf" 1748302639 15869 d56d0a62178736eb337fd468ba81c81d ""
-  "img//ejemplos/P4clqm.pdf" 1748302639 16586 0ec76f31a58287a64481badfebb63df5 ""
-  "img//ejemplos/P5clqm.pdf" 1748394310 17133 2aff4ee3fc8d36a2339f6184b3cff4b8 ""
   "img//ejemplos/concuinfodemon.pdf" 1752800564 21272 820d6165d7dd7a55dca1471b9f65befc ""
   "img//ejemplos/corre.pdf" 1744223320 83150 ab4843ba9371a2be6e332f4ae74bf3e7 ""
   "img//ejemplos/correminus.pdf" 1744225341 83174 ebb2ba24c3260c7b53425f881f68c43d ""
+  "img//ejemplos/currentinfosemi.pdf" 1752944898 16332 42386225dc89c761e8dfa00780410590 ""
   "img//ejemplos/diseño1.pdf" 1742403021 34307 d49f7823e1c3bad82e4966a9ee5d6d47 ""
   "img//ejemplos/diseño2.pdf" 1742403021 31852 8543a2bae1fabcd87502f5dff6151b62 ""
   "img//ejemplos/diseño3.pdf" 1742403021 29360 99a37a612d73dd9725161a58c6155841 ""
@@ -316,15 +312,17 @@
   "img//ejemplos/probas.png" 1744226205 81109 01abf6be36b4ddb840c9374ec3b1d3cb ""
   "img//ejemplos/quantumdemon.pdf" 1752445916 13730 b141974db2b57f5e3829f8f199048e45 ""
   "img//ejemplos/quantumtp.pdf" 1752354256 14458 a0460237e8561b7fcb54c5c1aeda74ce ""
+  "img//ejemplos/rho1004.pdf" 1753054930 18296 8a858b0797ee5d969d7fc6fe41be3e4f ""
+  "img//ejemplos/rho1014.pdf" 1753055192 16996 5bcdbd5e58854db00b5dda2dfb0e37f3 ""
   "img//ejemplos/semilocal1.png" 1741655937 28282 da18a6e864e5fa1de5d2fd07af08a6f1 ""
   "img//ejemplos/thermoquantitiesdemon.pdf" 1752548301 20340 e89a42cf37ed6c99ff68659ca75ca39e ""
   "img//ejemplos/thermoquantum.pdf" 1752800564 20082 749ca37f9416af67c8526814123a3c14 ""
   "img//ejemplos/worktp.pdf" 1752354307 12342 fe51ddb2748b35fc482ea538d1ebc988 ""
-  "main.aux" 1752942824 57378 1e071d34a17ae8e134cdc462c2188019 "pdflatex"
-  "main.bbl" 1752942190 9223 c11607c5f72cf33df5502bd1e52ffec4 "bibtex main"
-  "main.lof" 1752942824 6071 63cfe24b0ab6dd6d9da317dddae286a6 "pdflatex"
+  "main.aux" 1753066733 58276 13d33ad5159a7982a526bfe304e53e4b "pdflatex"
+  "main.bbl" 1753066729 9223 c11607c5f72cf33df5502bd1e52ffec4 "bibtex main"
+  "main.lof" 1753066733 6417 0b2100a5f02b468f3d8c7fd7f74a1ae8 "pdflatex"
   "main.tex" 1750989841 4211 c83393d113418d533ca0346997ca179f ""
-  "main.toc" 1752942824 5446 ca6627ba8e54a6fff5f68105d6f2d79c "pdflatex"
+  "main.toc" 1753066733 5446 07bbd29735b578fcc99844030c997089 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
