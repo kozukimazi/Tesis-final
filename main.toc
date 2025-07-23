@@ -1,58 +1,58 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{Introducción}{1}{chapter*.10}%
-\contentsline {chapter}{\numberline {1}Sistemas cuánticos abiertos}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Sistemas cuánticos cerrados}{2}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Cuadro de interacción}{2}{subsection.1.1.1}%
-\contentsline {section}{\numberline {1.2}Ecuación de Lindblad}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Dinámica de un sistema abierto}{3}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Ecuación maestra}{3}{subsection.1.2.2}%
-\contentsline {chapter}{\numberline {2}Estadística de conteo(\textit {Full Counting Statistics}) }{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Cantidades termodinámicas}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Leyes de la termodinámica}{9}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Ley cero}{9}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Primera Ley}{9}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Segunda Ley}{9}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Estadística de medición en dos puntos}{10}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Formalismo de Superoperadores y Espacio de Liouville}{12}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Ecuación maestra generalizada}{14}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Resolución finita de energía}{15}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Agrupación de frecuencias}{16}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}Consistencia termodinámica}{18}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Ley cero}{18}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Segunda ley}{19}{subsection.2.6.2}%
-\contentsline {chapter}{\numberline {3}Flujos de información}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Demonio de Maxwell}{20}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Demonio de Maxwell autónomo}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Descripción clásica}{22}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Segunda ley de la termodinámica y flujos de información}{23}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Descripción cuántica}{26}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Flujos de información en contexto cuántico}{28}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Modelo teórico}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Estudio del transporte}{35}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Demonio de Maxwell en 3 puntos cuánticos}{39}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Comparación con caso clásico}{49}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{53}{chapter.5}%
-\contentsline {chapter}{Bibliografía}{54}{chapter*.33}%
-\contentsline {chapter}{Anexos}{57}{appendix*.35}%
-\contentsline {section}{\numberline {A}Cálculos realizados sección 3}{57}{section.Alph0.1}%
-\contentsline {subsection}{\numberline {A.1}Matriz densidad en función del campo de conteo}{57}{subsection.Alph0.1.1}%
-\contentsline {subsection}{\numberline {A.2}Matriz densidad generalizada}{58}{subsection.Alph0.1.2}%
-\contentsline {subsection}{\numberline {A.3}Funciones correlación}{61}{subsection.Alph0.1.3}%
-\contentsline {subsection}{\numberline {A.4}Ecuación de Lindblad generalizada}{63}{subsection.Alph0.1.4}%
-\contentsline {subsection}{\numberline {A.5}Condición KMS y funciones correlación espectral}{64}{subsection.Alph0.1.5}%
-\contentsline {subsection}{\numberline {A.6}Redefinición leyes de la termodinámica}{65}{subsection.Alph0.1.6}%
-\contentsline {subsection}{\numberline {A.7}Segunda Ley}{66}{subsection.Alph0.1.7}%
-\contentsline {section}{\numberline {B}Cálculos realizados sección 4}{67}{section.Alph0.2}%
-\contentsline {subsection}{\numberline {B.1}Producción de entropía y información}{67}{subsection.Alph0.2.1}%
-\contentsline {section}{\numberline {C}Cálculos realizados seccion 5}{69}{section.Alph0.3}%
-\contentsline {subsection}{\numberline {C.1}Funciones de correlación para un baño de fermiones libres}{69}{subsection.Alph0.3.1}%
-\contentsline {subsection}{\numberline {C.2} Operadores de salto de sistema de 3 puntos cuánticos}{69}{subsection.Alph0.3.2}%
-\contentsline {subsection}{\numberline {C.3}Agrupación de frecuencias para 2 puntos cuánticos}{72}{subsection.Alph0.3.3}%
-\contentsline {subsection}{\numberline {C.4}Límitaciones de la aproximación semilocal}{74}{subsection.Alph0.3.4}%
-\contentsline {subsection}{\numberline {C.5}Aspecto Markoviano de las funciones correlación }{75}{subsection.Alph0.3.5}%
-\contentsline {subsection}{\numberline {C.6}Cálculo numérico para $\tau _{Bf}$}{78}{subsection.Alph0.3.6}%
-\contentsline {subsection}{\numberline {C.7}Concurrencia}{82}{subsection.Alph0.3.7}%
-\contentsline {subsection}{\numberline {C.8}Modelo clásico}{83}{subsection.Alph0.3.8}%
-\contentsline {subsection}{\numberline {C.9} Inverso de Drazin }{85}{subsection.Alph0.3.9}%
-\contentsline {subsection}{\numberline {C.10}Expresión para los flujos de información}{86}{subsection.Alph0.3.10}%
+\contentsline {chapter}{\numberline {1}Sistemas cuánticos abiertos}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sistemas cuánticos cerrados}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Cuadro de interacción}{3}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Ecuación de Lindblad}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Dinámica de un sistema abierto}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Ecuación maestra}{4}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Estadística de conteo(\textit {Full Counting Statistics}) }{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cantidades termodinámicas}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Leyes de la termodinámica}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Ley cero}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Primera Ley}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Segunda Ley}{10}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Estadística de medición en dos puntos}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Formalismo de Superoperadores y Espacio de Liouville}{13}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Ecuación maestra generalizada}{15}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Resolución finita de energía}{16}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Agrupación de frecuencias}{17}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Consistencia termodinámica}{19}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Ley cero}{19}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Segunda ley}{20}{subsection.2.6.2}%
+\contentsline {chapter}{\numberline {3}Flujos de información}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Demonio de Maxwell}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Demonio de Maxwell autónomo}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Descripción clásica}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Segunda ley de la termodinámica y flujos de información}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Descripción cuántica}{27}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Flujos de información en contexto cuántico}{29}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Modelo teórico}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Estudio del transporte}{36}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Demonio de Maxwell en 3 puntos cuánticos}{40}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Comparación con caso clásico}{50}{section.4.4}%
+\contentsline {chapter}{Conclusiones}{54}{chapter*.34}%
+\contentsline {chapter}{Bibliografía}{55}{chapter*.35}%
+\contentsline {chapter}{Anexos}{59}{appendix*.37}%
+\contentsline {section}{\numberline {A}Cálculos realizados sección 3}{59}{section.Alph0.1}%
+\contentsline {subsection}{\numberline {A.1}Matriz densidad en función del campo de conteo}{59}{subsection.Alph0.1.1}%
+\contentsline {subsection}{\numberline {A.2}Matriz densidad generalizada}{60}{subsection.Alph0.1.2}%
+\contentsline {subsection}{\numberline {A.3}Funciones correlación}{63}{subsection.Alph0.1.3}%
+\contentsline {subsection}{\numberline {A.4}Ecuación de Lindblad generalizada}{65}{subsection.Alph0.1.4}%
+\contentsline {subsection}{\numberline {A.5}Condición KMS y funciones correlación espectral}{66}{subsection.Alph0.1.5}%
+\contentsline {subsection}{\numberline {A.6}Redefinición leyes de la termodinámica}{67}{subsection.Alph0.1.6}%
+\contentsline {subsection}{\numberline {A.7}Segunda Ley}{68}{subsection.Alph0.1.7}%
+\contentsline {section}{\numberline {B}Cálculos realizados sección 4}{69}{section.Alph0.2}%
+\contentsline {subsection}{\numberline {B.1}Producción de entropía y información}{69}{subsection.Alph0.2.1}%
+\contentsline {section}{\numberline {C}Cálculos realizados seccion 5}{71}{section.Alph0.3}%
+\contentsline {subsection}{\numberline {C.1}Funciones de correlación para un baño de fermiones libres}{71}{subsection.Alph0.3.1}%
+\contentsline {subsection}{\numberline {C.2} Operadores de salto de sistema de 3 puntos cuánticos}{71}{subsection.Alph0.3.2}%
+\contentsline {subsection}{\numberline {C.3}Agrupación de frecuencias para 2 puntos cuánticos}{74}{subsection.Alph0.3.3}%
+\contentsline {subsection}{\numberline {C.4}Límitaciones de la aproximación semilocal}{76}{subsection.Alph0.3.4}%
+\contentsline {subsection}{\numberline {C.5}Aspecto Markoviano de las funciones correlación }{77}{subsection.Alph0.3.5}%
+\contentsline {subsection}{\numberline {C.6}Cálculo numérico para $\tau _{Bf}$}{80}{subsection.Alph0.3.6}%
+\contentsline {subsection}{\numberline {C.7}Concurrencia}{84}{subsection.Alph0.3.7}%
+\contentsline {subsection}{\numberline {C.8}Modelo clásico}{85}{subsection.Alph0.3.8}%
+\contentsline {subsection}{\numberline {C.9} Inverso de Drazin }{87}{subsection.Alph0.3.9}%
+\contentsline {subsection}{\numberline {C.10}Expresión para los flujos de información}{88}{subsection.Alph0.3.10}%
