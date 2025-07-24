@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1753237033 "main.aux" "main.bbl" "main" 1753237131 0
+["bibtex main"] 1753320654 "main.aux" "main.bbl" "main" 1753321277 0
   "./library.bib" 1753216565 16766 f809ef0446bab3b08a47675431ccd55b ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1753237130 59674 806f23efcd17d97fcf64f6fc91bd7c25 "pdflatex"
+  "main.aux" 1753321276 59811 eb59c3b39e633b617bebb9169873cb59 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1753237127 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1753237131 0
+["pdflatex"] 1753321274 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1753321277 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -290,7 +290,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
   "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1753229245 4221 abca78fc79d665ab912fa308f9564a05 ""
-  "example.tex" 1753237127 223728 f81bc66f2175ec785105a445e597e54d ""
+  "example.tex" 1753321273 228641 3c627ed44567a2d34a31e52e3f0cc666 ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/concuinfodemon.pdf" 1752800564 21272 820d6165d7dd7a55dca1471b9f65befc ""
@@ -318,11 +318,11 @@
   "img//ejemplos/thermoquantitiesdemon.pdf" 1753148923 20277 1da03462d373e9d28416bbe0dc1f0f5e ""
   "img//ejemplos/thermoquantum.pdf" 1752800564 20082 749ca37f9416af67c8526814123a3c14 ""
   "img//ejemplos/worktp.pdf" 1752354307 12342 fe51ddb2748b35fc482ea538d1ebc988 ""
-  "main.aux" 1753237130 59674 806f23efcd17d97fcf64f6fc91bd7c25 "pdflatex"
-  "main.bbl" 1753237033 13661 61672650961ead175e8e7326420687c4 "bibtex main"
-  "main.lof" 1753237130 6378 9b22cebb73b8391d517859a207fa4f7b "pdflatex"
+  "main.aux" 1753321276 59811 eb59c3b39e633b617bebb9169873cb59 "pdflatex"
+  "main.bbl" 1753320655 13661 61672650961ead175e8e7326420687c4 "bibtex main"
+  "main.lof" 1753321276 6378 9b22cebb73b8391d517859a207fa4f7b "pdflatex"
   "main.tex" 1753229245 4221 abca78fc79d665ab912fa308f9564a05 ""
-  "main.toc" 1753237130 5424 dd6829cd7cf618905b38e653db42368e "pdflatex"
+  "main.toc" 1753321276 5398 91e0d30b5b0adf3881bd98e5b932fc79 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
