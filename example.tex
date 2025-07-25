@@ -2316,73 +2316,76 @@ por lo tanto, el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $
 
 \label{apendix5límites}
 
-\subsection{Aspecto Markoviano de las funciones correlación }
-Para que el sistema descrito en la sección \ref{sec5:modelo} tenga un comportamiento cercano a un Demonio de Maxwell autónomo, se necesita que las razones de tuneleo $\gamma_{i}(\omega)$ modifiquen su respuesta dependiendo de si el punto cuántico del nivel $D$ este ocupado o desocupado. No todo comportamiento de la razón de tuneleo aseguran que el comportamiento del sistema sea Markoviano, esto se puede determinar calculando la función correlación del reservorio y analizando el orden del tiempo de correlación $\tau_{B}$ que presenta este mismo. Para poder lograr hacer esto se deben calcular las funciones correlación que para el caso de un ambiente fermiónico son de la forma
+\subsection{Aspecto Markoviano de las funciones correlación}
+Para que el sistema descrito en la sección \ref{sec5:modelo} exhiba un comportamiento análogo al de un Demonio de Maxwell autónomo, es necesario que las tasas de túnel $\gamma_{i}(\omega)$ respondan de manera diferenciada dependiendo de si el sitio $D$ se encuentra ocupado o desocupado. Sin embargo, no toda dependencia funcional de $\gamma_{i}(\omega)$ garantiza un comportamiento Markoviano del sistema. Esta condición puede evaluarse mediante el cálculo explícito de las funciones de correlación del reservorio, ya que el carácter Markoviano se encuentra fuertemente ligado al tiempo de correlación característico del entorno, denotado por $\tau_{B}$. Para analizar este aspecto, se requiere calcular las funciones de correlación correspondientes a un entorno fermiónico, las cuales, en general, adoptan la forma
 
 \begin{equation*}
     C^{\sigma}(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t} \gamma(\omega) f_{F}(\sigma \beta(\omega-\mu)),
 \end{equation*}
-en donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. La distribución de Fermi puede ser aproximada utilizando aproximantes de Padé \cite{hu2011pade,schinabeck2019hierarchical}. Esto permite escribir la distribución como sumatoria
+donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. 
+
+La distribución de Fermi puede ser aproximada mediante desarrollos de Padé \cite{hu2011pade,schinabeck2019hierarchical}, lo que permite expresarla como una sumatoria 
 
 \begin{equation}
     f_{F}(x) \approx \frac{1}{2} - \sum_{l=0}^{N} \frac{ 2 \kappa_{l}x }{ x^{2} + \xi^{2}_{l} },
     \label{apendix5:pade}
 \end{equation}
-los coeficientes $\kappa_{l}$ y $\xi_{l}$ se pueden calcular numéricamente y se encuentran en \cite{hu2011pade}. Para poder calcular numéricamente la función correlación, se necesita una forma explícita para $\gamma(\omega)$ el cuál tiene que tener un máximo en alguna frecuencia $\epsilon_{0}$. Se puede elegir un comportamiento lorentziano de la forma
+los coeficientes $\kappa_{l}$ y $\xi_{l}$ pueden ser calculados numéricamente y se encuentran tabulados en \cite{hu2011pade}. Para evaluar numéricamente la función de correlación, es necesario especificar una forma explícita para $\gamma(\omega)$, la cual debe presentar un máximo en cierta frecuencia característica $\epsilon_{0}$. Una elección común consiste en considerar un perfil lorentziano dado por
 
 \begin{equation*}
     \gamma(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}},
 \end{equation*}
-con $W$ el ancho de la lorentziana y $\gamma_{0}$, $\gamma_{f}$ constantes. Para el estudio del Demonio de Maxwell hay dos casos importantes que hay que diferenciar, es decir cuándo el punto cuántico $D$ esta desocupado o ocupado, lo que se traduce en evaluar las razones de tuneleo en dos frecuencias $\epsilon_{0}$ y $\epsilon_{0}+U$ como aparece en la Figura \ref{img:gammas}
+donde $W$ representa el ancho de la lorentziana, $\gamma_{0}$ y $\gamma_{f}$ son constantes que controlan la amplitud. En el estudio del Demonio de Maxwell autónomo, es fundamental distinguir dos casos relevantes: cuando el punto cuántico $D$ se encuentra desocupado o bien ocupado. Esta distinción se refleja en la evaluación de las tasas de túnel en dos frecuencias distintas, $\epsilon_{0}$ y $\epsilon_{0} + U$, tal como se ilustra en la Figura \ref{img:gammas}.
 
-\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.65}{Descripción gráfica de las razones de tuneleo en función de las frecuencias $\omega$.}
+\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.65}{Tasas de túnel en función de las frecuencias $\omega$.}
 
-Para obtener razones de tuneleo que cumplan estos valores, se puede realizar el sistema de ecuaciones 
+Para obtener tasas de túnel que satisfagan dichas condiciones, se puede plantear el siguiente sistema de ecuaciones 
 
 \begin{align*}
     \gamma(\epsilon_{0}) & = \gamma_{0} + \gamma_{f} \\
     \gamma(\epsilon_{0} + U) & = \gamma_{0} + \frac{\gamma_{f} W^{2} }{U^{2} + W^{2}}.
 \end{align*}
 
-Con estas igualdades se pueden determinar los valores de $\gamma_{0}$, $\gamma_{f}$ y $W$. Reemplazando $\gamma(\omega)$ en la función correlación se tendrá
+A partir de estas igualdades, es posible determinar los parámetros $\gamma_{0}$, $\gamma_{f}$ y $W$. Sustituyendo la expresión de $\gamma(\omega)$ en la función de correlación, se obtiene
 
 \begin{align*}
     C^{\sigma}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
 \end{align*}
-la función correlación se puede separar en dos partes
+la función de correlación puede descomponerse en dos contribuciones
 
 \begin{equation*}
     C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
 \end{equation*}
-y podremos determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0},\tau_{Bf}\}$. Se partirá calculando una expresión analítica aproximada de la función correlación $C^{\sigma}_{f}(t)$, para realizar este integral se deberá localizar los polos en el plano complejo, para ello notemos que para \ref{apendix5:pade} los polos se ubican en $\omega = \pm i \xi_{l}/\beta + \mu $. Mientras que para la Lorentziana los polos se ubican en $\omega = \pm i W + \omega_{0}$. Para poder realizar este integral se usará el teorema del residuo \cite{riley2006mathematical}, tomando como zona de integración un semicírculo en el hemisferio positivo o negativo dependiendo del signo de $\sigma$. Primero el residuo de la Lorentziana consiste en 
+y se podrá determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0}, \tau_{Bf}\}$. Se comenzará calculando una expresión analítica aproximada para la función de correlación $C^{\sigma}_{f}(t)$. Para resolver esta integral, será necesario localizar los polos en el plano complejo. Según \ref{apendix5:pade}, los polos asociados a la aproximación de Padé se encuentran en $\omega = \pm i \xi_{l}/\beta + \mu$, mientras que los polos correspondientes a la forma Lorentziana se ubican en $\omega = \pm i W + \omega_{0}$. Para realizar esta integración, se utilizará el teorema del residuo \cite{riley2006mathematical}, considerando un contorno de integración en forma de semicírculo en el hemisferio superior o inferior del plano complejo, dependiendo del signo de $\sigma$. El residuo asociado a la Lorentziana es
 
 \begin{align*}
    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\omega_{0}-\mu)]e^{i\sigma \omega_{0}t}). 
 \end{align*}
 
-Si se cumple que $\sigma > 0$ se toma el hemisferio inferior para la integración, mientras que para $\sigma<0$ se toma el hemosferio superior, para así obtener 
+Si se cumple que $\sigma > 0$, se toma como contorno de integración el hemisferio inferior del plano complejo; en cambio, si $\sigma < 0$, se considera el hemisferio superior. De esta manera, se obtiene
 
 \begin{align*}
-    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \omega_{0}t}e^{- Wt} f_{F}[i\beta W + \sigma \beta(\omega_{0}-\mu)]), 
+    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \omega_{0}t}e^{- Wt} f_{F}[i\beta W + \sigma \beta(\omega_{0}-\mu)]). 
  \end{align*}
-para encontrar el residuo de los polos restantes, deberemos calcular 
+
+Para encontrar el residuo asociado a los polos restantes, se deberá calcular
 
 \begin{align*}
     \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm \kappa_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } ,
 \end{align*}
-eligiendo la zona de integración dependiendo del signo de $\sigma$ obtendremos que 
+seleccionando la región de integración en función del signo de $\sigma$, se concluye que
 
 \begin{align*}
     \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{ \xi_{l}}{\beta}t} e^{i\sigma \mu t} \kappa_{l} }{ [ \frac{ \sigma i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} }. 
 \end{align*}
 
-Encontrando los residuos explícitamente se podrá escribir la función correlación como
+Al encontrar los residuos explícitamente, estos se podrán usar para escribir la función correlación 
 
 \begin{equation}
     C^{\sigma}_{f}(t) \approx \sum_{l=0}^{N} \eta^{\sigma,l} e^{-\gamma_{\sigma,l} t},
     \label{correlationf}
 \end{equation}
-en donde 
+donde 
 
 \begin{equation*}
     \eta^{\sigma,l} = \left\{ \begin{array}{lc} \frac{\gamma_{f}W}{2} f_{F}[i\beta W + \sigma \beta (\omega_{0}-\mu)]  & l = 0 \\ \\ - \frac{i\kappa_{l}}{\beta} \left(\frac{\gamma_{f}W^{2}}{ (\frac{i\sigma \xi_{l}}{\beta} + (\mu-\omega_{0}))^{2} + W^{2} } \right) &  l \neq 0 \end{array} \right.
@@ -2392,13 +2395,25 @@ en donde
     \gamma_{\sigma,l} =  \left\{ \begin{array}{lc} W- \sigma i \omega_{0}  & l = 0 \\ \\ \frac{\xi_{l}}{\beta} - \sigma i \mu &  l \neq 0 \end{array} \right..
 \end{equation*}
 
-Esto permite una expresión numérica para la función correlación $C^{\sigma}_{f}(t)$ y así evaluar su tiempo de correlación $\tau_{Bf}$. Para la otra función correlación se podrá encontrar el integral de manera analítica, es decir calcular
+Esto permite obtener una expresión numérica para la función de correlación $C^{\sigma}_{f}(t)$, y con ello evaluar su tiempo de correlación característico, $\tau_{Bf}$. Por otro lado, para la otra función de correlación es posible calcular la integral de forma analítica, es decir, evaluar
 
 \begin{align*}
        C_{0}^{\sigma}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t }f_{F}(\sigma \beta (\omega -  \mu)).
 \end{align*}    
 
-Se puede partir notando que esto consiste en calcular la Transformada de Fourier de $\mathcal{F}(f[\sigma (\omega - \mu)])(-\sigma t)$ de la función $f(\sigma(\omega-\mu))= f_{F}(\sigma \beta (\omega-\mu) )$, utilizando la propiedad
+Se puede comenzar observando que este cálculo equivale a obtener la transformada de Fourier 
+
+\[
+\mathcal{F}\big(f[\sigma (\omega - \mu)]\big)(-\sigma t),
+\]
+
+de la función 
+
+\[
+f(\sigma(\omega-\mu)) = f_{F}(\sigma \beta (\omega-\mu)),
+\]
+
+empleando la propiedad
 
 \begin{equation*}
 \mathcal{F}(f[\sigma (\omega - \mu)])(-\sigma t) = e^{-i \sigma \mu t}\mathcal{F}(f[\sigma \omega])(-\sigma t),
@@ -2410,17 +2425,27 @@ es decir, podemos centrarnos en calcular la transformación
         & = \frac{\gamma_{0}}{4\pi} \left[\int_{-\infty}^{\infty}d \omega e^{i\sigma \omega t} - \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} \tanh \left(\frac{ \sigma \beta \omega }{2} \right)   \right] \\
         & =  \frac{\gamma_{0}}{2} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right],
 \end{align*}
-y así finalmente
+así
 
 \begin{equation*}
     C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right].
 \end{equation*}
 
-Gracias a que se tiene una expresión analítica para $C^{\sigma}_{0}(t)$ se puede determinar el $\tau_{B0}$. Se debe concentrar principalmente en la parte con $\sinh(\pi t/\beta \sigma)$ debido a que $\sigma=\pm 1$ sólo nos interesa analizar la cantidad $\pi t/\beta$, ya que para tiempos $t > \beta$ se podrá considerar que $1/\sinh(\pi t/\beta \sigma) \propto \exp(-t/\beta)$, por lo tanto para está función correlación el tiempo de correlación del baño consiste en el inverso de la temperatura $\tau_{B0} = \beta$. Con esto finalmente se podrá obtener el tiempo de correlación asociado a un sólo reservorio como $\tau_{B} = \max \{\beta,\tau_{Bf} \}$.  
+Gracias a que se dispone de una expresión analítica para $C^{\sigma}_{0}(t)$, es posible determinar el tiempo de correlación $\tau_{B0}$. El análisis se centra principalmente en el término que involucra $\sinh(\pi t/\beta \sigma)$, ya que, dado que $\sigma = \pm 1$, el parámetro relevante es $\pi t/\beta$. Para tiempos $t > \beta$, se puede aproximar que 
+
+\[
+\frac{1}{\sinh(\pi t/\beta \sigma)} \propto e^{-t/\beta},
+\]
+
+lo que implica que el tiempo de correlación del baño está dado por el inverso de la temperatura, es decir, $\tau_{B0} = \beta$. Por consiguiente, el tiempo de correlación efectivo asociado a un único reservorio queda definido como
+
+\[
+\tau_{B} = \max \{\beta, \tau_{Bf}\}.
+\]
 
 \label{appendix5correlation}
 
-\subsection{Cálculo numérico para $\tau_{Bf}$}
+\subsection{Cálculo numérico para los tiempos de correlación}
 Para poder calcular los tiempos de correlación $\tau_{Bf}$ correspondiente a los baños $L$ y $R$ se podrá usar la expresión \ref{correlationf}. Para poder determinar este $\tau_{Bf}$ se busca el punto en que la función correlación se anula, y luego para poder determinar si sigue un comportamiento markoviano se debe tener que $\tau_{R}\gg \tau_{Bf}$, con esto dicho se procede a calcular las partes imaginarias y reales de las funciones correlación correspondientes a los baños $L$ y $R$ 
 
 \insertimage[\label{img:correlacion}]{ejemplos/corre.pdf}{scale=0.7}{Gráficos de la parte real e imaginaria de las funciones correlación en función del tiempo para los baños $L$ y $R$ con una diferencia de potencial correspondiente a $eV=20$ y $\sigma=+$.}

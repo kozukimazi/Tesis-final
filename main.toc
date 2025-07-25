@@ -50,9 +50,9 @@
 \contentsline {subsection}{\numberline {C.2} Operadores de salto de sistema de 3 puntos cuánticos}{72}{subsection.Alph0.3.2}%
 \contentsline {subsection}{\numberline {C.3}Agrupación de frecuencias para 2 puntos cuánticos}{74}{subsection.Alph0.3.3}%
 \contentsline {subsection}{\numberline {C.4}Límitaciones de la aproximación semilocal}{77}{subsection.Alph0.3.4}%
-\contentsline {subsection}{\numberline {C.5}Aspecto Markoviano de las funciones correlación }{77}{subsection.Alph0.3.5}%
-\contentsline {subsection}{\numberline {C.6}Cálculo numérico para $\tau _{Bf}$}{80}{subsection.Alph0.3.6}%
-\contentsline {subsection}{\numberline {C.7}Concurrencia}{84}{subsection.Alph0.3.7}%
-\contentsline {subsection}{\numberline {C.8}Modelo clásico}{85}{subsection.Alph0.3.8}%
-\contentsline {subsection}{\numberline {C.9} Inverso de Drazin }{87}{subsection.Alph0.3.9}%
-\contentsline {subsection}{\numberline {C.10}Expresión para los flujos de información}{88}{subsection.Alph0.3.10}%
+\contentsline {subsection}{\numberline {C.5}Aspecto Markoviano de las funciones correlación}{77}{subsection.Alph0.3.5}%
+\contentsline {subsection}{\numberline {C.6}Cálculo numérico para los tiempos de correlación}{81}{subsection.Alph0.3.6}%
+\contentsline {subsection}{\numberline {C.7}Concurrencia}{85}{subsection.Alph0.3.7}%
+\contentsline {subsection}{\numberline {C.8}Modelo clásico}{86}{subsection.Alph0.3.8}%
+\contentsline {subsection}{\numberline {C.9} Inverso de Drazin }{88}{subsection.Alph0.3.9}%
+\contentsline {subsection}{\numberline {C.10}Expresión para los flujos de información}{89}{subsection.Alph0.3.10}%
