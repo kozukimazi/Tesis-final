@@ -2320,9 +2320,9 @@ por lo tanto, el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $
 Para que el sistema descrito en la sección \ref{sec5:modelo} exhiba un comportamiento análogo al de un Demonio de Maxwell autónomo, es necesario que las tasas de túnel $\gamma_{i}(\omega)$ respondan de manera diferenciada dependiendo de si el sitio $D$ se encuentra ocupado o desocupado. Sin embargo, no toda dependencia funcional de $\gamma_{i}(\omega)$ garantiza un comportamiento Markoviano del sistema. Esta condición puede evaluarse mediante el cálculo explícito de las funciones de correlación del reservorio, ya que el carácter Markoviano se encuentra fuertemente ligado al tiempo de correlación característico del entorno, denotado por $\tau_{B}$. Para analizar este aspecto, se requiere calcular las funciones de correlación correspondientes a un entorno fermiónico, las cuales, en general, adoptan la forma
 
 \begin{equation*}
-    C^{\sigma}(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t} \gamma(\omega) f_{F}(\sigma \beta(\omega-\mu)),
+    C^{\sigma}_{i}(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t} \gamma_{i}(\omega) f_{F}(\sigma \beta(\omega-\mu)),
 \end{equation*}
-donde $f_{F}(x) = (\exp(x)+1)^{-1}$ y $\sigma = \pm$. 
+donde $f_{F}(x) = (\exp(x)+1)^{-1}$, $i= L,R$ y $\sigma = \pm$. 
 
 La distribución de Fermi puede ser aproximada mediante desarrollos de Padé \cite{hu2011pade,schinabeck2019hierarchical}, lo que permite expresarla como una sumatoria 
 
@@ -2330,26 +2330,26 @@ La distribución de Fermi puede ser aproximada mediante desarrollos de Padé \ci
     f_{F}(x) \approx \frac{1}{2} - \sum_{l=0}^{N} \frac{ 2 \kappa_{l}x }{ x^{2} + \xi^{2}_{l} },
     \label{apendix5:pade}
 \end{equation}
-los coeficientes $\kappa_{l}$ y $\xi_{l}$ pueden ser calculados numéricamente y se encuentran tabulados en \cite{hu2011pade}. Para evaluar numéricamente la función de correlación, es necesario especificar una forma explícita para $\gamma(\omega)$, la cual debe presentar un máximo en cierta frecuencia característica $\epsilon_{0}$. Una elección común consiste en considerar un perfil lorentziano dado por
+los coeficientes $\kappa_{l}$ y $\xi_{l}$ pueden ser calculados numéricamente y se encuentran tabulados en \cite{hu2011pade}. Para evaluar numéricamente la función de correlación, es necesario especificar una forma explícita para $\gamma_{i}(\omega)$, la cual debe presentar un máximo en cierta frecuencia característica $\epsilon_{0}$. Una elección común consiste en considerar un perfil lorentziano dado por
 
 \begin{equation*}
-    \gamma(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}},
+    \gamma_{i}(\omega) = \gamma_{0} + \frac{\gamma_{f} W^{2}}{(\omega - \epsilon_{0})^{2} + W^{2}},
 \end{equation*}
-donde $W$ representa el ancho de la lorentziana, $\gamma_{0}$ y $\gamma_{f}$ son constantes que controlan la amplitud. En el estudio del Demonio de Maxwell autónomo, es fundamental distinguir dos casos relevantes: cuando el punto cuántico $D$ se encuentra desocupado o bien ocupado. Esta distinción se refleja en la evaluación de las tasas de túnel en dos frecuencias distintas, $\epsilon_{0}$ y $\epsilon_{0} + U$, tal como se ilustra en la Figura \ref{img:gammas}.
+donde $W$ representa el ancho de la lorentziana, $\gamma_{0}$ y $\gamma_{f}$ son constantes que controlan la amplitud. En el estudio del Demonio de Maxwell autónomo, es fundamental distinguir dos casos relevantes: cuando el punto cuántico $D$ se encuentra desocupado o bien ocupado. Esta distinción se refleja en la evaluación de las tasas de túnel en dos frecuencias distintas, $\epsilon_{0}$ y $\epsilon_{0} + U$, tal como se ilustra en la Figura \ref{img:gammas} para las tasas de túnel correspondientes a los baños $L$ y $R$.
 
 \insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.65}{Tasas de túnel en función de las frecuencias $\omega$.}
 
 Para obtener tasas de túnel que satisfagan dichas condiciones, se puede plantear el siguiente sistema de ecuaciones 
 
 \begin{align*}
-    \gamma(\epsilon_{0}) & = \gamma_{0} + \gamma_{f} \\
-    \gamma(\epsilon_{0} + U) & = \gamma_{0} + \frac{\gamma_{f} W^{2} }{U^{2} + W^{2}}.
+    \gamma_{i}(\epsilon_{0}) & = \gamma_{0} + \gamma_{f} \\
+    \gamma_{i}(\epsilon_{0} + U) & = \gamma_{0} + \frac{\gamma_{f} W^{2} }{U^{2} + W^{2}}.
 \end{align*}
 
-A partir de estas igualdades, es posible determinar los parámetros $\gamma_{0}$, $\gamma_{f}$ y $W$. Sustituyendo la expresión de $\gamma(\omega)$ en la función de correlación, se obtiene
+A partir de estas igualdades, es posible determinar los parámetros $\gamma_{0}$, $\gamma_{f}$ y $W$. Sustituyendo la expresión de $\gamma_{i}(\omega)$ en la función de correlación, se obtiene
 
 \begin{align*}
-    C^{\sigma}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
+    C^{\sigma}_{i}(t) & = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\gamma_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
 \end{align*}
 la función de correlación puede descomponerse en dos contribuciones
 
@@ -2446,7 +2446,9 @@ lo que implica que el tiempo de correlación del baño está dado por el inverso
 \label{appendix5correlation}
 
 \subsection{Cálculo numérico para los tiempos de correlación}
-Para poder calcular los tiempos de correlación $\tau_{Bf}$ correspondiente a los baños $L$ y $R$ se podrá usar la expresión \ref{correlationf}. Para poder determinar este $\tau_{Bf}$ se busca el punto en que la función correlación se anula, y luego para poder determinar si sigue un comportamiento markoviano se debe tener que $\tau_{R}\gg \tau_{Bf}$, con esto dicho se procede a calcular las partes imaginarias y reales de las funciones correlación correspondientes a los baños $L$ y $R$ 
+Dado que es posible reconstruir las tasas de túnel $\gamma_{L}(\omega)$ y $\gamma_{R}(\omega)$ mediante una función de tipo Lorentziana, cumpliendo las condiciones $\gamma_{L}(\epsilon) = \gamma_{R}(\epsilon+U) = 1/100$ y $\gamma_{L}(\epsilon+U) = \gamma_{R}(\epsilon) = 1/600$, se pueden calcular numéricamente las funciones correlación asociadas. 
+
+Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los baños $L$ y $R$, se utilizará la expresión \ref{correlationf} de las funciones correlación. La estimación de $\tau_{Bf}$ se realiza identificando el punto donde la función correlación se anula. Posteriormente, para evaluar si el comportamiento del sistema es efectivamente markoviano, se debe verificar que $\tau_{R} \gg \tau_{Bf}$. Con este criterio, se procede al cálculo de las partes real e imaginaria de las funciones de correlación correspondientes a los baños $L$ y $R$.
 
 \insertimage[\label{img:correlacion}]{ejemplos/corre.pdf}{scale=0.7}{Gráficos de la parte real e imaginaria de las funciones correlación en función del tiempo para los baños $L$ y $R$ con una diferencia de potencial correspondiente a $eV=20$ y $\sigma=+$.}
 \insertimage[\label{img:correlacionmin}]{ejemplos/correminus.pdf}{scale=0.7}{Gráficos de la parte real e imaginaria de las funciones correlación en función del tiempo para los baños $L$ y $R$ con una diferencia de potencial correspondiente a $eV=20$ y $\sigma=-$.}
