@@ -2450,27 +2450,39 @@ Dado que es posible reconstruir las tasas de túnel $\gamma_{L}(\omega)$ y $\gam
 
 Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los baños $L$ y $R$, se utilizará la expresión \ref{correlationf} de las funciones correlación. La estimación de $\tau_{Bf}$ se realiza identificando el punto donde la función correlación se anula. Posteriormente, para evaluar si el comportamiento del sistema es efectivamente markoviano, se debe verificar que $\tau_{R} \gg \tau_{Bf}$. Con este criterio, se procede al cálculo de las partes real e imaginaria de las funciones de correlación correspondientes a los baños $L$ y $R$.
 
-\insertimage[\label{img:correlacion}]{ejemplos/corre.pdf}{scale=0.7}{Gráficos de la parte real e imaginaria de las funciones correlación en función del tiempo para los baños $L$ y $R$ con una diferencia de potencial correspondiente a $eV=20$ y $\sigma=+$.}
-\insertimage[\label{img:correlacionmin}]{ejemplos/correminus.pdf}{scale=0.7}{Gráficos de la parte real e imaginaria de las funciones correlación en función del tiempo para los baños $L$ y $R$ con una diferencia de potencial correspondiente a $eV=20$ y $\sigma=-$.}
+\insertimage[\label{img:correlacionminus}]{ejemplos/cminusreal.pdf}{scale=0.5}{(a)Parte real de las funciones correlación $\sigma=-$ del baño $L$ en función del tiempo.(b) Parte real de las funciones correlación $\sigma=-$ del baño $R$ en función del tiempo.}
+\insertimage[\label{img:correlacionminusimag}]{ejemplos/cminusimag.pdf}{scale=0.5}{(a)Parte imaginaria de las funciones correlación $\sigma=-$ del baño $L$ en función del tiempo.(b) Parte imaginaria de las funciones correlación $\sigma=-$ del baño $R$ en función del tiempo.}
 
-De la Figura \ref{img:correlacion} y \ref{img:correlacionmin} se puede notar que para $t>0.4$ las funciones correlación para ambos baños ya son practicamente cero. Ahora para poder analizar la Markovianeidad, se puede graficar la evolución del sistema y ver en que tiempo las componentes de la matriz densidad relajan al estado estacionario. Para ello se grafica 
+\insertimage[\label{img:correlacionplus}]{ejemplos/cplusreal.pdf}{scale=0.5}{(a)Parte real de las funciones correlación $\sigma=+$ del baño $L$ en función del tiempo.(b) Parte real de las funciones correlación $\sigma=+$ del baño $R$ en función del tiempo.}
+\insertimage[\label{img:correlacionplusimag}]{ejemplos/cplusimag.pdf}{scale=0.5}{(a)Parte imaginaria de las funciones correlación $\sigma=+$ del baño $L$ en función del tiempo.(b) Parte imaginaria de las funciones correlación $\sigma=+$ del baño $R$ en función del tiempo.}
 
 
-\insertimage[\label{img:probas}]{ejemplos/probas.png}{scale=0.4}{Gráficos de las partes diagonales de la matriz densidad del sistema $LRD$ en función del tiempo.}
 
-Con la Figura \ref{img:probas} se puede visualizar que el tiempo de relajación del sistema es $\tau_{R}>1000$ y por lo tanto permite corrobar que con respecto a los tiempos $\tau_{Bf}$, se cumple que $\tau_{Bf}/\tau_{R} < 0.0004 $. Este análisis se probo para distintos valores de $eV$ los cuáles dieron valores similares para $\tau_{Bf}$ y el tiempo de relajación $\tau_{R}$. 
+A partir de las Figuras \ref{img:correlacionminus}, \ref{img:correlacionminusimag}, \ref{img:correlacionplus} y \ref{img:correlacionplusimag}, se observa que, para $t > 0.4$, las funciones de correlación correspondientes a ambos baños se anulan prácticamente. 
+
+Para analizar el carácter markoviano del sistema, se puede comparar este tiempo de correlación con la dinámica de relajación de la matriz densidad hacia el estado estacionario. Para ello, en la Figura \ref{img:probas} se grafica la evolución temporal de las componentes de la matriz densidad y se analiza el tiempo característico en que estas alcanzan su régimen estacionario.
+
+
+\insertimage[\label{img:probas}]{ejemplos/rhotiempo.pdf}{scale=0.56}{Componentes $\rho_{100}$ y $\rho_{010}$ de la matriz densidad en función del tiempo, para distintos valores de $eV/T$.}
+
+A partir de la Figura \ref{img:probas}, se observa que el tiempo de relajación del sistema es del orden de $\tau_{R} > 2000$. Esto permite corroborar que, para distintos valores de $eV/T$, se cumple la condición $\tau_{Bf}/\tau_{R} < 0.0002$. Lo que implica que es adecuado realizar la aproximación markoviana para las funciones correlación de los baños $L$ y $R$.
 
 \label{appendix5tauf}
 
 \newpage 
 
 \subsection{Concurrencia}
-En está sección se incluye la demostración de la fórmula de concurrencia. Para ello, se requiere calcular la concurrencia en el subsistema $\hat{\rho}_{LR}$, por lo tanto se tiene que partir calculando 
+En esta sección se presenta la demostración de la fórmula de la concurrencia. Para ello, se debe calcular la concurrencia en el subsistema $\hat{\rho}_{LR}$, lo que requiere, como primer paso, el cálculo de
 
 \begin{equation*}
-    \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{S}} \},
+    \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho_{S}} \}.
 \end{equation*}
-usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\}$, la matriz densidad del sistema queda
+
+Para escribir la matriz densidad $\hat{\rho}_{S}$, se utilizará la base  
+\[
+\left\{ |0,0,0\rangle,\ |1,0,0\rangle,\ |0,1,0\rangle,\ |0,0,1\rangle,\ |1,1,0\rangle,\ |1,0,1\rangle,\ |0,1,1\rangle,\ |1,1,1\rangle \right\}.
+\]
+En esta representación, la matriz densidad del sistema se expresa como
 
 \begin{equation}
     \hat{\rho}_{S} = 
@@ -2487,7 +2499,9 @@ usando la base $\{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1
         \label{appendix5rhoconcu}
 \end{equation}
 
-En esta matriz no aparecen coherencias entre estados con distinto número de partículas por el principio de superselección de carga \cite{bartlett2007reference,wick1997intrinsic}. Además debido a que el punto cuántico $D$ sólo interactua mediante interacción de Coulomb con los puntos $L$ y $R$, no aparecen coherencias del tipo $L-D$ y $R-D$. Así se puede obtener la matriz densidad del sistema $LR$ en la base $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle \}$
+En esta matriz densidad no se observan coherencias entre estados con distinto número total de partículas, lo cual se debe al principio de superselección de carga \cite{bartlett2007reference,wick1997intrinsic}. Además, dado que el punto cuántico $D$ sólo interactúa con los puntos $L$ y $R$ a través de una interacción de tipo Coulomb, no se generan coherencias del tipo $L$-$D$ ni $R$-$D$. 
+
+Es posible obtener la matriz densidad reducida del subsistema $LR$ al proyectar sobre la base  $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle\}$
 
 \begin{equation*}
     \hat{\rho}_{LR} = 
@@ -2498,17 +2512,18 @@ En esta matriz no aparecen coherencias entre estados con distinto número de par
         0 & 0 & 0 & \rho_{110} + \rho_{111} 
         \end{bmatrix},
 \end{equation*}
-así se podrá calcular la concurrencia 
+de este modo, se podrá calcular la concurrencia 
 
 \begin{equation*}
     \mathcal{C}_{on} = \max \{ 0,\lambda_{1} - \lambda_{2} - \lambda_{3} - \lambda_{4} \},
 \end{equation*}
-en donde $\lambda_{i}$ son la raíz cuadrada de los autovalores ordenados en forma decreciente de la matriz
+donde los $\lambda_{i}$ son la raíz cuadrada de los autovalores ordenados en forma decreciente, de la matriz dada por 
 
-\begin{equation*}
+\begin{equation}
     B = \hat{\rho}_{LR} \tilde{\rho}_{LR} \hspace{10mm} \tilde{\rho}_{LR} = (\sigma_{y} \otimes \sigma_{y}) \hat{\rho}_{LR} (\sigma_{y} \otimes \sigma_{y}),
-\end{equation*}
-en la cuál $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
+    \label{apendixconcu}
+\end{equation}
+en la cual $\sigma_{y}$ pertenece a las matrices de Pauli. Al aplicar \ref{apendixconcu} se obtiene 
 
 \begin{equation*}
     \tilde{\rho}_{LR} = 
@@ -2517,10 +2532,9 @@ en la cuál $\sigma_{y}$ pertenece a las matrices de Pauli, así se obtiene
         0 & p_{R} & \alpha + \beta & 0  \\
         0 & \alpha^{*} +\beta^{*} & p_{L} & 0  \\
         0 & 0 & 0 & p_{0} 
-        \end{bmatrix}.
+        \end{bmatrix},
 \end{equation*}
-
-Con  $p_{0}=\rho_{000}+\rho_{001}$, $p_{L}=\rho_{100} + \rho_{101}$, $p_{R}=\rho_{010}+\rho_{011}$, $p_{D}=\rho_{110}+\rho_{111}$ la matriz $B$ quedará
+con  $p_{0}=\rho_{000}+\rho_{001}$, $p_{L}=\rho_{100} + \rho_{101}$, $p_{R}=\rho_{010}+\rho_{011}$, $p_{D}=\rho_{110}+\rho_{111}$  y la matriz $B$ es
 
 \begin{equation*}
     B = 
@@ -2537,7 +2551,7 @@ Suponiendo que $p_{D}$ y $p_{0}$ son pequeños, el orden decreciente de los auto
 \begin{equation*}
     \lambda_{1} = p_{L}p_{R} + |\alpha + \beta| \hspace{10mm}  \lambda_{2} = p_{L}p_{R} - |\alpha + \beta| \hspace{10mm} \lambda_{3}=\lambda_{4} = \sqrt{p_{0}p_{D}},
 \end{equation*}
-finalmente se obtiene
+entonces se obtiene
 
 \begin{equation*}
     \mathcal{C}_{on} = \max\{ 2|\alpha+\beta| - 2\sqrt{p_{0}p_{D}},0\}.
@@ -2546,69 +2560,68 @@ finalmente se obtiene
 \label{appendix5final}
 
 \subsection{Modelo clásico}
-Para partir derivando el modelo clásico para las partes diagonales de la matriz densidad $\rho_{ijk}$ con $i,j,k \in \{0,1\}$, primero se notará que la ecuación de operadores
+Para comenzar con la derivación del modelo clásico que describe las componentes diagonales de la matriz densidad $\rho_{ijk}$, con $i,j,k \in {0,1}$, se parte considerando la ecuación de evolución para los operadores Nakajima-Zwanzig
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle \to \frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle - \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle ,
 \end{equation*}
-es equivalente a una ecuación no homogenea lineal de la forma
+que es equivalente a una ecuación no homogenea lineal de la forma
 
 \begin{equation*}
     \frac{dy}{dt} - A(t)y = B(t),
 \end{equation*}
-por lo tanto se puede solucionar utilizando factor integrante
+por lo tanto, se puede solucionar utilizando factor integrante
 
 \begin{equation*}
     \check{\mu}(t) = \exp\left( - \int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}ds \right),
 \end{equation*}
-multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$, se tendrá
+multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$, se obtiene 
 
 \begin{equation*}
     \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}|\hat{\rho}(t))\rangle \rangle = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle ,
 \end{equation*}
-así queda la solución
+con solución
 
 \begin{equation*}
     \check{\mu}(t)\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}(0)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \int_{0}^{t}\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau,   
 \end{equation*}
-multiplicando por $\check{\mu}^{-1}(t)$ 
+multiplicando por $\check{\mu}^{-1}(t)$ ambos lados de la ecuación, se obtiene
 
 \begin{equation*}
     \check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}^{-1}(t)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \int_{0}^{t}\check{\mu}^{-1}(t)\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau,    
 \end{equation*}
-para asi definir el operador
-
+luego, se define el operador 
 \begin{equation*}
     \check{\mathcal{G}}(t,s) = \exp\left(  \int_{s}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}dt' \right),
 \end{equation*}
-finalmente
+y queda la ecuación 
 
 \begin{equation*}
     \check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{G}}(t,0)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau.    
 \end{equation*}
 
-Podremos reinsertar esto en la parte principal y quedará
+Esto se puede reinsertar en la ecuación principal, obteniéndose así
 
 \begin{equation}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  = \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{G}}(t,0)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{L}}_{f}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau.    
     \label{apendix5exactp}
 \end{equation}
 
-Estas ecuaciones son exactas, ya que hasta ahora no se ha hecho ninguna aproximación. La primera parte del lado derecho de la ecuación \ref{apendix5exactp} consiste en la evolución markoviana, mientras que la segunda y  tercera parte corresponden a un corrimiento inicial y a los efectos de memoria respectivamente. Para seguir la deducción se utilizarán las relaciones
+Estas ecuaciones son exactas, ya que hasta este punto no se ha introducido ninguna aproximación. El primer término del lado derecho de la ecuación \ref{apendix5exactp} representa la evolución markoviana del sistema, mientras que el segundo y tercer término corresponden, respectivamente, a un corrimiento inicial y a los efectos de memoria inducidos por el acoplamiento con el entorno. Para continuar con la deducción, se utilizarán las siguientes relaciones
 
 \begin{equation*}
     \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{P}} = [\check{\mathcal{L}}_0,\check{\mathcal{P}}] = [\check{\mathcal{L}}_0,\check{\mathcal{Q}}] = 0, 
 \end{equation*}
-estas relaciones se pueden explicar intuitivamente, ya que al ser $\check{\mathcal{V}}$ la perturbación que genera el tuneleo entre los puntos $L$ y $R$, está contribución es la que produce efectos de coherencias. Así se puede notar que $\check{\mathcal{V}}\check{\mathcal{P}}\hat{\rho}$ es no diagonal y por lo tanto al aplicar nuevamente el operador que proyecta en la diagonal este se anula.
-\\
-Para seguir con \ref{apendix5exactp}, primero supondremos que inicialmente no hay coherencias, es decir $\check{\mathcal{Q}}\hat{\rho}(0) = 0$. Segundo se sustituirá $\check{\mathcal{L}}_{f}$ en la ecuación \ref{apendix5exactp} y se usarán las propiedades de los operadores Nakajima-Zwanzig, partiendo por el integral
+estas relaciones pueden entenderse de manera intuitiva; dado que $\check{\mathcal{V}}$ representa la perturbación responsable del túnel cuántico entre los puntos $L$ y $R$, su acción introduce coherencias en la matriz densidad. En particular, al aplicar $\check{\mathcal{V}}$ sobre un estado diagonal, se obtiene una componente no diagonal. Por lo tanto, al aplicar nuevamente el operador de proyección sobre la diagonal $\check{\mathcal{P}}$, esta contribución se anula, es decir $\check{\mathcal{P}} \check{\mathcal{V}} \check{\mathcal{P}} = 0$.
+
+Para continuar con el análisis de la ecuación \ref{apendix5exactp}, se harán dos suposiciones, en primer lugar, que el estado inicial no presenta coherencias, es decir, $\check{\mathcal{Q}}\hat{\rho}(0) = 0$; en segundo lugar, se sustituirá explícitamente el operador $\check{\mathcal{L}}_f$ en la ecuación \ref{apendix5exactp}. Con esto, se procederá a evaluar el término integral, utilizando las propiedades de los operadores de proyección de Nakajima-Zwanzig, comenzando por
 
 \begin{align*}
     \check{\mathcal{G}}(t,\tau) & = \exp\left(  \int_{\tau}^{t}\check{\mathcal{Q}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})dt' \right) \\
         & = \exp\left(  \int_{\tau}^{t}\check{\mathcal{Q}}(\check{\mathcal{L}}_{0}+\check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}}) dt' \right) \\
             & = \exp\left(  \int_{\tau}^{t}\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}}\right] dt' \right),       
 \end{align*}
-en donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$. Continuando con la ecuación principal
+(modificar aqui)en donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$. Continuando con la ecuación principal
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}})\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau.       
