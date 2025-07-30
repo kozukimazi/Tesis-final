@@ -2634,46 +2634,57 @@ Para continuar con el análisis de la ecuación \ref{apendix5exactp}, se harán 
         & = \exp\left(  \int_{\tau}^{t}\check{\mathcal{Q}}(\check{\mathcal{L}}_{0}+\check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}}) dt' \right) \\
             & = \exp\left(  \int_{\tau}^{t}\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}}\right] dt' \right),       
 \end{align*}
-(modificar aqui)en donde se uso que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$. Continuando con la ecuación principal
+donde se uso la igualdad
+
+\begin{equation*}
+    \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}} = \check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}= 0.
+\end{equation*}
+
+A continuación, la ecuación con la parte principal estará dada por 
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}(\check{\mathcal{L}}_{0} + \check{\mathcal{V}})(\check{\mathcal{P}}+\check{\mathcal{Q}})\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau.       
 \end{equation*}
 
-Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{G}}(t,\tau)$ se obtiene $\check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau)$, ya que si extendemos el exponencial
+Debido a la forma del exponencial en $\check{\mathcal{G}}$ al aplicar $\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{G}}(t,\tau)$ se obtiene $\check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau)$. Ya que, si extendemos el exponencial
 
 \begin{equation*}
-    \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\int_{\tau}^{t}ds\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right] = \check{\mathcal{L}}_{0}\check{\mathcal{P}}\int_{\tau}^{t}\sum_{k=0}^{\infty}\left(\frac{1}{k!} \right)\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]^{k}ds = \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau), 
+    \check{\mathcal{P}}\check{\mathcal{L}}_{0}\exp\left[\int_{\tau}^{t}ds\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right] = \check{\mathcal{L}}_{0}\check{\mathcal{P}}\int_{\tau}^{t}\sum_{k=0}^{\infty}\left(\frac{1}{k!} \right)\left[\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}+ \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}+\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} \right]^{k}ds = \check{\mathcal{P}}\check{\mathcal{L}}_{0}(t-\tau).
 \end{equation*}
-posteriormente esta contribución se anula y la ecuación principal se reduce a
+
+Posteriormente, esta contribución se anula y la ecuación principal se reduce a
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau,        
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau.        
 \end{equation*}
-de manera similar se puede notar que el término de la exponencial $\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}$ no actua en la ecuación, por ende queda que 
+
+Igualmente, el término de la exponencial $\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}$ no actua en la ecuación, por ende queda  
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (t-\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau,        
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (t-\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau.        
 \end{equation*}
-haciendo el cambio de variable $\tau \to t-\tau$
+
+Al realizar el cambio de variable $\tau \to t-\tau$
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t-\tau)\rangle \rangle d\tau,        
 \end{equation*}
-en este momento es donde se hacen aproximaciones, ya que si consideramos el acoplamiento $g$ pequeño, es decir $g \ll \gamma_{i}$. Sabiendo que los autovalores de los superoperadores $\check{\mathcal{V}}$ y $\check{\mathcal{L}}_{0}$ serán proporcionales a $g$ y $\gamma_{i}$ respectivamente,  podremos despreciar la contribución de $\check{\mathcal{V}}$ en la exponencial, así queda
+es en este punto donde se introducen las aproximaciones perturbativas. Si se considera que el acoplamiento \( g \) es pequeño en comparación con las tasas de disipación \(\gamma_i\), es decir, \( g \ll \gamma_i \), se puede analizar la jerarquía de escalas entre los superoperadores involucrados. En particular, los autovalores del superoperador de interacción \(\check{\mathcal{V}}\) serán del orden de \(g\), mientras que los de \(\check{\mathcal{L}}_0\) serán del orden de \(\gamma_i\). Bajo esta suposición, la contribución de \(\check{\mathcal{V}}\) dentro del exponencial se puede despreciar,  y la evolución estará dada por
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t-\tau)\rangle \rangle d\tau,        
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t-\tau)\rangle \rangle d\tau.        
 \end{equation*}
-finalmente, para aplicar aproximación de Markov suponemos que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho en escalas de tiempo de $1/\gamma_{i}$, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$ y el integral de $0$ a el infinito con lo que se obtiene
+
+Luego, para aplicar aproximación de Markov se supondrá que en escalas de tiempo $1/\gamma_{i}$ que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$. Además, en los límites del integral se reemplaza $t \to \infty$, así se obtiene 
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{\infty}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]d\tau \check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle ,        
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{\infty}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]d\tau \check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle.        
 \end{equation*}
-y finalmente se recupera la ecuación en formalismo de superoperadores  
+
+Finalmente, la ecuación para la evolución temporal será 
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{s}(t)\rangle \rangle. 
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle. 
 \end{equation*}
 
 
@@ -2681,7 +2692,7 @@ y finalmente se recupera la ecuación en formalismo de superoperadores
 \label{appendix5clasic}
 
 \subsection{ Inverso de Drazin }
-El inverso de Drazin es un tipo de inverso generalizado que consiste en la única matriz que  dado la matriz $\check{\mathcal{L}}_{0}$ cumple que 
+Dado la matriz $\check{\mathcal{L}}_{0}$, el inverso de Drazin es un tipo de inverso generalizado que consiste en la única matriz que cumple 
 
 \begin{align*}
     \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0} \\
@@ -2689,23 +2700,27 @@ El inverso de Drazin es un tipo de inverso generalizado que consiste en la únic
     \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}.
 \end{align*}
 
-Considerando la ecuación \ref{ec5:classicalmodel} se puede probar que 
+Si se considera la ecuación \ref{ec5:classicalmodel} se puede probar que 
 
 \begin{equation*}
     \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} = - \int_{0}^{\infty}d\tau \check{\mathcal{L}}_{0}\exp[ \check{\mathcal{L}}_{0}\tau] \check{Q}= - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau]\check{\mathcal{L}}_{0} \check{Q} = - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau] \check{Q} \check{\mathcal{L}}_{0} = \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0},
 \end{equation*}
-de manera similar se pueden probar las otras 2 ecuaciones.\\
- Finalmente para poder ocupar el inverso de Drazin, este se puede calcular numéricamente mediante descomposición espectral usando los autovalores por la izquierda y derecha dados por 
+de manera análoga, se pueden probar las otras 2 ecuaciones.
+
+Finalmente, para poder utilizar el inverso de Drazin en la ecuación, este puede calcularse numéricamente mediante una descomposición espectral. En particular, se utilizan los autovalores y autovectores generalizados del superoperador, tanto por la izquierda como por la derecha
 
 \begin{equation*}
     \check{\mathcal{L}}_{0}|x_{j}\rangle \rangle = \lambda_{j} |x_{j}\rangle \rangle \hspace{10mm}  \langle \langle y_{j}|\check{\mathcal{L}}_{0} = \langle \langle y_{j}|\lambda_{j},
 \end{equation*}
-en donde $\langle \langle y_{i}|x_{j}\rangle \rangle = \delta_{ij}$. Si se toma $\lambda_{0}$ como el único autovalor cero del operador $\check{\mathcal{L}}_{0}$, se podrá escribir la descomposición espectral como
+donde $\langle \langle y_{i}|x_{j}\rangle \rangle = \delta_{ij}$. 
+
+Si se toma $\lambda_{0}$ como el único autovalor cero del operador $\check{\mathcal{L}}_{0}$, se podrá escribir la descomposición espectral como
 
 \begin{equation*}
-    \check{\mathcal{L}}_{0} = \sum_{j\neq 0}\lambda_{j}|x_{j}\rangle \rangle \langle \langle y_{j}|,
+    \check{\mathcal{L}}_{0} = \sum_{j\neq 0}\lambda_{j}|x_{j}\rangle \rangle \langle \langle y_{j}|.
 \end{equation*}
-y así poder calcular el inverso de Drazin usando
+
+Finalmente, el inverso de Drazin estará definido por 
 
 \begin{equation*}
     \check{\mathcal{L}}^{+}_{0} = \sum_{j\neq 0}\frac{1}{\lambda_{j}}|x_{j}\rangle \rangle \langle \langle y_{j}|.
@@ -2714,7 +2729,7 @@ y así poder calcular el inverso de Drazin usando
 \label{appendix5drazin}
 
 \subsection{Expresión para los flujos de información}
-Para poder calcular los flujos de información, primero se debe ser capaces de calcular $\ln \hat{\rho}_{s}$. Se puede partir de la matriz densidad descrita en la ecuación \ref{appendix5rhoconcu} la cuál ya viene diagonal, excepto por los bloques
+Para poder calcular los flujos de información, primero se debe ser capaz de determinar $\ln \hat{\rho}_{S}$. Se parte de la matriz densidad descrita en la ecuación \ref{appendix5rhoconcu}, la cual se encuentra diagonalizada, excepto por ciertos bloques no diagonales que deben ser tratados por separado, los cuales son 
 
 \begin{equation*}
     \begin{bmatrix}
@@ -2728,12 +2743,12 @@ Para poder calcular los flujos de información, primero se debe ser capaces de c
     \end{bmatrix}.
 \end{equation*}
 
-Los autovalores estarán dados por
+Con autovalores dados por
 
 \begin{equation*}
     \lambda_{0\pm} = \frac{ \rho_{100} +\rho_{010} }{2} \pm \frac{( [\rho_{100} - \rho_{010}]^{2} + 4|\alpha|^{2} )^{1/2} }{ 2 }  \hspace{10mm}      \lambda_{1\pm} = \frac{ \rho_{101} +\rho_{011} }{2} \pm \frac{( [\rho_{101} - \rho_{011}]^{2} + 4|\beta|^{2} )^{1/2} }{ 2 }, 
 \end{equation*}
-si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$ podremos escribir los autovectores como
+si se considera $\alpha = |\alpha|e^{i\phi_{0}}$ y $\beta = |\beta|e^{i\phi_{1}}$, se podrán escribir los autovectores como
 
 \begin{align*}
     v_{0+} &  = [0,0,\cos(\theta_{0}/2)e^{i\phi_{0}/2},\sen(\theta_{0}/2)e^{-i\phi_{0}/2},0,0,0,0]^{T} \\
@@ -2746,13 +2761,13 @@ con $\sen(\theta_{0}) = |\alpha|/\sqrt{\Delta^{2}_{0} + |\alpha|^{2}}$, $\sen(\t
 \begin{equation*}
     \Delta_{i} = \frac{(\rho_{10i} - \rho_{01i})}{2},
 \end{equation*}
-con esto se podrá obtener el logaritmo natural de la matriz mediante
+mediante esta expresión, se podrá obtener el logaritmo natural de la matriz 
 
 \begin{equation*}
     \ln \hat{\rho}_{S} = \hat{V}\ln \hat{\rho}_{D} \hat{V}^{-1}.
 \end{equation*}
     
-En donde $\ln \hat{\rho}_{D}$ es la matriz diagonal 
+Donde $\ln \hat{\rho}_{D}$ es la matriz diagonal 
 
 \begin{equation*}
     \ln \hat{\rho}_{D} = 
@@ -2783,7 +2798,7 @@ y
         \end{bmatrix}.
 \end{equation*}
 
-Finalmente se obtiene
+Finalmente, se obtiene
 
 \begin{equation*}
     \ln \hat{\rho}_{S} = 
@@ -2803,9 +2818,10 @@ con las cantidades
 \begin{align*}
     a_{i} & = \cos^{2}(\theta_{i}/2) \ln \lambda_{i+} + \sen^{2}(\theta_{i}/2) \ln \lambda_{i-} \\
     b_{i} & = \sen^{2}(\theta_{i}/2) \ln \lambda_{i+} + \cos^{2}(\theta_{i}/2) \ln \lambda_{i-}  \\
-    c_{i} & = \frac{\sin(\theta_{i})}{2}e^{i\phi_{i}} (\ln \lambda_{i+} - \ln \lambda_{i-}),    
+    c_{i} & = \frac{\sin(\theta_{i})}{2}e^{i\phi_{i}} (\ln \lambda_{i+} - \ln \lambda_{i-}).    
 \end{align*}
-así el logaritmo de la matriz densidad es 
+
+Así, el logaritmo de la matriz densidad es 
 
 \begin{align*}
     \ln \hat{\rho}_{S} & = \ln \rho_{111}|111\rangle \langle 111| + \ln \rho_{110}|110\rangle \langle 110| + \ln \rho_{001}|001\rangle \langle 001| \\ 
@@ -2814,7 +2830,7 @@ así el logaritmo de la matriz densidad es
      & + c^{*}_{0}|010\rangle \langle 100| + c_{1}|101\rangle \langle 011| + c^{*}_{1}|011\rangle \langle 101|.
 \end{align*}
 
-Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathcal{L}_{L}$ y $\mathcal{L}_{R}$ se pueden expresar 
+Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathcal{L}_{L}$ y $\mathcal{L}_{R}$ se pueden expresar mediante los operadores 
 
 \begin{align*}
     \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{000}|100\rangle \langle 100| - \rho_{000}|000\rangle \langle 000| \\ 
@@ -2832,9 +2848,10 @@ Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathca
     \mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{001}|101\rangle \langle 101| - \rho_{001}|001\rangle \langle 001| \\ 
     \mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{001}|011\rangle \langle 011| - \rho_{001}|001\rangle \langle 001| \\  
     \mathcal{D}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{101}|001\rangle \langle 001| - \rho_{101}|101\rangle \langle 101| - \frac{1}{2}(\beta |101\rangle \langle 011| + \beta^{*}|011\rangle \langle 101| ) \\ 
-    \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{011}|001\rangle \langle 001| - \rho_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  ),   
+    \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{011}|001\rangle \langle 001| - \rho_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|  ).   
 \end{align*}
-con estas cantidades se podrán obtener los flujos de información en el estado estacionario $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$ lo que permite obtener
+
+Con estas cantidades, se podrán obtener los flujos de información en el estado estacionario mediante la expresión $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$. De este modo, se obtiene 
 
 \begin{align*}
     \dot{I}_{L} &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - a_{0}\rho_{100} ] )  \\ 
@@ -2847,9 +2864,11 @@ con estas cantidades se podrán obtener los flujos de información en el estado 
     \dot{I}_{R} &  =  \gamma_{R}(\epsilon)(f_{L}(\epsilon)[b_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - b_{0}\rho_{010} ] )  \\ 
       & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[b_{1} \rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -a_{1}\rho_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
       & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -a_{0}\rho_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ), 
+      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ). 
 \end{align*}
-si bien el cálculo de los flujos de información se puede hacer númerico, escribir estas expresiones analíticas nos permite determinar que existe contribución de las coherencias en la información, tanto en los parámetros $a_{i},b_{i}$ como en los términos $Re(\alpha c^{*}_{0}),Re(b^{*}_{1} \beta)$ . Es importante destacar que en el  límite en que las coherencias se anulan se recupera el resultado para un sistema clásico
+
+Si bien el cálculo de los flujos de información puede realizarse numéricamente, la obtención de expresiones analíticas permite identificar claramente la contribución de las coherencias cuánticas a dichos flujos, manifestada tanto en los parámetros $a_i$, $b_i$ como en los términos $\mathrm{Re}(\alpha c_0^*)$ y $\mathrm{Re}(b_1^* \beta)$. 
+Es importante destacar que en el límite en que las coherencias se anulan, se recupera el resultado correspondiente a un sistema clásico
 
 \begin{align*}
  \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
