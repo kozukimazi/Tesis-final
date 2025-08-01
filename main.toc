@@ -35,7 +35,7 @@
 \contentsline {chapter}{Conclusiones}{54}{chapter*.34}%
 \contentsline {chapter}{Bibliografía}{55}{chapter*.35}%
 \contentsline {chapter}{Anexos}{59}{appendix*.37}%
-\contentsline {section}{\numberline {A}Cálculos realizados sección 3}{59}{section.Alph0.1}%
+\contentsline {section}{\numberline {A}Cálculos realizados sección 2}{59}{section.Alph0.1}%
 \contentsline {subsection}{\numberline {A.1}Matriz de densidad en función del campo de conteo}{59}{subsection.Alph0.1.1}%
 \contentsline {subsection}{\numberline {A.2}Matriz de densidad generalizada}{60}{subsection.Alph0.1.2}%
 \contentsline {subsection}{\numberline {A.3}Funciones correlación}{63}{subsection.Alph0.1.3}%

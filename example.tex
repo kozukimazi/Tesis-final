@@ -25,7 +25,7 @@ En ausencia de un agente externo, cuantificar el flujo de información entre el 
 
 Posteriormente, Ptaszynski y Esposito extendieron este marco al contexto cuántico, cuantificando flujos de información en sistemas abiertos gobernados por dinámicas markovianas\cite{ptaszynski2019thermodynamics}. Para ello, emplearon una ecuación maestra de tipo Lindblad en su forma estándar (GKLS)\cite{gorini1976completely,lindblad1976generators,breuer2002theory}, compatible con una descripción termodinámica consistente cuando se cumple la condición de balance detallado local. Este enfoque permite incorporar coherencias cuánticas —elementos no diagonales de la matriz densidad—, las cuales pueden servir como recursos termodinámicos\cite{ptaszynski2023fermionic,streltsov2017colloquium}.
 
-Sin embargo, una dificultad clave en la descripción cuántica es la elección de la base. Si se adopta una base global, como exige la aproximación secular, se pierde la posibilidad de distinguir entre flujos locales de información. Por otro lado, una formulación en la base local puede revelar la estructura bipartita del sistema, pero ha sido criticada por posibles inconsistencias termodinámicas\cite{levy2014local,novotny2002investigation}, dado que en general no respeta las leyes de la termodinámica.
+Sin embargo, una dificultad clave en la descripción cuántica es la elección de la base. Si se adopta una base global, como exige la aproximación secular, se pierde la posibilidad de distinguir entre flujos locales de información. Por otro lado, una formulación en la base local puede revelar la estructura bipartita del sistema, pero ha sido criticada por posibles inconsistencias termodinámicas\cite{levy2014local,novotny2002investigation}.
 
 Para resolver este dilema, Potts et al.\ propusieron una ecuación maestra termodinámicamente consistente que permite trabajar en la base local e incluir términos no seculares\cite{potts2021thermodynamically}. Su enfoque reconoce que una descripción markoviana implica una resolución energética finita, y por tanto introduce un Hamiltoniano rescalado en la definición de las cantidades termodinámicas.
 
@@ -112,7 +112,7 @@ Un sistema abierto consiste en un sistema cuántico $S$ denominado el sistema re
     \label{sec2:sistemabierto}
 \end{equation}
 
-Para describir el sistema con la ecuación \ref{sec2:sistemabierto} es necesario separarlo en dos subsistemas, $S$ y $B$, permitiendo así que el espacio de Hilbert total sea descrito por $\mathcal{H} = \mathcal{H}_{s}\otimes \mathcal{H}_{B}$. Sin embargo, en el caso de partículas idénticas como los fermiones el identificar estos dos subsistemas no es obvio. Aún así, en el formalismo de segunda cuantización el sistema se puede describir mediante una base del espacio de Fock, que sí permite encontrar subsistemas en los cuáles el espacio de Hilbert total es un producto tensorial entre los dos subsistemas\cite{friis2013fermionic,vidal2021quantum}.
+Para describir el sistema con la ecuación \ref{sec2:sistemabierto} es necesario separarlo en dos subsistemas, $S$ y $B$, permitiendo así que el espacio de Hilbert total sea descrito por $\mathcal{H} = \mathcal{H}_{s}\otimes \mathcal{H}_{B}$. Sin embargo, en el caso de partículas idénticas como los fermiones el identificar estos dos subsistemas no es obvio. Aún así, en el formalismo de segunda cuantización el sistema se puede describir mediante una base del espacio de Fock, que sí permite encontrar subsistemas en los cuáles el espacio de Hilbert total es un producto tensorial antisimétrico entre los dos subsistemas\cite{friis2013fermionic,vidal2021quantum}.
 
 Los observables que se estudian en el sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$ y su valor de expectación puede ser calculado mediante la ecuación
 
@@ -128,7 +128,7 @@ es la matriz densidad del sistema reducido. La expresión $\text{Tr}_{S}$ hace r
 es la traza con respecto al espacio de Hilbert del ambiente. El objeto de estudio principalmente es $\hat{\rho}_{S}$ y la ecuación de Lindblad será utilizada para describir su evolución.
 
 \subsection{Ecuación maestra}
-Partiendo de un sistema $S$ acoplado débilmente a un reservorio $B$, en donde el Hamiltoniano total es descrito por 
+Partiendo de un sistema $S$ acoplado débilmente a un reservorio $B$, donde el Hamiltoniano total es descrito por 
 
 \begin{equation*}
     \hat{H} = \hat{H}_{S} + \hat{H}_{B} + \hat{H}_{I},
@@ -142,16 +142,16 @@ la evolución en el cuadro de interacción del sistema total será
 o en su forma integral
 
 \begin{equation*}
-    \hat{\rho}_{I}(t) = \hat{\rho}(0) - i \int_{0}^{t} ds[\hat{H}_{I}(s), \hat{\rho}_{I}(s)].
+    \hat{\rho}_{I}(t) = \hat{\rho}(0) - i  \int_{0}^{t} ds[\hat{H}_{I}(s), \hat{\rho}_{I}(s)].
 \end{equation*}
 
 Reinsertando la forma integral en la ecuación \ref{eqsec2:linbladpic} y trazando los grados de libertad del reservorio, nos queda
 
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}.
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i  \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}.
 \end{equation}
 
-Ahora se asumirán dos cosas, primero que $\text{Tr}_{B}\{[\hat{H}_{I}(t),\rho(0)] \} = 0$. Segundo, debido a que todavía la ecuación depende de $\hat{\rho}(t)$ correspondiente al sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir
+Ahora se asumirán dos cosas, primero sin pérdida de generalidad se asumirá $\text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \} = 0$\cite{breuer2002theory}. Segundo, debido a que todavía la ecuación depende de $\hat{\rho}(t)$ correspondiente al sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir
 
 \begin{equation*}
     \hat{\rho}(t) = \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B},
@@ -188,10 +188,27 @@ La interacción en el cuadro de Schrodinger $\hat{H}_{I}$ será de la forma gene
 \end{equation*}
 donde los operadores $A_{\alpha} = A^{\dagger}_{\alpha}$ actuan en el espacio de Hilbert del sistema, mientras que $B_{\alpha}=B^{\dagger}_{\alpha}$ actua en el espacio de Hilbert del reservorio. Es conveniente escribir la interacción en función de los autoestados de $\hat{H}_{S}$. Para ello, si tenemos los autovalores $\epsilon$ y sus respectivos operadores de proyección $\Pi(\epsilon) = |\epsilon\rangle \langle \epsilon|$, se podrán definir los operadores
 
+\begin{equation}
+    A_{\alpha}(\omega) \equiv \sum_{\epsilon' - \epsilon = \omega}\Pi(\epsilon)A_{\alpha}\Pi(\epsilon'), 
+    \label{sec1:globalA}
+\end{equation}
+estos operadores se denominan operadores globales, ya que la suma esta descrita por los autoestados del sistema que cumplen $\epsilon'-\epsilon=\omega$. 
+
+De la relación de completitud $\sum_{\epsilon}\Pi(\epsilon) = \mathbf{I}$ podremos notar que
+
+\begin{align*}
+   \sum_{\omega}A_{\alpha}(\omega) & =  \sum_{\omega,\epsilon'-\epsilon  = \omega} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon') \\
+   & = \sum_{\omega,\epsilon} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon + \omega) \\
+   & = A_{\alpha} = \sum_{\omega}A^{\dagger}_{\alpha}(\omega),
+\end{align*}
+
+con esto el Hamiltoniano de interacción en el cuadro de Schrodinger
+
 \begin{equation*}
-    A_{\alpha}(\omega) \equiv \sum_{\epsilon' - \epsilon}\Pi(\epsilon)A_{\alpha}\Pi(\epsilon'), 
+    \hat{H}_{I} = \sum_{\alpha,\omega}A_{\alpha}(\omega) \otimes B_{\alpha} = \sum_{\alpha,\omega}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}.
 \end{equation*}
-estos operadores se denominan operadores globales, ya que utilizan los autoestados del sistema. Debido a esta definición, se cumplen las relaciones
+
+Debido a \ref{sec1:globalA}, el operador $A_{\alpha}(\omega)$ cumple las relaciones
 
 \begin{align*}
     [\hat{H}_{S},A_{\alpha}(\omega)] & = - \omega A_{\alpha}(\omega) \\
@@ -210,21 +227,7 @@ y se puede derivar las relaciones
     e^{i\hat{H}_{S}t}A^{\dagger}_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{i\omega t} A^{\dagger}_{\alpha}(\omega).
 \end{align*}
 
-De la relación de completitud $\sum_{\epsilon}\Pi(\epsilon) = \mathbf{I}$ podremos notar que
-
-\begin{align*}
-   \sum_{\omega}A_{\alpha}(\omega) & =  \sum_{\omega,\epsilon'-\epsilon  = \omega} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon') \\
-   & = \sum_{\omega,\epsilon} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon + \omega) \\
-   & = A_{\alpha} = \sum_{\omega}A^{\dagger}_{\alpha}(\omega),
-\end{align*}
-
-con esto el Hamiltoniano de interacción en el cuadro de Schrodinger
-
-\begin{equation*}
-    \hat{H}_{I} = \sum_{\alpha,\omega}A_{\alpha}(\omega) \otimes B_{\alpha} = \sum_{\alpha,\omega}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}.
-\end{equation*}
-
-Aplicando las relaciones en el cuadro de interacción
+Con estas relaciones, $\hat{H}_{I}(t)$ en el cuadro de interacción
 
 \begin{equation}
     \hat{H}_{I}(t) = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t),
@@ -243,7 +246,7 @@ así, reemplazando la forma explícita de la interacción
      + & \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\hat{\rho}_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
 \end{align*}
 
-Se pueden definir las funciones correlación del baño por
+Se pueden definir las funciones correlación espectral del baño por
 
 \begin{equation*}
     \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\hat{\rho}_{B}],
@@ -285,7 +288,11 @@ y el Disipador
     \mathcal{D}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right].
 \end{equation*}
 
-El escribir el disipador de esta manera es importante, ya que esta evolución se encuentra en la forma GKLS que permite preservar traza, hermiticidad y positividad de la matriz densidad\cite{manzano2020short}. 
+El escribir el disipador de esta manera es importante, ya que esta evolución se encuentra en la forma GKLS que permite preservar traza, hermiticidad y positividad de la matriz densidad\cite{manzano2020short}. Finalmente, en el cuadro de Schrodinger la ecuación de Lindblad queda
+
+\begin{equation*}
+    \frac{d}{dt} \hat{\rho}_{S}(t) = -i[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)] + \mathcal{D}(\hat{\rho}_{S}(t)).
+\end{equation*}
 
 \label{sec:lindblad}
 
@@ -1530,7 +1537,7 @@ Finalmente, el modelo propuesto admite diversas extensiones. Una dirección posi
 % ------------------------------------------------------------------------------
 \begin{appendixs}
 	
-	\section{Cálculos realizados sección 3}
+	\section{Cálculos realizados sección 2}
 
     \subsection{Matriz de densidad en función del campo de conteo}
 
@@ -1716,14 +1723,14 @@ Para derivar la ecuación maestra generalizada en términos de las funciones de 
 
 \begin{align*}
 & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \}  =\\
-&  - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{e^{-(i/2)\hat{A}(\lambda,\chi)}\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)e^{(i/2)\hat{A}(\lambda,\chi)}\hat{\rho}^{eq}_{R}\},
+&  - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{e^{-(i/2)\hat{A}(\lambda,\chi)}\hat{B}^{\dagger}_{\alpha,k}(t)\hat{B}_{\alpha,k'}(t-s)e^{(i/2)\hat{A}(\lambda,\chi)}\hat{\rho}^{eq}_{R}\},
 \end{align*}    
 bajo homogeneidad temporal $\langle \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \rangle = \langle \hat{V}_{\lambda}(s)\hat{V}_{\lambda}(0) \rangle$, la ecuación se reduce a 
 \begin{align*}
-    \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} & = \\
-    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{\hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k}\hat{\tau}_{\alpha} \} \\
-    \text{Tr}_{B}\{ \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t) \} & = \\
-    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'} \text{Tr}_{B}\{ \hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k}\hat{\tau}_{\alpha} \}.   
+    \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)&\hat{\rho}^{eq}_{R} \}  = \\
+    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{\hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k'}\hat{\tau}_{\alpha} \} \\
+    \text{Tr}_{B}\{ \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \hat{V}_{-\lambda}(t-s)&\hat{V}_{-\lambda}(t) \}  = \\
+    & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'} \text{Tr}_{B}\{ \hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k'}\hat{\tau}_{\alpha} \}.   
 \end{align*}    
 
 Para analizar el término
@@ -1747,7 +1754,7 @@ con $C$ alguna constante. Se podrá utilizar la relación \ref{apendix:conservat
 
 \begin{align*}
    & \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \} \\
-   & = \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} \text{Tr}_{B}\{e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)}\hat{\rho}_{R}^{eq}\hat{B}^{\dagger}_{\alpha,k}(t-s) \}.
+   & = \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} \text{Tr}_{B}\{e^{-i(\hat{A}(\lambda,\chi))} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)}\hat{\rho}_{R}^{eq}\hat{B}^{\dagger}_{\alpha,k'}(t-s) \}.
 \end{align*}
 
 Por otro lado, para los operadores del baño se cumple
@@ -1785,7 +1792,7 @@ Se puede desarrollar la ecuación \ref{ecmaestrafinal} para escribir
     \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s-\lambda_{\alpha}) ) \right.\\
     \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right],   
 \end{multline*}
-Por simplicidad se asumirá que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$, así se obtiene 
+Por simplicidad se asumirá que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$ (para fermiones y bosones los  términos del tipo $\langle \hat{c}^{\dagger}_{k}\hat{c}_{j}\rangle$ suelen ser cero en el baño)\cite{potts2021thermodynamically}. Así, se obtiene 
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \\
@@ -1798,7 +1805,7 @@ Si se usan las identidades
 \begin{align*}
     \int_{0}^{\infty}ds e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) & = \int_{-\infty}^{\infty}ds e^{i\omega_{q}s}(1+\text{sgn}(s))C^{\alpha}_{k,k}(s)/2 \\
     & = \int_{-\infty}^{\infty}ds e^{i\omega_{q}s}C^{\alpha}_{k,k}(s)/2 + i \left(-\frac{i}{2} \right) \int_{-\infty}^{\infty}ds e^{i\omega_{q}s} \text{sgn}(s)C^{\alpha}_{k,k}(s) \\
-    & = \frac{1}{2}\Gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q}),
+    & = \frac{1}{2}\gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q}),
 \end{align*}
 
 y 
@@ -1810,7 +1817,7 @@ en la ecuación maestra, finalmente queda la ecuación
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}\Delta^{\alpha}_{k,k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
-    + \sum_{\alpha,k;q} \Gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right].
+    + \sum_{\alpha,k;q} \gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right].
 \end{multline*}
 
 Que es la ecuación que se quiere demostrar.
@@ -1844,11 +1851,11 @@ que se relaciona con la función correlación, de la siguiente manera
 Las funciones correlación espectral, pueden expresarse mediante las funciones correlación auxiliares
 
 \begin{align*}
-    \Gamma^{\alpha}_{k,k}(\omega) & = \int_{-\infty}^{\infty}ds e^{i\mu_{\alpha}n_{\alpha,k}s} e^{i\omega s}C^{\alpha N}_{k,k}(s) \\
+    \gamma^{\alpha}_{k,k}(\omega) & = \int_{-\infty}^{\infty}ds e^{i\mu_{\alpha}n_{\alpha,k}s} e^{i\omega s}C^{\alpha N}_{k,k}(s) \\
     & = \int_{-\infty}^{\infty}ds e^{i\mu_{\alpha}n_{\alpha,k}s} e^{i\omega s}\langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle_{N} \\
     & = \int_{-\infty}^{\infty}ds e^{-i(i\beta \mu_{\alpha}n_{\alpha,k})} e^{i\omega s} \langle \hat{B}_{\alpha,k}\hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle \\
     & = e^{\beta_{\alpha}\mu_{\alpha}n_{\alpha,k}}e^{\beta \omega} \int_{-\infty}^{\infty} ds e^{i\omega(s+i\beta_{\alpha})} \langle \hat{B}_{\alpha,k}\hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle \\
-    & = e^{\beta_{\alpha}(\omega - \mu_{\alpha}n_{\alpha,k})} \Gamma^{\alpha}_{k,k}(-\omega).
+    & = e^{\beta_{\alpha}(\omega - \mu_{\alpha}n_{\alpha,k})} \gamma^{\alpha}_{k,k}(-\omega).
 \end{align*}
 
 
