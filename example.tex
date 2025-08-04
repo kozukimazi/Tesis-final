@@ -1284,24 +1284,24 @@ donde $\hat{\rho}_{S}(t)$ es la matriz densidad del sistema reducido. A partir d
 \section{Estudio del transporte}
 Se aborda inicialmente el caso en que las razones de túnel no dependen de la frecuencia, es decir, $\gamma_{i}(\omega) = \gamma_{i}$. Y se estudia el flujo de corriente generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las razones de túnel $\gamma_{L} = \gamma_{R} = 1/100$ y $\gamma_{d} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
-\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.35}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{d} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{d} = \mu_{d} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \).}
+\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{d} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{d} = \mu_{d} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \).}
 
 La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \), la corriente de partículas \( \dot{N}_L = -\dot{N}_R \) que fluye del baño \( L \) al baño \( R \) también aumenta. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio \( L \) impulsa el transporte hacia \( R \). Asimismo, se puede analizar la potencia suministrada al sistema en función de \( eV \).
 
-\insertimage[\label{img:transporte2}]{ejemplos/worktp.pdf}{scale =0.35}{Potencia entregada por los reservorios en función de $eV/T$.}
+\insertimage[\label{img:transporte2}]{ejemplos/worktp.pdf}{scale =0.40}{Potencia entregada por los reservorios en función de $eV/T$.}
     
 La Figura \ref{img:transporte2} muestra que el conjunto de reservorios \( L \) y \( R \) entrega trabajo al sistema para mantener la corriente de partículas. Este comportamiento es consistente desde el punto de vista físico, ya que el paso de electrones desde un potencial químico mayor hacia uno menor implica una transferencia de energía al sistema, que se manifiesta como trabajo. Por otro lado, dado que el reservorio \( D \) no intercambia partículas en promedio, la potencia que este entrega es nula.
 
  Asimismo, pueden examinarse los flujos de calor que reciben los sistemas $LR$ y $D$
 
 
-\insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale =0.35}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
+\insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale =0.40}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
     
 Como uno puede ver, para $eV/T \lessapprox 2$ , el sistema $LR$ en total recibe calor de los reservorios $L$ y $R$. Para $eV/T \gtrapprox 2$ el sistema $LR$ en total entrega calor a los reservorios $L$ y $R$. 
 
 Para completar el análisis termodinámico a partir de la primera ley $\dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}$, se grafican a continuación los flujos de energía involucrados
 
-\insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale =0.4}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
+\insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale =0.43}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
 
 En el estado estacionario, la condición \( \partial_t E = 0 \) implica que \( \dot{E}_{LR} = -\dot{E}_d \), lo cual se observa en la Figura \ref{img:transporte4}. Allí, el flujo de energía hacia el sistema \( LR \) es positivo, mientras que el flujo desde el subsistema \( D \) es negativo. Esto indica que el sistema \( LR \) recibe energía proveniente de los reservorios \( L \) y \( R \), la cual es posteriormente transferida al subsistema \( D \) y desde allí al reservorio \( D \). Este comportamiento es coherente con el hecho de que la temperatura del reservorio \( D \) es menor (\( T_{d} < T_{L} = T_{R} \)), y por lo tanto, el flujo de calor se dirige desde los reservorios más calientes hacia el más frío.
 
@@ -1372,7 +1372,7 @@ Dado que $\mu_L - \mu_R = eV$, se esperaría que $\dot{N}_L > 0$ para todo valor
 Si se analiza únicamente el subsistema $LR$, la existencia de una corriente contra el gradiente químico representa una violación aparente de la segunda ley de la termodinámica. Para este análisis, se considera la tasa de producción de entropía efectiva del subsistema, dada por $\dot{\sigma}^{o}_{LR} = d_{t}S_{LR} - \sum_{i=L,R} J_i/T$, cuya evolución en función de $eV/T$ se muestra en la Figura~\ref{img:fig2resultado}.
 
 
-\insertimage[\label{img:fig1resultado}]{ejemplos/heatparticledemon.pdf}{scale=0.47}{(a) Flujos de calor liberados por cada reservorio $\alpha$. (b) Flujos de corriente de partículas correspondientes a cada reservorio. Los resultados se obtuvieron considerando temperaturas $T = 100$ y $T_d = 2$, niveles de energía $\epsilon = 0$ y $\epsilon_d = \mu_d - U/2$ con potencial químico $\mu_d = 2$, razones de túnel $\gamma_L = \gamma^{U}_{R} = 1/100$, $\gamma_R = \gamma^{U}_{L} = 1/600$, $\gamma_D = \gamma^{U}_{D} = 1/50$, acoplamiento entre los sitios $g = 5/1000$ e interacciones de Coulomb $U = 40$ y $U_F = 500$.}
+\insertimage[\label{img:fig1resultado}]{ejemplos/heatparticledemon.pdf}{scale=0.55}{(a) Flujos de calor liberados por cada reservorio $\alpha$. (b) Flujos de corriente de partículas correspondientes a cada reservorio. Los resultados se obtuvieron considerando temperaturas $T = 100$ y $T_d = 2$, niveles de energía $\epsilon = 0$ y $\epsilon_d = \mu_d - U/2$ con potencial químico $\mu_d = 2$, razones de túnel $\gamma_L = \gamma^{U}_{R} = 1/100$, $\gamma_R = \gamma^{U}_{L} = 1/600$, $\gamma_D = \gamma^{U}_{D} = 1/50$, acoplamiento entre los sitios $g = 5/1000$ e interacciones de Coulomb $U = 40$ y $U_F = 500$.}
 
 \insertimage[\label{img:fig2resultado}]{ejemplos/entropyapparentdemon.pdf}{scale=0.45}{Tasa de producción de entropía aparente del sistema $LR$($\dot{\sigma}^{o}_{LR}$) en función de $eV/T$.}
 
@@ -1397,7 +1397,7 @@ donde \( \dot{\mathcal{F}}_{LR} \) representa la tasa de cambio de energía libr
 A fin de verificar este comportamiento, se grafican las cantidades termodinámicas relevantes tanto del sistema como del demonio.
 
 
-\insertimage[\label{img:fig4resultado}]{ejemplos/thermoquantitiesdemon}{scale=0.53}{ Flujo de energía, tasa de cambio de energía libre, flujo de información, potencia y flujo de calor del sistema $LR$. (b)  Flujo de energía, tasa de cambio de energía libre, flujo de información y potencia del Demonio. }
+\insertimage[\label{img:fig4resultado}]{ejemplos/thermoquantitiesdemon}{scale=0.56}{ Flujo de energía, tasa de cambio de energía libre, flujo de información, potencia y flujo de calor del sistema $LR$. (b)  Flujo de energía, tasa de cambio de energía libre, flujo de información y potencia del Demonio. }
 
 La Figura \ref{img:fig4resultado} muestra que, en el régimen en el que el subsistema $LR$ realiza trabajo ($\dot{W}_{LR} < 0$ y $\dot{\mathcal{F}}_{LR} < 0$), la contribución informacional domina sobre el flujo energético, es decir, $\dot{\mathcal{F}}_{LR} \approx T \dot{I}_{LR}$ mientras que $\dot{E}_{LR} \approx 0$. Este resultado respalda la interpretación del dispositivo como un Demonio de Maxwell autónomo.
 
@@ -1426,7 +1426,7 @@ Se observan dos comportamientos relevantes. Primero, para \( eV/T \lessapprox 1 
 
 Dado el comportamiento tipo Demonio de Maxwell del sistema, resulta pertinente examinar cómo estas cantidades cuánticas se ven influenciadas por el parámetro de acoplamiento \( g \). Para ello, se comenzará analizando las cantidades termodinámicas.
 
-\insertimage[\label{img:fig6resultado}]{ejemplos/thermoquantum.pdf}{scale=0.47}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
+\insertimage[\label{img:fig6resultado}]{ejemplos/thermoquantum.pdf}{scale=0.57}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\gamma_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
 
 Se observa que cuando el acoplamiento \( g \) alcanza valores comparables con la tasa de túnel \( \gamma_{L} \), tanto la potencia generada como la contribución informacional del subsistema \( LR \) aumentan. Este resultado sugiere que un acoplamiento suficientemente fuerte entre el sistema y el demonio potencia la conversión de información en trabajo. 
 
@@ -1434,7 +1434,7 @@ Además, bajo esta misma condición \( g \sim \gamma_{L} \), el valor absoluto d
 
 Por otra parte, el análisis de las contribuciones individuales a los flujos de información revela cómo el acoplamiento modifica la cantidad de información entregada por cada punto cuántico. Estos efectos se visualizan en la Figura \ref{img:fig7resultado}, donde se aprecia la dependencia de los flujos informacionales con respecto al parámetro \( g \).
 
-\insertimage[\label{img:fig7resultado}]{ejemplos/concuinfodemon.pdf}{scale=0.51}{(a)Flujos de información de cada sitio. (b)Concurrencia y coherencia en función de $g/\gamma_{L}$. }
+\insertimage[\label{img:fig7resultado}]{ejemplos/concuinfodemon.pdf}{scale=0.56}{(a)Flujos de información de cada sitio. (b)Concurrencia y coherencia en función de $g/\gamma_{L}$. }
 
 Un comportamiento notable se presenta cuando el acoplamiento alcanza valores comparables a la tasa de túnel, es decir, \( g \sim \gamma_{L} \). En este régimen, tanto la concurrencia como la coherencia alcanzan valores cercanos a sus máximos, lo que indica una presencia significativa de efectos cuánticos entre los puntos \( L \) y \( R \), resultado que se asemeja a \cite{prech2023entanglement}. 
 
