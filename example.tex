@@ -647,7 +647,7 @@ Incluso, ambas pueden cumplirse simultáneamente. Es posible agrupar las frecuen
 
 Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente, por ende en  promedio se anulan.
 
-La funcion correlación  espectral $\gamma^{\alpha}(\omega) = \int_{-\infty}^{\infty} ds e^{i \omega s} C^{\alpha}(s)$, describe la influencia del baño $\alpha$ en transiciones de estados con diferencia de energía $\omega$, donde $\omega$ corresponden a las frecuencias de Bohr del sistema. Dentro de un mismo conjunto $x_{q}$, los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ contribuyen, respectivamente, a  $\gamma^{\alpha}(\omega_{j})$ y $\gamma^{\alpha}(\omega_{j'})$, es decir,  describen transiciones inducidas por el baño con frecuencias cercanas $\omega_{j}$ y $\omega_{j'}$. Sin embargo, debido a la resolución finita del calor intercambiado con el reservorio, no es posible distinguir entre transiciones con frecuencias dentro del mismo conjunto $x_q$. Por lo tanto, en las funciones correlación espectral se deben sustituir las frecuencias individuales $\omega_{j} \in x_{q}$ por una frecuencia auxiliar $\omega_{q}$, es decir en la ecuación \ref{ecmaestrafinalI} sustituir los términos  
+La funcion correlación  espectral $\gamma^{\alpha}(\omega) = \int_{-\infty}^{\infty} ds e^{i \omega s} C^{\alpha}(s)$, describe la influencia del baño $\alpha$ en transiciones de estados con diferencia de energía $\omega$, donde los $\omega$ corresponden a las frecuencias de Bohr del sistema. Dentro de un mismo conjunto $x_{q}$, los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ contribuyen, respectivamente, a  $\gamma^{\alpha}(\omega_{j})$ y $\gamma^{\alpha}(\omega_{j'})$, es decir,  describen transiciones inducidas por el baño con frecuencias cercanas $\omega_{j}$ y $\omega_{j'}$. Sin embargo, debido a la resolución finita del calor intercambiado con el reservorio, no es posible distinguir entre transiciones con frecuencias dentro del mismo conjunto $x_q$. Por lo tanto, en las funciones correlación espectral se deben sustituir las frecuencias individuales $\omega_{j} \in x_{q}$ por una frecuencia auxiliar $\omega_{q}$, es decir en la ecuación \ref{ecmaestrafinalI} sustituir los términos  
 
 \begin{equation*}
     e^{i\omega_{j}s},e^{i\omega_{j'}s} \to e^{i\omega_{q}s} \hspace{10mm} |\omega_{q} - \omega_{j}| \ll 1/\tau_{B} \hspace{10mm} \forall \omega_{j} \in x_{q}.
@@ -692,7 +692,7 @@ En el límite en que los parámetros de conteo tienden a cero, se obtiene
 \end{equation*}
 con
 \begin{equation*}
-    \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\Gamma^{\alpha}_{k,k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}(t)]  \right].
+    \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k,k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}(t)]  \right].
 \end{equation*}
 
 La demostración de esta ecuación se encuentra en \ref{apendixKMS}.
@@ -712,7 +712,7 @@ con
 
 Hay dos límites importantes a considerar, el primero corresponde al caso en que todas las frecuencias satisfacen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}$, pues se cumple que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$, lo que permite realizar la aproximación secular entre todas las frecuencias de Bohr y recuperar la ecuación de Lindblad. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo. Por lo tanto, los operadores del sistema cumplen que $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$, y la ecuación maestra queda descrita por operadores locales, lo que corresponde a la ecuación maestra local\cite{wichterich2007modeling}.
 \section{Consistencia termodinámica}
-Existen dos casos a diferenciar para derivar las leyes de la termodinámica, primero la ecuación maestra global definida en la sección \ref{sec:lindblad} y segundo la ecuación maestra semilocal, que presenta un mayor desafío; Debido a la resolución finita de energía impuesta por la dinámica markoviana en la ecuación semilocal, para asegurar la consistencia termodinámica es necesario redefinir las leyes de la termodinámica. Como primer paso, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cual satisface la relación de conmutación
+Existen dos casos a diferenciar para derivar las leyes de la termodinámica, primero la ecuación maestra global definida en la sección \ref{sec:lindblad} y segundo la ecuación maestra semilocal, que presenta un mayor desafío; debido a la resolución finita de energía impuesta por la dinámica markoviana en la ecuación semilocal, para asegurar la consistencia termodinámica es necesario redefinir las leyes de la termodinámica. Como primer paso, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cual satisface la relación de conmutación
 \label{sec2:thermolaws}
 \begin{equation*}
     [\hat{S}_{\alpha,k,j},\hat{H}_{TD}] = \omega_{q}\hat{S}_{\alpha,k,j},
@@ -725,13 +725,13 @@ Para las leyes de la termodinámica, se debe hacer la distinción para la ecuaci
     E_{g}(t) = \text{Tr}\{\hat{H}_{S}\hat{\rho}(t) \}.
 \end{equation*}
 
-Por otro lado, para la ecuación maestra semilocal, la energía interna se redefine con el Hamiltoniano termodinámico, mencionado anteriormente 
+Por otro lado, para la ecuación maestra semilocal, la energía interna se redefine con el Hamiltoniano termodinámico mencionado anteriormente 
 
 \begin{equation*}
     E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t) \}.
 \end{equation*}
 
-La corriente de calor y el trabajo entregado por el baño $\alpha$ para la ecuación global serán
+La corriente de calor y el trabajo entregado por el baño $\alpha$ para la ecuación global será
 
 \begin{equation*}
     J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha,g} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \}.
@@ -739,7 +739,7 @@ La corriente de calor y el trabajo entregado por el baño $\alpha$ para la ecuac
 
 Donde $\mathcal{L}_{\alpha,g}$ es el superoperador de Lindblad asociado al baño $\alpha$, correspondiente a la ecuación maestra global \ref{eqsec2:lindbladS}.
 
-Finalmente, la corriente de calor y el trabajo entregado por el baño $\alpha$ para el caso semilocal serán
+Finalmente, la corriente de calor y el trabajo entregado por el baño $\alpha$ para el caso semilocal será
 
 \begin{equation*}
     J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \}.
@@ -781,7 +781,7 @@ y el estado de Gibbs corresponde a
 \end{equation*}
 
 \subsection{Segunda ley}
-Para definir la tasa de producción de entropía, se debe considerar la desigualdad de Spohn\cite{spohn2007irreversible}, que permite escribir las tasas de producción de entropía para el caso global y el semilocal\cite{potts2021thermodynamically}, para el primero se cumple que 
+Para definir la tasa de producción de entropía, se debe considerar la desigualdad de Spohn\cite{spohn2007irreversible}, que permite escribir las tasas de producción de entropía para el caso global y el semilocal\cite{potts2021thermodynamically}. Para el primero se cumple que 
 
 \begin{equation*}
     \dot{\sigma}_{g} = - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \ln \hat{\rho}_{S}(t) \} - \sum_{\alpha} \beta_{\alpha} J_{\alpha,g}(t) = -\sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t))[\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G,g}(\beta_{\alpha},\mu_{\alpha})] \} \geq 0.
