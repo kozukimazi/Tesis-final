@@ -299,7 +299,7 @@ El escribir el disipador de esta manera es importante, ya que esta evolución se
 
 
 \chapter{Estadística de conteo(\textit{Full Counting Statistics}) }
-En este capítulo se presenta el formalismo de \textit{Full Counting Statistics}(FCS). La sección \ref{sec3workheat} esta dedicada a la  descripción de las cantidades termodinámicas de interés, y en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos, mientras que en la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. En la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada deducida en \cite{potts2021thermodynamically}. Finalmente, en la sección \ref{sec2:thermolaws} se analiza la consistencia termodinámica, tanto para la ecuación maestra global, como para la ecuación maestra local presentada en este capítulo. 
+En este capítulo se presenta el formalismo de \textit{Full Counting Statistics}(FCS). La sección \ref{sec3workheat} esta dedicada a la  descripción de las cantidades termodinámicas de interés, y en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos, mientras que en la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. En la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada deducida en \cite{potts2021thermodynamically}. Finalmente, en la sección \ref{sec2:thermolaws} se analiza la consistencia termodinámica, tanto para la ecuación maestra global, como para la ecuación maestra semilocal presentada en este capítulo. 
 
 \section{Cantidades termodinámicas}
 Se considera el sistema descrito por el Hamiltoniano
@@ -804,13 +804,13 @@ De este modo, se definen las leyes de la termodinámica para las ecuaciones maes
 % NUEVO CAPÍTULO
 % ------------------------------------------------------------------------------
 \chapter{Flujos de información}
-En este capítulo se introduce el concepto de información termodinámica, comenzando en la sección \ref{sec4:Demon} con una revisión del paradigma del Demonio de Maxwell. En la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se presenta el concepto de flujos de información, utilizando herramientas como la termodinámica estocástica en contexto clásico y la matriz densidad en contexto cuántico\cite{horowitz2014thermodynamics,ptaszynski2019thermodynamics}.
-modificar aqui
+En este capítulo se introduce el concepto de información termodinámica, comenzando en la sección \ref{sec4:Demon} con una revisión del paradigma del Demonio de Maxwell. En la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se define el concepto de flujos de información, utilizando herramientas como la termodinámica estocástica en contexto clásico y la matriz densidad en contexto cuántico\cite{horowitz2014thermodynamics,ptaszynski2019thermodynamics}.
+
 
 \section{Demonio de Maxwell}
 El demonio de Maxwell es un experimento mental esbozado por James Clerk Maxwell en su obra\cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por una entidad denominada "Demonio", la cual tiene la capacidad de abrirla y cerrarla sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos. 
 
-Dado que la temperatura se relaciona con la velocidad promedio de las partículas, el Demonio puede discriminar entre partículas rápidas y lentas. De este modo, permite pasar del compartimiento A al B solo aquellas partículas cuya velocidad es mayor que la velocidad promedio, mientras que deja pasar del compartimiento B al A las partículas más lentas. Si se mantiene constante el número de partículas en cada compartimiento, este proceso da lugar a un aumento de la temperatura en A y una disminución en B, es decir, una diferencia \( \Delta T \) entre ambos lados.
+Dado que la temperatura se relaciona con la velocidad promedio de las partículas, el Demonio puede discriminar entre partículas rápidas y lentas, las cuales influirán en la temperatura del compartimiento que se dirigen. De este modo, permite pasar del compartimiento A al B solo aquellas partículas cuya velocidad es mayor que la velocidad promedio, mientras que deja pasar del compartimiento B al A las partículas más lentas. Si se mantiene constante el número de partículas en cada compartimiento, este proceso da lugar a un aumento de la temperatura en A y una disminución en B, es decir, una diferencia \( \Delta T \) entre ambos lados.
 
 El cambio de entropía del sistema es
  
@@ -818,7 +818,7 @@ El cambio de entropía del sistema es
     \Delta S & = \Delta S_{A} + \Delta S_{B} = C_{V}\left( \log \frac{T-\Delta T}{T} + \log \frac{T+\Delta T}{T} \right) \\
        & =  C_{V} \log \left( 1 - \frac{\Delta T^{2}}{T^{2}}  \right) < 0,
 \end{align*}
-Donde \( C_V \) representa la capacidad calorífica a volumen constante.
+donde \( C_V \) representa la capacidad calorífica a volumen constante.
 
 Del cálculo de la entropía total se concluye que, sin realizar trabajo externo, el Demonio logra una disminución de la entropía, lo cual representa una aparente violación de la segunda ley de la termodinámica.
 
@@ -833,9 +833,9 @@ En sistemas no autónomos, es decir sistemas manipulados por un agente externo a
 \section{Demonio de Maxwell autónomo}
 Muchos procesos físicos requieren la interacción entre un conjunto de subsistemas que forman un sistema global. Esta interacción entre los subsistemas no sólo incluye un intercambio de energía o partículas, sino que también incluye un intercambio de información a medida que se correlacionan estos subsistemas entre sí de manera autónoma, es decir, sin un factor externo el cuál realize un feedback en él.
 
-Comprender como son utilizados estos flujos de información para hacer tareas útiles es de gran relevancia. Un ejemplo claro se encuentra en los sistemas biólogicos, donde ocurre adaptación sensorial, que corresponde al monitoreo que realiza un organismo a su ambiente mientras cambia su respuesta a él\cite{lan2012energy}. Para caracterizar este tipo de procesos,se considera un Demonio de Maxwell autónomo como un sistema bipartito. Donde una de sus partes consiste en el sistema controlado, mientras que la otra parte en el sistema que actúa como detector, el cuál ejerce control mediante una interacción física que afecta al sistema controlado.
+Comprender como son utilizados estos flujos de información para hacer tareas útiles es de gran relevancia. Un ejemplo claro se encuentra en los sistemas biólogicos, donde ocurre adaptación sensorial, que corresponde al monitoreo que realiza un organismo a su ambiente mientras cambia su respuesta a él\cite{lan2012energy}. Para caracterizar este tipo de procesos, se considera un Demonio de Maxwell autónomo como un sistema bipartito. Donde una de sus partes consiste en el sistema controlado, mientras que la otra parte en el sistema actúa como detector, el cuál ejerce control mediante una interacción física que afecta al sistema controlado.
 
-Es fundamental que el sistema sea autónomo, es decir que el Hamiltoniano total sea tiempo independiente e intervenciones externas, tales como mediciones y feedback no son consideradas.
+Es fundamental que el sistema sea autónomo, es decir que el Hamiltoniano total sea tiempo independiente e intervenciones externas, tales como mediciones y feedback no sean consideradas.
 
 \label{sec4:autonomo}
 \section{Descripción clásica}
@@ -845,21 +845,21 @@ Consideremos el caso de dos sistemas independientes, \( X \) e \( Y \), cada uno
 
 La evolución entre estados se modela como un proceso de Markov\cite{van1992stochastic}. Para estudiar la evolución conjunta del sistema, se asume un acoplamiento bipartito: en este contexto, esto significa que si el sistema total se encuentra en un estado conjunto $(x,y)$, sólo se permiten transiciones del tipo $(x,y) \to (x,y')$ o $(x,y) \to (x',y)$, pero no transiciones simultáneas del tipo $(x,y) \to (x',y')$.
 
-Esta estructura garantiza que la dinámica conjunta del sistema \( XY \) siga siendo markoviana, y que la probabilidad \( p(x,y) \) de encontrar al sistema en el estado \( (x,y) \) esté gobernada por la siguiente ecuación maestra:
+La probabilidad \( p(x,y) \) de encontrar al sistema en el estado \( (x,y) \) está gobernada por la siguiente ecuación maestra:
 
 \begin{equation*}
     d_{t}p(x,y) = \sum_{x',y'} \left[ W_{x,x'}^{y,y'}p(x',y')  - W_{x',x}^{y',y}p(x,y) \right].
 \end{equation*}
 
-Donde \( W_{x,x'}^{y,y'} \) representa la razón de transición para un salto del estado \( (x',y') \) al estado \( (x,y) \). Esta razón obedece la condición de balance detallado local:
+La tasa de transición \( W_{x,x'}^{y,y'} \) para un salto del estado \( (x',y') \) al estado \( (x,y) \), obedece la condición de balance detallado local:
 
 \[
 \ln \left( \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}} \right) = -\frac{\epsilon_{x,y} - \epsilon_{x',y'}}{T},
 \]
 
-la cual relaciona las razones de transición con el cambio de energía \( \Delta \epsilon = \epsilon_{x,y} - \epsilon_{x',y'} \) asociado al salto. Esta energía es intercambiada con el reservorio térmico local en forma de calor.
+la cual relaciona las tasas de transición con el cambio de energía \( \Delta \epsilon = \epsilon_{x,y} - \epsilon_{x',y'} \) asociado al salto respectivo. Esta energía es intercambiada con el reservorio térmico local en forma de calor.
 
-Debido a que el sistema es bipartito, la forma de las razones de transición corresponde a
+Debido a que el sistema es bipartito, la forma de las tasas de transición corresponde a
 
 \begin{equation*}
     W_{x,x'}^{y,y'} = \left\{ \begin{array}{lcc} w_{x,x'}^{y} & si & x \neq x'; y=y' \\ \\ w_{x}^{y,y'} & si & x=x';y\neq y'\\ \\ 0 & si & x \neq x'; y \neq y' \end{array} \right..
@@ -878,7 +878,7 @@ la ecuación maestra puede reescribirse como
 
 Donde  
 \[
-J_{x}^{y,y'} = w_{x}^{y,y'}\,p(x,y') - w_{x}^{y',y}\,p(x,y)
+J_{x}^{y,y'} = w_{x}^{y,y'}\,p(x,y') - w_{x}^{y',y}\,p(x,y),
 \]
 representa la corriente de probabilidad correspondiente a un salto entre los estados \( y' \to y \), manteniendo fijo el estado \( x \). Es decir, describe el flujo en la dirección \( Y \) para un valor dado de \( x \). De manera análoga, $J^{y}_{x,x'}$ describe el flujo en la dirección \( X\) para un valor fijo de \(y\).  
 
