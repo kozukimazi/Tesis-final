@@ -1019,101 +1019,136 @@ Para describir los flujos de información en un contexto cuántico, es necesario
     \partial_{t}\hat{\rho}_{S}(t) = - i[\hat{H}_{S} + \hat{H}_{LS},\hat{\rho}_{S}] + \mathcal{L}(\hat{\rho}_{S}),
 \end{equation*}
 
-El acoplamiento del sistema con múltiples reservorios $\alpha$ se modela a través de un generador de Lindblad, que se descompone como
+la cual en el caso de esta tesis, estará descrita por \ref{eqsec2:lindbladS} o \ref{sec2schrodingerthermo}. El acoplamiento del sistema con múltiples reservorios $\alpha$ se modela a través de un generador de Lindblad, que dependiendo si la ecuación maestra es global o semilocal, este se descompone como
 \begin{equation*}
-    \mathcal{L} = \sum_{\alpha} \mathcal{L}_{\alpha},
+    \mathcal{L} = \sum_{\alpha} \mathcal{L}_{\alpha,g},
 \end{equation*}
-donde cada superoperador $\mathcal{L}_{\alpha}$ representa la interacción del sistema con el reservorio $\alpha$.
 
-Si se asume que cada reservorio induce un equilibrio local descrito por un estado de Gibbs
+o bien
+
 \begin{equation*}
-    \hat{\rho}_{\text{eq}}^{\alpha} = \frac{1}{Z_{\beta_\alpha, \mu_\alpha}} e^{-\beta_\alpha (\hat{H}_S - \mu_\alpha \hat{N})},
+     \mathcal{L} = \sum_{\alpha} \mathcal{L}_{\alpha},
 \end{equation*}
-entonces es posible aplicar la desigualdad de Spohn \cite{spohn1978entropy}, para obtener una formulación generalizada de la segunda ley de la termodinámica, en términos de una desigualdad de Clausius para la tasa de producción de entropía local asociada al reservorio $\alpha$, es decir, 
+donde cada superoperador $\mathcal{L}_{\alpha,g}$ o $\mathcal{L}_{\alpha}$, representa la interacción del sistema con el reservorio $\alpha$. 
+
+
+
+Si se asume que cada reservorio induce un equilibrio local, este puede describirse mediante un estado de Gibbs. En los casos de acoplamientos globales o semilocales, dichos estados están dados, respectivamente, por:
+\begin{equation*}
+    \hat{\rho}_{\text{eq},g}^{\alpha} = \frac{1}{Z_{\beta_\alpha, \mu_\alpha;g}} e^{-\beta_\alpha (\hat{H}_S - \mu_\alpha \hat{N}_{S})} \hspace{18mm}  \hat{\rho}_{\text{eq}}^{\alpha} = \frac{1}{Z_{\beta_\alpha, \mu_\alpha}} e^{-\beta_\alpha (\hat{H}_{TD} - \mu_\alpha \hat{N}_{S})}, 
+\end{equation*}
+utilizando el estado de Gibbs correspondiente, es posible aplicar la desigualdad de Spohn \cite{spohn1978entropy}, para obtener una formulación generalizada de la segunda ley de la termodinámica, en términos de una desigualdad de Clausius para la tasa de producción de entropía local asociada al reservorio $\alpha$, es decir, para el caso global
 
 \begin{equation}
-    - \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq} )  ] \geq 0.
+    - \text{Tr}[ (\mathcal{L}_{\alpha,g} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq,g} )  ] \geq 0.
 \label{spohninfo}
 \end{equation}
 
-Cabe señalar, que este resultado se mantiene válido si el estado estacionario esta descrito por el Hamiltoniano termodinámico $\hat{H}_{\mathrm{TD}}$, en lugar del Hamiltoniano físico $\hat{H}_S$.
-
-Si se define la cantidad
-\begin{equation}
-    \dot{S}^{\alpha} = - \mathrm{Tr} \{ (\mathcal{L}_{\alpha} \hat{\rho}_S) \ln \hat{\rho}_S \},
-\end{equation}
-como la tasa de cambio de la entropía de von Neumann del sistema inducida por el acoplamiento al reservorio $\alpha$, con la entropía definida por
-\begin{equation}
-    S = - \mathrm{Tr} \{ \hat{\rho}_S \ln \hat{\rho}_S \},
-\end{equation}
-y se identifica el flujo de calor en el segundo término de la desigualdad de Spohn (ver ecuación~\ref{spohninfo}), se obtiene una expresión para la tasa de producción de entropía local asociada al reservorio $\alpha$:
-\begin{equation}
-    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0.
-\end{equation}
-Esta desigualdad corresponde a una forma local de la segunda ley de la termodinámica, donde $\dot{Q}^{\alpha}$ es el flujo de calor hacia el sistema desde el reservorio $\alpha$, y $\beta_{\alpha}$ su inversa de temperatura. El término $\dot{\sigma}^{\alpha}$ representa la producción neta de entropía asociada a dicho contacto, y es 
+Mientras que, para el caso semilocal
 
 \begin{equation}
-    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0,
-\label{sec4:localentropy}
+    - \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq} )  ] \geq 0.
+\label{spohninfolocal}
 \end{equation}
-que actúa como una inecuación de Clausius parcial. Esto es importante, ya que localmente se puede separar la producción de entropía en cantidades mayor a cero, similar a como se hizo en la descripción clásica. De hecho si se suman todas las tasas de cambio de entropía, se obtiene la derivada total $\partial_{t} S = \sum_{\alpha} \dot{S}^{\alpha}$, por lo tanto al sumar todas las producciones de entropía locales
+
+En los casos de ecuación maestra global o semilocal, se puede definir la siguiente cantidad:
+
+\begin{equation}
+    \dot{S}^{\alpha,g} = - \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha,g} \hat{\rho}_S) \ln \hat{\rho}_S \right\}, \hspace{10mm}
+    \dot{S}^{\alpha} = - \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha} \hat{\rho}_S) \ln \hat{\rho}_S \right\},
+\end{equation}
+la cual representa la tasa de cambio de la entropía de von Neumann del sistema inducida por el acoplamiento al reservorio $\alpha$. La entropía de von Neumann está dada por:
+
+\begin{equation}
+    S = - \mathrm{Tr} \left\{ \hat{\rho}_S \ln \hat{\rho}_S \right\}.
+\end{equation}
+
+De las desigualdades de Spohn (ver ecuación~\ref{spohninfo} y \ref{spohninfolocal}) se identifica el flujo de calor inducido por el reservorio $\alpha$ como:
 
 \begin{equation*}
-    \sum_{\alpha}\dot{\sigma}^{\alpha} = \partial_{t}S - \sum_{\alpha}\beta_{\alpha}J_{\alpha} = \dot{\sigma} \geq 0,
+    J_{\alpha,g} =  \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha,g} \hat{\rho}_S) (\hat{H}_{S}-\mu_{\alpha}\hat{N}_{S}) \right\} \hspace{15mm}
+    J_{\alpha} = \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha} \hat{\rho}_S) (\hat{H}_{TD}-\mu_{\alpha}\hat{N}_{S}) \right\}. 
+\end{equation*}
+
+De este modo, se obtienen expresiones diferenciadas para la tasa de producción de entropía local asociada al reservorio $\alpha$, correspondientes a los casos de acoplamiento global y semilocal, respectivamente:
+
+\begin{equation}
+    \dot{\sigma}^{\alpha,g} = \dot{S}^{\alpha,g} - \beta_{\alpha} J_{\alpha,g} \geq 0 \hspace{15mm}
+    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0. 
+    \label{sec4:localentropy}
+\end{equation}
+
+Esta desigualdad representa una forma local de la segunda ley de la termodinámica, en la que el término $J_\alpha$ (o $J_{\alpha,g}$ en el caso de acoplamiento global) corresponde al flujo de calor desde el reservorio $\alpha$ hacia el sistema, y $\beta_\alpha$ es la inversa de su temperatura. Esta formulación permite descomponer localmente la producción de entropía en contribuciones individualmente positivas, de manera análoga a lo que ocurre en el marco clásico. De hecho, al sumar todas las tasas de cambio de entropía, se recupera la derivada temporal total de la entropía, que para el caso global y semilocal es, respectivamente: 
+
+\begin{equation*}
+    \partial_t S_{g} = \sum_\alpha \dot{S}^{\alpha,g} \hspace{15mm}
+    \partial_t S = \sum_\alpha \dot{S}^\alpha.
+\end{equation*}    
+
+Esto implica que la suma de las producciones locales de entropía es
+
+\begin{equation*}
+    \sum_{\alpha}\dot{\sigma}^{\alpha,g} = \partial_{t}S_{g} - \sum_{\alpha}\beta_{\alpha}J_{\alpha,g} = \dot{\sigma}_{g} \geq 0 \hspace{15mm}
+    \sum_{\alpha}\dot{\sigma}^{\alpha} =\partial_{t}S  -\sum_{\alpha}\beta_{\alpha}J_{\alpha} = \dot{\sigma} \geq 0, 
 \end{equation*}
 que corresponde a la inecuación de Clausius estándar.
 
-Se puede notar que para el caso estacionario $\partial_{t}S = 0$, no necesariamente $\dot{S}^{\alpha}$ es cero. Sino que depende del flujo de calor que entra localmente por el disipador $\alpha$. También se puede tratar la inecuación para la energía libre, primero definiendo la corriente de energía y calor correspondientes al baño $\alpha$
+Se puede notar que para el caso estacionario $\partial_{t}S = \partial_{t}S_{g} = 0$, no necesariamente $\dot{S}^{\alpha}$ y $\dot{S}^{\alpha,g}$ son cero. Sino que depende del flujo de calor que entra localmente por el disipador $\alpha$. También se puede tratar la inecuación para la energía libre, primero definiendo la corriente de energía y potencia correspondientes al baño $\alpha$
 
 \begin{align*}
-    \dot{E}_{\alpha} & = \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{H}_{S}] \\
-    \dot{W}_{\alpha} & = \mu_{\alpha}\text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{N}].
+    \dot{E}_{\alpha,g} & = \text{Tr}[ (\mathcal{L}_{\alpha,g} \hat{\rho}_{S}) \hat{H}_{S}]   & \dot{E}_{\alpha} = \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{H}_{TD}]   \\
+    \dot{W}_{\alpha} & = \mu_{\alpha}\text{Tr}[ (\mathcal{L}_{\alpha,g} \hat{\rho}_{S}) \hat{N}_{S}] &  \dot{W}_{\alpha} = \mu_{\alpha}\text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{N}_{S}].
 \end{align*}
 
-En este caso se usa el Hamiltoniano $\hat{H}_{S}$ para escribir la tasa de cambio de la energía interna, sin embargo si el estado estacionario contiene $\hat{H}_{TD}$, entonces el flujo de energía es $ \dot{E}_{\alpha} = \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{H}_{TD}]$.
-
-Se cumple que la suma de las corrientes de energía provenientes de los distintos reservorios corresponde a la derivada temporal de la energía interna del sistema
+Para ambas ecuaciones maestras(global y semilocal), se cumple que la suma de las corrientes de energía provenientes de los distintos reservorios corresponde a la derivada temporal de la energía interna del sistema
 
 \begin{equation*}
-    \sum_{\alpha}\dot{E}_{\alpha} = \partial_{t}E.
+    \sum_{\alpha}\dot{E}_{\alpha,g} = \partial_{t}E_{g} \hspace{15mm} \sum_{\alpha}\dot{E}_{\alpha} = \partial_{t}E.
 \end{equation*}
 
 En el caso de un Hamiltoniano independiente del tiempo, no se realiza trabajo mecánico, por lo que sólo se considera trabajo químico. En consecuencia, la energía intercambiada con cada reservorio se descompone como
 
 \begin{equation*}
-    \dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}.
+    \dot{E}_{\alpha,g} = J_{\alpha,g} + \dot{W}_{\alpha,g} \hspace{15mm} \dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}. 
 \end{equation*}
 
-Multiplicando la ecuación \ref{sec4:localentropy} por la temperatura del reservorio $T_{\alpha}$ y reemplazando $J_{\alpha}$ mediante la expresión anterior, se obtiene
+Multiplicando las ecuaciones en \ref{sec4:localentropy} por la temperatura del reservorio $T_{\alpha}$ y reemplazando los flujos de calor mediante la expresiones anteriores, se obtiene
 
 \begin{equation}
-    T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W}_{\alpha} - \dot{\mathcal{F}}_{\alpha} \geq 0,
+    T_{\alpha} \dot{\sigma}^{\alpha,g} = \dot{W}_{\alpha,g} - \dot{\mathcal{F}}_{\alpha,g} \geq 0 \hspace{10mm}  
+    T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W}_{\alpha} - \dot{\mathcal{F}}_{\alpha} \geq 0,              
 \label{sec4:localfreerate}
 \end{equation}
-donde se ha definido la tasa de variación de la energía libre asociado al reservorio $\alpha$ como 
+donde se ha definido la tasa de variación de la energía libre asociado al reservorio $\alpha$ para el caso global y semilocal, como
 
 \begin{equation*}
+    \dot{\mathcal{F}}_{\alpha,g} = \dot{E}_{\alpha,g} - T_{\alpha}\dot{S}^{\alpha,g} \hspace{10mm}
     \dot{\mathcal{F}}_{\alpha} = \dot{E}_{\alpha} - T_{\alpha}\dot{S}^{\alpha}.
 \end{equation*}
 
-La inecuación \ref{sec4:localfreerate} consiste en una inecuación local de energía libre. Si se suman las inecuaciones de todos los reservorios, se tendrá 
+La desigualdades en \ref{sec4:localfreerate} consisten en una inecuaciones locales de energía libre correspondientes al reservorio $\alpha$. Si se suman las inecuaciones de todos los reservorios, para el caso global y semilocal se tendrá 
 
 \begin{equation}
+    \sum_{\alpha}T_{\alpha} \dot{\sigma}^{\alpha,g} = \dot{W}_{g} - \dot{\mathcal{F}}_{g} \geq 0 \hspace{10mm}
     \sum_{\alpha}T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W} - \dot{\mathcal{F}} \geq 0,
 \label{sec4:freeratefinal}
 \end{equation}
-donde $\dot{W} = \sum_{\alpha}\dot{W}_{\alpha}$ y la tasa de cambio de energía libre total es
+
+donde $\dot{W}_{g} = \sum_{\alpha}\dot{W}_{\alpha,g}$, $\dot{W} = \sum_{\alpha}\dot{W}_{\alpha}$  y las tasas de cambio de energía libre total son
 
 \begin{equation*}
+    \dot{\mathcal{F}}_{g} = \partial_{t}E_{g} - \sum_{\alpha}T_{\alpha} \dot{S}^{\alpha,g} \hspace{10mm}
     \dot{\mathcal{F}} = \partial_{t}E - \sum_{\alpha}T_{\alpha} \dot{S}^{\alpha}.
 \end{equation*}
 
-Para el caso particular, en qué todas las temperaturas son iguales, la tasa de cambio de energía libre $\dot{\mathcal{F}}$ se vuelve equivalente a la derivada temporal de la energía libre $\partial_{t}F = \partial_{t}(E-TS)$. Sólo en este caso \ref{sec4:localentropy} y \ref{sec4:freeratefinal} son equivalentes.
+Para el caso particular, en qué todas las temperaturas son iguales, las tasas de cambio de energía libre $\dot{\mathcal{F}}$ y $\dot{\mathcal{F}}_{g}$ se vuelven equivalentes a la derivadas temporales de la energía libre $\partial_{t}F = \partial_{t}(E-TS)$ y $\partial_{t}F_{g} = \partial_{t}(E_{g}-TS_{g})$. Sólo en este caso \ref{sec4:localentropy} y \ref{sec4:freeratefinal} son equivalentes.
 
-En el caso isotérmico, se cumple en el estado estacionario que $\dot{\mathcal{F}} = \partial_{t}F = 0$, lo que implica $\dot{W}>0$. Por lo tanto, el sistema no puede realizar trabajo neto si sólo va a intercambiar  calor con reservorios a la misma temperatura. La única forma de obtener trabajo neto del sistema, o sea, lograr que $\dot{W}<0$, es mediante la presencia de reservorios con distinta temperatura.  En tal caso, la tasa de cambio de energía libre no se anula y es $\dot{\mathcal{F}} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha} \neq 0$.   
+En el caso isotérmico, se cumple que en el estado estacionario $\dot{\mathcal{F}} = \partial_{t}F = 0$ y $\dot{\mathcal{F}}_{g} = \partial_{t}F_{g} = 0$, lo cual implica que $\dot{W} > 0$ y $\dot{W}_{g} > 0$. Por lo tanto, el sistema no puede realizar trabajo neto si solo intercambia calor con reservorios a la misma temperatura, independientemente de si la evolución es global o semilocal. La única forma de obtener trabajo neto del sistema —es decir, lograr que $\dot{W} < 0$ en el caso semilocal, o $\dot{W}_{g} < 0$ en el caso global— es mediante la presencia de reservorios a distintas temperaturas. En tal situación, las tasas de cambio de la energía libre ya no se anulan, es decir, $\dot{\mathcal{F}} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha} \neq 0$ y $\dot{\mathcal{F}}_{g} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha,g} \neq 0$.
 
 \section{Flujos de información en contexto cuántico}
-Suponga un sistema compuesto por dos subsistemas acoplados, descrito por el Hamiltoniano total
+En esta sección, el cálculo de los flujos de información se enfocará principalmente en el caso de evolución semilocal, ya que es el marco que se desarrollará en el resto de esta tesis. Para el caso de evolución global, los flujos de información pueden definirse de manera análoga, empleando las cantidades termodinámicas correspondientes a dicha evolución.
+
+Supóngase que el sistema $S$ está compuesto por dos subsistemas acoplados. En tal caso, su dinámica estará gobernada por un Hamiltoniano de la forma:
 
 \begin{equation*}
     \hat{H}_{S} = \hat{H}_{X} + \hat{H}_{Y} + \hat{H}_{XY}, 
@@ -1128,19 +1163,19 @@ por lo tanto, la tasa de producción de entropía total del sistema corresponde 
 De forma análoga a lo realizado en la descripción clásica, se busca establecer una relación entre las producciones locales de entropía y la información compartida entre subsistemas. Para ello, se utilizará la información mutua entre los dos subsistemas, definida como
  
 \begin{equation*}
-    I_{xy} = S_{X} + S_{Y} - S_{XY},
+    I_{XY} = S_{X} + S_{Y} - S_{XY},
 \end{equation*}
-donde $S_{i} = - \text{Tr}\{\hat{\rho}_{i}\ln \hat{\rho_{i}}\}$ es la entropía de Von Neumann del subsistema $i=X,Y$, y $\hat{\rho}_{i}$ consiste en la matriz densidad del subsistema $i$. 
+donde $S_{XY}$ es la entropía de von Neumann total, dada por $S_{XY} = -\mathrm{Tr}\{ \hat{\rho}_{S} \ln \hat{\rho}_{S} \}$, y $S_{i} = - \mathrm{Tr}\{ \hat{\rho}_{i} \ln \hat{\rho}_{i} \}$ corresponde a la entropía de von Neumann del subsistema $i = X, Y$. Aquí, $\hat{\rho}_{i}$ representa la matriz densidad reducida del subsistema $i$.
 
 Se puede separar la derivada temporal de la información mutua
 
 \begin{align*}
-    \partial_{t}I_{xy} & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \partial_{t}S_{XY} \\
+    \partial_{t}I_{XY} & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \partial_{t}S_{XY} \\
         & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \sum_{i=X,Y;\alpha_{i}}\dot{S}^{\alpha_{i}} \\
         & =  \partial_{t}S_{X} - \sum_{\alpha_{X}} \dot{S}^{\alpha_{X}} + \partial_{t}S_{Y} - \sum_{\alpha_{Y}} \dot{S}^{\alpha_{Y}} \\
         & = \dot{I}^{X} + \dot{I}^{Y},
 \end{align*}
-donde aparece el flujo de información correspondiente a cada subsistema $i=X,Y$, como la cantidad $\dot{I}^{i} = \partial_{t}S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} $. Luego, si se reemplaza $\sum_{\alpha_{i}}\dot{S}^{\alpha_{i}} \to \partial_{t}S_{i} - \dot{I}^{i}$, en las tasas de producción de entropía locales, quedan las inecuaciones  
+donde aparece el flujo de información correspondiente a cada subsistema $i = X, Y$, definido como la cantidad $\dot{I}^{i} = \partial_{t} S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}$. Si se reemplaza $\sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}$ por $\partial_{t} S^{i} - \dot{I}^{i}$ en las expresiones para las tasas de producción de entropía locales, se obtienen las siguientes inecuaciones:
 
 \begin{align*}
     \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}^{X} \geq 0 \\
@@ -1148,7 +1183,7 @@ donde aparece el flujo de información correspondiente a cada subsistema $i=X,Y$
 \end{align*}
 este resultado coincide con el obtenido en la descripción clásica. No obstante, su formulación en términos de entropía de von Neumann permite incorporar de forma natural los efectos cuánticos presentes en el sistema, lo cual resulta fundamental para caracterizar los flujos de información en regímenes donde las correlaciones cuánticas y las coherencias desempeñan un rol relevante.
 
-Si se considera que el subsistema $i$ esta conectado a a un reservorio isotermico de temperatura $T_i$, la tasa de cambio de la energía libre será
+Si se considera que el subsistema $i$ esta conectado a a un reservorio isotermico de temperatura $T_i$, la tasa de cambio de energía libre será
 \begin{align*}
     \dot{\mathcal{F}}_{i} & = \dot{E}_{i} - T_{i} \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}. 
 \end{align*}
@@ -1164,7 +1199,15 @@ y la tasa de cambio de energía libre del subsistema $i$ es
     \dot{\mathcal{F}}_{i} = \dot{E}_{i} + T_{i} \dot{I}^{i}.
 \end{equation*}
 
-Así, la tasa de cambio de la energía libre posee dos contribuciones: una correspondiente al intercambio de energía y otra asociada al flujo de información. Si se considera el régimen estacionario, donde la energía total permanece constante, es decir,
+De modo que, la tasa de cambio de la energía libre posee dos contribuciones: una correspondiente al intercambio de energía y otra asociada al flujo de información. Por ende, la potencia correspondiente al subsistema $i$ se encuentre acotada por
+
+\begin{equation*}
+    \dot{W}_{i} \geq \dot{E}_{i} + T_{i}\dot{I}_{i}.
+\end{equation*}
+
+La importancia de esta cota radica, en que la capacidad de que el subsistema $i$ realize un trabajo externo depende del flujo de información que entrega el sistema.
+
+Si se considera el régimen estacionario, donde la energía total permanece constante, es decir,
 \begin{equation*}
     \partial_{t}E = \dot{E}^{X} + \dot{E}^{Y} = 0,
 \end{equation*}
