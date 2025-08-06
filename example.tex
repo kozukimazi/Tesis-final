@@ -151,7 +151,7 @@ Reinsertando la forma integral en la ecuación \ref{eqsec2:linbladpic} y trazand
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -i  \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}.
 \end{equation}
 
-Ahora se asumirán dos cosas, primero sin pérdida de generalidad se asumirá $\text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \} = 0$\cite{breuer2002theory}. Segundo, debido a que todavía la ecuación depende de $\hat{\rho}(t)$ correspondiente al sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir
+Ahora se asumirán dos cosas, primero sin pérdida de generalidad se asumirá $\text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \} = 0$\cite{breuer2002theory}. Segundo, debido a que todavía la ecuación depende de $\hat{\rho}(t)$ correspondiente al sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir,
 
 \begin{equation*}
     \hat{\rho}(t) = \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B},
@@ -162,7 +162,7 @@ con lo cuál la ecuación \ref{eqsec2:linbladpic} se vuelve
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}.
 \end{equation} 
 
-Esta ecuación es lo que se denomina no Markoviana, ya que requiere conocer todo el pasado de $\hat{\rho}_{IS}(s)$. Para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\hat{\rho}_{IS}(t)$ dependa sólo del estado en que se encuentra en el instante de tiempo, es decir
+Esta ecuación es lo que se denomina no Markoviana, ya que requiere conocer todo el pasado de $\hat{\rho}_{IS}(s)$. Para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\hat{\rho}_{IS}(t)$ dependa sólo del estado en que se encuentra en el instante de tiempo, es decir,
 
 \begin{equation*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\},
@@ -361,7 +361,7 @@ donde $E(t)$ es la energía interna del sistema.
 %\end{equation*}
 
 \subsection{Segunda Ley}
-Para introducir la segunda ley, se parte de la condición inicial en que el sistema y el reservorio son sistemas no correlacionados, es decir 
+Para introducir la segunda ley, se parte de la condición inicial en que el sistema y el reservorio son sistemas no correlacionados, es decir, 
 
 \begin{equation*}
     \hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0)\otimes_{\alpha}\hat{\tau}_{\alpha} \hspace{12mm} \hat{\tau}_{\alpha} = \frac{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) }}{ \text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\} },
@@ -404,7 +404,7 @@ La probabilidad conjunta de que cada baño $\alpha$ tenga energía $E_{\alpha}$,
     P_{0}(\textbf{E},\textbf{N}) = \Pi_{\alpha}  \frac{e^{-\beta_{\alpha}(E_{\alpha} - \mu_{\alpha}N_{\alpha} )  }}{ \text{Tr}\{e^{-\beta_{\alpha}(E_{\alpha} - \mu_{\alpha}N_{\alpha} )  }\} }.
 \end{equation*}
 
-Para obtener $P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})$ que corresponde a la probabilidad condicional de que los reservorios tengan energías $\textbf{E}'$ y números de partículas $\textbf{N}'$ a tiempo $t$, dado que inicialmente se midieron los valores $\textbf{E}$ y $\textbf{N}$, se debe partir del estado proyectado a $t=0$ correspondiente a dicha medición inicial, es decir
+Para obtener $P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})$ que corresponde a la probabilidad condicional de que los reservorios tengan energías $\textbf{E}'$ y números de partículas $\textbf{N}'$ a tiempo $t$, dado que inicialmente se midieron los valores $\textbf{E}$ y $\textbf{N}$, se debe partir del estado proyectado a $t=0$ correspondiente a dicha medición inicial, es decir,
 
 \begin{equation*}
     \hat{\rho}'(0) = \frac{\hat{P}_{\textbf{E}, \textbf{N} }\hat{\rho}(0) \hat{P}_{\textbf{E}, \textbf{N} } }{\text{Tr}\{\hat{P}_{\textbf{E}, \textbf{N} }\hat{\rho}(0) \hat{P}_{\textbf{E}, \textbf{N} } \} },
@@ -618,7 +618,7 @@ Esto implica que el régimen de validez de la aproximación markoviana es
     \tau_{B} \ll \tau_{R} \hspace{10mm} |\lambda_{\alpha}| \ll \tau_{R}.
 \end{equation*}
 
-Esto tiene repercusiones importantes, ya que implica que la resolución de diferencias de energía en la medición del calor sea finita. Esta limitación se debe a que el parámetro $\lambda_{\alpha}$ y el calor medido en el baño $Q_{\alpha}$ son variables conjugadas en la distribución de probabilidad de calor y trabajo. Esto implica que ambas obedecen una relación de incertidumbre \cite{folland1997uncertainty}. Como consecuencia las diferencias de energía del orden de $1/\tau_{R}$ dejan de ser confiables, ya que en ese régimen el valor promedio del calor es comparable con su varianza, es decir
+Esto tiene repercusiones importantes, ya que implica que la resolución de diferencias de energía en la medición del calor sea finita. Esta limitación se debe a que el parámetro $\lambda_{\alpha}$ y el calor medido en el baño $Q_{\alpha}$ son variables conjugadas en la distribución de probabilidad de calor y trabajo. Esto implica que ambas obedecen una relación de incertidumbre \cite{folland1997uncertainty}. Como consecuencia las diferencias de energía del orden de $1/\tau_{R}$ dejan de ser confiables, ya que en ese régimen el valor promedio del calor es comparable con su varianza, es decir,
 
 \begin{equation*}
     \langle \Delta \lambda^{2}_{\alpha} \rangle \langle (\Delta Q_{\alpha})^{2}\rangle \geq \gamma \implies \langle (\Delta Q_{\alpha})^{2}\rangle  \geq \frac{\gamma}{\tau^{2}_{R}},
@@ -645,9 +645,9 @@ Incluso, ambas pueden cumplirse simultáneamente. Es posible agrupar las frecuen
     |\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}  &\hspace{10mm} \omega_{j} \in x_{q}, \omega_{j'} \in x_{q'}.
 \end{align*}
 
-Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente, por ende en  promedio se anulan.
+Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir, los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente, por ende en  promedio se anulan.
 
-La funcion correlación  espectral $\gamma^{\alpha}(\omega) = \int_{-\infty}^{\infty} ds e^{i \omega s} C^{\alpha}(s)$, describe la influencia del baño $\alpha$ en transiciones de estados con diferencia de energía $\omega$, donde los $\omega$ corresponden a las frecuencias de Bohr del sistema. Dentro de un mismo conjunto $x_{q}$, los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ contribuyen, respectivamente, a  $\gamma^{\alpha}(\omega_{j})$ y $\gamma^{\alpha}(\omega_{j'})$, es decir,  describen transiciones inducidas por el baño con frecuencias cercanas $\omega_{j}$ y $\omega_{j'}$. Sin embargo, debido a la resolución finita del calor intercambiado con el reservorio, no es posible distinguir entre transiciones con frecuencias dentro del mismo conjunto $x_q$. Por lo tanto, en las funciones correlación espectral se deben sustituir las frecuencias individuales $\omega_{j} \in x_{q}$ por una frecuencia auxiliar $\omega_{q}$, es decir en la ecuación \ref{ecmaestrafinalI} sustituir los términos  
+La funcion correlación  espectral $\gamma^{\alpha}(\omega) = \int_{-\infty}^{\infty} ds e^{i \omega s} C^{\alpha}(s)$, describe la influencia del baño $\alpha$ en transiciones de estados con diferencia de energía $\omega$, donde los $\omega$ corresponden a las frecuencias de Bohr del sistema. Dentro de un mismo conjunto $x_{q}$, los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ contribuyen, respectivamente, a  $\gamma^{\alpha}(\omega_{j})$ y $\gamma^{\alpha}(\omega_{j'})$, es decir,  describen transiciones inducidas por el baño con frecuencias cercanas $\omega_{j}$ y $\omega_{j'}$. Sin embargo, debido a la resolución finita del calor intercambiado con el reservorio, no es posible distinguir entre transiciones con frecuencias dentro del mismo conjunto $x_q$. Por lo tanto, en las funciones correlación espectral se deben sustituir las frecuencias individuales $\omega_{j} \in x_{q}$ por una frecuencia auxiliar $\omega_{q}$, es decir, en la ecuación \ref{ecmaestrafinalI} sustituir los términos  
 
 \begin{equation*}
     e^{i\omega_{j}s},e^{i\omega_{j'}s} \to e^{i\omega_{q}s} \hspace{10mm} |\omega_{q} - \omega_{j}| \ll 1/\tau_{B} \hspace{10mm} \forall \omega_{j} \in x_{q}.
@@ -824,7 +824,7 @@ Del cálculo de la entropía total se concluye que, sin realizar trabajo externo
 
 Sin embargo, esta paradoja fue resuelta posteriormente por Rolf Landauer, quien ``exorcizó'' al Demonio al señalar que, para que este pueda conocer la velocidad de las partículas, debe realizar mediciones. El proceso de medición, y en particular el borrado de la información asociada a dichas mediciones, implica una disipación de energía. Este resultado, conocido como el principio de Landauer, restablece la validez de la segunda ley\cite{Landauer_1961}.
 
-En sistemas no autónomos, es decir sistemas manipulados por un agente externo a través del control de cantidades macroscópicas, la paradoja de Maxwell ha sido abordada extensamente. Un ejemplo clásico es el motor de Szilard\cite{szilard1964decrease}, donde se ha logrado describir y ``exorcizar'' al Demonio cuantificando tanto la energía requerida para realizar una medición,  como el costo energético asociado al borrado de la memoria del Demonio, y el trabajo máximo que puede extraerse mediante retroalimentación (feedback) \cite{maruyama2009colloquium, sagawa2008second}. No obstante, el caso de sistemas autónomos, en los cuales no existe intervención externa y tanto la dinámica como la retroalimentación son generadas internamente, presenta características fundamentales que merecen un análisis más detallado.
+En sistemas no autónomos, es decir, sistemas manipulados por un agente externo a través del control de cantidades macroscópicas, la paradoja de Maxwell ha sido abordada extensamente. Un ejemplo clásico es el motor de Szilard\cite{szilard1964decrease}, donde se ha logrado describir y ``exorcizar'' al Demonio cuantificando tanto la energía requerida para realizar una medición,  como el costo energético asociado al borrado de la memoria del Demonio, y el trabajo máximo que puede extraerse mediante retroalimentación (feedback) \cite{maruyama2009colloquium, sagawa2008second}. No obstante, el caso de sistemas autónomos, en los cuales no existe intervención externa y tanto la dinámica como la retroalimentación son generadas internamente, presenta características fundamentales que merecen un análisis más detallado.
 
 \insertimage[\label{img:demon}]{ejemplos/Maxwelldemon1}{scale=0.9}{Esquema que representa al Demonio de Maxwell. Primero, consiste en los dos compartimientos que poseen el gas ideal distribuido de manera homogénea. Por último, al trasladar las partículas de un lado a otro, queda el compartimiento A con partículas frías mientras que el compartimiento B con partículas calientes. Esta figura fue tomada de \cite{link1} .}
 
@@ -835,7 +835,7 @@ Muchos procesos físicos requieren la interacción entre un conjunto de subsiste
 
 Comprender como son utilizados estos flujos de información para hacer tareas útiles es de gran relevancia. Un ejemplo claro se encuentra en los sistemas biólogicos, donde ocurre adaptación sensorial, que corresponde al monitoreo que realiza un organismo a su ambiente mientras cambia su respuesta a él\cite{lan2012energy}. Para caracterizar este tipo de procesos, se considera un Demonio de Maxwell autónomo como un sistema bipartito. Donde una de sus partes consiste en el sistema controlado, mientras que la otra parte en el sistema actúa como detector, el cuál ejerce control mediante una interacción física que afecta al sistema controlado.
 
-Es fundamental que el sistema sea autónomo, es decir que el Hamiltoniano total sea tiempo independiente e intervenciones externas, tales como mediciones y feedback no sean consideradas.
+Es fundamental que el sistema sea autónomo, es decir, que el Hamiltoniano total sea tiempo independiente e intervenciones externas, tales como mediciones y feedback no sean consideradas.
 
 \label{sec4:autonomo}
 \section{Descripción clásica}
@@ -898,7 +898,7 @@ De este modo, la variación de \( \mathcal{A} \) se puede descomponer en dos con
 
 \label{sec4:flujos}
 \section{Segunda ley de la termodinámica y flujos de información}
-El sistema conjunto \( XY \), al estar en contacto con un baño, constituye un sistema abierto que debe satisfacer la segunda ley de la termodinámica. Esta ley exige que la tasa de producción de entropía sea siempre mayor o igual que cero, es decir 
+El sistema conjunto \( XY \), al estar en contacto con un baño, constituye un sistema abierto que debe satisfacer la segunda ley de la termodinámica. Esta ley exige que la tasa de producción de entropía sea siempre mayor o igual que cero, es decir, 
 
 \begin{equation*}
     \dot{\sigma} = \partial_{t}S^{XY} + \dot{S}_{r} \geq 0. 
@@ -926,16 +926,16 @@ Estos resultados se demuestran en el apendice \ref{apendix4:secondlaw}.
 Una vez definida la tasa de producción de entropía, es necesario cuantificar la información compartida entre los dos subsistemas. La magnitud que permite medir las correlaciones entre ellos es la información mutua, la cual captura las correlaciones estadísticas entre las variables \( X \) e \( Y \). Se define por
 
 \begin{equation*}
-    I_{xy} = \sum_{x,y} p(x,y) \ln \frac{p(x,y)}{p(x)p(y)} \geq 0. 
+    I_{XY} = \sum_{x,y} p(x,y) \ln \frac{p(x,y)}{p(x)p(y)} \geq 0. 
 \end{equation*}
 
-De este modo, cuando \( I_{XY} \) es grande, los dos subsistemas están fuertemente correlacionados, mientras que $I_{xy}$ pequeña implica que los dos sistemas se conocen poco entre ellos, \( I_{XY} = 0 \) indica que son estadísticamente independientes.
+De este modo, cuando \( I_{XY} \) es grande, los dos subsistemas están fuertemente correlacionados, mientras que $I_{XY}$ pequeña implica que los dos sistemas se conocen poco entre ellos, \( I_{XY} = 0 \) indica que son estadísticamente independientes.
 
 Para definir los flujos de información, es necesario calcular la variación temporal de la información mutua. Esta puede descomponerse en dos contribuciones asociadas a las dinámicas de cada subsistema:
 \[
 \partial_t I_{XY} = \dot{I}^{X} + \dot{I}^{Y},
 \]
-donde \( \dot{I}^{X} \) representa la contribución debida a la evolución del subsistema \( X \) (con \( Y \) fijo), y \( \dot{I}^{Y} \) la correspondiente al subsistema \( Y \). Que explícitamente son
+donde \( \dot{I}^{X} \) representa la contribución debida a la evolución del subsistema \( X \) (con \( Y \) fijo), e \( \dot{I}^{Y} \) la correspondiente al subsistema \( Y \). Que explícitamente son
 
 \begin{align*}
     \dot{I}^{X} & = \sum_{x\geq x'; y}J_{x,x'}^{y} \ln \frac{ p(y|x) }{p(y|x')} \\
@@ -944,7 +944,7 @@ donde \( \dot{I}^{X} \) representa la contribución debida a la evolución del s
 
  La demostración de este resultado también está en el apendice \ref{apendix4:secondlaw}.
 
-Los términos \( \dot{I}^{X} \) y \( \dot{I}^{Y} \) cuantifican cómo fluye la información entre los dos subsistemas. Si \( \dot{I}^{X} > 0 \), significa que un salto en la dirección \( X \), en promedio, aumenta la información mutua \( I_{xy} \); es decir, el subsistema \( X \) está ``aprendiendo'' o midiendo al subsistema \( Y \).
+Los términos \( \dot{I}^{X} \) y \( \dot{I}^{Y} \) cuantifican cómo fluye la información entre los dos subsistemas. Si \( \dot{I}^{X} > 0 \), significa que un salto en la dirección \( X \), en promedio, aumenta la información mutua \( I_{XY} \); es decir, el subsistema \( X \) está ``aprendiendo'' o midiendo al subsistema \( Y \).
 
 En cambio, si \( \dot{I}^{X} < 0 \), los saltos en la dirección \( X \) reducen las correlaciones, lo que puede interpretarse como un consumo de información con el fin de extraer trabajo o energía.
 
@@ -983,7 +983,7 @@ Supongamos que se desconoce la existencia de la interacción entre el subsistema
 
 Si el subsistema \( X \) estuviera efectivamente aislado, se cumpliría \( \dot{\sigma}^{X}_0 \geq 0 \), en concordancia con la segunda ley de la termodinámica. Sin embargo, debido a su interacción con \( Y \), pueden darse situaciones en las que \( \dot{\sigma}^{X}_0 < 0 \), lo cual representa una violación aparente de la segunda ley. Esta puede interpretarse como el efecto de un Demonio de Maxwell, que utiliza la información que proviene de monitorear \(X \).
 
-En la evolución de sistemas autónomos que alcanzan un estado estacionario, se cumple que \( \partial_t I_{xy} = 0 \). En ese régimen, el flujo de información se conserva:
+En la evolución de sistemas autónomos que alcanzan un estado estacionario, se cumple que \( \partial_t I_{XY} = 0 \). En ese régimen, el flujo de información se conserva:
 \[
 \dot{\mathcal{I}} = \dot{I}^{X} = -\dot{I}^{Y},
 \]
@@ -1005,7 +1005,9 @@ Por otro lado, el subsistema \( Y \) está proporcionando información, la cual 
 -\dot{S}_{r}^{Y} \leq \dot{\mathcal{I}}.
 \]
 
-Esta relación es importante, ya que permite utilizar información para realizar trabajo útil en sistemas fuera del equilibrio, o incluso para extraer calor de un reservorio caliente.
+Por lo tanto, esta desigualdad permite que bajo ciertos parámetros $-\dot{S}^{Y}_{r}>0$, es decir, que fluya calor del baño a $Y$ y así extraer trabajo. De esta manera, $\dot{\mathcal{I}}$ corresponde a una cota del trabajo que puede ser extraído, mediante el procesamiento de información.
+
+En sistemas fuera del equilibrio, se puede utilizar información para realizar trabajo útil, o incluso para extraer calor de un reservorio caliente.
 
 Un ejemplo característico de este fenómeno se encuentra en sistemas sometidos a un gradiente de potencial, donde el Demonio de Maxwell se manifiesta a través del surgimiento de una corriente de partículas en contra del gradiente. Este efecto será analizado en detalle en las secciones posteriores.
 
@@ -1027,7 +1029,7 @@ Si se asume que cada reservorio induce un equilibrio local descrito por un estad
 \begin{equation*}
     \hat{\rho}_{\text{eq}}^{\alpha} = \frac{1}{Z_{\beta_\alpha, \mu_\alpha}} e^{-\beta_\alpha (\hat{H}_S - \mu_\alpha \hat{N})},
 \end{equation*}
-entonces es posible aplicar la desigualdad de Spohn \cite{spohn1978entropy}, para obtener una formulación generalizada de la segunda ley de la termodinámica, en términos de una desigualdad de Clausius para la tasa de producción de entropía local asociada al reservorio $\alpha$, es decir 
+entonces es posible aplicar la desigualdad de Spohn \cite{spohn1978entropy}, para obtener una formulación generalizada de la segunda ley de la termodinámica, en términos de una desigualdad de Clausius para la tasa de producción de entropía local asociada al reservorio $\alpha$, es decir, 
 
 \begin{equation}
     - \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq} )  ] \geq 0.
@@ -1046,7 +1048,7 @@ como la tasa de cambio de la entropía de von Neumann del sistema inducida por e
 \end{equation}
 y se identifica el flujo de calor en el segundo término de la desigualdad de Spohn (ver ecuación~\ref{spohninfo}), se obtiene una expresión para la tasa de producción de entropía local asociada al reservorio $\alpha$:
 \begin{equation}
-    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} \dot{Q}^{\alpha} \geq 0.
+    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0.
 \end{equation}
 Esta desigualdad corresponde a una forma local de la segunda ley de la termodinámica, donde $\dot{Q}^{\alpha}$ es el flujo de calor hacia el sistema desde el reservorio $\alpha$, y $\beta_{\alpha}$ su inversa de temperatura. El término $\dot{\sigma}^{\alpha}$ representa la producción neta de entropía asociada a dicho contacto, y es 
 
@@ -1162,7 +1164,7 @@ y la tasa de cambio de energía libre del subsistema $i$ es
     \dot{\mathcal{F}}_{i} = \dot{E}_{i} + T_{i} \dot{I}^{i}.
 \end{equation*}
 
-Así, la tasa de cambio de la energía libre posee dos contribuciones: una correspondiente al intercambio de energía y otra asociada al flujo de información. Si se considera el régimen estacionario, donde la energía total permanece constante, es decir
+Así, la tasa de cambio de la energía libre posee dos contribuciones: una correspondiente al intercambio de energía y otra asociada al flujo de información. Si se considera el régimen estacionario, donde la energía total permanece constante, es decir,
 \begin{equation*}
     \partial_{t}E = \dot{E}^{X} + \dot{E}^{Y} = 0,
 \end{equation*}
@@ -2673,7 +2675,7 @@ Estas ecuaciones son exactas, ya que hasta este punto no se ha introducido ningu
 \begin{equation*}
     \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{P}} = [\check{\mathcal{L}}_0,\check{\mathcal{P}}] = [\check{\mathcal{L}}_0,\check{\mathcal{Q}}] = 0, 
 \end{equation*}
-estas relaciones pueden entenderse de manera intuitiva; dado que $\check{\mathcal{V}}$ representa la perturbación responsable del túnel cuántico entre los puntos $L$ y $R$, su acción introduce coherencias en la matriz densidad. En particular, al aplicar $\check{\mathcal{V}}$ sobre un estado diagonal, se obtiene una componente no diagonal. Por lo tanto, al aplicar nuevamente el operador de proyección sobre la diagonal $\check{\mathcal{P}}$, esta contribución se anula, es decir $\check{\mathcal{P}} \check{\mathcal{V}} \check{\mathcal{P}} = 0$.
+estas relaciones pueden entenderse de manera intuitiva; dado que $\check{\mathcal{V}}$ representa la perturbación responsable del túnel cuántico entre los puntos $L$ y $R$, su acción introduce coherencias en la matriz densidad. En particular, al aplicar $\check{\mathcal{V}}$ sobre un estado diagonal, se obtiene una componente no diagonal. Por lo tanto, al aplicar nuevamente el operador de proyección sobre la diagonal $\check{\mathcal{P}}$, esta contribución se anula, es decir, $\check{\mathcal{P}} \check{\mathcal{V}} \check{\mathcal{P}} = 0$.
 
 Para continuar con el análisis de la ecuación \ref{apendix5exactp}, se harán dos suposiciones, en primer lugar, que el estado inicial no presenta coherencias, es decir, $\check{\mathcal{Q}}\hat{\rho}(0) = 0$; en segundo lugar, se sustituirá explícitamente el operador $\check{\mathcal{L}}_f$ en la ecuación \ref{apendix5exactp}. Con esto, se procederá a evaluar el término integral, utilizando las propiedades de los operadores de proyección de Nakajima-Zwanzig, comenzando por
 
