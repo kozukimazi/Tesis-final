@@ -1228,7 +1228,7 @@ Si se tiene $\dot{I}_{i}<0$, esta descomposición permite que el sistema pueda r
 En este capítulo se estudia un sistema compuesto por tres puntos cuánticos acoplados a múltiples reservorios térmicos. La evolución del sistema se analiza mediante la ecuación de Lindblad desarrollada en la sección \ref{sec2lindbladconsistency}. En la sección \ref{sec5:modelo} se introduce el Hamiltoniano del sistema reducido y su entorno. Posteriormente, en la sección \ref{sec5:transporte}, se analiza el comportamiento del sistema en un escenario típico de transporte cuántico. En la sección \ref{sec5:demonio1}, se establecen las condiciones bajo las cuales la dinámica del sistema puede interpretarse como la de un Demonio de Maxwell autónomo. Finalmente, en la sección \ref{sec5:demonio}, se compara este comportamiento con su contraparte clásica, destacando las diferencias inducidas por los efectos cuánticos.
 
 \section{Modelo teórico}
-El sistema reducido está compuesto por tres puntos cuánticos. Uno de ellos posee un nivel de energía $\epsilon_d$ y se encuentra acoplado, mediante una interacción de Coulomb $U$, a los otros dos puntos cuánticos. Estos últimos tienen una energía de sitio $\epsilon$ y están conectados entre sí por un término de \textit{hopping} $g$, además de una interacción de Coulomb $U_f$. Cada uno de los niveles de energía se encuentra acoplado a un baño distinto. 
+El sistema reducido está compuesto por tres puntos cuánticos. Uno de ellos posee un nivel de energía $\epsilon_D$ y se encuentra acoplado, mediante una interacción de Coulomb $U$, a los otros dos puntos cuánticos. Estos últimos tienen una energía de sitio $\epsilon$ y están conectados entre sí por un término de \textit{hopping} $g$, además de una interacción de Coulomb $U_f$. Cada uno de los niveles de energía se encuentra acoplado a un baño distinto. 
 
 La configuración del sistema reducido se ilustra en la Figura~\ref{img:sistema3puntos}.
 
@@ -1238,7 +1238,7 @@ La configuración del sistema reducido se ilustra en la Figura~\ref{img:sistema3
 El Hamiltoniano del sistema reducido esta dado por 
 
 \begin{align*}
-    \hat{H}_{S} & = \epsilon_{d}\hat{d}^{\dagger}_{D}\hat{d}_{D} + \epsilon \hat{d}^{\dagger}_{L}\hat{d}_{L} + \epsilon \hat{d}^{\dagger}_{R}\hat{d}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
+    \hat{H}_{S} & = \epsilon_{D}\hat{d}^{\dagger}_{D}\hat{d}_{D} + \epsilon \hat{d}^{\dagger}_{L}\hat{d}_{L} + \epsilon \hat{d}^{\dagger}_{R}\hat{d}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
           & + U(\hat{n}_{D}\hat{n}_{L} + \hat{n}_{D}\hat{n}_{R} )  + U_{f}\hat{n}_{R}\hat{n}_{L},
 \end{align*}
 donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ es el operador de número del sitio $i$, y los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
@@ -1260,11 +1260,11 @@ se puede representar el Hamiltoniano del sistema en forma matricial
         0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
         0 & \epsilon_{L} & g & 0 & 0 & 0 & 0 & 0 \\
         0 & g & \epsilon_{R} & 0 & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & \epsilon_{d} & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & \epsilon_{D} & 0 & 0 & 0 & 0 \\
         0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{R}  + U_{f} & 0 & 0 & 0 \\
-        0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{d} + U & g & 0 \\
-        0 & 0 & 0 & 0 & 0 & g & \epsilon_{R} + \epsilon_{d} + U & 0 \\
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{R}  + \epsilon_{d} + 2U + U_{f} 
+        0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{D} + U & g & 0 \\
+        0 & 0 & 0 & 0 & 0 & g & \epsilon_{R} + \epsilon_{D} + U & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{R}  + \epsilon_{D} + 2U + U_{f} 
         \end{bmatrix}.
 \end{equation*}
 
@@ -1273,7 +1273,7 @@ Por otro lado, el Hamiltoniano del baño y la interacción con el sistema se des
 \begin{equation*}
     \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha l} \hat{c}^{\dagger}_{\alpha l}\hat{c}_{\alpha l} \hspace{10mm} \hat{V}_{\alpha} = \sum_{l} t_{\alpha l} ( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha l} + \hat{c}^{\dagger}_{\alpha l} \hat{d}_{\alpha} ),
 \end{equation*}
-donde $\alpha = L,R,D$ denota los tres reservorios acoplados a cada punto cuántico, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha l}$ sus energías, y $t_{\alpha l}$ los parámetros de acoplamiento entre el sistema y baño. 
+donde $\alpha = L,R,D$ denota los tres reservorios acoplados a cada punto cuántico, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha l}$ sus energías, y $t_{\alpha l}$ los parámetros reales que describen el acoplamiento entre el sistema y baño. 
 
 A partir del término de interacción $\hat{V}$, es posible identificar los operadores asociados al sistema y al baño
 
@@ -1308,13 +1308,13 @@ donde el operador de Lindblad $\mathcal{L}$ se descompone como una suma de contr
 \end{align*}
 
 \begin{align*}
-    \mathcal{L}_{D} & = \gamma_{D}(\epsilon_{d})(f_{D}(\epsilon_{d})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{d})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \gamma_{D}(\epsilon_{d}+U)f_{D}(\epsilon_{d}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
-                    & + \gamma_{D}(\epsilon_{d}+U)[1-f_{D}(\epsilon_{d}+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
-                   & + \gamma_{D}(\epsilon_{d}+2U)(f_{D}(\epsilon_{d}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{d}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
+    \mathcal{L}_{D} & = \gamma_{D}(\epsilon_{D})(f_{D}(\epsilon_{D})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{D})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
+                    & + \gamma_{D}(\epsilon_{D}+U)f_{D}(\epsilon_{D}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
+                    & + \gamma_{D}(\epsilon_{D}+U)[1-f_{D}(\epsilon_{D}+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
+                   & + \gamma_{D}(\epsilon_{D}+2U)(f_{D}(\epsilon_{D}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{D}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
 \end{align*}
 
-Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ y el operador $\mathcal{D}_{0}$  
+Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ la distribución de Fermi, las tasas de túnel $\gamma_{\alpha}(\omega)= 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$ y el operador $\mathcal{D}_{0}$  
 
 \begin{equation*}
     \mathcal{D}_{0}[\hat{A}]\hat{\rho} = \hat{A}\hat{\rho}\hat{A}^{\dagger}- \frac{1}{2} \{\hat{A }^{\dagger}\hat{A},\hat{\rho} \}.
@@ -1328,14 +1328,16 @@ Despreciando el término de \textit{Lamb Shift} $\hat{H}_{LS}$, como se discute 
 \end{equation}
 donde $\hat{\rho}_{S}(t)$ es la matriz densidad del sistema reducido. A partir de esta ecuación, es posible calcular numéricamente la evolución del sistema y obtener las magnitudes termodinámicas relevantes.
 
+Un aspecto importante a destacar es que los disipadores $\mathcal{L}_i$ en la ecuación maestra semilocal están formulados en función de operadores locales del sitio, lo que permite describir la evolución del sistema a partir de dinámicas locales. En contraste, la ecuación maestra global describe la evolución del sistema utilizando operadores globales, lo que dificulta el análisis detallado de la dinámica. En este sentido, la descripción semilocal resulta más conveniente, ya que permite distinguir las cantidades termodinámicas asociadas a cada subsistema, en particular los flujos de información. Es de especial interés determinar bajo qué condiciones un Hamiltoniano $\hat{H}_S$ permite que los operadores locales se mantengan como tales tras la agrupación de frecuencias. Un caso en el que dicha agrupación no conduce a disipadores locales ocurre, por ejemplo, cuando las interacciones de tipo Coulomb entre los diferentes sitios son todas distintas.
+
 \label{sec5:modelo}
 
 \newpage
 
 \section{Estudio del transporte}
-Se aborda inicialmente el caso en que las razones de túnel no dependen de la frecuencia, es decir, $\gamma_{i}(\omega) = \gamma_{i}$. Y se estudia el flujo de corriente generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las razones de túnel $\gamma_{L} = \gamma_{R} = 1/100$ y $\gamma_{d} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
+Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\gamma_{i}(\omega) = \gamma_{i}$. Y se estudia el flujo de corriente generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las tasas de túnel $\gamma_{L} = \gamma_{R} = 1/100$ y $\gamma_{D} = 1/2$?. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
-\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{d} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{d} = \mu_{d} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \).}
+\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \).}
 
 La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \), la corriente de partículas \( \dot{N}_L = -\dot{N}_R \) que fluye del baño \( L \) al baño \( R \) también aumenta. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio \( L \) impulsa el transporte hacia \( R \). Asimismo, se puede analizar la potencia suministrada al sistema en función de \( eV \).
 
