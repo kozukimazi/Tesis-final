@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1754515858.15881 "main.aux" "main.bbl" "main" 1754516074.83047 0
+["bibtex main"] 1754577995.2857 "main.aux" "main.bbl" "main" 1754578128.62585 0
   "./library.bib" 1754411482.04847 16917 58a48ae47ccbacd6690f1e5caa3d2a7e ""
   "./natnumurl.bst" 1741616338.63589 20221 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1754516074.19653 61554 c5b95c748b0225e4c85c8070181233b7 "pdflatex"
+  "main.aux" 1754578127.61383 61554 ceb3717ee420faf570b364db228b92e1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1754516070.95201 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1754516074.83079 0
+["pdflatex"] 1754578122.38488 "/home/mazi/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1754578128.62664 0
   "/etc/texmf/web2c/texmf.cnf" 1736440629.37754 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/mazi/Desktop/Tesis-final/main.tex" 1754411482.06247 4449 01795a17ee9d8a5010d76b077fd37bde ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -283,7 +283,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1736440671.36949 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736440750 8213355 ec0621fc55a519b6832cde314db671a6 ""
-  "example.tex" 1754516070.59268 240271 11a97e84b1488ef2770d11dc84c42890 ""
+  "example.tex" 1754578121.96251 240435 e6c2457dd4c39df46c11993b11ea4b48 ""
   "img//departamentos/uchile2.pdf" 1741616338.6209 18772 45804d175d195d86f4f268558e529a29 ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741616338.6229 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/cminusimag.pdf" 1754411482.02748 19811 8ad2660cb4fc50e71e4320011e4bd261 ""
@@ -313,11 +313,11 @@
   "img//ejemplos/thermoquantitiesdemon.pdf" 1754411482.02948 20172 19cb65b789796c100c0f316edaf1556c ""
   "img//ejemplos/thermoquantum.pdf" 1754411482.04847 19983 f6d35b08ba112653875058d1b6b77eff ""
   "img//ejemplos/worktp.pdf" 1754411482.04847 12225 1328f5361aad90ba78ad2e202b614e0f ""
-  "main.aux" 1754516074.19653 61554 c5b95c748b0225e4c85c8070181233b7 "pdflatex"
-  "main.bbl" 1754515858.29406 13725 e426619d22fcab8e5517165c744cee3d "bibtex main"
-  "main.lof" 1754516074.21448 6883 e110946910ad89c7c24df10d3b638e0b "pdflatex"
+  "main.aux" 1754578127.61383 61554 ceb3717ee420faf570b364db228b92e1 "pdflatex"
+  "main.bbl" 1754577995.52095 13725 e426619d22fcab8e5517165c744cee3d "bibtex main"
+  "main.lof" 1754578127.64082 6883 e110946910ad89c7c24df10d3b638e0b "pdflatex"
   "main.tex" 1754411482.06247 4449 01795a17ee9d8a5010d76b077fd37bde ""
-  "main.toc" 1754516074.21448 5412 328bdd2bfd97e964c95d4090bd202733 "pdflatex"
+  "main.toc" 1754578127.64082 5412 328bdd2bfd97e964c95d4090bd202733 "pdflatex"
   "template.tex" 1741616338.63889 281920 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741616338.63889 21577 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
