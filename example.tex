@@ -727,34 +727,36 @@ Para las leyes de la termodinámica, se debe hacer la distinción para la ecuaci
 
 Por otro lado, para la ecuación maestra semilocal, la energía interna se redefine con el Hamiltoniano termodinámico mencionado anteriormente 
 
-\begin{equation*}
+\begin{equation}
     E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t) \}.
-\end{equation*}
+\label{sec2:energyeq}
+\end{equation}
 
 La corriente de calor y el trabajo entregado por el baño $\alpha$ para la ecuación global será
 
 \begin{equation*}
-    J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha,g} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \}.
+    J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \} \hspace{12mm} \dot{W}_{\alpha,g} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \}.
 \end{equation*}
 
 Donde $\mathcal{L}_{\alpha,g}$ es el superoperador de Lindblad asociado al baño $\alpha$, correspondiente a la ecuación maestra global \ref{eqsec2:lindbladS}.
 
 Finalmente, la corriente de calor y el trabajo entregado por el baño $\alpha$ para el caso semilocal será
 
-\begin{equation*}
-    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \}.
-\end{equation*}
+\begin{equation}
+    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} \dot{W}_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \}.
+\label{sec2:heatworkeq}
+\end{equation}
 
 Estas definiciones automáticamente cumplen con la primera ley de la termodinámica, ya que si se deriva la energía interna para la ecuación global 
 
 \begin{equation*}
-    \partial_{t}E_{g}(t) = \text{Tr}\{ \hat{H}_{S}\partial_{t}\hat{\rho}_{S}(t) \} = \sum_{\alpha}[J_{\alpha,g} + P_{\alpha,g}].
+    \partial_{t}E_{g}(t) = \text{Tr}\{ \hat{H}_{S}\partial_{t}\hat{\rho}_{S}(t) \} = \sum_{\alpha}[J_{\alpha,g} + \dot{W}_{\alpha,g}].
 \end{equation*}
 
 También, si se aplica la relación de conmutación $[\hat{H}_{TD},\hat{H}_{S} + \hat{H}_{LS}] = 0$, se obtiene la primera ley para el caso semilocal 
 
 \begin{equation*}
-    \partial_{t}E(t) = \text{Tr}\{ \hat{H}_{TD}\partial_{t}\hat{\rho}_{S}(t) \} = \sum_{\alpha}[J_{\alpha} + P_{\alpha}].
+    \partial_{t}E(t) = \text{Tr}\{ \hat{H}_{TD}\partial_{t}\hat{\rho}_{S}(t) \} = \sum_{\alpha}[J_{\alpha} + \dot{W}_{\alpha}].
 \end{equation*}
 
 \subsection{Ley cero}
@@ -1219,7 +1221,7 @@ En el caso $\dot{E}^{X} = \dot{E}^{Y} \approx 0 $, la cota para la potencia $\do
      \dot{W}_{i} \geq T_{i}\dot{I}_{i}.
 \end{equation*}
 
-Si se tiene $\dot{I}_{i}<0$, esta descomposición permite que el sistema pueda realizar trabajo a partir de una contribución dominante de la información, incluso en ausencia de diferencias térmicas significativas. Tal mecanismo constituye lo que se conoce como una máquina de la información, en la que los flujos de información entre subsistemas juegan un rol principal, permitiendo la extracción de trabajo en un régimen puramente informacional.
+Si se tiene $\dot{I}_{i}<0$, esta cota permite que el sistema pueda realizar trabajo a partir de una contribución dominante de la información, incluso en ausencia de diferencias térmicas significativas. Tal mecanismo constituye lo que se conoce como una máquina de la información, en la que los flujos de información entre subsistemas juegan un rol principal, permitiendo la extracción de trabajo en un régimen puramente informacional.
 
 
 \label{sec4:flujos0}
@@ -1233,7 +1235,7 @@ El sistema reducido está compuesto por tres puntos cuánticos. Uno de ellos pos
 La configuración del sistema reducido se ilustra en la Figura~\ref{img:sistema3puntos}.
 
 
-\insertimage[\label{img:sistema3puntos}]{ejemplos/semilocal1}{scale=0.36}{Esquema que representa el sistema reducido compuesto por tres puntos cuánticos, modelados como tres niveles de energía. Estos niveles presentan interacción de Coulomb repulsiva entre ellos, y cada uno está acoplado a un baño térmico distinto.}
+\insertimage[\label{img:sistema3puntos}]{ejemplos/semilocal1.pdf}{scale=0.36}{Esquema que representa el sistema reducido compuesto por tres puntos cuánticos, modelados como tres niveles de energía. Estos niveles presentan interacción de Coulomb repulsiva entre ellos, y cada uno está acoplado a un baño térmico distinto.}
 
 El Hamiltoniano del sistema reducido esta dado por 
 
@@ -1294,27 +1296,27 @@ La evolución no unitaria del sistema de tres puntos cuánticos, inducida por su
 donde el operador de Lindblad $\mathcal{L}$ se descompone como una suma de contribuciones individuales, una por cada baño acoplado al sistema. Explícitamente cada contribución $\mathcal{L}_{i}$ corresponde a 
 
 \begin{align*}
-    \mathcal{L}_{R} & = \gamma_{R}(\epsilon)(f_{R}(\epsilon)\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \gamma_{R}(\epsilon+U)(f_{R}(\epsilon+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon+U)]\mathcal{D}_{0}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  ) \\
-                   & + \gamma_{R}(\epsilon+U_{f})(f_{R}(\epsilon+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U_{f})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  ) \\
-                  & + \gamma_{R}(\epsilon+U+U_{f})(f_{R}(\epsilon+U+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}\hat{n}_{D}\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U+U_{f})]\mathcal{D}_{0}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L} ]  ) 
+    \mathcal{L}_{R} & = \kappa_{R}(\epsilon)(f_{R}(\epsilon)\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
+                    & + \kappa_{R}(\epsilon+U)(f_{R}(\epsilon+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon+U)]\mathcal{D}_{0}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  ) \\
+                   & + \kappa_{R}(\epsilon+U_{f})(f_{R}(\epsilon+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U_{f})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  ) \\
+                  & + \kappa_{R}(\epsilon+U+U_{f})(f_{R}(\epsilon+U+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}\hat{n}_{D}\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U+U_{f})]\mathcal{D}_{0}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L} ]  ) 
 \end{align*}
 
 \begin{align*}
-    \mathcal{L}_{L} & = \gamma_{L}(\epsilon)(f_{L}(\epsilon)\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  )  \\
-                    & + \gamma_{L}(\epsilon+U)(f_{L}(\epsilon+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon+U)]\mathcal{D}_{0}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  ) \\
-                   & + \gamma_{L}(\epsilon+U_{f})(f_{L}(\epsilon+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U_{f})]\mathcal{D}_{0}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  ) \\
-                  & + \gamma_{L}(\epsilon+U+U_{f})(f_{L}(\epsilon+U+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}\hat{n}_{D}\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U+U_{f})]\mathcal{D}_{0}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R} ]  ) 
+    \mathcal{L}_{L} & = \kappa_{L}(\epsilon)(f_{L}(\epsilon)\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  )  \\
+                    & + \kappa_{L}(\epsilon+U)(f_{L}(\epsilon+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon+U)]\mathcal{D}_{0}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  ) \\
+                   & + \kappa_{L}(\epsilon+U_{f})(f_{L}(\epsilon+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U_{f})]\mathcal{D}_{0}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  ) \\
+                  & + \kappa_{L}(\epsilon+U+U_{f})(f_{L}(\epsilon+U+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}\hat{n}_{D}\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U+U_{f})]\mathcal{D}_{0}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R} ]  ) 
 \end{align*}
 
 \begin{align*}
-    \mathcal{L}_{D} & = \gamma_{D}(\epsilon_{D})(f_{D}(\epsilon_{D})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{D})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \gamma_{D}(\epsilon_{D}+U)f_{D}(\epsilon_{D}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
-                    & + \gamma_{D}(\epsilon_{D}+U)[1-f_{D}(\epsilon_{D}+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
-                   & + \gamma_{D}(\epsilon_{D}+2U)(f_{D}(\epsilon_{D}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{D}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
+    \mathcal{L}_{D} & = \kappa_{D}(\epsilon_{D})(f_{D}(\epsilon_{D})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{D})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
+                    & + \kappa_{D}(\epsilon_{D}+U)f_{D}(\epsilon_{D}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
+                    & + \kappa_{D}(\epsilon_{D}+U)[1-f_{D}(\epsilon_{D}+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
+                   & + \kappa_{D}(\epsilon_{D}+2U)(f_{D}(\epsilon_{D}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{D}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
 \end{align*}
 
-Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ la distribución de Fermi, las tasas de túnel $\gamma_{\alpha}(\omega)= 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$ y el operador $\mathcal{D}_{0}$  
+Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ la distribución de Fermi, las tasas de túnel $\kappa_{\alpha}(\omega)= 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$ y el operador $\mathcal{D}_{0}$  
 
 \begin{equation*}
     \mathcal{D}_{0}[\hat{A}]\hat{\rho} = \hat{A}\hat{\rho}\hat{A}^{\dagger}- \frac{1}{2} \{\hat{A }^{\dagger}\hat{A},\hat{\rho} \}.
@@ -1335,36 +1337,36 @@ Un aspecto importante a destacar es que los disipadores $\mathcal{L}_i$ en la ec
 \newpage
 
 \section{Estudio del transporte}
-Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\gamma_{i}(\omega) = \gamma_{i}$. Y se estudia el flujo de corriente generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las tasas de túnel $\gamma_{L} = \gamma_{R} = 1/100$ y $\gamma_{D} = 1/2$?. Los resultados se muestran en la Figura~\ref{img:transporte1}.
+Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. Y se estudia el flujo de corriente generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las tasas de túnel $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
 \insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \).}
 
-La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \), la corriente de partículas \( \dot{N}_L = -\dot{N}_R \) que fluye del baño \( L \) al baño \( R \) también aumenta. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio \( L \) impulsa el transporte hacia \( R \). Asimismo, se puede analizar la potencia suministrada al sistema en función de \( eV \).
+La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \), la corriente de partículas \( \dot{N}_L = -\dot{N}_R \) que fluye del baño \( L \) al baño \( R \) también aumenta. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio \( L \) impulsa el transporte hacia \( R \). Asimismo, se puede analizar la potencia suministrada al sistema, dada por \ref{sec2:heatworkeq}, en función de \( eV \).
 
 \insertimage[\label{img:transporte2}]{ejemplos/worktp.pdf}{scale =0.40}{Potencia entregada por los reservorios en función de $eV/T$.}
     
 La Figura \ref{img:transporte2} muestra que el conjunto de reservorios \( L \) y \( R \) entrega trabajo al sistema para mantener la corriente de partículas. Este comportamiento es consistente desde el punto de vista físico, ya que el paso de electrones desde un potencial químico mayor hacia uno menor implica una transferencia de energía al sistema, que se manifiesta como trabajo. Por otro lado, dado que el reservorio \( D \) no intercambia partículas en promedio, la potencia que este entrega es nula.
 
- Asimismo, pueden examinarse los flujos de calor que reciben los sistemas $LR$ y $D$
-
+ A continuación, pueden examinarse los flujos de calor \ref{sec2:heatworkeq} que reciben los sistemas $LR$ y $D$
 
 \insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale =0.40}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
     
 Como uno puede ver, para $eV/T \lessapprox 2$ , el sistema $LR$ en total recibe calor de los reservorios $L$ y $R$. Para $eV/T \gtrapprox 2$ el sistema $LR$ en total entrega calor a los reservorios $L$ y $R$. 
 
-Para completar el análisis termodinámico a partir de la primera ley $\dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}$, se grafican a continuación los flujos de energía involucrados
+Para completar el análisis termodinámico a partir de la primera ley $\dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}$, se grafican a continuación los flujos de energía involucrados, descritos por \ref{sec2:energyeq}
 
 \insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale =0.43}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
 
-En el estado estacionario, la condición \( \partial_t E = 0 \) implica que \( \dot{E}_{LR} = -\dot{E}_d \), lo cual se observa en la Figura \ref{img:transporte4}. Allí, el flujo de energía hacia el sistema \( LR \) es positivo, mientras que el flujo desde el subsistema \( D \) es negativo. Esto indica que el sistema \( LR \) recibe energía proveniente de los reservorios \( L \) y \( R \), la cual es posteriormente transferida al subsistema \( D \) y desde allí al reservorio \( D \). Este comportamiento es coherente con el hecho de que la temperatura del reservorio \( D \) es menor (\( T_{d} < T_{L} = T_{R} \)), y por lo tanto, el flujo de calor se dirige desde los reservorios más calientes hacia el más frío.
+En el estado estacionario, la condición \( \partial_t E = 0 \) implica que \( \dot{E}_{LR} = -\dot{E}_D \), lo cual se corrobora en la Figura \ref{img:transporte4}. En ella, el flujo de energía \( \dot{E}_{LR} \) es positivo, mientras que \( \dot{E}_D \) resulta negativo. Dado que \( \dot{W}_{D} = 0 \), se concluye que el flujo de calor hacia el demonio está dado por \( J_D = \dot{E}_D < 0 \); es decir, el reservorio \( D \) absorbe calor. Por su parte, el sistema \( LR \) recibe energía de los reservorios \( L \) y \( R \), la cual es posteriormente transferida al subsistema \( D \), para finalmente ser absorbida por su respectivo baño térmico. Este comportamiento concuerda con la primera ley de la termodinámica, ya que la energía suministrada por los reservorios de mayor temperatura (\( T_L = T_R > T_D \)) se conserva y es disipada hacia el reservorio de menor temperatura.
 
-Para analizar la presencia de efectos cuánticos en el estado estacionario, se calcularán dos cantidades relevantes. La primera de ellas es la norma-\( l_{1} \), \( \mathcal{C}_{l_{1}} \), que permite cuantificar las coherencias en el sistema \( LR \).
+Para analizar la presencia de efectos cuánticos en el estado estacionario, se calcularán dos cantidades relevantes. La primera de ellas es la norma-\( l_{1} \), \( \mathcal{C}_{l_{1}} \), que permite cuantificar las coherencias en el sistema \( LR \), y está dada por
 
 
 \begin{equation*}
-    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{S;i,j}|,
+    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{S;i,j}|.
 \end{equation*}
-otro efecto cuántico relevante de estudiar es el entrelazamiento entre modos específicos del sistema. En particular, se analiza el entrelazamiento entre los pares de estados \(|1,0,0\rangle, |0,1,0\rangle\) y \(|1,0,1\rangle, |0,1,1\rangle\). Para cuantificar este tipo de correlaciones no clásicas se utiliza la concurrencia \( \mathcal{C}_{\text{on}} \) \cite{hill1997entanglement, wootters1998entanglement}, definida como
+
+Otro efecto cuántico relevante de estudiar es el entrelazamiento entre modos específicos del sistema. En particular, se analiza el entrelazamiento entre los pares de estados \(|1,0,0\rangle, |0,1,0\rangle\) y \(|1,0,1\rangle, |0,1,1\rangle\). Para cuantificar este tipo de correlaciones no clásicas se utiliza la concurrencia \( \mathcal{C}_{\text{on}} \) \cite{hill1997entanglement, wootters1998entanglement}, definida como
 
 \begin{equation*}
     \mathcal{C}_{\text{on}} = \max \left\{ 2|\alpha + \beta| - 2\sqrt{p_0 p_D},\, 0 \right\},
@@ -1387,25 +1389,24 @@ Para que el sistema de tres puntos cuánticos se comporte como un Demonio de Max
 
 Para que este último actúe como demonio, debe ser capaz de detectar cambios en el subsistema $LR$, ejecutando una acción análoga a una medición. Gracias a la interacción de Coulomb $U$, el demonio puede distinguir si el subsistema $LR$ está vacío, ocupado o doblemente ocupado. A su vez, el subsistema $LR$ modifica su dinámica dependiendo del estado de ocupación del demonio.
 
-Esta retroalimentación se implementa matemáticamente al modificar las razones de túnel $\gamma_{i}(\epsilon + U) \neq \gamma_{i}(\epsilon)$, con $i = L, R$. 
+Esta retroalimentación se implementa matemáticamente permitiendo que las tasas de túnel $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En lo que sigue, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)$. Por el contrario, las tasas de túnel del demonio no dependerán de la ocupación, por lo que se escribirá simplemente $\kappa_{D}\equiv \kappa_{D}(\epsilon')$.
 
-Para que el demonio pueda detectar eficazmente el estado del subsistema $LR$, deben cumplirse dos condiciones. Primero, que la energía de interacción supere las fluctuaciones térmicas del reservorio asociado al demonio, es decir, $\beta_{D} U \gg 1$. Segundo, que su dinámica disipativa sea más rápida que la del subsistema $LR$, lo que implica $\gamma_{D} > \max\{\gamma_{i}, \gamma^{U}_{i}\}$ con $i = L, R$.
+Para que el demonio pueda detectar eficazmente el estado del subsistema $LR$, deben cumplirse dos condiciones. Primero, que la energía de interacción supere las fluctuaciones térmicas del reservorio asociado al demonio, es decir, $\beta_{D} U \gg 1$. Segundo, que su dinámica disipativa sea más rápida que la del subsistema $LR$, lo que implica $\kappa_{D} > \max\{\kappa_{i}, \kappa^{U}_{i}\}$ con $i = L, R$.
 
 La dinámica específica del demonio se describirá con mayor detalle en la Figura~\ref{img:dinamica1}.
 
 \insertimage[\label{img:dinamica1}]{ejemplos/diseño1}{scale=0.6}{Primer paso en la dinámica, el sitio $D$ y el sitio $R$ poseen una mayor probabilidad de estar ocupados.}
 
-La elección $\epsilon_D = \mu_D - U/2$ favorece la ocupación del nivel de energía del demonio. Para inducir una corriente en dirección opuesta al gradiente de potencial, es conveniente imponer que $\gamma^{U}_{R} > \gamma^{U}_{L}$, de modo que las transiciones sean más frecuentes hacia el baño derecho, aumentando así la probabilidad de que este nivel se pueble. Posteriormente, como se ilustra en la Figura \ref{img:dinamica2}, el acoplamiento $g$ permite el intercambio coherente del electrón entre los niveles $L$ y $R$, introduciendo así una dinámica esencialmente cuántica.
+La elección $\epsilon_D = \mu_D - U/2$ favorece la ocupación del nivel de energía del demonio. Para inducir una corriente en dirección opuesta al gradiente de potencial, es conveniente imponer que $\kappa^{U}_{R} > \kappa^{U}_{L}$, de modo que las transiciones inducidas por el baño derecho sean más frecuentes, aumentando así la probabilidad de que este nivel se pueble. Posteriormente, como se ilustra en la Figura \ref{img:dinamica2}, el acoplamiento $g$ permite el intercambio coherente del electrón entre los niveles $L$ y $R$, introduciendo así una dinámica esencialmente cuántica.
 
 
 \insertimage[\label{img:dinamica2}]{ejemplos/diseño2}{scale=0.6}{Segundo paso en la dinámica, el hopping $g$ genera superposición entre los sitios $L$ y $R$.}
 
-Finalmente, se produce una tercera etapa, ilustrada en la Figura \ref{img:dinamica3}. En esta fase, con el objetivo de generar un flujo de corriente en contra del gradiente de potencial, resulta conveniente imponer que $\gamma_{L} > \gamma_{R}$. Esta condición asegura que, cuando el demonio se encuentra desocupado, la probabilidad de que ocurra una transición hacia el nivel $L$ sea mayor que hacia el nivel $R$. Como consecuencia, se favorece el transporte de electrones desde el reservorio $R$ (de menor potencial) hacia el reservorio $L$ (de mayor potencial), evidenciando así un comportamiento característico de un Demonio de Maxwell autónomo.
-
+Finalmente, se produce una tercera etapa, ilustrada en la Figura \ref{img:dinamica3}. En esta fase, con el objetivo de generar un flujo de corriente en contra del gradiente de potencial, resulta conveniente imponer que $\kappa_{L} > \kappa_{R}$. Esta condición asegura que, cuando el demonio se encuentra desocupado, la probabilidad de que ocurra una transición hacia el nivel $L$ sea mayor que hacia el nivel $R$. Como consecuencia, se favorece el transporte de electrones desde el reservorio $R$ (de menor potencial) hacia el reservorio $L$ (de mayor potencial), evidenciando así un comportamiento característico de un Demonio de Maxwell autónomo.
 
 \insertimage[\label{img:dinamica3}]{ejemplos/diseño3}{scale=0.6}{Tercer paso en la dinámica, el electrón se transporta al baño $L$.}
 
-Teniendo definida la dinámica del sistema, es posible elegir de forma adecuada distintos candidatos para las razones de túnel con el objetivo de inducir un comportamiento tipo Demonio de Maxwell. Para ello, se estudiará el comportamiento de la matriz densidad, así como los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L} - \mu_{R} = eV$.
+Teniendo definida la dinámica del sistema, es posible elegir de forma adecuada distintos candidatos para las tasas de túnel con el objetivo de inducir un comportamiento tipo Demonio de Maxwell. Para ello, se estudiará el comportamiento de la matriz densidad, así como los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L} - \mu_{R} = eV$.
 
 Se comenzará analizando las probabilidades de ocupación extraídas de la matriz densidad. Como se muestra en la Figura~\ref{img:densitymatrix}, las tres probabilidades más altas corresponden a los estados $\rho_{001}$, $\rho_{100}$ y $\rho_{010}$, lo cual es coherente con la presencia de interacción de Coulomb, que penaliza las configuraciones con ocupación múltiple.
 
@@ -2149,21 +2150,21 @@ En el equilibrio gran canónico, el valor de expectación $\langle \hat{c}^{\dag
 luego, si se define la tasa de túnel correspondiente al baño \( \alpha \) como
 
 \begin{equation*}
-    \gamma_{\alpha}(\omega) = 2\pi \sum_{l} |t_{\alpha,l}|^{2} \delta(\omega - \epsilon_{\alpha,l}),
+    \kappa_{\alpha}(\omega) = 2\pi \sum_{l} |t_{\alpha,l}|^{2} \delta(\omega - \epsilon_{\alpha,l}),
 \end{equation*}
 
 se pueden reescribir las funciones de correlación en forma integral en términos de dicha tasa y de la distribución de ocupación del reservorio \( f_\alpha(\omega) \)
 
 \begin{align*}
-    C_{1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{i\omega s}\, \gamma_{\alpha}(\omega) f_{\alpha}(\omega), \\
-    C_{-1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{-i\omega s}\, \gamma_{\alpha}(\omega)\big[1 - f_{\alpha}(\omega)\big].
+    C_{1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{i\omega s}\, \kappa_{\alpha}(\omega) f_{\alpha}(\omega), \\
+    C_{-1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{-i\omega s}\, \kappa_{\alpha}(\omega)\big[1 - f_{\alpha}(\omega)\big].
 \end{align*}
 
 A partir de estas expresiones temporales, se puede obtener la forma espectral de las funciones de correlación a través de la transformada de Fourier
 
 \begin{align*}
-    \Gamma_{1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{1}^{\alpha}(s) = \gamma_{\alpha}(-\omega) f_{\alpha}(-\omega), \\
-    \Gamma_{-1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{-1}^{\alpha}(s) = \gamma_{\alpha}(\omega)\big[1 - f_{\alpha}(\omega)\big].
+    \gamma_{1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{1}^{\alpha}(s) = \kappa_{\alpha}(-\omega) f_{\alpha}(-\omega), \\
+    \gamma_{-1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{-1}^{\alpha}(s) = \kappa_{\alpha}(\omega)\big[1 - f_{\alpha}(\omega)\big].
 \end{align*}
 
 Estas funciones espectrales codifican tanto la densidad de estados accesibles del entorno como su grado de ocupación.
