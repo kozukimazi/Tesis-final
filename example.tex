@@ -1179,10 +1179,11 @@ Se puede separar la derivada temporal de la información mutua
 \end{align*}
 donde aparece el flujo de información correspondiente a cada subsistema $i = X, Y$, definido como la cantidad $\dot{I}^{i} = \partial_{t} S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}$. Si se reemplaza $\sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}$ por $\partial_{t} S^{i} - \dot{I}^{i}$ en las expresiones para las tasas de producción de entropía locales, se obtienen las siguientes inecuaciones:
 
-\begin{align*}
+\begin{align}
     \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}^{X} \geq 0 \\
     \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}^{Y} \geq 0,
-\end{align*}
+    \label{sec4:localentropyquantum}
+\end{align}
 este resultado coincide con el obtenido en la descripción clásica. No obstante, su formulación en términos de entropía de von Neumann permite incorporar de forma natural los efectos cuánticos presentes en el sistema, lo cual resulta fundamental para caracterizar los flujos de información en regímenes donde las correlaciones cuánticas y las coherencias desempeñan un rol relevante.
 
 Si se considera que el subsistema $i$ esta conectado a a un reservorio isotermico de temperatura $T_i$, la tasa de cambio de energía libre será
@@ -1337,7 +1338,7 @@ Un aspecto importante a destacar es que los disipadores $\mathcal{L}_i$ en la ec
 \newpage
 
 \section{Estudio del transporte}
-Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. Y se estudia el flujo de corriente generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las tasas de túnel $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
+Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. Y se estudia el flujo de corriente $N_{i} = \text{Tr}\{(\mathcal{L}_{i}\hat{\rho}_{S})\hat{N}_{S}\}$generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las tasas de túnel $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
 \insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{F} = 500 \) y \( U = 40 \).}
 
@@ -1389,7 +1390,7 @@ Para que el sistema de tres puntos cuánticos se comporte como un Demonio de Max
 
 Para que este último actúe como demonio, debe ser capaz de detectar cambios en el subsistema $LR$, ejecutando una acción análoga a una medición. Gracias a la interacción de Coulomb $U$, el demonio puede distinguir si el subsistema $LR$ está vacío, ocupado o doblemente ocupado. A su vez, el subsistema $LR$ modifica su dinámica dependiendo del estado de ocupación del demonio.
 
-Esta retroalimentación se implementa matemáticamente permitiendo que las tasas de túnel $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En lo que sigue, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)$. Por el contrario, las tasas de túnel del demonio no dependerán de la ocupación, por lo que se escribirá simplemente $\kappa_{D}\equiv \kappa_{D}(\epsilon')$.
+Esta retroalimentación se implementa matemáticamente permitiendo que las tasas de túnel $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En lo que sigue, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)=\kappa_{i}(\epsilon+U_{f})=\kappa_{i}(\epsilon+U+U_{f})$. Por el contrario, las tasas de túnel del demonio no dependerán de la ocupación, por lo que se escribirá simplemente $\kappa_{D}\equiv \kappa_{D}(\epsilon')$.
 
 Para que el demonio pueda detectar eficazmente el estado del subsistema $LR$, deben cumplirse dos condiciones. Primero, que la energía de interacción supere las fluctuaciones térmicas del reservorio asociado al demonio, es decir, $\beta_{D} U \gg 1$. Segundo, que su dinámica disipativa sea más rápida que la del subsistema $LR$, lo que implica $\kappa_{D} > \max\{\kappa_{i}, \kappa^{U}_{i}\}$ con $i = L, R$.
 
@@ -1408,39 +1409,33 @@ Finalmente, se produce una tercera etapa, ilustrada en la Figura \ref{img:dinami
 
 Teniendo definida la dinámica del sistema, es posible elegir de forma adecuada distintos candidatos para las tasas de túnel con el objetivo de inducir un comportamiento tipo Demonio de Maxwell. Para ello, se estudiará el comportamiento de la matriz densidad, así como los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L} - \mu_{R} = eV$.
 
-Se comenzará analizando las probabilidades de ocupación extraídas de la matriz densidad. Como se muestra en la Figura~\ref{img:densitymatrix}, las tres probabilidades más altas corresponden a los estados $\rho_{001}$, $\rho_{100}$ y $\rho_{010}$, lo cual es coherente con la presencia de interacción de Coulomb, que penaliza las configuraciones con ocupación múltiple.
+Se comenzará analizando las probabilidades de ocupación, extraídas de la matriz densidad en el estado estacionario. Como se muestra en la Figura~\ref{img:densitymatrix}, las tres probabilidades más altas corresponden a los estados $\rho_{001}$, $\rho_{100}$ y $\rho_{010}$, lo cual es coherente con la presencia de interacción de Coulomb, que penaliza las configuraciones con ocupación múltiple.
 
 Para valores de $eV/T \lessapprox 3.6$, la probabilidad más alta corresponde al estado $\rho_{001}$, lo que indica que el sitio $D$ es, en promedio, el más ocupado. Sin embargo, a medida que la diferencia de potencial aumenta ($eV/T \gtrapprox 3.6$), las probabilidades asociadas a los estados $\rho_{100}$ y $\rho_{010}$ —correspondientes a los sitios $L$ y $R$— superan a $\rho_{001}$, lo que refleja un cambio en la ocupación predominante del sistema.
 
 Debido a que la interacción de Coulomb penaliza los estados con más de un electrón, cabría esperar que la probabilidad de vacío $\rho_{000}$ fuese del mismo orden de magnitud que $\rho_{100},\rho_{010},\rho_{001}$. Sin embargo, debido a la constante inyección de partículas inducida por la diferencia de potencial, esta probabilidad resulta ser significativamente menor. 
 
-Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $eV/T \approx 2.4$. Para valores $eV/T \lessapprox 2.4$, la configuración con interacción Coulomb entre los puntos $R$ y $D$ (representada por $\rho_{011}$) es más probable. En cambio, para $eV/T \gtrapprox 2.4$, la ocupación $\rho_{101}$ domina, indicando una mayor interacción entre los puntos $L$ y $D$.
+Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $eV/T \approx 2.4$. Para valores $eV/T \lessapprox 2.4$, la configuración con interacción Coulomb entre los puntos $R$ y $D$ (representada por $\rho_{011}$) es más probable, esto favorece a que el sistema se encuentre en la configuración de la Figura \ref{img:dinamica1}, y por lo tanto es esperable que favorezca el comportamiento tipo Demonio. En cambio, para $eV/T \gtrapprox 2.4$, la ocupación $\rho_{101}$ domina, indicando una mayor interacción entre los puntos $L$ y $D$, esto inhibe que el sistema se comporte como Demonio.
 
 
-\insertimage[\label{img:densitymatrix}]{ejemplos/matrixdemon.pdf}{scale=0.4}{Elementos diagonales de la matriz densidad en función de $eV/T$.}
+\insertimage[\label{img:densitymatrix}]{ejemplos/matrixdemon.pdf}{scale=0.45}{Elementos diagonales de la matriz densidad en función de $eV/T$.}
 
-El comportamiento de un Demonio de Maxwell autónomo se refleja en las cantidades termodinámicas del sistema. En la Figura~\ref{img:fig1resultado} se muestran: (a) los flujos de calor correspondientes a cada reservorio, y (b) las corrientes de partículas asociadas. Cabe destacar que, dado que no existe un término de hopping entre el sistema y el demonio, la corriente de partículas en el demonio es nula, $\dot{N}_{d} = 0$. Además, por conservación de partículas, se cumple que $\dot{N}_{L} = -\dot{N}_{R}$, lo cual implica que la influencia del demonio sobre el sistema ocurre exclusivamente a través de flujos de energía o información.
+El comportamiento de un Demonio de Maxwell autónomo se puede corrobar analizando las cantidades termodinámicas del sistema. En la Figura~\ref{img:fig1resultado} se muestran: (a) los flujos de calor correspondientes a cada reservorio, y (b) las corrientes de partículas asociadas. Cabe destacar que, dado que no existe un término de hopping entre el sistema y el demonio, la corriente de partículas en el demonio es nula, $\dot{N}_{d} = 0$. Además, por conservación de partículas, se cumple que $\dot{N}_{L} = -\dot{N}_{R}$, lo cual implica que la influencia del demonio sobre el sistema ocurre exclusivamente a través de flujos de energía o información.
 
 Dado que $\mu_L - \mu_R = eV$, se esperaría que $\dot{N}_L > 0$ para todo valor de $eV$. No obstante, en el régimen $eV/T \lessapprox 2.4$, se observa que $\dot{N}_L < 0$, lo que indica un flujo de partículas en contra del gradiente de potencial. Este cambio de signo en la corriente coincide con el cruce entre las probabilidades $\rho_{101}$ y $\rho_{011}$, lo que es consistente con el comportamiento tipo Maxwell. En particular, como se ilustró en la Figura~\ref{img:dinamica1}, dicho régimen requiere una interacción simultánea entre los puntos $R$ y $D$. Sin embargo, al dominar $\rho_{101}$, esta dinámica se ve suprimida.
 
-Si se analiza únicamente el subsistema $LR$, la existencia de una corriente contra el gradiente químico representa una violación aparente de la segunda ley de la termodinámica. Para este análisis, se considera la tasa de producción de entropía efectiva del subsistema, dada por $\dot{\sigma}^{o}_{LR} = d_{t}S_{LR} - \sum_{i=L,R} J_i/T$, cuya evolución en función de $eV/T$ se muestra en la Figura~\ref{img:fig2resultado}.
+Si se analiza únicamente el subsistema $LR$, la existencia de una corriente contra el gradiente químico representa una violación aparente de la segunda ley de la termodinámica. Para este análisis, se considera la tasa de producción de entropía efectiva del subsistema en el estado estacionario, dada por $\dot{\sigma}^{o}_{LR} = - \sum_{i=L,R} J_i/T$, cuya evolución en función de $eV/T$ se muestra en la Figura~\ref{img:fig2resultado}.
 
 
-\insertimage[\label{img:fig1resultado}]{ejemplos/heatparticledemon.pdf}{scale=0.55}{(a) Flujos de calor liberados por cada reservorio $\alpha$. (b) Flujos de corriente de partículas correspondientes a cada reservorio. Los resultados se obtuvieron considerando temperaturas $T = 100$ y $T_d = 2$, niveles de energía $\epsilon = 0$ y $\epsilon_d = \mu_d - U/2$ con potencial químico $\mu_d = 2$, razones de túnel $\gamma_L = \gamma^{U}_{R} = 1/100$, $\gamma_R = \gamma^{U}_{L} = 1/600$, $\gamma_D = \gamma^{U}_{D} = 1/50$, acoplamiento entre los sitios $g = 5/1000$ e interacciones de Coulomb $U = 40$ y $U_F = 500$.}
+\insertimage[\label{img:fig1resultado}]{ejemplos/heatparticledemon.pdf}{scale=0.54}{(a) Flujos de calor liberados por cada reservorio $\alpha$. (b) Flujos de corriente de partículas correspondientes a cada reservorio. Los resultados se obtuvieron considerando temperaturas $T = 100$ y $T_D = 2$, niveles de energía $\epsilon = 0$ y $\epsilon_D = \mu_D - U/2$ con potencial químico $\mu_D = 2$, tasas de túnel $\kappa_L = \kappa^{U}_{R} = 1/100$, $\kappa_R = \kappa^{U}_{L} = 1/600$, $\kappa_D =  1/50$, acoplamiento entre los sitios $g = 5/1000$ e interacciones de Coulomb $U = 40$ y $U_F = 500$.}
 
 \insertimage[\label{img:fig2resultado}]{ejemplos/entropyapparentdemon.pdf}{scale=0.45}{Tasa de producción de entropía aparente del sistema $LR$($\dot{\sigma}^{o}_{LR}$) en función de $eV/T$.}
 
-En la Figura \ref{img:fig2resultado} se grafica la tasa de producción de entropía aparente, donde se observa que para $eV/T \lessapprox 2.4$, la tasa de producción de entropía aparente $\dot{\sigma}^{o}_{LR}$ es menor a cero, lo que implica una violación aparente de la segunda ley de la termodinámica. Sin embargo, al incorporar la contribución del flujo de información en el cálculo de la tasa de producción de entropía, se obtiene la Figura \ref{img:fig3resultado}, en la cual se verifica que la producción total de entropía en el sistema $LR$ permanece siempre positiva.
+Donde se observa que para $eV/T \lessapprox 2.4$, la tasa de producción de entropía aparente $\dot{\sigma}^{o}_{LR}$ es menor a cero, lo que implica una violación aparente de la segunda ley de la termodinámica. Sin embargo, al incorporar la contribución del flujo de información en el cálculo de la tasa de producción de entropía \ref{sec4:localentropyquantum}, se obtiene la Figura \ref{img:fig3resultado}, en la cual se verifica que la producción total de entropía en el sistema $LR$ permanece siempre positiva.
 
-\insertimage[\label{img:fig3resultado}]{ejemplos/entropyrialdemon.pdf}{scale=0.45}{Tasa de producción de entropía del sistema $LR$($\dot{\sigma}_{LR}$) en función de $eV/T$.}
+\insertimage[\label{img:fig3resultado}]{ejemplos/entropyrialdemon.pdf}{scale=0.47}{Tasa de producción de entropía del sistema $LR$($\dot{\sigma}_{LR}$) en función de $eV/T$.}
 
-En el régimen de parámetros en que \( eV/T \lessapprox 2.4 \), el subsistema \( LR \) realiza trabajo. Para determinar si este trabajo es impulsado principalmente por el flujo de información, es necesario analizar el intercambio energético entre el sistema y el demonio. En el estado estacionario se cumple:
-
-\[
-\dot{E}_{L} + \dot{E}_{R} + \dot{E}_{d} = \partial_{t}E = \dot{E}_{LR} + \dot{E}_{d} = 0.
-\]
-
-Para que el sistema pueda interpretarse como un Demonio de Maxwell, el trabajo realizado por el subsistema \( LR \) debe estar dominado por la contribución informacional. Esta condición se puede expresar como:
+En el régimen de parámetros en que \( eV/T \lessapprox 2.4 \), el subsistema \( LR \) realiza trabajo. Para determinar si este trabajo es impulsado principalmente por el flujo de información, es necesario analizar el intercambio energético entre el sistema y el demonio. En el estado estacionario, los flujos de energía cumplen $\dot{E}_{LR}= -\dot{E}_{D}$. Para que el sistema pueda interpretarse como un Demonio de Maxwell, el trabajo realizado por el subsistema \( LR \) debe estar dominado por la contribución informacional. Esta condición se puede expresar como:
 
 \[
 \dot{\mathcal{F}}_{LR} = \dot{E}_{LR} + T\dot{I}_{LR} = -\dot{E}_{d} + T\dot{I}_{LR} \approx T\dot{I}_{LR}, \hspace{10mm} \dot{W}_{LR} \geq \dot{\mathcal{F}}_{LR},
@@ -1451,15 +1446,15 @@ donde \( \dot{\mathcal{F}}_{LR} \) representa la tasa de cambio de energía libr
 A fin de verificar este comportamiento, se grafican las cantidades termodinámicas relevantes tanto del sistema como del demonio.
 
 
-\insertimage[\label{img:fig4resultado}]{ejemplos/thermoquantitiesdemon}{scale=0.56}{ Flujo de energía, tasa de cambio de energía libre, flujo de información, potencia y flujo de calor del sistema $LR$. (b)  Flujo de energía, tasa de cambio de energía libre, flujo de información y potencia del Demonio. }
+\insertimage[\label{img:fig4resultado}]{ejemplos/thermoquantitiesdemon}{scale=0.60}{ Flujo de energía, tasa de cambio de energía libre, flujo de información, potencia y flujo de calor del sistema $LR$. (b)  Flujo de energía, tasa de cambio de energía libre, flujo de información y potencia del Demonio. }
 
 La Figura \ref{img:fig4resultado} muestra que, en el régimen en el que el subsistema $LR$ realiza trabajo ($\dot{W}_{LR} < 0$ y $\dot{\mathcal{F}}_{LR} < 0$), la contribución informacional domina sobre el flujo energético, es decir, $\dot{\mathcal{F}}_{LR} \approx T \dot{I}_{LR}$ mientras que $\dot{E}_{LR} \approx 0$. Este resultado respalda la interpretación del dispositivo como un Demonio de Maxwell autónomo.
 
 La potencia negativa $\dot{W}_{LR} < 0$ indica que el sistema está realizando trabajo en contra del gradiente de potencial, lo cual requiere absorber calor del entorno. En efecto, se verifica que $J_{LR} > 0$, señalando que el subsistema $LR$ extrae calor de sus respectivos reservorios.
 
-Dado que no hay transporte neto de partículas a través del Demonio ($\dot{N}_{d} = 0$), el flujo de energía asociado se reduce a $J_{d} = \dot{E}_{d}$. Como se observa en la figura, $J_{d} < 0$, lo que implica que el Demonio disipa calor hacia su baño, caracterizado por una temperatura menor a los reservorios $L$ y $R$ ($T_d < T$). 
+Dado que no hay transporte neto de partículas a través del Demonio ($\dot{N}_{D} = 0$), el flujo de energía asociado se reduce a $J_{D} = \dot{E}_{D}$. Como se observa en la figura, $J_{D} < 0$, lo que implica que el Demonio disipa calor hacia su baño, caracterizado por una temperatura menor a los reservorios $L$ y $R$ ($T_D < T$). 
 
-Este comportamiento puede entenderse también como el de una máquina térmica, donde el sistema total extrae calor del reservorio caliente ($J_{LR}$), transforma parte de él en trabajo útil ($\dot{W}_{LR}$), y disipa el resto en el baño frío ($J_{d}$), cumpliendo así $J_{LR} + J_{d} = -\dot{W}_{LR}$.
+Si se adopta una perspectiva global del sistema, es decir, considerando la termodinámica de los tres puntos cuánticos como un conjunto, este comportamiento puede interpretarse como el de una máquina térmica. En este escenario, el sistema total extrae calor del reservorio caliente (\( J_{LR} \)), convierte parte de esa energía en trabajo útil (\( \dot{W}_{LR} \)) y disipa el resto hacia el baño frío (\( J_D \)), cumpliendo así la relación \( J_{LR} + J_D = -\dot{W}_{LR} \).
 
 Al estar cada punto cuántico acoplado a un reservorio distinto, es posible descomponer el flujo de información total como $\dot{I}_{LR} = \dot{I}_{L} + \dot{I}_{R}$, lo que permite analizar la contribución informacional de cada punto cuántico por separado. Esta descomposición se ilustra en la Figura \ref{img:figinforesultado}.
 
