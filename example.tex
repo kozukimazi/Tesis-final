@@ -2446,9 +2446,9 @@ por lo tanto, el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $
 \label{apendix5frecuencygroup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%ojooooaqui%%%%%%%%%%%%%
-\subsection{Límitaciones de la aproximación semilocal}
+%\subsection{Límitaciones de la aproximación semilocal}
 
-\label{apendix5límites}
+%\label{apendix5límites}
 
 \subsection{Aspecto Markoviano de las funciones correlación}
 Para que el sistema descrito en la sección \ref{sec5:modelo} exhiba un comportamiento análogo al de un Demonio de Maxwell autónomo, es necesario que las tasas de túnel $\kappa_{i}(\omega)$ respondan de manera diferenciada dependiendo de si el sitio $D$ se encuentra ocupado o desocupado. Sin embargo, no toda dependencia funcional de $\kappa_{i}(\omega)$ garantiza un comportamiento Markoviano del sistema. Esta condición puede evaluarse mediante el cálculo explícito de las funciones de correlación del reservorio, ya que el carácter Markoviano se encuentra fuertemente ligado al tiempo de correlación característico del entorno, denotado por $\tau_{B}$. Para analizar este aspecto, se requiere calcular las funciones de correlación correspondientes a un entorno fermiónico, las cuales, en general, adoptan la forma
@@ -2458,7 +2458,7 @@ Para que el sistema descrito en la sección \ref{sec5:modelo} exhiba un comporta
 \end{equation*}
 donde $f_{F}(x) = (\exp(x)+1)^{-1}$, $i= L,R$ y $\sigma = \pm$. 
 
-La distribución de Fermi puede ser aproximada mediante desarrollos de Padé \cite{hu2011pade,schinabeck2019hierarchical}, lo que permite expresarla como una sumatoria 
+La distribución de Fermi puede ser calculada mediante aproximantes de Padé \cite{hu2011pade,schinabeck2019hierarchical}, lo que permite expresarla como una sumatoria 
 
 \begin{equation}
     f_{F}(x) \approx \frac{1}{2} - \sum_{l=0}^{N} \frac{ 2 K_{l}x }{ x^{2} + \xi^{2}_{l} },
@@ -2471,7 +2471,7 @@ los coeficientes $K_{l}$ y $\xi_{l}$ pueden ser calculados numéricamente y se e
 \end{equation*}
 donde $W$ representa el ancho de la lorentziana, $\kappa_{0}$ y $\kappa_{f}$ son constantes que controlan la amplitud. En el estudio del Demonio de Maxwell autónomo, es fundamental distinguir dos casos relevantes: cuando el punto cuántico $D$ se encuentra desocupado o ocupado. Esta distinción se refleja en la evaluación de las tasas de túnel en dos frecuencias distintas, $\epsilon_{0}$ y $\epsilon_{0} + U$, tal como se ilustra en la Figura \ref{img:gammas} para las tasas de túnel correspondientes a los baños $L$ y $R$.
 
-\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.65}{Tasas de túnel en función de las frecuencias $\omega$.}
+\insertimage[\label{img:gammas}]{ejemplos/gammmas.pdf}{scale=0.35}{Tasas de túnel en función de las frecuencias $\omega$.}
 
 Para obtener tasas de túnel que satisfagan dichas condiciones, se puede plantear el siguiente sistema de ecuaciones 
 
@@ -2487,10 +2487,17 @@ A partir de estas igualdades, es posible determinar los parámetros $\kappa_{0}$
 \end{align*}
 la función de correlación puede descomponerse en dos contribuciones
 
-\begin{equation*}
-    C^{\sigma}_{0}(t) = \frac{\kappa_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) \hspace{12mm} C^{\sigma}_{f}(t) = \frac{\kappa_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
-\end{equation*}
-y se podrá determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0}, \tau_{Bf}\}$. Se comenzará calculando una expresión analítica aproximada para la función de correlación $C^{\sigma}_{f}(t)$. Para resolver esta integral, será necesario localizar los polos en el plano complejo. Según \ref{apendix5:pade}, los polos asociados a la aproximación de Padé se encuentran en $\omega = \pm i \xi_{l}/\beta + \mu$, mientras que los polos correspondientes a la forma Lorentziana se ubican en $\omega = \pm i W + \omega_{0}$. Para realizar esta integración, se utilizará el teorema del residuo \cite{riley2006mathematical}, considerando un contorno de integración en forma de semicírculo en el hemisferio superior o inferior del plano complejo, dependiendo del signo de $\sigma$. El residuo asociado a la Lorentziana es
+\begin{equation}
+    C^{\sigma}_{0}(t) = \frac{\kappa_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu))
+    \label{apendix5:correlacion0}
+\end{equation}
+
+\begin{equation}
+    C^{\sigma}_{f}(t) = \frac{\kappa_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
+    \label{apendix5:correlacionf}
+\end{equation}
+
+y se podrá determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0}, \tau_{Bf}\}$. Se comenzará calculando una expresión analítica aproximada para la función de correlación $C^{\sigma}_{f}(t)$. Para resolver la integral de \ref{apendix5:correlacionf}, será necesario localizar los polos en el plano complejo. Según \ref{apendix5:pade}, los polos asociados a la aproximación de Padé se encuentran en $\omega = \pm i \xi_{l}/\beta + \mu$, mientras que los polos correspondientes a la forma Lorentziana se ubican en $\omega = \pm i W + \omega_{0}$. Para realizar esta integración, se utilizará el teorema del residuo \cite{riley2006mathematical}, considerando un contorno de integración en forma de semicírculo en el hemisferio superior o inferior del plano complejo, dependiendo del signo de $\sigma$. El residuo asociado a la Lorentziana es
 
 \begin{align*}
    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\omega_{0}-\mu)]e^{i\sigma \omega_{0}t}). 
@@ -2505,12 +2512,12 @@ Si se cumple que $\sigma > 0$, se toma como contorno de integración el hemisfer
 Para encontrar el residuo asociado a los polos restantes, se deberá calcular
 
 \begin{align*}
-    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm \kappa_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } ,
+    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2K_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm K_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } ,
 \end{align*}
 seleccionando la región de integración en función del signo de $\sigma$, se concluye que
 
 \begin{align*}
-    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2\kappa_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{ \xi_{l}}{\beta}t} e^{i\sigma \mu t} \kappa_{l} }{ [ \frac{ \sigma i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} }. 
+    \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2K_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{ \xi_{l}}{\beta}t} e^{i\sigma \mu t} K_{l} }{ [ \frac{ \sigma i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} }. 
 \end{align*}
 
 Al encontrar los residuos explícitamente, estos se podrán usar para escribir la función correlación 
@@ -2522,7 +2529,7 @@ Al encontrar los residuos explícitamente, estos se podrán usar para escribir l
 donde 
 
 \begin{equation*}
-    \eta^{\sigma,l} = \left\{ \begin{array}{lc} \frac{\gamma_{f}W}{2} f_{F}[i\beta W + \sigma \beta (\omega_{0}-\mu)]  & l = 0 \\ \\ - \frac{i\kappa_{l}}{\beta} \left(\frac{\gamma_{f}W^{2}}{ (\frac{i\sigma \xi_{l}}{\beta} + (\mu-\omega_{0}))^{2} + W^{2} } \right) &  l \neq 0 \end{array} \right.
+    \eta^{\sigma,l} = \left\{ \begin{array}{lc} \frac{\kappa_{f}W}{2} f_{F}[i\beta W + \sigma \beta (\omega_{0}-\mu)]  & l = 0 \\ \\ - \frac{iK_{l}}{\beta} \left(\frac{\kappa_{f}W^{2}}{ (\frac{i\sigma \xi_{l}}{\beta} + (\mu-\omega_{0}))^{2} + W^{2} } \right) &  l \neq 0 \end{array} \right.
 \end{equation*}
 
 \begin{equation*}
@@ -2532,10 +2539,10 @@ donde
 Esto permite obtener una expresión numérica para la función de correlación $C^{\sigma}_{f}(t)$, y con ello evaluar su tiempo de correlación característico, $\tau_{Bf}$. Por otro lado, para la otra función de correlación es posible calcular la integral de forma analítica, es decir, evaluar
 
 \begin{align*}
-       C_{0}^{\sigma}(t) = \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t }f_{F}(\sigma \beta (\omega -  \mu)).
+       C_{0}^{\sigma}(t) = \frac{\kappa_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t }f_{F}(\sigma \beta (\omega -  \mu)).
 \end{align*}    
 
-Se puede comenzar observando que este cálculo equivale a obtener la transformada de Fourier 
+Se puede  observar que este cálculo equivale a obtener la transformada de Fourier 
 
 \[
 \mathcal{F}\big(f[\sigma (\omega - \mu)]\big)(-\sigma t),
@@ -2555,14 +2562,14 @@ empleando la propiedad
 es decir, podemos centrarnos en calcular la transformación
 
 \begin{align*}
-    \mathcal{F}(f[\sigma \omega])(-\sigma t) &= \frac{\gamma_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega \frac{e^{i\sigma \omega t}}{e^{\sigma \beta \omega} +1 } \\
-        & = \frac{\gamma_{0}}{4\pi} \left[\int_{-\infty}^{\infty}d \omega e^{i\sigma \omega t} - \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} \tanh \left(\frac{ \sigma \beta \omega }{2} \right)   \right] \\
-        & =  \frac{\gamma_{0}}{2} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right],
+    \mathcal{F}(f[\sigma \omega])(-\sigma t) &= \frac{\kappa_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega \frac{e^{i\sigma \omega t}}{e^{\sigma \beta \omega} +1 } \\
+        & = \frac{\kappa_{0}}{4\pi} \left[\int_{-\infty}^{\infty}d \omega e^{i\sigma \omega t} - \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} \tanh \left(\frac{ \sigma \beta \omega }{2} \right)   \right] \\
+        & =  \frac{\kappa_{0}}{2} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right],
 \end{align*}
 así
 
 \begin{equation*}
-    C^{\sigma}_{0}(t) = \frac{\gamma_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right].
+    C^{\sigma}_{0}(t) = \frac{\kappa_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right].
 \end{equation*}
 
 Gracias a que se dispone de una expresión analítica para $C^{\sigma}_{0}(t)$, es posible determinar el tiempo de correlación $\tau_{B0}$. El análisis se centra principalmente en el término que involucra $\sinh(\pi t/\beta \sigma)$, ya que, dado que $\sigma = \pm 1$, el parámetro relevante es $\pi t/\beta$. Para tiempos $t > \beta$, se puede aproximar que 
@@ -2580,9 +2587,9 @@ lo que implica que el tiempo de correlación del baño está dado por el inverso
 \label{appendix5correlation}
 
 \subsection{Cálculo numérico para los tiempos de correlación}
-Dado que es posible reconstruir las tasas de túnel $\gamma_{L}(\omega)$ y $\gamma_{R}(\omega)$ mediante una función de tipo Lorentziana, cumpliendo las condiciones $\gamma_{L}(\epsilon) = \gamma_{R}(\epsilon+U) = 1/100$ y $\gamma_{L}(\epsilon+U) = \gamma_{R}(\epsilon) = 1/600$, se pueden calcular numéricamente las funciones correlación asociadas. 
+Dado que es posible reconstruir las tasas de túnel $\kappa_{L}(\omega)$ y $\kappa_{R}(\omega)$ mediante una función de tipo Lorentziana, cumpliendo las condiciones $\kappa_{L}(\epsilon) = \kappa_{R}(\epsilon+U) = 1/100$ y $\kappa_{L}(\epsilon+U) = \kappa_{R}(\epsilon) = 1/600$, se pueden calcular numéricamente las funciones correlación asociadas. 
 
-Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los baños $L$ y $R$, se utilizará la expresión \ref{correlationf} de las funciones correlación. La estimación de $\tau_{Bf}$ se realiza identificando el punto donde la función correlación se anula. Posteriormente, para evaluar si el comportamiento del sistema es efectivamente markoviano, se debe verificar que $\tau_{R} \gg \tau_{Bf}$. Con este criterio, se procede al cálculo de las partes real e imaginaria de las funciones de correlación correspondientes a los baños $L$ y $R$.
+Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los baños $L$ y $R$, se utilizará la expresión \ref{correlationf} de las funciones correlación. La estimación de $\tau_{Bf}$ se realiza identificando el punto donde la función correlación practicamente se anula. Posteriormente, para evaluar si el comportamiento del sistema es efectivamente markoviano, se debe verificar que $\tau_{R} \gg \tau_{Bf}$. Con este criterio, se procede al cálculo de las partes real e imaginaria de las funciones de correlación correspondientes a los baños $L$ y $R$.
 
 \insertimage[\label{img:correlacionminus}]{ejemplos/cminusreal.pdf}{scale=0.5}{(a)Parte real de las funciones correlación $\sigma=-$ del baño $L$ en función del tiempo.(b) Parte real de las funciones correlación $\sigma=-$ del baño $R$ en función del tiempo.}
 \insertimage[\label{img:correlacionminusimag}]{ejemplos/cminusimag.pdf}{scale=0.5}{(a)Parte imaginaria de las funciones correlación $\sigma=-$ del baño $L$ en función del tiempo.(b) Parte imaginaria de las funciones correlación $\sigma=-$ del baño $R$ en función del tiempo.}
@@ -2712,7 +2719,7 @@ por lo tanto, se puede solucionar utilizando factor integrante
 multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$, se obtiene 
 
 \begin{equation*}
-    \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}|\hat{\rho}(t))\rangle \rangle = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle ,
+    \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle ,
 \end{equation*}
 con solución
 
@@ -2790,13 +2797,13 @@ Al realizar el cambio de variable $\tau \to t-\tau$
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left(\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}} + \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right) (\tau) \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t-\tau)\rangle \rangle d\tau,        
 \end{equation*}
-es en este punto donde se introducen las aproximaciones perturbativas. Si se considera que el acoplamiento \( g \) es pequeño en comparación con las tasas de disipación \(\gamma_i\), es decir, \( g \ll \gamma_i \), se puede analizar la jerarquía de escalas entre los superoperadores involucrados. En particular, los autovalores del superoperador de interacción \(\check{\mathcal{V}}\) serán del orden de \(g\), mientras que los de \(\check{\mathcal{L}}_0\) serán del orden de \(\gamma_i\). Bajo esta suposición, la contribución de \(\check{\mathcal{V}}\) dentro del exponencial se puede despreciar,  y la evolución estará dada por
+es en este punto donde se introducen las aproximaciones perturbativas. Si se considera que el acoplamiento \( g \) es pequeño en comparación con las tasas de disipación \(\kappa_i\), es decir, \( g \ll \kappa_i \), se puede analizar la jerarquía de escalas entre los superoperadores involucrados. En particular, los autovalores del superoperador de interacción \(\check{\mathcal{V}}\) serán del orden de \(g\), mientras que los de \(\check{\mathcal{L}}_0\) serán del orden de \(\kappa_i\). Bajo esta suposición, la contribución de \(\check{\mathcal{V}}\) dentro del exponencial se puede despreciar,  y la evolución estará dada por
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{t}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]\check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t-\tau)\rangle \rangle d\tau.        
 \end{equation*}
 
-Luego, para aplicar aproximación de Markov se supondrá que en escalas de tiempo $1/\gamma_{i}$ que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$. Además, en los límites del integral se reemplaza $t \to \infty$, así se obtiene 
+Luego, para aplicar aproximación de Markov se supondrá que en escalas de tiempo $1/\kappa_{i}$ que $\check{\mathcal{P}}\hat{\rho}(t-\tau)$ no varia mucho, así poder considerar $\check{\mathcal{P}}\hat{\rho}(t-\tau) = \check{\mathcal{P}}\hat{\rho}(t)$. Además, en los límites del integral se reemplaza $t \to \infty$, así se obtiene 
 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle + \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\int_{0}^{\infty}\exp \left[\left( \check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}}\right)\tau \right]d\tau \check{\mathcal{Q}}\check{\mathcal{V}} \check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle.        
@@ -2821,7 +2828,7 @@ Dado la matriz $\check{\mathcal{L}}_{0}$, el inverso de Drazin es un tipo de inv
     \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} & = \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+}.
 \end{align*}
 
-Si se considera la ecuación \ref{ec5:classicalmodel} se puede probar que 
+Si se considera la ecuación \ref{ec5:classicalmodel}, se puede probar que 
 
 \begin{equation*}
     \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} = - \int_{0}^{\infty}d\tau \check{\mathcal{L}}_{0}\exp[ \check{\mathcal{L}}_{0}\tau] \check{Q}= - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau]\check{\mathcal{L}}_{0} \check{Q} = - \int_{0}^{\infty}d\tau \exp[ \check{\mathcal{L}}_{0}\tau] \check{Q} \check{\mathcal{L}}_{0} = \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0},
@@ -2975,36 +2982,36 @@ Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathca
 Con estas cantidades, se podrán obtener los flujos de información en el estado estacionario mediante la expresión $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$. De este modo, se obtiene 
 
 \begin{align*}
-    \dot{I}_{L} &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - a_{0}\rho_{100} ] )  \\ 
-      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[a_{1}\rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -a_{1}\rho_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
-      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -b_{0}\rho_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- b_{1}\rho_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ) 
+    \dot{I}_{L} &  =  \kappa_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - a_{0}\rho_{100} ] )  \\ 
+      & + \kappa_{L}(\epsilon + U)(f_{L}(\epsilon + U)[a_{1}\rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -a_{1}\rho_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \kappa_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -b_{0}\rho_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- b_{1}\rho_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ) 
 \end{align*}
 
 \begin{align*}
-    \dot{I}_{R} &  =  \gamma_{R}(\epsilon)(f_{L}(\epsilon)[b_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - b_{0}\rho_{010} ] )  \\ 
-      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[b_{1} \rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -a_{1}\rho_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
-      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -a_{0}\rho_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ). 
+    \dot{I}_{R} &  =  \kappa_{R}(\epsilon)(f_{R}(\epsilon)[b_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - b_{0}\rho_{010} ] )  \\ 
+      & + \kappa_{R}(\epsilon + U)(f_{R}(\epsilon + U)[b_{1} \rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -a_{1}\rho_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \kappa_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -a_{0}\rho_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ). 
 \end{align*}
 
 Si bien el cálculo de los flujos de información puede realizarse numéricamente, la obtención de expresiones analíticas permite identificar claramente la contribución de las coherencias cuánticas a dichos flujos, manifestada tanto en los parámetros $a_i$, $b_i$ como en los términos $\mathrm{Re}(\alpha c_0^*)$ y $\mathrm{Re}(b_1^* \beta)$. 
 Es importante destacar que en el límite en que las coherencias se anulan, se recupera el resultado correspondiente a un sistema clásico
 
 \begin{align*}
- \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
-      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
-      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
-      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
+ \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \kappa_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
+      & + \kappa_{L}(\epsilon + U)(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
+      & + \kappa_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
+      & + \kappa_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
 \end{align*}
 
 \begin{align*}
- \lim_{\alpha,\beta \to 0}  & \dot{I}_{R}  = \dot{I}_{Rclassic}   =  \gamma_{R}(\epsilon)(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
-      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
-      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -\rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
-      & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
+ \lim_{\alpha,\beta \to 0}  & \dot{I}_{R}  = \dot{I}_{Rclassic}   =  \kappa_{R}(\epsilon)(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
+      & + \kappa_{R}(\epsilon + U)(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
+      & + \kappa_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -\rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
+      & + \kappa_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
 \end{align*}
 
 \label{apendix5infoflow}
