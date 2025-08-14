@@ -25,9 +25,9 @@ En ausencia de un agente externo, cuantificar el flujo de información entre el 
 
 Posteriormente, Ptaszynski y Esposito extendieron este marco al contexto cuántico, cuantificando flujos de información en sistemas abiertos gobernados por dinámicas markovianas\cite{ptaszynski2019thermodynamics}. Para ello, emplearon una ecuación maestra de tipo Lindblad en su forma estándar (GKLS)\cite{gorini1976completely,lindblad1976generators,breuer2002theory}, compatible con una descripción termodinámica consistente cuando se cumple la condición de balance detallado local. Este enfoque permite incorporar coherencias cuánticas —elementos no diagonales de la matriz densidad—, las cuales pueden servir como recursos termodinámicos\cite{ptaszynski2023fermionic,streltsov2017colloquium}.
 
-Sin embargo, una dificultad clave en la descripción cuántica es la elección de la base. Si se adopta una base global, como exige la aproximación secular, se pierde la posibilidad de distinguir entre flujos locales de información. Por otro lado, una formulación en la base local puede revelar la estructura bipartita del sistema, pero ha sido criticada por posibles inconsistencias termodinámicas\cite{levy2014local,novotny2002investigation}.
+Sin embargo, una dificultad clave en la descripción cuántica es la elección de la base. Si se adopta una base global, como exige la aproximación secular, no siempre existe la posibilidad de distinguir entre flujos locales de información, como se realiza en su contraparte clásica\cite{horowitz2014thermodynamics}. Por otro lado, una formulación en la base local puede revelar la estructura bipartita del sistema, pero ha sido criticada por posibles inconsistencias termodinámicas\cite{levy2014local,novotny2002investigation}.
 
-Para resolver este dilema, Potts et al.\ propusieron una ecuación maestra termodinámicamente consistente que permite trabajar en la base local e incluir términos no seculares\cite{potts2021thermodynamically}. Su enfoque reconoce que una descripción markoviana implica una resolución energética finita, y por tanto introduce un Hamiltoniano rescalado en la definición de las cantidades termodinámicas.
+Potts et al.\ propusieron una ecuación maestra termodinámicamente consistente que permite trabajar en la base local e incluir términos no seculares\cite{potts2021thermodynamically}. Su enfoque reconoce que una descripción markoviana implica una resolución energética finita, y por tanto introduce un Hamiltoniano rescalado en la definición de las cantidades termodinámicas.
 
 Trabajos previos han empleado el formalismo desarrollado por Potts para analizar los efectos cuánticos en modelos compuestos por dos puntos cuánticos, cada uno acoplado a un reservorio distinto, y cómo estos efectos influyen en el flujo de partículas~\cite{prech2023entanglement}. Por otro lado, el trabajo de Esposito y Horowitz investigó los flujos de información en un sistema clásico constituido por dos puntos cuánticos, donde uno de ellos está acoplado a dos reservorios y el otro a un único baño térmico. En dicho estudio, se demostró que el sistema actúa como un Demonio de Maxwell autónomo~\cite{horowitz2014thermodynamics}.
 
@@ -175,7 +175,7 @@ esta ecuación es denominada la ecuación de Redfield. Se puede hacer el cambio 
     \label{eq3sec2:markov}
 \end{equation} 
 
-Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecen las funciones correlación del baño, estas funciones decaen en el tiempo con una escala característica dada por el denominado tiempo de correlación $\tau_{B}$, a partir del cual dichas funciones se vuelven despreciables. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, ya que él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integral debido a que las funciones correlación se vuelven practicamente nulas. Y finalmente quedará la evolución
+Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecen las funciones correlación del baño, estas funciones decaen en el tiempo con una escala característica dada por el denominado tiempo de correlación $\tau_{B}$, a partir del cual dichas funciones se vuelven despreciables. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, pues él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integrando debido a que las funciones correlación se vuelven practicamente nulas. Y finalmente quedará la evolución
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{\infty}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
@@ -247,12 +247,12 @@ así, reemplazando la forma explícita de la interacción
      + & \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\hat{\rho}_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
 \end{align*}
 
-Se pueden definir las funciones correlación espectral del baño por
+Dado que las funciones correlación son homogéneas en el tiempo, es posible definir funciones correlación espectral del baño, independientes del tiempo, dadas por
 
 \begin{equation*}
     \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\hat{\rho}_{B}],
 \end{equation*}
-y aplicando estas funciones queda 
+y aplicando estas funciones en la ecuación maestra, queda 
 
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{i(\omega'- \omega)t}\Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
@@ -286,15 +286,21 @@ con $\hat{H}_{LS}$ el Hamiltoniano \textit{Lamb Shift}
 y el Disipador
 
 \begin{equation*}
-    \mathcal{D}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right].
+    \mathcal{L}_{g}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right].
 \end{equation*}
 
 El escribir el disipador de esta manera es importante, ya que esta evolución se encuentra en la forma GKLS que permite preservar traza, hermiticidad y positividad de la matriz densidad\cite{manzano2020short}. Finalmente, en el cuadro de Schrodinger la ecuación de Lindblad queda
 
 \begin{equation}
-    \frac{d}{dt} \hat{\rho}_{S}(t) = -i[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)] + \mathcal{D}(\hat{\rho}_{S}(t)).
+    \frac{d}{dt} \hat{\rho}_{S}(t) = -i[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)] + \mathcal{L}_{g}(\hat{\rho}_{S}(t)).
     \label{eqsec2:lindbladS}
 \end{equation}
+
+Si el sistema $S$ interactua con múltiples reservorios, el disipador se puede escribir como una suma de los disipadores de cada uno de los reservorios, es decir
+
+\begin{equation*}
+    \mathcal{L}_{g}(\hat{\rho}_{S}(t)) = \sum_{\alpha}\mathcal{L}_{\alpha,g}(\hat{\rho}_{S}(t)).
+\end{equation*}
 
 \label{sec:lindblad}
 
@@ -348,12 +354,12 @@ que en el límite de acoplamiento débil entre el sistema y el baño, este equil
 Para escribir la primera ley, primero se puede definir la corriente de calor y la potencia entregadas por el baño $\alpha$
 
 \begin{equation*}
-    J_{\alpha}(t) = \partial_{t}\langle Q_{\alpha}\rangle \hspace{12mm}  P_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle.
+    J_{\alpha}(t) = \partial_{t}\langle Q_{\alpha}\rangle \hspace{12mm}  \dot{W}_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle.
 \end{equation*}
 
 Así, en el límite de acoplamiento débil para un Hamiltoniano tiempo independiente, la primera ley consiste en 
 \begin{equation*}
-    \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha}(t) + P_{\alpha}(t) ] \hspace{12mm} E = \text{Tr}\{\hat{H}_{S}\hat{\rho}_{tot}(t) \},
+    \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha}(t) + \dot{W}_{\alpha}(t) ] \hspace{12mm} E = \text{Tr}\{\hat{H}_{S}\hat{\rho}_{tot}(t) \},
 \end{equation*}
 donde $E(t)$ es la energía interna del sistema.
 
@@ -390,7 +396,7 @@ Y la igualdad se cumple para procesos reversibles. Con esto se han definido las 
 \label{sec3sub:leyestermo}
 
 \section{Estadística de medición en dos puntos}
-A lo largo de este trabajo, se pretende calcular diversas cantidades termodinámicas asociadas a la dinámica del sistema, tales como la energía y el trabajo. Si bien los valores promedio de estas cantidades pueden obtenerse con las expresiones \ref{sec3:calor} y \ref{sec3:trabajo}, tanto el calor y el trabajo intercambiados con los reservorios deben considerarse como variables aleatorias, ya que su determinación implica medir sobre el estado de los reservorios. Debido a la naturaleza cuántica de la evolución, dichas mediciones pueden arrojar distintos resultados en diferentes repeticiones del experimento. Por lo tanto, para acceder a los valores promedio, es útil calcular la distribución de probabilidad del calor y el trabajo intercambiados con el reservorio.
+A lo largo de este trabajo, se pretende calcular diversas cantidades termodinámicas asociadas a la dinámica del sistema, tales como la energía y el trabajo. Si bien los valores promedio de estas cantidades pueden obtenerse con las expresiones \ref{sec3:calor} y \ref{sec3:trabajo}, tanto el calor y el trabajo intercambiados con los reservorios deben considerarse como variables aleatorias, ya que su determinación implica medir sobre el estado de los reservorios. Debido a la naturaleza cuántica de la evolución, dichas mediciones pueden arrojar distintos resultados en diferentes repeticiones del experimento. Por lo tanto, es útil calcular la distribución de probabilidad del calor y el trabajo intercambiados con el reservorio.
 
 Para  un sistema total descrito por la condición inicial $\hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0) \otimes_{\alpha} \hat{\tau}_{\alpha}$ la distribución de probabilidad es   
 
@@ -426,7 +432,7 @@ escribiendo los proyectores de manera explícita $\hat{P}^{B}_{\textbf{E}, \text
     P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) & =  \text{Tr}\{\hat{U}(t)(\hat{\rho}_{S}(0)\otimes |\textbf{E}, \textbf{N}\rangle  \langle \textbf{E}, \textbf{N}| ) \hat{U}^{\dagger}(t)  |\textbf{E}', \textbf{N}'\rangle  \langle \textbf{E}', \textbf{N}'| \} \\
         & =  \text{Tr}\{|\textbf{E},\textbf{N} \rangle \langle \textbf{E}', \textbf{N}'| \hat{U}(t)\hat{\rho}_{S}(0) \langle \textbf{E}, \textbf{N}|\hat{U}^{\dagger}(t)|\textbf{E}', \textbf{N}'\rangle \}      \\ 
         & = \text{Tr}_{S}\{ \text{Tr}_{B}\{|\textbf{E},\textbf{N} \rangle \langle \textbf{E}', \textbf{N}'|\hat{U}(t) \}\hat{\rho}_{S}(0)\langle \textbf{E}, \textbf{N}|\hat{U}^{\dagger}(t)|\textbf{E}', \textbf{N}'\rangle      \} \\
-        & = \text{Tr}_{s}\{ \text{Tr}_{B}\{|\textbf{E},\textbf{N}\rangle \langle \textbf{E}',\textbf{N}'|\hat{U}(t)  \} \hat{\rho}_{S}(0) \text{Tr}_{B}\{\hat{U}^{\dagger}(t) |\textbf{E}',\textbf{N}' \rangle \langle \textbf{E},\textbf{N}| \}     \}.
+        & = \text{Tr}_{S}\{ \text{Tr}_{B}\{|\textbf{E},\textbf{N}\rangle \langle \textbf{E}',\textbf{N}'|\hat{U}(t)  \} \hat{\rho}_{S}(0) \text{Tr}_{B}\{\hat{U}^{\dagger}(t) |\textbf{E}',\textbf{N}' \rangle \langle \textbf{E},\textbf{N}| \}     \}.
     \end{align*}    
 
 Por ende, $P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})$ se puede expresar como
@@ -546,7 +552,7 @@ Si se utiliza el cuadro de interacción, esta ecuación se convierte en
     & = e^{i\hat{H}_{0}t}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)e^{-i\hat{H}_{0}t}.
 \end{align*}
 
-En el cuadro de interacción, el superoperador de Liouville que incorpora el parámetro de conteo se transforma en 
+En este cuadro, el superoperador de Liouville que incorpora el parámetro de conteo se transforma en 
 
 \begin{equation*}
     \check{\mathcal{L}}_{\lambda}(t) = e^{-\check{\mathcal{L}}_{0}t}\check{\mathcal{L}}_{\lambda}e^{\check{\mathcal{L}}_{0}t},
@@ -610,7 +616,7 @@ Está ecuación fue deducida en el Apéndice \ref{finalequation}.
 De forma análoga a lo presentado en la sección \ref{sec:lindblad}, uno de los requisitos que se busca en la evolución de la ecuación maestra es que sea Markoviana. Para ello, se debe tomar el límite superior del integral en el tiempo, presente en la ecuación \ref{ecmaestrafinal}, hacia infinito. Esta aproximación es válida siempre que el tiempo de correlación del baño $\tau_{B}$ sea mucho menor al tiempo de relajación del sistema $\tau_{R}$. Sin embargo, en presencia de parámetros de conteo $\lambda_{\alpha}$, las funciones de correlación del baño adquieren una dependencia modificada en el tiempo, del tipo $C^{\alpha}_{k,k'}(\pm \tau - \lambda_\alpha)$. Por lo tanto, para que la aproximación markoviana sea válida en presencia de parámetros de conteo, se requiere que 
 
 \begin{equation*}
-    C^{\alpha}_{k,k'}(\pm \tau - \lambda_\alpha) \approx 0 \quad \text{para } \tau > \tau_{R}.
+    C^{\alpha}_{k,k'}(\pm \tau - \lambda_\alpha) \approx 0 \quad \text{para } \tau > \tau_{B}.
 \end{equation*}
 
 Esto implica que el régimen de validez de la aproximación markoviana es 
@@ -619,7 +625,7 @@ Esto implica que el régimen de validez de la aproximación markoviana es
     \tau_{B} \ll \tau_{R} \hspace{10mm} |\lambda_{\alpha}| \ll \tau_{R}.
 \end{equation*}
 
-Esto tiene repercusiones importantes, ya que implica que la resolución de diferencias de energía en la medición del calor sea finita. Esta limitación se debe a que el parámetro $\lambda_{\alpha}$ y el calor medido en el baño $Q_{\alpha}$ son variables conjugadas en la distribución de probabilidad de calor y trabajo. Esto implica que ambas obedecen una relación de incertidumbre \cite{folland1997uncertainty}. Como consecuencia las diferencias de energía del orden de $1/\tau_{R}$ dejan de ser confiables, ya que en ese régimen el valor promedio del calor es comparable con su varianza, es decir,
+Esto tiene repercusiones importantes, ya que implica que la resolución de diferencias de energía en la medición del calor sea finita. Esta limitación se debe a que el parámetro $\lambda_{\alpha}$ y el calor medido en el baño $Q_{\alpha}$ son variables conjugadas en la distribución de probabilidad de calor y trabajo, por ende ambas obedecen una relación de incertidumbre \cite{folland1997uncertainty}. Como consecuencia las diferencias de energía del orden de $1/\tau_{R}$ dejan de ser confiables, ya que en ese régimen el valor promedio del calor es comparable con su varianza, es decir,
 
 \begin{equation*}
     \langle \Delta \lambda^{2}_{\alpha} \rangle \langle (\Delta Q_{\alpha})^{2}\rangle \geq \gamma \implies \langle (\Delta Q_{\alpha})^{2}\rangle  \geq \frac{\gamma}{\tau^{2}_{R}},
@@ -711,7 +717,7 @@ con
 \label{sec2lindbladconsistency}
 \end{equation}
 
-Hay dos límites importantes a considerar, el primero corresponde al caso en que todas las frecuencias satisfacen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}$, pues se cumple que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$, lo que permite realizar la aproximación secular entre todas las frecuencias de Bohr y recuperar la ecuación de Lindblad. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo. Por lo tanto, los operadores del sistema cumplen que $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$, y la ecuación maestra queda descrita por operadores locales, lo que corresponde a la ecuación maestra local\cite{wichterich2007modeling}.
+Hay dos límites importantes a considerar, el primero corresponde al caso en que todas las frecuencias satisfacen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}$, pues se cumple que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$, lo que permite realizar la aproximación secular entre todas las frecuencias de Bohr y recuperar la ecuación de Lindblad \ref{eqsec2:lindbladS}. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo. Por lo tanto, los operadores del sistema cumplen que $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$, y la ecuación maestra queda descrita por operadores locales, lo que corresponde a la ecuación maestra local\cite{wichterich2007modeling}.
 \section{Consistencia termodinámica}
 Existen dos casos a diferenciar para derivar las leyes de la termodinámica, primero la ecuación maestra global definida en la sección \ref{sec:lindblad} y segundo la ecuación maestra semilocal, que presenta un mayor desafío; debido a la resolución finita de energía impuesta por la dinámica markoviana en la ecuación semilocal, para asegurar la consistencia termodinámica es necesario redefinir las leyes de la termodinámica. Como primer paso, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cual satisface la relación de conmutación
 \label{sec2:thermolaws}
@@ -811,7 +817,7 @@ En este capítulo se introduce el concepto de información termodinámica, comen
 
 
 \section{Demonio de Maxwell}
-El demonio de Maxwell es un experimento mental esbozado por James Clerk Maxwell en su obra\cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por una entidad denominada "Demonio", la cual tiene la capacidad de abrirla y cerrarla sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos. 
+El demonio de Maxwell es un experimento mental esbozado por James Clerk Maxwell en su obra\cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por un ente denominado "Demonio", el cual tiene la capacidad de manipular la puerta sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos.
 
 Dado que la temperatura se relaciona con la velocidad promedio de las partículas, el Demonio puede discriminar entre partículas rápidas y lentas, las cuales influirán en la temperatura del compartimiento que se dirigen. De este modo, permite pasar del compartimiento A al B solo aquellas partículas cuya velocidad es mayor que la velocidad promedio, mientras que deja pasar del compartimiento B al A las partículas más lentas. Si se mantiene constante el número de partículas en cada compartimiento, este proceso da lugar a un aumento de la temperatura en A y una disminución en B, es decir, una diferencia \( \Delta T \) entre ambos lados.
 
@@ -984,7 +990,7 @@ Y en función de los flujos de información son
 
 Estas dos ecuaciones permiten visualizar cómo la contribución de la información influye en la producción de entropía local de cada subsistema.
 
-Supongamos que se desconoce la existencia de la interacción entre el subsistema \( Y \) y el subsistema \( X \), y que únicamente se monitoriza la dinámica de \( X \). En ese caso, se le asignaría al sistema una tasa de producción de entropía dada por:
+Supongamos que se desconoce la existencia de la interacción entre el subsistema \( Y \) y el subsistema \( X \), y que únicamente se monitorea la dinámica de \( X \). En ese caso, se le asignaría al sistema una tasa de producción de entropía dada por:
 \[
 \dot{\sigma}^{X}_0 = \partial_t S^X + \dot{S}_r^X.
 \]
