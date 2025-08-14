@@ -105,14 +105,15 @@ con
 \label{SEClindblad}
 \subsection{Dinámica de un sistema abierto}
 
-Un sistema abierto consiste en un sistema cuántico $S$ denominado el sistema reducido, el cuál está acoplado a un sistema $B$ denominado el ambiente. Estos representan  subsistemas del sistema total $S+B$. Sea $\mathcal{H}_{s}$ el espacio de Hilbert del sistema y $\mathcal{H}_{B}$ el espacio de Hilbert del ambiente, el espacio de Hilbert del sistema total $S+B$ es  $\mathcal{H} = \mathcal{H}_{s} \otimes \mathcal{H}_{B}$, el Hamiltoniano total se constituye por el Hamiltoniano del sistema $\hat{H}_{S}$, el Hamiltoniano $\hat{H}_{B}$ y la interacción $\hat{H}_{I}(t)$
+Un sistema abierto consiste en un sistema cuántico $S$ denominado el sistema reducido, el cuál está acoplado a un sistema $B$ denominado el ambiente. Estos representan  subsistemas del sistema total $S+B$. Sea $\mathcal{H}_{S}$ el espacio de Hilbert del sistema y $\mathcal{H}_{B}$ el espacio de Hilbert del ambiente, el espacio de Hilbert del sistema total $S+B$ es  $\mathcal{H} = \mathcal{H}_{S} \otimes \mathcal{H}_{B}$, el Hamiltoniano total se constituye por el Hamiltoniano del sistema $\hat{H}_{S}$, el Hamiltoniano $\hat{H}_{B}$ y la interacción $\hat{H}_{I}(t)$
 
 \begin{equation}
-    \hat{H}(t) = \hat{H}_{S} \otimes \mathbf{I}_{B} + \mathbf{I}_{s} \otimes \hat{H}_{B} + \hat{H}_{I}(t).
+    \hat{H}(t) = \hat{H}_{S} \otimes \mathbf{I}_{B} + \mathbf{I}_{S} \otimes \hat{H}_{B} + \hat{H}_{I}(t).
     \label{sec2:sistemabierto}
 \end{equation}
 
-Para describir el sistema con la ecuación \ref{sec2:sistemabierto} es necesario separarlo en dos subsistemas, $S$ y $B$, permitiendo así que el espacio de Hilbert total sea descrito por $\mathcal{H} = \mathcal{H}_{s}\otimes \mathcal{H}_{B}$. Sin embargo, en el caso de partículas idénticas como los fermiones el identificar estos dos subsistemas no es obvio. Aún así, en el formalismo de segunda cuantización el sistema se puede describir mediante una base del espacio de Fock, que sí permite encontrar subsistemas en los cuáles el espacio de Hilbert total es un producto tensorial antisimétrico entre los dos subsistemas\cite{friis2013fermionic,vidal2021quantum}.
+
+Para describir el sistema con la ecuación \ref{sec2:sistemabierto} es necesario separarlo en dos subsistemas, $S$ y $B$, permitiendo así que el espacio de Hilbert total sea descrito por $\mathcal{H} = \mathcal{H}_{S}\otimes \mathcal{H}_{B}$. Sin embargo, en el caso de partículas idénticas como los fermiones el identificar estos dos subsistemas no es obvio. Aún así, en el formalismo de segunda cuantización el sistema se puede describir mediante una base del espacio de Fock, que sí permite encontrar subsistemas en los cuáles el espacio de Hilbert total es un producto tensorial antisimétrico entre los dos subsistemas\cite{friis2013fermionic,vidal2021quantum}.
 
 Los observables que se estudian en el sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$ y su valor de expectación puede ser calculado mediante la ecuación
 
@@ -151,7 +152,7 @@ Reinsertando la forma integral en la ecuación \ref{eqsec2:linbladpic} y trazand
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -i  \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}.
 \end{equation}
 
-Ahora se asumirán dos cosas, primero sin pérdida de generalidad se asumirá $\text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \} = 0$\cite{breuer2002theory}. Segundo, debido a que todavía la ecuación depende de $\hat{\rho}(t)$ correspondiente al sistema total, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir,
+Ahora se asumirán dos cosas, primero $\text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \} = 0$ sin pérdida de generalidad\cite{breuer2002theory}. Segundo, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir,
 
 \begin{equation*}
     \hat{\rho}(t) = \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B},
