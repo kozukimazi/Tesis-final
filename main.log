@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  16 AUG 2025 22:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  17 AUG 2025 21:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2451,7 +2451,7 @@ File: ./img//ejemplos/quantumdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/quantumdemon.pdf>
 Package pdftex.def Info: ./img//ejemplos/quantumdemon.pdf  used on input line 1485.
 (pdftex.def)             Requested size: 444.01903pt x 218.0781pt.
-<./img//ejemplos/thermoquantum.pdf, id=1517, 1071.76411pt x 551.42009pt>
+<./img//ejemplos/thermoquantum.pdf, id=1518, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/thermoquantum.pdf Graphic file (type pdf)
 <use ./img//ejemplos/thermoquantum.pdf>
 Package pdftex.def Info: ./img//ejemplos/thermoquantum.pdf  used on input line 1493.
@@ -2462,7 +2462,7 @@ Overfull \hbox (138.88066pt too wide) in paragraph at lines 1493--1493
  []
 
 [48 <./img//ejemplos/quantumdemon.pdf>]
-<./img//ejemplos/concuinfodemon.pdf, id=1558, 1071.76411pt x 551.42009pt>
+<./img//ejemplos/concuinfodemon.pdf, id=1559, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/concuinfodemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/concuinfodemon.pdf>
 Package pdftex.def Info: ./img//ejemplos/concuinfodemon.pdf  used on input line 1501.
@@ -2473,7 +2473,7 @@ Overfull \hbox (128.15259pt too wide) in paragraph at lines 1501--1501
  []
 
 [49 <./img//ejemplos/thermoquantum.pdf>] [50 <./img//ejemplos/concuinfodemon.pdf>]
-<./img//ejemplos/rho1004.pdf, id=1663, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/rho1004.pdf, id=1664, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/rho1004.pdf Graphic file (type pdf)
 <use ./img//ejemplos/rho1004.pdf>
 Package pdftex.def Info: ./img//ejemplos/rho1004.pdf  used on input line 1551.
@@ -2483,7 +2483,7 @@ Overfull \hbox (38.6059pt too wide) in paragraph at lines 1551--1551
  [][] 
  []
 
-<./img//ejemplos/rho1014.pdf, id=1664, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/rho1014.pdf, id=1665, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/rho1014.pdf Graphic file (type pdf)
 <use ./img//ejemplos/rho1014.pdf>
 Package pdftex.def Info: ./img//ejemplos/rho1014.pdf  used on input line 1552.
@@ -2494,7 +2494,7 @@ Overfull \hbox (38.6059pt too wide) in paragraph at lines 1552--1552
  []
 
 [51] [52 <./img//ejemplos/rho1004.pdf> <./img//ejemplos/rho1014.pdf>]
-<./img//ejemplos/currentinfosemi.pdf, id=1754, 1071.76411pt x 551.42009pt>
+<./img//ejemplos/currentinfosemi.pdf, id=1755, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/currentinfosemi.pdf Graphic file (type pdf)
 <use ./img//ejemplos/currentinfosemi.pdf>
 Package pdftex.def Info: ./img//ejemplos/currentinfosemi.pdf  used on input line 1601.
@@ -2511,13 +2511,13 @@ Overfull \hbox (106.71277pt too wide) in paragraph at lines 1601--1601
 ] [57] [58]) [59] [60
 
 ] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
-<./img//ejemplos/gammmas.pdf, id=1994, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/gammmas.pdf, id=1995, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/gammmas.pdf Graphic file (type pdf)
 <use ./img//ejemplos/gammmas.pdf>
 Package pdftex.def Info: ./img//ejemplos/gammmas.pdf  used on input line 2482.
 (pdftex.def)             Requested size: 388.52936pt x 190.82457pt.
  [79] [80 <./img//ejemplos/gammmas.pdf>] [81] [82]
-<./img//ejemplos/cminusreal.pdf, id=2046, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/cminusreal.pdf, id=2047, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cminusreal.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cminusreal.pdf>
 Package pdftex.def Info: ./img//ejemplos/cminusreal.pdf  used on input line 2602.
@@ -2527,7 +2527,7 @@ Overfull \hbox (83.00104pt too wide) in paragraph at lines 2602--2602
  [][] 
  []
 
-<./img//ejemplos/cminusimag.pdf, id=2047, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/cminusimag.pdf, id=2048, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cminusimag.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cminusimag.pdf>
 Package pdftex.def Info: ./img//ejemplos/cminusimag.pdf  used on input line 2603.
@@ -2538,7 +2538,7 @@ Overfull \hbox (83.00104pt too wide) in paragraph at lines 2603--2603
  []
 
 [83 <./img//ejemplos/cminusreal.pdf>]
-<./img//ejemplos/cplusreal.pdf, id=2087, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/cplusreal.pdf, id=2088, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cplusreal.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cplusreal.pdf>
 Package pdftex.def Info: ./img//ejemplos/cplusreal.pdf  used on input line 2605.
@@ -2548,7 +2548,7 @@ Overfull \hbox (83.00104pt too wide) in paragraph at lines 2605--2605
  [][] 
  []
 
-<./img//ejemplos/cplusimag.pdf, id=2088, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/cplusimag.pdf, id=2089, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cplusimag.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cplusimag.pdf>
 Package pdftex.def Info: ./img//ejemplos/cplusimag.pdf  used on input line 2606.
@@ -2559,7 +2559,7 @@ Overfull \hbox (83.00104pt too wide) in paragraph at lines 2606--2606
  []
 
 [84 <./img//ejemplos/cminusimag.pdf> <./img//ejemplos/cplusreal.pdf>]
-<./img//ejemplos/rhotiempo.pdf, id=2165, 1110.06725pt x 545.20491pt>
+<./img//ejemplos/rhotiempo.pdf, id=2166, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/rhotiempo.pdf Graphic file (type pdf)
 <use ./img//ejemplos/rhotiempo.pdf>
 Package pdftex.def Info: ./img//ejemplos/rhotiempo.pdf  used on input line 2615.
@@ -2583,16 +2583,16 @@ L3 programming layer <2023-10-10>
 Here is how much of TeX's memory you used:
  33999 strings out of 474824
  576546 string characters out of 5750976
- 1961043 words of memory out of 5000000
+ 1960043 words of memory out of 5000000
  54978 multiletter control sequences out of 15000+600000
  667247 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,110p,2916b,2612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (103 pages, 1006341 bytes).
+Output written on main.pdf (103 pages, 1006636 bytes).
 PDF statistics:
- 2641 PDF objects out of 2984 (max. 8388607)
- 1805 compressed objects within 19 object streams
+ 2642 PDF objects out of 2984 (max. 8388607)
+ 1806 compressed objects within 19 object streams
  329 named destinations out of 1000 (max. 500000)
  636 words of extra memory for PDF output out of 10000 (max. 10000000)
 

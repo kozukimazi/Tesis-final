@@ -1474,7 +1474,7 @@ Al estar cada punto cuántico acoplado a un reservorio distinto, es posible desc
 
 \insertimage[\label{img:figinforesultado}]{ejemplos/infolrddemon.pdf}{scale=0.45}{Flujos de información de cada sitio, $L$,$R$ y $D$. }
 
-Es interesante notar que, cuando \( eV/T \gtrapprox 3.6 \), el menor flujo de información corresponde al punto cuántico \( R \), lo que implica que este entrega más información al sistema. En cambio, para \( 1 \lessapprox eV/T \lessapprox 3.6 \), el flujo de información menor proviene del sitio \( L \), de modo que este es el que aporta más información en ese rango. Esta transición se correlaciona con lo observado en la Figura~\ref{img:densitymatrix}: para \( eV/T \gtrapprox 3.6 \) se cumple que \(\rho_{001} < \rho_{010} < \rho_{100}\), lo que indica una mayor probabilidad de ocupación del sitio \( L \). Además, la probabilidad del estado \( \rho_{110} \) supera a la de \( \rho_{011} \), lo que implica que la ocupación simultánea de \( L \) y \( R \) ---y por ende su monitoreo mutuo--- es más probable que la de \( R \) y \( D \). Lo anterior puede interpretarse como que, en este régimen, las correlaciones entre \( L \) y \( R \) se intensifican. Pues, en el estado \( \rho_{110} \) los sitios \( L \) y \( R \) interactúan simultáneamente mediante \textit{hopping} y energía de Coulomb, lo que facilita que \( L \) obtenga información de \( R \) y, en consecuencia, contribuya positivamente a su flujo de información, de modo que \( \dot{I}_{L} > \dot{I}_{R} \). Para diferencias de potencial pequeñas (\( eV/T \lessapprox 1 \)), ambos flujos de información son prácticamente idénticos (\( \dot{I}_{L} \approx \dot{I}_{R} \)).
+Es interesante notar que, cuando \( eV/T \gtrapprox 3.6 \), el menor flujo de información corresponde al punto cuántico \( R \), lo que implica que este entrega más información al sistema. En cambio, para \( 1 \lessapprox eV/T \lessapprox 3.6 \), el flujo de información menor proviene del sitio \( L \), de modo que este es el que aporta más información en ese rango. Esta transición se correlaciona con lo observado en la Figura~\ref{img:densitymatrix}: para \( eV/T \gtrapprox 3.6 \) se cumple que \(\rho_{001} < \rho_{010} < \rho_{100}\), lo que indica una mayor probabilidad de ocupación del sitio \( L \). Además, en este mismo rango de parámetros  ($eV/T \gtrapprox 3.6$) la probabilidad del estado \( \rho_{110} \) supera a la de \( \rho_{011} \), lo que implica que la ocupación simultánea de \( L \) y \( R \) ---y por ende su monitoreo mutuo--- es más probable que la de \( R \) y \( D \). Lo anterior puede interpretarse como que, en este régimen, las correlaciones entre \( L \) y \( R \) se intensifican. Pues, en el estado \( \rho_{110} \) los sitios \( L \) y \( R \) interactúan mediante energía de Coulomb, siendo está una interacción mayor al \textit{hopping} ($U_{f}>g$), lo que facilita que \( L \) obtenga información de \( R \) y, en consecuencia, contribuya positivamente a su flujo de información, de modo que \( \dot{I}_{L} > \dot{I}_{R} \). Para diferencias de potencial pequeñas (\( eV/T \lessapprox 1 \)), ambos flujos de información son prácticamente idénticos (\( \dot{I}_{L} \approx \dot{I}_{R} \)).
 
 %Este comportamiento es consistente con la intuición física: un mayor potencial favorece la ocupación del punto cuántico \( L \), mientras que la asimetría en las tasas de túnel está diseñada para promover la ocupación de \( R \). Al pasar cierto umbral de $eV/T$, se inhibe por completo la eficacia de la dinámica asociada al mecanismo tipo Demonio de Maxwell, descrita en las Figuras~\ref{img:dinamica1},~\ref{img:dinamica2} y~\ref{img:dinamica3}.
 
@@ -1488,11 +1488,11 @@ Se observan dos comportamientos relevantes. Primero, para \( eV/T \lessapprox 1 
 
 %Otra característica importante de está dinámica, es que si se compara \ref{img:fig5resultado} con \ref{img:transporte5}, la coherencia y concurrencia alcanzan valores más alto para el caso en que las tasas de túnel se mantienen constantes, esto es esperable, pues el transporte de electrones ocurre de una forma más coherente, que en el caso actual.
 
-Dado el comportamiento tipo Demonio de Maxwell del sistema, resulta pertinente examinar cómo estas cantidades cuánticas se ven influenciadas por el parámetro de acoplamiento \( g \). Para ello, se comenzará analizando las cantidades termodinámicas.
+Dado el comportamiento tipo Demonio de Maxwell del sistema, resulta pertinente examinar cómo las cantidades termodinámicas se ven influenciadas por la coherencia, el parámetro del Hamiltoniano $\hat{H}_{S}$ que se encarga de inducir coherencia en el sistema, es el acoplamiento \( g \). Por ende, en la Figura \ref{img:fig6resultado} se muestran las cantidades termodinámicas en función del parámetro \( g/\kappa_{L} \) 
 
 \insertimage[\label{img:fig6resultado}]{ejemplos/thermoquantum.pdf}{scale=0.57}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\kappa_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:fig1resultado}. }
 
-Se observa que cuando el acoplamiento se encuentra en un régimen \( g/\kappa_{L} \gtrapprox 10^{-1}\), la potencia generada del subsistema $LR$($\dot{W}_{LR}$) y la contribución informacional ($T\dot{I}_{LR}$) decrecen, por ende, el subsistema $LR$ realiza más trabajo, y entrega más información al sitio $D$. Este resultado sugiere que un acoplamiento suficientemente fuerte entre los sitios $L$ y $R$ potencia la conversión de información en trabajo. 
+Se observa que cuando el acoplamiento se encuentra en un régimen \( g/\kappa_{L} \gtrapprox 10^{-1}\), la potencia generada del subsistema $LR$ ($\dot{W}_{LR}$) y la contribución informacional ($T\dot{I}_{LR}$) decrecen, por ende, el subsistema $LR$ realiza más trabajo, y entrega más información al sitio $D$. Este resultado sugiere que un acoplamiento suficientemente fuerte entre los sitios $L$ y $R$ potencia la conversión de información en trabajo. 
 
 Además, bajo esta misma condición \( g/\kappa_{L} \gtrapprox 10^{-1} \), el flujo de energía del demonio \( \dot{E}_{D} \) se vuelve más negativo, lo que indica mayor transporte energético entre el demonio y el sistema $LR$.
 
@@ -1572,28 +1572,28 @@ donde $\mathbf{P}$ es el vector de probabilidades en la base de Fock utilizada,$
 En el modelo clásico, la expresión analítica para el flujo de corriente de partículas correspondiente al baño $L$ es idéntica al cuántico. Usando la expresión \ref{sec5:currentsemi}, la corriente de partículas esta dada por  
 
 \begin{align*}
-    \dot{N}_{L} & = \gamma_{L}(\epsilon)\big(f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} \big) \\
-        & + \gamma_{L}(\epsilon + U) \big(f_{L}(\epsilon+U)\rho_{001} - [1-f_{L}(\epsilon+U)]\rho_{101} \big)  \\
-        & + \gamma_{L}(\epsilon + U_{f}) \big(f_{L}(\epsilon+U_{f})\rho_{010} - [1-f_{L}(\epsilon+U_{f})]\rho_{110} \big)  \\  
-        & + \gamma_{L}(\epsilon + U + U_{f}) \big(f_{L}(\epsilon+U + U_{f})\rho_{011} - [1-f_{L}(\epsilon+U+U_{f})]\rho_{111} \big).
+    \dot{N}_{L} & = \kappa_{L}\big(f_{L}(\epsilon)\rho_{000} - [1-f_{L}(\epsilon)]\rho_{100} \big) \\
+        & + \kappa^{U}_{L} \big(f_{L}(\epsilon+U)\rho_{001} - [1-f_{L}(\epsilon+U)]\rho_{101} \big)  \\
+        & + \kappa_{L} \big(f_{L}(\epsilon+U_{f})\rho_{010} - [1-f_{L}(\epsilon+U_{f})]\rho_{110} \big)  \\  
+        & + \kappa_{L} \big(f_{L}(\epsilon+U + U_{f})\rho_{011} - [1-f_{L}(\epsilon+U+U_{f})]\rho_{111} \big).
 \end{align*}
 
 Por otro lado, mediante la expresión \ref{sec5:infosemi} se obtienen los flujos de información clásicos asociados a los baños $L$ y $R$, los cuales están descritos por
 
 \begin{align*}
-  \dot{I}_{L}  &  =  \gamma_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
-      & + \gamma_{L}(\epsilon + U)(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
-      & + \gamma_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \gamma_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
-      & + \gamma_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
+  \dot{I}_{L}  &  =  \kappa_{L}(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
+      & + \kappa^{U}_{L}(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
+      & + \kappa_{L}( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{L}( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
+      & + \kappa_{L}( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
 \end{align*}
 
 \begin{align*}
- \dot{I}_{R} & =  \gamma_{R}(\epsilon)(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
-      & + \gamma_{R}(\epsilon + U)(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
-      & + \gamma_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} - \rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \gamma_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
-      & + \gamma_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
+ \dot{I}_{R} & =  \kappa_{R}(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
+      & + \kappa^{U}_{R}(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
+      & + \kappa_{R}( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} - \rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{R}( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
+      & + \kappa_{R}( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
 \end{align*}
 
 La versión cuántica de los flujos de información se encuentra detallada en el apéndice~\ref{apendix5infoflow}. En la Figura~\ref{img:P4clqm} se muestra una comparación gráfica entre los casos clásico y cuántico para estas cantidades.
@@ -2522,7 +2522,7 @@ Para encontrar el residuo asociado a los polos restantes, se deberá calcular
 \begin{align*}
     \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2K_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm K_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} } ,
 \end{align*}
-seleccionando la región de integración en función del signo de $\sigma$, se concluye que
+seleccionando la región de integración en función del signo de $\sigma$ como se hizo anteriormente, se concluye que
 
 \begin{align*}
     \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \omega_{0})^{2} + W^{2} } \frac{ 2K_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{ \xi_{l}}{\beta}t} e^{i\sigma \mu t} K_{l} }{ [ \frac{ \sigma i\xi_{l}}{\beta} + (\mu - \omega_{0}) ]^{2} + W^{2} }. 
@@ -2609,7 +2609,7 @@ Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los b
 
 A partir de las Figuras \ref{img:correlacionminus}, \ref{img:correlacionminusimag}, \ref{img:correlacionplus} y \ref{img:correlacionplusimag}, se observa que, para $t > 0.4$, las funciones de correlación correspondientes a ambos baños se anulan prácticamente. 
 
-Para analizar el carácter markoviano del sistema, se puede comparar este tiempo de correlación con la dinámica de relajación de la matriz densidad hacia el estado estacionario. Para ello, en la Figura \ref{img:probas} se grafica la evolución temporal de las componentes de la matriz densidad y se analiza el tiempo característico en que estas alcanzan su régimen estacionario.
+Para analizar el carácter markoviano del sistema, se puede comparar este tiempo de correlación con la dinámica de relajación de la matriz densidad hacia el estado estacionario. Para ello, en la Figura \ref{img:probas} se grafica la evolución temporal de las componentes de la matriz densidad, y se analiza el tiempo característico en que estas alcanzan su régimen estacionario.
 
 
 \insertimage[\label{img:probas}]{ejemplos/rhotiempo.pdf}{scale=0.56}{Componentes $\rho_{100}$ y $\rho_{010}$ de la matriz densidad en función del tiempo, para distintos valores de $eV/T$.}
@@ -2990,36 +2990,36 @@ Por otro lado, los disipadores que actuan en los operadores de Lindblad $\mathca
 Con estas cantidades, se podrán obtener los flujos de información en el estado estacionario mediante la expresión $\dot{I}_{i} = \text{Tr}[(\mathcal{L}_{i}\hat{\rho}_{S} \ln \hat{\rho_{S}}) ]$. De este modo, se obtiene 
 
 \begin{align*}
-    \dot{I}_{L} &  =  \kappa_{L}(\epsilon)(f_{L}(\epsilon)[a_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - a_{0}\rho_{100} ] )  \\ 
-      & + \kappa_{L}(\epsilon + U)(f_{L}(\epsilon + U)[a_{1}\rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -a_{1}\rho_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
-      & + \kappa_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -b_{0}\rho_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \kappa_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- b_{1}\rho_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ) 
+    \dot{I}_{L} &  =  \kappa_{L}(f_{L}(\epsilon)[a_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - a_{0}\rho_{100} ] )  \\ 
+      & + \kappa^{U}_{L}(f_{L}(\epsilon + U)[a_{1}\rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -a_{1}\rho_{101} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \kappa_{L}( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -b_{0}\rho_{010} - Re(\alpha c^{*}_{0}) ]  + (1-f_{L}(\epsilon + U_{f}))[b_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{L}( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- b_{1}\rho_{011}] + (1-f_{L}(\epsilon+U+U_{f}) )[b_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ) 
 \end{align*}
 
 \begin{align*}
-    \dot{I}_{R} &  =  \kappa_{R}(\epsilon)(f_{R}(\epsilon)[b_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - b_{0}\rho_{010} ] )  \\ 
-      & + \kappa_{R}(\epsilon + U)(f_{R}(\epsilon + U)[b_{1} \rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -a_{1}\rho_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
-      & + \kappa_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -a_{0}\rho_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \kappa_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ). 
+    \dot{I}_{R} &  =  \kappa_{R}(f_{R}(\epsilon)[b_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - b_{0}\rho_{010} ] )  \\ 
+      & + \kappa^{U}_{R}(f_{R}(\epsilon + U)[b_{1} \rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -a_{1}\rho_{011} - Re(b^{*}_{1}\beta ) ]   ) \\  
+      & + \kappa_{R}( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -a_{0}\rho_{100} - Re(\alpha c^{*}_{0}) ]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}\rho_{110} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{R}( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}]  ). 
 \end{align*}
 
 Si bien el cálculo de los flujos de información puede realizarse numéricamente, la obtención de expresiones analíticas permite identificar claramente la contribución de las coherencias cuánticas a dichos flujos, manifestada tanto en los parámetros $a_i$, $b_i$ como en los términos $\mathrm{Re}(\alpha c_0^*)$ y $\mathrm{Re}(b_1^* \beta)$. 
 Es importante destacar que en el límite en que las coherencias se anulan, se recupera el resultado correspondiente a un sistema clásico
 
 \begin{align*}
- \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \kappa_{L}(\epsilon)(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
-      & + \kappa_{L}(\epsilon + U)(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
-      & + \kappa_{L}(\epsilon + U_{f})( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \kappa_{L}(\epsilon + U + U_{f})( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
-      & + \kappa_{L}(\epsilon + U + U_{f})( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
+ \lim_{\alpha,\beta \to 0}  & \dot{I}_{L}  = \dot{I}_{Lclassic}   =  \kappa_{L}(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100} ] )  \\ 
+      & + \kappa^{U}_{L}(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101} ]   ) \\  
+      & + \kappa_{L}( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010} ]  + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{L}( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}]) \\   
+      & + \kappa_{L}( (1-f_{L}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}])   
 \end{align*}
 
 \begin{align*}
- \lim_{\alpha,\beta \to 0}  & \dot{I}_{R}  = \dot{I}_{Rclassic}   =  \kappa_{R}(\epsilon)(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
-      & + \kappa_{R}(\epsilon + U)(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
-      & + \kappa_{R}(\epsilon + U_{f})( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -\rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
-      & + \kappa_{R}(\epsilon + U + U_{f})( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
-      & + \kappa_{R}(\epsilon + U + U_{f})( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
+ \lim_{\alpha,\beta \to 0}  & \dot{I}_{R}  = \dot{I}_{Rclassic}   =  \kappa_{R}(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010} ] )  \\ 
+      & + \kappa^{U}_{R}(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011} ]   ) \\  
+      & + \kappa_{R}( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -\rho_{100}\ln \rho_{100} ]  + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110} ] ) \\  
+      & + \kappa_{R}( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}]) \\   
+      & + \kappa_{R}( (1-f_{R}(\epsilon+U+U_{f}) )[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}]).   
 \end{align*}
 
 \label{apendix5infoflow}
