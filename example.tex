@@ -1351,9 +1351,9 @@ Un aspecto importante a destacar es que los disipadores $\mathcal{L}_i$ en la ec
 \newpage
 
 \section{Estudio del transporte}
-Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. Y se estudia el flujo de corriente $\dot{N}_{i} = \text{Tr}\{(\mathcal{L}_{i}\hat{\rho}_{S})\hat{N}_{S}\}$ generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, empleando las tasas de túnel $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
+Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. Y se estudia el flujo de corriente $\dot{N}_{i} = \text{Tr}\{(\mathcal{L}_{i}\hat{\rho}_{S})\hat{N}_{S}\}$ generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$ con $\mu_{L}=-\mu_{R}$, empleando las tasas de túnel $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
-\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), mientras que las interacciones de Coulomb se fijan en \( U_{f} = 500 \) y \( U = 40 \).}
+\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), con $\mu_{D}=2$. Mientras que las interacciones de Coulomb se fijan en \( U_{f} = 500 \) y \( U = 40 \).}
 
 La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \), la corriente de partículas \( \dot{N}_L = -\dot{N}_R \) que fluye del baño \( L \) al baño \( R \) también aumenta. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio \( L \) impulsa el transporte hacia \( R \). Asimismo, se puede analizar la potencia suministrada al sistema, dada por \ref{sec2:heatworkeq}, en función de \( eV \).
 
@@ -1409,12 +1409,12 @@ Para que el demonio pueda detectar eficazmente el estado del subsistema $LR$, de
 
 La dinámica específica del demonio se describirá con mayor detalle en la Figura~\ref{img:dinamica1}.
 
-\insertimage[\label{img:dinamica1}]{ejemplos/diseño1}{scale=0.6}{Primer paso en la dinámica, el sitio $D$ y el sitio $R$ poseen una mayor probabilidad de estar ocupados.}
+\insertimage[\label{img:dinamica1}]{ejemplos/diseño1}{scale=0.6}{Primer paso en la dinámica, el sitio $D$ y el sitio $R$ poseen una mayor probabilidad de estar ocupados, su ocupación se denota mediante círculos color negro.}
 
 La elección $\epsilon_D = \mu_D - U/2$ favorece la ocupación del nivel de energía del demonio. Para inducir una corriente en dirección opuesta al gradiente de potencial, es conveniente imponer que $\kappa^{U}_{R} > \kappa^{U}_{L}$, de modo que las transiciones inducidas por el baño derecho sean más frecuentes, aumentando así la probabilidad de que este nivel se pueble. Posteriormente, como se ilustra en la Figura \ref{img:dinamica2}, el acoplamiento $g$ permite el intercambio coherente del electrón entre los niveles $L$ y $R$, introduciendo así una dinámica esencialmente cuántica.
 
 
-\insertimage[\label{img:dinamica2}]{ejemplos/diseño2}{scale=0.6}{Segundo paso en la dinámica, el hopping $g$ genera superposición entre los sitios $L$ y $R$.}
+\insertimage[\label{img:dinamica2}]{ejemplos/diseño2}{scale=0.6}{Segundo paso en la dinámica, el \textit{hopping} $g$ genera superposición entre los sitios $L$ y $R$, esto se denota mediante círculos color gris.}
 
 Finalmente, se produce una tercera etapa, ilustrada en la Figura \ref{img:dinamica3}. En esta fase, con el objetivo de generar un flujo de corriente en contra del gradiente de potencial, resulta conveniente imponer que $\kappa_{L} > \kappa_{R}$. Esta condición asegura que, cuando el demonio se encuentra desocupado, la probabilidad de que ocurra una transición hacia el baño $L$ sea mayor que hacia el baño $R$. Como consecuencia, se favorece el transporte de electrones desde el reservorio $R$ (de menor potencial) hacia el reservorio $L$ (de mayor potencial), evidenciando así un comportamiento característico de un Demonio de Maxwell autónomo.
 
@@ -1428,7 +1428,7 @@ Para valores de $eV/T \lessapprox 3.6$, la probabilidad más alta corresponde al
 
 Debido a que la interacción de Coulomb penaliza los estados con más de un electrón, cabría esperar que la probabilidad de vacío $\rho_{000}$ fuese del mismo orden de magnitud que $\rho_{100},\rho_{010},\rho_{001}$. Sin embargo, debido a la constante inyección de partículas inducida por la diferencia de potencial, esta probabilidad resulta ser significativamente menor. 
 
-Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $eV/T \approx 2.4$. Para valores $eV/T \lessapprox 2.4$, la configuración con interacción Coulomb entre los puntos $R$ y $D$ (representada por $\rho_{011}$) es más probable, esto favorece a que el sistema se encuentre en la configuración de la Figura \ref{img:dinamica1}, y por lo tanto es esperable que favorezca el comportamiento tipo Demonio. En cambio, para $eV/T \gtrapprox 2.4$, la ocupación $\rho_{011}$ se hace menos probable, indicando una menor interacción entre los sitios $R$ y $D$, por lo tanto el sistema deja de comportarse como Demonio.
+Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $eV/T \approx 2.4$. Para valores $eV/T \lessapprox 2.4$, la configuración con interacción Coulomb entre los puntos $R$ y $D$ (representada por $\rho_{011}$) es más probable que $\rho_{101}$, esto favorece a que el sistema se encuentre en la configuración de la Figura \ref{img:dinamica1}, y por lo tanto es esperable que favorezca el comportamiento tipo Demonio. En cambio, para $eV/T \gtrapprox 2.4$, la ocupación $\rho_{011}$ se hace menos probable, indicando una menor interacción entre los sitios $R$ y $D$, por lo tanto el sistema deja de comportarse como Demonio.
 
 
 \insertimage[\label{img:densitymatrix}]{ejemplos/matrixdemon.pdf}{scale=0.45}{Elementos diagonales de la matriz densidad en función de $eV/T$.}

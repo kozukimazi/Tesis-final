@@ -588,6 +588,7 @@ INPUT .\img\\ejemplos\diseño2.pdf
 INPUT .\img\\ejemplos\diseño2.pdf
 INPUT .\img\\ejemplos\diseño2.pdf
 INPUT .\img\\ejemplos\diseño2.pdf
+INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT .\img\\ejemplos\diseño3.pdf
 INPUT .\img\\ejemplos\diseño3.pdf
 INPUT .\img\\ejemplos\diseño3.pdf
@@ -716,6 +717,8 @@ INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pf
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
+INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
+INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Users\kozuk\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb

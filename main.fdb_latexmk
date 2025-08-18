@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1755397313 "main.aux" "main.bbl" "main" 1755486333 0
+["bibtex main"] 1755544819 "main.aux" "main.bbl" "main" 1755546079 0
   "./library.bib" 1753738257 17519 58a48ae47ccbacd6690f1e5caa3d2a7e ""
   "./natnumurl.bst" 1741655937 21201 c3a97a2434b58cd70f7f9c9df607b80a ""
-  "main.aux" 1755486332 62076 9a96a91ede2f4aac28b3927e46eddc57 "pdflatex"
+  "main.aux" 1755546078 62337 cc094cd3101a36d3a40dcd70053ef22e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1755486330 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1755486333 0
+["pdflatex"] 1755546076 "c:/Users/kozuk/Desktop/Tesis-final/main.tex" "main.pdf" "main" 1755546079 0
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744830765 278192 ef8ebc7c99d441113cafbdeac57904d9 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1697553609 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/kozuk/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1697553612 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -39,6 +39,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr17.tfm" 1256929440 12156 ca1ae6a3c8564e89597f1f993fba1608 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr6.tfm" 1256929440 12048 c1068d0f4772be9b0ec447692e1d6d82 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr8.tfm" 1256929440 12064 9b9ade9f64cb32ce1d9a88d21fbd5c2d ""
+  "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmri10.tfm" 1256929440 17148 9556e1b5f936b77a796f68d2d559ba99 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmri12.tfm" 1256929440 17144 271aaf9ebb339934b04110dc5211fba4 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmvtt10.tfm" 1256929440 12024 aeb93ded6597c024b4981c5135905506 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/lmex10.tfm" 1256929440 992 ce925c9346c7613270a79afbee98c070 ""
@@ -85,6 +86,7 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb" 1256929440 120387 4904c2679a7b90fe9e17171d6c7c9dd0 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb" 1256929440 123394 992f5e87d698d9e94717394c62580ea6 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb" 1256929440 122174 a2d5e73f396ddbeb3bdf5c79aea0993d ""
+  "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb" 1256929440 112593 fda2373ba4420af33949610de4c28fe8 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb" 1256929440 109265 e6c7d377db6dfccd4a123fb26da8cffb ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb" 1256929440 27863 09ce3735688ffde955e72da27c95b61a ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb" 1256929440 28109 6d61305ed3d0eb794ebe36f15cf44aa0 ""
@@ -281,8 +283,8 @@
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/kozuk/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1755486329 4573 2f99839565e3cd231ec614ecc0b946a4 ""
-  "example.tex" 1755486119 248810 22a869b804620da0564e2e226f53ada6 ""
+  "c:/Users/kozuk/Desktop/Tesis-final/main.tex" 1755546075 4635 bbf2ec6037cc634738c050e3f8c337df ""
+  "example.tex" 1755544815 248978 fb67dfb94c3fd2780bf500cb2978a7ea ""
   "img//departamentos/uchile2.pdf" 1741655937 18772 1d92f499584e10e4c8e0b3bf44be0bbf ""
   "img//ejemplos/Maxwelldemon1.pdf" 1741655937 13938 842718131e7471bfcab5d515e5a85e48 ""
   "img//ejemplos/cminusimag.pdf" 1753650620 19811 8ad2660cb4fc50e71e4320011e4bd261 ""
@@ -312,11 +314,11 @@
   "img//ejemplos/thermoquantitiesdemon.pdf" 1754608198 20084 1b98cfe5ed457717bf20d1deaafd2181 ""
   "img//ejemplos/thermoquantum.pdf" 1754698503 19976 8ca630ca81491158fbdf2eefbf96b6a7 ""
   "img//ejemplos/worktp.pdf" 1754604212 12212 5fe17a3dc1170e687c021fab7960be4a ""
-  "main.aux" 1755486332 62076 9a96a91ede2f4aac28b3927e46eddc57 "pdflatex"
-  "main.bbl" 1755397313 14270 a74d7afdc84544446e7fd0136f73df43 "bibtex main"
-  "main.lof" 1755486332 6863 d1ec50614e6fbd95ef286e6ff62274a3 "pdflatex"
-  "main.tex" 1755486329 4573 2f99839565e3cd231ec614ecc0b946a4 ""
-  "main.toc" 1755486332 5294 eb0218d146dd4bc94273bd0e2d8336b2 "pdflatex"
+  "main.aux" 1755546078 62337 cc094cd3101a36d3a40dcd70053ef22e "pdflatex"
+  "main.bbl" 1755544819 14270 a74d7afdc84544446e7fd0136f73df43 "bibtex main"
+  "main.lof" 1755546078 6993 b0b9bbf1eb1d0ef4bfcaf41e7effef15 "pdflatex"
+  "main.tex" 1755546075 4635 bbf2ec6037cc634738c050e3f8c337df ""
+  "main.toc" 1755546078 5294 eb0218d146dd4bc94273bd0e2d8336b2 "pdflatex"
   "template.tex" 1741655937 290297 841a7a2beb05c5dcc319b64380dc348b ""
   "template_config.tex" 1741655937 21894 c8a156315548211a1859ff1d4e1eb92a ""
   (generated)
