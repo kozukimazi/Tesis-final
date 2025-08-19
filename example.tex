@@ -682,7 +682,7 @@ Los operadores de salto consisten en
 Y el Hamiltoniano de \textit{Lamb Shift}
 
 \begin{equation*}
-    \hat{H}_{LS} = \sum_{\alpha,k;q} \Delta^{\alpha}_{k}(\omega_{q}) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),
+    \hat{H}_{LS}(t) = \sum_{\alpha,k;q} \Delta^{\alpha}_{k}(\omega_{q}) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),
 \end{equation*}
 con las cantidades
 
@@ -701,6 +701,12 @@ En el límite en que los parámetros de conteo tienden a cero, se obtiene
 con
 \begin{equation*}
     \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k,k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}(t)]  \right].
+\end{equation*}
+
+Y 
+
+\begin{equation*}
+    \mathcal{D}[\hat{S}_{\alpha,k,q}]\hat{\rho}_{S}(t) = \hat{S}_{\alpha,k;q}\hat{\rho}_{S}(t)\hat{S}^{\dagger}_{\alpha,k;q} - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q},\hat{\rho}_{S}(t) \}.
 \end{equation*}
 
 La demostración de esta ecuación se encuentra en \ref{apendixKMS}.
@@ -1310,31 +1316,27 @@ La evolución no unitaria del sistema de tres puntos cuánticos, inducida por su
 donde el operador de Lindblad $\mathcal{L}$ se descompone como una suma de contribuciones individuales, una por cada baño acoplado al sistema. Explícitamente cada contribución $\mathcal{L}_{i}$ corresponde a 
 
 \begin{align*}
-    \mathcal{L}_{R} & = \kappa_{R}(\epsilon)(f_{R}(\epsilon)\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \kappa_{R}(\epsilon+U)(f_{R}(\epsilon+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon+U)]\mathcal{D}_{0}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  ) \\
-                   & + \kappa_{R}(\epsilon+U_{f})(f_{R}(\epsilon+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U_{f})]\mathcal{D}_{0}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  ) \\
-                  & + \kappa_{R}(\epsilon+U+U_{f})(f_{R}(\epsilon+U+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{R}\hat{n}_{D}\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U+U_{f})]\mathcal{D}_{0}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L} ]  ) 
+    \mathcal{L}_{R} & = \kappa_{R}(\epsilon)(f_{R}(\epsilon)\mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon)]\mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
+                    & + \kappa_{R}(\epsilon+U)(f_{R}(\epsilon+U)\mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon+U)]\mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  ) \\
+                   & + \kappa_{R}(\epsilon+U_{f})(f_{R}(\epsilon+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U_{f})]\mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  ) \\
+                  & + \kappa_{R}(\epsilon+U+U_{f})(f_{R}(\epsilon+U+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U+U_{f})]\mathcal{D}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L} ]  ) 
 \end{align*}
 
 \begin{align*}
-    \mathcal{L}_{L} & = \kappa_{L}(\epsilon)(f_{L}(\epsilon)\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon)]\mathcal{D}_{0}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  )  \\
-                    & + \kappa_{L}(\epsilon+U)(f_{L}(\epsilon+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon+U)]\mathcal{D}_{0}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  ) \\
-                   & + \kappa_{L}(\epsilon+U_{f})(f_{L}(\epsilon+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U_{f})]\mathcal{D}_{0}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  ) \\
-                  & + \kappa_{L}(\epsilon+U+U_{f})(f_{L}(\epsilon+U+U_{f})\mathcal{D}_{0}[\hat{d}^{\dagger}_{L}\hat{n}_{D}\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U+U_{f})]\mathcal{D}_{0}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R} ]  ) 
+    \mathcal{L}_{L} & = \kappa_{L}(\epsilon)(f_{L}(\epsilon)\mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon)]\mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  )  \\
+                    & + \kappa_{L}(\epsilon+U)(f_{L}(\epsilon+U)\mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon+U)]\mathcal{D}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  ) \\
+                   & + \kappa_{L}(\epsilon+U_{f})(f_{L}(\epsilon+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U_{f})]\mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  ) \\
+                  & + \kappa_{L}(\epsilon+U+U_{f})(f_{L}(\epsilon+U+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U+U_{f})]\mathcal{D}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R} ]  ) 
 \end{align*}
 
 \begin{align*}
-    \mathcal{L}_{D} & = \kappa_{D}(\epsilon_{D})(f_{D}(\epsilon_{D})\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{D})]\mathcal{D}_{0}[\hat{d}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \kappa_{D}(\epsilon_{D}+U)f_{D}(\epsilon_{D}+U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
-                    & + \kappa_{D}(\epsilon_{D}+U)[1-f_{D}(\epsilon_{D}+U)]\mathcal{D}_{0}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
-                   & + \kappa_{D}(\epsilon_{D}+2U)(f_{D}(\epsilon_{D}+2U)\mathcal{D}_{0}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{D}+2U)]\mathcal{D}_{0}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
+    \mathcal{L}_{D} & = \kappa_{D}(\epsilon_{D})(f_{D}(\epsilon_{D})\mathcal{D}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{D})]\mathcal{D}[\hat{d}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  )  \\
+                    & + \kappa_{D}(\epsilon_{D}+U)f_{D}(\epsilon_{D}+U)\mathcal{D}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
+                    & + \kappa_{D}(\epsilon_{D}+U)[1-f_{D}(\epsilon_{D}+U)]\mathcal{D}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
+                   & + \kappa_{D}(\epsilon_{D}+2U)(f_{D}(\epsilon_{D}+2U)\mathcal{D}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{D}+2U)]\mathcal{D}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
 \end{align*}
 
-Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ la distribución de Fermi y  las tasas de túnel $\kappa_{\alpha}(\omega)= 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$, las cuales provienen de calcular las funciones correlación espectral $\gamma$ en \ref{sec2:gammaanddelta}. Además, el operador $\mathcal{D}_{0}$ es 
-
-\begin{equation*}
-    \mathcal{D}_{0}[\hat{A}]\hat{\rho} = \hat{A}\hat{\rho}\hat{A}^{\dagger}- \frac{1}{2} \{\hat{A }^{\dagger}\hat{A},\hat{\rho} \}.
-\end{equation*}
+Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ la distribución de Fermi y  las tasas de túnel $\kappa_{\alpha}(\omega)= 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$, las cuales provienen de calcular las funciones correlación espectral $\gamma$ en \ref{sec2:gammaanddelta}.
 
 La demostración de la ecuación \ref{Lindbladsec5} se presenta en los apéndices \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}.
 
