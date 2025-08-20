@@ -682,12 +682,12 @@ Los operadores de salto consisten en
 Y el Hamiltoniano de \textit{Lamb Shift}
 
 \begin{equation*}
-    \hat{H}_{LS}(t) = \sum_{\alpha,k;q} \Delta^{\alpha}_{k}(\omega_{q}) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),
+    \hat{H}_{LS}(t) = \sum_{\alpha,k;q} S^{\alpha}_{k}(\omega_{q}) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),
 \end{equation*}
 con las cantidades
 
 \begin{equation}
-    \gamma_{k}^{\alpha}(\omega) = \int_{-\infty}^{\infty}ds e^{i\omega s}C^{\alpha}_{k,k}(s) \hspace{10mm} \Delta^{\alpha}_{k}(\omega) = - \frac{i}{2} \int^{\infty}_{-\infty}ds e^{i\omega s} \text{sign}(s)C^{\alpha}_{k,k}(s).
+    \gamma_{k}^{\alpha}(\omega) = \int_{-\infty}^{\infty}ds e^{i\omega s}C^{\alpha}_{k,k}(s) \hspace{10mm} S^{\alpha}_{k}(\omega) = - \frac{i}{2} \int^{\infty}_{-\infty}ds e^{i\omega s} \text{sign}(s)C^{\alpha}_{k,k}(s).
     \label{sec2:gammaanddelta}
 \end{equation}
 
@@ -700,7 +700,7 @@ En el límite en que los parámetros de conteo tienden a cero, se obtiene
 \end{equation*}
 con
 \begin{equation*}
-    \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k,k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}(t)]  \right].
+    \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}(t)]  \right].
 \end{equation*}
 
 Y 
@@ -720,7 +720,7 @@ Para un Hamiltoniano tiempo independiente, la ecuación maestra en el cuadro de 
 con
 
 \begin{equation}
-    \mathcal{L}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k,k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}]  \right].
+    \mathcal{L}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}]  \right].
 \label{sec2lindbladconsistency}
 \end{equation}
 
@@ -1913,7 +1913,7 @@ Si se usan las identidades
 \begin{align*}
     \int_{0}^{\infty}ds e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) & = \int_{-\infty}^{\infty}ds e^{i\omega_{q}s}(1+\text{sgn}(s))C^{\alpha}_{k,k}(s)/2 \\
     & = \int_{-\infty}^{\infty}ds e^{i\omega_{q}s}C^{\alpha}_{k,k}(s)/2 + i \left(-\frac{i}{2} \right) \int_{-\infty}^{\infty}ds e^{i\omega_{q}s} \text{sgn}(s)C^{\alpha}_{k,k}(s) \\
-    & = \frac{1}{2}\gamma_{k,k}^{\alpha}(\omega_{q}) + i \Delta^{\alpha}_{k}(\omega_{q}),
+    & = \frac{1}{2}\gamma_{k}^{\alpha}(\omega_{q}) + i S^{\alpha}_{k}(\omega_{q}),
 \end{align*}
 
 y 
@@ -1924,8 +1924,8 @@ y
 en la ecuación maestra, finalmente queda la ecuación 
 
 \begin{multline*}
-    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}\Delta^{\alpha}_{k,k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
-    + \sum_{\alpha,k;q} \gamma_{k,k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right].
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}S^{\alpha}_{k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
+    + \sum_{\alpha,k;q} \gamma_{k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right].
 \end{multline*}
 
 Que es la ecuación \ref{ecmaestrafinal} que se quiere demostrar.
@@ -1959,11 +1959,11 @@ que se relaciona con la función correlación, de la siguiente manera
 Las funciones correlación espectral, pueden expresarse mediante las funciones correlación auxiliares
 
 \begin{align*}
-    \gamma^{\alpha}_{k,k}(\omega) & = \int_{-\infty}^{\infty}ds e^{i\mu_{\alpha}n_{\alpha,k}s} e^{i\omega s}C^{\alpha N}_{k,k}(s) \\
+    \gamma^{\alpha}_{k}(\omega) & = \int_{-\infty}^{\infty}ds e^{i\mu_{\alpha}n_{\alpha,k}s} e^{i\omega s}C^{\alpha N}_{k,k}(s) \\
     & = \int_{-\infty}^{\infty}ds e^{i\mu_{\alpha}n_{\alpha,k}s} e^{i\omega s}\langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle_{N} \\
     & = \int_{-\infty}^{\infty}ds e^{-i(i\beta \mu_{\alpha}n_{\alpha,k})} e^{i\omega s} \langle \hat{B}_{\alpha,k}\hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle \\
     & = e^{\beta_{\alpha}\mu_{\alpha}n_{\alpha,k}}e^{\beta \omega} \int_{-\infty}^{\infty} ds e^{i\omega(s+i\beta_{\alpha})} \langle \hat{B}_{\alpha,k}\hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha}) \rangle \\
-    & = e^{\beta_{\alpha}(\omega - \mu_{\alpha}n_{\alpha,k})} \gamma^{\alpha}_{k,k}(-\omega).
+    & = e^{\beta_{\alpha}(\omega - \mu_{\alpha}n_{\alpha,k})} \gamma^{\alpha}_{k}(-\omega).
 \end{align*}
 
 
