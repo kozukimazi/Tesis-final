@@ -823,6 +823,8 @@ De este modo, se definen las leyes de la termodinámica para las ecuaciones maes
 En este capítulo se introduce el concepto de información termodinámica, comenzando en la sección \ref{sec4:Demon} con una revisión del paradigma del Demonio de Maxwell. En la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se define el concepto de flujos de información, utilizando herramientas como la termodinámica estocástica en contexto clásico y la matriz densidad en contexto cuántico\cite{horowitz2014thermodynamics,ptaszynski2019thermodynamics}.
 
 
+
+
 \section{Demonio de Maxwell}
 El demonio de Maxwell es un experimento mental esbozado por James Clerk Maxwell en su obra\cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por un ente denominado "Demonio", el cual tiene la capacidad de manipular la puerta sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos.
 
@@ -867,7 +869,7 @@ La probabilidad \( p(x,y) \) de encontrar al sistema en el estado \( (x,y) \) es
     d_{t}p(x,y) = \sum_{x',y'} \left[ W_{x,x'}^{y,y'}p(x',y')  - W_{x',x}^{y',y}p(x,y) \right].
 \end{equation*}
 
-La tasa de transición \( W_{x,x'}^{y,y'} \) para un salto del estado \( (x',y') \) al estado \( (x,y) \), obedece la condición de balance detallado local:
+Para un sistema conectado a un reservorio termal, la tasa de transición \( W_{x,x'}^{y,y'} \) para un salto del estado \( (x',y') \) al estado \( (x,y) \), obedece la condición de balance detallado local:
 
 \[
 \ln \left( \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}} \right) = -\frac{\epsilon_{x,y} - \epsilon_{x',y'}}{T},
@@ -1293,9 +1295,9 @@ se puede representar el Hamiltoniano del sistema en forma matricial
 Por otro lado, el Hamiltoniano del baño y la interacción con el sistema se descomponen como $\hat{H}_{B} = \hat{H}_{L}+\hat{H}_{R}+\hat{H}_{D}$ y $\hat{V} = \hat{V}_{L}+\hat{V}_{R}+\hat{V}_{D}$ respectivamente. Cada término esta dado por 
 
 \begin{equation*}
-    \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha l} \hat{c}^{\dagger}_{\alpha l}\hat{c}_{\alpha l} \hspace{10mm} \hat{V}_{\alpha} = \sum_{l} t_{\alpha l} ( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha l} + \hat{c}^{\dagger}_{\alpha l} \hat{d}_{\alpha} ),
+    \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha, l} \hat{c}^{\dagger}_{\alpha, l}\hat{c}_{\alpha, l} \hspace{10mm} \hat{V}_{\alpha} = \sum_{l} t_{\alpha, l} ( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha, l} + \hat{c}^{\dagger}_{\alpha, l} \hat{d}_{\alpha} ),
 \end{equation*}
-donde $\alpha = L,R,D$ denota los tres reservorios acoplados a cada punto cuántico, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha l}$ sus energías, y $t_{\alpha l}$ los parámetros reales que describen el acoplamiento entre el sistema y baño. 
+donde $\alpha = L,R,D$ denota los tres reservorios acoplados a cada punto cuántico, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha, l}$ sus energías, y $t_{\alpha, l}$ los parámetros reales que describen el acoplamiento entre el sistema y baño. 
 
 A partir del término de interacción $\hat{V}$, es posible identificar los operadores asociados al sistema y al baño
 
@@ -2163,7 +2165,7 @@ En el equilibrio gran canónico, el valor de expectación $\langle \hat{c}^{\dag
 luego, si se define la tasa de túnel correspondiente al baño \( \alpha \) como
 
 \begin{equation*}
-    \kappa_{\alpha}(\omega) = 2\pi \sum_{l} |t_{\alpha,l}|^{2} \delta(\omega - \epsilon_{\alpha,l}),
+    \kappa_{\alpha}(\omega) = 2\pi \sum_{l} t_{\alpha,l}^{2} \delta(\omega - \epsilon_{\alpha,l}),
 \end{equation*}
 
 se pueden reescribir las funciones de correlación en forma integral en términos de dicha tasa y de la distribución de ocupación del reservorio \( f_\alpha(\omega) \)
