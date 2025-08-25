@@ -1528,13 +1528,13 @@ que combina la dinámica coherente del sistema con la disipación inducida por l
 Para obtener una ecuación maestra que describa únicamente la dinámica de las partes diagonales de la matriz densidad, se aplica el formalismo de Nakajima-Zwanzig \cite{zwanzig1966statistical}, con los operadores $\check{\mathcal{P}}$ y $\check{\mathcal{Q}}$ que distinguen la parte relevante(diagonal) y la parte no relevante(no diagonal) de la matriz densidad $\hat{\rho}_{S}$, lo que conduce a la ecuación maestra
 
 \begin{equation}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle. 
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{+}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle. 
 \label{ec5:classicalmodel}
 \end{equation}
 
-Con el operador inverso $\check{\mathcal{L}}_{0}^{-1}$ que consiste en el inverso de Drazin del operador $\check{\mathcal{L}}_{0}$, dado por 
+Con el operador inverso $\check{\mathcal{L}}_{0}^{+}$ que consiste en el inverso de Drazin del operador $\check{\mathcal{L}}_{0}$, dado por 
 \begin{equation*}
-\check{\mathcal{L}}_{0}^{-1} = -\int_{0}^{\infty} d\tau\, e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}},
+\check{\mathcal{L}}_{0}^{+} = -\int_{0}^{\infty} d\tau\, e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}},
 \end{equation*}
 según lo discutido en~\cite{landi2024current}. La demostración detallada de la ecuación \ref{ec5:classicalmodel} se encuentra en el Apéndice~\ref{appendix5clasic}.
 
@@ -2824,7 +2824,7 @@ Luego, para aplicar aproximación de Markov se supondrá que en escalas de tiemp
 Finalmente, la ecuación para la evolución temporal será 
 
 \begin{equation*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{-1}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle. 
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle = (\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{+}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}})\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle. 
 \end{equation*}
 
 
