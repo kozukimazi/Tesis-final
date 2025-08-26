@@ -700,13 +700,13 @@ En el límite en que los parámetros de conteo tienden a cero, se obtiene
 \end{equation*}
 con
 \begin{equation*}
-    \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}(t)]  \right].
+    \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k;q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}(t)]  \right].
 \end{equation*}
 
 Y 
 
 \begin{equation*}
-    \mathcal{D}[\hat{S}_{\alpha,k,q}]\hat{\rho}_{S}(t) = \hat{S}_{\alpha,k;q}\hat{\rho}_{S}(t)\hat{S}^{\dagger}_{\alpha,k;q} - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q},\hat{\rho}_{S}(t) \}.
+    \mathcal{D}[\hat{S}_{\alpha,k;q}]\hat{\rho}_{S}(t) = \hat{S}_{\alpha,k;q}\hat{\rho}_{S}(t)\hat{S}^{\dagger}_{\alpha,k;q} - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q},\hat{\rho}_{S}(t) \}.
 \end{equation*}
 
 La demostración de esta ecuación se encuentra en \ref{apendixKMS}.
@@ -720,16 +720,16 @@ Para un Hamiltoniano tiempo independiente, la ecuación maestra en el cuadro de 
 con
 
 \begin{equation}
-    \mathcal{L}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k,q}] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k,q}]  \right].
+    \mathcal{L}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k;q}] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]  \right].
 \label{sec2lindbladconsistency}
 \end{equation}
 
-Hay dos límites importantes a considerar, el primero corresponde al caso en que todas las frecuencias satisfacen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}$, pues se cumple que $\mathcal{D}[\hat{S}_{\alpha,k,q}] = \mathcal{D}[\hat{S}_{\alpha,k,j}]$, lo que permite realizar la aproximación secular entre todas las frecuencias de Bohr y recuperar la ecuación de Lindblad \ref{eqsec2:lindbladS}. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo. Por lo tanto, los operadores del sistema cumplen que $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$, y la ecuación maestra queda descrita por operadores locales, lo que corresponde a la ecuación maestra local\cite{wichterich2007modeling}.
+Hay dos límites importantes a considerar, el primero corresponde al caso en que todas las frecuencias satisfacen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}$, pues se cumple que $\mathcal{D}[\hat{S}_{\alpha,k;q}] = \mathcal{D}[\hat{S}_{\alpha,k;j}]$, lo que permite realizar la aproximación secular entre todas las frecuencias de Bohr y recuperar la ecuación de Lindblad \ref{eqsec2:lindbladS}. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo. Por lo tanto, los operadores del sistema cumplen que $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$, y la ecuación maestra queda descrita por operadores locales, lo que corresponde a la ecuación maestra local\cite{wichterich2007modeling}.
 \section{Consistencia termodinámica}
 Existen dos casos a diferenciar para derivar las leyes de la termodinámica, primero la ecuación maestra global definida en la sección \ref{sec:lindblad} y segundo la ecuación maestra semilocal, que presenta un mayor desafío; debido a la resolución finita de energía impuesta por la dinámica markoviana en la ecuación semilocal, para asegurar la consistencia termodinámica es necesario redefinir las leyes de la termodinámica. Como primer paso, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cual satisface la relación de conmutación
 \label{sec2:thermolaws}
 \begin{equation*}
-    [\hat{S}_{\alpha,k,j},\hat{H}_{TD}] = \omega_{q}\hat{S}_{\alpha,k,j},
+    [\hat{S}_{\alpha,k;j},\hat{H}_{TD}] = \omega_{q}\hat{S}_{\alpha,k;j},
 \end{equation*}
 para todas las frecuencias $\omega_{j} \in x_{q}$. Este Hamiltoniano puede construirse mediante el Hamiltoniano $\hat{H}_{S}$, modificando sus autovalores de modo que todas las transiciones dentro de un mismo conjunto $x_q$ compartan una frecuencia $\omega_{q}$ para $\omega_{j} \in x_{q}$.
 
