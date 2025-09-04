@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  1 SEP 2025 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.17)  4 SEP 2025 17:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2320,14 +2320,14 @@ Capítulo 3.
 <./img//ejemplos/Maxwelldemon1.pdf, id=567, 457.71pt x 168.63pt>
 File: ./img//ejemplos/Maxwelldemon1.pdf Graphic file (type pdf)
 <use ./img//ejemplos/Maxwelldemon1.pdf>
-Package pdftex.def Info: ./img//ejemplos/Maxwelldemon1.pdf  used on input line 847.
+Package pdftex.def Info: ./img//ejemplos/Maxwelldemon1.pdf  used on input line 845.
 (pdftex.def)             Requested size: 411.9352pt x 151.76558pt.
  [23 <./img//ejemplos/Maxwelldemon1.pdf>] [24] [25] [26] [27] [28] [29] [30] [31] [32]
 Capítulo 4.
 <./img//ejemplos/semilocal.pdf, id=669, 369.98048pt x 400.81859pt>
 File: ./img//ejemplos/semilocal.pdf Graphic file (type pdf)
 <use ./img//ejemplos/semilocal.pdf>
-Package pdftex.def Info: ./img//ejemplos/semilocal.pdf  used on input line 1260.
+Package pdftex.def Info: ./img//ejemplos/semilocal.pdf  used on input line 1258.
 (pdftex.def)             Requested size: 133.19286pt x 144.29457pt.
 [33
 
@@ -2335,47 +2335,47 @@ Package pdftex.def Info: ./img//ejemplos/semilocal.pdf  used on input line 1260.
 <./img//ejemplos/particletp.pdf, id=767, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/particletp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/particletp.pdf>
-Package pdftex.def Info: ./img//ejemplos/particletp.pdf  used on input line 1360.
+Package pdftex.def Info: ./img//ejemplos/particletp.pdf  used on input line 1358.
 (pdftex.def)             Requested size: 428.69806pt x 220.56413pt.
 <./img//ejemplos/worktp.pdf, id=769, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/worktp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/worktp.pdf>
-Package pdftex.def Info: ./img//ejemplos/worktp.pdf  used on input line 1364.
+Package pdftex.def Info: ./img//ejemplos/worktp.pdf  used on input line 1362.
 (pdftex.def)             Requested size: 428.69806pt x 220.56413pt.
  [37 <./img//ejemplos/particletp.pdf>]
 <./img//ejemplos/heatlrdtp.pdf, id=809, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/heatlrdtp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/heatlrdtp.pdf>
-Package pdftex.def Info: ./img//ejemplos/heatlrdtp.pdf  used on input line 1370.
+Package pdftex.def Info: ./img//ejemplos/heatlrdtp.pdf  used on input line 1368.
 (pdftex.def)             Requested size: 428.69806pt x 220.56413pt.
  [38 <./img//ejemplos/worktp.pdf> <./img//ejemplos/heatlrdtp.pdf>]
 <./img//ejemplos/energytp.pdf, id=875, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/energytp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/energytp.pdf>
-Package pdftex.def Info: ./img//ejemplos/energytp.pdf  used on input line 1376.
+Package pdftex.def Info: ./img//ejemplos/energytp.pdf  used on input line 1374.
 (pdftex.def)             Requested size: 460.8496pt x 237.10602pt.
  [39 <./img//ejemplos/energytp.pdf>]
 <./img//ejemplos/quantumtp.pdf, id=919, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/quantumtp.pdf Graphic file (type pdf)
 <use ./img//ejemplos/quantumtp.pdf>
-Package pdftex.def Info: ./img//ejemplos/quantumtp.pdf  used on input line 1396.
+Package pdftex.def Info: ./img//ejemplos/quantumtp.pdf  used on input line 1394.
 (pdftex.def)             Requested size: 428.69806pt x 220.56413pt.
  [40 <./img//ejemplos/quantumtp.pdf>]
 <./img//ejemplos/diseño1.pdf, id=958, 381.26694pt x 247.53897pt>
 File: ./img//ejemplos/diseño1.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño1.pdf>
-Package pdftex.def Info: ./img//ejemplos/diseño1.pdf  used on input line 1416.
+Package pdftex.def Info: ./img//ejemplos/diseño1.pdf  used on input line 1414.
 (pdftex.def)             Requested size: 228.76192pt x 148.5245pt.
 <./img//ejemplos/diseño2.pdf, id=960, 398.3386pt x 250.38426pt>
 File: ./img//ejemplos/diseño2.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño2.pdf>
-Package pdftex.def Info: ./img//ejemplos/diseño2.pdf  used on input line 1421.
+Package pdftex.def Info: ./img//ejemplos/diseño2.pdf  used on input line 1419.
 (pdftex.def)             Requested size: 239.00499pt x 150.2317pt.
  [41 <./img//ejemplos/diseño1.pdf>]
 <./img//ejemplos/diseño3.pdf, id=1075, 384.1122pt x 199.1693pt>
 File: ./img//ejemplos/diseño3.pdf Graphic file (type pdf)
 <use ./img//ejemplos/diseño3.pdf>
-Package pdftex.def Info: ./img//ejemplos/diseño3.pdf  used on input line 1425.
+Package pdftex.def Info: ./img//ejemplos/diseño3.pdf  used on input line 1423.
 (pdftex.def)             Requested size: 230.46909pt x 119.50249pt.
  [42 <./img//ejemplos/diseño2.pdf> <./img//ejemplos/diseño3.pdf
 
@@ -2384,10 +2384,10 @@ pdfTeX warning: pdflatex (file ./img//ejemplos/diseño3.pdf): PDF inclusion: mul
 <./img//ejemplos/matrixdemon.pdf, id=1283, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/matrixdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/matrixdemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/matrixdemon.pdf  used on input line 1438.
+Package pdftex.def Info: ./img//ejemplos/matrixdemon.pdf  used on input line 1436.
 (pdftex.def)             Requested size: 499.52565pt x 245.33994pt.
 
-Overfull \hbox (27.49442pt too wide) in paragraph at lines 1438--1438
+Overfull \hbox (27.49442pt too wide) in paragraph at lines 1436--1436
  [][] 
  []
 
@@ -2395,20 +2395,20 @@ Overfull \hbox (27.49442pt too wide) in paragraph at lines 1438--1438
 <./img//ejemplos/heatparticledemon.pdf, id=1316, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/heatparticledemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/heatparticledemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/heatparticledemon.pdf  used on input line 1447.
+Package pdftex.def Info: ./img//ejemplos/heatparticledemon.pdf  used on input line 1445.
 (pdftex.def)             Requested size: 599.4274pt x 294.40627pt.
 
-Overfull \hbox (127.39616pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (127.39616pt too wide) in paragraph at lines 1445--1445
  [][] 
  []
 
 <./img//ejemplos/entropyapparentdemon.pdf, id=1317, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/entropyapparentdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/entropyapparentdemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/entropyapparentdemon.pdf  used on input line 1449.
+Package pdftex.def Info: ./img//ejemplos/entropyapparentdemon.pdf  used on input line 1447.
 (pdftex.def)             Requested size: 499.52565pt x 245.33994pt.
 
-Overfull \hbox (27.49442pt too wide) in paragraph at lines 1449--1449
+Overfull \hbox (27.49442pt too wide) in paragraph at lines 1447--1447
  [][] 
  []
 
@@ -2416,10 +2416,10 @@ Overfull \hbox (27.49442pt too wide) in paragraph at lines 1449--1449
 <./img//ejemplos/entropyrialdemon.pdf, id=1364, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/entropyrialdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/entropyrialdemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/entropyrialdemon.pdf  used on input line 1453.
+Package pdftex.def Info: ./img//ejemplos/entropyrialdemon.pdf  used on input line 1451.
 (pdftex.def)             Requested size: 521.73169pt x 256.24634pt.
 
-Overfull \hbox (49.70045pt too wide) in paragraph at lines 1453--1453
+Overfull \hbox (49.70045pt too wide) in paragraph at lines 1451--1451
  [][] 
  []
 
@@ -2427,10 +2427,10 @@ Overfull \hbox (49.70045pt too wide) in paragraph at lines 1453--1453
 <./img//ejemplos/thermoquantitiesdemon.pdf, id=1426, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/thermoquantitiesdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/thermoquantitiesdemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/thermoquantitiesdemon.pdf  used on input line 1466.
+Package pdftex.def Info: ./img//ejemplos/thermoquantitiesdemon.pdf  used on input line 1464.
 (pdftex.def)             Requested size: 666.0455pt x 327.12546pt.
 
-Overfull \hbox (194.01427pt too wide) in paragraph at lines 1466--1466
+Overfull \hbox (194.01427pt too wide) in paragraph at lines 1464--1464
  [][] 
  []
 
@@ -2438,10 +2438,10 @@ Overfull \hbox (194.01427pt too wide) in paragraph at lines 1466--1466
 <./img//ejemplos/infolrddemon.pdf, id=1480, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/infolrddemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/infolrddemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/infolrddemon.pdf  used on input line 1479.
+Package pdftex.def Info: ./img//ejemplos/infolrddemon.pdf  used on input line 1477.
 (pdftex.def)             Requested size: 499.52565pt x 245.33994pt.
 
-Overfull \hbox (27.49442pt too wide) in paragraph at lines 1479--1479
+Overfull \hbox (27.49442pt too wide) in paragraph at lines 1477--1477
  [][] 
  []
 
@@ -2449,15 +2449,15 @@ Overfull \hbox (27.49442pt too wide) in paragraph at lines 1479--1479
 <./img//ejemplos/quantumdemon.pdf, id=1518, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/quantumdemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/quantumdemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/quantumdemon.pdf  used on input line 1489.
+Package pdftex.def Info: ./img//ejemplos/quantumdemon.pdf  used on input line 1487.
 (pdftex.def)             Requested size: 444.01903pt x 218.0781pt.
 <./img//ejemplos/thermoquantum.pdf, id=1520, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/thermoquantum.pdf Graphic file (type pdf)
 <use ./img//ejemplos/thermoquantum.pdf>
-Package pdftex.def Info: ./img//ejemplos/thermoquantum.pdf  used on input line 1497.
+Package pdftex.def Info: ./img//ejemplos/thermoquantum.pdf  used on input line 1495.
 (pdftex.def)             Requested size: 610.9119pt x 314.31271pt.
 
-Overfull \hbox (138.88066pt too wide) in paragraph at lines 1497--1497
+Overfull \hbox (138.88066pt too wide) in paragraph at lines 1495--1495
  [][] 
  []
 
@@ -2465,10 +2465,10 @@ Overfull \hbox (138.88066pt too wide) in paragraph at lines 1497--1497
 <./img//ejemplos/concuinfodemon.pdf, id=1561, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/concuinfodemon.pdf Graphic file (type pdf)
 <use ./img//ejemplos/concuinfodemon.pdf>
-Package pdftex.def Info: ./img//ejemplos/concuinfodemon.pdf  used on input line 1505.
+Package pdftex.def Info: ./img//ejemplos/concuinfodemon.pdf  used on input line 1503.
 (pdftex.def)             Requested size: 600.18382pt x 308.79315pt.
 
-Overfull \hbox (128.15259pt too wide) in paragraph at lines 1505--1505
+Overfull \hbox (128.15259pt too wide) in paragraph at lines 1503--1503
  [][] 
  []
 
@@ -2476,20 +2476,20 @@ Overfull \hbox (128.15259pt too wide) in paragraph at lines 1505--1505
 <./img//ejemplos/rho1004.pdf, id=1666, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/rho1004.pdf Graphic file (type pdf)
 <use ./img//ejemplos/rho1004.pdf>
-Package pdftex.def Info: ./img//ejemplos/rho1004.pdf  used on input line 1555.
+Package pdftex.def Info: ./img//ejemplos/rho1004.pdf  used on input line 1553.
 (pdftex.def)             Requested size: 510.63713pt x 250.79729pt.
 
-Overfull \hbox (38.6059pt too wide) in paragraph at lines 1555--1555
+Overfull \hbox (38.6059pt too wide) in paragraph at lines 1553--1553
  [][] 
  []
 
 <./img//ejemplos/rho1014.pdf, id=1667, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/rho1014.pdf Graphic file (type pdf)
 <use ./img//ejemplos/rho1014.pdf>
-Package pdftex.def Info: ./img//ejemplos/rho1014.pdf  used on input line 1556.
+Package pdftex.def Info: ./img//ejemplos/rho1014.pdf  used on input line 1554.
 (pdftex.def)             Requested size: 510.63713pt x 250.79729pt.
 
-Overfull \hbox (38.6059pt too wide) in paragraph at lines 1556--1556
+Overfull \hbox (38.6059pt too wide) in paragraph at lines 1554--1554
  [][] 
  []
 
@@ -2497,10 +2497,10 @@ Overfull \hbox (38.6059pt too wide) in paragraph at lines 1556--1556
 <./img//ejemplos/currentinfosemi.pdf, id=1757, 1071.76411pt x 551.42009pt>
 File: ./img//ejemplos/currentinfosemi.pdf Graphic file (type pdf)
 <use ./img//ejemplos/currentinfosemi.pdf>
-Package pdftex.def Info: ./img//ejemplos/currentinfosemi.pdf  used on input line 1605.
+Package pdftex.def Info: ./img//ejemplos/currentinfosemi.pdf  used on input line 1603.
 (pdftex.def)             Requested size: 578.744pt x 297.76242pt.
 
-Overfull \hbox (106.71277pt too wide) in paragraph at lines 1605--1605
+Overfull \hbox (106.71277pt too wide) in paragraph at lines 1603--1603
  [][] 
  []
 
@@ -2514,26 +2514,26 @@ Overfull \hbox (106.71277pt too wide) in paragraph at lines 1605--1605
 <./img//ejemplos/gammmas.pdf, id=1997, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/gammmas.pdf Graphic file (type pdf)
 <use ./img//ejemplos/gammmas.pdf>
-Package pdftex.def Info: ./img//ejemplos/gammmas.pdf  used on input line 2486.
+Package pdftex.def Info: ./img//ejemplos/gammmas.pdf  used on input line 2484.
 (pdftex.def)             Requested size: 388.52936pt x 190.82457pt.
  [79] [80 <./img//ejemplos/gammmas.pdf>] [81] [82]
 <./img//ejemplos/cminusreal.pdf, id=2049, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cminusreal.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cminusreal.pdf>
-Package pdftex.def Info: ./img//ejemplos/cminusreal.pdf  used on input line 2606.
+Package pdftex.def Info: ./img//ejemplos/cminusreal.pdf  used on input line 2604.
 (pdftex.def)             Requested size: 555.03227pt x 272.60178pt.
 
-Overfull \hbox (83.00104pt too wide) in paragraph at lines 2606--2606
+Overfull \hbox (83.00104pt too wide) in paragraph at lines 2604--2604
  [][] 
  []
 
 <./img//ejemplos/cminusimag.pdf, id=2050, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cminusimag.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cminusimag.pdf>
-Package pdftex.def Info: ./img//ejemplos/cminusimag.pdf  used on input line 2607.
+Package pdftex.def Info: ./img//ejemplos/cminusimag.pdf  used on input line 2605.
 (pdftex.def)             Requested size: 555.03227pt x 272.60178pt.
 
-Overfull \hbox (83.00104pt too wide) in paragraph at lines 2607--2607
+Overfull \hbox (83.00104pt too wide) in paragraph at lines 2605--2605
  [][] 
  []
 
@@ -2541,20 +2541,20 @@ Overfull \hbox (83.00104pt too wide) in paragraph at lines 2607--2607
 <./img//ejemplos/cplusreal.pdf, id=2090, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cplusreal.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cplusreal.pdf>
-Package pdftex.def Info: ./img//ejemplos/cplusreal.pdf  used on input line 2609.
+Package pdftex.def Info: ./img//ejemplos/cplusreal.pdf  used on input line 2607.
 (pdftex.def)             Requested size: 555.03227pt x 272.60178pt.
 
-Overfull \hbox (83.00104pt too wide) in paragraph at lines 2609--2609
+Overfull \hbox (83.00104pt too wide) in paragraph at lines 2607--2607
  [][] 
  []
 
 <./img//ejemplos/cplusimag.pdf, id=2091, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/cplusimag.pdf Graphic file (type pdf)
 <use ./img//ejemplos/cplusimag.pdf>
-Package pdftex.def Info: ./img//ejemplos/cplusimag.pdf  used on input line 2610.
+Package pdftex.def Info: ./img//ejemplos/cplusimag.pdf  used on input line 2608.
 (pdftex.def)             Requested size: 555.03227pt x 272.60178pt.
 
-Overfull \hbox (83.00104pt too wide) in paragraph at lines 2610--2610
+Overfull \hbox (83.00104pt too wide) in paragraph at lines 2608--2608
  [][] 
  []
 
@@ -2562,10 +2562,10 @@ Overfull \hbox (83.00104pt too wide) in paragraph at lines 2610--2610
 <./img//ejemplos/rhotiempo.pdf, id=2168, 1110.06725pt x 545.20491pt>
 File: ./img//ejemplos/rhotiempo.pdf Graphic file (type pdf)
 <use ./img//ejemplos/rhotiempo.pdf>
-Package pdftex.def Info: ./img//ejemplos/rhotiempo.pdf  used on input line 2619.
+Package pdftex.def Info: ./img//ejemplos/rhotiempo.pdf  used on input line 2617.
 (pdftex.def)             Requested size: 621.63342pt x 305.31265pt.
 
-Overfull \hbox (149.60219pt too wide) in paragraph at lines 2619--2619
+Overfull \hbox (149.60219pt too wide) in paragraph at lines 2617--2617
  [][] 
  []
 
@@ -2589,7 +2589,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  113i,12n,110p,2916b,2612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kozuk/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (103 pages, 1021557 bytes).
+Output written on main.pdf (103 pages, 1021623 bytes).
 PDF statistics:
  2648 PDF objects out of 2984 (max. 8388607)
  1810 compressed objects within 19 object streams
