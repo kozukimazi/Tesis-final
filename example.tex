@@ -1363,7 +1363,7 @@ La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \),
     
 La Figura \ref{img:transporte2} muestra que el conjunto de reservorios \( L \) y \( R \) entrega trabajo al sistema para mantener la corriente de partículas. Este comportamiento es consistente desde el punto de vista físico, ya que el paso de electrones desde un potencial químico mayor hacia uno menor implica una transferencia de energía al sistema, que se manifiesta como trabajo. Por otro lado, dado que el reservorio \( D \) no intercambia partículas en promedio, la potencia que este entrega es nula.
 
- A continuación, pueden examinarse los flujos de calor \ref{sec2:heatworkeq} que reciben los sistemas $LR$ y $D$
+A continuación, pueden examinarse los flujos de calor \ref{sec2:heatworkeq} que reciben los sistemas $LR$ y $D$
 
 \insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale =0.40}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
     
@@ -1405,7 +1405,7 @@ Para que el sistema de tres puntos cuánticos se comporte como un Demonio de Max
 
 Para que este último actúe como demonio, debe ser capaz de detectar cambios en el subsistema $LR$, ejecutando una acción análoga a una medición. Gracias a la interacción de Coulomb $U$, el demonio puede distinguir si el subsistema $LR$ está vacío, ocupado o doblemente ocupado. A su vez, el subsistema $LR$ modifica su dinámica dependiendo del estado de ocupación del demonio.
 
-Esta retroalimentación se implementa matemáticamente permitiendo que las tasas de túnel $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En lo que sigue, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)=\kappa_{i}(\epsilon+U_{f})=\kappa_{i}(\epsilon+U+U_{f})$. Por el contrario, las tasas de túnel del demonio no dependerán de la ocupación, por lo que se escribirá simplemente $\kappa_{D}\equiv \kappa_{D}(\epsilon')$.
+Esta retroalimentación se implementa matemáticamente permitiendo que las tasas de túnel cumplan $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En lo que sigue, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)=\kappa_{i}(\epsilon+U_{f})=\kappa_{i}(\epsilon+U+U_{f})$. Por el contrario, las tasas de túnel del demonio no dependerán de la ocupación, por lo que se escribirá simplemente $\kappa_{D}\equiv \kappa_{D}(\epsilon')$.
 
 Para que el demonio pueda detectar eficazmente el estado del subsistema $LR$, deben cumplirse dos condiciones. Primero, que la energía de interacción supere las fluctuaciones térmicas del reservorio asociado al demonio, es decir, $\beta_{D} U \gg 1$. Segundo, que su dinámica disipativa sea más rápida que la del subsistema $LR$, lo que implica $\kappa_{D} > \max\{\kappa_{i}, \kappa^{U}_{i}\}$ con $i = L, R$.
 
