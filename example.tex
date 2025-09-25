@@ -29,11 +29,11 @@ Sin embargo, una dificultad clave en la descripción cuántica es la elección d
 
 Potts et al.\ propusieron una ecuación maestra termodinámicamente consistente que permite trabajar en la base local e incluir términos no seculares\cite{potts2021thermodynamically}. Su enfoque reconoce que una descripción markoviana implica una resolución energética finita, y por tanto introduce un Hamiltoniano rescalado en la definición de las cantidades termodinámicas.
 
-Trabajos previos han empleado el formalismo desarrollado por Potts para analizar los efectos cuánticos en modelos compuestos por dos puntos cuánticos, cada uno acoplado a un reservorio distinto, y cómo estos efectos influyen en el flujo de partículas~\cite{prech2023entanglement}. Por otro lado, el trabajo de Esposito y Horowitz investigó los flujos de información en un sistema clásico constituido por dos puntos cuánticos, donde uno de ellos está acoplado a dos reservorios y el otro a un único baño térmico. En dicho estudio, se demostró que el sistema actúa como un Demonio de Maxwell autónomo~\cite{horowitz2014thermodynamics}.
+Trabajos previos han empleado el formalismo desarrollado por Potts para analizar los efectos cuánticos en modelos compuestos por dos puntos cuánticos, cada uno acoplado a un reservorio distinto. Asimismo, se ha investigado cómo dichos efectos influyen en el transporte de partículas~\cite{prech2023entanglement}. Por otro lado, el trabajo de Esposito y Horowitz investigó los flujos de información en un sistema clásico constituido por dos puntos cuánticos, donde uno de ellos está acoplado a dos reservorios y el otro a un único baño térmico. En dicho estudio, se demostró que el sistema actúa como un Demonio de Maxwell autónomo~\cite{horowitz2014thermodynamics}.
 
-En el presente trabajo se emplea el formalismo de Potts para describir la evolución temporal de un sistema cuántico formado por tres puntos cuánticos, cada uno acoplado a un reservorio distinto. Uno de estos puntos cuánticos desempeña el rol de Demonio de Maxwell, mientras que los otros dos constituyen el sistema físico, denotado como $LR$. Esta configuración permite estudiar los flujos de información y las demás magnitudes termodinámicas relevantes, en un régimen donde se manifiestan efectos cuánticos tales como la coherencia y el entrelazamiento entre los distintos sitios del sistema.
+En el presente trabajo se emplea el formalismo de Potts para derivar la evolución temporal de un sistema cuántico formado por tres puntos cuánticos, cada uno acoplado a un reservorio distinto. Uno de estos puntos cuánticos desempeña el rol de Demonio de Maxwell, mientras que los otros dos constituyen el sistema físico, denotado como $LR$. Esta configuración permite estudiar los flujos de información y las demás magnitudes termodinámicas relevantes, en un régimen donde se manifiestan efectos cuánticos tales como la coherencia y el entrelazamiento entre los distintos sitios del sistema.
 
-La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introducen los conceptos fundamentales necesarios para describir la evolución de un sistema cuántico, ya sea como sistema cerrado —mediante la ecuación de Liouville— o como sistema abierto —a través de la ecuación de Lindblad en la aproximación secular. El Capítulo 2 está dedicado al desarrollo del Formalismo de Estadística de Conteo, el cual será empleado para derivar la ecuación de Lindblad termodinámicamente consistente propuesta por Potts. En el Capítulo 3 se introduce el concepto de flujo de información, discutiendo su influencia en la formulación de la segunda ley de la termodinámica tanto en contextos clásicos como cuánticos. Finalmente, en el Capítulo 4 se presenta la dinámica de un sistema compuesto por tres puntos cuánticos, y se analizan los principales resultados obtenidos para dos configuraciones distintas del modelo.
+La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introducen los conceptos fundamentales necesarios para describir la evolución de un sistema cuántico, ya sea como sistema cerrado —mediante la ecuación de Liouville— o como sistema abierto —a través de la ecuación de Lindblad en la aproximación secular. El Capítulo 2 está dedicado al desarrollo del Formalismo de Estadística de Conteo, el cual será empleado para derivar la ecuación de Lindblad termodinámicamente consistente propuesta por Potts. En el Capítulo 3 se introduce el concepto de flujo de información, discutiendo su influencia en la formulación de la segunda ley de la termodinámica tanto en contextos clásicos como cuánticos. Finalmente, en el Capítulo 4 se describe la dinámica del sistema compuesto por tres puntos cuánticos utilizando la ecuación de Lindblad derivada en esta tesis. Además, se analizan los resultados más relevantes obtenidos para dos configuraciones distintas del modelo.
 
 
 
@@ -51,7 +51,7 @@ La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introdu
 
 \chapter{Sistemas cuánticos abiertos}
 
-En este capítulo se describen los conceptos básicos para poder describir la evolución de un sistema cuántico, en la sección \ref{sec:closedQM} se describe la evolución unitaria para un sistema cerrado.  Por otro lado en la sección \ref{sec:lindblad} se describe una de las ecuaciones utilizadas para describir el comportamiento de un sistema cuántico acoplado a un reservorio con infinitos grados de libertad.
+En este capítulo se describen los conceptos básicos para poder describir la evolución de un sistema cuántico, en la sección \ref{sec:closedQM} se describe la evolución unitaria para un sistema cerrado.  Por otro lado, en la sección \ref{sec:lindblad} se describe una de las ecuaciones utilizadas para describir el comportamiento de un sistema cuántico acoplado a un reservorio con infinitos grados de libertad.
 
 
 \section{Sistemas cuánticos cerrados}
@@ -664,9 +664,10 @@ Esta sustitución refleja la incapacidad de distinguir transiciones con energía
 
 Usando este esquema en la ecuación \ref{ecmaestrafinal} y extendiendo los límites del integral de $\mathcal{I}$ de 0 a $\infty$, se obtiene la ecuación en la forma GKLS
 
-\begin{equation*}
+\begin{equation}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)] + \sum_{\alpha}\tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha} \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
-\end{equation*}
+    \label{ecmaestracounting}
+\end{equation}
 con
 
 \begin{equation*}
@@ -1662,7 +1663,7 @@ Finalmente, el modelo propuesto admite diversas extensiones. Una dirección posi
         & \times \Pi_{\alpha} e^{-i\chi_{\alpha}\mu_{\alpha}(N_{\alpha} - N'_{\alpha})}e^{-i\lambda_{\alpha}((E_{\alpha} -\mu_{\alpha}N_{\alpha}) - (E'_{\alpha} - \mu_{\alpha}N'_{\alpha}) ) }.
     \end{align*}
 
-Considerando un observable $\hat{A}(0)$ con descomposición espectral asociada a los proyectores $\hat{P}_{a_0}$, al aplicarlos sobre un estado diagonal de densidad $\hat{\rho}_{\text{diag}}$, se obtiene la identidad\cite{esposito2009nonequilibrium}
+Si se considera un observable $\hat{A}(0)$ con una descomposición espectral asociada a los proyectores $\hat{P}_{a_0}$, y se aplican estos proyectores sobre un estado diagonal $\hat{\rho}_{\text{diag}}$, se obtiene la identidad\cite{esposito2009nonequilibrium}
 
 \begin{equation}
     \sum_{a_0} e^{-i\lambda a_0} \hat{P}_{a_0} \hat{\rho}_{\text{diag}} \hat{P}_{a_0} 
@@ -1670,7 +1671,7 @@ Considerando un observable $\hat{A}(0)$ con descomposición espectral asociada a
     \label{apendixobservable}
 \end{equation}
 
-Esta relación permite reescribir la función generadora en términos de un observable $\hat{A}(0)$ y el estado inicial diagonal. Así, si se utiliza \ref{apendixobservable} con $\hat{A}(0) = \sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}] $ se obtiene 
+Esta relación permite reescribir la función generadora en términos de un observable $\hat{A}(0)$ y el estado inicial diagonal. Así, se puede utilizar \ref{apendixobservable} con el observable $\hat{A}(0) = \sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}] $ y se obtiene 
 \begin{align*}
     \Lambda(\vec{\lambda},\vec{\chi}) & = \sum_{\textbf{E}',\textbf{N}'}\text{Tr}\{ \hat{P}_{\textbf{E}',\textbf{N}'} \hat{U}(t) e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}  ]}  \hat{\rho}_{tot}(0) e^{-\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ] }\hat{U}^{\dagger}(t) \hat{P}_{\textbf{E}',\textbf{N}'}  \\
     & \times \Pi_{\alpha}e^{i\chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}}e^{i\lambda_{\alpha}(\hat{H}_{\alpha} -\mu_{\alpha}\hat{N}_{\alpha})} \} \\
@@ -1719,7 +1720,7 @@ La obtención de la matriz densidad generalizada requiere proyectar la matriz de
 \begin{equation*}
     \check{\mathcal{P}} = \sum_{r}|\rho_{R}^{eq} \rangle \rangle \langle \langle rr|,
 \end{equation*}
-donde \(\otimes_{\alpha} \hat{\tau}_{\alpha} \to |\hat{\rho}_{R}^{\mathrm{eq}} \rangle\rangle\) representa el estado de equilibrio del reservorio, expresado como un vector en el espacio de Liouville. Al aplicar este proyector sobre la matriz de densidad total, se obtiene
+donde \(\otimes_{\alpha} \hat{\tau}_{\alpha} \to |\hat{\rho}_{R}^{\mathrm{eq}} \rangle\rangle\) representa el estado de equilibrio del reservorio, expresado como un vector en el espacio de Liouville. Al aplicar este proyector sobre la matriz densidad total, se obtiene
 
 \begin{equation*}
     \check{\mathcal{P}}|\hat{\rho}(\vec{\lambda},\vec{\chi},t) \rangle \rangle = |\hat{\rho}_{S}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle .
@@ -1794,7 +1795,7 @@ De forma explícita, esto corresponde a
     \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \epsilon^{2}\check{\mathcal{P}}\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\check{\mathcal{P}}. 
 \end{equation*}
 
-Si se utiliza la relación \(\check{\mathcal{P}}|\dot{\hat{\rho}}_{\mathrm{tot},I}(\vec{\lambda},\vec{\chi},t)\rangle\rangle = |\dot{\hat{\rho}}_{I,S}(\vec{\lambda},\vec{\chi},t)\rangle\rangle \otimes |\hat{\rho}_{R}^{\mathrm{eq}}\rangle\rangle\) y se aplica por la izquierda el operador \(\sum_{r} \langle\langle rr|\), con el objetivo de eliminar los grados de libertad del reservorio, se obtiene
+Si se utiliza la relación \(\check{\mathcal{P}}|\dot{\hat{\rho}}_{\mathrm{tot},I}(\vec{\lambda},\vec{\chi},t)\rangle\rangle = |\dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t)\rangle\rangle \otimes |\hat{\rho}_{R}^{\mathrm{eq}}\rangle\rangle\) y se aplica por la izquierda el operador \(\sum_{r} \langle\langle rr|\), con el objetivo de eliminar los grados de libertad del reservorio, se obtiene
 
 \begin{equation*}
     \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) = \epsilon^{2} \sum_{r}\langle \langle rr|\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
@@ -1883,7 +1884,7 @@ utilizando \ref{apendix:correlationlambda}, se obtiene
     & \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j} C^{\alpha}_{k,k'}(s-\lambda_{\alpha})e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}.
     \end{align*}
    
-Finalmente, al sustituir las expresiones desarrolladas para los términos de correlación en la ecuación \ref{ecmaestraVlambda}, se obtiene la ecuación maestra generalizada para el sistema.
+Finalmente, al sustituir las expresiones desarrolladas para los términos de correlación en la ecuación \ref{ecmaestrafinalI}, se obtiene la ecuación maestra generalizada para el sistema.
 \label{finalequation}
 
 \newpage
@@ -1900,7 +1901,7 @@ Se puede desarrollar la ecuación \ref{ecmaestrafinal} para escribir
     \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s-\lambda_{\alpha}) ) \right.\\
     \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right],   
 \end{multline*}
-Por simplicidad se asumirá que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$ (para fermiones y bosones los  términos del tipo $\langle \hat{c}^{\dagger}_{k}\hat{c}_{j}\rangle$ suelen ser cero en el baño)\cite{potts2021thermodynamically}. Así, se obtiene 
+por simplicidad se asumirá que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$ (para fermiones y bosones los  términos del tipo $\langle \hat{c}^{\dagger}_{k}\hat{c}_{j}\rangle$ suelen ser cero en el baño)\cite{potts2021thermodynamically}. Así, se obtiene 
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = \\
@@ -1921,14 +1922,13 @@ y
 \begin{equation*}
     \int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) = e^{i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s-\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s-\lambda_{\alpha}), 
 \end{equation*}
-en la ecuación maestra, finalmente queda la ecuación 
+en la ecuación maestra. Finalmente queda la ecuación 
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}S^{\alpha}_{k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
-    + \sum_{\alpha,k;q} \gamma_{k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right].
+    + \sum_{\alpha,k;q} \gamma_{k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right],
 \end{multline*}
-
-Que es la ecuación \ref{ecmaestrafinal} que se quiere demostrar.
+que corresponde a la ecuación \ref{ecmaestracounting}.
 
 \label{apendixGKLSgeneral}
 
@@ -1948,7 +1948,7 @@ Para empezar, se definirá una función correlación auxiliar que consiste en
    & = \text{Tr}\{\hat{B}_{\alpha,k}e^{i(s+i\beta_{\alpha})(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{B}^{\dagger}_{\alpha,k}e^{-i(s+i\beta_{\alpha})(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{\tau}_{\alpha} \} \\
    & = \langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha})\rangle_{N},
 \end{align*}
-que se relaciona con la función correlación, de la siguiente manera 
+que se relaciona con la función correlación de la siguiente manera 
 
 \begin{align*}
     C^{\alpha N}_{kk}(s) & = \text{Tr}\{e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}(s)e^{is\mu_{\alpha}\hat{N}_{\alpha}} \hat{B}_{\alpha,k}e^{-is\mu_{\alpha}\hat{N}_{\alpha} }\hat{\tau}_{\alpha}   \} \\
@@ -1982,9 +1982,10 @@ Para demostrar la ley cero, se evaluarán los disipadores $\mathcal{D}[\hat{S}_{
 
 \begin{align*}
     [\hat{S}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = (\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}_{\alpha,k;q}  \\
-    [\hat{S}^{\dagger}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = -(\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}^{\dagger}_{\alpha,k;q},
+    [\hat{S}^{\dagger}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = -(\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}^{\dagger}_{\alpha,k;q}.
 \end{align*}
-así, encontramos que 
+
+Así, encontramos que 
 
  \begin{align*}
     e^{\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\hat{S}_{\alpha,k;q} e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = \hat{S}_{\alpha,k;q}e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})} \\
@@ -1994,8 +1995,8 @@ así, encontramos que
 Por lo tanto, al aplicar el estado de Gibbs en los disipadores 
 
 \begin{align*}
-    \mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & =  e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q} e^{-\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} \\
-    \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} e^{\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q}, 
+    \mathcal{D}[\hat{S}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & =  e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q} e^{-\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} \\
+    \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} e^{\beta_{\alpha(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q}, 
 \end{align*}
 Al sumar las contribuciones de ambos disipadores en el superoperador de Lindblad $\mathcal{L}_{\alpha}$, se obtiene 
 
@@ -2012,20 +2013,22 @@ Con lo que se prueba la ley cero.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Segunda Ley}
-Para derivar la Segunda Ley de la termodinámica, se empezará calculando la derivada temporal de la entropía de Von Neumann
+Para derivar la segunda ley de la termodinámica, se empezará calculando la derivada temporal de la entropía de Von Neumann
 
 \begin{align*}
     - \frac{d}{dt}\text{Tr}\{ \hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} & =  -\text{Tr}\Big\{ \frac{d}{dt}\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \Big\} - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \}\\
   & = - i \text{Tr}\{[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)]\ln \hat{\rho}_{S}(t)  \} - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \}  \\
-  & = -\sum_{\alpha}\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \},
+  & = -\sum_{\alpha}\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t) \}.
 \end{align*}
-por otro lado, el flujo de calor consiste en 
+
+Por otro lado, el flujo de calor consiste en 
 
 \begin{align*}
-    J_{\alpha} & = \text{Tr}\{ (\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{s})\mathcal{L}_{\alpha}(\hat{\rho}_{S}(t)) \} \\
+    J_{\alpha} & = \text{Tr}\{ (\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})\mathcal{L}_{\alpha}(\hat{\rho}_{S}(t)) \} \\
     & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \} + \frac{\text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \} }{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \} \\
-    & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \},
+    & = -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})  \}.
 \end{align*}
+
 Así, utilizando la desigualdad de Spohn se redefine la segunda ley de la termodinámica como
 
 \begin{equation*}
@@ -2042,7 +2045,7 @@ Finalmente, se obtiene que la tasa de producción de entropía es siempre mayor 
 
     \section{Cálculos realizados sección 3}
     \subsection{Producción de entropía y información}
-    Partiendo de la definición de la entropía conjunta para dos variables aleatorias discretas \( X \) e \( Y \)
+    Inicialmente, se considerará la definición de la entropía conjunta para dos variables aleatorias discretas \( X \) e \( Y \)
 
 \begin{equation}
     S^{XY} = - \sum_{x,y} p(x,y) \ln p(x,y),
@@ -2145,9 +2148,10 @@ donde \(\dot{I}^{X}\) e \(\dot{I}^{Y}\) estan dados por \ref{sec4:clasicalflows0
 Para obtener las funciones de correlación espectral, se comenzará escribiendo las funciones correlación temporal 
 
 \begin{equation*}
-    C_{1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,1}\hat{\tau}_{\alpha}  ]  \hspace{10mm} C_{-1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,-1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,-1}\hat{\tau}_{\alpha}  ], 
+    C_{1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,1}\hat{\tau}_{\alpha}  ]  \hspace{10mm} C_{-1}^{\alpha}(s) = \text{Tr}[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,-1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,-1}\hat{\tau}_{\alpha}  ]. 
 \end{equation*}
-Reescribiendo las funciones correlación, en función de los operadores fermionicos
+
+Reescribiendo las funciones correlación en función de los operadores fermionicos, se tiene
 
 \begin{equation*}
     C_{1}^{\alpha}(s) = \sum_{l,l'}t_{\alpha,l}t_{\alpha,l'}e^{i\epsilon_{\alpha,l}s} \langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l'} \rangle \hspace{10mm} C
@@ -2165,18 +2169,17 @@ luego, si se define la tasa de túnel correspondiente al baño \( \alpha \) como
 \begin{equation*}
     \kappa_{\alpha}(\omega) = 2\pi \sum_{l} t_{\alpha,l}^{2} \delta(\omega - \epsilon_{\alpha,l}),
 \end{equation*}
-
-se pueden reescribir las funciones de correlación en forma integral en términos de dicha tasa y de la distribución de ocupación del reservorio \( f_\alpha(\omega) \)
+en términos de dicha tasa y de la distribución de ocupación del reservorio \( f_\alpha(\omega) \), se pueden reescribir las funciones de correlación en forma integral como
 
 \begin{align*}
-    C_{1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{i\omega s}\, \kappa_{\alpha}(\omega) f_{\alpha}(\omega), \\
+    C_{1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{i\omega s}\, \kappa_{\alpha}(\omega) f_{\alpha}(\omega) \\
     C_{-1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{-i\omega s}\, \kappa_{\alpha}(\omega)\big[1 - f_{\alpha}(\omega)\big].
 \end{align*}
 
 A partir de estas expresiones temporales, se puede obtener la forma espectral de las funciones de correlación a través de la transformada de Fourier
 
 \begin{align*}
-    \gamma_{1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{1}^{\alpha}(s) = \kappa_{\alpha}(-\omega) f_{\alpha}(-\omega), \\
+    \gamma_{1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{1}^{\alpha}(s) = \kappa_{\alpha}(-\omega) f_{\alpha}(-\omega) \\
     \gamma_{-1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{-1}^{\alpha}(s) = \kappa_{\alpha}(\omega)\big[1 - f_{\alpha}(\omega)\big].
 \end{align*}
 
@@ -2352,7 +2355,7 @@ En el caso degenerado $\epsilon_{L} = \epsilon_{R}= \epsilon$ se tiene que $\eps
     &(\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})  \to \epsilon+U+U_{f}.
 \end{align*}
 
-Para determinar los operadores de salto asociados al operador $\hat{d}_{L}$ en el caso degenerado, se debe considerar la contribución de las transiciones con frecuencias $\epsilon_{+}$ y $\epsilon_{-}$. Es decir, se deben sumar las contribuciones correspondientes a los operadores $\hat{d}_{+}$ y $\hat{d}_{-}$, para formar un único operador efectivo de salto que posee la frecuencia agrupada. Por ende se debe calcular 
+Para determinar los operadores de salto asociados al operador $\hat{d}_{L}$ en el caso degenerado, se debe considerar la contribución de las transiciones con frecuencias $\epsilon_{+}$ y $\epsilon_{-}$. Es decir, se deben sumar las contribuciones correspondientes a los operadores $\hat{d}_{+}$ y $\hat{d}_{-}$, para formar un único operador efectivo de salto que posee la frecuencia agrupada. Partiremos agrupando operadores para la frecuencia $\epsilon$, por ende se debe calcular 
 
 \begin{align*}
     \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-})}{\sqrt{2}} - \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+})}{\sqrt{2}} & = \frac{(\textbf{1}-\hat{n}_{D})}{\sqrt{2}} [\hat{d}_{+}(\textbf{1}-\hat{n}_{-}) - \hat{d}_{-}(\textbf{1}-\hat{n}_{+}) ],
@@ -2398,7 +2401,7 @@ donde la cantidad $\left[\hat{d}_{+}\hat{n}_{-} - \hat{d}_{-}\hat{n}_{+}\right]$
     & = \frac{2\hat{d}_{L}}{\sqrt{2}}\hat{n}_{R}.
 \end{align*}
 
-Lo que permite asociar de forma coherente la frecuencia $\epsilon + U_{f}$ al operador $\hat{d}_{L}\hat{n}_{R}(\mathbf{1}-\hat{n}_{D})$. 
+Lo que permite asociar la frecuencia $\epsilon + U_{f}$ al operador $\hat{d}_{L}\hat{n}_{R}(\mathbf{1}-\hat{n}_{D})$. 
 
 Finalmente, para las frecuencias agrupadas $(\epsilon_{-} + U + U_{f},\, \epsilon_{+} + U + U_{f}) \to \epsilon + U + U_{f}$, el operador de salto efectivo es
 
@@ -2412,9 +2415,10 @@ En recapitulación, al agrupar las frecuencias los operadores de salto estan dad
     &\epsilon \to \hat{d}_{L}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{D})\\
    &\epsilon + U \to \hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\\
     &\epsilon +U_{f}\to \hat{d}_{L}\hat{n}_{R}(\textbf{1}-\hat{n}_{D})\\
-    &\epsilon +U+U_{f}\to \hat{d}_{L}\hat{n}_{D}\hat{n}_{R},
+    &\epsilon +U+U_{f}\to \hat{d}_{L}\hat{n}_{D}\hat{n}_{R}.
 \end{align*}
-Análogamente, en el caso del operador local $\hat{d}_{R}$, se procede agrupando las energías $(\epsilon{+}, \epsilon_{-})$, así calcular  
+
+Análogamente, en el caso del operador local $\hat{d}_{R}$, se procede agrupando las energías $(\epsilon{+}, \epsilon_{-})$, es decir calcular  
 \begin{align*}
     \frac{\hat{d}_{+}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{-}) }{\sqrt{2}} + \frac{\hat{d}_{-}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{+}) }{\sqrt{2}} & = \frac{(\textbf{1} - \hat{n}_{D})}{\sqrt{2}}[\hat{d}_{+}(\textbf{1}-\hat{n}_{-}) + \hat{d}_{-}(\textbf{1}-\hat{n}_{+})],
 \end{align*}
@@ -2444,7 +2448,7 @@ donde, el operador $\hat{d}_{+}\hat{n}_{-} + \hat{d}_{-}\hat{n}_{+}$ es
     & = \frac{\hat{d}_{R}}{\sqrt{2}}(\hat{n}_{L}+\hat{n}_{R}) - \frac{\hat{d}_{L}}{\sqrt{2}}(\hat{d}^{\dagger}_{L}\hat{d}_{R}+\hat{d}^{\dagger}_{R}\hat{d}_{L}) \\
     & = \sqrt{2}\hat{d}_{R}\hat{n}_{L},
 \end{align*}
-por lo tanto, el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(\epsilon_{+}+U_{f}, \epsilon_{-}+U_{f})$ es $\hat{d}_{R}(\textbf{1} - \hat{n}_{D})\hat{n}_{L}$; realizando el mismo procedimiento, se encuentra que para las frecuencias $(\epsilon_{+}+U+U_{f}, \epsilon_{-}+U+U_{f})$ el operador de salto corresponde a $\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}$. Por ende, recapitulando, para el operador $\hat{d}_{R}$ se tiene
+en consecuencia, el operador de salto de $\hat{d}_{R}$ al agrupar las frecuencias $(\epsilon_{+}+U_{f}, \epsilon_{-}+U_{f})$ es $\hat{d}_{R}(\textbf{1} - \hat{n}_{D})\hat{n}_{L}$; realizando el mismo procedimiento, se encuentra que para las frecuencias $(\epsilon_{+}+U+U_{f}, \epsilon_{-}+U+U_{f})$ el operador de salto corresponde a $\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}$. Por ende, recapitulando, para el operador $\hat{d}_{R}$ se tiene
 
 \begin{align*}
     &\epsilon \to \hat{d}_{R}(\textbf{1}-\hat{n}_{L})(\textbf{1}-\hat{n}_{D})\\
