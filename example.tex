@@ -2730,28 +2730,31 @@ que es equivalente a una ecuación no homogenea lineal de la forma
 por lo tanto, se puede solucionar utilizando factor integrante
 
 \begin{equation*}
-    \check{\mu}(t) = \exp\left( - \int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}ds \right),
+    \check{\mu}(t) = \exp\left( - \int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}ds \right).
 \end{equation*}
-multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$, se obtiene 
+
+Multiplicando por el factor integrante la ecuacion diferencial para $\mu(t)$, se obtiene 
 
 \begin{equation*}
     \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle - \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  \to \frac{d}{dt}(\check{\mu}(t)\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle) = \check{\mu}(t)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle ,
 \end{equation*}
 con solución
 
-\begin{equation*}
-    \check{\mu}(t)\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}(0)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \int_{0}^{t}\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau,   
-\end{equation*}
-multiplicando por $\check{\mu}^{-1}(t)$ ambos lados de la ecuación, se obtiene
+\begin{equation}
+    \check{\mu}(t)\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}(0)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \int_{0}^{t}\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau,  
+    \label{apendixclasic1} 
+\end{equation}
+multiplicando por $\check{\mu}^{-1}(t)$ ambos lados de la ecuación \ref{apendixclasic1}, se obtiene
 
-\begin{equation*}
+\begin{equation}
     \check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  = \check{\mu}^{-1}(t)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \int_{0}^{t}\check{\mu}^{-1}(t)\check{\mu}(\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau,    
-\end{equation*}
+    \label{apendixclasic2}
+\end{equation}
 luego, se define el operador 
 \begin{equation*}
     \check{\mathcal{G}}(t,s) = \exp\left(  \int_{s}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}dt' \right),
 \end{equation*}
-y queda la ecuación 
+con este operador se puede reescribir la ecuación \ref{apendixclasic2} como
 
 \begin{equation*}
     \check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle = \check{\mathcal{G}}(t,0)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle \rangle  + \int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f} \check{\mathcal{P}}|\hat{\rho}(\tau)\rangle \rangle d\tau.    
