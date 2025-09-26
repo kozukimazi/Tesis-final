@@ -2494,7 +2494,9 @@ Para obtener tasas de túnel que satisfagan dichas condiciones, se puede plantea
     \kappa_{i}(\epsilon_{0} + U) & = \kappa_{0} + \frac{\kappa_{f} W^{2} }{U^{2} + W^{2}}.
 \end{align*}
 
-A partir de estas igualdades, es posible determinar los parámetros $\kappa_{0}$, $\kappa_{f}$ y $W$. Sustituyendo la expresión de $\kappa_{i}(\omega)$ en la función de correlación, se obtiene
+A partir de estas igualdades, es posible determinar los parámetros $\kappa_{0}$, $\kappa_{f}$ y $W$. 
+
+Sustituyendo la expresión de $\kappa_{i}(\omega)$ en la función de correlación, se obtiene
 
 \begin{align*}
     C^{\sigma}_{i}(t) & = \frac{\kappa_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\kappa_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
@@ -2511,7 +2513,7 @@ la función de correlación puede descomponerse en dos contribuciones
     \label{apendix5:correlacionf}
 \end{equation}
 
-y se podrá determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0}, \tau_{Bf}\}$. Se comenzará calculando una expresión analítica aproximada para la función de correlación $C^{\sigma}_{f}(t)$. Para resolver la integral de \ref{apendix5:correlacionf}, será necesario localizar los polos en el plano complejo. Según \ref{apendix5:pade}, los polos asociados a la aproximación de Padé se encuentran en $\omega = \pm i \xi_{l}/\beta + \mu$, mientras que los polos correspondientes a la forma Lorentziana se ubican en $\omega = \pm i W + \omega_{0}$. Para realizar esta integración, se utilizará el teorema del residuo \cite{riley2006mathematical}, considerando un contorno de integración en forma de semicírculo en el hemisferio superior o inferior del plano complejo, dependiendo del signo de $\sigma$. El residuo asociado a la Lorentziana es
+y se podrá determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0}, \tau_{Bf}\}$, donde $\tau_{B0}$ es el tiempo de correlación de la parte $C^{\sigma}_{0}(t)$ y $\tau_{Bf}$ es el tiempo de correlación de la parte $C^{\sigma}_{f}(t)$. Se comenzará calculando una expresión analítica aproximada para la función de correlación $C^{\sigma}_{f}(t)$. Para resolver la integral de \ref{apendix5:correlacionf}, será necesario localizar los polos en el plano complejo. Según \ref{apendix5:pade}, los polos asociados a la aproximación de Padé se encuentran en $\omega = \pm i \xi_{l}/\beta + \mu$, mientras que los polos correspondientes a la forma Lorentziana se ubican en $\omega = \pm i W + \omega_{0}$. Para realizar esta integración, se utilizará el teorema del residuo \cite{riley2006mathematical}, considerando un contorno de integración en forma de semicírculo en el hemisferio superior o inferior del plano complejo, dependiendo del signo de $\sigma$. El residuo asociado a la Lorentziana es
 
 \begin{align*}
    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\omega_{0} + iW)(\omega -\omega_{0} -iW)}\right]_{\omega = \pm i W + \omega_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\omega_{0}-\mu)]e^{i\sigma \omega_{0}t}). 
@@ -2601,7 +2603,7 @@ lo que implica que el tiempo de correlación del baño está dado por el inverso
 \label{appendix5correlation}
 
 \subsection{Cálculo numérico para los tiempos de correlación}
-Dado que es posible reconstruir las tasas de túnel $\kappa_{L}(\omega)$ y $\kappa_{R}(\omega)$ mediante una función de tipo Lorentziana, cumpliendo las condiciones $\kappa_{L}(\epsilon) = \kappa_{R}(\epsilon+U) = 1/100$ y $\kappa_{L}(\epsilon+U) = \kappa_{R}(\epsilon) = 1/600$, se pueden calcular numéricamente las funciones correlación asociadas. 
+Dado que es posible reconstruir las tasas de túnel $\kappa_{L}(\omega)$ y $\kappa_{R}(\omega)$ mediante una función de tipo Lorentziana, podemos construir tasas de túnel que cumplen las condiciones $\kappa_{L}(\epsilon) = \kappa_{R}(\epsilon+U) = 1/100$ y $\kappa_{L}(\epsilon+U) = \kappa_{R}(\epsilon) = 1/600$, y así se pueden calcular numéricamente las funciones correlación asociadas. 
 
 Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los baños $L$ y $R$, se utilizará la expresión \ref{correlationf} de las funciones correlación. La estimación de $\tau_{Bf}$ se realiza identificando el punto donde la función correlación practicamente se anula. Posteriormente, para evaluar si el comportamiento del sistema es efectivamente markoviano, se debe verificar que $\tau_{R} \gg \tau_{Bf}$. Con este criterio, se procede al cálculo de las partes real e imaginaria de las funciones de correlación correspondientes a los baños $L$ y $R$.
 
