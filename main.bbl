@@ -158,6 +158,12 @@ Prech, K., Johansson, P., Nyholm, E., Landi, G.~T., Verdozzi, C., Samuelsson,
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
+\bibitem{zwanzig1966statistical}
+Zwanzig, R.~W., ``Statistical mechanics of irreversibility'', {Quantum
+  Statistical Mechanics}, p.~139, 1966.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
 \bibitem{friis2013fermionic}
 Friis, N., Lee, A.~R., y Bruschi, D.~E., ``Fermionic-mode entanglement in
   quantum information'', {Physical Review A—Atomic, Molecular, and Optical
@@ -178,17 +184,17 @@ Manzano, D., ``A short introduction to the lindblad master equation'', {Aip
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
-\bibitem{geva2000second}
-Geva, E., Rosenman, E., y Tannor, D., ``On the second-order corrections to the
-  quantum canonical equilibrium density matrix'', {The Journal of Chemical
-  Physics}, vol.~113, no.~4, pp.~1380--1390, 2000.
-\backrefprint\backrefparscantrue
-
-\backrefparscanfalse
 \bibitem{esposito2010entropy}
 Esposito, M., Lindenberg, K., y Van~den Broeck, C., ``Entropy production as
   correlation between system and reservoir'', {New Journal of Physics},
   vol.~12, no.~1, p.~013013, 2010.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{geva2000second}
+Geva, E., Rosenman, E., y Tannor, D., ``On the second-order corrections to the
+  quantum canonical equilibrium density matrix'', {The Journal of Chemical
+  Physics}, vol.~113, no.~4, pp.~1380--1390, 2000.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
@@ -198,9 +204,18 @@ Strasberg, P. y Esposito, M., ``Non-markovianity and negative entropy
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
-\bibitem{zwanzig1966statistical}
-Zwanzig, R.~W., ``Statistical mechanics of irreversibility'', {Quantum
-  Statistical Mechanics}, p.~139, 1966.
+\bibitem{esposito2009nonequilibrium}
+Esposito, M., Harbola, U., y Mukamel, S., ``Nonequilibrium fluctuations,
+  fluctuation theorems, and counting statistics in quantum systems'', {Reviews
+  of modern physics}, vol.~81, no.~4, pp.~1665--1702, 2009.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{landi2024current}
+Landi, G.~T., Kewming, M.~J., Mitchison, M.~T., y Potts, P.~P., ``Current
+  fluctuations in open quantum systems: Bridging the gap between quantum
+  continuous measurements and full counting statistics'', {PRX Quantum},
+  vol.~5, no.~2, p.~020201, 2024.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
@@ -237,6 +252,20 @@ Wichterich, H., Henrich, M.~J., Breuer, H.-P., Gemmer, J., y Michel, M.,
 Spohn, H. y Lebowitz, J.~L., ``Irreversible thermodynamics for quantum systems
   weakly coupled to thermal reservoirs'', {Adv. Chem. Phys}, vol.~38,
   pp.~109--142, 2007.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{parrondo2023information}
+Parrondo, J.~M., Tabanera-Bravo, J., Fedele, F., y Ares, N., ``Information
+  flows in nanomachines'', en {European ESiM Workshop {\guillemotleft}Crossroad
+  of Maxwell Demon{\guillemotright}}, pp.~1--31, Springer, 2023.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{koski2015chip}
+Koski, J.~V., Kutvonen, A., Khaymovich, I.~M., Ala-Nissila, T., y Pekola,
+  J.~P., ``On-chip maxwell’s demon as an information-powered refrigerator'',
+  {Physical review letters}, vol.~115, no.~26, p.~260602, 2015.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
@@ -281,9 +310,40 @@ Van~Kampen, N., {Stochastic Processes in Physics and Chemistry}.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
+\bibitem{parrondo2015thermodynamics}
+Parrondo, J.~M., Horowitz, J.~M., y Sagawa, T., ``Thermodynamics of
+  information'', {Nature physics}, vol.~11, no.~2, pp.~131--139, 2015.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{cover1999elements}
+Cover, T.~M., {Elements of information theory}.
+\newblock John Wiley \& Sons, 1999.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
 \bibitem{spohn1978entropy}
 Spohn, H., ``Entropy production for quantum dynamical semigroups'', {Journal of
   Mathematical Physics}, vol.~19, no.~5, pp.~1227--1230, 1978.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{hanson2007spins}
+Hanson, R., Kouwenhoven, L.~P., Petta, J.~R., Tarucha, S., y Vandersypen,
+  L.~M., ``Spins in few-electron quantum dots'', {Reviews of modern physics},
+  vol.~79, no.~4, pp.~1217--1265, 2007.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{kouwenhoven2001few}
+Kouwenhoven, L.~P., Austing, D., y Tarucha, S., ``Few-electron quantum dots'',
+  {Reports on progress in physics}, vol.~64, no.~6, p.~701, 2001.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
+\bibitem{ashoori1996electrons}
+Ashoori, R., ``Electrons in artificial atoms'', {Nature}, vol.~379, no.~6564,
+  pp.~413--419, 1996.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
@@ -299,14 +359,6 @@ Wootters, W.~K., ``Entanglement of formation of an arbitrary state of two
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
-\bibitem{landi2024current}
-Landi, G.~T., Kewming, M.~J., Mitchison, M.~T., y Potts, P.~P., ``Current
-  fluctuations in open quantum systems: Bridging the gap between quantum
-  continuous measurements and full counting statistics'', {PRX Quantum},
-  vol.~5, no.~2, p.~020201, 2024.
-\backrefprint\backrefparscantrue
-
-\backrefparscanfalse
 \bibitem{monsel2025autonomous}
 Monsel, J., Acciai, M., S{\'a}nchez, R., y Splettstoesser, J., ``Autonomous
   demon exploiting heat and information at the trajectory level'', {Physical
@@ -318,13 +370,6 @@ Monsel, J., Acciai, M., S{\'a}nchez, R., y Splettstoesser, J., ``Autonomous
 Khandelwal, S., Annby-Andersson, B., Diotallevi, G.~F., Wacker, A., y Tavakoli,
   A., ``Maximal steady-state entanglement in autonomous quantum thermal
   machines'', {npj Quantum Information}, vol.~11, no.~1, p.~28, 2025.
-\backrefprint\backrefparscantrue
-
-\backrefparscanfalse
-\bibitem{esposito2009nonequilibrium}
-Esposito, M., Harbola, U., y Mukamel, S., ``Nonequilibrium fluctuations,
-  fluctuation theorems, and counting statistics in quantum systems'', {Reviews
-  of modern physics}, vol.~81, no.~4, pp.~1665--1702, 2009.
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse

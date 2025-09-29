@@ -27,11 +27,19 @@ Posteriormente, Ptaszynski y Esposito extendieron este marco al contexto cuánti
 
 Sin embargo, una dificultad clave en la descripción cuántica es la elección de la base. Si se adopta una base global, como exige la aproximación secular, no siempre existe la posibilidad de distinguir entre flujos locales de información, como se realiza en su contraparte clásica\cite{horowitz2014thermodynamics}. Por otro lado, una formulación en la base local puede revelar la estructura bipartita del sistema, pero ha sido criticada por posibles inconsistencias termodinámicas\cite{levy2014local,novotny2002investigation}.
 
-Potts et al.\ propusieron una ecuación maestra termodinámicamente consistente que permite trabajar en la base local e incluir términos no seculares\cite{potts2021thermodynamically}. Su enfoque reconoce que una descripción markoviana implica una resolución energética finita, y por tanto introduce un Hamiltoniano rescalado en la definición de las cantidades termodinámicas.
+Al aplicar una aproximación secular-parcial a la ecuación de Lindblad, Potts et al.\ \cite{potts2021thermodynamically} propusieron una ecuación maestra termodinámicamente consistente para sistemas abiertos. 
+Dicha formulación se expresa en la base local e incorpora términos no seculares, lo que representa una mejora respecto al enfoque estrictamente secular.
 
 Trabajos previos han empleado el formalismo desarrollado por Potts para analizar los efectos cuánticos en modelos compuestos por dos puntos cuánticos, cada uno acoplado a un reservorio distinto. Asimismo, se ha investigado cómo dichos efectos influyen en el transporte de partículas~\cite{prech2023entanglement}. Por otro lado, el trabajo de Esposito y Horowitz investigó los flujos de información en un sistema clásico constituido por dos puntos cuánticos, donde uno de ellos está acoplado a dos reservorios y el otro a un único baño térmico. En dicho estudio, se demostró que el sistema actúa como un Demonio de Maxwell autónomo~\cite{horowitz2014thermodynamics}.
 
-En el presente trabajo se emplea el formalismo de Potts para derivar la evolución temporal de un sistema cuántico formado por tres puntos cuánticos, cada uno acoplado a un reservorio distinto. Uno de estos puntos cuánticos desempeña el rol de Demonio de Maxwell, mientras que los otros dos constituyen el sistema físico, denotado como $LR$. Esta configuración permite estudiar los flujos de información y las demás magnitudes termodinámicas relevantes, en un régimen donde se manifiestan efectos cuánticos tales como la coherencia y el entrelazamiento entre los distintos sitios del sistema.
+En este trabajo se estudia un Demonio de Maxwell autónomo en el régimen cuántico mediante la extensión del modelo de dos puntos cuánticos de \cite{horowitz2014thermodynamics} a un sistema de tres puntos cuánticos, denominados $L,R$ y $D$. Para ello se emplea el formalismo de Potts, a partir del cual se deriva una ecuación de Lindblad semilocal que describe la evolución temporal del sistema. Cada punto cuántico está acoplado a un reservorio distinto. Uno de ellos desempeña el rol de Demonio de Maxwell, mientras que los otros dos conforman el subsistema físico $LR$.
+
+En este subsistema se introducen interacciones adicionales que permiten explorar la dinámica cuántica, en particular el acoplamiento entre los dos puntos que lo constituyen. Las simulaciones numéricas de la ecuación de Lindblad permiten obtener los flujos de información y diversas magnitudes termodinámicas relevantes. Dichos resultados se calculan en un régimen donde emergen efectos cuánticos como la coherencia y el entrelazamiento entre los sitios que componen el subsistema $LR$.
+
+Estas magnitudes ---y en especial los flujos de información--- permiten caracterizar el comportamiento del sistema como un Demonio de Maxwell autónomo. 
+Finalmente, se construye un modelo semiclásico basado en el formalismo de Nakajima--Zwanzig \cite{zwanzig1966statistical}, el cual considera únicamente las componentes diagonales de la matriz densidad. Este modelo permite comparar los flujos de información con los obtenidos en el tratamiento plenamente cuántico.
+
+%%ojo aquí
 
 La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introducen los conceptos fundamentales necesarios para describir la evolución de un sistema cuántico, ya sea como sistema cerrado —mediante la ecuación de Liouville— o como sistema abierto —a través de la ecuación de Lindblad en la aproximación secular. El Capítulo 2 está dedicado al desarrollo del Formalismo de Estadística de Conteo, el cual será empleado para derivar la ecuación de Lindblad termodinámicamente consistente propuesta por Potts. En el Capítulo 3 se introduce el concepto de flujo de información, discutiendo su influencia en la formulación de la segunda ley de la termodinámica tanto en contextos clásicos como cuánticos. Finalmente, en el Capítulo 4 se describe la dinámica del sistema compuesto por tres puntos cuánticos utilizando la ecuación de Lindblad derivada en esta tesis. Además, se analizan los resultados más relevantes obtenidos para dos configuraciones distintas del modelo.
 
@@ -51,50 +59,64 @@ La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introdu
 
 \chapter{Sistemas cuánticos abiertos}
 
-En este capítulo se describen los conceptos básicos para poder describir la evolución de un sistema cuántico, en la sección \ref{sec:closedQM} se describe la evolución unitaria para un sistema cerrado.  Por otro lado, en la sección \ref{sec:lindblad} se describe una de las ecuaciones utilizadas para describir el comportamiento de un sistema cuántico acoplado a un reservorio con infinitos grados de libertad.
+En este capítulo se presentan los conceptos fundamentales para describir la evolución de un sistema cuántico. 
+Primero se aborda la dinámica unitaria de un sistema cerrado; luego se introduce la ecuación de Lindblad como una de las descripciones más utilizadas para sistemas abiertos bajo la aproximación secular; y finalmente se desarrolla una formulación general de la termodinámica de sistemas abiertos, donde el calor y el trabajo intercambiados con los reservorios permiten expresar las leyes de la termodinámica en términos de derivadas temporales de magnitudes físicas bien definidas, como la energía interna, el flujo de calor y la potencia.
 
+La sección \ref{sistemacerrado} se dedica a la evolución unitaria de sistemas cerrados. 
+En la sección \ref{SEClindblad} se discute la ecuación de Lindblad y las aproximaciones necesarias para obtenerla, detalladas en la sección \ref{sec:lindblad}. 
+Finalmente, en la sección \ref{termogeneral} se presenta la termodinámica de sistemas abiertos, donde se definen rigurosamente el calor y el trabajo, y se establece su papel central en la formulación de las leyes de la termodinámica.
 
 \section{Sistemas cuánticos cerrados}
-Un sistema cuántico cerrado puede ser descrito por la matriz densidad $\hat{\rho}$, la evolución de la matriz densidad dependerá del Hamiltoniano del sistema $\hat{H}(t)$, la cuál en el cuadro de Schrodinger consiste en la ecuación de Liouville-Von Neumman($\hbar = 1$)\cite{breuer2002theory}:
-
+Un sistema cuántico cerrado puede describirse mediante la matriz densidad $\hat{\rho}$. La evolución de esta matriz está gobernada por el Hamiltoniano del sistema, $\hat{H}(t)$, y en el cuadro de Schrödinger se expresa a través de la ecuación de Liouville--von Neumann ($\hbar = 1$) \cite{breuer2002theory}:
+\label{sistemacerrado}
 \begin{equation*}
     \frac{d}{dt}\hat{\rho}(t) = -i[\hat{H}(t),\hat{\rho}(t)].
 \end{equation*}
 
-Y la solución descrita por la evolución unitaria 
+La solución está dada por la evolución unitaria
 
 \begin{equation*}
-    \hat{U}(t,t_{0}) = \hat{T}_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t}ds \hat{H}(s) \right] \implies \hat{\rho}(t) = \hat{U}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}(t,t_{0}),
+    \hat{U}(t,t_{0}) = \hat{T}_{\leftarrow} \exp \left[ -i \int_{t_{0}}^{t} ds\, \hat{H}(s) \right] 
+    \quad \implies \quad 
+    \hat{\rho}(t) = \hat{U}(t,t_{0})\,\hat{\rho}(t_{0})\,\hat{U}^{\dagger}(t,t_{0}),
 \end{equation*}
-en donde $\hat{T}_{\leftarrow}$ consiste en el operador ordenación temporal cronológico que ordena los productos de operadores dependientes del tiempo, de tal manera que el tiempo en el que son evaluados los operadores va creciendo de derecha a izquierda.
+
+donde $\hat{T}_{\leftarrow}$ representa el operador de ordenación temporal cronológica. Este operador organiza los productos de operadores dependientes del tiempo de manera que los instantes crecen de derecha a izquierda.
 
 \subsection{Cuadro de interacción}
-Supongamos que el Hamiltoniano del sistema se puede separar en dos partes
+Supongamos que el Hamiltoniano del sistema puede separarse en dos partes:
 
 \begin{equation*}
-    \hat{H}(t) = \hat{H}_{0} + \hat{H}_{I}(t),
+    \hat{H}(t) = \hat{H}_{0} + \hat{H}_{I}(t).
 \end{equation*}
-en teoría esto se puede hacer de varias formas, pero por lo general, si tenemos el caso de dos subsistemas, $\hat{H}_{0}$ contiene los Hamiltonianos de cada uno de ellos cuando no hay interacción, mientras que $\hat{H}_{I}$ representa la interacción entre ellos. Si introducimos los operadores unitarios
+
+En principio esta descomposición puede realizarse de distintas maneras. Sin embargo, en el caso de dos subsistemas, $\hat{H}_{0}$ corresponde a los Hamiltonianos de cada uno de ellos en ausencia de interacción, mientras que $\hat{H}_{I}(t)$ describe la interacción entre ambos.  
+
+Si introducimos los operadores unitarios
 
 \begin{equation*}
-    \hat{U}_{0}(t,t_{0}) \equiv \exp[-i\hat{H}_{0}(t-t_{0}) ]  \hspace{15mm} \hat{U}_{I}(t,t_0) \equiv \hat{U}^{\dagger}_{0}(t,t_{0})\hat{U}(t,t_{0}),
+    \hat{U}_{0}(t,t_{0}) \equiv \exp[-i\hat{H}_{0}(t-t_{0})] 
+    \hspace{15mm} 
+    \hat{U}_{I}(t,t_0) \equiv \hat{U}^{\dagger}_{0}(t,t_{0})\hat{U}(t,t_{0}),
 \end{equation*}
-se puede describir la matriz densidad en el cuadro de interacción
+
+podemos describir la matriz densidad en el cuadro de interacción como
 
 \begin{equation*}
     \hat{\rho}_{I}(t) \equiv \hat{U}_{I}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}_{I}(t,t_{0}).
 \end{equation*}
 
-Y la evolución en este cuadro de interacción es 
+La evolución en este cuadro está gobernada por la ecuación
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\tilde{H}_{I}(t), \hat{\rho}_{I}(t)],
     \label{sec11:interactionp}
 \end{equation}
-con 
+
+donde el Hamiltoniano de interacción transformado está dado por
 
 \begin{equation*}
-    \tilde{H}_{I}(t) = \hat{U}^{\dagger}_{0}(t,t_{0})\hat{H}_{I}(t)\hat{U}_{0}(t,t_{0}).
+    \tilde{H}_{I}(t) = \hat{U}^{\dagger}_{0}(t,t_{0})\,\hat{H}_{I}(t)\,\hat{U}_{0}(t,t_{0}).
 \end{equation*}
 
 \label{sec:closedQM}
@@ -102,1155 +124,1204 @@ con
 
 
 \section{Ecuación de Lindblad}
+En esta sección se presenta la derivación de la ecuación de Lindblad, la cual describe la evolución de un sistema cuántico abierto. En primer lugar, se introduce el concepto de sistema abierto y se define la matriz densidad reducida. Posteriormente, se deriva la ecuación maestra en la aproximación de Born--Markov y se presenta la forma estándar de la ecuación de Lindblad bajo la aproximación secular.
+
 \label{SEClindblad}
 \subsection{Dinámica de un sistema abierto}
 
-Un sistema abierto consiste en un sistema cuántico $S$ denominado el sistema reducido, el cuál está acoplado a un sistema $B$ denominado el ambiente. Estos representan  subsistemas del sistema total $S+B$. Sea $\mathcal{H}_{S}$ el espacio de Hilbert del sistema y $\mathcal{H}_{B}$ el espacio de Hilbert del ambiente, el espacio de Hilbert del sistema total $S+B$ es  $\mathcal{H} = \mathcal{H}_{S} \otimes \mathcal{H}_{B}$, el Hamiltoniano total se constituye por el Hamiltoniano del sistema $\hat{H}_{S}$, el Hamiltoniano $\hat{H}_{B}$ y la interacción $\hat{H}_{I}(t)$
+Un sistema abierto consiste en un sistema cuántico $S$, denominado sistema reducido, que está acoplado a un sistema $B$, denominado ambiente. Ambos constituyen subsistemas del sistema total $S+B$. Sea $\mathcal{H}_{S}$ el espacio de Hilbert del sistema y $\mathcal{H}_{B}$ el espacio de Hilbert del ambiente. Entonces, el espacio de Hilbert del sistema total $S+B$ se escribe como $\mathcal{H} = \mathcal{H}_{S} \otimes \mathcal{H}_{B}$. El Hamiltoniano total está compuesto por el Hamiltoniano del sistema $\hat{H}_{S}$, el Hamiltoniano del ambiente $\hat{H}_{B}$ y la interacción $\hat{H}_{I}(t)$:
 
 \begin{equation}
     \hat{H}(t) = \hat{H}_{S} \otimes \mathbf{I}_{B} + \mathbf{I}_{S} \otimes \hat{H}_{B} + \hat{H}_{I}(t).
     \label{sec2:sistemabierto}
 \end{equation}
 
+Para utilizar la ecuación \eqref{sec2:sistemabierto} es necesario separar el sistema en dos subsistemas, $S$ y $B$, de modo que el espacio de Hilbert total pueda escribirse como $\mathcal{H} = \mathcal{H}_{S}\otimes \mathcal{H}_{B}$. Sin embargo, en el caso de partículas idénticas como los fermiones, la identificación de estos dos subsistemas no es inmediata. Aun así, en el formalismo de segunda cuantización el sistema puede describirse mediante una base del espacio de Fock, lo que permite encontrar subsistemas en los cuales el espacio de Hilbert total se construye como un producto tensorial antisimétrico entre ellos \cite{friis2013fermionic,vidal2021quantum}.
 
-Para describir el sistema con la ecuación \ref{sec2:sistemabierto} es necesario separarlo en dos subsistemas, $S$ y $B$, permitiendo así que el espacio de Hilbert total sea descrito por $\mathcal{H} = \mathcal{H}_{S}\otimes \mathcal{H}_{B}$. Sin embargo, en el caso de partículas idénticas como los fermiones el identificar estos dos subsistemas no es obvio. Aún así, en el formalismo de segunda cuantización el sistema se puede describir mediante una base del espacio de Fock, que sí permite encontrar subsistemas en los cuáles el espacio de Hilbert total es un producto tensorial antisimétrico entre los dos subsistemas\cite{friis2013fermionic,vidal2021quantum}.
-
-Los observables que se estudian en el sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$ y su valor de expectación puede ser calculado mediante la ecuación
+Los observables asociados al sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$ y su valor de expectación se calcula como
 
 \begin{equation*}
     \langle A \rangle = \text{Tr}_{S}\{A \hat{\rho}_{S} \},
 \end{equation*}
-donde 
+
+donde la matriz densidad reducida está dada por
 
 \begin{equation*}
-    \hat{\rho}_{S} = \text{Tr}_{B}\{ \hat{\rho} \},
+    \hat{\rho}_{S} = \text{Tr}_{B}\{ \hat{\rho} \}.
 \end{equation*}
-es la matriz densidad del sistema reducido. La expresión $\text{Tr}_{S}$ hace referencia a la traza con respecto al espacio de Hilbert del sistema, mientras que $\text{Tr}_{B}$  
-es la traza con respecto al espacio de Hilbert del ambiente. El objeto de estudio principalmente es $\hat{\rho}_{S}$ y la ecuación de Lindblad será utilizada para describir su evolución.
+
+Aquí, $\text{Tr}_{S}$ denota la traza sobre el espacio de Hilbert del sistema y $\text{Tr}_{B}$ la traza sobre el espacio del ambiente. El objeto principal de estudio es la matriz densidad reducida $\hat{\rho}_{S}$, cuya evolución será descrita mediante la ecuación de Lindblad.
 
 \subsection{Ecuación maestra}
-Partiendo de un sistema $S$ acoplado débilmente a un reservorio $B$, donde el Hamiltoniano total es descrito por 
-
+Sea un sistema cuántico $S$ débilmente acoplado a un reservorio $B$, cuyo Hamiltoniano total está dado por
 \begin{equation*}
-    \hat{H} = \hat{H}_{S} + \hat{H}_{B} + \hat{H}_{I},
+    \hat{H} = \hat{H}_{S} + \hat{H}_{B} + \hat{H}_{I}.
 \end{equation*}
-la evolución en el cuadro de interacción del sistema total será
-
+En el cuadro de interacción, la evolución del estado total se describe mediante
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\hat{H}_{I}(t), \hat{\rho}_{I}(t)],
     \label{eqsec2:linbladpic}
 \end{equation}
-o en su forma integral
-
+cuya forma integral es
 \begin{equation*}
-    \hat{\rho}_{I}(t) = \hat{\rho}(0) - i  \int_{0}^{t} ds[\hat{H}_{I}(s), \hat{\rho}_{I}(s)].
+    \hat{\rho}_{I}(t) = \hat{\rho}(0) - i \int_{0}^{t} ds \,[\hat{H}_{I}(s), \hat{\rho}_{I}(s)].
 \end{equation*}
 
-Reinsertando la forma integral en la ecuación \ref{eqsec2:linbladpic} y trazando los grados de libertad del reservorio, nos queda
-
+Reinsertando esta expresión en la ecuación \eqref{eqsec2:linbladpic} y tomando la traza sobre los grados de libertad del reservorio, se obtiene
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i  \text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \}  -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{I}(s)]]\}.
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i \,\text{Tr}_{B}\{[\hat{H}_{I}(t), \hat{\rho}(0)] \}  
+    - \int_{0}^{t} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s), \hat{\rho}_{I}(s)]]\}.
+\label{eqsec2:linbladpic2}
 \end{equation}
 
-Ahora se asumirán dos cosas, primero $\text{Tr}_{B}\{[\hat{H}_{I}(t),\hat{\rho}(0)] \} = 0$ sin pérdida de generalidad\cite{breuer2002theory}. Segundo, tendremos que realizar la aproximación de Born, que consiste en que si se tiene acoplamiento débil, la influencia del sistema en el reservorio será pequeña, por ende se puede asumir que el estado del reservorio $\hat{\rho}_{B}$ permanece constante, y sólo el que se ve alterado es la evolución del sistema, es decir,
-
+A continuación se adoptan dos hipótesis estándar. En primer lugar,
+\[
+\text{Tr}_{B}\{[\hat{H}_{I}(t), \hat{\rho}(0)] \}=0,
+\]
+sin pérdida de generalidad \cite{breuer2002theory}. En segundo lugar, se introduce la aproximación de Born: para acoplamiento débil, la influencia del sistema sobre el reservorio es despreciable, por lo que el estado del baño se asume constante en la ecuación \eqref{eqsec2:linbladpic2} y el total se factoriza como
 \begin{equation*}
-    \hat{\rho}(t) = \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B},
+    \hat{\rho}(t) \approx \hat{\rho}_{S}(t)\otimes \hat{\rho}_{B}.
 \end{equation*}
-con lo cuál la ecuación \ref{eqsec2:linbladpic} se vuelve
-
+Con esta suposición, la ecuación \eqref{eqsec2:linbladpic2} toma la forma
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}.
-\end{equation} 
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = - \int_{0}^{t} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s), \hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}.
+\end{equation}
 
-Esta ecuación es lo que se denomina no Markoviana, ya que requiere conocer todo el pasado de $\hat{\rho}_{IS}(s)$. Para simplificar el problema, se aplicará la aproximación de Markov, con el objetivo de que la evolución de $\hat{\rho}_{IS}(t)$ dependa sólo del estado en que se encuentra en el instante de tiempo, es decir,
-
+La ecuación anterior es no markoviana, pues depende del historial $\hat{\rho}_{IS}(s)$. Para obtener una descripción local en el tiempo se aplica la aproximación de Markov, de modo que la evolución en el instante $t$ dependa únicamente de $\hat{\rho}_{IS}(t)$:
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\},
-\end{equation*} 
-esta ecuación es denominada la ecuación de Redfield. Se puede hacer el cambio de variable $s= x = t-s$, así el integral queda
-
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = - \int_{0}^{t} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s), \hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
+\end{equation*}
+Esta expresión corresponde a la ecuación de Redfield. Mediante el cambio de variable $s \mapsto t-s$, se obtiene
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{t}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = - \int_{0}^{t} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s), \hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
     \label{eq3sec2:markov}
-\end{equation} 
+\end{equation}
 
-Por último, se podrá hacer otra aproximación, ya que en esta expresión aparecen las funciones correlación del baño, estas funciones decaen en el tiempo con una escala característica dada por el denominado tiempo de correlación $\tau_{B}$, a partir del cual dichas funciones se vuelven despreciables. Mientras que el sistema tendrá su tiempo de relajación $\tau_{R}$ que consiste en el tiempo que demora en llegar a su estado estacionario. La aproximación markoviana requiere que $\tau_{R}\gg \tau_{B}$, pues él sistema no debe ser capaz de percibir la dinámica del baño, esto permite tomar el límite del integral en \ref{eq3sec2:markov} a infinito, ya que para tiempos muy largos se anula el integrando debido a que las funciones correlación se vuelven practicamente nulas. Y finalmente quedará la evolución
-
+Las funciones de correlación del reservorio decaen en una escala de tiempo característica $\tau_{B}$, mientras que el sistema se relaja en una escala $\tau_{R}$. La aproximación markoviana requiere $\tau_{R}\gg \tau_{B}$, lo que implica que el sistema no resuelve la dinámica del baño. En este régimen, el límite superior del integral en la ecuación \eqref{eq3sec2:markov} puede extenderse a $\infty$, dado que el integrando se anula para tiempos largos:
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = -  \int_{0}^{\infty}ds \text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s),\hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = - \int_{0}^{\infty} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s), \hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
     \label{eq3sec2:markov1}
-\end{equation} 
+\end{equation}
 
-La interacción en el cuadro de Schrodinger $\hat{H}_{I}$ será de la forma general
-
+En el cuadro de Schrödinger, la interacción se escribe en la forma general
 \begin{equation*}
-    \hat{H}_{I} = \sum_{\alpha}A_{\alpha} \otimes B_{\alpha},
+    \hat{H}_{I} = \sum_{\alpha} A_{\alpha} \otimes B_{\alpha},
 \end{equation*}
-donde los operadores $A_{\alpha} = A^{\dagger}_{\alpha}$ actuan en el espacio de Hilbert del sistema, mientras que $B_{\alpha}=B^{\dagger}_{\alpha}$ actua en el espacio de Hilbert del reservorio. Es conveniente escribir la interacción en función de los autoestados de $\hat{H}_{S}$. Para ello, si tenemos los autovalores $\epsilon$ y sus respectivos operadores de proyección $\Pi(\epsilon) = |\epsilon\rangle \langle \epsilon|$, se podrán definir los operadores
-
+donde $A_{\alpha}=A_{\alpha}^{\dagger}$ actúa en el espacio de Hilbert del sistema, mientras que $B_{\alpha}=B_{\alpha}^{\dagger}$ actúa en el del reservorio. Es conveniente descomponer $A_{\alpha}$ en la base de autoestados de $\hat{H}_{S}$. Si $\{\Pi(\epsilon)=|\epsilon\rangle\langle\epsilon|\}$ son los proyectores sobre autovalores $\epsilon$, se definen los operadores
 \begin{equation}
-    A_{\alpha}(\omega) \equiv \sum_{\epsilon' - \epsilon = \omega}\Pi(\epsilon)A_{\alpha}\Pi(\epsilon'), 
+    A_{\alpha}(\omega) \equiv \sum_{\epsilon'-\epsilon=\omega} \Pi(\epsilon)A_{\alpha}\Pi(\epsilon'),
     \label{sec1:globalA}
 \end{equation}
-estos operadores se denominan operadores globales, ya que la suma esta descrita por los autoestados del sistema que cumplen $\epsilon'-\epsilon=\omega$. 
+que cumplen
+\[
+\sum_{\omega} A_{\alpha}(\omega) = A_{\alpha}, \quad
+[\hat{H}_{S}, A_{\alpha}(\omega)] = -\omega A_{\alpha}(\omega), \quad
+[\hat{H}_{S}, A_{\alpha}^{\dagger}(\omega)] = \omega A_{\alpha}^{\dagger}(\omega).
+\]
 
-De la relación de completitud $\sum_{\epsilon}\Pi(\epsilon) = \mathbf{I}$ podremos notar que
-
-\begin{align*}
-   \sum_{\omega}A_{\alpha}(\omega) & =  \sum_{\omega,\epsilon'-\epsilon  = \omega} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon') \\
-   & = \sum_{\omega,\epsilon} \Pi(\epsilon) A_{\alpha} \Pi(\epsilon + \omega) \\
-   & = A_{\alpha} = \sum_{\omega}A^{\dagger}_{\alpha}(\omega),
-\end{align*}
-
-con esto el Hamiltoniano de interacción en el cuadro de Schrodinger
-
-\begin{equation*}
-    \hat{H}_{I} = \sum_{\alpha,\omega}A_{\alpha}(\omega) \otimes B_{\alpha} = \sum_{\alpha,\omega}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}.
-\end{equation*}
-
-Debido a \ref{sec1:globalA}, el operador $A_{\alpha}(\omega)$ cumple las relaciones
-
-\begin{align*}
-    [\hat{H}_{S},A_{\alpha}(\omega)] & = - \omega A_{\alpha}(\omega) \\
-    [\hat{H}_{S},A^{\dagger}_{\alpha}(\omega)] & = \omega A^{\dagger}_{\alpha}(\omega),
-\end{align*}
-posteriormente se deberá pasar al cuadro de interacción y calcular $U^{\dagger}_{S}(t)\hat{H}_{I}U_{S}(t)$. Para ello, se utilizará la relación de Baker Campbell
-
+Aplicando la identidad de Baker--Campbell--Hausdorff,
 \begin{equation}
-    e^{A}Be^{-A} = B  + [A,B] + \frac{1}{2}[A,[A,B]] +..,
+    e^{A}Be^{-A} = B + [A,B] + \tfrac{1}{2}[A,[A,B]] + \cdots,
     \label{sec2lind:baker}
 \end{equation}
-y se puede derivar las relaciones 
-
-\begin{align*}
-    e^{i\hat{H}_{S}t}A_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{-i\omega t} A_{\alpha}(\omega) \\
-    e^{i\hat{H}_{S}t}A^{\dagger}_{\alpha}(\omega) e^{-i\hat{H}_{S}t} & = e^{i\omega t} A^{\dagger}_{\alpha}(\omega).
-\end{align*}
-
-Con estas relaciones, $\hat{H}_{I}(t)$ en el cuadro de interacción
-
+se obtiene en el cuadro de interacción
 \begin{equation}
-    \hat{H}_{I}(t) = \sum_{\alpha,\omega}e^{-i\omega t}A_{\alpha}(\omega) \otimes B_{\alpha}(t) = \sum_{\alpha,\omega}e^{i\omega t}A^{\dagger}_{\alpha}(\omega) \otimes B^{\dagger}_{\alpha}(t),
+    \hat{H}_{I}(t) = \sum_{\alpha,\omega} e^{-i\omega t} A_{\alpha}(\omega) \otimes B_{\alpha}(t)
+    = \sum_{\alpha,\omega} e^{i\omega t} A_{\alpha}^{\dagger}(\omega) \otimes B_{\alpha}^{\dagger}(t),
     \label{seclindbladinteraction1}
 \end{equation}
-donde $B_{\alpha}(t) = e^{i\hat{H}_{B}t}B_{\alpha}e^{-i\hat{H}_{B}t}$. La ecuación \ref{seclindbladinteraction1} se puede introducir en la ecuación \ref{eq3sec2:markov1} y se obtiene 
+donde $B_{\alpha}(t)=e^{i\hat{H}_{B}t}B_{\alpha}e^{-i\hat{H}_{B}t}$.
 
-\begin{align*}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = \int_{0}^{\infty} ds \text{Tr}_{B}\left[  \hat{H}_{I}(t-s)\hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t) - \hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t-s)\hat{H}_{I}(t)    \right.\\
-    \left. + \hat{H}_{I}(t)\hat{\rho}_{IS}(t)\hat{\rho}_{B}\hat{H}_{I}(t-s) -  \hat{H}_{I}(t)\hat{H}_{I}(t-s)\hat{\rho}_{IS}(t)\hat{\rho}_{B}  \right],
-\end{align*}
-así, reemplazando la forma explícita de la interacción  
-
-\begin{align*}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{i\omega s}B_{\beta}(t-s)\hat{\rho}_{B}B^{\dagger}_{\alpha}(t)]e^{i(\omega'- \omega)t}\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
-     + & \sum_{\omega,\omega'}\sum_{\alpha,\beta} \int_{0}^{\infty} ds  \text{Tr}_{B}[e^{-i\omega s}B_{\alpha}(t)\hat{\rho}_{B}B^{\dagger}_{\beta}(t-s)]e^{-i(\omega'- \omega)t}\left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
-\end{align*}
-
-Dado que las funciones correlación son homogéneas en el tiempo, es posible definir funciones correlación espectral del baño, independientes del tiempo, dadas por
-
+Sustituyendo la ecuación \eqref{seclindbladinteraction1} en la ecuación \eqref{eq3sec2:markov1} y evaluando la traza parcial sobre el reservorio, aparecen las funciones de correlación espectrales, que en equilibrio son homogéneas en el tiempo:
 \begin{equation*}
-    \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty}ds e^{i\omega s}\text{Tr}_{B}[B^{\dagger}_{\alpha}(t)B_{\beta}(t-s)\hat{\rho}_{B}],
-\end{equation*}
-y aplicando estas funciones en la ecuación maestra, queda 
-
-\begin{align*}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{i(\omega'- \omega)t}\Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega') - A^{\dagger}_{\alpha}(\omega')A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
-    & + \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{-i(\omega'- \omega)t}\Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega') \right).
-\end{align*}
-
-Si se considera el tiempo característico de evolución del sistema $S$ como $\tau_S = |\omega - \omega'|^{-1}$, y además se cumple que el tiempo de relajación $\tau_R \gg \tau_S$, entonces los términos no seculares (aquellos con $\omega \neq \omega'$) pueden despreciarse. Esto se debe a que los factores oscilatorios $e^{i(\omega - \omega')t}$ varían rápidamente en la escala de tiempo $\tau_R$, promediándose a cero. Está aproximación, se denomina secular \cite{breuer2002theory}, y tiene repercusiones en la dinámica del sistema, ya que al suprimir los términos no seculares, se pierde la información de las partes no diagonales de la matriz densidad. Posteriormente, en la sección \ref{sec2:master} se discutirá una ecuación maestra que preserva estos efectos. 
-
-Al realizar la aproximación secular, la evolución del sistema queda
-\begin{align*}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) & = \sum_{\omega}\sum_{\alpha,\beta} \Gamma_{\alpha \beta}(\omega)\left(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega) \hat{\rho}_{IS}(t) \right) \\
-    & + \sum_{\omega}\sum_{\alpha,\beta} \Gamma^{*}_{\beta \alpha}(\omega) \left(A_{\alpha}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega) - \hat{\rho}_{IS}(t)A^{\dagger}_{\beta}(\omega)A_{\alpha}(\omega) \right),
-\end{align*}
-finalmente, al separar la función correlación espectral en su parte real e imaginaria como
-
-\begin{equation*}
-\Gamma_{\alpha \beta}(\omega) = \gamma_{\alpha \beta}(\omega)/2 + iS_{\alpha \beta}(\omega).
+    \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty} ds \, e^{i\omega s}\, 
+    \text{Tr}_{B}\{B_{\alpha}^{\dagger}(t)B_{\beta}(t-s)\hat{\rho}_{B}\}.
 \end{equation*}
 
-Se obtiene la ecuación de Lindblad 
+Bajo esta definición, la evolución del sistema se escribe como
+\begin{align*}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) &=
+    \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{i(\omega'-\omega)t}\, \Gamma_{\alpha\beta}(\omega)\,
+    \Big(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A_{\alpha}^{\dagger}(\omega')
+        - A_{\alpha}^{\dagger}(\omega')A_{\beta}(\omega)\hat{\rho}_{IS}(t)\Big) \\
+    &+ \sum_{\omega,\omega'}\sum_{\alpha,\beta} e^{-i(\omega'-\omega)t}\, \Gamma^{*}_{\beta\alpha}(\omega)\,
+    \Big(A_{\alpha}(\omega')\hat{\rho}_{IS}(t)A_{\beta}^{\dagger}(\omega)
+        - \hat{\rho}_{IS}(t)A_{\beta}^{\dagger}(\omega)A_{\alpha}(\omega')\Big).
+\end{align*}
 
+Sea $\tau_{S}=|\omega-\omega'|^{-1}$ la escala asociada a las oscilaciones entre frecuencias de Bohr. Si además se cumple $\tau_{R}\gg \tau_{S}$, los términos no seculares ($\omega\neq\omega'$) pueden despreciarse, ya que los factores altamente oscilantes $e^{\pm i(\omega-\omega')t}$ se promedian a cero en la escala $\tau_{R}$. Esta es la llamada aproximación secular \cite{breuer2002theory}. Bajo esta aproximación, la evolución se reduce a
+\begin{align*}
+    \frac{d}{dt}\hat{\rho}_{IS}(t) &=
+    \sum_{\omega}\sum_{\alpha,\beta} \Gamma_{\alpha\beta}(\omega)\,
+    \Big(A_{\beta}(\omega)\hat{\rho}_{IS}(t)A_{\alpha}^{\dagger}(\omega)
+        - A_{\alpha}^{\dagger}(\omega)A_{\beta}(\omega)\hat{\rho}_{IS}(t)\Big) \\
+    &+ \sum_{\omega}\sum_{\alpha,\beta} \Gamma^{*}_{\beta\alpha}(\omega)\,
+    \Big(A_{\alpha}(\omega)\hat{\rho}_{IS}(t)A_{\beta}^{\dagger}(\omega)
+        - \hat{\rho}_{IS}(t)A_{\beta}^{\dagger}(\omega)A_{\alpha}(\omega)\Big).
+\end{align*}
+
+Separando la función espectral en parte real e imaginaria,
+\begin{equation*}
+    \Gamma_{\alpha\beta}(\omega) = \tfrac{1}{2}\gamma_{\alpha\beta}(\omega) + iS_{\alpha\beta}(\omega),
+\end{equation*}
+se obtiene la ecuación de Lindblad en el cuadro de interacción:
 \begin{equation}
-    \frac{d}{dt} \hat{\rho}_{IS}(t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(t)] + \mathcal{L}_{g}(\hat{\rho}_{IS}(t)),
+    \frac{d}{dt}\hat{\rho}_{IS}(t) = -i[\hat{H}_{LS}, \hat{\rho}_{IS}(t)] + \mathcal{L}_{g}(\hat{\rho}_{IS}(t)),
     \label{seclindbladfinal}
 \end{equation}
-con $\hat{H}_{LS}$ el Hamiltoniano \textit{Lamb Shift}
-
+con Hamiltoniano de \emph{Lamb shift}
 \begin{equation*}
-    \hat{H}_{LS} = \sum_{\omega} \sum_{\alpha,\beta} S_{\alpha,\beta}(\omega)A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), 
+    \hat{H}_{LS} = \sum_{\omega}\sum_{\alpha,\beta} S_{\alpha\beta}(\omega)A_{\alpha}^{\dagger}(\omega)A_{\beta}(\omega),
 \end{equation*}
-y el Disipador
-
+y disipador en forma GKLS
 \begin{equation*}
-    \mathcal{L}_{g}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha \beta}(\omega) \left[ A_{\beta}(\omega)\hat{\rho}_{IS}(t)A^{\dagger}_{\alpha}(\omega) - \frac{1}{2}\{A^{\dagger}_{\alpha}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)  \} \right].
+    \mathcal{L}_{g}(\hat{\rho}_{IS}(t)) = \sum_{\omega}\sum_{\alpha,\beta} \gamma_{\alpha\beta}(\omega)\,
+    \left[A_{\beta}(\omega)\hat{\rho}_{IS}(t)A_{\alpha}^{\dagger}(\omega) - \tfrac{1}{2}\{A_{\alpha}^{\dagger}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)\}\right].
 \end{equation*}
+Esta forma garantiza la preservación de traza, hermiticidad y positividad de la matriz densidad \cite{manzano2020short}.
 
-El escribir el disipador de esta manera es importante, ya que esta evolución se encuentra en la forma GKLS que permite preservar traza, hermiticidad y positividad de la matriz densidad\cite{manzano2020short}. Finalmente, en el cuadro de Schrodinger la ecuación de Lindblad queda
-
+Finalmente, en el cuadro de Schrödinger la ecuación de Lindblad se escribe como
 \begin{equation}
-    \frac{d}{dt} \hat{\rho}_{S}(t) = -i[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)] + \mathcal{L}_{g}(\hat{\rho}_{S}(t)).
+    \frac{d}{dt}\hat{\rho}_{S}(t) = -i[\hat{H}_{S}+\hat{H}_{LS}, \hat{\rho}_{S}(t)] + \mathcal{L}_{g}(\hat{\rho}_{S}(t)).
     \label{eqsec2:lindbladS}
 \end{equation}
-
-Si el sistema $S$ interactua con múltiples reservorios, el disipador se puede escribir como una suma de los disipadores de cada uno de los reservorios, es decir
-
+Si el sistema $S$ interactúa con múltiples reservorios, el disipador se descompone como suma de contribuciones,
 \begin{equation*}
     \mathcal{L}_{g}(\hat{\rho}_{S}(t)) = \sum_{\alpha}\mathcal{L}_{\alpha,g}(\hat{\rho}_{S}(t)).
 \end{equation*}
 
 \label{sec:lindblad}
 
+\section{Termodinámica de sistemas abiertos}
+\label{termogeneral}
+En esta sección se introduce la termodinámica de sistemas abiertos, siguiendo las referencias \cite{esposito2010entropy,potts2021thermodynamically}. Se definen las cantidades termodinámicas y se formulan las leyes de la termodinámica en un marco general válido tanto en equilibrio como fuera de equilibrio. 
 
-\chapter{Estadística de conteo(\textit{Full Counting Statistics}) }
-En este capítulo se presenta el formalismo de \textit{Full Counting Statistics}(FCS). La sección \ref{sec3workheat} esta dedicada a la  descripción de las cantidades termodinámicas de interés, y en la sección \ref{Leyestermo} se establecen las leyes de la termodinámica. En la sección \ref{sec2:estadistica2puntos} se desarrolla la estadística de medición en 2 puntos, mientras que en la sección \ref{sec2:superop} se describe brevemente el formalismo de superoperadores. En la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada deducida en \cite{potts2021thermodynamically}. Finalmente, en la sección \ref{sec2:thermolaws} se analiza la consistencia termodinámica, tanto para la ecuación maestra global, como para la ecuación maestra semilocal presentada en este capítulo. 
-
-\section{Cantidades termodinámicas}
-Se considera el sistema descrito por el Hamiltoniano
-
+\subsection{Cantidades termodinámicas}
+\label{cantidadestermo}
+Se considera un sistema descrito por el Hamiltoniano total
 \begin{equation*}
-    \hat{H}_{tot}(t) = \hat{H}_{S}(t) + \sum_{\alpha}(\hat{H}_{\alpha} + \hat{V}_{\alpha})  = \hat{H}_{S}(t) + \hat{H}_{B} + \hat{V},
+    \hat{H}_{tot}(t) = \hat{H}_{S}(t) + \sum_{\alpha}\big(\hat{H}_{\alpha} + \hat{V}_{\alpha}\big)  
+    = \hat{H}_{S}(t) + \hat{H}_{B} + \hat{V},
 \end{equation*}
-donde el primer término describe el Hamiltoniano del sistema el cual puede ser tiempo dependiente, la segunda parte describe los reservorios térmicos y por último la tercera parte constituye el acoplamiento entre sistema-baño.
+donde $\hat{H}_{S}(t)$ representa el Hamiltoniano del sistema, que en general puede depender explícitamente del tiempo; $\hat{H}_{B}=\sum_{\alpha}\hat{H}_{\alpha}$ corresponde a los Hamiltonianos de los reservorios térmicos; y $\hat{V}=\sum_{\alpha}\hat{V}_{\alpha}$ describe la interacción sistema–baño.
 
-El sistema intercambia energía y partículas con el reservorio, por ende el cambio de energía puede ser dividido por una contribución correspondiente al calor y otra correspondiente al trabajo. Así, se define el calor que libera el baño $\alpha$ durante el intervalo de tiempo $[0,t]$ como
-
+El sistema intercambia energía y partículas con los reservorios. En consecuencia, el cambio de energía puede descomponerse en dos contribuciones: una asociada al calor y otra al trabajo. El calor liberado por el reservorio $\alpha$ en el intervalo de tiempo $[0,t]$ se define como
 \begin{equation}
-    \langle Q_{\alpha}\rangle = - \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(t) \} + \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(0) \},
-\label{sec3:calor}
+    \langle Q_{\alpha}\rangle = - \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(t) \} 
+    + \text{Tr}\{(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})\hat{\rho}_{tot}(0) \},
+    \label{sec3:calor}
 \end{equation}
-en la cual $\hat{N}_{\alpha}$ corresponde al operador de número que cuantifica el número de partículas en el baño $\alpha$ y $\mu_{\alpha}$ es su potencial químico. El trabajo promedio que entrega el reservorio $\alpha$ se define como
-
+donde $\hat{N}_{\alpha}$ es el operador número de partículas en el reservorio $\alpha$ y $\mu_{\alpha}$ su potencial químico. Por convención, $Q_{\alpha}>0$ corresponde al calor transferido hacia el sistema. El trabajo promedio asociado al reservorio $\alpha$ se define como
 \begin{equation}
-    \langle W_{\alpha}\rangle = - \mu_{\alpha} (\text{Tr}\{\hat{N}_{\alpha} \hat{\rho}_{tot}(t) \} - \text{Tr}\{\hat{N}_{\alpha}\hat{\rho}_{tot}(0) \}  ).
+    \langle W_{\alpha}\rangle = - \mu_{\alpha} \Big( \text{Tr}\{\hat{N}_{\alpha} \hat{\rho}_{tot}(t) \} - \text{Tr}\{\hat{N}_{\alpha}\hat{\rho}_{tot}(0) \}\Big).
     \label{sec3:trabajo}
 \end{equation}
-\label{sec3workheat}
-
-\newpage
-
-\section{Leyes de la termodinámica}
+Estas definiciones permiten establecer las leyes de la termodinámica para sistemas abiertos.
 \label{Leyestermo}
+
 \subsection{Ley cero}
-Si se tiene un sistema total descrito por un sistema reducido y un baño, que se encuentran en equilibrio a temperatura inversa $\beta$ y potencial químico $\mu$. De tal manera que el estado del sistema en equilibrio es el equilibrio gran canónico
-
+Considérese un sistema total compuesto por un sistema reducido y un baño térmico, ambos en equilibrio caracterizado por una temperatura inversa $\beta$ y un potencial químico $\mu$. El estado de equilibrio del sistema total es el estado gran canónico
 \begin{equation*}
-    \hat{\rho}^{eq}_{tot} = \frac{e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})}}{Z}  \hspace{28mm} Z = \text{Tr}\{e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \},
+    \hat{\rho}^{eq}_{tot} = \frac{e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})}}{Z},  
+    \hspace{10mm} 
+    Z = \text{Tr}\{e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \},
 \end{equation*}
-y por lo tanto el estado de equilibrio del sistema reducido es
-
+con $Z$ la función gran partición. El estado de equilibrio del sistema reducido corresponde a
 \begin{equation*}
-    \hat{\rho}_{S} = \frac{1}{Z}\text{Tr}_{B}\{ e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \},
+    \hat{\rho}_{S} = \frac{1}{Z}\text{Tr}_{B}\{ e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \}.
 \end{equation*}
-que en el límite de acoplamiento débil entre el sistema y el baño, este equilibrio se convierte en \cite{geva2000second}
+En el límite de acoplamiento débil entre sistema y baño, este estado converge a \cite{geva2000second}
 \begin{equation*}
-    \hat{\rho}_{S} = \frac{e^{-\beta(\hat{H}_{S} - \mu\hat{N}_{S})}}{\text{Tr}_{S}\{e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})} \} }.
+    \hat{\rho}_{S} = \frac{e^{-\beta(\hat{H}_{S} - \mu\hat{N}_{S})}}
+    {\text{Tr}_{S}\{e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})} \} }.
 \end{equation*}
 
 \subsection{Primera Ley}
-Para escribir la primera ley, primero se puede definir la corriente de calor y la potencia entregadas por el baño $\alpha$
-
+En mecánica estadística fuera del equilibrio, el sistema suele alcanzar un estado estacionario en el cual se establecen flujos constantes de energía y partículas. 
+En este contexto resulta conveniente distinguir las contribuciones asociadas al calor y al trabajo intercambiados con cada reservorio $\alpha$. 
+Estas se introducen mediante la corriente de calor y la potencia
 \begin{equation*}
-    J_{\alpha}(t) = \partial_{t}\langle Q_{\alpha}\rangle \hspace{12mm}  \dot{W}_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle.
+    J_{\alpha}(t) = \partial_{t}\langle Q_{\alpha}\rangle, 
+    \hspace{12mm}  
+    \dot{W}_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle.
 \end{equation*}
 
-Así, en el límite de acoplamiento débil para un Hamiltoniano tiempo independiente, la primera ley consiste en 
-\begin{equation*}
-    \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha}(t) + \dot{W}_{\alpha}(t) ] \hspace{12mm} E = \text{Tr}\{\hat{H}_{S}\hat{\rho}_{tot}(t) \},
-\end{equation*}
-donde $E(t)$ es la energía interna del sistema.
 
-%\begin{equation*}
- %   J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} P_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \}. 
-%\end{equation*}
+En el régimen de acoplamiento débil y para un Hamiltoniano independiente del tiempo, la primera ley adopta la forma
+\begin{equation*}
+    \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha}(t) + \dot{W}_{\alpha}(t) ],
+    \hspace{12mm}  
+    E(t) = \text{Tr}\{\hat{H}_{S}\hat{\rho}_{tot}(t) \},
+\end{equation*}
+donde $E(t)$ es la energía interna del sistema, evaluada como el valor esperado del Hamiltoniano del sistema con respecto al estado total.
 
 \subsection{Segunda Ley}
-Para introducir la segunda ley, se parte de la condición inicial en que el sistema y el reservorio son sistemas no correlacionados, es decir, 
-
+La formulación de la segunda ley requiere asumir una condición inicial no correlacionada entre el sistema y los reservorios:
 \begin{equation*}
-    \hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0)\otimes_{\alpha}\hat{\tau}_{\alpha} \hspace{12mm} \hat{\tau}_{\alpha} = \frac{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) }}{ \text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\} },
-\end{equation*}
-donde cada reservorio se encuentra en equilibrio gran canónico con inverso de la temperatura $\beta_{\alpha}$ y potencial químico $\mu_{\alpha}$. Con esta condición inicial, la segunda ley puede ser escrita en función de la producción de entropía $\sigma(t)$ como \cite{esposito2010entropy}
-
-\begin{equation*}
-    \sigma(t) \equiv \Delta S(t) - \sum_{\alpha}\beta_{\alpha}\langle Q_{\alpha}\rangle \geq 0.
+    \hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0)\otimes_{\alpha}\hat{\tau}_{\alpha}, 
+    \hspace{10mm}  
+    \hat{\tau}_{\alpha} = \frac{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) }}
+    {\text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\} }.
 \end{equation*}
 
-$\Delta S$ denota el cambio en la entropía de Von Neumann del sistema
-
+Donde cada reservorio $\alpha$ se encuentra en equilibrio gran canónico con temperatura inversa $\beta_{\alpha}$ y potencial químico $\mu_{\alpha}$. Con esta condición inicial, la segunda ley se expresa en términos de la producción de entropía $\sigma(t)$ \cite{esposito2010entropy}:
 \begin{equation*}
-    \Delta S(t) = -  \text{Tr}\{\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} +  \text{Tr}\{ \hat{\rho}_{S}(0)\ln \hat{\rho}_{S}(0) \},
+    \sigma(t) \equiv \Delta S(t) - \sum_{\alpha}\beta_{\alpha}\langle Q_{\alpha}\rangle \geq 0,
 \end{equation*}
-es decir, la producción de entropía se separa en una parte que corresponde al cambio de entropía del sistema, mientras que la segunda parte corresponde a la contribución debido al calor que entrega el ambiente.\\
-Como en este trabajo se hará análisis de flujos continuos tanto de energía como de partículas, es importante estudiar la tasa de producción de entropía. Si bien, la producción de entropía siempre es positiva, la tasa de producción de entropía no siempre lo es, aún así para sistemas markovianos se cumple que \cite{strasberg2019non}
-
+donde $\Delta S(t)$ es el cambio en la entropía de von Neumann del sistema,
 \begin{equation*}
-    \dot{\sigma}(t) \equiv \partial_{t}\Delta S(t) - \sum_{\alpha}\beta_{\alpha}J_{\alpha} \geq 0.
+    \Delta S(t) = -  \text{Tr}\{\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} 
+    +  \text{Tr}\{ \hat{\rho}_{S}(0)\ln \hat{\rho}_{S}(0) \}.
 \end{equation*}
 
-Y la igualdad se cumple para procesos reversibles. Con esto se han definido las leyes de la termodinámica en función de flujos continuos, que se podrán calcular a través de la matriz densidad reducida. En esta tesis estas cantidades serán estudiadas principalmente en el estado estacionario.
+La producción total de entropía se descompone en dos contribuciones: el cambio de entropía del sistema y la parte asociada al calor intercambiado con los reservorios. Para sistemas markovianos resulta conveniente estudiar la tasa de producción de entropía, ya que se cumple la desigualdad \cite{strasberg2019non}
+\begin{equation*}
+    \dot{\sigma}(t) \equiv \partial_{t}\Delta S(t) - \sum_{\alpha}\beta_{\alpha}J_{\alpha}(t) \geq 0.
+\end{equation*}
+La igualdad se cumple en el caso de procesos reversibles.  
 
+De este modo, las leyes de la termodinámica se expresan en términos de flujos continuos de energía y partículas, los cuales pueden calcularse a partir de la matriz densidad reducida. En esta tesis, tales cantidades serán analizadas principalmente en el régimen estacionario.
 \label{sec3sub:leyestermo}
 
+
+
+%\chapter{Estadística de conteo(\textit{Full Counting Statistics}) }
+
+\chapter{Ecuación de Lindblad con aproximación secular-parcial}
+
+En este capítulo se presenta el formalismo de \textit{full counting statistics} (FCS), que a partir de la matriz densidad reducida describe la estadística de los flujos de partículas y de energía en sistemas cuánticos, permitiendo cuantificar sus fluctuaciones \cite{esposito2009nonequilibrium,landi2024current}. Para ello, se introduce el esquema de medición en dos puntos, ampliamente utilizado en termodinámica cuántica para definir distribuciones de probabilidad de magnitudes estocásticas, tales como la energía y el número de partículas en los reservorios. A partir de dichas distribuciones es posible obtener momentos y cumulantes que caracterizan las propiedades estadísticas de las variables de interés \cite{esposito2009nonequilibrium}.
+
+A continuación, se introduce el formalismo de superoperadores, que permite expresar la evolución de la matriz densidad en un espacio de Hilbert aumentado. Posteriormente, se desarrolla el cálculo de la ecuación maestra generalizada, deducida en \cite{potts2021thermodynamically} mediante el formalismo FCS. Finalmente, se analiza la consistencia termodinámica, tanto en el caso de la ecuación maestra global como en el de la ecuación maestra semilocal.
+
+El capítulo se organiza de la siguiente manera: en la sección \ref{sec2:estadistica2puntos} se introduce la estadística de medición en dos puntos; en la sección \ref{sec2:superop} se presenta el formalismo de superoperadores; en la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada; y en la sección \ref{sec2:thermolaws} se discute la consistencia termodinámica.
+
+\label{sec2:estadistica}
+
 \section{Estadística de medición en dos puntos}
-A lo largo de este trabajo, se pretende calcular diversas cantidades termodinámicas asociadas a la dinámica del sistema, tales como la energía y el trabajo. Si bien los valores promedio de estas cantidades pueden obtenerse con las expresiones \ref{sec3:calor} y \ref{sec3:trabajo}, tanto el calor y el trabajo intercambiados con los reservorios deben considerarse como variables aleatorias, ya que su determinación implica medir sobre el estado de los reservorios. Debido a la naturaleza cuántica de la evolución, dichas mediciones pueden arrojar distintos resultados en diferentes repeticiones del experimento. Por lo tanto, es útil calcular la distribución de probabilidad del calor y el trabajo intercambiados con el reservorio.
 
-Para  un sistema total descrito por la condición inicial $\hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0) \otimes_{\alpha} \hat{\tau}_{\alpha}$ la distribución de probabilidad es   
+En esta sección se introduce el esquema de medición en dos puntos, ampliamente utilizado en termodinámica cuántica para definir distribuciones de probabilidad de magnitudes estocásticas\cite{esposito2009nonequilibrium}. El objetivo es caracterizar rigurosamente el calor y el trabajo intercambiados con los reservorios como variables aleatorias, en lugar de limitarse únicamente a sus valores promedio. Aunque dichos promedios pueden calcularse mediante las expresiones \ref{sec3:calor} y \ref{sec3:trabajo}, la naturaleza cuántica de la evolución implica que los resultados de una medición sobre los reservorios pueden variar en diferentes repeticiones del experimento. Por ello, resulta natural describir el problema en términos de la distribución de probabilidad asociada al calor y al trabajo.
 
+Consideremos un sistema total con condición inicial factorizada
+\[
+\hat{\rho}_{tot}(0) = \hat{\rho}_{S}(0)\otimes_{\alpha}\hat{\tau}_{\alpha},
+\]
+donde $\hat{\tau}_{\alpha}$ es el estado de equilibrio gran canónico del reservorio $\alpha$. Denotemos por $\mathbf{E}=(E_{\alpha})$ y $\mathbf{N}=(N_{\alpha})$ los vectores formados por las energías y los números de partículas de los reservorios, y por $\mathbf{Q}=(Q_{\alpha})$ y $\mathbf{W}=(W_{\alpha})$ los correspondientes calores y trabajos intercambiados. La distribución conjunta de calor y trabajo se escribe como
 \begin{align*}
-    P(\textbf{Q},\textbf{W}) & = \sum_{\textbf{E},\textbf{E}',\textbf{N},\textbf{N}'} P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) P_{0}(\textbf{E},\textbf{N})\\
-                             & \times \Pi_{\alpha} \delta(W_{\alpha} - \mu_{\alpha}(N_{\alpha} - N'_{\alpha})) \delta(Q_{\alpha} + W_{\alpha}  - (E_{\alpha} - E'_{\alpha})).   
+    P(\mathbf{Q},\mathbf{W}) & = \sum_{\mathbf{E},\mathbf{E}',\mathbf{N},\mathbf{N}'} 
+    P_{t}(\mathbf{E}',\mathbf{N}'|\mathbf{E},\mathbf{N})\, P_{0}(\mathbf{E},\mathbf{N}) \\
+    & \times \prod_{\alpha} \delta\!\left(W_{\alpha}-\mu_{\alpha}(N_{\alpha}-N'_{\alpha})\right)\,
+    \delta\!\left(Q_{\alpha}+W_{\alpha}-(E_{\alpha}-E'_{\alpha})\right).
 \end{align*}
+Aquí, $W_\alpha$ representa el trabajo asociado al intercambio de partículas con el reservorio $\alpha$, mientras que $Q_\alpha$ corresponde al calor transferido desde dicho reservorio hacia el sistema.
 
-La probabilidad conjunta de que cada baño $\alpha$ tenga energía $E_{\alpha}$, y número de partículas $N_{\alpha}$ a tiempo $t=0$ es
+La probabilidad inicial de que cada reservorio $\alpha$ tenga energía $E_{\alpha}$ y número de partículas $N_{\alpha}$ está dada por
+\[
+P_{0}(\mathbf{E},\mathbf{N}) = 
+\prod_{\alpha}  
+\frac{e^{-\beta_{\alpha}(E_{\alpha}-\mu_{\alpha}N_{\alpha})}}
+{\text{Tr}\left\{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha})}\right\}}.
+\]
 
-\begin{equation*}
-    P_{0}(\textbf{E},\textbf{N}) = \Pi_{\alpha}  \frac{e^{-\beta_{\alpha}(E_{\alpha} - \mu_{\alpha}N_{\alpha} )  }}{ \text{Tr}\{e^{-\beta_{\alpha}(E_{\alpha} - \mu_{\alpha}N_{\alpha} )  }\} }.
-\end{equation*}
+La probabilidad condicional $P_{t}(\mathbf{E}',\mathbf{N}'|\mathbf{E},\mathbf{N})$ describe la probabilidad de encontrar los reservorios con energías $\mathbf{E}'$ y números de partículas $\mathbf{N}'$ en el tiempo $t$, dados valores iniciales $(\mathbf{E},\mathbf{N})$. Para describir este proceso, se parte del estado proyectado en $t=0$,
+\[
+\hat{\rho}'(0) =
+\frac{\hat{P}_{\mathbf{E},\mathbf{N}}\,\hat{\rho}(0)\,\hat{P}_{\mathbf{E},\mathbf{N}}}
+{\text{Tr}\{\hat{P}_{\mathbf{E},\mathbf{N}}\,\hat{\rho}(0)\,\hat{P}_{\mathbf{E},\mathbf{N}}\}},
+\]
+donde $\hat{P}_{\mathbf{E},\mathbf{N}} = I_{S}\otimes \hat{P}^{B}_{\mathbf{E},\mathbf{N}}$ es el proyector sobre los autoestados de energía y número de partículas de los reservorios, con 
+$\hat{P}^{B}_{\mathbf{E},\mathbf{N}} = |\mathbf{E},\mathbf{N}\rangle\langle \mathbf{E},\mathbf{N}|$. Tras la evolución unitaria hasta un tiempo $t$,
+\[
+\hat{\rho}'(t) = \hat{U}(t)\,\hat{\rho}'(0)\,\hat{U}^{\dagger}(t),
+\]
+una segunda medición proyectiva sobre los reservorios entrega los valores $\mathbf{E}',\mathbf{N}'$, con probabilidad
+\[
+P_{t}(\mathbf{E}',\mathbf{N}'|\mathbf{E},\mathbf{N}) =
+\text{Tr}\{\hat{P}_{\mathbf{E}',\mathbf{N}'}\,\hat{\rho}'(t)\,\hat{P}_{\mathbf{E}',\mathbf{N}'}\}.
+\]
+Al reescribir los proyectores explícitamente, se obtiene
+\[
+P_{t}(\mathbf{E}',\mathbf{N}'|\mathbf{E},\mathbf{N}) =
+\text{Tr}_{S}\!\left\{\hat{M}\,\hat{\rho}_{S}(0)\,\hat{M}^{\dagger}\right\},
+\qquad
+\hat{M} = \text{Tr}_{B}\{|\mathbf{E},\mathbf{N}\rangle\langle \mathbf{E}',\mathbf{N}'|\,\hat{U}(t)\}.
+\]
 
-Para obtener $P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})$ que corresponde a la probabilidad condicional de que los reservorios tengan energías $\textbf{E}'$ y números de partículas $\textbf{N}'$ a tiempo $t$, dado que inicialmente se midieron los valores $\textbf{E}$ y $\textbf{N}$, se debe partir del estado proyectado a $t=0$ correspondiente a dicha medición inicial, es decir,
-
-\begin{equation*}
-    \hat{\rho}'(0) = \frac{\hat{P}_{\textbf{E}, \textbf{N} }\hat{\rho}(0) \hat{P}_{\textbf{E}, \textbf{N} } }{\text{Tr}\{\hat{P}_{\textbf{E}, \textbf{N} }\hat{\rho}(0) \hat{P}_{\textbf{E}, \textbf{N} } \} },
-\end{equation*}
-donde $\hat{P}_{\textbf{E}, \textbf{N} } = I_{S} \otimes \hat{P}^{B}_{\textbf{E}, \textbf{N} }$ es el proyector asociado a una medición de las energías y los números de partículas en los reservorios. A continuación, el sistema evoluciona de forma unitaria hasta un tiempo $t$
-
-\begin{equation*}
-    \hat{\rho}'(t) = \hat{U}(t)\hat{\rho}'(0)\hat{U}^{\dagger}(t),
-\end{equation*}
-finalmente se realiza una segunda medición a tiempo $t$, obteniéndose los valores $\textbf{E}'$ y $\textbf{N}'$. De este modo, la probabilidad condicional correspondiente es
-
-\begin{equation*}
-    P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) = \text{Tr}\{\hat{P}_{\textbf{E}', \textbf{N}' }\hat{\rho}'(t) \hat{P}_{\textbf{E}', \textbf{N}' } \},
-\end{equation*}
-escribiendo los proyectores de manera explícita $\hat{P}^{B}_{\textbf{E}, \textbf{N} } = |\textbf{E}, \textbf{N} \rangle\langle \textbf{E}, \textbf{N}|$, se puede obtener 
-
-\begin{align*} 
-    P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) & =  \text{Tr}\{\hat{U}(t)(\hat{\rho}_{S}(0)\otimes |\textbf{E}, \textbf{N}\rangle  \langle \textbf{E}, \textbf{N}| ) \hat{U}^{\dagger}(t)  |\textbf{E}', \textbf{N}'\rangle  \langle \textbf{E}', \textbf{N}'| \} \\
-        & =  \text{Tr}\{|\textbf{E},\textbf{N} \rangle \langle \textbf{E}', \textbf{N}'| \hat{U}(t)\hat{\rho}_{S}(0) \langle \textbf{E}, \textbf{N}|\hat{U}^{\dagger}(t)|\textbf{E}', \textbf{N}'\rangle \}      \\ 
-        & = \text{Tr}_{S}\{ \text{Tr}_{B}\{|\textbf{E},\textbf{N} \rangle \langle \textbf{E}', \textbf{N}'|\hat{U}(t) \}\hat{\rho}_{S}(0)\langle \textbf{E}, \textbf{N}|\hat{U}^{\dagger}(t)|\textbf{E}', \textbf{N}'\rangle      \} \\
-        & = \text{Tr}_{S}\{ \text{Tr}_{B}\{|\textbf{E},\textbf{N}\rangle \langle \textbf{E}',\textbf{N}'|\hat{U}(t)  \} \hat{\rho}_{S}(0) \text{Tr}_{B}\{\hat{U}^{\dagger}(t) |\textbf{E}',\textbf{N}' \rangle \langle \textbf{E},\textbf{N}| \}     \}.
-    \end{align*}    
-
-Por ende, $P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N})$ se puede expresar como
-\begin{equation*}
-    P_{t}(\textbf{E}',\textbf{N}'|\textbf{E},\textbf{N}) = \text{Tr}_{S}\{\hat{M} \hat{\rho}_{S}(0)\hat{M}^{\dagger} \}  \hspace{10mm} \hat{M} = \text{Tr}_{B}\{|\textbf{E},\textbf{N} \rangle \langle \textbf{E}',\textbf{N}' | \hat{U}(t)\}.
-\end{equation*}
-
-Al contar con una distribución de probabilidad, se puede construir la función generadora de momentos, a partir de la cual pueden obtenerse cantidades como el promedio o la varianza. Esta función es
-
+Definida la distribución de probabilidad, se introduce la función generadora de momentos, a partir de la cual pueden obtenerse los momentos y cumulantes de calor y trabajo:
 \begin{equation}
-    \Lambda(\vec{\lambda},\vec{\chi}) \equiv \int d\textbf{Q} d\textbf{W}P(\textbf{Q},\textbf{W}) e^{-i\vec{\lambda}\cdot \textbf{Q} -i\vec{\chi}\cdot \textbf{W} },
-\label{sec2funciongeneradora}
+    \Lambda(\vec{\lambda},\vec{\chi}) = 
+    \int d\mathbf{Q}\, d\mathbf{W}\,P(\mathbf{Q},\mathbf{W})\,
+    e^{-i\vec{\lambda}\cdot \mathbf{Q} -i\vec{\chi}\cdot \mathbf{W}}.
+    \label{sec2funciongeneradora}
 \end{equation}
-que se puede escribir en función de la evolución de una matriz densidad auxiliar \ref{apendix:fcs1}
-
+Esta función puede reescribirse en términos de una evolución modificada de la matriz densidad total \cite{esposito2009nonequilibrium},
 \begin{equation}
-    \Lambda(\vec{\lambda},\vec{\chi}) = \text{Tr}\{\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t) \}    \hspace{14mm} \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t) = \hat{U}(\vec{\lambda},\vec{\chi};t) \hat{\rho}_{tot}(0) \hat{U}^{\dagger}(\vec{\lambda},\vec{\chi};t),
+    \Lambda(\vec{\lambda},\vec{\chi}) = 
+    \text{Tr}\{\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t)\}, 
+    \qquad 
+    \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t) 
+    = \hat{U}(\vec{\lambda},\vec{\chi};t)\,\hat{\rho}_{tot}(0)\,
+    \hat{U}^{\dagger}(\vec{\lambda},\vec{\chi};t),
     \label{sec2:evolucionconteo}
 \end{equation}
-y 
+donde
+\[
+\hat{U}(\vec{\lambda},\vec{\chi};t) = 
+e^{\tfrac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha})
++ \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]} 
+\,\hat{U}(t)\,
+e^{-\tfrac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha})
++ \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}.
+\]
 
-\begin{equation*}
-    \hat{U}(\vec{\lambda},\vec{\chi};t) = e^{\frac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha} ) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]  } \hat{U}(t) e^{-\frac{i}{2}\sum_{\alpha}[ \lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]},
-\end{equation*}
-$\vec{\lambda}$ y $\vec{\chi}$ se denominan los parámetros de conteo o \textit{Counting Fields}, y $\hat{\rho}(\vec{\lambda},\vec{\chi};t)$ se denomina la matriz densidad generalizada. Conocer la evolución de esta matriz permite acceder a los momentos del calor, el trabajo y en general, del observable que se quiera estudiar. Sin embargo, dado que esta matriz se describe a partir de la evolución unitaria de la matriz densidad total, el siguiente paso consiste en derivar una ecuación maestra efectiva para los grados de libertad del sistema reducido.
+Los parámetros $\vec{\lambda}$ y $\vec{\chi}$ se denominan \textit{counting fields}\cite{esposito2009nonequilibrium,landi2024current}, mientras que $\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t)$ recibe el nombre de matriz densidad generalizada. El conocimiento de su evolución permite calcular de manera sistemática los momentos y cumulantes del calor, del trabajo y, en general, de cualquier observable de interés. Sin embargo, dado que esta matriz se construye a partir de la evolución unitaria de $\hat{\rho}_{tot}(t)$, resulta necesario derivar una ecuación maestra efectiva que describa únicamente los grados de libertad del sistema reducido, lo que se abordará en secciones futuras.
+
 
 \label{sec2:estadistica2puntos}
 
+\section{Formalismo de superoperadores y espacio de Liouville} 
 
+Un operador en el espacio de Hilbert, representado por $\hat{\rho}$ y de dimensión $N\times N$, puede mapearse al espacio de Liouville mediante un vector columna $|\rho \rangle \rangle$ de dimensión $N^{2}\times 1$. De manera análoga, un superoperador $\mathcal{L}$ que actúa sobre $\hat{\rho}$ en el espacio de Hilbert se representa en el espacio de Liouville por una matriz $\check{\mathcal{L}}$ de dimensión $N^2 \times N^2$, la cual actúa sobre $|\rho\rangle\rangle$. La notación $|\cdot\rangle\rangle$ denota este mapeo, conocido como vectorización, que permite tratar operadores como vectores y superoperadores como matrices.
 
-\section{Formalismo de Superoperadores y Espacio de Liouville}
-Un operador en el espacio de Hilbert, representado por $\hat{\rho}$ y de dimensión $N\times N$, puede mapearse al espacio de Liouville mediante  un vector columna $|\rho \rangle \rangle$ de dimension $N^{2}\times 1$. De forma análoga, un superoperador \( L \), que actúa sobre \( \hat{\rho} \) en el espacio de Hilbert, se convierte en una matriz \( \check{L} \) de dimensión \( N^2 \times N^2 \) que actúa sobre \( |\rho\rangle\rangle \) en el espacio de Liouville. En este espacio se definen las siguientes operaciones
-
+En este espacio se definen las siguientes operaciones fundamentales:
 \begin{equation*}
-    \langle \langle A|B\rangle \rangle  \equiv \text{Tr}\{\hat{A}^{\dagger}\hat{B}\}
+    \langle \langle A|B\rangle \rangle  \equiv \text{Tr}\{\hat{A}^{\dagger}\hat{B}\},
 \end{equation*}
-
 \begin{equation*}
-    \check{1}  \equiv \sum_{n,n'}|nn'\rangle \rangle \langle \langle nn'|
+    \check{1}  \equiv \sum_{n,n'}|nn'\rangle \rangle \langle \langle nn'|,
 \end{equation*}
-
 \begin{equation*}
-     |nn'\rangle \rangle   \to |n\rangle \langle n'|  \hspace{10mm}  \langle \langle nn'| \to |n'\rangle \langle n|,
+     |nn'\rangle \rangle \;\longleftrightarrow\; |n\rangle \langle n'|,
+     \hspace{12mm}  
+     \langle \langle nn'| \;\longleftrightarrow\; |n'\rangle \langle n|,
 \end{equation*}
-además, se cumple que 
-
+y se verifican las relaciones
 \begin{equation*}
-     \langle \langle nn'|mm'\rangle \rangle  = \delta_{nm}\delta_{n'm'}
-\end{equation*}
-
-\begin{equation*}
-    \langle \langle nn'|A\rangle \rangle  = \langle n|\hat{A}|n'\rangle
-\end{equation*}
-
-\begin{equation*}
+     \langle \langle nn'|mm'\rangle \rangle  = \delta_{nm}\delta_{n'm'},
+     \qquad
+     \langle \langle nn'|A\rangle \rangle  = \langle n|\hat{A}|n'\rangle,
+     \qquad
      \langle \langle 1|A\rangle \rangle  = \text{Tr}\{\hat{A}\}.
 \end{equation*}
 
-
-Si la evolución de la matriz densidad $|\hat{\rho}(t)\rangle \rangle$ esta gobernada por el superoperador $\check{\mathcal{L}}$, entonces la evolución temporal en el espacio de Liouville es 
-
+Si la evolución de la matriz densidad $|\hat{\rho}(t)\rangle \rangle$ está gobernada por el superoperador $\check{\mathcal{L}}$, la dinámica en el espacio de Liouville se describe como
 \begin{equation*}
-    \frac{d|\hat{\rho}(t) \rangle \rangle}{dt} = \check{\mathcal{L}}|\hat{\rho}(t) \rangle \rangle,
+    \frac{d}{dt}|\hat{\rho}(t) \rangle \rangle = \check{\mathcal{L}}\,|\hat{\rho}(t) \rangle \rangle,
 \end{equation*}
-la solución formal de esta ecuación consiste en
-
+cuya solución formal es
 \begin{equation}
-    |\hat{\rho}(t)\rangle \rangle = e^{\check{\mathcal{L}}t}|\hat{\rho}(0)\rangle \rangle. 
+    |\hat{\rho}(t)\rangle \rangle = e^{\check{\mathcal{L}}t}\,|\hat{\rho}(0)\rangle \rangle. 
     \label{sec2liouvilleformal}
 \end{equation}
 
-Además, en este espacio se pueden definir los superoperadores de proyección de Nakajima-Zwanzig, los cuales actúan sobre la matriz densidad total. En este contexto, se define el superoperador \( \check{\mathcal{P}} \), que proyecta sobre la parte relevante de la dinámica, mientras que \( \check{\mathcal{Q}} = 1 - \check{\mathcal{P}} \) proyecta sobre la parte irrelevante\cite{zwanzig1966statistical}. Estos operadores cumplen con las propiedades
-
+Asimismo, en este marco se definen los superoperadores de proyección de Nakajima–Zwanzig, que actúan sobre la matriz densidad total. En particular, el superoperador $\check{\mathcal{P}}$ proyecta sobre la parte relevante de la dinámica, mientras que $\check{\mathcal{Q}} = \check{1} - \check{\mathcal{P}}$ proyecta sobre la parte irrelevante \cite{zwanzig1966statistical}. Estos operadores cumplen las propiedades algebraicas
 \begin{align*}
-    & \check{\mathcal{P}} + \check{\mathcal{Q}} = \check{1} \\
-    & \check{\mathcal{P}}^{2} = \check{\mathcal{P}} \\
-    & \check{\mathcal{Q}}^{2} = \check{\mathcal{Q}} \\
+    & \check{\mathcal{P}} + \check{\mathcal{Q}} = \check{1}, \\
+    & \check{\mathcal{P}}^{2} = \check{\mathcal{P}}, \\
+    & \check{\mathcal{Q}}^{2} = \check{\mathcal{Q}}, \\
     & \check{\mathcal{P}}\check{\mathcal{Q}} = \check{\mathcal{Q}}\check{\mathcal{P}} = 0.
-\end{align*}    
-
-Finalmente, la evolución temporal de la matriz densidad a través de estos proyectores es 
-
-\begin{align*}
-    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle & = \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle \\
-    \frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  & = \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  + \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle.
 \end{align*}
+
+La evolución temporal de la matriz densidad descompuesta en estas dos partes satisface
+\begin{align*}
+    \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle 
+    &= \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle  
+     + \check{\mathcal{P}}\check{\mathcal{L}}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle, \\
+    \frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  
+    &= \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle \rangle  
+     + \check{\mathcal{Q}}\check{\mathcal{L}}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle.
+\end{align*}
+
 
 \label{sec2:superop}
 
-\newpage
 
 \section{Ecuación maestra generalizada}
-Si se considera un Hamiltoniano total $\hat{H} = \hat{H}_{S} + \hat{H}_{B} + \epsilon \hat{H}_{I} = \hat{H}_{0} + \epsilon \hat{H}_{I}$, con $\epsilon$ un parámetro adimensional que posteriormente permite aplicar acoplamiento débil. Y se utiliza este Hamiltoniano para la evolución unitaria $\hat{U}(t)$ en la ecuación \ref{sec2:evolucionconteo}, se obtiene la ecuación 
 
+Considérese un Hamiltoniano total 
+\(\hat{H} = \hat{H}_{S} + \hat{H}_{B} + \epsilon \hat{H}_{I} \equiv \hat{H}_{0} + \epsilon \hat{H}_{I}\),
+donde \(\epsilon\) es un parámetro adimensional que permitirá implementar posteriormente el régimen de acoplamiento débil. Si este Hamiltoniano se emplea en la evolución unitaria \(\hat{U}(t)\) de la ecuación \eqref{sec2:evolucionconteo}, se obtiene
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{0},\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)] - i\epsilon[\hat{V}_{\lambda} \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\hat{V}_{-\lambda}],
+    \frac{d}{dt}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) 
+    = -i[\hat{H}_{0},\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)]
+      - i\epsilon\!\left[\hat{V}_{\lambda}\,\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)
+      - \hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\,\hat{V}_{-\lambda}\right],
     \label{sec3:ecgeneral}
 \end{equation}
-con el operador $\hat{V}_{\lambda}$ descrito por
-
+con
 \begin{equation*}
-    \hat{V}_{\lambda} = e^{-\frac{i}{2}\hat{A}(\lambda,\chi)}\hat{H}_{I}e^{\frac{i}{2}\hat{A}(\lambda,\chi)}, \hspace{14mm}  
+    \hat{V}_{\lambda} 
+    = e^{-\frac{i}{2}\hat{A}(\lambda,\chi)}\,\hat{H}_{I}\,e^{\frac{i}{2}\hat{A}(\lambda,\chi)},
+    \qquad 
+    \hat{A}(\lambda,\chi) 
+    = -\sum_{\alpha}\!\left[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha})
+      + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}\right].
 \end{equation*}
-y $\hat{A}(\lambda,\chi) = -\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha} ]$. 
 
-En el formalismo de superoperadores, \ref{sec3:ecgeneral} se transforma en 
-
+En el formalismo de superoperadores, la ecuación \eqref{sec3:ecgeneral} adopta la forma
 \begin{align*}
-    \frac{d}{dt}|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  & = \check{\mathcal{L}}_{\lambda}|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  \\  
-        & = (\check{\mathcal{L}}_{0} + \epsilon \check{\mathcal{L}}'_{\lambda} )|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle \rangle. 
+    \frac{d}{dt}\,|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle\rangle
+    &= \check{\mathcal{L}}_{\lambda}\,|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle\rangle \\
+    &= \big(\check{\mathcal{L}}_{0} + \epsilon\,\check{\mathcal{L}}'_{\lambda}\big)\,
+       |\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle\rangle .
 \end{align*}
 
-Si se utiliza el cuadro de interacción, esta ecuación se convierte en  
-
+Al pasar al cuadro de interacción se define
 \begin{align*}
-    \hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t) & = e^{-\mathcal{L}_{0}t}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t) \\
-    & = e^{i\hat{H}_{0}t}\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)e^{-i\hat{H}_{0}t}.
+    |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle\rangle 
+    &= e^{-\check{\mathcal{L}}_{0}t}\,|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle\rangle \\
+    &\longleftrightarrow\;
+       e^{i\hat{H}_{0}t}\,\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\,e^{-i\hat{H}_{0}t},
 \end{align*}
-
-En este cuadro, el superoperador de Liouville que incorpora el parámetro de conteo se transforma en 
-
+y el superoperador de Liouville con parámetros de conteo se transforma como
 \begin{equation*}
-    \check{\mathcal{L}}_{\lambda}(t) = e^{-\check{\mathcal{L}}_{0}t}\check{\mathcal{L}}_{\lambda}e^{\check{\mathcal{L}}_{0}t},
+    \check{\mathcal{L}}_{\lambda}(t)
+    = e^{-\check{\mathcal{L}}_{0}t}\,\check{\mathcal{L}}_{\lambda}\,e^{\check{\mathcal{L}}_{0}t}.
 \end{equation*}
-y la evolución temporal en el cuadro de interacción es 
-
+La evolución temporal en el cuadro de interacción queda entonces
 \begin{equation}
-    \frac{d}{dt}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  = \epsilon \check{\mathcal{L}}_{\lambda}(t)|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle,
- \label{sec2FCS:evolution}
+    \frac{d}{dt}\,|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle\rangle
+    = \epsilon\,\check{\mathcal{L}}_{\lambda}(t)\,|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle\rangle .
+    \label{sec2FCS:evolution}
 \end{equation}
-de este modo, la evolución de los grados de libertad del sistema reducido en el espacio de Hilbert queda descrita por 
 
+De este modo, la evolución de los grados de libertad del sistema reducido (en el espacio de Hilbert) se describe por
 \begin{multline}
-    \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) =  \epsilon^{2}\int_{0}^{t}ds \left[- \text{Tr}_{B}\{\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \} - \text{Tr}_{B}\{\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t) \} \right.\\
-    \left. + \text{Tr}_{B}\{\hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s) \} + \text{Tr}_{B}\{ \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t) \}  \right],
-\label{ecmaestraVlambda}
+    \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) 
+    = \epsilon^{2}\!\int_{0}^{t}\!ds \Big[
+      - \textnormal{Tr}_{B}\!\left\{\hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s)\,\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\,\hat{\rho}^{eq}_{R}\right\}
+      - \textnormal{Tr}_{B}\!\left\{\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\,\hat{\rho}^{eq}_{R}\,\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t)\right\} \\
+      + \textnormal{Tr}_{B}\!\left\{\hat{V}_{\lambda}(t)\,\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\,\hat{\rho}^{eq}_{R}\,\hat{V}_{-\lambda}(t-s)\right\}
+      + \textnormal{Tr}_{B}\!\left\{\hat{V}_{\lambda}(t-s)\,\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\,\hat{\rho}^{eq}_{R}\,\hat{V}_{-\lambda}(t)\right\}
+    \Big],
+    \label{ecmaestraVlambda}
 \end{multline}
-la demostración de esta ecuación se encuentra en el apéndice \ref{apendixsubsectionmatriz}.
+donde \(\hat{\rho}^{eq}_{R}=\bigotimes_{\alpha}\hat{\tau}_{\alpha}\) es el estado de equilibrio del conjunto de reservorios. La demostración de la ecuación \eqref{ecmaestraVlambda} se presenta en el apéndice \ref{apendixsubsectionmatriz}.
 
-Escribiendo una interacción de la forma
-
+Escribiendo la interacción como
 \begin{align*}
-    \hat{V} & = \sum_{\alpha,k}\hat{S}_{\alpha,k}\hat{B}_{\alpha,k} \\
-    \hat{V}_{\lambda} & = \sum_{\alpha,k}\hat{S}_{\alpha,k}\hat{B}_{\alpha,k,\lambda} \\
-    \hat{B}_{\alpha,k,\lambda} & \equiv e^{(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}\hat{B}_{\alpha,k}e^{-(i/2)[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]},  
+    \hat{V} &= \sum_{\alpha,k}\hat{S}_{\alpha,k}\,\hat{B}_{\alpha,k}, \\
+    \hat{V}_{\lambda} &= \sum_{\alpha,k}\hat{S}_{\alpha,k}\,\hat{B}_{\alpha,k,\lambda}, \\
+    \hat{B}_{\alpha,k,\lambda} 
+      &\equiv e^{\frac{i}{2}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}\,
+               \hat{B}_{\alpha,k}\,
+               e^{-\frac{i}{2}[\lambda_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]},
 \end{align*}
-donde los operadores del baño representan operadores creación o destrucción, que cumplen  
+los operadores del baño satisfacen
 \begin{equation*}
-    [\hat{B}_{\alpha,k},\hat{N}_{\alpha}] = n_{\alpha,k}\hat{B}_{\alpha,k},
+    [\hat{B}_{\alpha,k},\hat{N}_{\alpha}] = n_{\alpha,k}\,\hat{B}_{\alpha,k},
 \end{equation*}
-con $n_{\alpha,k}$ el número de part\'iculas que se intercambia en la interacción $k$.
- 
-Y los operadores del sistema satisfacen
-
+donde \(n_{\alpha,k}\) es el número de partículas intercambiado con el baño térmico \(\alpha\). Los operadores del sistema cumplen
 \begin{equation*}
-    \hat{U}^{\dagger}_{S}(t)\hat{S}_{\alpha,k}\hat{U}_{S}(t) = \sum_{j}e^{-i\omega_{j}t}\hat{S}_{\alpha,k;j},
+    \hat{U}^{\dagger}_{S}(t)\,\hat{S}_{\alpha,k}\,\hat{U}_{S}(t) 
+    = \sum_{j} e^{-i\omega_{j}t}\,\hat{S}_{\alpha,k;j},
 \end{equation*}
-con $\hat{S}_{\alpha,k;j}$ los operadores de salto y $\omega_{j}$ las frecuencias de Bohr del Hamiltoniano del sistema. 
+con \(\hat{S}_{\alpha,k;j}\) los operadores de salto y \(\omega_{j}\) las frecuencias de Bohr del Hamiltoniano del sistema. Obsérvese que \(\hat{S}_{\alpha,k}\) no tiene por qué ser autoadjunto (a diferencia del caso considerado en \ref{sec:lindblad}).
 
-Cabe mencionar que los operadores $\hat{S}_{\alpha,k}$ no necesitan ser autoadjuntos, a diferencia de los  operadores de interacción considerados en \ref{sec:lindblad}.
-
-Si se definen las funciones correlación como $C^{\alpha}_{k,k'}(s) = \text{Tr}\{e^{is\hat{H}_{\alpha} }\hat{B}^{\dagger}_{\alpha,k}e^{-is\hat{H}_{\alpha} }\hat{B}_{\alpha,k'}\hat{\tau}_{\alpha}\}$, se obtiene la ecuación maestra generalizada
-
+Definiendo las funciones de correlación 
+\(C^{\alpha}_{k,k'}(s)=\textnormal{Tr}\!\big\{e^{is\hat{H}_{\alpha}}\,\hat{B}^{\dagger}_{\alpha,k}\,e^{-is\hat{H}_{\alpha}}\,\hat{B}_{\alpha,k'}\,\hat{\tau}_{\alpha}\big\}\),
+se obtiene la ecuación maestra generalizada
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}\int_{0}^{t}ds \mathcal{I}(s,t) ,
-\label{ecmaestrafinal}
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)
+    = - \sum_{\alpha,k,k';j,j'} e^{i(\omega_{j}-\omega_{j'})t}
+      \int_{0}^{t}\!ds\; \mathcal{I}(s,t),
+    \label{ecmaestrafinal}
 \end{equation}
 donde
-
 \begin{multline}
-    \mathcal{I}(s,t) = e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k',j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'} \\
-    - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha} - \chi_{\alpha})}\left[e^{i\omega_{j'}s}C^{\alpha}_{k,k'}(s-\lambda_{\alpha}) + e^{-i\omega_{j}s}C^{\alpha}_{k,k'}(-s-\lambda_{\alpha})  \right]  \hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;j}.
+    \mathcal{I}(s,t) 
+    = e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s)\,
+      \hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'}\,
+      \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)
+      + e^{-i\omega_{j}s} C^{\alpha}_{k,k'}(-s)\,
+        \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\,
+        \hat{S}^{\dagger}_{\alpha,k;j}\hat{S}_{\alpha,k';j'} \\
+    - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}
+      \!\left[
+        e^{i\omega_{j'}s} C^{\alpha}_{k,k'}(s-\lambda_{\alpha})
+      + e^{-i\omega_{j}s} C^{\alpha}_{k,k'}(-s-\lambda_{\alpha})
+      \right]
+      \hat{S}_{\alpha,k';j'}\,
+      \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\,
+      \hat{S}^{\dagger}_{\alpha,k;j}.
     \label{ecmaestrafinalI}
 \end{multline}
-
-Está ecuación fue deducida en el Apéndice \ref{finalequation}.
-
+Esta ecuación se deduce en el apéndice \ref{finalequation}.
 \label{sec2:master}
 
 \subsection{Resolución finita de energía}
-De forma análoga a lo presentado en la sección \ref{sec:lindblad}, uno de los requisitos que se busca en la evolución de la ecuación maestra es que sea Markoviana. Para ello, se debe tomar el límite superior del integral en el tiempo, presente en la ecuación \ref{ecmaestrafinal}, hacia infinito. Esta aproximación es válida siempre que el tiempo de correlación del baño $\tau_{B}$ sea mucho menor al tiempo de relajación del sistema $\tau_{R}$. Sin embargo, en presencia de parámetros de conteo $\lambda_{\alpha}$, las funciones de correlación del baño adquieren una dependencia modificada en el tiempo, del tipo $C^{\alpha}_{k,k'}(\pm \tau - \lambda_\alpha)$. Por lo tanto, para que la aproximación markoviana sea válida en presencia de parámetros de conteo, se requiere que 
 
-\begin{equation*}
-    C^{\alpha}_{k,k'}(\pm \tau - \lambda_\alpha) \approx 0 \quad \text{para } \tau > \tau_{B}.
-\end{equation*}
+De forma análoga a \ref{sec:lindblad}, se busca una dinámica markoviana. Para ello se extiende el límite superior de integración temporal en la ecuación \eqref{ecmaestrafinal} hacia el infinito, lo cual es válido si el tiempo de correlación del baño \(\tau_{B}\) es mucho menor que el tiempo de relajación del sistema \(\tau_{R}\). En presencia de parámetros de conteo \(\lambda_{\alpha}\), las funciones de correlación adquieren una dependencia modificada del tipo \(C^{\alpha}_{k,k'}(\pm \tau-\lambda_{\alpha})\). Por consiguiente, la aproximación de Markov requiere que
+\[
+    C^{\alpha}_{k,k'}(\pm \tau-\lambda_{\alpha}) \approx 0 
+    \quad \text{para } \tau>\tau_{B},
+\]
+lo que delimita el régimen de validez a
+\[
+    \tau_{B}\ll \tau_{R},
+    \qquad 
+    |\lambda_{\alpha}|\ll \tau_{R}.
+\]
 
-Esto implica que el régimen de validez de la aproximación markoviana es 
-
-\begin{equation*}
-    \tau_{B} \ll \tau_{R} \hspace{10mm} |\lambda_{\alpha}| \ll \tau_{R}.
-\end{equation*}
-
-Esto tiene repercusiones importantes, ya que implica que la resolución de diferencias de energía en la medición del calor sea finita. Esta limitación se debe a que el parámetro $\lambda_{\alpha}$ y el calor medido en el baño $Q_{\alpha}$ son variables conjugadas en la distribución de probabilidad de calor y trabajo, por ende ambas obedecen una relación de incertidumbre \cite{folland1997uncertainty}. Como consecuencia las diferencias de energía del orden de $1/\tau_{R}$ dejan de ser confiables, ya que en ese régimen el valor promedio del calor es comparable con su varianza, es decir,
-
-\begin{equation*}
-    \langle \Delta \lambda^{2}_{\alpha} \rangle \langle (\Delta Q_{\alpha})^{2}\rangle \geq \gamma \implies \langle (\Delta Q_{\alpha})^{2}\rangle  \geq \frac{\gamma}{\tau^{2}_{R}},
-\end{equation*}
-con $\gamma$ alguna constante positiva. La profundidad de este resultado radica en que al aplicar una aproximación markoviana, la evolución del sistema sufre, de forma inherente, una resolución limitada respecto al calor intercambiado con los reservorios. Esta limitación puede conducir a inconsistencias termodinámicas, ya que se pierde información sobre fluctuaciones relevantes a escalas energéticas del orden $1/\tau_{R}$. Por lo tanto, para garantizar una evolución termodinámicamente consistente, es necesario redefinir las leyes de la termodinámica considerando explícitamente la resolución finita del calor impuesta por la dinámica.
-
+Esta condición implica una resolución finita en las diferencias de energía que pueden inferirse al medir el calor: \(\lambda_{\alpha}\) y \(Q_{\alpha}\) son variables conjugadas en la función generadora, por lo que obedecen una relación de incertidumbre \cite{folland1997uncertainty}. En particular,
+\[
+    \langle \Delta \lambda^{2}_{\alpha} \rangle\,\langle (\Delta Q_{\alpha})^{2}\rangle \ge \gamma
+    \;\;\Rightarrow\;\;
+    \langle (\Delta Q_{\alpha})^{2}\rangle \ge \gamma/\tau_{R}^{2},
+\]
+con \(\gamma>0\). En consecuencia, diferencias de energía del orden de \(1/\tau_{R}\) dejan de ser resolubles y el promedio del calor puede ser comparable con su varianza. Para mantener la consistencia termodinámica, las leyes deben formularse considerando explícitamente esta resolución finita.
 \label{sec2:finiteresol}
 
 \subsection{Agrupación de frecuencias}
-%La ecuación de Redfield no siempre preserva positividad, lo que puede generar la aparición de probabilidades negativas en la matriz densidad del sistema reducido. La forma más común de asegurar la positividad es usar la aproximación secular vista en la sección \ref{sec:lindblad} para obtener la forma GKLS, el problema de aplicar esta aproximación es que requiere que las frecuencias de Bohr estén bien separadas con respecto a $1/\tau_{R}$, por lo tanto el aplicar esta aproximación necesita que no hayan frecuencias de Bohr casi degeneradas, eliminando una parte de los efectos cuánticos, ya que se pierden las coherencias entre niveles de energías cercanos\cite{trushechkin2021unified}. Se puede considerar un esquema diferente que asegure positividad, partiendo del punto que la aproximación de Markov asegura que para dos frecuencias de transición distintas, se cumple que $|\omega_{j} - \omega_{j'}|\ll 1/\tau_{B}$ o $|\omega_{j}-\omega_{j'}|\gg 1/\tau_{R}$. Incluso, se pueden cumplir las dos opciones. Dependiendo de cuál se cumpla, podemos agrupar las frecuencias de transición en conjuntos $x_{q}$, tal que si se cumple la primera o la segunda inecuación, estan en el mismo o en diferentes grupos, matemáticamente se traduce en
-La ecuación de Redfield no garantiza en general la preservación de la positividad, lo que puede llevar a la aparición de probabilidades negativas en la matriz densidad del sistema reducido. La forma más común de asegurar dicha positividad es aplicar la aproximación secular, vista en la sección \ref{sec:lindblad}, la cual conduce a una ecuación maestra en forma (GKLS).
 
-Sin embargo, esta aproximación requiere que las frecuencias de Bohr estén bien separadas en comparación con \( 1/\tau_R \), lo cual excluye casos con frecuencias casi degeneradas. Esta condición impone una pérdida de efectos cuánticos significativos, ya que elimina los términos no seculares en la evolución temporal\cite{trushechkin2021unified}. Para enfrentar esta limitación, puede considerarse un enfoque alternativo que conserve la positividad sin eliminar los términos no seculares. 
+La ecuación de Redfield no garantiza en general la preservación de la positividad y puede producir probabilidades negativas en el estado reducido. La vía habitual para asegurar positividad es la aproximación secular (sección \ref{sec:lindblad}), que conduce a la forma GKLS, pero exige que las frecuencias de Bohr estén bien separadas respecto de \(1/\tau_{R}\). Ello excluye cuasi–degeneraciones y suprime términos no seculares \cite{trushechkin2021unified}.
 
-Partimos de que la aproximación de Markov($\tau_{B} \ll \tau_{R}$) garantiza que para dos frecuencias de transición distintas, se cumple al menos una de las siguientes condiciones:
+Un enfoque alternativo que conserva positividad sin descartar los términos no seculares parte de la condición markoviana \(\tau_{B}\ll \tau_{R}\), que garantiza que, para dos frecuencias de transición distintas, se cumple al menos una de las desigualdades
 \[
-|\omega_j - \omega_{j'}| \ll 1/\tau_B \quad \text{o} \quad |\omega_j - \omega_{j'}| \gg 1/\tau_R.
+|\omega_j-\omega_{j'}|\ll 1/\tau_B
+\quad\text{o}\quad
+|\omega_j-\omega_{j'}|\gg 1/\tau_R.
 \]
-Incluso, ambas pueden cumplirse simultáneamente. Es posible agrupar las frecuencias de transición en subconjuntos \( x_q \), tal que frecuencias que cumplen la primera desigualdad pertenecen al mismo conjunto, mientras que aquellas que cumplen la segunda pertenecen a conjuntos distintos. Esto se traduce matemáticamente en
-
-
+De este modo, se agrupan las frecuencias en subconjuntos \(x_q\): si satisfacen la primera desigualdad pertenecen al mismo subconjunto; si satisfacen la segunda, pertenecen a subconjuntos distintos,
 \begin{align*}
-    |\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}  &\hspace{10mm} \omega_{j} \in x_{q}, \omega_{j'} \in x_{q} \\
-    |\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}  &\hspace{10mm} \omega_{j} \in x_{q}, \omega_{j'} \in x_{q'}.
+    |\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}  &\;\Rightarrow\; \omega_{j},\omega_{j'} \in x_{q}, \\
+    |\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}  &\;\Rightarrow\; \omega_{j} \in x_{q},\; \omega_{j'} \in x_{q'}.
 \end{align*}
+Para frecuencias en subconjuntos distintos, la aproximación secular es válida (los factores \(e^{i(\omega_j-\omega_{j'})t}\) se promedian a cero). Dentro de un mismo subconjunto \(x_q\), la resolución finita impide distinguir transiciones cercanas; por tanto, en las funciones de correlación espectral
+\(\gamma^{\alpha}(\omega)=\int_{-\infty}^{\infty} ds\,e^{i\omega s}C^{\alpha}(s)\)
+se sustituyen las frecuencias \(\omega_{j}\in x_q\) por una frecuencia representativa \(\omega_{q}\), es decir,
+\[
+    e^{i\omega_{j}s},\;e^{i\omega_{j'}s} \to e^{i\omega_{q}s},
+    \qquad 
+    |\omega_{q}-\omega_{j}|\ll 1/\tau_{B}\;\;\forall\,\omega_{j}\in x_{q}.
+\]
+Esta sustitución implementa una descripción coarse-grained compatible con la positividad y la resolución energética finita \cite{chruscinski2017brief}.
 
-Notemos que para frecuencias $\omega_{j}$, $\omega_{j'}$ que están en distintos grupos, se cumple la aproximación secular, es decir, los términos $e^{i(\omega_{j} - \omega_{j'})t}$ oscilan rápidamente, por ende en  promedio se anulan.
-
-La funcion correlación  espectral $\gamma^{\alpha}(\omega) = \int_{-\infty}^{\infty} ds e^{i \omega s} C^{\alpha}(s)$, describe la influencia del baño $\alpha$ en transiciones de estados con diferencia de energía $\omega$, donde los $\omega$ corresponden a las frecuencias de Bohr del sistema. Dentro de un mismo conjunto $x_{q}$, los términos $e^{i\omega_{j}s},e^{i\omega_{j'}s}$ contribuyen, respectivamente, a  $\gamma^{\alpha}(\omega_{j})$ y $\gamma^{\alpha}(\omega_{j'})$, es decir,  describen transiciones inducidas por el baño con frecuencias cercanas $\omega_{j}$ y $\omega_{j'}$. Sin embargo, debido a la resolución finita del calor intercambiado con el reservorio, no es posible distinguir entre transiciones con frecuencias dentro del mismo conjunto $x_q$. Por lo tanto, en las funciones correlación espectral se deben sustituir las frecuencias individuales $\omega_{j} \in x_{q}$ por una frecuencia auxiliar $\omega_{q}$, es decir, en la ecuación \ref{ecmaestrafinalI} sustituir los términos  
-
-\begin{equation*}
-    e^{i\omega_{j}s},e^{i\omega_{j'}s} \to e^{i\omega_{q}s} \hspace{10mm} |\omega_{q} - \omega_{j}| \ll 1/\tau_{B} \hspace{10mm} \forall \omega_{j} \in x_{q}.
-\end{equation*}
-
-Esta sustitución refleja la incapacidad de distinguir transiciones con energías dentro del mismo conjunto \( x_q \), y permite construir una descripción coarse-grained de la dinámica que respeta tanto la positividad como las limitaciones de resolución energética\cite{chruscinski2017brief}. 
-
-Usando este esquema en la ecuación \ref{ecmaestrafinal} y extendiendo los límites del integral de $\mathcal{I}$ de 0 a $\infty$, se obtiene la ecuación en la forma GKLS
-
+Aplicando este esquema en la ecuación \eqref{ecmaestrafinal} y extendiendo \(s\in[0,\infty)\), se obtiene la ecuación en forma GKLS
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = -i[\hat{H}_{LS},\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)] + \sum_{\alpha}\tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha} \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
+    \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) 
+    = -i[\hat{H}_{LS},\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)]
+      + \sum_{\alpha}\tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha}\,
+        \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
     \label{ecmaestracounting}
 \end{equation}
 con
-
 \begin{equation*}
-    \tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha}\hat{\rho} = \sum_{k,q}\gamma^{\alpha}_{k}(\omega_{q}) \left[e^{i\lambda_{\alpha}\omega_{q} + i(\chi_{\alpha}-\lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho} \} \right].
+    \tilde{\mathcal{L}}^{\chi_{\alpha},\lambda_{\alpha}}_{\alpha}\hat{\rho} 
+    = \sum_{k,q}\gamma^{\alpha}_{k}(\omega_{q})
+      \left[
+        e^{\,i\lambda_{\alpha}\omega_{q} + i(\chi_{\alpha}-\lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}
+        \hat{S}_{\alpha,k;q}(t)\hat{\rho}\hat{S}^{\dagger}_{\alpha,k;q}(t)
+        - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}\}
+      \right],
 \end{equation*}
-
-Los operadores de salto consisten en
-
+donde
 \begin{equation*}
-    \hat{S}_{\alpha,k;q}(t) = \sum_{\{j|\omega_{j}\in x_{q} \} } e^{-i\omega_{j}t}\hat{S}_{\alpha,k;j}.
+    \hat{S}_{\alpha,k;q}(t) = \sum_{\{j:\,\omega_{j}\in x_{q}\}} e^{-i\omega_{j}t}\,\hat{S}_{\alpha,k;j},
 \end{equation*}
-
-Y el Hamiltoniano de \textit{Lamb Shift}
-
+y el Hamiltoniano de \textit{Lamb shift}
 \begin{equation*}
-    \hat{H}_{LS}(t) = \sum_{\alpha,k;q} S^{\alpha}_{k}(\omega_{q}) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),
+    \hat{H}_{LS}(t) = \sum_{\alpha,k;q} S^{\alpha}_{k}(\omega_{q})\,
+    \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),
 \end{equation*}
-con las cantidades
-
+con
 \begin{equation}
-    \gamma_{k}^{\alpha}(\omega) = \int_{-\infty}^{\infty}ds e^{i\omega s}C^{\alpha}_{k,k}(s) \hspace{10mm} S^{\alpha}_{k}(\omega) = - \frac{i}{2} \int^{\infty}_{-\infty}ds e^{i\omega s} \text{sign}(s)C^{\alpha}_{k,k}(s).
+    \gamma_{k}^{\alpha}(\omega) = \int_{-\infty}^{\infty}\!ds\, e^{i\omega s}\,C^{\alpha}_{k,k}(s),
+    \qquad
+    S^{\alpha}_{k}(\omega) = - \frac{i}{2} \int_{-\infty}^{\infty}\!ds\, e^{i\omega s}\,\textnormal{sign}(s)\,C^{\alpha}_{k,k}(s).
     \label{sec2:gammaanddelta}
 \end{equation}
+Aquí se asume, por simplicidad, \(C^{\alpha}_{k,k'}\propto \delta_{k,k'}\). La deducción completa se incluye en el apéndice \ref{apendixGKLSgeneral}.
 
-En donde se asume por simplicidad $C^{\alpha}_{k,k'} \propto \delta_{k,k'}$. La demostración de esta ecuación está incluida en el apéndice \ref{apendixGKLSgeneral}. 
-
-En el límite en que los parámetros de conteo tienden a cero, se obtiene  
-
+En el límite \(\vec{\lambda},\vec{\chi}\to 0\) se recupera
 \begin{equation*}
-    \frac{d}{dt}\hat{\rho}_{IS}(t) = - i[\hat{H}_{LS}(t),\hat{\rho}_{IS}(t)] + \sum_{\alpha}\tilde{\mathcal{L}}_{\alpha} \hat{\rho}_{IS}(t),
+    \frac{d}{dt}\hat{\rho}_{IS}(t) 
+    = - i[\hat{H}_{LS}(t),\hat{\rho}_{IS}(t)] 
+      + \sum_{\alpha}\tilde{\mathcal{L}}_{\alpha}\,\hat{\rho}_{IS}(t),
 \end{equation*}
 con
 \begin{equation*}
-    \tilde{\mathcal{L}}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k;q}(t)] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}(t)]  \right].
+    \tilde{\mathcal{L}}_{\alpha} 
+    = \sum_{\{q:\,\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q})
+      \left[
+        \mathcal{D}[\hat{S}_{\alpha,k;q}(t)]
+        + e^{-\beta_{\alpha}(\omega_{q}-\mu_{\alpha}n_{\alpha,k})}
+          \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}(t)]
+      \right],
 \end{equation*}
-
-Y 
-
+y
 \begin{equation*}
-    \mathcal{D}[\hat{S}_{\alpha,k;q}]\hat{\rho}_{S}(t) = \hat{S}_{\alpha,k;q}\hat{\rho}_{S}(t)\hat{S}^{\dagger}_{\alpha,k;q} - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q},\hat{\rho}_{S}(t) \}.
+    \mathcal{D}[\hat{S}_{\alpha,k;q}]\,\hat{\rho}_{S}(t)
+    = \hat{S}_{\alpha,k;q}\hat{\rho}_{S}(t)\hat{S}^{\dagger}_{\alpha,k;q}
+      - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q},\hat{\rho}_{S}(t)\}.
 \end{equation*}
+%La demostración se proporciona en \ref{apendixKMS}.
 
-La demostración de esta ecuación se encuentra en \ref{apendixKMS}.
-
-Para un Hamiltoniano tiempo independiente, la ecuación maestra en el cuadro de Schrodinger es
-
+Para un Hamiltoniano independiente del tiempo, la ecuación en el cuadro de Schrödinger es
 \begin{equation}
-    \frac{d}{dt}\hat{\rho}_{S}(t) = -i [\hat{H}_{S}+ \hat{H}_{LS},\hat{\rho}_{S}(t)] + \sum_{\alpha}\mathcal{L}_{\alpha}(\hat{\rho}_{S}(t)),
-\label{sec2schrodingerthermo}
+    \frac{d}{dt}\hat{\rho}_{S}(t) 
+    = -i [\hat{H}_{S}+ \hat{H}_{LS},\hat{\rho}_{S}(t)]
+      + \sum_{\alpha}\mathcal{L}_{\alpha}\big(\hat{\rho}_{S}(t)\big),
+    \label{sec2schrodingerthermo}
 \end{equation}
 con
-
 \begin{equation}
-    \mathcal{L}_{\alpha} = \sum_{\{q|\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q}) \left[ \mathcal{D}[\hat{S}_{\alpha,k;q}] + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]  \right].
-\label{sec2lindbladconsistency}
+    \mathcal{L}_{\alpha} 
+    = \sum_{\{q:\,\omega_{q}>0\}} \sum_{k}\gamma^{\alpha}_{k}(\omega_{q})
+      \left[
+        \mathcal{D}[\hat{S}_{\alpha,k;q}]
+        + e^{-\beta_{\alpha}(\omega_{q}-\mu_{\alpha}n_{\alpha,k})}
+          \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]
+      \right].
+    \label{sec2lindbladconsistency}
 \end{equation}
 
-Hay dos límites importantes a considerar, el primero corresponde al caso en que todas las frecuencias satisfacen $|\omega_{j}-\omega_{j'}| \gg 1/\tau_{R}$, pues se cumple que $\mathcal{D}[\hat{S}_{\alpha,k;q}] = \mathcal{D}[\hat{S}_{\alpha,k;j}]$, lo que permite realizar la aproximación secular entre todas las frecuencias de Bohr y recuperar la ecuación de Lindblad \ref{eqsec2:lindbladS}. En el caso de que se cumpla que $|\omega_{j}-\omega_{j'}| \ll 1/\tau_{B}$, todas las frecuencias se agrupan en un sólo grupo. Por lo tanto, los operadores del sistema cumplen que $\hat{S}_{\alpha,k;q} = \hat{S}_{\alpha,k}$, y la ecuación maestra queda descrita por operadores locales, lo que corresponde a la ecuación maestra local\cite{wichterich2007modeling}.
+Existen dos límites de interés. (i) Si todas las frecuencias satisfacen 
+\(|\omega_{j}-\omega_{j'}|\gg 1/\tau_{R}\),
+entonces \(\mathcal{D}[\hat{S}_{\alpha,k;q}]=\mathcal{D}[\hat{S}_{\alpha,k;j}]\) y la aproximación secular es válida para todas las transiciones, recuperándose la ecuación de Lindblad \ref{eqsec2:lindbladS}. (ii) Si 
+\(|\omega_{j}-\omega_{j'}|\ll 1/\tau_{B}\),
+todas las frecuencias pertenecen a un único subconjunto; en tal caso \(\hat{S}_{\alpha,k;q}=\hat{S}_{\alpha,k}\) y la ecuación maestra queda descrita por operadores locales (ecuación maestra local) \cite{wichterich2007modeling}. A partir de este punto, la ecuación \eqref{sec2schrodingerthermo} será denominada ecuación maestra \textit{semilocal}.
+
+
+
 \section{Consistencia termodinámica}
-Existen dos casos a diferenciar para derivar las leyes de la termodinámica, primero la ecuación maestra global definida en la sección \ref{sec:lindblad} y segundo la ecuación maestra semilocal, que presenta un mayor desafío; debido a la resolución finita de energía impuesta por la dinámica markoviana en la ecuación semilocal, para asegurar la consistencia termodinámica es necesario redefinir las leyes de la termodinámica. Como primer paso, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cual satisface la relación de conmutación
 \label{sec2:thermolaws}
+
+Para derivar las leyes de la termodinámica en el marco de las ecuaciones maestras cuánticas es necesario distinguir entre dos escenarios: 
+(i) la ecuación maestra global definida en la sección \ref{sec:lindblad}, y 
+(ii) la ecuación maestra semilocal, que presenta un mayor desafío. 
+En este último caso, la resolución finita de energía impuesta por la dinámica markoviana obliga a redefinir cuidadosamente las magnitudes termodinámicas para asegurar la consistencia. 
+Con este fin, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cual satisface la relación de conmutación
 \begin{equation*}
     [\hat{S}_{\alpha,k;j},\hat{H}_{TD}] = \omega_{q}\hat{S}_{\alpha,k;j},
 \end{equation*}
-para todas las frecuencias $\omega_{j} \in x_{q}$. Este Hamiltoniano puede construirse mediante el Hamiltoniano $\hat{H}_{S}$, modificando sus autovalores de modo que todas las transiciones dentro de un mismo conjunto $x_q$ compartan una frecuencia $\omega_{q}$ para $\omega_{j} \in x_{q}$.
+para todas las frecuencias $\omega_{j} \in x_{q}$. 
+Dicho Hamiltoniano se construye a partir de $\hat{H}_{S}$, modificando sus autovalores de manera que todas las transiciones dentro de un mismo conjunto $x_q$ compartan una frecuencia efectiva $\omega_{q}$.
 
-Para las leyes de la termodinámica, se debe hacer la distinción para la ecuación maestra global y la semilocal, para el caso global la energía interna corresponde a 
+\subsection*{Primera ley}
 
+En el caso global, la energía interna se define como
 \begin{equation*}
-    E_{g}(t) = \text{Tr}\{\hat{H}_{S}\hat{\rho}(t) \}.
+    E_{g}(t) = \text{Tr}\{\hat{H}_{S}\hat{\rho}(t)\}.
 \end{equation*}
 
-Por otro lado, para la ecuación maestra semilocal, la energía interna se redefine con el Hamiltoniano termodinámico mencionado anteriormente 
-
+En la ecuación maestra semilocal, la energía interna se redefine en función del Hamiltoniano termodinámico:
 \begin{equation}
-    E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t) \}.
-\label{sec2:energyeq}
+    E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t)\}.
+    \label{sec2:energyeq}
 \end{equation}
 
-La corriente de calor y el trabajo entregado por el baño $\alpha$ para la ecuación global será
-
+La corriente de calor y la potencia entregadas por el baño $\alpha$ en el caso global se expresan como
 \begin{equation*}
-    J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \} \hspace{12mm} \dot{W}_{\alpha,g} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t) \}.
+    J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\}, 
+    \hspace{12mm} 
+    \dot{W}_{\alpha,g}(t) = \mu_{\alpha}\,\text{Tr}\{\hat{N}_{S}\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\},
 \end{equation*}
+donde $\mathcal{L}_{\alpha,g}$ es el superoperador de Lindblad asociado al baño $\alpha$, correspondiente a la ecuación maestra global \ref{eqsec2:lindbladS}.
 
-Donde $\mathcal{L}_{\alpha,g}$ es el superoperador de Lindblad asociado al baño $\alpha$, correspondiente a la ecuación maestra global \ref{eqsec2:lindbladS}.
-
-Finalmente, la corriente de calor y el trabajo entregado por el baño $\alpha$ para el caso semilocal será
-
+De manera análoga, para la ecuación semilocal se obtiene
 \begin{equation}
-    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \} \hspace{12mm} \dot{W}_{\alpha} = \mu_{\alpha} \text{Tr}\{\hat{N}_{S}\mathcal{L}_{\alpha}\hat{\rho}_{S}(t) \}.
-\label{sec2:heatworkeq}
+    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)\}, 
+    \hspace{12mm} 
+    \dot{W}_{\alpha}(t) = \mu_{\alpha}\,\text{Tr}\{\hat{N}_{S}\,\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)\}.
+    \label{sec2:heatworkeq}
 \end{equation}
 
-Estas definiciones automáticamente cumplen con la primera ley de la termodinámica, ya que si se deriva la energía interna para la ecuación global 
-
+Estas definiciones cumplen automáticamente con la primera ley de la termodinámica. 
+En efecto, al derivar la energía interna en el caso global se obtiene
 \begin{equation*}
-    \partial_{t}E_{g}(t) = \text{Tr}\{ \hat{H}_{S}\partial_{t}\hat{\rho}_{S}(t) \} = \sum_{\alpha}[J_{\alpha,g} + \dot{W}_{\alpha,g}].
+    \partial_{t}E_{g}(t) = \text{Tr}\{\hat{H}_{S}\,\partial_{t}\hat{\rho}_{S}(t)\} 
+    = \sum_{\alpha}\big[J_{\alpha,g}(t) + \dot{W}_{\alpha,g}(t)\big].
+\end{equation*}
+De forma análoga, utilizando la relación de conmutación $[\hat{H}_{TD},\hat{H}_{S}+\hat{H}_{LS}] = 0$, 
+se obtiene para el caso semilocal
+\begin{equation*}
+    \partial_{t}E(t) = \text{Tr}\{\hat{H}_{TD}\,\partial_{t}\hat{\rho}_{S}(t)\} 
+    = \sum_{\alpha}\big[J_{\alpha}(t) + \dot{W}_{\alpha}(t)\big].
 \end{equation*}
 
-También, si se aplica la relación de conmutación $[\hat{H}_{TD},\hat{H}_{S} + \hat{H}_{LS}] = 0$, se obtiene la primera ley para el caso semilocal 
+\subsection*{Ley cero}
 
+En el caso global, el estado de equilibrio para el baño $\alpha$ cumple
 \begin{equation*}
-    \partial_{t}E(t) = \text{Tr}\{ \hat{H}_{TD}\partial_{t}\hat{\rho}_{S}(t) \} = \sum_{\alpha}[J_{\alpha} + \dot{W}_{\alpha}].
+    \mathcal{L}_{\alpha,g}\,e^{-\beta_{\alpha}(\hat{H}_{S} - \mu_{\alpha}\hat{N}_{S})} = 0,
 \end{equation*}
-
-\subsection{Ley cero}
-Para la ecuación global, se cumple que el estado de equilibrio para el baño $\alpha$ es 
-
-\begin{equation*}
-    \mathcal{L}_{\alpha,g}e^{-\beta_{\alpha}(\hat{H}_{S} - \mu_{\alpha}\hat{N}_{S})} = 0,
-\end{equation*}
-además, si los reservorios poseen la misma temperatura inversa $\beta$ y el mismo potencial químico $\mu$, el estado de Gibbs corresponde a
-
+y, si todos los reservorios poseen la misma temperatura inversa $\beta$ y el mismo potencial químico $\mu$, 
+el estado de Gibbs corresponde a
 \begin{equation*}
     \hat{\rho}_{G,g} = \frac{e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})}}{\text{Tr}\{ e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})}\}}.
 \end{equation*}
 
 Por el contrario, para la ecuación semilocal se cumple que
-
 \begin{equation}
-    \mathcal{L}_{\alpha}e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0,
-\label{sec2cerolaw}
+    \mathcal{L}_{\alpha}\,e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0,
+    \label{sec2cerolaw}
 \end{equation}
-y el estado de Gibbs corresponde a 
+y, en condiciones de equilibrio, el estado de Gibbs está dado por
 \begin{equation*}
     \hat{\rho}_{G} = \frac{e^{-\beta(\hat{H}_{TD} - \mu \hat{N}_{S})}}{\text{Tr}\{ e^{-\beta(\hat{H}_{TD} - \mu \hat{N}_{S})}\}}.
 \end{equation*}
 
-\subsection{Segunda ley}
-Para definir la tasa de producción de entropía, se debe considerar la desigualdad de Spohn\cite{spohn2007irreversible}, que permite escribir las tasas de producción de entropía para el caso global y el semilocal\cite{potts2021thermodynamically}. Para el primero se cumple que 
+\subsection*{Segunda ley}
 
+La tasa de producción de entropía se define a partir de la desigualdad de Spohn \cite{spohn2007irreversible}, 
+la cual garantiza la no negatividad de la entropía producida en procesos irreversibles. 
+De este modo, para la ecuación global se obtiene
 \begin{equation*}
-    \dot{\sigma}_{g} = - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \ln \hat{\rho}_{S}(t) \} - \sum_{\alpha} \beta_{\alpha} J_{\alpha,g}(t) = -\sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t))[\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G,g}(\beta_{\alpha},\mu_{\alpha})] \} \geq 0.
+    \dot{\sigma}_{g}(t) = - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t)\,\ln \hat{\rho}_{S}(t) \} 
+    - \sum_{\alpha} \beta_{\alpha}\, J_{\alpha,g}(t) 
+    = -\sum_{\alpha} \text{Tr}\Big\{(\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t))\,[\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G,g}(\beta_{\alpha},\mu_{\alpha})] \Big\} \geq 0.
 \end{equation*}
 
-Mientras que para el segundo, la tasa de producción de entropía será 
-
+De manera análoga, en la ecuación semilocal la tasa de producción de entropía es
 \begin{equation}
-    \dot{\sigma} = - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t) \ln \hat{\rho}_{S}(t) \} - \sum_{\alpha} \beta_{\alpha} J_{\alpha}(t) = -\sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))[\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})] \} \geq 0.
-\label{sec2secondlaw}
+    \dot{\sigma}(t) = - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t)\,\ln \hat{\rho}_{S}(t) \} 
+    - \sum_{\alpha} \beta_{\alpha}\, J_{\alpha}(t) 
+    = -\sum_{\alpha} \text{Tr}\Big\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\,[\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})] \Big\} \geq 0,
+    \label{sec2secondlaw}
 \end{equation}
+donde la desigualdad asegura la validez de la segunda ley en ambos marcos \cite{potts2021thermodynamically}.
 
-La demostración de \ref{sec2cerolaw} y de \ref{sec2secondlaw} se encuentra en el apéndice \ref{apendix:thermolaws}. 
+En resumen, la formulación termodinámica basada en la ecuación maestra semilocal requiere redefinir las magnitudes termodinámicas utilizando el Hamiltoniano termodinámico $\hat{H}_{TD}$. Con estas definiciones, se garantiza la validez de las leyes de la termodinámica, incluso en presencia de cuasi–degeneraciones y sin necesidad de descartar términos no seculares.
 
-De este modo, se definen las leyes de la termodinámica para las ecuaciones maestras global y semilocal, descritas por \ref{eqsec2:lindbladS} y \ref{sec2schrodingerthermo}, respectivamente.
-
-
+Contar con un marco termodinámico consistente para sistemas cuánticos abiertos constituye un paso esencial para abordar, en el capítulo siguiente, el estudio del rol de la información y de los flujos de información en estos sistemas.
 
 % ------------------------------------------------------------------------------
 % NUEVO CAPÍTULO
 % ------------------------------------------------------------------------------
-\chapter{Flujos de información}
-En este capítulo se introduce el concepto de información termodinámica, comenzando en la sección \ref{sec4:Demon} con una revisión del paradigma del Demonio de Maxwell. En la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se define el concepto de flujos de información, utilizando herramientas como la termodinámica estocástica en contexto clásico y la matriz densidad en contexto cuántico\cite{horowitz2014thermodynamics,ptaszynski2019thermodynamics}.
+\chapter{Flujos de información} 
 
+Los sistemas físicos no sólo intercambian energía entre sí, sino que también comparten información. Este intercambio de información puede tener consecuencias termodinámicas relevantes, como lo ejemplifica el paradigma del Demonio de Maxwell, que muestra cómo la información puede utilizarse para extraer trabajo de un sistema. Tradicionalmente, la paradoja se ha estudiado en el marco de demonios no autónomos, en los cuales es necesaria la intervención de un agente externo encargado de realizar mediciones y retroalimentación. No obstante, comprender cómo fluye la información en sistemas autónomos resulta igualmente fundamental, dado que en estos casos tanto la dinámica como la retroalimentación son generadas internamente, sin control externo. Este tipo de procesos aparece de manera natural en sistemas biológicos y en dispositivos tecnológicos modernos \cite{parrondo2023information,koski2015chip}, y su implementación experimental puede ser más accesible que la de los demonios no autónomos, donde se requiere una intervención activa del observador.
 
-
+En este capítulo se introduce el concepto de información termodinámica. En la sección \ref{sec4:Demon} se revisa el paradigma del Demonio de Maxwell como punto de partida. A continuación, en la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo, enfatizando su carácter intrínseco. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se formaliza el concepto de flujos de información, utilizando como herramientas la termodinámica estocástica en el marco clásico y la evolución de la matriz densidad en el marco cuántico\cite{horowitz2014thermodynamics,ptaszynski2019thermodynamics}.
 
 \section{Demonio de Maxwell}
-El demonio de Maxwell es un experimento mental esbozado por James Clerk Maxwell en su obra\cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por un ente denominado "Demonio", el cual tiene la capacidad de manipular la puerta sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos, así el demonio es capaz de discriminar entre partículas rápidas y lentas. Dado que la temperatura está directamente relacionada con la velocidad promedio de las partículas, esta diferencia en las velocidades influye en la temperatura del compartimiento hacia el cual se dirigen. De este modo, permite pasar del compartimiento A al B solo aquellas partículas cuya velocidad es mayor que la velocidad promedio, mientras que deja pasar del compartimiento B al A las partículas más lentas. Si se mantiene constante el número de partículas en cada compartimiento, este proceso da lugar a un aumento de la temperatura en A y una disminución en B, es decir, una diferencia \( \Delta T \) entre ambos lados.
+
+El demonio de Maxwell es un experimento mental propuesto por James Clerk Maxwell en su obra \cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por un ente denominado ``Demonio'', el cual tiene la capacidad de manipularla sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos, de modo que puede discriminar entre partículas rápidas y lentas. Dado que la temperatura está directamente relacionada con la velocidad promedio de las partículas, esta diferencia influye en la temperatura del compartimiento hacia el cual se dirigen. En particular, el Demonio permite el paso del compartimiento A al B únicamente a las partículas más rápidas, mientras que deja pasar del compartimiento B al A las más lentas. Si el número de partículas en cada compartimiento permanece constante, este proceso conduce a un aumento de la temperatura en A y a una disminución en B, generando así una diferencia $\Delta T$ entre ambos lados.
 
 El cambio de entropía del sistema es
- 
 \begin{align*}
     \Delta S & = \Delta S_{A} + \Delta S_{B} = C_{V}\left( \log \frac{T-\Delta T}{T} + \log \frac{T+\Delta T}{T} \right) \\
        & =  C_{V} \log \left( 1 - \frac{\Delta T^{2}}{T^{2}}  \right) < 0,
 \end{align*}
 donde \( C_V \) representa la capacidad calorífica a volumen constante.
 
-Del cálculo de la entropía total se concluye que, sin realizar trabajo externo, el Demonio logra una disminución de la entropía, lo cual representa una aparente violación de la segunda ley de la termodinámica.
+De este cálculo se concluye que, sin realizar trabajo externo, el Demonio provoca una disminución de la entropía total, lo que constituye una aparente violación de la segunda ley de la termodinámica.
 
-Sin embargo, esta paradoja fue resuelta posteriormente por Rolf Landauer, quien ``exorcizó'' al Demonio al señalar que, para que este pueda conocer la velocidad de las partículas, debe realizar mediciones. El proceso de medición, y en particular el borrado de la información asociada a dichas mediciones, implica una disipación de energía. Este resultado, conocido como el principio de Landauer, restablece la validez de la segunda ley\cite{Landauer_1961}.
+La paradoja fue abordada a lo largo del siglo XX mediante distintos enfoques. En primer lugar, Szilard introdujo un modelo explícito de motor controlado por un Demonio \cite{szilard1964decrease}, mientras que Brillouin destacó la conexión entre información y entropía \cite{brillouin1951maxwell}. Posteriormente, Landauer formuló el principio que lleva su nombre, estableciendo que el borrado de información conlleva una disipación mínima de energía \cite{Landauer_1961}. Finalmente, Bennett mostró que el costo energético fundamental asociado al Demonio se encuentra en la operación de borrado de memoria \cite{bennett1982thermodynamics}. En conjunto, estos desarrollos restablecen la validez de la segunda ley en presencia de procesos de adquisición y procesamiento de información.
 
-En sistemas no autónomos, es decir, sistemas manipulados por un agente externo a través del control de cantidades macroscópicas, la paradoja de Maxwell ha sido abordada extensamente. Un ejemplo clásico es el motor de Szilard\cite{szilard1964decrease}, donde se ha logrado describir y ``exorcizar'' al Demonio cuantificando tanto la energía requerida para realizar una medición,  como el costo energético asociado al borrado de la memoria del Demonio, y el trabajo máximo que puede extraerse mediante retroalimentación (feedback) \cite{maruyama2009colloquium, sagawa2008second}. No obstante, el caso de sistemas autónomos, en los cuales no existe intervención externa y tanto la dinámica como la retroalimentación son generadas internamente, presenta características fundamentales que merecen un análisis más detallado.
+En sistemas no autónomos, es decir, aquellos manipulados por un agente externo a través del control de variables macroscópicas, la paradoja de Maxwell ha sido estudiada en detalle. Un ejemplo clásico es el motor de Szilard \cite{szilard1964decrease}, en el cual se puede cuantificar tanto la energía requerida para realizar una medición como el costo energético asociado al borrado de memoria del Demonio, junto con el trabajo máximo extraíble mediante retroalimentación (\textit{feedback}) \cite{maruyama2009colloquium, sagawa2008second}. No obstante, el caso de sistemas autónomos, en los cuales no existe intervención externa y tanto la dinámica como la retroalimentación son generadas internamente, presenta características fundamentales que requieren un análisis más detallado.
 
-\insertimage[\label{img:demon}]{ejemplos/Maxwelldemon1}{scale=0.9}{Esquema que representa al Demonio de Maxwell. Primero, consiste en los dos compartimientos que poseen el gas ideal distribuido de manera homogénea. Por último, al trasladar las partículas de un lado a otro, queda el compartimiento A con partículas frías mientras que el compartimiento B con partículas calientes. Esta figura fue tomada de \cite{link1} .}
+\insertimage[\label{img:demon}]{ejemplos/Maxwelldemon1}{scale=0.9}{Esquema que representa al Demonio de Maxwell. En la primera etapa, ambos compartimientos contienen un gas ideal distribuido homogéneamente. Posteriormente, al permitir el paso selectivo de partículas, el compartimiento A queda enriquecido en partículas lentas (más frías) y el compartimiento B en partículas rápidas (más calientes). Figura adaptada de \cite{link1}.}
 
 \label{sec4:Demon}
 
 \section{Demonio de Maxwell autónomo}
-Muchos procesos físicos requieren la interacción entre un conjunto de subsistemas que forman un sistema global. Esta interacción entre los subsistemas no sólo incluye un intercambio de energía o partículas, sino que también incluye un intercambio de información a medida que se correlacionan estos subsistemas entre sí de manera autónoma, es decir, sin un factor externo el cuál realize un feedback en él.
 
-Comprender como son utilizados estos flujos de información para hacer tareas útiles es de gran relevancia. Un ejemplo claro se encuentra en los sistemas biólogicos, donde ocurre adaptación sensorial, que corresponde al monitoreo que realiza un organismo a su ambiente mientras cambia su respuesta a él\cite{lan2012energy}. Para caracterizar este tipo de procesos, se considera un Demonio de Maxwell autónomo como un sistema bipartito. Donde una de sus partes consiste en el sistema controlado, mientras que la otra parte en el sistema actúa como detector, el cuál ejerce control mediante una interacción física que afecta al sistema controlado.
+Muchos procesos físicos requieren la interacción entre un conjunto de subsistemas que, en conjunto, conforman un sistema global. Esta interacción no se limita al intercambio de energía o partículas, sino que también implica un intercambio de información, a medida que los subsistemas se correlacionan entre sí de manera autónoma, es decir, sin la intervención de un agente externo que realice retroalimentación (\textit{feedback}). 
 
-Es fundamental que el sistema sea autónomo, es decir, que el Hamiltoniano total sea tiempo independiente e intervenciones externas, tales como mediciones y feedback no sean consideradas.
+Comprender cómo los flujos de información pueden ser utilizados para realizar tareas útiles es de gran relevancia. Un ejemplo claro se encuentra en sistemas biológicos, donde ocurre la adaptación sensorial: un organismo monitorea su entorno mientras ajusta su respuesta al mismo \cite{lan2012energy}. Para caracterizar este tipo de procesos, se considera el Demonio de Maxwell autónomo como un sistema bipartito. Una de sus partes corresponde al sistema controlado, mientras que la otra funciona como detector, el cual ejerce control mediante una interacción física que afecta al sistema controlado. 
+
+Un requisito fundamental es que el sistema sea verdaderamente autónomo, lo que significa que el Hamiltoniano total debe ser independiente del tiempo y que no se admiten intervenciones externas, tales como mediciones explícitas o protocolos de retroalimentación.
 
 \label{sec4:autonomo}
-\section{Descripción clásica}
-Para describir un demonio de Maxwell autónomo, es necesario poder calcular la evolución de un sistema acoplado a uno o más reservorios, y por lo tanto, sujeto a las leyes de la termodinámica. 
+\section{Contexto clásico de los flujos de información}
 
-Consideremos el caso de dos sistemas independientes, \( X \) e \( Y \), cada uno con estados discretos denotados por \( x \) e \( y \), respectivamente. Ambos sistemas presentan una dinámica interna caracterizada por saltos aleatorios entre sus respectivos estados, cuya tasa de transición está determinada por los reservorios locales a los que cada subsistema se encuentra acoplado. Estas tasas cumplen la condición de \textit{balance detallado local} \cite{van2015ensemble}.
+Para describir un Demonio de Maxwell autónomo es necesario caracterizar la evolución de un sistema acoplado a uno o más reservorios, y por lo tanto, sujeto a las leyes de la termodinámica en un contexto fuera del equilibrio. 
 
-La evolución entre estados se modela como un proceso de Markov\cite{van1992stochastic}. Para estudiar la evolución conjunta del sistema, se asume un acoplamiento bipartito: en este contexto, esto significa que si el sistema total se encuentra en un estado conjunto $(x,y)$, sólo se permiten transiciones del tipo $(x,y) \to (x,y')$ o $(x,y) \to (x',y)$, pero no transiciones simultáneas del tipo $(x,y) \to (x',y')$.
+Consideremos dos sistemas independientes, \( X \) e \( Y \), cada uno con estados discretos denotados por \( x \) e \( y \), respectivamente. Ambos sistemas presentan una dinámica interna gobernada por saltos aleatorios entre sus estados, cuyas tasas de transición están determinadas por los reservorios locales a los que se encuentran acoplados. Dichas tasas cumplen la condición de \textit{balance detallado local} \cite{van2015ensemble}. 
 
-La probabilidad \( p(x,y) \) de encontrar al sistema en el estado \( (x,y) \) está gobernada por la siguiente ecuación maestra:
+La evolución entre estados se modela como un proceso de Markov \cite{van1992stochastic}. Para estudiar la evolución conjunta se introduce un acoplamiento bipartito: en este marco, si el sistema total se encuentra en el estado conjunto \((x,y)\), sólo son posibles transiciones del tipo \((x,y)\to(x,y')\) o \((x,y)\to(x',y)\), mientras que las transiciones simultáneas \((x,y)\to(x',y')\) están prohibidas.
 
-\begin{equation*}
-    d_{t}p(x,y) = \sum_{x',y'} \left[ W_{x,x'}^{y,y'}p(x',y')  - W_{x',x}^{y',y}p(x,y) \right].
-\end{equation*}
-
-Para un sistema conectado a un reservorio termal, la tasa de transición \( W_{x,x'}^{y,y'} \) para un salto del estado \( (x',y') \) al estado \( (x,y) \), obedece la condición de balance detallado local:
-
+La probabilidad \( p(x,y) \) de encontrar al sistema en el estado \((x,y)\) está gobernada por la ecuación maestra
 \[
-\ln \left( \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}} \right) = -\frac{\epsilon_{x,y} - \epsilon_{x',y'}}{T},
+d_{t}p(x,y) = \sum_{x',y'} \left[ W_{x,x'}^{y,y'}p(x',y') - W_{x',x}^{y',y}p(x,y) \right],
+\]
+donde la tasa de transición \( W_{x,x'}^{y,y'} \) describe un salto del estado \((x',y')\) al estado \((x,y)\). Para un sistema en contacto con un reservorio térmico, estas tasas obedecen la condición de balance detallado local
+\[
+\ln \left( \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}} \right) = -\frac{\epsilon_{x,y}-\epsilon_{x',y'}}{T},
+\]
+la cual relaciona la razón de tasas de transición con el cambio de energía \(\Delta \epsilon = \epsilon_{x,y}-\epsilon_{x',y'}\), intercambiado con el reservorio en forma de calor. 
+
+Debido a la estructura bipartita, las tasas adoptan la forma
+\[
+W_{x,x'}^{y,y'} = 
+\begin{cases}
+w_{x,x'}^{y} & \text{si } x\neq x', \; y=y', \\[2mm]
+w_{x}^{y,y'} & \text{si } x=x', \; y\neq y', \\[2mm]
+0 & \text{si } x\neq x', \; y\neq y',
+\end{cases}
+\]
+lo que refleja que en cada transición solo varía uno de los subsistemas.
+
+La corriente de probabilidad se define como
+\[
+J_{x,x'}^{y,y'} = W_{x,x'}^{y,y'}p(x',y') - W_{x',x}^{y',y}p(x,y).
 \]
 
-la cual relaciona las tasas de transición con el cambio de energía \( \Delta \epsilon = \epsilon_{x,y} - \epsilon_{x',y'} \) asociado al salto respectivo. Esta energía es intercambiada con el reservorio térmico local en forma de calor.
+A partir de esta definición,la ecuación maestra puede reescribirse en la forma
+\[
+d_{t}p(x,y) = \sum_{x',y'}J_{x,x'}^{y,y'} = \sum_{x'}J_{x,x'}^{y} + \sum_{y'}J_{x}^{y,y'}.
+\]
 
-Debido a que el sistema es bipartito, la forma de las tasas de transición corresponde a
-
-\begin{equation*}
-    W_{x,x'}^{y,y'} = \left\{ \begin{array}{lcc} w_{x,x'}^{y} & si & x \neq x'; y=y' \\ \\ w_{x}^{y,y'} & si & x=x';y\neq y'\\ \\ 0 & si & x \neq x'; y \neq y' \end{array} \right..
-\end{equation*}
-
-En términos de la corriente de probabilidad 
-
-\begin{equation*}
-    J_{x,x'}^{y,y'} = W_{x,x'}^{y,y'}p(x',y') - W_{x',x}^{y',y}p(x,y),
-\end{equation*}
-la ecuación maestra puede reescribirse como 
-
-\begin{equation*}
-    d_{t}p(x,y) = \sum_{x',y'}J_{x,x'}^{y,y'} = \sum_{x'}J_{x,x'}^{y} + \sum_{y'}J_{x}^{y,y'}.
-\end{equation*}
-
-Donde  
+Aquí,
 \[
 J_{x}^{y,y'} = w_{x}^{y,y'}\,p(x,y') - w_{x}^{y',y}\,p(x,y),
 \]
-representa la corriente de probabilidad correspondiente a un salto entre los estados \( y' \to y \), manteniendo fijo el estado \( x \). Es decir, describe el flujo en la dirección \( Y \) para un valor dado de \( x \). De manera análoga, $J^{y}_{x,x'}$ describe el flujo en la dirección \( X\) para un valor fijo de \(y\).  
+representa la corriente de probabilidad asociada a un salto \(y' \to y\) con \(x\) fijo, es decir, describe el flujo en la dirección \( Y \) condicionado al valor de \(x\). De manera análoga, \( J^{y}_{x,x'} \) describe el flujo en la dirección \( X \) condicionado a \(y\).  
 
-Este hecho es importante, ya que la estructura bipartita permite separar las corrientes de probabilidad en dos componentes: una correspondiente a transiciones en la dirección \( X \), y otra en la dirección \( Y \). Esta propiedad puede ser aprovechada para estudiar funcionales de la corriente, es decir, cantidades de la forma
+Esta descomposición es fundamental, ya que la estructura bipartita permite separar las corrientes en dos componentes: una asociada a transiciones en la dirección \(X\), y otra a transiciones en la dirección \(Y\). Como consecuencia, es posible estudiar funcionales de la corriente, definidos como
 \[
 \mathcal{A}(J) = \sum_{x,x',y,y'} J_{x,x'}^{y,y'}\, A_{x,x'}^{y,y'},
 \]
-que pueden ser separados en dos contribuciones
-
+los cuales se descomponen naturalmente en dos contribuciones:
 \begin{equation}
-    \mathcal{A}(J) = \sum_{x\geq x';y \geq y'} J_{x,x'}^{y}A_{x,x'}^{y,y'} + \sum_{x \geq x'; y \geq y'}J_{x}^{y,y'} A_{x,x'}^{y,y'}.
+\mathcal{A}(J) = \sum_{x\geq x';\,y\geq y'} J_{x,x'}^{y}A_{x,x'}^{y,y'} \;+\; \sum_{x\geq x';\,y\geq y'} J_{x}^{y,y'} A_{x,x'}^{y,y'}.
 \label{sec4:functionalcurrent}
 \end{equation}
 
-De este modo, la variación de \( \mathcal{A} \) se puede descomponer en dos contribuciones: una asociada a las transiciones en la dirección \( X \), y otra correspondiente a las transiciones en la dirección \( Y \).
-
+De esta forma, la variación de \(\mathcal{A}\) puede interpretarse como la suma de dos contribuciones independientes: una correspondiente a transiciones en la dirección \(X\) y otra asociada a transiciones en la dirección \(Y\).
 
 \label{sec4:flujos}
 \section{Segunda ley de la termodinámica y flujos de información}
-El sistema conjunto \( XY \), al estar en contacto con un baño, constituye un sistema abierto que debe satisfacer la segunda ley de la termodinámica. Esta ley exige que la tasa de producción de entropía sea siempre mayor o igual que cero, es decir, 
 
+El sistema conjunto \(XY\), al estar en contacto con un baño térmico, constituye un sistema abierto cuya evolución se rige por las leyes de la termodinámica en condiciones fuera del equilibrio. Entre ellas, la segunda ley exige que la tasa de producción de entropía sea siempre no negativa, es decir,
 \begin{equation*}
     \dot{\sigma} = \partial_{t}S^{XY} + \dot{S}_{r} \geq 0. 
 \end{equation*}
 
-Donde $\partial_{t}S^{XY}$ corresponde a la derivada temporal de la entropía del sistema, que se expresa como  
-
+Aquí, \( S^{XY} = - \sum_{x,y} p(x,y) \ln p(x,y) \) corresponde a la entropía de Shannon del sistema conjunto. Su derivada temporal puede expresarse como
 \begin{equation*}
     \partial_{t}S^{XY} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)}.
 \end{equation*}
 
-Y el cambio de entropía en el ambiente corresponde a
-
+El cambio de entropía en el ambiente viene dado por
 \begin{equation*}
     \dot{S}_{r} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}},
 \end{equation*}
-por ende
-
+y por lo tanto
 \begin{equation*}
     \dot{\sigma} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{ W_{x,x'}^{y,y'}p(x',y')  }{ W_{x',x}^{y',y}p(x,y) } \geq 0.
 \end{equation*}
 
-Estos resultados se demuestran en el apendice \ref{apendix4:secondlaw}.  
+La demostración rigurosa de estas expresiones se presenta en el apéndice \ref{apendix4:secondlaw}.  
 
-Una vez definida la tasa de producción de entropía, es necesario cuantificar la información compartida entre los dos subsistemas. La magnitud que permite medir las correlaciones entre ellos es la información mutua, la cual captura las correlaciones estadísticas entre las variables \( X \) e \( Y \). Se define por
-
+La entropía de Shannon del sistema \( XY \) mide la incertidumbre asociada a las variables aleatorias \( X \) e \( Y \). Una forma natural de cuantificar las correlaciones entre estas variables es mediante la \textit{información mutua}. Esta magnitud captura cuánto se reduce la incertidumbre en una variable cuando se conoce el valor de la otra, y constituye una medida de la información compartida entre los dos subsistemas \cite{parrondo2015thermodynamics,cover1999elements}. En términos de la probabilidad conjunta, la información mutua se define como
 \begin{equation*}
     I_{XY} = \sum_{x,y} p(x,y) \ln \frac{p(x,y)}{p(x)p(y)} \geq 0. 
 \end{equation*}
 
-De este modo, cuando \( I_{XY} \) es grande, los dos subsistemas están fuertemente correlacionados, mientras que $I_{XY}$ pequeña implica que los dos sistemas se conocen poco entre ellos, \( I_{XY} = 0 \) indica que son estadísticamente independientes.
+De este modo, un valor elevado de \( I_{XY} \) indica que los subsistemas están fuertemente correlacionados, mientras que \( I_{XY}=0 \) corresponde al caso de independencia estadística. Desde un punto de vista termodinámico, la información mutua permite cuantificar recursos informacionales que pueden emplearse para realizar trabajo o modificar flujos de energía en el sistema \cite{parrondo2015thermodynamics}.  
 
-Para definir los flujos de información, es necesario calcular la variación temporal de la información mutua. Esta puede descomponerse en dos contribuciones asociadas a las dinámicas de cada subsistema:
+Para analizar la dinámica de estas correlaciones, se considera la variación temporal de la información mutua. Dicha variación puede descomponerse en dos contribuciones asociadas a las dinámicas locales de cada subsistema:
 \[
-\partial_t I_{XY} = \dot{I}^{X} + \dot{I}^{Y},
+\partial_t I_{XY} = \dot{I}_{X} + \dot{I}_{Y},
 \]
-donde \( \dot{I}^{X} \) representa la contribución debida a la evolución del subsistema \( X \) (con \( Y \) fijo), e \( \dot{I}^{Y} \) la correspondiente al subsistema \( Y \). Que explícitamente son
-
+donde \( \dot{I}_{X} \) representa la contribución debida a la evolución del subsistema \( X \) (con \( Y \) fijo), y \( \dot{I}_{Y} \) la correspondiente al subsistema \( Y \)\cite{horowitz2014thermodynamics}. De manera explícita:
 \begin{equation}
-    \dot{I}^{X}  = \sum_{x\geq x'; y}J_{x,x'}^{y} \ln \frac{ p(y|x) }{p(y|x')}
+    \dot{I}_{X}  = \sum_{x\geq x'; y}J_{x,x'}^{y} \ln \frac{ p(y|x) }{p(y|x')},
     \label{sec4:clasicalflows0}
 \end{equation}
-
 \begin{equation}    
-    \dot{I}^{Y}  = \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y)}{ p(x|y') }.
+    \dot{I}_{Y}  = \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y)}{ p(x|y') }.
     \label{sec4:clasicalflows}
 \end{equation}
 
- La demostración de este resultado también está en el apendice \ref{apendix4:secondlaw}.
+Estos términos cuantifican los \textit{flujos de información}. En particular, \( \dot{I}_{X} > 0 \) implica que, en promedio, las transiciones en la dirección \( X \) aumentan la información mutua, lo que equivale a que el subsistema \( X \) obtiene información acerca de \( Y \). Por el contrario, si \( \dot{I}_{X} < 0 \), las transiciones en \( X \) reducen las correlaciones, lo que puede interpretarse como un consumo de información para realizar trabajo o modificar flujos energéticos.
 
-Los términos \( \dot{I}^{X} \) e \( \dot{I}^{Y} \) cuantifican cómo fluye la información entre los dos subsistemas. Si \( \dot{I}^{X} > 0 \), significa que un salto en la dirección \( X \), en promedio, aumenta la información mutua \( I_{XY} \); es decir, el subsistema \( X \) está ``aprendiendo'' o midiendo al subsistema \( Y \).
-
-En cambio, si \( \dot{I}^{X} < 0 \), los saltos en la dirección \( X \) reducen las correlaciones, lo que puede interpretarse como un consumo de información con el fin de extraer trabajo o energía.
-
-Como la tasa de producción de entropía es un funcional de la corriente de probabilidad, se puede usar la ecuación \ref{sec4:functionalcurrent} para escribir:
-
-
- \begin{equation*}
-    \dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y},
- \end{equation*}
-así
-
-\begin{align*}
-    \dot{\sigma}^{X} & = \sum_{x \geq x';y} J_{x,x'}^{y} \ln  \frac{w_{x,x'}^{y} p(x',y) }{w_{x',x}^{y} p(x,y) } \geq 0 \\
-    \dot{\sigma}^{Y} & = \sum_{x;y\geq y'}J_{x}^{y,y'} \ln \frac{w_{x}^{y,y'} p(x,y') }{ w_{x}^{y',y} p(x,y) } \geq 0, 
-\end{align*}
-donde se pueden identificar las tasas de producción de entropía locales
-
-\begin{align*}
-    \dot{\sigma}^{X} &  = \sum_{x \geq x';y} J_{x,x'}^{y} \left[ \ln \frac{p(x')}{p(x)}  +\ln \frac{w_{x,x'}^{y}}{ w_{x',x}^{y} } + \ln \frac{p(y|x')}{p(y|x)} \right] \\
-    \dot{\sigma}^{Y} &  = \sum_{x;y \geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(y')}{p(y)}  + \ln \frac{w_{x}^{y,y'}}{ w_{x}^{y',y} } + \ln \frac{p(x|y')}{p(x|y)} \right].
-\end{align*}
-
-Y en función de los flujos de información son  
-
-\begin{align*}
-    \dot{\sigma}^{X} & = \partial_{t}S^{X} + \dot{S}_{r}^{X} - \dot{I}^{X} \geq 0 \\
-    \dot{\sigma}^{Y} & = \partial_{t}S^{Y} + \dot{S}_{r}^{Y} - \dot{I}^{Y} \geq 0.
-\end{align*}
-
-Estas dos ecuaciones permiten visualizar cómo la contribución de la información influye en la producción de entropía local de cada subsistema.
-
-Supongamos que se desconoce la existencia de la interacción entre el subsistema \( Y \) y el subsistema \( X \), y que únicamente se monitorea la dinámica de \( X \). En ese caso, se le asignaría al sistema una tasa de producción de entropía dada por:
+Dado que la tasa de producción de entropía es un funcional de la corriente de probabilidad, se puede emplear la ecuación \eqref{sec4:functionalcurrent} para escribir
 \[
-\dot{\sigma}^{X}_0 = \partial_t S^X + \dot{S}_r^X.
+\dot{\sigma} = \dot{\sigma}_{X} + \dot{\sigma}_{Y},
 \]
-
-Si el subsistema \( X \) estuviera efectivamente aislado, se cumpliría \( \dot{\sigma}^{X}_0 \geq 0 \), en concordancia con la segunda ley de la termodinámica. Sin embargo, debido a su interacción con \( Y \), pueden darse situaciones en las que \( \dot{\sigma}^{X}_0 < 0 \), lo cual representa una violación aparente de la segunda ley. Esta puede interpretarse como el efecto de un Demonio de Maxwell, que utiliza la información que proviene de monitorear \(X \).
-
-En la evolución de sistemas autónomos que alcanzan un estado estacionario, se cumple que \( \partial_t I_{XY} = 0 \). En ese régimen, el flujo de información se conserva:
-\[
-\dot{\mathcal{I}} = \dot{I}^{X} = -\dot{I}^{Y},
-\]
-y la producción de entropía local de cada subsistema se puede escribir como:
-
-
+con
 \begin{align*}
-    \dot{\sigma}^{X} & = \dot{S}_{r}^{X} - \dot{\mathcal{I}} \geq 0 \\
-    \dot{\sigma}^{Y} & =  \dot{S}_{r}^{Y} + \dot{\mathcal{I}} \geq 0 . 
+    \dot{\sigma}_{X} & = \sum_{x \geq x';y} J_{x,x'}^{y} \ln  \frac{w_{x,x'}^{y} p(x',y) }{w_{x',x}^{y} p(x,y) } \geq 0, \\
+    \dot{\sigma}_{Y} & = \sum_{x;y\geq y'}J_{x}^{y,y'} \ln \frac{w_{x}^{y,y'} p(x,y') }{ w_{x}^{y',y} p(x,y) } \geq 0,
+\end{align*}
+lo que permite identificar las tasas de producción de entropía locales:
+\begin{align*}
+    \dot{\sigma}_{X} &  = \sum_{x \geq x';y} J_{x,x'}^{y} \left[ \ln \frac{p(x')}{p(x)}  +\ln \frac{w_{x,x'}^{y}}{ w_{x',x}^{y} } + \ln \frac{p(y|x')}{p(y|x)} \right], \\
+    \dot{\sigma}_{Y} &  = \sum_{x;y \geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(y')}{p(y)}  + \ln \frac{w_{x}^{y,y'}}{ w_{x}^{y',y} } + \ln \frac{p(x|y')}{p(x|y)} \right].
 \end{align*}
 
-Supongamos el caso en que \( \dot{\mathcal{I}} > 0 \). En esta situación, se puede interpretar que el subsistema \( X \) está actuando como un sensor, al monitorear activamente al subsistema \( Y \). Para realizar esta función de monitoreo, el subsistema \( X \) debe disipar una cantidad mínima de energía tal que:
+En términos de los flujos de información, estas ecuaciones toman la forma
+\begin{align*}
+    \dot{\sigma}_{X} & = \partial_{t}S^{X} + \dot{S}_{r}^{X} - \dot{I}_{X} \geq 0, \\
+    \dot{\sigma}_{Y} & = \partial_{t}S^{Y} + \dot{S}_{r}^{Y} - \dot{I}_{Y} \geq 0.
+\end{align*}
+
+Estas expresiones muestran explícitamente cómo los flujos de información modifican la producción de entropía local en cada subsistema. En particular, si se ignora la interacción entre \( X \) e \( Y \) y sólo se monitorea \( X \), la tasa de producción de entropía asignada sería
+\[
+\dot{\sigma}_{X}^0 = \partial_{t} S^{X} + \dot{S}_{r}^{X},
+\]
+la cual puede ser negativa, reflejando una violación aparente de la segunda ley. Este fenómeno se interpreta como la acción efectiva de un Demonio de Maxwell, que aprovecha información oculta en las correlaciones.
+
+En el régimen estacionario, donde \( \partial_t I_{XY} = 0 \), se conserva el flujo de información:
+\[
+\dot{\mathcal{I}} = \dot{I}_{X} = -\dot{I}_{Y},
+\]
+y las producciones locales de entropía toman la forma
+\begin{align*}
+    \dot{\sigma}_{X} & = \dot{S}_{r}^{X} - \dot{\mathcal{I}} \geq 0, \\
+    \dot{\sigma}_{Y} & = \dot{S}_{r}^{Y} + \dot{\mathcal{I}} \geq 0.
+\end{align*}
+
+En este contexto, si \( \dot{\mathcal{I}} > 0 \), el subsistema \( X \) actúa como un sensor al obtener información sobre \( Y \), lo que requiere disipar al menos una cantidad de entropía equivalente a
 \[
 \dot{S}_{r}^{X} \geq \dot{\mathcal{I}}.
 \]
-
-Por otro lado, el subsistema \( Y \) está proporcionando información, la cual puede ser aprovechada para extraer energía del entorno. En este caso, se cumple que:
+Por otro lado, el subsistema \( Y \) proporciona información que puede aprovecharse para extraer energía del entorno, cumpliéndose
 \[
 -\dot{S}_{r}^{Y} \leq \dot{\mathcal{I}}.
 \]
 
-Por lo tanto, esta desigualdad permite que bajo ciertos parámetros $-\dot{S}^{Y}_{r}>0$, es decir, que fluya calor del baño a $Y$ y así extraer trabajo. De esta manera, $\dot{\mathcal{I}}$ corresponde a una cota del trabajo que puede ser extraído, mediante el procesamiento de información.
+De este modo, el flujo de información \( \dot{\mathcal{I}} \) establece una cota fundamental para el trabajo que puede extraerse a partir de correlaciones informacionales. Este principio constituye la base de la termodinámica de la información y será aplicado en el capítulo siguiente a un modelo específico donde el Demonio de Maxwell se manifiesta a través de corriente en contra de gradientes de potencial externos.
 
-En sistemas fuera del equilibrio, se puede utilizar información para realizar trabajo útil, o incluso para extraer calor de un reservorio caliente.
+\section{Contexto cuántico de los flujos de información}
 
-Un ejemplo característico de este fenómeno se encuentra en sistemas sometidos a un gradiente de potencial, donde el Demonio de Maxwell se manifiesta a través del surgimiento de una corriente de partículas en contra del gradiente. Este efecto será analizado en detalle en las secciones posteriores.
-
-
-\section{Descripción cuántica}
-Para describir los flujos de información en un contexto cuántico, es necesario conocer la dinámica de un sistema cuántico abierto acoplado a uno o varios reservorios. Para ello, se utilizará la matriz densidad, la cual describe la evolución del sistema reducido. El sistema total estará descrito por el Hamiltoniano $\hat{H} = \hat{H}_{S} + \hat{H}_{B} + \hat{H}_{I}$. Y la evolución markoviana de este sistema conduce a una ecuación maestra
-
+Para describir los flujos de información en un contexto cuántico es necesario caracterizar la dinámica de un sistema abierto acoplado a uno o varios reservorios. Dicha dinámica se describe mediante la matriz densidad reducida del sistema, mientras que el sistema total está gobernado por el Hamiltoniano
+\[
+\hat{H}=\hat{H}_{S}+\hat{H}_{B}+\hat{H}_{I}.
+\]
+En el régimen markoviano, la evolución temporal del sistema reducido se expresa mediante una ecuación maestra de la forma
 \begin{equation*}
-    \partial_{t}\hat{\rho}_{S}(t) = - i[\hat{H}_{S} + \hat{H}_{LS},\hat{\rho}_{S}] + \mathcal{L}(\hat{\rho}_{S}),
+    \partial_{t}\hat{\rho}_{S}(t)
+    = -\,i\,[\hat{H}_{S}+\hat{H}_{LS},\hat{\rho}_{S}(t)]
+      + \mathcal{L}(\hat{\rho}_{S}(t)),
 \end{equation*}
+la cual, en el marco de esta tesis, corresponde a la ecuación \eqref{eqsec2:lindbladS} o a la ecuación \eqref{sec2schrodingerthermo}.
 
-la cual en el caso de esta tesis, estará descrita por \ref{eqsec2:lindbladS} o \ref{sec2schrodingerthermo}. El acoplamiento del sistema con múltiples reservorios $\alpha$ se modela a través de un generador de Lindblad, que dependiendo si la ecuación maestra es global o semilocal, este se descompone como
+El acoplamiento con múltiples reservorios $\alpha$ se modela mediante un generador de Lindblad descompuesto en contribuciones locales. En el caso global,
 \begin{equation*}
-    \mathcal{L} = \sum_{\alpha} \mathcal{L}_{\alpha,g},
+    \mathcal{L}=\sum_{\alpha}\mathcal{L}_{\alpha,g},
 \end{equation*}
-
-o bien
-
+mientras que, en el caso semilocal,
 \begin{equation*}
-     \mathcal{L} = \sum_{\alpha} \mathcal{L}_{\alpha},
+    \mathcal{L}=\sum_{\alpha}\mathcal{L}_{\alpha}.
 \end{equation*}
-donde cada superoperador $\mathcal{L}_{\alpha,g}$ o $\mathcal{L}_{\alpha}$, representa la interacción del sistema con el reservorio $\alpha$. 
+Aquí, cada superoperador $\mathcal{L}_{\alpha,g}$ o $\mathcal{L}_{\alpha}$ representa la interacción efectiva con el reservorio $\alpha$.
 
-
-
-Si se asume que cada reservorio induce un equilibrio local, este puede describirse mediante un estado de Gibbs. En los casos de acoplamientos globales o semilocales, dichos estados están dados, respectivamente, por:
-\begin{equation*}
-    \hat{\rho}_{\text{eq},g}^{\alpha} = \frac{1}{Z_{\beta_\alpha, \mu_\alpha;g}} e^{-\beta_\alpha (\hat{H}_S - \mu_\alpha \hat{N}_{S})} \hspace{18mm}  \hat{\rho}_{\text{eq}}^{\alpha} = \frac{1}{Z_{\beta_\alpha, \mu_\alpha}} e^{-\beta_\alpha (\hat{H}_{TD} - \mu_\alpha \hat{N}_{S})}, 
-\end{equation*}
-utilizando el estado de Gibbs correspondiente, es posible aplicar la desigualdad de Spohn \cite{spohn1978entropy}, para obtener una formulación generalizada de la segunda ley de la termodinámica, en términos de una desigualdad de Clausius para la tasa de producción de entropía local asociada al reservorio $\alpha$, es decir, para el caso global
-
+Supondremos que cada reservorio induce un equilibrio local descrito por un estado de Gibbs. Para acoplamiento global y semilocal, respectivamente,
+\[
+\hat{\rho}_{\mathrm{eq},g}^{\alpha}
+=\frac{1}{Z_{\beta_{\alpha},\mu_{\alpha};g}}
+\,e^{-\beta_{\alpha}(\hat{H}_{S}-\mu_{\alpha}\hat{N}_{S})},
+\qquad
+\hat{\rho}_{\mathrm{eq}}^{\alpha}
+=\frac{1}{Z_{\beta_{\alpha},\mu_{\alpha}}}
+\,e^{-\beta_{\alpha}(\hat{H}_{TD}-\mu_{\alpha}\hat{N}_{S})}.
+\]
+A partir de estos estados y aplicando la desigualdad de Spohn \cite{spohn1978entropy} se obtiene una forma local de la segunda ley. Para el caso global,
 \begin{equation}
-    - \text{Tr}[ (\mathcal{L}_{\alpha,g} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq,g} )  ] \geq 0.
-\label{spohninfo}
+    -\,\mathrm{Tr}\!\left[(\mathcal{L}_{\alpha,g}\hat{\rho}_{S})
+      \big(\ln\hat{\rho}_{S}-\ln\hat{\rho}_{\mathrm{eq},g}^{\alpha}\big)\right]\ge 0,
+    \label{spohninfo}
+\end{equation}
+mientras que, para el caso semilocal,
+\begin{equation}
+    -\,\mathrm{Tr}\!\left[(\mathcal{L}_{\alpha}\hat{\rho}_{S})
+      \big(\ln\hat{\rho}_{S}-\ln\hat{\rho}_{\mathrm{eq}}^{\alpha}\big)\right]\ge 0.
+    \label{spohninfolocal}
 \end{equation}
 
-Mientras que, para el caso semilocal
-
+Definimos la tasa de cambio de la entropía de von Neumann inducida por el reservorio $\alpha$ como
+\[
+\dot{S}^{\alpha,g}
+= -\,\mathrm{Tr}\!\left\{(\mathcal{L}_{\alpha,g}\hat{\rho}_{S})\ln\hat{\rho}_{S}\right\},
+\qquad
+\dot{S}^{\alpha}
+= -\,\mathrm{Tr}\!\left\{(\mathcal{L}_{\alpha}\hat{\rho}_{S})\ln\hat{\rho}_{S}\right\},
+\]
+donde la entropía de von Neumann del sistema es
+\[
+S=-\,\mathrm{Tr}\{\hat{\rho}_{S}\ln\hat{\rho}_{S}\}.
+\]
+Comparando las ecuaciones \eqref{spohninfo} y \eqref{spohninfolocal} se identifica el flujo de calor desde el reservorio $\alpha$ hacia el sistema como
+\[
+J_{\alpha,g}
+=\mathrm{Tr}\!\left\{(\mathcal{L}_{\alpha,g}\hat{\rho}_{S})
+(\hat{H}_{S}-\mu_{\alpha}\hat{N}_{S})\right\},
+\qquad
+J_{\alpha}
+=\mathrm{Tr}\!\left\{(\mathcal{L}_{\alpha}\hat{\rho}_{S})
+(\hat{H}_{TD}-\mu_{\alpha}\hat{N}_{S})\right\}.
+\]
+En consecuencia, las producciones locales de entropía cumplen
 \begin{equation}
-    - \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S})(\ln \hat{\rho}_{S} - \ln \hat{\rho}^{\alpha}_{eq} )  ] \geq 0.
-\label{spohninfolocal}
-\end{equation}
-
-En los casos de ecuación maestra global o semilocal, se puede definir la siguiente cantidad:
-
-\begin{equation}
-    \dot{S}^{\alpha,g} = - \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha,g} \hat{\rho}_S) \ln \hat{\rho}_S \right\}, \hspace{10mm}
-    \dot{S}^{\alpha} = - \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha} \hat{\rho}_S) \ln \hat{\rho}_S \right\},
-\end{equation}
-la cual representa la tasa de cambio de la entropía de von Neumann del sistema inducida por el acoplamiento al reservorio $\alpha$. La entropía de von Neumann está dada por:
-
-\begin{equation}
-    S = - \mathrm{Tr} \left\{ \hat{\rho}_S \ln \hat{\rho}_S \right\}.
-\end{equation}
-
-De las desigualdades de Spohn (ver ecuación~\ref{spohninfo} y \ref{spohninfolocal}) se identifica el flujo de calor inducido por el reservorio $\alpha$ como:
-
-\begin{equation*}
-    J_{\alpha,g} =  \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha,g} \hat{\rho}_S) (\hat{H}_{S}-\mu_{\alpha}\hat{N}_{S}) \right\} \hspace{15mm}
-    J_{\alpha} = \mathrm{Tr} \left\{ (\mathcal{L}_{\alpha} \hat{\rho}_S) (\hat{H}_{TD}-\mu_{\alpha}\hat{N}_{S}) \right\}. 
-\end{equation*}
-
-De este modo, se obtienen expresiones diferenciadas para la tasa de producción de entropía local asociada al reservorio $\alpha$, correspondientes a los casos de acoplamiento global y semilocal, respectivamente:
-
-\begin{equation}
-    \dot{\sigma}^{\alpha,g} = \dot{S}^{\alpha,g} - \beta_{\alpha} J_{\alpha,g} \geq 0 \hspace{15mm}
-    \dot{\sigma}^{\alpha} = \dot{S}^{\alpha} - \beta_{\alpha} J_{\alpha} \geq 0. 
+    \dot{\sigma}_{\alpha,g}=\dot{S}^{\alpha,g}-\beta_{\alpha}J_{\alpha,g}\ge 0,
+    \qquad
+    \dot{\sigma}_{\alpha}=\dot{S}^{\alpha}-\beta_{\alpha}J_{\alpha}\ge 0,
     \label{sec4:localentropy}
 \end{equation}
+lo que constituye la versión local de la segunda ley. La suma de estas contribuciones recupera la formulación global:
+\[
+\sum_{\alpha}\dot{\sigma}_{\alpha,g}
+=\dot{\sigma}_{g}\ge 0,
+\qquad
+\sum_{\alpha}\dot{\sigma}_{\alpha}
+=\dot{\sigma}\ge 0,
+\]
+en correspondencia con la inecuación de Clausius estándar. Obsérvese que, aun en estado estacionario
+($\partial_{t}S_{g}=0$ o $\partial_{t}S=0$), los términos
+$\dot{S}^{\alpha,g}$ y $\dot{S}^{\alpha}$ no tienen por qué anularse: dependen de los flujos locales que entran por cada disipador.
 
-Esta desigualdad representa una forma local de la segunda ley de la termodinámica, en la que el término $J_\alpha$ (o $J_{\alpha,g}$ en el caso de acoplamiento global) corresponde al flujo de calor desde el reservorio $\alpha$ hacia el sistema, y $\beta_\alpha$ es la inversa de su temperatura. Esta formulación permite descomponer localmente la producción de entropía en contribuciones individualmente positivas, de manera análoga a lo que ocurre en el marco clásico. De hecho, al sumar todas las tasas de cambio de entropía, se recupera la derivada temporal total de la entropía, que para el caso global y semilocal es, respectivamente: 
-
-\begin{equation*}
-    \partial_t S_{g} = \sum_\alpha \dot{S}^{\alpha,g} \hspace{15mm}
-    \partial_t S = \sum_\alpha \dot{S}^\alpha.
-\end{equation*}    
-
-Esto implica que la suma de las producciones locales de entropía es
-
-\begin{equation*}
-    \sum_{\alpha}\dot{\sigma}^{\alpha,g} = \partial_{t}S_{g} - \sum_{\alpha}\beta_{\alpha}J_{\alpha,g} = \dot{\sigma}_{g} \geq 0 \hspace{15mm}
-    \sum_{\alpha}\dot{\sigma}^{\alpha} =\partial_{t}S  -\sum_{\alpha}\beta_{\alpha}J_{\alpha} = \dot{\sigma} \geq 0, 
-\end{equation*}
-que corresponde a la inecuación de Clausius estándar.
-
-Se puede notar que para el caso estacionario $\partial_{t}S = \partial_{t}S_{g} = 0$, no necesariamente $\dot{S}^{\alpha}$ y $\dot{S}^{\alpha,g}$ son cero. Sino que dependen de los flujos de calor que entran localmente por los disipadores $\alpha$. También se puede tratar la inecuación para la energía libre, primero definiendo la corriente de energía y potencia correspondientes al baño $\alpha$
-
+Introducimos ahora las corrientes de energía y la potencia química asociadas a cada reservorio,
 \begin{align*}
-    \dot{E}_{\alpha,g} & = \text{Tr}[ (\mathcal{L}_{\alpha,g} \hat{\rho}_{S}) \hat{H}_{S}]   & \dot{E}_{\alpha} = \text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{H}_{TD}]   \\
-    \dot{W}_{\alpha,g} & = \mu_{\alpha}\text{Tr}[ (\mathcal{L}_{\alpha,g} \hat{\rho}_{S}) \hat{N}_{S}] &  \dot{W}_{\alpha} = \mu_{\alpha}\text{Tr}[ (\mathcal{L}_{\alpha} \hat{\rho}_{S}) \hat{N}_{S}].
+    \dot{E}_{\alpha,g}
+    &= \mathrm{Tr}\!\left[(\mathcal{L}_{\alpha,g}\hat{\rho}_{S})\hat{H}_{S}\right],
+    &\qquad
+    \dot{E}_{\alpha}
+    &= \mathrm{Tr}\!\left[(\mathcal{L}_{\alpha}\hat{\rho}_{S})\hat{H}_{TD}\right],\\[2pt]
+    \dot{W}_{\alpha,g}
+    &= \mu_{\alpha}\,\mathrm{Tr}\!\left[(\mathcal{L}_{\alpha,g}\hat{\rho}_{S})\hat{N}_{S}\right],
+    &\qquad
+    \dot{W}_{\alpha}
+    &= \mu_{\alpha}\,\mathrm{Tr}\!\left[(\mathcal{L}_{\alpha}\hat{\rho}_{S})\hat{N}_{S}\right].
 \end{align*}
+Para ambas ecuaciones maestras (global y semilocal) se cumple que la suma de las corrientes de energía provenientes de los distintos reservorios coincide con la derivada temporal de la energía interna del sistema:
+\[
+\sum_{\alpha}\dot{E}_{\alpha,g}=\partial_{t}E_{g},
+\qquad
+\sum_{\alpha}\dot{E}_{\alpha}=\partial_{t}E.
+\]
+En ausencia de trabajo mecánico (Hamiltoniano independiente del tiempo), la energía intercambiada con cada reservorio se descompone como
+\[
+\dot{E}_{\alpha,g}=J_{\alpha,g}+\dot{W}_{\alpha,g},
+\qquad
+\dot{E}_{\alpha}=J_{\alpha}+\dot{W}_{\alpha}.
+\]
 
-Para ambas ecuaciones maestras(global y semilocal), se cumple que la suma de las corrientes de energía provenientes de los distintos reservorios, corresponden a la derivada temporal de la energía interna del sistema
-
-\begin{equation*}
-    \sum_{\alpha}\dot{E}_{\alpha,g} = \partial_{t}E_{g} \hspace{15mm} \sum_{\alpha}\dot{E}_{\alpha} = \partial_{t}E.
-\end{equation*}
-
-En el caso de un Hamiltoniano independiente del tiempo, no se realiza trabajo mecánico, por lo que sólo se considera trabajo químico. En consecuencia, la energía intercambiada con cada reservorio se descompone como
-
-\begin{equation*}
-    \dot{E}_{\alpha,g} = J_{\alpha,g} + \dot{W}_{\alpha,g} \hspace{15mm} \dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}. 
-\end{equation*}
-
-Multiplicando las ecuaciones en \ref{sec4:localentropy} por la temperatura del reservorio $T_{\alpha}$ y reemplazando los flujos de calor mediante la expresiones anteriores, se obtiene
-
-\begin{equation}
-    T_{\alpha} \dot{\sigma}^{\alpha,g} = \dot{W}_{\alpha,g} - \dot{\mathcal{F}}_{\alpha,g} \geq 0 \hspace{10mm}  
-    T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W}_{\alpha} - \dot{\mathcal{F}}_{\alpha} \geq 0,              
-\label{sec4:localfreerate}
-\end{equation}
-donde se ha definido la tasa de variación de la energía libre asociado al reservorio $\alpha$ para el caso global y semilocal, como
-
-\begin{equation*}
-    \dot{\mathcal{F}}_{\alpha,g} = \dot{E}_{\alpha,g} - T_{\alpha}\dot{S}^{\alpha,g} \hspace{10mm}
-    \dot{\mathcal{F}}_{\alpha} = \dot{E}_{\alpha} - T_{\alpha}\dot{S}^{\alpha}.
-\end{equation*}
-
-Las desigualdades en \ref{sec4:localfreerate} consisten en unas inecuaciones locales de energía libre correspondientes al reservorio $\alpha$. Si se suman las inecuaciones de todos los reservorios, para el caso global y semilocal se tendrá 
+Multiplicando \eqref{sec4:localentropy} por $T_{\alpha}=\beta_{\alpha}^{-1}$ y uy utilizando la descomposición de energía dada en la expresión anterior, se obtienen las inecuaciones locales de energía libre:
 
 \begin{equation}
-    \sum_{\alpha}T_{\alpha} \dot{\sigma}^{\alpha,g} = \dot{W}_{g} - \dot{\mathcal{F}}_{g} \geq 0 \hspace{10mm}
-    \sum_{\alpha}T_{\alpha} \dot{\sigma}^{\alpha} = \dot{W} - \dot{\mathcal{F}} \geq 0,
-\label{sec4:freeratefinal}
+    T_{\alpha}\dot{\sigma}_{\alpha,g}
+    = \dot{W}_{\alpha,g}-\dot{\mathcal{F}}_{\alpha,g}\ge 0,
+    \qquad
+    T_{\alpha}\dot{\sigma}_{\alpha}
+    = \dot{W}_{\alpha}-\dot{\mathcal{F}}_{\alpha}\ge 0,
+    \label{sec4:localfreerate}
 \end{equation}
+donde las tasas de variación de energía libre asociadas al reservorio $\alpha$ se definen como
+\[
+\dot{\mathcal{F}}_{\alpha,g}
+= \dot{E}_{\alpha,g}-T_{\alpha}\dot{S}^{\alpha,g},
+\qquad
+\dot{\mathcal{F}}_{\alpha}
+= \dot{E}_{\alpha}-T_{\alpha}\dot{S}^{\alpha}.
+\]
+Al sumar sobre todos los reservorios se obtiene, para los casos global y semilocal,
+\begin{equation}
+    \sum_{\alpha}T_{\alpha}\dot{\sigma}_{\alpha,g}
+    = \dot{W}_{g}-\dot{\mathcal{F}}_{g}\ge 0,
+    \qquad
+    \sum_{\alpha}T_{\alpha}\dot{\sigma}_{\alpha}
+    = \dot{W}-\dot{\mathcal{F}}\ge 0,
+    \label{sec4:freeratefinal}
+\end{equation}
+con $\dot{W}_{g}=\sum_{\alpha}\dot{W}_{\alpha,g}$,
+$\dot{W}=\sum_{\alpha}\dot{W}_{\alpha}$ y
+\[
+\dot{\mathcal{F}}_{g}
+=\partial_{t}E_{g}-\sum_{\alpha}T_{\alpha}\dot{S}^{\alpha,g},
+\qquad
+\dot{\mathcal{F}}
+=\partial_{t}E-\sum_{\alpha}T_{\alpha}\dot{S}^{\alpha}.
+\]
 
-donde $\dot{W}_{g} = \sum_{\alpha}\dot{W}_{\alpha,g}$, $\dot{W} = \sum_{\alpha}\dot{W}_{\alpha}$  y las tasas de cambio de energía libre total son
+En el caso isotérmico ($T_{\alpha}=T$ para todo $\alpha$), las tasas de energía libre se reducen a
+$\dot{\mathcal{F}}_{g}=\partial_{t}(E_{g}-TS_{g})$ y
+$\dot{\mathcal{F}}=\partial_{t}(E-TS)$, por lo que las ecuaciones
+\eqref{sec4:localentropy} y \eqref{sec4:freeratefinal} son equivalentes. En estado estacionario,
+$\dot{\mathcal{F}}_{g}=\dot{\mathcal{F}}=0$; por tanto,
+$\dot{W}_{g}\ge 0$ y $\dot{W}\ge 0$. En consecuencia, el sistema no puede entregar trabajo neto si únicamente intercambia calor con reservorios a la misma temperatura. La extracción de trabajo neto (signo opuesto en nuestras convenciones) requiere la presencia de reservorios a distintas temperaturas, caso en el cual $\dot{\mathcal{F}}_{g}\neq 0$ y $\dot{\mathcal{F}}\neq 0$.
 
-\begin{equation*}
-    \dot{\mathcal{F}}_{g} = \partial_{t}E_{g} - \sum_{\alpha}T_{\alpha} \dot{S}^{\alpha,g} \hspace{10mm}
-    \dot{\mathcal{F}} = \partial_{t}E - \sum_{\alpha}T_{\alpha} \dot{S}^{\alpha}.
-\end{equation*}
 
-Para el caso particular, en qué todas las temperaturas son iguales, las tasas de cambio de energía libre $\dot{\mathcal{F}}$ y $\dot{\mathcal{F}}_{g}$ se vuelven equivalentes a la derivadas temporales de la energía libre $\partial_{t}F = \partial_{t}(E-TS)$ y $\partial_{t}F_{g} = \partial_{t}(E_{g}-TS_{g})$. Sólo en este caso \ref{sec4:localentropy} y \ref{sec4:freeratefinal} son equivalentes.
+\section{Flujos de información en sistemas cuánticos}
 
-En el caso isotérmico, se cumple que en el estado estacionario $\dot{\mathcal{F}} = \partial_{t}F = 0$ y $\dot{\mathcal{F}}_{g} = \partial_{t}F_{g} = 0$, lo cual implica que $\dot{W} > 0$ y $\dot{W}_{g} > 0$. Por lo tanto, el sistema no puede realizar trabajo neto si solo intercambia calor con reservorios a la misma temperatura, independientemente de si la evolución es global o semilocal. La única forma de obtener trabajo neto del sistema —es decir, lograr que $\dot{W} < 0$ en el caso semilocal, o $\dot{W}_{g} < 0$ en el caso global— es mediante la presencia de reservorios a distintas temperaturas. En tal situación, las tasas de cambio de la energía libre ya no se anulan, es decir, $\dot{\mathcal{F}} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha} \neq 0$ y $\dot{\mathcal{F}}_{g} = - \sum_{\alpha} T_{\alpha} \dot{S}^{\alpha,g} \neq 0$.
+En esta sección, el análisis de los flujos de información se desarrollará en el marco de la evolución semilocal, ya que este será el esquema utilizado en el resto de la tesis. Para el caso de evolución global, los flujos de información pueden definirse de manera análoga, empleando las cantidades termodinámicas correspondientes a dicho marco.
 
-\section{Flujos de información en contexto cuántico}
-En esta sección, el cálculo de los flujos de información se enfocará principalmente en el caso de evolución semilocal, ya que es el marco que se desarrollará en el resto de esta tesis. Para el caso de evolución global, los flujos de información pueden definirse de manera análoga, empleando las cantidades termodinámicas correspondientes a dicha evolución.
-
-Supóngase que el sistema $S$ está compuesto por dos subsistemas acoplados. En tal caso, su dinámica estará gobernada por un Hamiltoniano de la forma:
-
-\begin{equation*}
+Consideremos un sistema $S$ compuesto por dos subsistemas acoplados, cuya dinámica está gobernada por un Hamiltoniano de la forma
+\[
     \hat{H}_{S} = \hat{H}_{X} + \hat{H}_{Y} + \hat{H}_{XY}, 
-\end{equation*}
-donde $\hat{H}_{i}$ representa el Hamiltoniano del subsistema $i=X,Y$, y $\hat{H}_{XY}$ corresponde al término de interacción entre los dos subsistemas. Se asume, además, que cada subsistema está acoplado a un conjunto distinto de reservorios. En particular, los reservorios asociados al subsistema $i$ serán denotados por $\alpha_{i}$. Esto permite describir la tasa de producción de entropía local de cada subsistema como
+\]
+donde $\hat{H}_{i}$ representa el Hamiltoniano del subsistema $i = X,Y$, y $\hat{H}_{XY}$ corresponde al término de interacción entre ambos subsistemas. Se asume, además, que cada subsistema está acoplado a un conjunto distinto de reservorios, denotados por $\alpha_{i}$. Bajo esta hipótesis, la tasa de producción de entropía local de cada subsistema $i$ está dada por
+\[
+    \dot{\sigma}_{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}_{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} J_{\alpha_{i}} \geq 0,
+\]
+de modo que la tasa de producción de entropía total del sistema se expresa como $\dot{\sigma} = \dot{\sigma}_{X} + \dot{\sigma}_{Y}$.
 
-\begin{equation*}
-    \dot{\sigma}^{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}^{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} J_{\alpha_{i}} \geq 0,
-\end{equation*}
-por lo tanto, la tasa de producción de entropía total del sistema corresponde a $\dot{\sigma} = \dot{\sigma}^{X} + \dot{\sigma}^{Y}$. 
-
-De forma análoga a lo realizado en la descripción clásica, se busca establecer una relación entre las producciones locales de entropía y la información compartida entre subsistemas. Para ello, se utilizará la información mutua entre los dos subsistemas, definida como
- 
-\begin{equation*}
+De forma análoga a la descripción clásica, se busca establecer un vínculo entre las producciones locales de entropía y la información compartida entre subsistemas. Para ello, se emplea la información mutua cuántica, definida como
+\[
     I_{XY} = S_{X} + S_{Y} - S_{XY},
-\end{equation*}
-donde $S_{XY}$ es la entropía de von Neumann total, dada por $S_{XY} = -\mathrm{Tr}\{ \hat{\rho}_{S} \ln \hat{\rho}_{S} \}$, y $S_{i} = - \mathrm{Tr}\{ \hat{\rho}_{i} \ln \hat{\rho}_{i} \}$ corresponde a la entropía de von Neumann del subsistema $i = X, Y$. Aquí, $\hat{\rho}_{i}$ representa la matriz densidad reducida del subsistema $i$.
+\]
+donde $S_{XY} = -\mathrm{Tr}\{ \hat{\rho}_{S} \ln \hat{\rho}_{S} \}$ es la entropía de von Neumann del sistema total, y $S_{i} = - \mathrm{Tr}\{ \hat{\rho}_{i} \ln \hat{\rho}_{i} \}$ corresponde a la entropía del subsistema $i = X, Y$, con $\hat{\rho}_{i}$ la matriz densidad reducida asociada.
 
-Se puede separar la derivada temporal de la información mutua
-
+La derivada temporal de la información mutua puede descomponerse como
 \begin{align*}
     \partial_{t}I_{XY} & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \partial_{t}S_{XY} \\
         & = \partial_{t}S_{X} + \partial_{t}S_{Y} - \sum_{i=X,Y;\alpha_{i}}\dot{S}^{\alpha_{i}} \\
-        & =  \partial_{t}S_{X} - \sum_{\alpha_{X}} \dot{S}^{\alpha_{X}} + \partial_{t}S_{Y} - \sum_{\alpha_{Y}} \dot{S}^{\alpha_{Y}} \\
-        & = \dot{I}^{X} + \dot{I}^{Y},
+        & = \partial_{t}S_{X} - \sum_{\alpha_{X}} \dot{S}^{\alpha_{X}} + \partial_{t}S_{Y} - \sum_{\alpha_{Y}} \dot{S}^{\alpha_{Y}} \\
+        & = \dot{I}_{X} + \dot{I}_{Y},
 \end{align*}
-donde aparece el flujo de información correspondiente a cada subsistema $i = X, Y$, definido como la cantidad $\dot{I}^{i} = \partial_{t} S^{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}$. Si se reemplaza $\sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}$ por $\partial_{t} S^{i} - \dot{I}^{i}$ en las expresiones para las tasas de producción de entropía locales, se obtienen las siguientes inecuaciones:
-
+donde el flujo de información asociado a cada subsistema $i$ se define como
+\[
+    \dot{I}_{i} = \partial_{t} S_{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}.
+\]
+Al sustituir $\sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} = \partial_{t} S^{i} - \dot{I}_{i}$ en las expresiones para las producciones de entropía locales, se obtiene
 \begin{align}
-    \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}^{X} \geq 0 \\
-    \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}^{Y} \geq 0,
+    \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}_{X} \geq 0, \\
+    \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}_{Y} \geq 0.
     \label{sec4:localentropyquantum}
 \end{align}
-este resultado coincide con el obtenido en la descripción clásica. No obstante, su formulación en términos de entropía de von Neumann permite incorporar de forma natural los efectos cuánticos presentes en el sistema, lo cual resulta fundamental para caracterizar los flujos de información en regímenes donde las correlaciones cuánticas y las coherencias desempeñan un rol relevante.
+Este resultado es análogo al obtenido en la descripción clásica; sin embargo, al estar formulado en términos de entropías de von Neumann permite incorporar de manera natural efectos cuánticos, como las correlaciones y coherencias, que resultan esenciales para la caracterización de los flujos de información en sistemas cuánticos.
 
-Si se considera que el subsistema $i$ esta conectado a un reservorio isotérmico de temperatura $T_i$, la tasa de cambio de energía libre será
-\begin{align*}
-    \dot{\mathcal{F}}_{i} & = \dot{E}_{i} - T_{i} \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}. 
-\end{align*}
-
-En el estado estacionario se cumple la relación
-
-\begin{equation*}
-    \dot{I}^{i} = - \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}},
-\end{equation*}
-y la tasa de cambio de energía libre del subsistema $i$ es 
-
-\begin{equation*}
-    \dot{\mathcal{F}}_{i} = \dot{E}_{i} + T_{i} \dot{I}^{i}.
-\end{equation*}
-
-De modo que, la tasa de cambio de la energía libre posee dos contribuciones: una correspondiente al intercambio de energía y otra asociada al flujo de información. Por ende, la potencia correspondiente al subsistema $i$ se encuentra acotada por
-
-\begin{equation*}
+Si el subsistema $i$ está acoplado a un reservorio isotérmico de temperatura $T_i$, la tasa de cambio de energía libre se escribe como
+\[
+    \dot{\mathcal{F}}_{i} = \dot{E}_{i} - T_{i} \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}}.
+\]
+En el estado estacionario se cumple
+\[
+    \dot{I}_{i} = - \sum_{\alpha_{i}}\dot{S}^{\alpha_{i}},
+\]
+por lo que la tasa de variación de energía libre del subsistema $i$ toma la forma
+\[
+    \dot{\mathcal{F}}_{i} = \dot{E}_{i} + T_{i} \dot{I}_{i}.
+\]
+Así, la variación de energía libre presenta dos contribuciones: una asociada al intercambio de energía y otra vinculada al flujo de información. En consecuencia, la potencia asociada al subsistema $i$ se encuentra acotada por
+\[
     \dot{W}_{i} \geq \dot{E}_{i} + T_{i}\dot{I}_{i}.
-\end{equation*}
+\]
+Esta cota muestra que la capacidad del subsistema $i$ para realizar trabajo externo depende no sólo del intercambio energético, sino también del flujo de información que reciba.
 
-La importancia de esta cota radica, en que la capacidad de que el subsistema $i$ realize un trabajo externo depende del flujo de información que entrega el sistema.
+En régimen estacionario, la energía total permanece constante,
+\[
+    \partial_{t}E = \dot{E}_{X} + \dot{E}_{Y} = 0,
+\]
+lo que permite interpretar los términos $\dot{E}_{i}$ como flujos de energía entre subsistemas. En este contexto, la variación de energía libre de cada subsistema se descompone en dos partes: una correspondiente al intercambio energético y otra asociada al flujo de información generado por sus correlaciones mutuas.
 
-Si se considera el régimen estacionario, donde la energía total permanece constante, es decir,
-\begin{equation*}
-    \partial_{t}E = \dot{E}^{X} + \dot{E}^{Y} = 0,
-\end{equation*}
-entonces los términos $\dot{E}^{i}$ pueden interpretarse como flujos de energía entre los dos subsistemas. En este contexto, la tasa de cambio de energía libre para cada subsistema se descompone en una parte asociada al intercambio energético y otra vinculada al flujo de información generado por las correlaciones entre los subsistemas.
-
-En el caso $\dot{E}^{X} = \dot{E}^{Y} \approx 0 $, la cota para la potencia $\dot{W}_{i}$ se reduce a 
-
-\begin{equation*}
+En el caso particular $\dot{E}_{X} = \dot{E}_{Y} \approx 0$, la cota para la potencia se reduce a
+\[
      \dot{W}_{i} \geq T_{i}\dot{I}_{i}.
-\end{equation*}
+\]
+Cuando $\dot{I}_{i}<0$, esta relación permite que el sistema realice trabajo a partir de una contribución dominante de la información, incluso en ausencia de gradientes térmicos apreciables. Este mecanismo constituye lo que se denomina una \textit{máquina de información}, en la que los flujos informacionales entre subsistemas desempeñan un papel central, posibilitando la extracción de trabajo en un régimen puramente informacional. 
 
-Si se tiene $\dot{I}_{i}<0$, esta cota permite que el sistema pueda realizar trabajo a partir de una contribución dominante de la información, incluso en ausencia de diferencias térmicas significativas. Tal mecanismo constituye lo que se conoce como una máquina de la información, en la que los flujos de información entre subsistemas juegan un rol principal, permitiendo la extracción de trabajo en un régimen puramente informacional.
-
+Estos flujos de información y su influencia en la termodinámica de sistemas cuánticos serán explorados en detalle en el capítulo siguiente, donde se analizará un modelo específico que exhibe el comportamiento característico de un Demonio de Maxwell autónomo.
 
 \label{sec4:flujos0}
 
 \chapter{Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}
 En este capítulo se estudia un sistema compuesto por tres puntos cuánticos acoplados a múltiples reservorios térmicos. La evolución del sistema se analiza mediante la ecuación de Lindblad desarrollada en la sección \ref{sec2lindbladconsistency}. En la sección \ref{sec5:modelo} se introduce el Hamiltoniano del sistema reducido y su entorno. Posteriormente, en la sección \ref{sec5:transporte}, se analiza el comportamiento del sistema en un escenario típico de transporte cuántico. En la sección \ref{sec5:demonio1}, se establecen las condiciones bajo las cuales la dinámica del sistema puede interpretarse como la de un Demonio de Maxwell autónomo. Finalmente, en la sección \ref{sec5:demonio}, se compara este comportamiento con su contraparte clásica, destacando las diferencias inducidas por los efectos cuánticos.
 
+\section{Puntos cuánticos y modelo Hamiltoniano}
+Uno de los sistemas físicos a nanoescala más estudiados en el contexto de la termodinámica cuántica y el transporte electrónico son los puntos cuánticos. Estos sistemas, que pueden fabricarse mediante técnicas de litografía o autoensamblaje, consisten en regiones semiconductoras diminutas donde los electrones están confinados en las tres dimensiones espaciales en una región del orden de 100[nm]\cite{hanson2007spins}. Debido a su tamaño reducido, los puntos cuánticos exhiben propiedades electrónicas discretas, similares a las de los átomos, lo que les ha valido el sobrenombre de "átomos artificiales" \cite{kouwenhoven2001few}. Tal como en los átomos reales, los electrones son atraídos hacia uno localización central que suele ser un núcloe positivo, para el átomo artificial es el potencial de confinamiento creado por la heteroestructura semiconductora\cite{ashoori1996electrons}.
+
+\insertimage[\label{img:dot}]{ejemplos/qd.pdf}{scale=0.5}{Citar a ashoori1996electrons. Esquema de un punto cuántico definido electrostáticamente en una heteroestructura semiconductora. Los electrones quedan confinados en una región pequeña, lo que da lugar a niveles de energía discretos.}
+
 \section{Modelo teórico}
+
+\section{Ecuación maestra de sistema de 3 puntos cuánticos}
+
+
+
 El sistema reducido está compuesto por tres puntos cuánticos. Uno de ellos posee un nivel de energía $\epsilon_D$ y se encuentra acoplado, mediante una interacción de Coulomb $U$, a los otros dos puntos cuánticos. Estos últimos tienen una energía de sitio $\epsilon$ y están conectados entre sí por un término de \textit{hopping} $g$, además de una interacción de Coulomb $U_f$. Cada uno de los niveles de energía se encuentra acoplado a un baño distinto. 
 
 La configuración del sistema reducido se ilustra en la Figura~\ref{img:sistema3puntos}.
@@ -1353,7 +1424,9 @@ Un aspecto importante a destacar es que los disipadores $\mathcal{L}_i$ en la ec
 
 \newpage
 
-\section{Estudio del transporte}
+\section{Resultados}
+
+\subsection{Estudio del transporte}
 Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. Y se estudia el flujo de corriente $\dot{N}_{i} = \text{Tr}\{(\mathcal{L}_{i}\hat{\rho}_{S})\hat{N}_{S}\}$ generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$ con $\mu_{L}=-\mu_{R}$, empleando las tasas de túnel $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
 \insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), con $\mu_{D}=2$. Mientras que las interacciones de Coulomb se fijan en \( U_{f} = 500 \) y \( U = 40 \).}
@@ -1399,9 +1472,9 @@ En este caso, la coherencia comienza en cero y aumenta progresivamente a medida 
 
 \label{sec5:transporte}
 
-\newpage
 
-\section{Demonio de Maxwell en 3 puntos cuánticos}
+
+\subsection{Demonio de Maxwell en 3 puntos cuánticos}
 Para que el sistema de tres puntos cuánticos se comporte como un Demonio de Maxwell autónomo, es fundamental tratarlo como un sistema bipartito compuesto por dos subsistemas: por un lado, el subsistema $LR$, que consiste en dos niveles de energía $\epsilon$; por otro, el nivel $\epsilon_D$, que desempeña el rol de demonio.
 
 Para que este último actúe como demonio, debe ser capaz de detectar cambios en el subsistema $LR$, ejecutando una acción análoga a una medición. Gracias a la interacción de Coulomb $U$, el demonio puede distinguir si el subsistema $LR$ está vacío, ocupado o doblemente ocupado. A su vez, el subsistema $LR$ modifica su dinámica dependiendo del estado de ocupación del demonio.
@@ -2131,10 +2204,10 @@ Utilizando la regla de Bayes \(p(x,y) = p(x)p(y|x) = p(y)p(x|y)\), se simplifica
 Esta expresión permite interpretar la variación de la información mutua como la suma de dos flujos:
 
 \begin{equation*}
-    \partial_{t} I_{XY} = \dot{I}^{X} + \dot{I}^{Y},
+    \partial_{t} I_{XY} = \dot{I}_{X} + \dot{I}_{Y},
 \end{equation*}
 
-donde \(\dot{I}^{X}\) e \(\dot{I}^{Y}\) estan dados por \ref{sec4:clasicalflows0} y \ref{sec4:clasicalflows}, y representan contribuciones individuales debido a la dinámica en los grados de libertad \(X\) e \(Y\), respectivamente.
+donde \(\dot{I}_{X}\) e \(\dot{I}_{Y}\) estan dados por \ref{sec4:clasicalflows0} y \ref{sec4:clasicalflows}, y representan contribuciones individuales debido a la dinámica en los grados de libertad \(X\) e \(Y\), respectivamente.
 
 
     \label{apendix4:secondlaw}
