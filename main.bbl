@@ -347,6 +347,12 @@ Ashoori, R., ``Electrons in artificial atoms'', {Nature}, vol.~379, no.~6564,
 \backrefprint\backrefparscantrue
 
 \backrefparscanfalse
+\bibitem{simon2013oxford}
+Simon, S.~H., {The Oxford solid state basics}.
+\newblock OUP Oxford, 2013.
+\backrefprint\backrefparscantrue
+
+\backrefparscanfalse
 \bibitem{hill1997entanglement}
 Hill, S.~A. y Wootters, W.~K., ``Entanglement of a pair of quantum bits'',
   {Physical review letters}, vol.~78, no.~26, p.~5022, 1997.

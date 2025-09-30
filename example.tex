@@ -1311,42 +1311,51 @@ Estos flujos de información y su influencia en la termodinámica de sistemas cu
 \chapter{Dinámica de un sistema de 3 puntos cuánticos conectado al ambiente}
 En este capítulo se estudia un sistema compuesto por tres puntos cuánticos acoplados a múltiples reservorios térmicos. La evolución del sistema se analiza mediante la ecuación de Lindblad desarrollada en la sección \ref{sec2lindbladconsistency}. En la sección \ref{sec5:modelo} se introduce el Hamiltoniano del sistema reducido y su entorno. Posteriormente, en la sección \ref{sec5:transporte}, se analiza el comportamiento del sistema en un escenario típico de transporte cuántico. En la sección \ref{sec5:demonio1}, se establecen las condiciones bajo las cuales la dinámica del sistema puede interpretarse como la de un Demonio de Maxwell autónomo. Finalmente, en la sección \ref{sec5:demonio}, se compara este comportamiento con su contraparte clásica, destacando las diferencias inducidas por los efectos cuánticos.
 
-\section{Puntos cuánticos y modelo Hamiltoniano}
-Uno de los sistemas físicos a nanoescala más estudiados en el contexto de la termodinámica cuántica y el transporte electrónico son los puntos cuánticos. Estos sistemas, que pueden fabricarse mediante técnicas de litografía o autoensamblaje, consisten en regiones semiconductoras diminutas donde los electrones están confinados en las tres dimensiones espaciales en una región del orden de 100[nm]\cite{hanson2007spins}. Debido a su tamaño reducido, los puntos cuánticos exhiben propiedades electrónicas discretas, similares a las de los átomos, lo que les ha valido el sobrenombre de "átomos artificiales" \cite{kouwenhoven2001few}. Tal como en los átomos reales, los electrones son atraídos hacia uno localización central que suele ser un núcloe positivo, para el átomo artificial es el potencial de confinamiento creado por la heteroestructura semiconductora\cite{ashoori1996electrons}.
+\section{Puntos cuánticos}
+Uno de los sistemas físicos a nanoescala más estudiados en el contexto de la termodinámica cuántica y el transporte electrónico son los puntos cuánticos. Estos sistemas, que pueden fabricarse mediante técnicas de litografía o autoensamblaje, consisten en regiones semiconductoras diminutas donde los electrones están confinados en las tres dimensiones espaciales en una región del orden de 100[nm]\cite{hanson2007spins}. Debido a su tamaño reducido, los puntos cuánticos exhiben propiedades electrónicas discretas, similares a las de los átomos, lo que les ha valido el sobrenombre de "átomos artificiales" \cite{kouwenhoven2001few}. Tal como en los átomos reales, los electrones son atraídos hacia uno localización central que suele ser un núcleo positivo, para el átomo artificial es el potencial de confinamiento creado por las heteroestructuras semiconductora\cite{ashoori1996electrons}. De manera análoga, un átomo real posee energía de ionización, el punto cuántico posee una energía de carga, que es la energía necesaria para añadir un electrón adicional al punto cuántico y agregarlo el potencial dentro de la barrera, esta energía corresponde a la energía de sitio para un punto cuántico de un electrón. Estos puntos cuánticos pueden ser conectados a reservorios, a través de barreras de tunel.
 
-\insertimage[\label{img:dot}]{ejemplos/qd.pdf}{scale=0.5}{Citar a ashoori1996electrons. Esquema de un punto cuántico definido electrostáticamente en una heteroestructura semiconductora. Los electrones quedan confinados en una región pequeña, lo que da lugar a niveles de energía discretos.}
+En la Figura~\ref{img:dot} se muestra un esquema de un punto cuántico de un electrón definido electrostáticamente en una heteroestructura semiconductora hechas de capas de AlGaAs y GaAs. En este caso, los electrones quedan confinados en una región pequeña, dando lugar a niveles de energía discretos.
+
+\insertimage[\label{img:dot}]{ejemplos/qd.pdf}{scale=0.5}{Esquema de un punto cuántico definido electrostáticamente en una heteroestructura semiconductora. 
+Los electrones quedan confinados en una región pequeña, dando lugar a niveles de energía discretos. 
+Figura adaptada de \cite{ashoori1996electrons}.}
 
 \section{Modelo teórico}
 
-\section{Ecuación maestra de sistema de 3 puntos cuánticos}
+Con el fin de extender el modelo estudiado en \cite{horowitz2014thermodynamics} a un contexto cuántico, se considera un sistema reducido compuesto por tres puntos cuánticos acoplados a tres reservorios térmicos, como se ilustra en la Figura~\ref{img:sistema3puntos}. Uno de los puntos posee una energía de sitio $\epsilon_D$ y se encuentra acoplado, mediante una interacción de Coulomb $U$, a los otros dos puntos cuánticos. Estos últimos tienen una energía de sitio $\epsilon$ y están conectados entre sí por un término de \textit{hopping} $g$, que permite el transporte de electrones entre los sitios $L$ y $R$. Además, interactúan mediante una energía de Coulomb $U_f$. Cada nivel de energía está acoplado a un baño térmico distinto. 
 
+\insertimage[\label{img:sistema3puntos}]{ejemplos/semilocal.pdf}{scale=0.36}{Esquema del sistema reducido compuesto por tres puntos cuánticos, modelados como tres niveles de energía. Estos niveles presentan interacción de Coulomb repulsiva entre sí y cada uno está acoplado a un baño térmico distinto.}
 
+La elección de este sistema se justifica por su capacidad para exhibir un comportamiento característico de un Demonio de Maxwell autónomo, análogo al modelo clásico presentado en \cite{horowitz2014thermodynamics}. En este marco, el punto cuántico con energía $\epsilon_D$ actúa como el ``Demonio'', mientras que los puntos con energía $\epsilon$ representan el ``sistema'' sobre el cual se ejerce control. La interacción entre los tres puntos cuánticos permite que el Demonio influya en el flujo de electrones entre $L$ y $R$, posibilitando la extracción de trabajo. 
 
-El sistema reducido está compuesto por tres puntos cuánticos. Uno de ellos posee un nivel de energía $\epsilon_D$ y se encuentra acoplado, mediante una interacción de Coulomb $U$, a los otros dos puntos cuánticos. Estos últimos tienen una energía de sitio $\epsilon$ y están conectados entre sí por un término de \textit{hopping} $g$, además de una interacción de Coulomb $U_f$. Cada uno de los niveles de energía se encuentra acoplado a un baño distinto. 
+Una manera de llevar a cabo dicha extracción consiste en aplicar un gradiente de potencial eléctrico entre los puntos $L$ y $R$, es decir, $\mu_{L} - \mu_{R} = eV$, lo que genera una corriente de electrones. Bajo ciertas condiciones, el Demonio puede invertir esta corriente, forzando a los electrones a fluir en contra del gradiente aplicado. Este efecto, que constituye una manifestación de trabajo extraído mediante información, se analiza con mayor detalle en la sección \ref{sec5:dem}. 
 
-La configuración del sistema reducido se ilustra en la Figura~\ref{img:sistema3puntos}.
+Finalmente, el acoplamiento coherente introducido por el término de \textit{hopping} $g$ da lugar a efectos cuánticos adicionales, como la coherencia entre los niveles $L$ y $R$. Estas coherencias pueden modificar la dinámica del sistema y afectar la eficiencia del Demonio. 
 
+En la siguiente sección se estudiará la dinámica del sistema mediante la ecuación maestra de Lindblad semilocal, explorando las condiciones bajo las cuales se manifiesta un comportamiento consistente con el de un Demonio de Maxwell autónomo.
 
-\insertimage[\label{img:sistema3puntos}]{ejemplos/semilocal.pdf}{scale=0.36}{Esquema que representa el sistema reducido compuesto por tres puntos cuánticos, modelados como tres niveles de energía. Estos niveles presentan interacción de Coulomb repulsiva entre ellos, y cada uno está acoplado a un baño térmico distinto.}
+\section{Ecuación maestra de un sistema de tres puntos cuánticos}
 
-El Hamiltoniano del sistema reducido esta dado por 
+El Hamiltoniano del sistema reducido de tres puntos cuánticos se puede escribir en segunda cuantización como 
 
 \begin{align*}
-    \hat{H}_{S} & = \epsilon_{D}\hat{d}^{\dagger}_{D}\hat{d}_{D} + \epsilon \hat{d}^{\dagger}_{L}\hat{d}_{L} + \epsilon \hat{d}^{\dagger}_{R}\hat{d}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
+    \hat{H}_{S} & = \epsilon_{D}\hat{n}_{D} + \epsilon \hat{n}_{L} + \epsilon \hat{n}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
           & + U(\hat{n}_{D}\hat{n}_{L} + \hat{n}_{D}\hat{n}_{R} )  + U_{f}\hat{n}_{R}\hat{n}_{L},
 \end{align*}
-donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ es el operador de número del sitio $i$, y los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
+donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ es el operador número del sitio $i$, y los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
 
 \begin{equation*}
-    \{\hat{d}_{\alpha},\hat{d}_{\beta} \} = 0  \hspace{10mm} \{\hat{d}^{\dagger}_{\alpha}, \hat{d}_{\beta} \} = \delta_{\alpha \beta}.
+    \{\hat{d}_{\alpha},\hat{d}_{\beta} \} = 0, \hspace{10mm} \{\hat{d}^{\dagger}_{\alpha}, \hat{d}_{\beta} \} = \delta_{\alpha \beta}.
 \end{equation*}
 
-Usando la base de Fock $|n_{L},n_{R},n_{D} \rangle = (\hat{d}^{\dagger}_{L})^{n_{L}}(\hat{d}^{\dagger}_{R})^{n_{R}}(\hat{d}^{\dagger}_{D})^{n_{D}}|0,0,0\rangle$, y escribiendo el Hamiltoniano en el orden de la base 
+Las cantidades $\epsilon_{D}, \epsilon_{L}, \epsilon_{R}$ corresponden a las energías de ocupación de los puntos cuánticos $D, L, R$, respectivamente. El parámetro $g$ describe el acoplamiento de \textit{hopping} entre los puntos $L$ y $R$, análogo al acoplamiento entre orbitales atómicos\cite{simon2013oxford}. El término $U$ representa la interacción de Coulomb repulsiva entre el punto $D$ y los puntos $L, R$, mientras que $U_{f}$ corresponde a la interacción de Coulomb repulsiva entre $L$ y $R$.
+
+En la base de Fock $|n_{L},n_{R},n_{D} \rangle = (\hat{d}^{\dagger}_{L})^{n_{L}}(\hat{d}^{\dagger}_{R})^{n_{R}}(\hat{d}^{\dagger}_{D})^{n_{D}}|0,0,0\rangle$, ordenada como
 
 \begin{equation*}
      \{|0,0,0\rangle, |1,0,0\rangle, |0,1,0\rangle, |0,0,1\rangle, |1,1,0\rangle, |1,0,1\rangle, |0,1,1\rangle, |1,1,1\rangle\},
 \end{equation*}
-se puede representar el Hamiltoniano del sistema en forma matricial 
+el Hamiltoniano toma la forma matricial 
 
 \begin{equation*}
     \hat{H}_{S} = 
@@ -1362,141 +1371,134 @@ se puede representar el Hamiltoniano del sistema en forma matricial
         \end{bmatrix}.
 \end{equation*}
 
-Por otro lado, el Hamiltoniano del baño y la interacción con el sistema se descomponen como $\hat{H}_{B} = \hat{H}_{L}+\hat{H}_{R}+\hat{H}_{D}$ y $\hat{V} = \hat{V}_{L}+\hat{V}_{R}+\hat{V}_{D}$ respectivamente. Cada término esta dado por 
+Esta representación permite identificar que el término de \textit{hopping} $g$ es el único que introduce coherencias en la base de Fock, acoplando los estados $|1,0,0\rangle \leftrightarrow |0,1,0\rangle$ y $|1,0,1\rangle \leftrightarrow |0,1,1\rangle$. El resto de términos son puramente diagonales y describen las energías de cada configuración de ocupación.
+
+El Hamiltoniano total incluye, además, los términos de los reservorios y la interacción sistema–baño: $\hat{H}_{B} = \hat{H}_{L}+\hat{H}_{R}+\hat{H}_{D}$ y $\hat{V} = \hat{V}_{L}+\hat{V}_{R}+\hat{V}_{D}$, con 
 
 \begin{equation*}
-    \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha, l} \hat{c}^{\dagger}_{\alpha, l}\hat{c}_{\alpha, l} \hspace{10mm} \hat{V}_{\alpha} = \sum_{l} t_{\alpha, l} ( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha, l} + \hat{c}^{\dagger}_{\alpha, l} \hat{d}_{\alpha} ),
+    \hat{H}_{\alpha} = \sum_{l} \epsilon_{\alpha, l} \hat{c}^{\dagger}_{\alpha, l}\hat{c}_{\alpha, l}, \hspace{10mm} 
+    \hat{V}_{\alpha} = \sum_{l} t_{\alpha, l} \left( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha, l} + \hat{c}^{\dagger}_{\alpha, l} \hat{d}_{\alpha} \right),
 \end{equation*}
-donde $\alpha = L,R,D$ denota los tres reservorios acoplados a cada punto cuántico, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha, l}$ sus energías, y $t_{\alpha, l}$ los parámetros reales que describen el acoplamiento entre el sistema y baño. 
+donde $\alpha = L,R,D$ denota los tres reservorios, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha, l}$ sus energías, y $t_{\alpha, l}$ los parámetros reales de acoplamiento. 
 
-A partir del término de interacción $\hat{V}$, es posible identificar los operadores asociados al sistema y al baño
+De $\hat{V}$ se identifican los operadores de sistema y baño como 
 
 \begin{equation*}
-    \hat{S}_{\alpha,1} = \hat{d}^{\dagger}_{\alpha} \hspace{10mm} \hat{S}_{\alpha,-1} = \hat{d}_{\alpha}
+    \hat{S}_{\alpha,1} = \hat{d}^{\dagger}_{\alpha}, \hspace{10mm} \hat{S}_{\alpha,-1} = \hat{d}_{\alpha},
 \end{equation*}
 
 \begin{equation*}
-    \hat{B}_{\alpha,1} = \sum_{l}t_{\alpha l} \hat{c}_{\alpha l} \hspace{10mm} \hat{B}_{\alpha,-1} = \sum_{l}t_{\alpha l} \hat{c}^{\dagger}_{\alpha l}.
+    \hat{B}_{\alpha,1} = \sum_{l}t_{\alpha l} \hat{c}_{\alpha l}, \hspace{10mm} \hat{B}_{\alpha,-1} = \sum_{l}t_{\alpha l} \hat{c}^{\dagger}_{\alpha l}.
 \end{equation*}
 
-La evolución no unitaria del sistema de tres puntos cuánticos, inducida por su acoplamiento a los baños, se describe mediante una ecuación maestra descrita por el operador de Lindblad
+La evolución no unitaria del sistema de tres puntos cuánticos, inducida por el acoplamiento a los reservorios, se describe mediante la ecuación maestra de Lindblad:  
 
 \begin{equation}
     \mathcal{L} = \mathcal{L}_{R} + \mathcal{L}_{L} + \mathcal{L}_{D},
     \label{Lindbladsec5}
 \end{equation}
-donde el operador de Lindblad $\mathcal{L}$ se descompone como una suma de contribuciones individuales, una por cada baño acoplado al sistema. Explícitamente cada contribución $\mathcal{L}_{i}$ corresponde a 
 
-\begin{align*}
-    \mathcal{L}_{R} & = \kappa_{R}(\epsilon)(f_{R}(\epsilon)\mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon)]\mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \kappa_{R}(\epsilon+U)(f_{R}(\epsilon+U)\mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{R}(\epsilon+U)]\mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L}) ]  ) \\
-                   & + \kappa_{R}(\epsilon+U_{f})(f_{R}(\epsilon+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U_{f})]\mathcal{D}[\hat{d}_{R}(\textbf{1}-\hat{n}_{D})\hat{n}_{L} ]  ) \\
-                  & + \kappa_{R}(\epsilon+U+U_{f})(f_{R}(\epsilon+U+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{R}\hat{n}_{D}\hat{n}_{L} ]  + [1-f_{R}(\epsilon+U+U_{f})]\mathcal{D}[\hat{d}_{R}\hat{n}_{D}\hat{n}_{L} ]  ) 
-\end{align*}
+donde cada disipador $\mathcal{L}_{i}$ depende de los operadores locales del sitio y toma la forma explícita que se presenta en los apéndices \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}. Las funciones de Fermi $f_{i}(\omega) = \left( e^{\beta_{i}(\omega - \mu_{i})}+1 \right)^{-1}$ y las tasas de túnel $\kappa_{\alpha}(\omega)= 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$ se obtienen a partir de las funciones de correlación espectral discutidas en \ref{sec2:gammaanddelta}.  
 
-\begin{align*}
-    \mathcal{L}_{L} & = \kappa_{L}(\epsilon)(f_{L}(\epsilon)\mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon)]\mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R}) ]  )  \\
-                    & + \kappa_{L}(\epsilon+U)(f_{L}(\epsilon+U)\mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  + [1-f_{L}(\epsilon+U)]\mathcal{D}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R}) ]  ) \\
-                   & + \kappa_{L}(\epsilon+U_{f})(f_{L}(\epsilon+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U_{f})]\mathcal{D}[\hat{d}_{L}(\textbf{1}-\hat{n}_{D})\hat{n}_{R} ]  ) \\
-                  & + \kappa_{L}(\epsilon+U+U_{f})(f_{L}(\epsilon+U+U_{f})\mathcal{D}[\hat{d}^{\dagger}_{L}\hat{n}_{D}\hat{n}_{R} ]  + [1-f_{L}(\epsilon+U+U_{f})]\mathcal{D}[\hat{d}_{L}\hat{n}_{D}\hat{n}_{R} ]  ) 
-\end{align*}
+Despreciando el término de \textit{Lamb Shift} $\hat{H}_{LS}$, como se realiza en~\cite{prech2023entanglement}, la evolución del sistema está gobernada por  
 
-\begin{align*}
-    \mathcal{L}_{D} & = \kappa_{D}(\epsilon_{D})(f_{D}(\epsilon_{D})\mathcal{D}[\hat{d}^{\dagger}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  + [1-f_{D}(\epsilon_{D})]\mathcal{D}[\hat{d}_{D}(\textbf{1}-\hat{n}_{R})(\textbf{1}-\hat{n}_{L}) ]  )  \\
-                    & + \kappa_{D}(\epsilon_{D}+U)f_{D}(\epsilon_{D}+U)\mathcal{D}[\hat{d}^{\dagger}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R})) ]  \\
-                    & + \kappa_{D}(\epsilon_{D}+U)[1-f_{D}(\epsilon_{D}+U)]\mathcal{D}[\hat{d}_{D}(\hat{n}_{R}(\textbf{1}-\hat{n}_{L}) + \hat{n}_{L}(\textbf{1}-\hat{n}_{R}))]   \\
-                   & + \kappa_{D}(\epsilon_{D}+2U)(f_{D}(\epsilon_{D}+2U)\mathcal{D}[\hat{d}^{\dagger}_{D}\hat{n}_{R}\hat{n}_{L} ]  + [1-f_{D}(\epsilon_{D}+2U)]\mathcal{D}[\hat{d}_{D}\hat{n}_{R}\hat{n}_{L} ]  ).
-\end{align*}
-
-Con $f_{i}(\omega) = (\exp(\beta_{i}(\omega - \mu_{i})) + 1)^{-1}$ la distribución de Fermi y  las tasas de túnel $\kappa_{\alpha}(\omega)= 2\pi \sum_{l}t^{2}_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$, las cuales provienen de calcular las funciones correlación espectral $\gamma$ en \ref{sec2:gammaanddelta}.
-
-La demostración de la ecuación \ref{Lindbladsec5} se presenta en los apéndices \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}.
-
-Despreciando el término de \textit{Lamb Shift} $\hat{H}_{LS}$, como se discute en~\cite{prech2023entanglement}, la evolución del sistema de tres puntos cuánticos está dada por
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{S}(t) = -i[\hat{H}_{S},\hat{\rho}_{S}(t)] + \mathcal{L}(\hat{\rho}_{S}(t)),
 \end{equation}
-donde $\hat{\rho}_{S}(t)$ es la matriz densidad del sistema reducido. A partir de esta ecuación, es posible calcular numéricamente la evolución del sistema y obtener las magnitudes termodinámicas relevantes.
+donde $\hat{\rho}_{S}(t)$ es la matriz densidad del sistema reducido. Esta ecuación permite calcular numéricamente la dinámica y extraer las magnitudes termodinámicas de interés.  
 
-Un aspecto importante a destacar es que los disipadores $\mathcal{L}_i$ en la ecuación maestra semilocal están formulados en función de operadores locales del sitio, lo que permite describir la evolución del sistema a partir de dinámicas locales. En contraste, la ecuación maestra global describe la evolución del sistema utilizando operadores globales, lo que dificulta el análisis detallado de la dinámica. En este sentido, la descripción semilocal resulta más conveniente, ya que permite distinguir las cantidades termodinámicas asociadas a cada subsistema, en particular los flujos de información. Es de especial interés determinar bajo qué condiciones un Hamiltoniano $\hat{H}_S$ permite que los operadores locales se mantengan como tales tras la agrupación de frecuencias. Un caso en el que dicha agrupación no conduce a disipadores locales ocurre, por ejemplo, cuando las interacciones de tipo Coulomb entre los diferentes sitios son todas distintas.
+Un aspecto importante es que, en la descripción semilocal, los disipadores se construyen con operadores locales, lo cual facilita asignar cantidades termodinámicas a cada subsistema, en particular los flujos de información. En contraste, en la ecuación maestra global los disipadores dependen de operadores colectivos, lo que dificulta la interpretación local. Es crucial determinar bajo qué condiciones un Hamiltoniano $\hat{H}_S$ conserva la localidad de los operadores tras la agrupación de frecuencias. Un ejemplo en el que esta condición no se cumple ocurre cuando las interacciones de Coulomb entre todos los sitios poseen valores distintos.
 
 \label{sec5:modelo}
+
+\subsection{Explicación del Demonio de Maxwell autónomo}
+
+Para que el sistema de tres puntos cuánticos se comporte como un Demonio de Maxwell autónomo, es necesario tratarlo como un sistema bipartito compuesto por dos subsistemas: el subsistema $LR$, que consta de dos niveles de energía $\epsilon$, y el subsistema $D$, cuyo nivel de energía $\epsilon_D$ desempeña el rol de demonio.
+
+El demonio debe ser capaz de detectar el estado de ocupación del subsistema $LR$ y, en respuesta, modificar su dinámica, actuando de manera análoga a una medición. Gracias a la interacción de Coulomb $U$, el demonio distingue entre las configuraciones en las que $LR$ está vacío, ocupado o doblemente ocupado. A su vez, la dinámica del subsistema $LR$ depende del estado de ocupación del demonio, estableciéndose así una retroalimentación.
+
+Esta retroalimentación se implementa matemáticamente imponiendo que las tasas de túnel cumplan la condición $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En adelante, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)=\kappa_{i}(\epsilon+U_{f})=\kappa_{i}(\epsilon+U+U_{f})$. Por el contrario, las tasas de túnel del demonio no dependen de la ocupación del sistema, de modo que se escriben simplemente como $\kappa_{D}\equiv \kappa_{D}(\epsilon_D)$.
+
+Para que el demonio detecte de manera efectiva el estado del subsistema $LR$, deben cumplirse dos condiciones físicas. Primero, la energía de interacción debe superar ampliamente las fluctuaciones térmicas de su reservorio asociado, es decir, $\beta_{D} U \gg 1$. Segundo, la dinámica disipativa del demonio debe ser más rápida que la del subsistema $LR$, lo que requiere que $\kappa_{D} > \max\{\kappa_{i}, \kappa^{U}_{i}\}$ con $i = L, R$.
+
+La dinámica del demonio puede descomponerse en tres etapas, ilustradas en las Figuras~\ref{img:dinamica1}–\ref{img:dinamica3}.  
+
+\insertimage[\label{img:dinamica1}]{ejemplos/diseño1}{scale=0.6}{Primera etapa: los sitios $D$ y $R$ presentan una mayor probabilidad de estar ocupados. La ocupación se indica mediante círculos negros.}
+
+En la primera etapa, la elección $\epsilon_D = \mu_D - U/2$ favorece la ocupación del nivel de energía del demonio. Para inducir una corriente en dirección opuesta al gradiente de potencial, es conveniente imponer que $\kappa^{U}_{R} > \kappa^{U}_{L}$, de modo que las transiciones inducidas por el reservorio derecho sean más frecuentes, aumentando así la probabilidad de ocupación del demonio.  
+
+\insertimage[\label{img:dinamica2}]{ejemplos/diseño2}{scale=0.6}{Segunda etapa: el \textit{hopping} $g$ genera una superposición coherente entre los sitios $L$ y $R$, indicada mediante círculos grises.}
+
+En la segunda etapa, el acoplamiento $g$ permite el intercambio coherente de electrones entre los niveles $L$ y $R$. Este proceso introduce coherencias cuánticas que son esenciales para la dinámica del sistema.  
+
+\insertimage[\label{img:dinamica3}]{ejemplos/diseño3}{scale=0.6}{Tercera etapa: el electrón se transporta preferentemente hacia el reservorio $L$.}
+
+Finalmente, en la tercera etapa, con el objetivo de generar un flujo de corriente en contra del gradiente de potencial, resulta conveniente imponer que $\kappa_{L} > \kappa_{R}$. Esta condición garantiza que, cuando el demonio está desocupado, la probabilidad de transición hacia el reservorio $L$ sea mayor que hacia el reservorio $R$. Como consecuencia, se favorece el transporte de electrones desde el reservorio $R$ (de menor potencial) hacia el reservorio $L$ (de mayor potencial), lo que constituye un comportamiento característico de un Demonio de Maxwell autónomo.
+
+
+\label{sec5:dem}
 
 \newpage
 
 \section{Resultados}
 
+En esta sección se presentan los resultados numéricos obtenidos a partir de la resolución de la ecuación maestra de Lindblad semilocal para el sistema de tres puntos cuánticos. Se analizan dos escenarios: en primer lugar, un caso típico de transporte cuántico en el que las tasas de túnel son independientes de la ocupación del sitio $D$; en segundo lugar, un caso en el que dichas tasas dependen de la ocupación, bajo condiciones en las que el sistema puede exhibir un comportamiento característico de un Demonio de Maxwell autónomo.  
+
 \subsection{Estudio del transporte}
-Se aborda inicialmente el caso en que las tasas de túnel no dependen de la frecuencia, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. Y se estudia el flujo de corriente $\dot{N}_{i} = \text{Tr}\{(\mathcal{L}_{i}\hat{\rho}_{S})\hat{N}_{S}\}$ generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$ con $\mu_{L}=-\mu_{R}$, empleando las tasas de túnel $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.
 
-\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), con $\mu_{D}=2$. Mientras que las interacciones de Coulomb se fijan en \( U_{f} = 500 \) y \( U = 40 \).}
+Se aborda inicialmente el escenario en que las tasas de túnel no dependen de la ocupación y permanecen constantes, es decir, $\kappa_{i}(\omega) = \kappa_{i}$. En este caso se estudia el flujo de corriente
+\[
+\dot{N}_{i} = \mathrm{Tr}\{(\mathcal{L}_{i}\hat{\rho}_{S})\hat{N}_{S}\},
+\]
+generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, con $\mu_{L}=-\mu_{R}$. Para los cálculos se fijaron las tasas de túnel en $\kappa_{L} = \kappa_{R} = 1/100$ y $\kappa_{D} = 1/50$. Los resultados se muestran en la Figura~\ref{img:transporte1}.  
 
-La figura muestra que, a medida que aumenta la diferencia de potencial \( eV \), la corriente de partículas \( \dot{N}_L = -\dot{N}_R \) que fluye del baño \( L \) al baño \( R \) también aumenta. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio \( L \) impulsa el transporte hacia \( R \). Asimismo, se puede analizar la potencia suministrada al sistema, dada por \ref{sec2:heatworkeq}, en función de \( eV \).
+\insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = T = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), con $\mu_{D}=2$. Las interacciones de Coulomb se fijan en \( U_{f} = 500 \) y \( U = 40 \).}
 
-\insertimage[\label{img:transporte2}]{ejemplos/worktp.pdf}{scale =0.40}{Potencia entregada por los reservorios en función de $eV/T$.}
+La figura muestra que, a medida que aumenta la diferencia de potencial $eV$, la corriente de partículas $\dot{N}_L = -\dot{N}_R$ que fluye del baño $L$ al baño $R$ también crece. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio $L$ impulsa el transporte hacia $R$.  
+
+La potencia suministrada al sistema, dada por la ecuación~\eqref{sec2:heatworkeq}, se presenta en la Figura~\ref{img:transporte2}.  
+
+\insertimage[\label{img:transporte2}]{ejemplos/worktp.pdf}{scale=0.40}{Potencia entregada por los reservorios en función de $eV/T$.}
     
-La Figura \ref{img:transporte2} muestra que el conjunto de reservorios \( L \) y \( R \) entrega trabajo al sistema para mantener la corriente de partículas. Este comportamiento es consistente desde el punto de vista físico, ya que el paso de electrones desde un potencial químico mayor hacia uno menor implica una transferencia de energía al sistema, que se manifiesta como trabajo. Por otro lado, dado que el reservorio \( D \) no intercambia partículas en promedio, la potencia que este entrega es nula.
+En la Figura~\ref{img:transporte2} se observa que los reservorios $L$ y $R$ entregan trabajo al sistema para mantener la corriente de partículas. Este resultado concuerda con la interpretación física, ya que el transporte de electrones desde un potencial químico mayor hacia uno menor implica una transferencia de energía al sistema en forma de trabajo. Por su parte, dado que el reservorio $D$ no intercambia partículas en promedio, la potencia asociada a este es nula.  
 
-A continuación, pueden examinarse los flujos de calor \ref{sec2:heatworkeq} que reciben los sistemas $LR$ y $D$
+Los flujos de calor definidos en la ecuación~\eqref{sec2:heatworkeq} se muestran en la Figura~\ref{img:transporte3}.  
 
-\insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale =0.40}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
+\insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale=0.40}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
     
-Como uno puede ver, para $eV/T \lessapprox 2$ , el sistema $LR$ en total recibe calor de los reservorios $L$ y $R$. Para $eV/T \gtrapprox 2$ el sistema $LR$ en total entrega calor a los reservorios $L$ y $R$. 
+Se observa que, para $eV/T \lessapprox 2$, el sistema $LR$ recibe calor de los reservorios $L$ y $R$, mientras que para $eV/T \gtrapprox 2$ este sistema entrega calor a dichos reservorios.  
 
-Para completar el análisis termodinámico a partir de la primera ley $\dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}$, se grafican a continuación los flujos de energía involucrados, descritos por \ref{sec2:energyeq}
+Para completar el análisis termodinámico, se utilizan las relaciones de la primera ley $\dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}$ (ec.~\eqref{sec2:energyeq}) y se grafican los flujos de energía en la Figura~\ref{img:transporte4}.  
 
-\insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale =0.43}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
+\insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale=0.43}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
 
-En el estado estacionario, la condición \( \partial_t E = 0 \) implica que \( \dot{E}_{LR} = -\dot{E}_D \), lo cual se corrobora en la Figura \ref{img:transporte4}. En ella, el flujo de energía \( \dot{E}_{LR} \) es positivo, mientras que \( \dot{E}_D \) resulta negativo. Dado que \( \dot{W}_{D} = 0 \), se concluye que el flujo de calor hacia el demonio está dado por \( J_D = \dot{E}_D < 0 \); es decir, el reservorio \( D \) absorbe calor. Por su parte, el sistema \( LR \) recibe energía de los reservorios \( L \) y \( R \), la cual es posteriormente transferida al subsistema \( D \), para finalmente ser absorbida por su respectivo baño térmico. Este comportamiento concuerda con la primera ley de la termodinámica, ya que la energía suministrada por los reservorios de mayor temperatura (\( T_L = T_R > T_D \)) se conserva y es disipada hacia el reservorio de menor temperatura.
+En el estado estacionario, la condición $\partial_t E = 0$ implica que $\dot{E}_{LR} = -\dot{E}_D$. Esto se corrobora en la Figura~\ref{img:transporte4}, donde el flujo de energía $\dot{E}_{LR}$ resulta positivo y $\dot{E}_D$ negativo. Como $\dot{W}_{D} = 0$, se deduce que el flujo de calor hacia el demonio está dado por $J_D = \dot{E}_D < 0$, es decir, el reservorio $D$ absorbe calor. En consecuencia, el sistema $LR$ recibe energía de los reservorios $L$ y $R$, la transfiere al subsistema $D$, y esta es finalmente disipada en su respectivo baño térmico. Este comportamiento concuerda con la primera ley de la termodinámica, ya que la energía suministrada por los reservorios de mayor temperatura ($T_L = T_R > T_D$) se conserva y fluye hacia el reservorio de menor temperatura.  
 
-Para analizar la presencia de efectos cuánticos en el estado estacionario, se calcularán dos cantidades relevantes. La primera de ellas es la norma-\( l_{1} \), \( \mathcal{C}_{l_{1}} \), que permite cuantificar las coherencias en el sistema \( LR \), y está dada por
+Con el fin de analizar los efectos cuánticos en el estado estacionario, se calculan dos cantidades relevantes. La primera es la norma-$l_{1}$, $\mathcal{C}_{l_{1}}$, que cuantifica las coherencias en el sistema $LR$:  
 
+\[
+\mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{S;i,j}|.
+\]
 
-\begin{equation*}
-    \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{S;i,j}|.
-\end{equation*}
+La segunda cantidad corresponde al entrelazamiento entre modos específicos. En particular, se estudia el entrelazamiento entre los pares de estados $\{|1,0,0\rangle, |0,1,0\rangle\}$ y $\{|1,0,1\rangle, |0,1,1\rangle\}$. Para cuantificar estas correlaciones no clásicas se utiliza la concurrencia $\mathcal{C}_{\text{on}}$ \cite{hill1997entanglement, wootters1998entanglement}, definida como  
 
-Otro efecto cuántico relevante de estudiar es el entrelazamiento entre modos específicos del sistema. En particular, se analiza el entrelazamiento entre los pares de estados \(|1,0,0\rangle, |0,1,0\rangle\) y \(|1,0,1\rangle, |0,1,1\rangle\). Para cuantificar este tipo de correlaciones no clásicas se utiliza la concurrencia \( \mathcal{C}_{\text{on}} \) \cite{hill1997entanglement, wootters1998entanglement}, definida como
+\[
+\mathcal{C}_{\text{on}} = \max \left\{ 2|\alpha + \beta| - 2\sqrt{p_0 p_D},\, 0 \right\},
+\]
+donde $p_0$ y $p_D$ representan las probabilidades de que el sistema $LR$ se encuentre vacío o doblemente ocupado, respectivamente. El término $\alpha$ corresponde a la coherencia entre los estados $|1,0,0\rangle$ y $|0,1,0\rangle$, mientras que $\beta$ representa la coherencia entre los estados $|1,0,1\rangle$ y $|0,1,1\rangle$. La deducción de esta expresión se presenta en el Apéndice~\ref{appendix5final}.  
 
-\begin{equation*}
-    \mathcal{C}_{\text{on}} = \max \left\{ 2|\alpha + \beta| - 2\sqrt{p_0 p_D},\, 0 \right\},
-\end{equation*}
-donde \( p_0 \) y \( p_D \) representan las probabilidades de que el sistema \( LR \) se encuentre vacío o doblemente ocupado, respectivamente. El término \( \alpha \) corresponde a la coherencia entre los estados \(|1,0,0\rangle\) y \(|0,1,0\rangle\), mientras que \( \beta \) representa la coherencia entre los estados \(|1,0,1\rangle\) y \(|0,1,1\rangle\). La deducción de esta fórmula se presenta en el Apéndice \ref{appendix5final}. 
+En la Figura~\ref{img:transporte5} se ilustra la variación de la coherencia y la concurrencia en función de la diferencia de potencial.  
 
-Finalmente, en la Figura \ref{img:transporte5} se analiza cómo varían la coherencia y la concurrencia en función de la diferencia de potencial
-
-\insertimage[\label{img:transporte5}]{ejemplos/quantumtp.pdf}{scale =0.4}{Coherencia(línea azul) y concurrencia(linea roja) en función de $eV/T$.}
+\insertimage[\label{img:transporte5}]{ejemplos/quantumtp.pdf}{scale=0.4}{Coherencia (línea azul) y concurrencia (línea roja) en función de $eV/T$.}
     
-En este caso, la coherencia comienza en cero y aumenta progresivamente a medida que se incrementa la diferencia de potencial. En cuanto al entrelazamiento, también parte desde cero —coincidiendo con el valor nulo de la coherencia— y se mantiene nulo hasta alcanzar un cierto umbral, a partir del cual la concurrencia comienza a crecer con el aumento de \( eV/T \). Esto indica la aparición de entrelazamiento en el sistema \( LR \). Este comportamiento es relevante, ya que sugiere que la presencia de una corriente en el sistema contribuye a que se desarrollen coherencia y entrelazamiento entre los sitios $L$ y $R$.  
-
+Los resultados muestran que la coherencia comienza en cero y aumenta de forma progresiva con la diferencia de potencial. En cuanto al entrelazamiento, este también es nulo al inicio y permanece así hasta superar un umbral, a partir del cual la concurrencia crece con $eV/T$. Esto indica la aparición de entrelazamiento en el sistema $LR$. Este resultado es relevante, ya que sugiere que la presencia de una corriente favorece el desarrollo de coherencia y entrelazamiento entre los sitios $L$ y $R$.  
 
 \label{sec5:transporte}
 
 
 
 \subsection{Demonio de Maxwell en 3 puntos cuánticos}
-Para que el sistema de tres puntos cuánticos se comporte como un Demonio de Maxwell autónomo, es fundamental tratarlo como un sistema bipartito compuesto por dos subsistemas: por un lado, el subsistema $LR$, que consiste en dos niveles de energía $\epsilon$; por otro, el nivel $\epsilon_D$, que desempeña el rol de demonio.
-
-Para que este último actúe como demonio, debe ser capaz de detectar cambios en el subsistema $LR$, ejecutando una acción análoga a una medición. Gracias a la interacción de Coulomb $U$, el demonio puede distinguir si el subsistema $LR$ está vacío, ocupado o doblemente ocupado. A su vez, el subsistema $LR$ modifica su dinámica dependiendo del estado de ocupación del demonio.
-
-Esta retroalimentación se implementa matemáticamente permitiendo que las tasas de túnel cumplan $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En lo que sigue, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)=\kappa_{i}(\epsilon+U_{f})=\kappa_{i}(\epsilon+U+U_{f})$. Por el contrario, las tasas de túnel del demonio no dependerán de la ocupación, por lo que se escribirá simplemente $\kappa_{D}\equiv \kappa_{D}(\epsilon')$.
-
-Para que el demonio pueda detectar eficazmente el estado del subsistema $LR$, deben cumplirse dos condiciones. Primero, que la energía de interacción supere las fluctuaciones térmicas del reservorio asociado al demonio, es decir, $\beta_{D} U \gg 1$. Segundo, que su dinámica disipativa sea más rápida que la del subsistema $LR$, lo que implica $\kappa_{D} > \max\{\kappa_{i}, \kappa^{U}_{i}\}$ con $i = L, R$.
-
-La dinámica específica del demonio se describirá con mayor detalle en la Figura~\ref{img:dinamica1}.
-
-\insertimage[\label{img:dinamica1}]{ejemplos/diseño1}{scale=0.6}{Primer paso en la dinámica, el sitio $D$ y el sitio $R$ poseen una mayor probabilidad de estar ocupados, su ocupación se denota mediante círculos color negro.}
-
-La elección $\epsilon_D = \mu_D - U/2$ favorece la ocupación del nivel de energía del demonio. Para inducir una corriente en dirección opuesta al gradiente de potencial, es conveniente imponer que $\kappa^{U}_{R} > \kappa^{U}_{L}$, de modo que las transiciones inducidas por el baño derecho sean más frecuentes, aumentando así la probabilidad de que este nivel se pueble. Posteriormente, como se ilustra en la Figura \ref{img:dinamica2}, el acoplamiento $g$ permite el intercambio coherente del electrón entre los niveles $L$ y $R$, introduciendo así una dinámica esencialmente cuántica.
-
-
-\insertimage[\label{img:dinamica2}]{ejemplos/diseño2}{scale=0.6}{Segundo paso en la dinámica, el \textit{hopping} $g$ genera superposición entre los sitios $L$ y $R$, esto se denota mediante círculos color gris.}
-
-Finalmente, se produce una tercera etapa, ilustrada en la Figura \ref{img:dinamica3}. En esta fase, con el objetivo de generar un flujo de corriente en contra del gradiente de potencial, resulta conveniente imponer que $\kappa_{L} > \kappa_{R}$. Esta condición asegura que, cuando el demonio se encuentra desocupado, la probabilidad de que ocurra una transición hacia el baño $L$ sea mayor que hacia el baño $R$. Como consecuencia, se favorece el transporte de electrones desde el reservorio $R$ (de menor potencial) hacia el reservorio $L$ (de mayor potencial), evidenciando así un comportamiento característico de un Demonio de Maxwell autónomo.
-
-\insertimage[\label{img:dinamica3}]{ejemplos/diseño3}{scale=0.6}{Tercer paso en la dinámica, el electrón se transporta al baño $L$.}
-
-Teniendo definida la dinámica del sistema, es posible elegir de forma adecuada distintos candidatos para las tasas de túnel con el objetivo de inducir un comportamiento tipo Demonio de Maxwell. Para ello, se estudiará el comportamiento de la matriz densidad, así como los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L} - \mu_{R} = eV$.
+En esta subsección se eligen distintos candidatos para las tasas de túnel con el objetivo de inducir un comportamiento tipo Demonio de Maxwell. Para ello, se estudiará el comportamiento de la matriz densidad, así como los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L} - \mu_{R} = eV$.
 
 Se comenzará analizando las probabilidades de ocupación, extraídas de la matriz densidad en el estado estacionario. Como se muestra en la Figura~\ref{img:densitymatrix}, las tres probabilidades más altas corresponden a los estados $\rho_{001}$, $\rho_{100}$ y $\rho_{010}$, lo cual es coherente con la presencia de interacción de Coulomb, que penaliza las configuraciones con ocupación múltiple.
 
@@ -1504,12 +1506,14 @@ Para valores de $eV/T \lessapprox 3.6$, la probabilidad más alta corresponde al
 
 Debido a que la interacción de Coulomb penaliza los estados con más de un electrón, cabría esperar que la probabilidad de vacío $\rho_{000}$ fuese del mismo orden de magnitud que $\rho_{100},\rho_{010},\rho_{001}$. Sin embargo, debido a la constante inyección de partículas inducida por la diferencia de potencial, esta probabilidad resulta ser significativamente menor. 
 
-Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $eV/T \approx 2.4$. Para valores $eV/T \lessapprox 2.4$, la configuración con interacción Coulomb entre los puntos $R$ y $D$ (representada por $\rho_{011}$) es más probable que $\rho_{101}$, esto favorece a que el sistema se encuentre en la configuración de la Figura \ref{img:dinamica1}, y por lo tanto es esperable que favorezca el comportamiento tipo Demonio. En cambio, para $eV/T \gtrapprox 2.4$, la ocupación $\rho_{011}$ se hace menos probable, indicando una menor interacción entre los sitios $R$ y $D$, por lo tanto el sistema deja de comportarse como Demonio.
+Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $eV/T \approx 2.4$. Para valores $eV/T \lessapprox 2.4$, la configuración con interacción Coulomb entre los puntos $R$ y $D$ (representada por $\rho_{011}$) es más probable que $\rho_{101}$, esto favorece a que el sistema se encuentre en la configuración de la Figura \ref{img:dinamica1}, y por lo tanto es esperable que favorezca el comportamiento tipo Demonio. En cambio, para $eV/T \gtrapprox 2.4$, la ocupación $\rho_{011}$ se hace menos probable, indicando una menor interacción entre los sitios $R$ y $D$, por lo tanto se suprime el comportamiento tipo Demonio.
 
 
 \insertimage[\label{img:densitymatrix}]{ejemplos/matrixdemon.pdf}{scale=0.45}{Elementos diagonales de la matriz densidad en función de $eV/T$.}
 
 El comportamiento de un Demonio de Maxwell autónomo se puede corrobar analizando las cantidades termodinámicas del sistema. En la Figura~\ref{img:fig1resultado} se muestran: (a) los flujos de calor correspondientes a cada reservorio, y (b) las corrientes de partículas asociadas. Cabe destacar que, dado que no existe un término de hopping entre el sistema y el demonio, la corriente de partículas en el demonio es nula, $\dot{N}_{d} = 0$. Además, por conservación de partículas, se cumple que $\dot{N}_{L} = -\dot{N}_{R}$, lo cual implica que la influencia del demonio sobre el sistema ocurre exclusivamente a través de flujos de energía o información.
+
+Existe un régimen \( eV/T \lessapprox 2.4 \) donde el sistema \( LR \) recibe calor de los reservorios \( L \) y \( R \), es decir, \( J_L, J_R > 0 \). En este mismo régimen, el demonio disipa calor en su respectivo reservorio, \( J_D < 0 \). Este comportamiento es consistente con la interpretación física del demonio.
 
 Dado que $\mu_L - \mu_R = eV$, se esperaría que $\dot{N}_L > 0$ para todo valor de $eV$. No obstante, en el régimen $eV/T \lessapprox 2.4$, se observa que $\dot{N}_L < 0$, lo que indica un flujo de partículas en contra del gradiente de potencial. Este cambio de signo en la corriente coincide con el cruce entre las probabilidades $\rho_{101}$ y $\rho_{011}$, lo que es consistente con el comportamiento de Demonio de Maxwell. En particular, como se ilustró en la Figura~\ref{img:dinamica1}, dicho régimen requiere una interacción simultánea entre los puntos $R$ y $D$.
 
@@ -1520,7 +1524,7 @@ Si se analiza únicamente el subsistema $LR$, la existencia de una corriente con
 
 \insertimage[\label{img:fig2resultado}]{ejemplos/entropyapparentdemon.pdf}{scale=0.45}{Tasa de producción de entropía aparente del sistema $LR$($\dot{\sigma}^{o}_{LR}$) en función de $eV/T$.}
 
-Donde se observa que para $eV/T \lessapprox 3$, la tasa de producción de entropía aparente $\dot{\sigma}^{o}_{LR}$ es menor a cero, lo que implica una violación aparente de la segunda ley de la termodinámica. Sin embargo, al incorporar la contribución del flujo de información en el cálculo de la tasa de producción de entropía \ref{sec4:localentropyquantum}, se obtiene la Figura \ref{img:fig3resultado}, en la cual se verifica que la producción total de entropía en el sistema $LR$ permanece siempre positiva.
+Donde se observa que para $eV/T \lessapprox 3$, la tasa de producción de entropía aparente $\dot{\sigma}^{o}_{LR}$ es menor a cero, lo que implica una violación aparente de la segunda ley de la termodinámica. Sin embargo, al incluir la contribución del flujo de información en el cálculo de la tasa de producción de entropía, dada por la ecuación~\eqref{sec4:localentropyquantum}, se obtiene la Figura~\ref{img:fig3resultado}, en la que se verifica que la producción total de entropía en el sistema $LR$ permanece siempre positiva.
 
 \insertimage[\label{img:fig3resultado}]{ejemplos/entropyrialdemon.pdf}{scale=0.47}{Tasa de producción de entropía del sistema $LR$($\dot{\sigma}_{LR}$) en función de $eV/T$.}
 
@@ -1552,17 +1556,11 @@ Al estar cada punto cuántico acoplado a un reservorio distinto, es posible desc
 
 Es interesante notar que, cuando \( eV/T \gtrapprox 3.6 \), el menor flujo de información corresponde al punto cuántico \( R \), lo que implica que este entrega más información al sistema. En cambio, para \( 1 \lessapprox eV/T \lessapprox 3.6 \), el flujo de información menor proviene del sitio \( L \), de modo que este es el que aporta más información en ese rango. Esta transición se correlaciona con lo observado en la Figura~\ref{img:densitymatrix}: para \( eV/T \gtrapprox 3.6 \) se cumple que \(\rho_{001} < \rho_{010} < \rho_{100}\), lo que indica una mayor probabilidad de ocupación del sitio \( L \). Además, en este mismo rango de parámetros  ($eV/T \gtrapprox 3.6$) la probabilidad del estado \( \rho_{110} \) supera a la de \( \rho_{011} \), lo que implica que la ocupación simultánea de \( L \) y \( R \) ---y por ende su monitoreo mutuo--- es más probable que la de \( R \) y \( D \). Lo anterior puede interpretarse como que, en este régimen, las correlaciones entre \( L \) y \( R \) se intensifican. Pues, en el estado \( \rho_{110} \) los sitios \( L \) y \( R \) interactúan mediante energía de Coulomb, siendo está una interacción mayor al \textit{hopping} ($U_{f}>g$), lo que facilita que \( L \) obtenga información de \( R \) y, en consecuencia, contribuya positivamente a su flujo de información, de modo que \( \dot{I}_{L} > \dot{I}_{R} \). Para diferencias de potencial pequeñas (\( eV/T \lessapprox 1 \)), ambos flujos de información son prácticamente idénticos (\( \dot{I}_{L} \approx \dot{I}_{R} \)).
 
-%Este comportamiento es consistente con la intuición física: un mayor potencial favorece la ocupación del punto cuántico \( L \), mientras que la asimetría en las tasas de túnel está diseñada para promover la ocupación de \( R \). Al pasar cierto umbral de $eV/T$, se inhibe por completo la eficacia de la dinámica asociada al mecanismo tipo Demonio de Maxwell, descrita en las Figuras~\ref{img:dinamica1},~\ref{img:dinamica2} y~\ref{img:dinamica3}.
-
-%La clave de este mecanismo es que el subsistema \( D \) debe ser capaz de monitorear el estado de ocupación del punto \( R \), para luego permitir una transición hacia \( L \) cuando se encuentra desocupado. Sin embargo, al aumentar la probabilidad de ocupación de \( L \), se interrumpe esta dinámica, lo que reduce el flujo de información desde el sitio $L$ y por lo tanto pasa a entregar más información. Como consecuencia, el flujo informacional asociado a \( L \) crece con \( eV/T \), llegando a superar el de \( R \).
-
 Un aspecto relevante de esta dinámica es la posible presencia de efectos cuánticos. Para examinar este fenómeno, se representan dos cantidades: la norma-$l_{1}$ de coherencia \( \mathcal{C}_{l_{1}} \), que permite cuantificar la coherencia cuántica en el subsistema \( LR \), y la concurrencia, que sirve como medida del entrelazamiento entre estados del subsistema $LR$ $(|1,0>,|0,1>)$.
 
 \insertimage[\label{img:fig5resultado}]{ejemplos/quantumdemon.pdf}{scale=0.40}{En línea azul la norma-$l_{1}$ de la coherencia $\mathcal{C}_{l_{1}}$ y en línea rojas la concurrencia $\mathcal{C}_{on}$.}
 
 Se observan dos comportamientos relevantes. Primero, para \( eV/T \lessapprox 1 \), la concurrencia \( \mathcal{C}_{\text{on}} > 0 \), lo que indica la presencia de entrelazamiento entre los sitios \( L \) y \( R \). Segundo, al analizar la coherencia, se aprecia que para \( eV/T \lessapprox 2.4 \) esta disminuye progresivamente hasta anularse, y luego comienza a incrementarse, a partir de \( eV/T \gtrapprox 2.4 \). Este comportamiento es particularmente significativo, ya que la coherencia se anula en un punto cercano al valor en el que la corriente de partículas invierte su dirección. 
-
-%Otra característica importante de está dinámica, es que si se compara \ref{img:fig5resultado} con \ref{img:transporte5}, la coherencia y concurrencia alcanzan valores más alto para el caso en que las tasas de túnel se mantienen constantes, esto es esperable, pues el transporte de electrones ocurre de una forma más coherente, que en el caso actual.
 
 Dado el comportamiento tipo Demonio de Maxwell del sistema, resulta pertinente examinar cómo las cantidades termodinámicas se ven influenciadas por la coherencia, el parámetro del Hamiltoniano $\hat{H}_{S}$ que se encarga de inducir coherencia en el sistema, es el acoplamiento \( g \). Por ende, en la Figura \ref{img:fig6resultado} se muestran las cantidades termodinámicas en función del parámetro \( g/\kappa_{L} \) 
 
@@ -1580,12 +1578,11 @@ Un comportamiento notable se presenta cuando el acoplamiento alcanza valores com
 
 Simultáneamente, los flujos de información individuales tienden a igualarse, es decir, \( \dot{I}_{L} \approx \dot{I}_{R} \), lo que sugiere que, en condiciones de entrelazamiento y coherencia elevadas, ambos puntos cuánticos contribuyen de manera equilibrada en el flujo de información del sistema $LR$. 
 
-
 \label{sec5:demonio1}
 
 \newpage 
 
-\section{Comparación con caso clásico}
+\subsection{Comparación con caso clásico}
 Una de las ventajas del formalismo presentado en \cite{potts2021thermodynamically} es que permite incluir términos no seculares en la dinámica del sistema. Esto posibilita la aparición de coherencias y entrelazamiento no nulos en el régimen \( g \sim \kappa_{L} \). La pregunta natural que surge es si estos efectos cuánticos representan una ventaja para el funcionamiento del demonio. Para abordar esta cuestión, se puede considerar una evolución semiclásica, limitada a las componentes diagonales de la matriz de densidad del sistema. Inicialmente se considera una evolución descrita por el superoperador
 
 \begin{equation*}
