@@ -41,7 +41,8 @@ Finalmente, se construye un modelo semiclásico basado en el formalismo de Nakaj
 
 %%ojo aquí
 
-La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introducen los conceptos fundamentales necesarios para describir la evolución de un sistema cuántico, ya sea como sistema cerrado —mediante la ecuación de Liouville— o como sistema abierto —a través de la ecuación de Lindblad en la aproximación secular. El Capítulo 2 está dedicado al desarrollo del Formalismo de Estadística de Conteo, el cual será empleado para derivar la ecuación de Lindblad termodinámicamente consistente propuesta por Potts. En el Capítulo 3 se introduce el concepto de flujo de información, discutiendo su influencia en la formulación de la segunda ley de la termodinámica tanto en contextos clásicos como cuánticos. Finalmente, en el Capítulo 4 se describe la dinámica del sistema compuesto por tres puntos cuánticos utilizando la ecuación de Lindblad derivada en esta tesis. Además, se analizan los resultados más relevantes obtenidos para dos configuraciones distintas del modelo. En la cual una de ellas se comporta como un Demonio de Maxwell autónomo. 
+La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introducen los conceptos fundamentales necesarios para describir la evolución de un sistema cuántico, ya sea como sistema cerrado —mediante la ecuación de Liouville— o como sistema abierto —a través de la ecuación de Lindblad en la aproximación secular. El Capítulo 2 está dedicado al desarrollo del Formalismo de Estadística de Conteo, el cual será empleado para derivar la ecuación de Lindblad termodinámicamente consistente propuesta por Potts. En el Capítulo 3 se introduce el concepto de flujo de información, discutiendo su influencia en la formulación de la segunda ley de la termodinámica tanto en contextos clásicos como cuánticos. Finalmente, en el Capítulo 4 se describe la dinámica del sistema compuesto por tres puntos cuánticos utilizando la ecuación de Lindblad derivada en esta tesis. Además, se analizan los resultados más relevantes obtenidos para dos configuraciones distintas del modelo, en una de las cuales el sistema se comporta como un Demonio de Maxwell autónomo.
+
 
 
 
@@ -716,9 +717,11 @@ con
 \end{equation*}
 donde
 \begin{equation*}
-    \hat{S}_{\alpha,k;q}(t) = \sum_{\{j:\,\omega_{j}\in x_{q}\}} e^{-i\omega_{j}t}\,\hat{S}_{\alpha,k;j},
+    \hat{S}_{\alpha,k;q}(t) = \sum_{\{j:\,\omega_{j}\in x_{q}\}} e^{-i\omega_{j}t}\,\hat{S}_{\alpha,k;j}.
 \end{equation*}
-y el Hamiltoniano de \textit{Lamb shift}
+
+El Hamiltoniano de \textit{Lamb shift} es 
+
 \begin{equation*}
     \hat{H}_{LS}(t) = \sum_{\alpha,k;q} S^{\alpha}_{k}(\omega_{q})\,
     \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),
@@ -777,7 +780,7 @@ con
 
 Existen dos límites de interés. (i) Si todas las frecuencias satisfacen 
 \(|\omega_{j}-\omega_{j'}|\gg 1/\tau_{R}\),
-entonces \(\mathcal{D}[\hat{S}_{\alpha,k;q}]=\mathcal{D}[\hat{S}_{\alpha,k;j}]\) y la aproximación secular es válida para todas las transiciones, recuperándose la ecuación de Lindblad \ref{eqsec2:lindbladS}. (ii) Si 
+entonces \(\mathcal{D}[\hat{S}_{\alpha,k;q}]=\mathcal{D}[\hat{S}_{\alpha,k;j}]\) y la aproximación secular es válida para todas las transiciones, recuperándose la ecuación de Lindblad \eqref{eqsec2:lindbladS}. (ii) Si 
 \(|\omega_{j}-\omega_{j'}|\ll 1/\tau_{B}\),
 todas las frecuencias pertenecen a un único subconjunto; en tal caso \(\hat{S}_{\alpha,k;q}=\hat{S}_{\alpha,k}\) y la ecuación maestra queda descrita por operadores locales (ecuación maestra local) \cite{wichterich2007modeling}. A partir de este punto, la ecuación \eqref{sec2schrodingerthermo} será denominada ecuación maestra \textit{semilocal}.
 
@@ -796,48 +799,6 @@ Con este fin, se introduce el Hamiltoniano termodinámico $\hat{H}_{TD}$, el cua
 \end{equation*}
 para todas las frecuencias $\omega_{j} \in x_{q}$. 
 Dicho Hamiltoniano se construye a partir de $\hat{H}_{S}$, modificando sus autovalores de manera que todas las transiciones dentro de un mismo conjunto $x_q$ compartan una frecuencia efectiva $\omega_{q}$.
-
-\subsection*{Primera ley}
-
-En el caso global, la energía interna se define como
-\begin{equation*}
-    E_{g}(t) = \text{Tr}\{\hat{H}_{S}\hat{\rho}(t)\}.
-\end{equation*}
-
-En la ecuación maestra semilocal, la energía interna se redefine en función del Hamiltoniano termodinámico:
-\begin{equation}
-    E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t)\}.
-    \label{sec2:energyeq}
-\end{equation}
-
-La corriente de calor y la potencia entregadas por el baño $\alpha$ en el caso global se expresan como
-\begin{equation*}
-    J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\}, 
-    \hspace{12mm} 
-    \dot{W}_{\alpha,g}(t) = \mu_{\alpha}\,\text{Tr}\{\hat{N}_{S}\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\},
-\end{equation*}
-donde $\mathcal{L}_{\alpha,g}$ es el superoperador de Lindblad asociado al baño $\alpha$, correspondiente a la ecuación maestra global \ref{eqsec2:lindbladS}.
-
-De manera análoga, para la ecuación semilocal se obtiene
-\begin{equation}
-    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)\}, 
-    \hspace{12mm} 
-    \dot{W}_{\alpha}(t) = \mu_{\alpha}\,\text{Tr}\{\hat{N}_{S}\,\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)\}.
-    \label{sec2:heatworkeq}
-\end{equation}
-
-Estas definiciones cumplen automáticamente con la primera ley de la termodinámica. 
-En efecto, al derivar la energía interna en el caso global se obtiene
-\begin{equation*}
-    \partial_{t}E_{g}(t) = \text{Tr}\{\hat{H}_{S}\,\partial_{t}\hat{\rho}_{S}(t)\} 
-    = \sum_{\alpha}\big[J_{\alpha,g}(t) + \dot{W}_{\alpha,g}(t)\big].
-\end{equation*}
-De forma análoga, utilizando la relación de conmutación $[\hat{H}_{TD},\hat{H}_{S}+\hat{H}_{LS}] = 0$, 
-se obtiene para el caso semilocal
-\begin{equation*}
-    \partial_{t}E(t) = \text{Tr}\{\hat{H}_{TD}\,\partial_{t}\hat{\rho}_{S}(t)\} 
-    = \sum_{\alpha}\big[J_{\alpha}(t) + \dot{W}_{\alpha}(t)\big].
-\end{equation*}
 
 \subsection*{Ley cero}
 
@@ -860,6 +821,50 @@ y, en condiciones de equilibrio, el estado de Gibbs está dado por
 \begin{equation*}
     \hat{\rho}_{G} = \frac{e^{-\beta(\hat{H}_{TD} - \mu \hat{N}_{S})}}{\text{Tr}\{ e^{-\beta(\hat{H}_{TD} - \mu \hat{N}_{S})}\}}.
 \end{equation*}
+
+
+\subsection*{Primera ley}
+
+En el caso global, la energía interna se define como
+\begin{equation*}
+    E_{g}(t) = \text{Tr}\{\hat{H}_{S}\hat{\rho}(t)\}.
+\end{equation*}
+
+En la ecuación maestra semilocal, la energía interna se redefine en función del Hamiltoniano termodinámico:
+\begin{equation}
+    E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t)\}.
+    \label{sec2:energyeq}
+\end{equation}
+
+La corriente de calor y la potencia entregadas por el baño $\alpha$ en el caso global se expresan como
+\begin{equation*}
+    J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\}, 
+    \hspace{12mm} 
+    \dot{W}_{\alpha,g}(t) = \mu_{\alpha}\,\text{Tr}\{\hat{N}_{S}\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\},
+\end{equation*}
+donde $\mathcal{L}_{\alpha,g}$ es el superoperador de Lindblad asociado al baño $\alpha$, correspondiente a la ecuación maestra global \eqref{eqsec2:lindbladS}.
+
+De manera análoga, para la ecuación semilocal se obtiene
+\begin{equation}
+    J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)\}, 
+    \hspace{12mm} 
+    \dot{W}_{\alpha}(t) = \mu_{\alpha}\,\text{Tr}\{\hat{N}_{S}\,\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)\}.
+    \label{sec2:heatworkeq}
+\end{equation}
+
+Estas definiciones cumplen automáticamente con la primera ley de la termodinámica. 
+En efecto, al derivar la energía interna en el caso global se obtiene
+\begin{equation*}
+    \partial_{t}E_{g}(t) = \text{Tr}\{\hat{H}_{S}\,\partial_{t}\hat{\rho}_{S}(t)\} 
+    = \sum_{\alpha}\big[J_{\alpha,g}(t) + \dot{W}_{\alpha,g}(t)\big].
+\end{equation*}
+De forma análoga, utilizando la relación de conmutación $[\hat{H}_{TD},\hat{H}_{S}+\hat{H}_{LS}] = 0$, 
+se obtiene para el caso semilocal
+\begin{equation*}
+    \partial_{t}E(t) = \text{Tr}\{\hat{H}_{TD}\,\partial_{t}\hat{\rho}_{S}(t)\} 
+    = \sum_{\alpha}\big[J_{\alpha}(t) + \dot{W}_{\alpha}(t)\big].
+\end{equation*}
+
 
 \subsection*{Segunda ley}
 
@@ -958,7 +963,7 @@ La corriente de probabilidad se define como
 J_{x,x'}^{y,y'} = W_{x,x'}^{y,y'}p(x',y') - W_{x',x}^{y',y}p(x,y).
 \]
 
-A partir de esta definición,la ecuación maestra puede reescribirse en la forma
+A partir de esta definición, la ecuación maestra puede reescribirse en la forma
 \[
 d_{t}p(x,y) = \sum_{x',y'}J_{x,x'}^{y,y'} = \sum_{x'}J_{x,x'}^{y} + \sum_{y'}J_{x}^{y,y'}.
 \]
@@ -986,12 +991,12 @@ De esta forma, la variación de \(\mathcal{A}\) puede interpretarse como la suma
 
 El sistema conjunto \(XY\), al estar en contacto con un baño térmico, constituye un sistema abierto cuya evolución se rige por las leyes de la termodinámica en condiciones fuera del equilibrio. Entre ellas, la segunda ley exige que la tasa de producción de entropía sea siempre no negativa, es decir,
 \begin{equation*}
-    \dot{\sigma} = \partial_{t}S^{XY} + \dot{S}_{r} \geq 0. 
+    \dot{\sigma} = \partial_{t}S_{XY} + \dot{S}_{r} \geq 0. 
 \end{equation*}
 
-Aquí, \( S^{XY} = - \sum_{x,y} p(x,y) \ln p(x,y) \) corresponde a la entropía de Shannon del sistema conjunto. Su derivada temporal puede expresarse como
+Aquí, \( S_{XY} = - \sum_{x,y} p(x,y) \ln p(x,y) \) corresponde a la entropía de Shannon del sistema conjunto. Su derivada temporal puede expresarse como
 \begin{equation*}
-    \partial_{t}S^{XY} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)}.
+    \partial_{t}S_{XY} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)}.
 \end{equation*}
 
 El cambio de entropía en el ambiente viene dado por
@@ -1045,13 +1050,13 @@ lo que permite identificar las tasas de producción de entropía locales:
 
 En términos de los flujos de información, estas ecuaciones toman la forma
 \begin{align*}
-    \dot{\sigma}_{X} & = \partial_{t}S^{X} + \dot{S}_{r}^{X} - \dot{I}_{X} \geq 0, \\
-    \dot{\sigma}_{Y} & = \partial_{t}S^{Y} + \dot{S}_{r}^{Y} - \dot{I}_{Y} \geq 0.
+    \dot{\sigma}_{X} & = \partial_{t}S_{X} + \dot{S}_{r}^{X} - \dot{I}_{X} \geq 0, \\
+    \dot{\sigma}_{Y} & = \partial_{t}S_{Y} + \dot{S}_{r}^{Y} - \dot{I}_{Y} \geq 0.
 \end{align*}
 
 Estas expresiones muestran explícitamente cómo los flujos de información modifican la producción de entropía local en cada subsistema. En particular, si se ignora la interacción entre \( X \) e \( Y \) y sólo se monitorea \( X \), la tasa de producción de entropía asignada sería
 \[
-\dot{\sigma}_{X}^0 = \partial_{t} S^{X} + \dot{S}_{r}^{X},
+\dot{\sigma}_{X}^0 = \partial_{t} S_{X} + \dot{S}_{r}^{X},
 \]
 la cual puede ser negativa, reflejando una violación aparente de la segunda ley. Este fenómeno se interpreta como la acción efectiva de un Demonio de Maxwell, que aprovecha información oculta en las correlaciones.
 
@@ -1190,7 +1195,7 @@ En ausencia de trabajo mecánico (Hamiltoniano independiente del tiempo), la ene
 \dot{E}_{\alpha}=J_{\alpha}+\dot{W}_{\alpha}.
 \]
 
-Multiplicando \eqref{sec4:localentropy} por $T_{\alpha}=\beta_{\alpha}^{-1}$ y uy utilizando la descomposición de energía dada en la expresión anterior, se obtienen las inecuaciones locales de energía libre:
+Multiplicando la ecuación \eqref{sec4:localentropy} por $T_{\alpha}=\beta_{\alpha}^{-1}$ y utilizando la descomposición de energía dada en la expresión anterior, se obtienen las inecuaciones locales de energía libre:
 
 \begin{equation}
     T_{\alpha}\dot{\sigma}_{\alpha,g}
@@ -1266,10 +1271,10 @@ donde el flujo de información asociado a cada subsistema $i$ se define como
 \[
     \dot{I}_{i} = \partial_{t} S_{i} - \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}}.
 \]
-Al sustituir $\sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} = \partial_{t} S^{i} - \dot{I}_{i}$ en las expresiones para las producciones de entropía locales, se obtiene
+Al sustituir $\sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} = \partial_{t} S_{i} - \dot{I}_{i}$ en las expresiones para las producciones de entropía locales, se obtiene
 \begin{align}
-    \dot{\sigma}^{X} = \partial_{t}S^{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}_{X} \geq 0, \\
-    \dot{\sigma}^{Y} = \partial_{t}S^{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}_{Y} \geq 0.
+    \dot{\sigma}^{X} = \partial_{t}S_{X} - \sum_{\alpha_{X}} \beta_{\alpha_{X}} J_{\alpha_{X}} - \dot{I}_{X} \geq 0, \\
+    \dot{\sigma}^{Y} = \partial_{t}S_{Y} - \sum_{\alpha_{Y}} \beta_{\alpha_{Y}} J_{\alpha_{Y}} - \dot{I}_{Y} \geq 0.
     \label{sec4:localentropyquantum}
 \end{align}
 Este resultado es análogo al obtenido en la descripción clásica; sin embargo, al estar formulado en términos de entropías de von Neumann permite incorporar de manera natural efectos cuánticos, como las correlaciones y coherencias, que resultan esenciales para la caracterización de los flujos de información en sistemas cuánticos.
@@ -1312,7 +1317,7 @@ Estos flujos de información y su influencia en la termodinámica de sistemas cu
 
 En este capítulo se estudia un sistema compuesto por tres puntos cuánticos acoplados a tres reservorios térmicos que, bajo condiciones apropiadas, puede exhibir un comportamiento característico de un Demonio de Maxwell autónomo. La dinámica se describe mediante una ecuación maestra en forma de Lindblad (véase \ref{sec2lindbladconsistency}), y se analizan las condiciones en las que la información intercambiada entre los subsistemas impulsa transporte en contra del gradiente químico. Asimismo, se cuantifican magnitudes termodinámicas relevantes (corrientes de partículas, flujos de calor, potencia) y se discute el papel de las coherencias cuánticas.
 
-La organización es la siguiente. En la sección~\ref{puntoscuanticos} se presenta una breve reseña experimental de los puntos cuánticos. En la sección~\ref{modeloteorico} se introduce el modelo propuesto; en la sección~\ref{sec5:modelo} se detalla el Hamiltoniano del sistema reducido y su entorno, junto con el generador de Lindblad que se utilizará (con base en \ref{sec2lindbladconsistency}). A continuación, la sección~\ref{explicaciondem} ofrece una explicación heurística del Demonio de Maxwell autónomo. La sección~\ref{resultados} reúne los resultados y se divide en dos partes: primero, la sección~\ref{sec5:transporte} analiza el régimen de transporte cuántico con tasas de túnel independientes de la ocupación; luego, la sección~\ref{sec5:demonio1} establece las condiciones bajo las cuales el sistema actúa como un Demonio de Maxwell autónomo. Finalmente, en la sección~\ref{sec5:demonio} se compara este comportamiento con su contraparte clásica, destacando las diferencias inducidas por efectos cuánticos.
+La organización es la siguiente. En la sección~\ref{puntoscuanticos} se presenta una breve reseña experimental de los puntos cuánticos. En la sección~\ref{modeloteorico} se introduce el modelo propuesto; en la sección~\ref{sec5:modelo} se detalla el Hamiltoniano del sistema reducido y su entorno, junto con el generador de Lindblad que se utilizará (con base en \ref{sec2lindbladconsistency}). A continuación, la sección~\ref{explicaciondem} ofrece una explicación heurística del Demonio de Maxwell autónomo. La sección~\ref{resultados} reúne los resultados y se divide en dos partes: primero, la sección~\ref{sec5:transporte} analiza el régimen de transporte cuántico con tasas de túnel independientes de la ocupación; luego, la sección~\ref{sec5:demonio1} estudia el caso en que las tasas de tunel dependen de la ocupación de $D$, con esto establece las condiciones bajo las cuales el sistema actúa como un Demonio de Maxwell autónomo. Finalmente, en la sección~\ref{sec5:demonio} se compara este comportamiento con su contraparte clásica, destacando las diferencias inducidas por efectos cuánticos.
 
 \section{Puntos cuánticos}
 \label{puntoscuanticos}
@@ -1328,7 +1333,7 @@ En la Figura~\ref{img:dot} se muestra un esquema simplificado de un punto cuánt
 
 \section{Modelo teórico}
 \label{modeloteorico}
-Con el fin de extender el modelo estudiado en \cite{horowitz2014thermodynamics} a un contexto cuántico, se considera un sistema reducido compuesto por tres puntos cuánticos acoplados a tres reservorios térmicos, como se ilustra en la Figura~\ref{img:sistema3puntos}. El sistema incluye un punto central $D$, que actuará como ``demonio'', y dos puntos laterales $L$ y $R$, que constituyen el subsistema controlado. Cada punto se acopla a un baño térmico distinto, y las interacciones entre ellos permiten modelar dinámicas de transporte y correlaciones cuánticas.
+Con el fin de extender el modelo estudiado en \cite{horowitz2014thermodynamics} a un contexto cuántico, consideramos un sistema reducido compuesto por tres puntos cuánticos acoplados a tres reservorios térmicos, como se ilustra en la Figura~\ref{img:sistema3puntos}. El sistema incluye un punto central $D$, que actuará como ``demonio'', y dos puntos laterales $L$ y $R$, que constituyen el subsistema controlado. Cada punto se acopla a un baño térmico distinto, y las interacciones entre ellos permiten modelar dinámicas de transporte y correlaciones cuánticas.
 
 \insertimage[\label{img:sistema3puntos}]{ejemplos/semilocal.pdf}{scale=0.36}{Esquema del sistema reducido compuesto por tres puntos cuánticos, modelados como tres niveles de energía. Estos niveles presentan interacción de Coulomb repulsiva entre sí y cada uno está acoplado a un baño térmico distinto.}
 
@@ -1347,7 +1352,7 @@ El Hamiltoniano del sistema de tres puntos cuánticos, en segunda cuantización,
     \hat{H}_{S} & = \epsilon_{D}\hat{n}_{D} + \epsilon \hat{n}_{L} + \epsilon \hat{n}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
           & \quad + U(\hat{n}_{D}\hat{n}_{L} + \hat{n}_{D}\hat{n}_{R} )  + U_{f}\hat{n}_{R}\hat{n}_{L},
 \end{align*}
-donde $\hat{n}_{i} = \hat{d}^{\dagger}_{i} \hat{d}_{i}$ es el operador número del sitio $i$, y los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
+donde los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
 
 \begin{equation*}
     \{\hat{d}_{\alpha},\hat{d}_{\beta} \} = 0, \hspace{10mm} \{\hat{d}^{\dagger}_{\alpha}, \hat{d}_{\beta} \} = \delta_{\alpha \beta}.
@@ -1421,8 +1426,8 @@ donde cada disipador $\mathcal{L}_\alpha$ depende de los operadores locales de s
 
 \begin{align*}
 \mathcal{L}_D &= \kappa_D(\epsilon_D)\big( f_D(\epsilon_D)\mathcal{D}[\hat{d}^\dagger_D(1-\hat{n}_L)(1-\hat{n}_R)] + [1-f_D(\epsilon_D)]\mathcal{D}[\hat{d}_D(1-\hat{n}_L)(1-\hat{n}_R)] \big) \\ 
-&+ \kappa_D(\epsilon_D+U)\big( f_D(\epsilon_D+U)\mathcal{D}[\hat{d}^\dagger_D\hat{n}_L(1-\hat{n}_R)] + [1-f_D(\epsilon_D+U)]\mathcal{D}[\hat{d}_D\hat{n}_L(1-\hat{n}_R)] \big) \\
-&+ \kappa_D(\epsilon_D+U)\big( f_D(\epsilon_D+U)\mathcal{D}[\hat{d}^\dagger_D\hat{n}_R(1-\hat{n}_L)] + [1-f_D(\epsilon_D+U)]\mathcal{D}[\hat{d}_D\hat{n}_R(1-\hat{n}_L)] \big) \\
+&+ \kappa_D(\epsilon_D+U) f_D(\epsilon_D+U)\mathcal{D}[\hat{d}^\dagger_D(\hat{n}_L(1-\hat{n}_R) + \hat{n}_R(1-\hat{n}_L) )] \\
+&+ \kappa_D(\epsilon_D+U) [1-f_D(\epsilon_D+U)]\mathcal{D}[\hat{d}_D(\hat{n}_L(1-\hat{n}_R) + \hat{n}_R(1-\hat{n}_L))]  \\
 &+ \kappa_D(\epsilon_D+2U)\big( f_D(\epsilon_D+2U)\mathcal{D}[\hat{d}^\dagger_D\hat{n}_R\hat{n}_L] + [1-f_D(\epsilon_D+2U)]\mathcal{D}[\hat{d}_D\hat{n}_R\hat{n}_L] \big).
 \end{align*}
 
@@ -1458,7 +1463,7 @@ En la primera etapa, la elección $\epsilon_D = \mu_D - U/2$ favorece la ocupaci
 
 \insertimage[\label{img:dinamica2}]{ejemplos/diseño2}{scale=0.6}{Segunda etapa: el \textit{hopping} $g$ genera una superposición coherente entre los sitios $L$ y $R$, indicada mediante círculos grises.}
 
-En la segunda etapa, el acoplamiento $g$ permite el intercambio coherente de electrones entre los niveles $L$ y $R$. Este proceso introduce coherencias cuánticas que son esenciales para la dinámica del sistema.  
+En la segunda etapa, el acoplamiento $g$ permite el intercambio coherente de electrones entre los niveles $L$ y $R$. Este proceso introduce coherencias cuánticas que son importantes para la dinámica del sistema.  
 
 \insertimage[\label{img:dinamica3}]{ejemplos/diseño3}{scale=0.6}{Tercera etapa: el electrón se transporta preferentemente hacia el reservorio $L$.}
 
@@ -1501,7 +1506,7 @@ Para completar el análisis termodinámico, se utilizan las relaciones de la pri
 
 \insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale=0.43}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
 
-En el estado estacionario, la condición $\partial_t E = 0$ implica que $\dot{E}_{LR} = -\dot{E}_D$. Esto se corrobora en la Figura~\ref{img:transporte4}, donde el flujo de energía $\dot{E}_{LR}$ resulta positivo y $\dot{E}_D$ negativo. Como $\dot{W}_{D} = 0$, se deduce que el flujo de calor hacia el demonio está dado por $J_D = \dot{E}_D < 0$, es decir, el reservorio $D$ absorbe calor. En consecuencia, el sistema $LR$ recibe energía de los reservorios $L$ y $R$, la transfiere al subsistema $D$, y esta es finalmente disipada en su respectivo baño térmico. Este comportamiento concuerda con la primera ley de la termodinámica, ya que la energía suministrada por los reservorios de mayor temperatura ($T_L = T_R > T_D$) se conserva y fluye hacia el reservorio de menor temperatura.  
+En el estado estacionario, la condición $\partial_t E = 0$ implica que $\dot{E}_{LR} = -\dot{E}_D$. Esto se corrobora en la Figura~\ref{img:transporte4}, donde el flujo de energía $\dot{E}_{LR}$ resulta positivo y $\dot{E}_D$ negativo. Como $\dot{W}_{D} = 0$, se deduce que el flujo de calor hacia el demonio está dado por $J_D = \dot{E}_D < 0$, es decir, el reservorio $D$ absorbe calor. En consecuencia, el sistema $LR$ recibe energía de los reservorios $L$ y $R$, la transfiere al subsistema $D$, y esta es finalmente disipada en su respectivo baño térmico. Este comportamiento concuerda con la primera ley de la termodinámica, ya que la energía suministrada por los reservorios de mayor temperatura ($T_L = T_R = T > T_D$) se conserva y fluye hacia el reservorio de menor temperatura.  
 
 Con el fin de analizar los efectos cuánticos en el estado estacionario, se calculan dos cantidades relevantes. La primera es la norma-$l_{1}$, $\mathcal{C}_{l_{1}}$, que cuantifica las coherencias en el sistema $LR$:  
 
@@ -1540,7 +1545,7 @@ Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $
 
 \insertimage[\label{img:densitymatrix}]{ejemplos/matrixdemon.pdf}{scale=0.45}{Elementos diagonales de la matriz densidad en función de $eV/T$. Los resultados se obtuvieron considerando temperaturas $T = 100$ y $T_D = 2$, niveles de energía $\epsilon = 0$ y $\epsilon_D = \mu_D - U/2$ con potencial químico $\mu_D = 2$, tasas de túnel $\kappa_L = \kappa^{U}_{R} = 1/100$, $\kappa_R = \kappa^{U}_{L} = 1/600$, $\kappa_D =  1/50$, acoplamiento entre los sitios $g = 5/1000$ e interacciones de Coulomb $U = 40$ y $U_f = 500$.}
 
-El comportamiento de un Demonio de Maxwell autónomo se puede corrobar analizando las cantidades termodinámicas del sistema. En la Figura~\ref{img:fig1resultado} se muestran: (a) los flujos de calor correspondientes a cada reservorio, y (b) las corrientes de partículas asociadas. Cabe destacar que, dado que no existe un término de hopping entre el sistema y el demonio, la corriente de partículas en el demonio es nula, $\dot{N}_{d} = 0$. Además, por conservación de partículas, se cumple que $\dot{N}_{L} = -\dot{N}_{R}$, lo cual implica que la influencia del demonio sobre el sistema ocurre exclusivamente a través de flujos de energía o información.
+El comportamiento de un Demonio de Maxwell autónomo se puede corrobar analizando las cantidades termodinámicas del sistema. En la Figura~\ref{img:fig1resultado} se muestran: (a) los flujos de calor correspondientes a cada reservorio, y (b) las corrientes de partículas asociadas. Cabe destacar que, dado que no existe un término de hopping entre el sistema y el demonio, la corriente de partículas en el demonio es nula, $\dot{N}_{D} = 0$. Además, por conservación de partículas, se cumple que $\dot{N}_{L} = -\dot{N}_{R}$, lo cual implica que la influencia del demonio sobre el sistema ocurre exclusivamente a través de flujos de energía o información.
 
 Existe un régimen \( eV/T \lessapprox 2.4 \) donde el sistema \( LR \) recibe calor de los reservorios \( L \) y \( R \), es decir, \( J_L, J_R > 0 \). En este mismo régimen, el demonio disipa calor en su respectivo reservorio, \( J_D < 0 \). 
 
@@ -2192,7 +2197,7 @@ En consecuencia, la tasa de producción de entropía es no negativa, lo cual est
 Consideremos la definición de la entropía conjunta para dos variables aleatorias discretas \(X\) e \(Y\):
 
 \begin{equation}
-    S^{XY} = - \sum_{x,y} p(x,y) \ln p(x,y),
+    S_{XY} = - \sum_{x,y} p(x,y) \ln p(x,y),
     \label{apendixSxy}
 \end{equation}
 
@@ -2200,7 +2205,7 @@ donde \(p(x,y)\) denota la distribución de probabilidad conjunta de \(X\) e \(Y
 Al derivar temporalmente la expresión \eqref{apendixSxy} y emplear la propiedad de antisimetría de la corriente de probabilidades, \(J_{x,x'}^{y,y'} = - J_{x',x}^{y',y}\), se obtiene
 
 \begin{align*}
-    \partial_{t}S^{XY} 
+    \partial_{t}S_{XY} 
     &= - \sum_{x,y} \dot{p}(x,y) \ln p(x,y) - \sum_{x,y} \dot{p}(x,y) \\
     &= - \sum_{x,x';y,y'} J_{x,x'}^{y,y'} \ln p(x,y)  \\
     &= \sum_{x \geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)} \\
