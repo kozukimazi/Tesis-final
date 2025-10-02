@@ -193,7 +193,6 @@ Las funciones de correlación del reservorio decaen en una escala de tiempo cara
     \frac{d}{dt}\hat{\rho}_{IS}(t) = - \int_{0}^{\infty} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(t-s), \hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
     \label{eq3sec2:markov1}
 \end{equation}
-
 En el cuadro de Schrödinger, la interacción se escribe en la forma general
 \begin{equation*}
     \hat{H}_{I} = \sum_{\alpha} A_{\alpha} \otimes B_{\alpha},
@@ -463,7 +462,7 @@ e^{-\tfrac{i}{2}\sum_{\alpha}[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat
 + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}]}.
 \]
 
-Los parámetros $\vec{\lambda}$ y $\vec{\chi}$ se denominan \textit{counting fields}\cite{esposito2009nonequilibrium,landi2024current}, mientras que $\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t)$ recibe el nombre de matriz densidad generalizada. El conocimiento de su evolución permite calcular de manera sistemática los momentos y cumulantes del calor, del trabajo. Sin embargo, dado que esta matriz se construye a partir de la evolución unitaria de $\hat{\rho}_{tot}(t)$, resulta necesario derivar una ecuación maestra efectiva que describa únicamente los grados de libertad del sistema reducido, lo que se abordará en secciones futuras.
+Los parámetros $\vec{\lambda}$ y $\vec{\chi}$ se denominan \textit{counting fields}\cite{esposito2009nonequilibrium,landi2024current}, mientras que $\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi};t)$ recibe el nombre de matriz densidad generalizada. El conocimiento de su evolución permite calcular de manera sistemática los momentos estadísticos del calor y del trabajo. Sin embargo, dado que esta matriz se construye a partir de la evolución unitaria de $\hat{\rho}_{tot}(t)$, resulta necesario derivar una ecuación maestra efectiva que describa únicamente los grados de libertad del sistema reducido, lo que se abordará en secciones futuras.
 
 
 \label{sec2:estadistica2puntos}
@@ -503,7 +502,6 @@ cuya solución formal es
     |\hat{\rho}(t)\rangle \rangle = e^{\check{\mathcal{L}}t}\,|\hat{\rho}(0)\rangle \rangle. 
     \label{sec2liouvilleformal}
 \end{equation}
-
 Asimismo, en este marco se definen los superoperadores de proyección de Nakajima–Zwanzig, que actúan sobre la matriz densidad total. En particular, el superoperador $\check{\mathcal{P}}$ proyecta sobre la parte relevante de la dinámica, mientras que $\check{\mathcal{Q}} = \check{1} - \check{\mathcal{P}}$ proyecta sobre la parte irrelevante \cite{zwanzig1966statistical}. Estos operadores cumplen las propiedades algebraicas
 \begin{align*}
     & \check{\mathcal{P}} + \check{\mathcal{Q}} = \check{1}, \\
@@ -546,7 +544,6 @@ con
     = -\sum_{\alpha}\!\left[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha})
       + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}\right].
 \end{equation*}
-
 En el formalismo de superoperadores, la ecuación \eqref{sec3:ecgeneral} adopta la forma
 \begin{align*}
     \frac{d}{dt}\,|\hat{\rho}_{tot}(\vec{\lambda},\vec{\chi},t)\rangle\rangle
@@ -652,7 +649,6 @@ lo que delimita el régimen de validez a
     \qquad 
     |\lambda_{\alpha}|\ll \tau_{R}.
 \]
-
 Esta condición implica una resolución finita en las diferencias de energía que pueden inferirse al medir el calor: \(\lambda_{\alpha}\) y \(Q_{\alpha}\) son variables conjugadas en la función generadora, por lo que obedecen una relación de incertidumbre \cite{folland1997uncertainty}. En particular,
 \[
     \langle \Delta \lambda^{2}_{\alpha} \rangle\,\langle (\Delta Q_{\alpha})^{2}\rangle \ge \gamma
@@ -750,8 +746,6 @@ y
     = \hat{S}_{\alpha,k;q}\hat{\rho}_{S}(t)\hat{S}^{\dagger}_{\alpha,k;q}
       - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q},\hat{\rho}_{S}(t)\}.
 \end{equation*}
-%La demostración se proporciona en \ref{apendixKMS}.
-
 Para un Hamiltoniano independiente del tiempo, la ecuación en el cuadro de Schrödinger es
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{S}(t) 
@@ -1193,7 +1187,6 @@ En ausencia de trabajo mecánico (Hamiltoniano independiente del tiempo), la ene
 \qquad
 \dot{E}_{\alpha}=J_{\alpha}+\dot{W}_{\alpha}.
 \]
-
 Multiplicando la ecuación \eqref{sec4:localentropy} por $T_{\alpha}=\beta_{\alpha}^{-1}$ y utilizando la descomposición de energía dada en la expresión anterior, se obtienen las inecuaciones locales de energía libre:
 
 \begin{equation}
@@ -1712,7 +1705,6 @@ A partir de la solución estacionaria, se calculan los flujos de partículas e i
     \dot{I}_{\alpha} = -(\ln \mathbf{P})^{T} \mathbf{W}_{\alpha}\mathbf{P},
     \label{sec5:infosemi}
 \end{equation}
-
 donde $\mathbf{P}$ es el vector de probabilidades en la base de Fock, $\mathbf{W}_{\alpha}$ es la contribución del baño $\alpha$ en la evolución $\mathbf{W}$, $\mathbf{N}$ contiene el número de partículas en cada estado, y $\ln \mathbf{P}$ denota el vector cuyos elementos son los logaritmos de cada componente de $\mathbf{P}$, es decir, $(\ln \mathbf{P})_i = \ln P_i$\cite{monsel2025autonomous}.
 \\
 
