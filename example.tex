@@ -15,29 +15,29 @@
 % A diferencia de Template-Informe, Template-Tesis requiere el uso de capítulos; las secciones, subsecciones, etc son parte de un capítulo. Se recomienda el uso de un capítulo en un archivo distinto
 \chapteranum{Introducción}
 
-Uno de los principales objetivos de la termodinámica contemporánea es esclarecer el carácter físico de la información. Este desafío fue anticipado por el célebre experimento mental propuesto por James Clerk Maxwell en 1871, el cual sugiere una aparente violación de la segunda ley de la termodinámica al introducir un "demonio" que manipula la dinámica de un gas ideal mediante información\cite{Maxwell_1871}. Esta paradoja motivó una profunda revisión conceptual, abordada en trabajos fundamentales de Szilard\cite{szilard1964decrease}, Brillouin\cite{brillouin1951maxwell}, Landauer\cite{Landauer_1961} y Bennett\cite{bennett1982thermodynamics}, quienes formalizaron el vínculo entre información y entropía, sentando las bases de la termodinámica de la información.
+Uno de los principales objetivos de la termodinámica contemporánea es esclarecer el carácter físico de la información. Este desafío fue anticipado por el célebre experimento mental propuesto por James Clerk Maxwell en 1871, el cual sugiere una aparente violación de la segunda ley de la termodinámica al introducir un "demonio" que manipula la dinámica de un gas ideal mediante información\cite{Maxwell_1871}. Esta paradoja motivó una profunda revisión conceptual, abordada en trabajos fundamentales de Szilard\cite{szilard1964decrease}, Brillouin\cite{brillouin1951maxwell}, Landauer\cite{Landauer_1961} y Bennett\cite{bennett1982thermodynamics}, quienes formalizaron el vínculo entre información y entropía, sentando las bases de la termodinámica de la información. \\
 
-Los avances experimentales en nanotecnología han permitido explorar sistemas de pocas partículas donde las fluctuaciones térmicas no pueden ser despreciadas\cite{douarche2005experimental,wang2005experimental}. En este contexto, las formulaciones tradicionales de la termodinámica pierden validez, lo que exige un marco teórico más general. La termodinámica estocástica cumple este rol, al extender las leyes termodinámicas a regímenes fuera del equilibrio en sistemas clásicos de pequeña escala\cite{van2013stochastic,jarzynski1997nonequilibrium}.
+Los avances experimentales en nanotecnología han permitido explorar sistemas de pocas partículas donde las fluctuaciones térmicas no pueden ser despreciadas\cite{douarche2005experimental,wang2005experimental}. En este contexto, las formulaciones tradicionales de la termodinámica pierden validez, lo que exige un marco teórico más general. La termodinámica estocástica cumple este rol, al extender las leyes termodinámicas a regímenes fuera del equilibrio en sistemas clásicos de pequeña escala\cite{van2013stochastic,jarzynski1997nonequilibrium}. \\
 
-Además del estudio de energía y entropía, resulta fundamental entender el rol de la información en estos sistemas. Se deben distinguir dos enfoques según el tipo de dinámica involucrada. El primero considera sistemas no autónomos, cuyo Hamiltoniano depende explícitamente del tiempo y es controlado por un agente externo. En estos casos, el Demonio de Maxwell puede modelarse mediante procesos de medición y retroalimentación, como ha sido mostrado en diversos trabajos\cite{cao2009thermodynamics,sagawa2010generalized}. El segundo enfoque aborda sistemas autónomos, de especial relevancia en contextos biológicos\cite{ehrich2023energy}, donde el sistema evoluciona sin intervención externa bajo gradientes constantes de energía (como diferencias de potencial o temperatura). Aquí, la estructura bipartita del sistema permite identificar un subsistema que actúa como "demonio", acoplado al sistema de interés y modulando su dinámica dependiendo del estado en que se encuentre.
+Además del estudio de energía y entropía, resulta fundamental entender el rol de la información en estos sistemas. Se deben distinguir dos enfoques según el tipo de dinámica involucrada. El primero considera sistemas no autónomos, cuyo Hamiltoniano depende explícitamente del tiempo y es controlado por un agente externo. En estos casos, el Demonio de Maxwell puede modelarse mediante procesos de medición y retroalimentación, como ha sido mostrado en diversos trabajos\cite{cao2009thermodynamics,sagawa2010generalized}. El segundo enfoque aborda sistemas autónomos, de especial relevancia en contextos biológicos\cite{ehrich2023energy}, donde el sistema evoluciona sin intervención externa bajo gradientes constantes de energía (como diferencias de potencial o temperatura). Aquí, la estructura bipartita del sistema permite identificar un subsistema que actúa como "demonio", acoplado al sistema de interés y modulando su dinámica dependiendo del estado en que se encuentre. \\
 
-En ausencia de un agente externo, cuantificar el flujo de información entre el demonio y el sistema presenta una dificultad adicional, ya que no se dispone del resultado explícito de la medición ni del mecanismo de retroalimentación. Este desafío fue abordado por Horowitz y Esposito mediante el formalismo de la termodinámica estocástica\cite{horowitz2014thermodynamics}, quienes propusieron una definición operacional del flujo de información en sistemas clásicos autónomos.
+En ausencia de un agente externo, cuantificar el flujo de información entre el demonio y el sistema presenta una dificultad adicional, ya que no se dispone del resultado explícito de la medición ni del mecanismo de retroalimentación. Este desafío fue abordado por Horowitz y Esposito mediante el formalismo de la termodinámica estocástica\cite{horowitz2014thermodynamics}, quienes propusieron una definición operacional del flujo de información en sistemas clásicos autónomos.\\
 
-Posteriormente, Ptaszynski y Esposito extendieron este marco al contexto cuántico, cuantificando flujos de información en sistemas abiertos gobernados por dinámicas markovianas\cite{ptaszynski2019thermodynamics}. Para ello, emplearon una ecuación maestra de tipo Lindblad en su forma estándar (GKLS)\cite{gorini1976completely,lindblad1976generators,breuer2002theory}, compatible con una descripción termodinámica consistente cuando se cumple la condición de balance detallado local. Este enfoque permite incorporar coherencias cuánticas —elementos no diagonales de la matriz densidad—, las cuales pueden servir como recursos termodinámicos\cite{ptaszynski2023fermionic,streltsov2017colloquium}.
+Posteriormente, Ptaszynski y Esposito extendieron este marco al contexto cuántico, cuantificando flujos de información en sistemas abiertos gobernados por dinámicas markovianas\cite{ptaszynski2019thermodynamics}. Para ello, emplearon una ecuación maestra de tipo Lindblad en su forma estándar (GKLS)\cite{gorini1976completely,lindblad1976generators,breuer2002theory}, compatible con una descripción termodinámica consistente cuando se cumple la condición de balance detallado local. Este enfoque permite incorporar coherencias cuánticas —elementos no diagonales de la matriz densidad—, las cuales pueden servir como recursos termodinámicos\cite{ptaszynski2023fermionic,streltsov2017colloquium}.\\
 
-Sin embargo, una dificultad clave en la descripción cuántica es la elección de la base. Si se adopta una base global, como exige la aproximación secular, no siempre existe la posibilidad de distinguir entre flujos locales de información, como se realiza en su contraparte clásica\cite{horowitz2014thermodynamics}. Por otro lado, una formulación en la base local puede revelar la estructura bipartita del sistema, pero ha sido criticada por posibles inconsistencias termodinámicas\cite{levy2014local,novotny2002investigation}.
+Sin embargo, una dificultad clave en la descripción cuántica es la elección de la base. Si se adopta una base global, como exige la aproximación secular, no siempre existe la posibilidad de distinguir entre flujos locales de información, como se realiza en su contraparte clásica\cite{horowitz2014thermodynamics}. Por otro lado, una formulación en la base local puede revelar la estructura bipartita del sistema, pero ha sido criticada por posibles inconsistencias termodinámicas\cite{levy2014local,novotny2002investigation}.\\
 
 Al aplicar una aproximación secular-parcial a la ecuación de Lindblad, Potts et al.\ \cite{potts2021thermodynamically} propusieron una ecuación maestra termodinámicamente consistente para sistemas abiertos. 
-Dicha formulación se expresa en la base local e incorpora términos no seculares, lo que representa una mejora respecto al enfoque estrictamente secular.
+Dicha formulación se expresa en la base local e incorpora términos no seculares, lo que representa una mejora respecto al enfoque estrictamente secular. \\
 
-Trabajos previos han empleado el formalismo desarrollado por Potts para analizar los efectos cuánticos en modelos compuestos por dos puntos cuánticos, cada uno acoplado a un reservorio distinto. Asimismo, se ha investigado cómo dichos efectos influyen en el transporte de partículas~\cite{prech2023entanglement}. Por otro lado, el trabajo de Esposito y Horowitz investigó los flujos de información en un sistema clásico constituido por dos puntos cuánticos, donde uno de ellos está acoplado a dos reservorios y el otro a un único baño térmico. En dicho estudio, se demostró que el sistema actúa como un Demonio de Maxwell autónomo~\cite{horowitz2014thermodynamics}.
+Trabajos previos han empleado el formalismo desarrollado por Potts para analizar los efectos cuánticos en modelos compuestos por dos puntos cuánticos, cada uno acoplado a un reservorio distinto. Asimismo, se ha investigado cómo dichos efectos influyen en el transporte de partículas~\cite{prech2023entanglement}. Por otro lado, el trabajo de Esposito y Horowitz investigó los flujos de información en un sistema clásico constituido por dos puntos cuánticos, donde uno de ellos está acoplado a dos reservorios y el otro a un único baño térmico. En dicho estudio, se demostró que el sistema actúa como un Demonio de Maxwell autónomo~\cite{horowitz2014thermodynamics}.\\
 
-En este trabajo se estudia un Demonio de Maxwell autónomo en el régimen cuántico mediante la extensión del modelo de dos puntos cuánticos de \cite{horowitz2014thermodynamics} a un sistema de tres puntos cuánticos, denominados $L,R$ y $D$. Para ello se emplea el formalismo de Potts, a partir del cual se deriva una ecuación de Lindblad semilocal que describe la evolución temporal del sistema. Cada punto cuántico está acoplado a un reservorio distinto. Uno de ellos desempeña el rol de Demonio de Maxwell, mientras que los otros dos conforman el subsistema físico $LR$.
+En este trabajo se estudia un Demonio de Maxwell autónomo en el régimen cuántico mediante la extensión del modelo de dos puntos cuánticos de \cite{horowitz2014thermodynamics} a un sistema de tres puntos cuánticos, denominados $L,R$ y $D$. Para ello se emplea el formalismo de Potts, a partir del cual se deriva una ecuación de Lindblad semilocal que describe la evolución temporal del sistema. Cada punto cuántico está acoplado a un reservorio distinto. Uno de ellos desempeña el rol de Demonio de Maxwell, mientras que los otros dos conforman el subsistema físico $LR$. \\
 
-En este subsistema se introducen interacciones adicionales que permiten explorar la dinámica cuántica, en particular el acoplamiento entre los dos puntos que lo constituyen. Las simulaciones numéricas de la ecuación de Lindblad permiten obtener los flujos de información y diversas magnitudes termodinámicas relevantes. Dichos resultados se calculan en un régimen donde emergen efectos cuánticos como la coherencia y el entrelazamiento entre los sitios que componen el subsistema $LR$.
+En este subsistema se introducen interacciones adicionales que permiten explorar la dinámica cuántica, en particular el acoplamiento entre los dos puntos que lo constituyen. Las simulaciones numéricas de la ecuación de Lindblad permiten obtener los flujos de información y diversas magnitudes termodinámicas relevantes. Dichos resultados se calculan en un régimen donde emergen efectos cuánticos como la coherencia y el entrelazamiento entre los sitios que componen el subsistema $LR$. \\ 
 
 Estas magnitudes ---y en especial los flujos de información--- permiten caracterizar el comportamiento del sistema como un Demonio de Maxwell autónomo. 
-Finalmente, se construye un modelo semiclásico basado en el formalismo de Nakajima--Zwanzig \cite{zwanzig1966statistical}, el cual considera únicamente las componentes diagonales de la matriz densidad. Este modelo permite comparar los flujos de información con los obtenidos en el tratamiento plenamente cuántico.
+Finalmente, se construye un modelo semiclásico basado en el formalismo de Nakajima--Zwanzig \cite{zwanzig1966statistical}, el cual considera únicamente las componentes diagonales de la matriz densidad. Este modelo permite comparar los flujos de información con los obtenidos en el tratamiento plenamente cuántico. \\
 
 %%ojo aquí
 
@@ -62,6 +62,7 @@ La tesis está estructurada de la siguiente manera: en el Capítulo 1 se introdu
 
 En este capítulo se presentan los conceptos fundamentales para describir la evolución de un sistema cuántico. 
 Primero se aborda la dinámica unitaria de un sistema cerrado; luego se introduce la ecuación de Lindblad como una de las descripciones más utilizadas para sistemas abiertos bajo la aproximación secular; y finalmente se desarrolla una formulación general de la termodinámica de sistemas abiertos, donde el calor y el trabajo intercambiados con los reservorios permiten expresar las leyes de la termodinámica en términos de derivadas temporales de magnitudes físicas bien definidas, como la energía interna, el flujo de calor y la potencia.
+\\
 
 La sección \ref{sistemacerrado} se dedica a la evolución unitaria de sistemas cerrados. 
 En la sección \ref{SEClindblad} se discute la ecuación de Lindblad y las aproximaciones necesarias para obtenerla, detalladas en la sección \ref{sec:lindblad}. 
@@ -70,10 +71,10 @@ Finalmente, en la sección \ref{termogeneral} se presenta la termodinámica de s
 \section{Sistemas cuánticos cerrados}
 Un sistema cuántico cerrado puede describirse mediante la matriz densidad $\hat{\rho}$. La evolución de esta matriz está gobernada por el Hamiltoniano del sistema, $\hat{H}(t)$, y en el cuadro de Schrödinger se expresa a través de la ecuación de Liouville--von Neumann ($\hbar = 1$) \cite{breuer2002theory}:
 \label{sistemacerrado}
+
 \begin{equation*}
     \frac{d}{dt}\hat{\rho}(t) = -i[\hat{H}(t),\hat{\rho}(t)].
 \end{equation*}
-
 La solución está dada por la evolución unitaria
 
 \begin{equation*}
@@ -81,7 +82,6 @@ La solución está dada por la evolución unitaria
     \quad \implies \quad 
     \hat{\rho}(t) = \hat{U}(t,t_{0})\,\hat{\rho}(t_{0})\,\hat{U}^{\dagger}(t,t_{0}),
 \end{equation*}
-
 donde $\hat{T}_{\leftarrow}$ representa el operador de ordenación temporal cronológica. Este operador organiza los productos de operadores dependientes del tiempo de manera que los instantes crecen de derecha a izquierda.
 
 \subsection{Cuadro de interacción}
@@ -90,8 +90,7 @@ Supongamos que el Hamiltoniano del sistema puede separarse en dos partes:
 \begin{equation*}
     \hat{H}(t) = \hat{H}_{0} + \hat{H}_{I}(t).
 \end{equation*}
-
-En principio esta descomposición puede realizarse de distintas maneras. Sin embargo, en el caso de dos subsistemas, $\hat{H}_{0}$ corresponde a los Hamiltonianos de cada uno de ellos en ausencia de interacción, mientras que $\hat{H}_{I}(t)$ describe la interacción entre ambos.  
+En principio esta descomposición puede realizarse de distintas maneras. Sin embargo, en el caso de dos subsistemas, $\hat{H}_{0}$ corresponde a los Hamiltonianos de cada uno de ellos en ausencia de interacción, mientras que $\hat{H}_{I}(t)$ describe la interacción entre ambos.  \\
 
 Si introducimos los operadores unitarios
 
@@ -100,20 +99,17 @@ Si introducimos los operadores unitarios
     \hspace{15mm} 
     \hat{U}_{I}(t,t_0) \equiv \hat{U}^{\dagger}_{0}(t,t_{0})\hat{U}(t,t_{0}),
 \end{equation*}
-
 podemos describir la matriz densidad en el cuadro de interacción como
 
 \begin{equation*}
     \hat{\rho}_{I}(t) \equiv \hat{U}_{I}(t,t_{0})\hat{\rho}(t_{0})\hat{U}^{\dagger}_{I}(t,t_{0}).
 \end{equation*}
-
 La evolución en este cuadro está gobernada por la ecuación
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{I}(t) = -i[\tilde{H}_{I}(t), \hat{\rho}_{I}(t)],
     \label{sec11:interactionp}
 \end{equation}
-
 donde el Hamiltoniano de interacción transformado está dado por
 
 \begin{equation*}
@@ -136,21 +132,18 @@ Un sistema abierto consiste en un sistema cuántico $S$, denominado sistema redu
     \hat{H}(t) = \hat{H}_{S} \otimes \mathbf{I}_{B} + \mathbf{I}_{S} \otimes \hat{H}_{B} + \hat{H}_{I}(t).
     \label{sec2:sistemabierto}
 \end{equation}
-
 Para utilizar la ecuación \eqref{sec2:sistemabierto} es necesario separar el sistema en dos subsistemas, $S$ y $B$, de modo que el espacio de Hilbert total pueda escribirse como $\mathcal{H} = \mathcal{H}_{S}\otimes \mathcal{H}_{B}$. Sin embargo, en el caso de partículas idénticas como los fermiones, la identificación de estos dos subsistemas no es inmediata. Aun así, en el formalismo de segunda cuantización el sistema puede describirse mediante una base del espacio de Fock, lo que permite encontrar subsistemas en los cuales el espacio de Hilbert total se construye como un producto tensorial antisimétrico entre ellos \cite{friis2013fermionic,vidal2021quantum}.
-
+\\
 Los observables asociados al sistema $S$ son de la forma $A\otimes \mathbf{I}_{B}$ y su valor de expectación se calcula como
 
 \begin{equation*}
     \langle A \rangle = \text{Tr}_{S}\{A \hat{\rho}_{S} \},
 \end{equation*}
-
 donde la matriz densidad reducida está dada por
 
 \begin{equation*}
     \hat{\rho}_{S} = \text{Tr}_{B}\{ \hat{\rho} \}.
 \end{equation*}
-
 Aquí, $\text{Tr}_{S}$ denota la traza sobre el espacio de Hilbert del sistema y $\text{Tr}_{B}$ la traza sobre el espacio del ambiente. El objeto principal de estudio es la matriz densidad reducida $\hat{\rho}_{S}$, cuya evolución será descrita mediante la ecuación de Lindblad.
 
 \subsection{Ecuación maestra}
@@ -167,14 +160,12 @@ cuya forma integral es
 \begin{equation*}
     \hat{\rho}_{I}(t) = \hat{\rho}(0) - i \int_{0}^{t} ds \,[\hat{H}_{I}(s), \hat{\rho}_{I}(s)].
 \end{equation*}
-
 Reinsertando esta expresión en la ecuación \eqref{eqsec2:linbladpic} y tomando la traza sobre los grados de libertad del reservorio, se obtiene
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = -i \,\text{Tr}_{B}\{[\hat{H}_{I}(t), \hat{\rho}(0)] \}  
     - \int_{0}^{t} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s), \hat{\rho}_{I}(s)]]\}.
 \label{eqsec2:linbladpic2}
 \end{equation}
-
 A continuación se adoptan dos hipótesis estándar. En primer lugar,
 \[
 \text{Tr}_{B}\{[\hat{H}_{I}(t), \hat{\rho}(0)] \}=0,
@@ -187,7 +178,6 @@ Con esta suposición, la ecuación \eqref{eqsec2:linbladpic2} toma la forma
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = - \int_{0}^{t} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s), \hat{\rho}_{IS}(s) \otimes \hat{\rho}_{B}]]\}.
 \end{equation}
-
 La ecuación anterior es no markoviana, pues depende del historial $\hat{\rho}_{IS}(s)$. Para obtener una descripción local en el tiempo se aplica la aproximación de Markov, de modo que la evolución en el instante $t$ dependa únicamente de $\hat{\rho}_{IS}(t)$:
 \begin{equation*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) = - \int_{0}^{t} ds \,\text{Tr}_{B}\{[\hat{H}_{I}(t), [\hat{H}_{I}(s), \hat{\rho}_{IS}(t) \otimes \hat{\rho}_{B}]]\}.
@@ -219,7 +209,6 @@ que cumplen
 [\hat{H}_{S}, A_{\alpha}(\omega)] = -\omega A_{\alpha}(\omega), \quad
 [\hat{H}_{S}, A_{\alpha}^{\dagger}(\omega)] = \omega A_{\alpha}^{\dagger}(\omega).
 \]
-
 Aplicando la identidad de Baker--Campbell--Hausdorff,
 \begin{equation}
     e^{A}Be^{-A} = B + [A,B] + \tfrac{1}{2}[A,[A,B]] + \cdots,
@@ -232,13 +221,13 @@ se obtiene en el cuadro de interacción
     \label{seclindbladinteraction1}
 \end{equation}
 donde $B_{\alpha}(t)=e^{i\hat{H}_{B}t}B_{\alpha}e^{-i\hat{H}_{B}t}$.
+\\
 
 Sustituyendo la ecuación \eqref{seclindbladinteraction1} en la ecuación \eqref{eq3sec2:markov1} y evaluando la traza parcial sobre el reservorio, aparecen las funciones de correlación espectrales, que en equilibrio son homogéneas en el tiempo:
 \begin{equation*}
     \Gamma_{\alpha\beta}(\omega) = \int_{0}^{\infty} ds \, e^{i\omega s}\, 
     \text{Tr}_{B}\{B_{\alpha}^{\dagger}(t)B_{\beta}(t-s)\hat{\rho}_{B}\}.
 \end{equation*}
-
 Bajo esta definición, la evolución del sistema se escribe como
 \begin{align*}
     \frac{d}{dt}\hat{\rho}_{IS}(t) &=
@@ -260,7 +249,6 @@ Sea $\tau_{S}=|\omega-\omega'|^{-1}$ la escala asociada a las oscilaciones entre
     \Big(A_{\alpha}(\omega)\hat{\rho}_{IS}(t)A_{\beta}^{\dagger}(\omega)
         - \hat{\rho}_{IS}(t)A_{\beta}^{\dagger}(\omega)A_{\alpha}(\omega)\Big).
 \end{align*}
-
 Separando la función espectral en parte real e imaginaria,
 \begin{equation*}
     \Gamma_{\alpha\beta}(\omega) = \tfrac{1}{2}\gamma_{\alpha\beta}(\omega) + iS_{\alpha\beta}(\omega),
@@ -280,6 +268,7 @@ y disipador en forma GKLS
     \left[A_{\beta}(\omega)\hat{\rho}_{IS}(t)A_{\alpha}^{\dagger}(\omega) - \tfrac{1}{2}\{A_{\alpha}^{\dagger}(\omega)A_{\beta}(\omega), \hat{\rho}_{IS}(t)\}\right].
 \end{equation*}
 Esta forma garantiza la preservación de traza, hermiticidad y positividad de la matriz densidad \cite{manzano2020short}.
+\\
 
 Finalmente, en el cuadro de Schrödinger la ecuación de Lindblad se escribe como
 \begin{equation}
@@ -305,6 +294,7 @@ Se considera un sistema descrito por el Hamiltoniano total
     = \hat{H}_{S}(t) + \hat{H}_{B} + \hat{V},
 \end{equation*}
 donde $\hat{H}_{S}(t)$ representa el Hamiltoniano del sistema, que en general puede depender explícitamente del tiempo; $\hat{H}_{B}=\sum_{\alpha}\hat{H}_{\alpha}$ corresponde a los Hamiltonianos de los reservorios térmicos; y $\hat{V}=\sum_{\alpha}\hat{V}_{\alpha}$ describe la interacción sistema–baño.
+\\
 
 El sistema intercambia energía y partículas con los reservorios. En consecuencia, el cambio de energía puede descomponerse en dos contribuciones: una asociada al calor y otra al trabajo. El calor liberado por el reservorio $\alpha$ en el intervalo de tiempo $[0,t]$ se define como
 \begin{equation}
@@ -331,7 +321,7 @@ con $Z$ la función gran partición. El estado de equilibrio del sistema reducid
 \begin{equation*}
     \hat{\rho}_{S} = \frac{1}{Z}\text{Tr}_{B}\{ e^{-\beta(\hat{H}_{tot} - \mu \hat{N}_{tot})} \}.
 \end{equation*}
-En el límite de acoplamiento débil entre sistema y baño, este estado converge a \cite{geva2000second}
+En el límite de acoplamiento débil entre sistema y baño, este estado converge a la forma \cite{geva2000second}
 \begin{equation*}
     \hat{\rho}_{S} = \frac{e^{-\beta(\hat{H}_{S} - \mu\hat{N}_{S})}}
     {\text{Tr}_{S}\{e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})} \} }.
@@ -346,8 +336,6 @@ Estas se introducen mediante la corriente de calor y la potencia
     \hspace{12mm}  
     \dot{W}_{\alpha}(t) = \partial_{t}\langle W_{\alpha}\rangle.
 \end{equation*}
-
-
 En el régimen de acoplamiento débil y para un Hamiltoniano independiente del tiempo, la primera ley adopta la forma
 \begin{equation*}
     \partial_{t}E(t) = \sum_{\alpha}[J_{\alpha}(t) + \dot{W}_{\alpha}(t) ],
@@ -364,7 +352,6 @@ La formulación de la segunda ley requiere asumir una condición inicial no corr
     \hat{\tau}_{\alpha} = \frac{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) }}
     {\text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\} }.
 \end{equation*}
-
 Donde cada reservorio $\alpha$ se encuentra en equilibrio gran canónico con temperatura inversa $\beta_{\alpha}$ y potencial químico $\mu_{\alpha}$. Con esta condición inicial, la segunda ley se expresa en términos de la producción de entropía $\sigma(t)$ \cite{esposito2010entropy}:
 \begin{equation*}
     \sigma(t) \equiv \Delta S(t) - \sum_{\alpha}\beta_{\alpha}\langle Q_{\alpha}\rangle \geq 0,
@@ -374,12 +361,12 @@ donde $\Delta S(t)$ es el cambio en la entropía de von Neumann del sistema,
     \Delta S(t) = -  \text{Tr}\{\hat{\rho}_{S}(t)\ln \hat{\rho}_{S}(t) \} 
     +  \text{Tr}\{ \hat{\rho}_{S}(0)\ln \hat{\rho}_{S}(0) \}.
 \end{equation*}
-
 La producción total de entropía se descompone en dos contribuciones: el cambio de entropía del sistema y la parte asociada al calor intercambiado con los reservorios. Para sistemas markovianos resulta conveniente estudiar la tasa de producción de entropía, ya que se cumple la desigualdad \cite{strasberg2019non}
 \begin{equation*}
     \dot{\sigma}(t) \equiv \partial_{t}\Delta S(t) - \sum_{\alpha}\beta_{\alpha}J_{\alpha}(t) \geq 0.
 \end{equation*}
 La igualdad se cumple en el caso de procesos reversibles.  
+\\
 
 De este modo, las leyes de la termodinámica se expresan en términos de flujos continuos de energía y partículas, los cuales pueden calcularse a partir de la matriz densidad reducida. En esta tesis, tales cantidades serán analizadas principalmente en el régimen estacionario.
 \label{sec3sub:leyestermo}
@@ -391,8 +378,10 @@ De este modo, las leyes de la termodinámica se expresan en términos de flujos 
 \chapter{Ecuación de Lindblad con aproximación secular-parcial}
 
 En este capítulo se presenta el formalismo de \textit{full counting statistics} (FCS), que a partir de la matriz densidad reducida describe la estadística de los flujos de partículas y de energía en sistemas cuánticos, permitiendo cuantificar sus fluctuaciones \cite{esposito2009nonequilibrium,landi2024current}. Para ello, se introduce el esquema de medición en dos puntos, ampliamente utilizado en termodinámica cuántica para definir distribuciones de probabilidad de magnitudes estocásticas, tales como la energía y el número de partículas en los reservorios. A partir de dichas distribuciones es posible obtener momentos y cumulantes que caracterizan las propiedades estadísticas de las variables de interés \cite{esposito2009nonequilibrium}.
+\\
 
 A continuación, se introduce el formalismo de superoperadores, que permite expresar la evolución de la matriz densidad en un espacio de Hilbert aumentado. Posteriormente, se desarrolla el cálculo de la ecuación maestra generalizada, deducida en \cite{potts2021thermodynamically} mediante el formalismo FCS. Finalmente, se analiza la consistencia termodinámica, tanto en el caso de la ecuación maestra global como en el de la ecuación maestra secular parcial, a la que en lo sucesivo también denominaremos semilocal.
+\\
 
 El capítulo se organiza de la siguiente manera: en la sección \ref{sec2:estadistica2puntos} se introduce la estadística de medición en dos puntos; en la sección \ref{sec2:superop} se presenta el formalismo de superoperadores; en la sección \ref{sec2:master} se desarrolla el cálculo de la ecuación maestra generalizada; y en la sección \ref{sec2:thermolaws} se discute la consistencia termodinámica.
 
@@ -414,6 +403,7 @@ donde $\hat{\tau}_{\alpha}$ es el estado de equilibrio gran canónico del reserv
     \delta\!\left(Q_{\alpha}+W_{\alpha}-(E_{\alpha}-E'_{\alpha})\right).
 \end{align*}
 Aquí, $W_\alpha$ representa el trabajo asociado al intercambio de partículas con el reservorio $\alpha$, mientras que $Q_\alpha$ corresponde al calor transferido desde dicho reservorio hacia el sistema.
+\\
 
 La probabilidad inicial de que cada reservorio $\alpha$ tenga energía $E_{\alpha}$ y número de partículas $N_{\alpha}$ está dada por
 \[
@@ -422,7 +412,6 @@ P_{0}(\mathbf{E},\mathbf{N}) =
 \frac{e^{-\beta_{\alpha}(E_{\alpha}-\mu_{\alpha}N_{\alpha})}}
 {\text{Tr}\left\{e^{-\beta_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha})}\right\}}.
 \]
-
 La probabilidad condicional $P_{t}(\mathbf{E}',\mathbf{N}'|\mathbf{E},\mathbf{N})$ describe la probabilidad de encontrar los reservorios con energías $\mathbf{E}'$ y números de partículas $\mathbf{N}'$ en el tiempo $t$, dados valores iniciales $(\mathbf{E},\mathbf{N})$. Para describir este proceso, se parte del estado proyectado en $t=0$,
 \[
 \hat{\rho}'(0) =
@@ -447,7 +436,7 @@ P_{t}(\mathbf{E}',\mathbf{N}'|\mathbf{E},\mathbf{N}) =
 \hat{M} = \text{Tr}_{B}\{|\mathbf{E},\mathbf{N}\rangle\langle \mathbf{E}',\mathbf{N}'|\,\hat{U}(t)\}.
 \]
 
-Definida la distribución de probabilidad, se introduce la función generadora de momentos, a partir de la cual pueden obtenerse los momentos y cumulantes de calor y trabajo:
+Con la distribución de probabilidad se construye la función generadora de momentos, a partir de la cual pueden obtenerse los momentos de calor y trabajo:
 \begin{equation}
     \Lambda(\vec{\lambda},\vec{\chi}) = 
     \int d\mathbf{Q}\, d\mathbf{W}\,P(\mathbf{Q},\mathbf{W})\,
@@ -482,6 +471,7 @@ Los parámetros $\vec{\lambda}$ y $\vec{\chi}$ se denominan \textit{counting fie
 \section{Formalismo de superoperadores y espacio de Liouville} 
 
 Un operador en el espacio de Hilbert, representado por $\hat{\rho}$ y de dimensión $N\times N$, puede mapearse al espacio de Liouville mediante un vector columna $|\rho \rangle \rangle$ de dimensión $N^{2}\times 1$. De manera análoga, un superoperador $\mathcal{L}$ que actúa sobre $\hat{\rho}$ en el espacio de Hilbert se representa en el espacio de Liouville por una matriz $\check{\mathcal{L}}$ de dimensión $N^2 \times N^2$, la cual actúa sobre $|\rho\rangle\rangle$. La notación $|\cdot\rangle\rangle$ denota este mapeo, conocido como vectorización, que permite tratar operadores como vectores y superoperadores como matrices.
+\\
 
 En este espacio se definen las siguientes operaciones fundamentales:
 \begin{equation*}
@@ -521,7 +511,6 @@ Asimismo, en este marco se definen los superoperadores de proyección de Nakajim
     & \check{\mathcal{Q}}^{2} = \check{\mathcal{Q}}, \\
     & \check{\mathcal{P}}\check{\mathcal{Q}} = \check{\mathcal{Q}}\check{\mathcal{P}} = 0.
 \end{align*}
-
 La evolución temporal de la matriz densidad descompuesta en estas dos partes satisface
 \begin{align*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle \rangle 
@@ -584,7 +573,6 @@ La evolución temporal en el cuadro de interacción queda entonces
     = \epsilon\,\check{\mathcal{L}}_{\lambda}(t)\,|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle\rangle .
     \label{sec2FCS:evolution}
 \end{equation}
-
 De este modo, la evolución de los grados de libertad del sistema reducido (en el espacio de Hilbert) se describe por
 \begin{multline}
     \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) 
@@ -597,6 +585,7 @@ De este modo, la evolución de los grados de libertad del sistema reducido (en e
     \label{ecmaestraVlambda}
 \end{multline}
 donde \(\hat{\rho}^{eq}_{R}=\bigotimes_{\alpha}\hat{\tau}_{\alpha}\) es un estado producto entre los equilibrios de cada reservorio $\alpha$. La demostración de la ecuación \eqref{ecmaestraVlambda} se presenta en el apéndice \ref{apendixsubsectionmatriz}.
+\\
 
 Escribiendo la interacción como
 \begin{align*}
@@ -617,6 +606,7 @@ donde \(n_{\alpha,k}\) es el número de partículas intercambiado con el baño t
     = \sum_{j} e^{-i\omega_{j}t}\,\hat{S}_{\alpha,k;j},
 \end{equation*}
 con \(\hat{S}_{\alpha,k;j}\) los operadores de salto y \(\omega_{j}\) las frecuencias de Bohr del Hamiltoniano del sistema. Obsérvese que \(\hat{S}_{\alpha,k}\) no tiene por qué ser autoadjunto (a diferencia del caso considerado en \ref{sec:lindblad}).
+\\
 
 Definiendo las funciones de correlación 
 \(C^{\alpha}_{k,k'}(s)=\textnormal{Tr}\!\big\{e^{is\hat{H}_{\alpha}}\,\hat{B}^{\dagger}_{\alpha,k}\,e^{-is\hat{H}_{\alpha}}\,\hat{B}_{\alpha,k'}\,\hat{\tau}_{\alpha}\big\}\),
@@ -675,6 +665,7 @@ con \(\gamma>0\). En consecuencia, diferencias de energía del orden de \(1/\tau
 \subsection{Agrupación de frecuencias}
 
 La ecuación de Redfield no garantiza en general la preservación de la positividad y puede producir probabilidades negativas en el estado reducido. La vía habitual para asegurar positividad es la aproximación secular (sección \ref{sec:lindblad}), que conduce a la forma GKLS, pero exige que las frecuencias de Bohr estén bien separadas respecto de \(1/\tau_{R}\). Ello excluye cuasi–degeneraciones y suprime términos no seculares \cite{trushechkin2021unified}.
+\\
 
 Un enfoque alternativo que conserva positividad sin descartar los términos no seculares parte de la condición markoviana \(\tau_{B}\ll \tau_{R}\), que garantiza que, para dos frecuencias de transición distintas, se cumple al menos una de las desigualdades
 \[
@@ -696,6 +687,7 @@ se sustituyen las frecuencias \(\omega_{j}\in x_q\) por una frecuencia represent
     |\omega_{q}-\omega_{j}|\ll 1/\tau_{B}\;\;\forall\,\omega_{j}\in x_{q}.
 \]
 Esta sustitución implementa una descripción coarse-grained compatible con la positividad y la resolución energética finita \cite{chruscinski2017brief}.
+\\
 
 Aplicando este esquema en la ecuación \eqref{ecmaestrafinal} y extendiendo \(s\in[0,\infty)\), se obtiene la ecuación en forma GKLS
 \begin{equation}
@@ -734,6 +726,7 @@ con
     \label{sec2:gammaanddelta}
 \end{equation}
 Aquí se asume, por simplicidad, \(C^{\alpha}_{k,k'}\propto \delta_{k,k'}\). La deducción completa se incluye en el apéndice \ref{apendixGKLSgeneral}.
+\\
 
 En el límite \(\vec{\lambda},\vec{\chi}\to 0\) se recupera
 \begin{equation*}
@@ -811,7 +804,6 @@ el estado de Gibbs corresponde a
 \begin{equation*}
     \hat{\rho}_{G,g} = \frac{e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})}}{\text{Tr}\{ e^{-\beta(\hat{H}_{S} - \mu \hat{N}_{S})}\}}.
 \end{equation*}
-
 Por el contrario, para la ecuación semilocal se cumple que
 \begin{equation}
     \mathcal{L}_{\alpha}\,e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0,
@@ -829,13 +821,11 @@ En el caso global, la energía interna se define como
 \begin{equation*}
     E_{g}(t) = \text{Tr}\{\hat{H}_{S}\hat{\rho}(t)\}.
 \end{equation*}
-
 En la ecuación maestra semilocal, la energía interna se redefine en función del Hamiltoniano termodinámico:
 \begin{equation}
     E(t) = \text{Tr}\{\hat{H}_{TD}\hat{\rho}(t)\}.
     \label{sec2:energyeq}
 \end{equation}
-
 La corriente de calor y la potencia entregadas por el baño $\alpha$ en el caso global se expresan como
 \begin{equation*}
     J_{\alpha,g}(t) = \text{Tr}\{(\hat{H}_{S} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\}, 
@@ -843,7 +833,6 @@ La corriente de calor y la potencia entregadas por el baño $\alpha$ en el caso 
     \dot{W}_{\alpha,g}(t) = \mu_{\alpha}\,\text{Tr}\{\hat{N}_{S}\,\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t)\},
 \end{equation*}
 donde $\mathcal{L}_{\alpha,g}$ es el superoperador de Lindblad asociado al baño $\alpha$, correspondiente a la ecuación maestra global \eqref{eqsec2:lindbladS}.
-
 De manera análoga, para la ecuación semilocal se obtiene
 \begin{equation}
     J_{\alpha}(t) = \text{Tr}\{(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_S)\,\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)\}, 
@@ -876,7 +865,6 @@ De este modo, para la ecuación global se obtiene
     - \sum_{\alpha} \beta_{\alpha}\, J_{\alpha,g}(t) 
     = -\sum_{\alpha} \text{Tr}\Big\{(\mathcal{L}_{\alpha,g}\hat{\rho}_{S}(t))\,[\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G,g}(\beta_{\alpha},\mu_{\alpha})] \Big\} \geq 0.
 \end{equation*}
-
 De manera análoga, en la ecuación semilocal la tasa de producción de entropía es
 \begin{equation}
     \dot{\sigma}(t) = - \frac{d}{dt}\text{Tr}\{\hat{\rho}_{S}(t)\,\ln \hat{\rho}_{S}(t) \} 
@@ -885,8 +873,10 @@ De manera análoga, en la ecuación semilocal la tasa de producción de entropí
     \label{sec2secondlaw}
 \end{equation}
 donde la desigualdad asegura la validez de la segunda ley en ambos marcos \cite{potts2021thermodynamically}.
+\\
 
 En resumen, la formulación termodinámica basada en la ecuación maestra semilocal requiere redefinir las magnitudes termodinámicas utilizando el Hamiltoniano termodinámico $\hat{H}_{TD}$. Con estas definiciones, se garantiza la validez de las leyes de la termodinámica, incluso en presencia de cuasi–degeneraciones y sin necesidad de descartar términos no seculares.
+\\
 
 Contar con un marco termodinámico consistente para sistemas cuánticos abiertos constituye un paso esencial para abordar, en el capítulo siguiente, el estudio del rol de la información y de los flujos de información en estos sistemas.
 
@@ -896,12 +886,14 @@ Contar con un marco termodinámico consistente para sistemas cuánticos abiertos
 \chapter{Flujos de información} 
 
 Los sistemas físicos no sólo intercambian energía entre sí, sino que también comparten información. Este intercambio de información puede tener consecuencias termodinámicas relevantes, como lo ejemplifica el paradigma del Demonio de Maxwell, que muestra cómo la información puede utilizarse para extraer trabajo de un sistema. Tradicionalmente, la paradoja se ha estudiado en el marco de demonios no autónomos, en los cuales es necesaria la intervención de un agente externo encargado de realizar mediciones y retroalimentación. No obstante, comprender cómo fluye la información en sistemas autónomos resulta igualmente fundamental, dado que en estos casos tanto la dinámica como la retroalimentación son generadas internamente, sin control externo. Este tipo de procesos aparece de manera natural en sistemas biológicos y en dispositivos tecnológicos modernos \cite{parrondo2023information,koski2015chip}, y su implementación experimental puede ser más accesible que la de los demonios no autónomos, donde se requiere una intervención activa del observador.
+\\
 
 En este capítulo se introduce el concepto de información termodinámica. En la sección \ref{sec4:Demon} se revisa el paradigma del Demonio de Maxwell como punto de partida. A continuación, en la sección \ref{sec4:autonomo} se presenta el Demonio de Maxwell autónomo, enfatizando su carácter intrínseco. Finalmente, en las secciones \ref{sec4:flujos} y \ref{sec4:flujos0} se formaliza el concepto de flujos de información, utilizando como herramientas la termodinámica estocástica en el marco clásico y la evolución de la matriz densidad en el marco cuántico\cite{horowitz2014thermodynamics,ptaszynski2019thermodynamics}.
 
 \section{Demonio de Maxwell}
 
 El Demonio de Maxwell es un experimento mental propuesto por James Clerk Maxwell en su obra \cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por un ente denominado ``Demonio'', el cual tiene la capacidad de manipularla sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos, de modo que puede discriminar entre partículas rápidas y lentas. Dado que la temperatura está directamente relacionada con la velocidad promedio de las partículas, esta diferencia influye en la temperatura del compartimiento hacia el cual se dirigen. En particular, el Demonio permite el paso del compartimiento A al B únicamente a las partículas más rápidas, mientras que deja pasar del compartimiento B al A las más lentas. Si el número de partículas en cada compartimiento permanece constante, este proceso conduce a un aumento de la temperatura en A y a una disminución en B, generando así una diferencia $\Delta T$ entre ambos lados.
+\\
 
 El cambio de entropía del sistema es
 \begin{align*}
@@ -909,10 +901,13 @@ El cambio de entropía del sistema es
        & =  C_{V} \log \left( 1 - \frac{\Delta T^{2}}{T^{2}}  \right) < 0,
 \end{align*}
 donde \( C_V \) representa la capacidad calorífica a volumen constante.
+\\
 
 De este cálculo se concluye que, sin realizar trabajo externo, el Demonio provoca una disminución de la entropía total, lo que constituye una aparente violación de la segunda ley de la termodinámica.
+\\
 
 La paradoja fue abordada a lo largo del siglo XX mediante distintos enfoques. En primer lugar, Szilard introdujo un modelo explícito de motor controlado por un Demonio \cite{szilard1964decrease}, mientras que Brillouin destacó la conexión entre información y entropía \cite{brillouin1951maxwell}. Posteriormente, Landauer formuló el principio que lleva su nombre, estableciendo que el borrado de información conlleva una disipación mínima de energía \cite{Landauer_1961}. Finalmente, Bennett mostró que el costo energético fundamental asociado al Demonio se encuentra en la operación de borrado de memoria \cite{bennett1982thermodynamics}. En conjunto, estos desarrollos restablecen la validez de la segunda ley en presencia de procesos de adquisición y procesamiento de información.
+\\
 
 En sistemas no autónomos, es decir, aquellos manipulados por un agente externo a través del control de variables macroscópicas, la paradoja de Maxwell ha sido estudiada en detalle. Un ejemplo clásico es el motor de Szilard \cite{szilard1964decrease}, en el cual se puede cuantificar tanto la energía requerida para realizar una medición como el costo energético asociado al borrado de memoria del Demonio, junto con el trabajo máximo extraíble mediante retroalimentación (\textit{feedback}) \cite{maruyama2009colloquium, sagawa2008second}. No obstante, el caso de sistemas autónomos, en los cuales no existe intervención externa y tanto la dinámica como la retroalimentación son generadas internamente, presenta características fundamentales que requieren un análisis más detallado.
 
@@ -923,8 +918,10 @@ En sistemas no autónomos, es decir, aquellos manipulados por un agente externo 
 \section{Demonio de Maxwell autónomo}
 
 Muchos procesos físicos requieren la interacción entre un conjunto de subsistemas que, en conjunto, conforman un sistema global. Esta interacción no se limita al intercambio de energía o partículas, sino que también implica un intercambio de información, a medida que los subsistemas se correlacionan entre sí de manera autónoma, es decir, sin la intervención de un agente externo que realice retroalimentación (\textit{feedback}). 
+\\
 
 Comprender cómo los flujos de información pueden ser utilizados para realizar tareas útiles es de gran relevancia. Un ejemplo claro se encuentra en sistemas biológicos, donde ocurre la adaptación sensorial: un organismo monitorea su entorno mientras ajusta su respuesta al mismo \cite{lan2012energy}. Para caracterizar este tipo de procesos, se considera el Demonio de Maxwell autónomo como un sistema bipartito. Una de sus partes corresponde al sistema controlado, mientras que la otra funciona como detector, el cual ejerce control mediante una interacción física que afecta al sistema controlado. 
+\\
 
 Un requisito fundamental es que el sistema sea verdaderamente autónomo, lo que significa que el Hamiltoniano total debe ser independiente del tiempo y que no se admiten intervenciones externas, tales como mediciones explícitas o protocolos de retroalimentación.
 
@@ -932,10 +929,13 @@ Un requisito fundamental es que el sistema sea verdaderamente autónomo, lo que 
 \section{Contexto clásico de los flujos de información}
 
 Para describir un Demonio de Maxwell autónomo es necesario caracterizar la evolución de un sistema acoplado a uno o más reservorios, y por lo tanto, sujeto a las leyes de la termodinámica en un contexto fuera del equilibrio. 
+\\
 
 Consideremos dos sistemas independientes, \( X \) e \( Y \), cada uno con estados discretos denotados por \( x \) e \( y \), respectivamente. Ambos sistemas presentan una dinámica interna gobernada por saltos aleatorios entre sus estados, cuyas tasas de transición están determinadas por los reservorios locales a los que se encuentran acoplados. Dichas tasas cumplen la condición de \textit{balance detallado local} \cite{van2015ensemble}. 
+\\
 
 La evolución entre estados se modela como un proceso de Markov \cite{van1992stochastic}. Para estudiar la evolución conjunta se introduce un acoplamiento bipartito: en este marco, si el sistema total se encuentra en el estado conjunto \((x,y)\), sólo son posibles transiciones del tipo \((x,y)\to(x,y')\) o \((x,y)\to(x',y)\), mientras que las transiciones simultáneas \((x,y)\to(x',y')\) están prohibidas.
+\\
 
 La probabilidad \( p(x,y) \) de encontrar al sistema en el estado \((x,y)\) está gobernada por la ecuación maestra
 \[
@@ -946,6 +946,7 @@ donde la tasa de transición \( W_{x,x'}^{y,y'} \) describe un salto del estado 
 \ln \left( \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}} \right) = -\frac{\epsilon_{x,y}-\epsilon_{x',y'}}{T},
 \]
 la cual relaciona la razón de tasas de transición con el cambio de energía \(\Delta \epsilon = \epsilon_{x,y}-\epsilon_{x',y'}\), intercambiado con el reservorio en forma de calor. 
+\\
 
 Debido a la estructura bipartita, las tasas adoptan la forma
 \[
@@ -957,22 +958,22 @@ w_{x}^{y,y'} & \text{si } x=x', \; y\neq y', \\[2mm]
 \end{cases}
 \]
 lo que refleja que en cada transición solo varía uno de los subsistemas.
+\\
 
 La corriente de probabilidad se define como
 \[
 J_{x,x'}^{y,y'} = W_{x,x'}^{y,y'}p(x',y') - W_{x',x}^{y',y}p(x,y).
 \]
-
 A partir de esta definición, la ecuación maestra puede reescribirse en la forma
 \[
 d_{t}p(x,y) = \sum_{x',y'}J_{x,x'}^{y,y'} = \sum_{x'}J_{x,x'}^{y} + \sum_{y'}J_{x}^{y,y'}.
 \]
-
 Aquí,
 \[
 J_{x}^{y,y'} = w_{x}^{y,y'}\,p(x,y') - w_{x}^{y',y}\,p(x,y),
 \]
 representa la corriente de probabilidad asociada a un salto \(y' \to y\) con \(x\) fijo, es decir, describe el flujo en la dirección \( Y \) condicionado al valor de \(x\). De manera análoga, \( J^{y}_{x,x'} \) describe el flujo en la dirección \( X \) condicionado a \(y\).  
+\\
 
 Esta descomposición es fundamental, ya que la estructura bipartita permite separar las corrientes en dos componentes: una asociada a transiciones en la dirección \(X\), y otra a transiciones en la dirección \(Y\). Como consecuencia, es posible estudiar funcionales de la corriente, definidos como
 \[
@@ -983,7 +984,6 @@ los cuales se descomponen naturalmente en dos contribuciones:
 \mathcal{A}(J) = \sum_{x\geq x';\,y\geq y'} J_{x,x'}^{y}A_{x,x'}^{y,y'} \;+\; \sum_{x\geq x';\,y\geq y'} J_{x}^{y,y'} A_{x,x'}^{y,y'}.
 \label{sec4:functionalcurrent}
 \end{equation}
-
 De esta forma, la variación de \(\mathcal{A}\) puede interpretarse como la suma de dos contribuciones independientes: una correspondiente a transiciones en la dirección \(X\) y otra asociada a transiciones en la dirección \(Y\).
 
 \label{sec4:flujos}
@@ -993,12 +993,10 @@ El sistema conjunto \(XY\), al estar en contacto con un baño térmico, constitu
 \begin{equation*}
     \dot{\sigma} = \partial_{t}S_{XY} + \dot{S}_{r} \geq 0. 
 \end{equation*}
-
 Aquí, \( S_{XY} = - \sum_{x,y} p(x,y) \ln p(x,y) \) corresponde a la entropía de Shannon del sistema conjunto. Su derivada temporal puede expresarse como
 \begin{equation*}
     \partial_{t}S_{XY} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{p(x',y')}{p(x,y)}.
 \end{equation*}
-
 El cambio de entropía en el ambiente viene dado por
 \begin{equation*}
     \dot{S}_{r} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{W_{x,x'}^{y,y'}}{W_{x',x}^{y',y}},
@@ -1007,15 +1005,15 @@ y por lo tanto
 \begin{equation*}
     \dot{\sigma} = \sum_{x\geq x'; y\geq y'} J_{x,x'}^{y,y'} \ln \frac{ W_{x,x'}^{y,y'}p(x',y')  }{ W_{x',x}^{y',y}p(x,y) } \geq 0.
 \end{equation*}
-
 La demostración rigurosa de estas expresiones se presenta en el apéndice \ref{apendix4:secondlaw}.  
+\\
 
 La entropía de Shannon del sistema \( XY \) mide la incertidumbre asociada a las variables aleatorias \( X \) e \( Y \). Una forma natural de cuantificar las correlaciones entre estas variables es mediante la \textit{información mutua}. Esta magnitud captura cuánto se reduce la incertidumbre en una variable cuando se conoce el valor de la otra, y constituye una medida de la información compartida entre los dos subsistemas \cite{parrondo2015thermodynamics,cover1999elements}. En términos de la probabilidad conjunta, la información mutua se define como
 \begin{equation*}
     I_{XY} = \sum_{x,y} p(x,y) \ln \frac{p(x,y)}{p(x)p(y)} \geq 0. 
 \end{equation*}
-
 De este modo, un valor elevado de \( I_{XY} \) indica que los subsistemas están fuertemente correlacionados, mientras que \( I_{XY}=0 \) corresponde al caso de independencia estadística. Desde un punto de vista termodinámico, la información mutua permite cuantificar recursos informacionales que pueden emplearse para realizar trabajo o modificar flujos de energía en el sistema \cite{parrondo2015thermodynamics}.  
+\\
 
 Para analizar la dinámica de estas correlaciones, se considera la variación temporal de la información mutua. Dicha variación puede descomponerse en dos contribuciones asociadas a las dinámicas locales de cada subsistema:
 \[
@@ -1030,8 +1028,8 @@ donde \( \dot{I}_{X} \) representa la contribución debida a la evolución del s
     \dot{I}_{Y}  = \sum_{x;y\geq y'} J_{x}^{y,y'} \ln \frac{p(x|y)}{ p(x|y') }.
     \label{sec4:clasicalflows}
 \end{equation}
-
 Estos términos cuantifican los \textit{flujos de información}. En particular, \( \dot{I}_{X} > 0 \) implica que, en promedio, las transiciones en la dirección \( X \) aumentan la información mutua, lo que equivale a que el subsistema \( X \) obtiene información acerca de \( Y \). Por el contrario, si \( \dot{I}_{X} < 0 \), las transiciones en \( X \) reducen las correlaciones, lo que puede interpretarse como un consumo de información para realizar trabajo o modificar flujos energéticos.
+\\
 
 Dado que la tasa de producción de entropía es un funcional de la corriente de probabilidad, se puede emplear la ecuación \eqref{sec4:functionalcurrent} para escribir
 \[
@@ -1053,12 +1051,12 @@ En términos de los flujos de información, estas ecuaciones toman la forma
     \dot{\sigma}_{X} & = \partial_{t}S_{X} + \dot{S}_{r}^{X} - \dot{I}_{X} \geq 0, \\
     \dot{\sigma}_{Y} & = \partial_{t}S_{Y} + \dot{S}_{r}^{Y} - \dot{I}_{Y} \geq 0.
 \end{align*}
-
 Estas expresiones muestran explícitamente cómo los flujos de información modifican la producción de entropía local en cada subsistema. En particular, si se ignora la interacción entre \( X \) e \( Y \) y sólo se monitorea \( X \), la tasa de producción de entropía asignada sería
 \[
 \dot{\sigma}_{X}^0 = \partial_{t} S_{X} + \dot{S}_{r}^{X},
 \]
 la cual puede ser negativa, reflejando una violación aparente de la segunda ley. Este fenómeno se interpreta como la acción efectiva de un Demonio de Maxwell, que aprovecha información oculta en las correlaciones.
+\\
 
 En el régimen estacionario, donde \( \partial_t I_{XY} = 0 \), se conserva el flujo de información:
 \[
@@ -1069,7 +1067,6 @@ y las producciones locales de entropía toman la forma
     \dot{\sigma}_{X} & = \dot{S}_{r}^{X} - \dot{\mathcal{I}} \geq 0, \\
     \dot{\sigma}_{Y} & = \dot{S}_{r}^{Y} + \dot{\mathcal{I}} \geq 0.
 \end{align*}
-
 En este contexto, si \( \dot{\mathcal{I}} > 0 \), el subsistema \( X \) actúa como un sensor al obtener información sobre \( Y \), lo que requiere disipar al menos una cantidad de entropía equivalente a
 \[
 \dot{S}_{r}^{X} \geq \dot{\mathcal{I}}.
@@ -1078,7 +1075,6 @@ Por otro lado, el subsistema \( Y \) proporciona información que puede aprovech
 \[
 -\dot{S}_{r}^{Y} \leq \dot{\mathcal{I}}.
 \]
-
 De este modo, el flujo de información \( \dot{\mathcal{I}} \) establece una cota fundamental para el trabajo que puede extraerse a partir de correlaciones informacionales. Este principio constituye la base de la termodinámica de la información y será aplicado en el capítulo siguiente a un modelo específico donde el Demonio de Maxwell se manifiesta a través de corriente en contra de gradientes de potencial externos.
 
 \section{Contexto cuántico de los flujos de información}
@@ -1094,6 +1090,7 @@ En el régimen markoviano, la evolución temporal del sistema reducido se expres
       + \mathcal{L}(\hat{\rho}_{S}(t)),
 \end{equation*}
 la cual, en el marco de esta tesis, corresponde a la ecuación \eqref{eqsec2:lindbladS} o a la ecuación \eqref{sec2schrodingerthermo}.
+\\
 
 El acoplamiento con múltiples reservorios $\alpha$ se modela mediante un generador de Lindblad descompuesto en contribuciones locales. En el caso global,
 \begin{equation*}
@@ -1104,6 +1101,7 @@ mientras que, en el caso semilocal,
     \mathcal{L}=\sum_{\alpha}\mathcal{L}_{\alpha}.
 \end{equation*}
 Aquí, cada superoperador $\mathcal{L}_{\alpha,g}$ o $\mathcal{L}_{\alpha}$ representa la interacción efectiva con el reservorio $\alpha$.
+\\
 
 Supondremos que cada reservorio induce un equilibrio local descrito por un estado de Gibbs. Para acoplamiento global y semilocal, respectivamente,
 \[
@@ -1168,6 +1166,7 @@ lo que constituye la versión local de la segunda ley. La suma de estas contribu
 en correspondencia con la inecuación de Clausius estándar. Obsérvese que, aun en estado estacionario
 ($\partial_{t}S_{g}=0$ o $\partial_{t}S=0$), los términos
 $\dot{S}^{\alpha,g}$ y $\dot{S}^{\alpha}$ no tienen por qué anularse: dependen de los flujos locales que entran por cada disipador.
+\\
 
 Introducimos ahora las corrientes de energía y la potencia química asociadas a cada reservorio,
 \begin{align*}
@@ -1243,6 +1242,7 @@ $\dot{W}_{g}\ge 0$ y $\dot{W}\ge 0$. En consecuencia, el sistema no puede entreg
 \section{Flujos de información en sistemas cuánticos}
 
 En esta sección, el análisis de los flujos de información se desarrollará en el marco de la evolución semilocal, ya que este será el esquema utilizado en el resto de la tesis. Para el caso de evolución global, los flujos de información pueden definirse de manera análoga, empleando las cantidades termodinámicas correspondientes a dicho marco.
+\\
 
 Consideremos un sistema $S$ compuesto por dos subsistemas acoplados, cuya dinámica está gobernada por un Hamiltoniano de la forma
 \[
@@ -1253,12 +1253,14 @@ donde $\hat{H}_{i}$ representa el Hamiltoniano del subsistema $i = X,Y$, y $\hat
     \dot{\sigma}_{i} \equiv \sum_{\alpha_{i}} \dot{\sigma}_{\alpha_{i}} = \sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} - \sum_{\alpha_{i}} \beta_{\alpha_{i}} J_{\alpha_{i}} \geq 0,
 \]
 de modo que la tasa de producción de entropía total del sistema se expresa como $\dot{\sigma} = \dot{\sigma}_{X} + \dot{\sigma}_{Y}$.
+\\
 
 De forma análoga a la descripción clásica, se busca establecer un vínculo entre las producciones locales de entropía y la información compartida entre subsistemas. Para ello, se emplea la información mutua cuántica, definida como
 \[
     I_{XY} = S_{X} + S_{Y} - S_{XY},
 \]
 donde $S_{XY} = -\mathrm{Tr}\{ \hat{\rho}_{S} \ln \hat{\rho}_{S} \}$ es la entropía de von Neumann del sistema total, y $S_{i} = - \mathrm{Tr}\{ \hat{\rho}_{i} \ln \hat{\rho}_{i} \}$ corresponde a la entropía del subsistema $i = X, Y$, con $\hat{\rho}_{i}$ la matriz densidad reducida asociada.
+\\
 
 La derivada temporal de la información mutua puede descomponerse como
 \begin{align*}
@@ -1278,6 +1280,7 @@ Al sustituir $\sum_{\alpha_{i}} \dot{S}^{\alpha_{i}} = \partial_{t} S_{i} - \dot
     \label{sec4:localentropyquantum}
 \end{align}
 Este resultado es análogo al obtenido en la descripción clásica; sin embargo, al estar formulado en términos de entropías de von Neumann permite incorporar de manera natural efectos cuánticos, como las correlaciones y coherencias, que resultan esenciales para la caracterización de los flujos de información en sistemas cuánticos.
+\\
 
 Si el subsistema $i$ está acoplado a un reservorio isotérmico de temperatura $T_i$, la tasa de cambio de energía libre se escribe como
 \[
@@ -1296,18 +1299,21 @@ Así, la variación de energía libre presenta dos contribuciones: una asociada 
     \dot{W}_{i} \geq \dot{E}_{i} + T_{i}\dot{I}_{i}.
 \]
 Esta cota muestra que la capacidad del subsistema $i$ para realizar trabajo externo depende no sólo del intercambio energético, sino también del flujo de información que reciba.
+\\
 
 En régimen estacionario, la energía total permanece constante,
 \[
     \partial_{t}E = \dot{E}_{X} + \dot{E}_{Y} = 0,
 \]
 lo que permite interpretar los términos $\dot{E}_{i}$ como flujos de energía entre subsistemas. En este contexto, la variación de energía libre de cada subsistema se descompone en dos partes: una correspondiente al intercambio energético y otra asociada al flujo de información generado por sus correlaciones mutuas.
+\\
 
 En el caso particular $\dot{E}_{X} = \dot{E}_{Y} \approx 0$, la cota para la potencia se reduce a
 \[
      \dot{W}_{i} \geq T_{i}\dot{I}_{i}.
 \]
 Cuando $\dot{I}_{i}<0$, esta relación permite que el sistema realice trabajo a partir de una contribución dominante de la información, incluso en ausencia de gradientes térmicos apreciables. Este mecanismo constituye lo que se denomina una \textit{máquina de información}, en la que los flujos informacionales entre subsistemas desempeñan un papel central, posibilitando la extracción de trabajo en un régimen puramente informacional. 
+\\
 
 Estos flujos de información y su influencia en la termodinámica de sistemas cuánticos serán explorados en detalle en el capítulo siguiente, donde se analizará un modelo específico que exhibe el comportamiento característico de un Demonio de Maxwell autónomo.
 
@@ -1316,16 +1322,20 @@ Estos flujos de información y su influencia en la termodinámica de sistemas cu
 \chapter{Dinámica de un sistema de tres puntos cuánticos conectado al ambiente}
 
 En este capítulo se estudia un sistema compuesto por tres puntos cuánticos acoplados a tres reservorios térmicos que, bajo condiciones apropiadas, puede exhibir un comportamiento característico de un Demonio de Maxwell autónomo. La dinámica se describe mediante una ecuación maestra en forma de Lindblad (véase \ref{sec2lindbladconsistency}), y se analizan las condiciones en las que la información intercambiada entre los subsistemas impulsa transporte en contra del gradiente químico. Asimismo, se cuantifican magnitudes termodinámicas relevantes (corrientes de partículas, flujos de calor, potencia) y se discute el papel de las coherencias cuánticas.
+\\
 
 La organización es la siguiente. En la sección~\ref{puntoscuanticos} se presenta una breve reseña experimental de los puntos cuánticos. En la sección~\ref{modeloteorico} se introduce el modelo propuesto; en la sección~\ref{sec5:modelo} se detalla el Hamiltoniano del sistema reducido y su entorno, junto con el generador de Lindblad que se utilizará (con base en \ref{sec2lindbladconsistency}). A continuación, la sección~\ref{explicaciondem} ofrece una explicación heurística del Demonio de Maxwell autónomo. La sección~\ref{resultados} reúne los resultados y se divide en dos partes: primero, la sección~\ref{sec5:transporte} analiza el régimen de transporte cuántico con tasas de túnel independientes de la ocupación; luego, la sección~\ref{sec5:demonio1} estudia el caso en que las tasas de tunel dependen de la ocupación de $D$, con esto establece las condiciones bajo las cuales el sistema actúa como un Demonio de Maxwell autónomo. Finalmente, en la sección~\ref{sec5:demonio} se compara este comportamiento con su contraparte clásica, destacando las diferencias inducidas por efectos cuánticos.
 
 \section{Puntos cuánticos}
 \label{puntoscuanticos}
 Los puntos cuánticos constituyen uno de los sistemas a nanoescala más estudiados en el ámbito de la termodinámica cuántica y el transporte electrónico. Estos dispositivos, fabricados mediante técnicas de litografía o autoensamblaje, consisten en regiones semiconductoras de tamaño reducido, típicamente del orden de $100\,\text{nm}$, donde los electrones quedan confinados en las tres dimensiones espaciales \cite{hanson2007spins}. Debido a este confinamiento, los puntos cuánticos exhiben niveles de energía discretos, análogos a los de los átomos; por ello se les denomina \textit{átomos artificiales} \cite{kouwenhoven2001few}. En un átomo real, los electrones son atraídos hacia un núcleo positivo; en cambio, en un punto cuántico la localización electrónica es consecuencia del potencial de confinamiento impuesto por la heteroestructura semiconductora \cite{ashoori1996electrons}. 
+\\
 
-De manera análoga a la energía de ionización de los átomos, los puntos cuánticos poseen una \textit{energía de carga}, que corresponde al costo energético de añadir un electrón adicional al sistema superando la repulsión de Coulomb y el confinamiento de las barreras \cite{hanson2007spins}. Esta magnitud no debe confundirse con la \textit{energía de sitio} $\epsilon$, asociada a los niveles discretos originados por el confinamiento cuántico. Mientras la primera refleja el carácter colectivo de la interacción electrostática y depende de la capacitancia efectiva del punto cuántico, la segunda describe la estructura espectral propia del potencial de confinamiento. 
+De manera análoga a la energía de ionización de los átomos, los puntos cuánticos poseen una \textit{energía de carga}, que corresponde al costo energético de añadir un electrón adicional al sistema superando la repulsión de Coulomb y el confinamiento de las barreras \cite{hanson2007spins}. Esta magnitud no debe confundirse con la \textit{energía de sitio}, asociada a los niveles discretos originados por el confinamiento cuántico. Mientras la primera refleja el carácter colectivo de la interacción electrostática y depende de la capacitancia efectiva del punto cuántico, la segunda describe la estructura espectral propia del potencial de confinamiento. 
+\\
 
 Otro aspecto importante de los puntos cuánticos es que pueden acoplarse a reservorios electrónicos mediante barreras de túnel, lo que permite estudiar el transporte electrónico a través de ellos en distintas condiciones de acoplamiento y temperatura.
+\\
 
 En la Figura~\ref{img:dot} se muestra un esquema simplificado de un punto cuántico definido electrostáticamente en una heteroestructura de GaAs/AlGaAs. Aunque el análisis de esta tesis es de carácter teórico, esta representación ilustra de manera concreta cómo se implementa un confinamiento cuántico en sistemas semiconductores.
 
@@ -1339,8 +1349,10 @@ Con el fin de extender el modelo estudiado en \cite{horowitz2014thermodynamics} 
 
 
 La elección de este sistema se justifica por su capacidad para exhibir un comportamiento característico de un Demonio de Maxwell autónomo, análogo al modelo clásico presentado en \cite{horowitz2014thermodynamics}. La interacción entre los tres puntos cuánticos hace posible que el Demonio influya en el flujo de electrones entre $L$ y $R$, posibilitando la extracción de trabajo. 
+\\
 
 Una manera de llevar a cabo dicha extracción consiste en aplicar un gradiente de potencial eléctrico entre los puntos $L$ y $R$, es decir, $\mu_{L} - \mu_{R} = eV$, lo que genera una corriente de electrones. Bajo ciertas condiciones, el Demonio puede invertir esta corriente, forzando a los electrones a fluir en contra del gradiente aplicado. Este efecto, que constituye una manifestación de trabajo extraído mediante información, se analiza con mayor detalle en la sección \ref{sec5:dem}. 
+\\
 
 En la siguiente sección se estudiará la dinámica del sistema mediante la ecuación maestra de Lindblad semilocal, donde se introducen los parámetros microscópicos que caracterizan al Hamiltoniano.
 
@@ -1352,13 +1364,14 @@ El Hamiltoniano del sistema de tres puntos cuánticos, en segunda cuantización,
     \hat{H}_{S} & = \epsilon_{D}\hat{n}_{D} + \epsilon \hat{n}_{L} + \epsilon \hat{n}_{R} + g(\hat{d}^{\dagger}_{L}\hat{d}_{R} + \hat{d}^{\dagger}_{R}\hat{d}_{L} ) \\
           & \quad + U(\hat{n}_{D}\hat{n}_{L} + \hat{n}_{D}\hat{n}_{R} )  + U_{f}\hat{n}_{R}\hat{n}_{L},
 \end{align*}
-donde los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
+Aquí, $\hat{d}_{i}$ ($\hat{d}^{\dagger}_{i}$) denota el operador de aniquilación (creación) en el sitio $i\in\{L,R,D\}$, y $\hat{n}_{i}=\hat{d}^\dagger_i\hat{d}_i$ representa el operador de número. Los operadores $\hat{d}_{i}$ satisfacen las relaciones de anticonmutación
 
 \begin{equation*}
     \{\hat{d}_{\alpha},\hat{d}_{\beta} \} = 0, \hspace{10mm} \{\hat{d}^{\dagger}_{\alpha}, \hat{d}_{\beta} \} = \delta_{\alpha \beta}.
 \end{equation*}
 
-Aquí, $\hat{d}_{i}$ ($\hat{d}^{\dagger}_{i}$) denota el operador de aniquilación (creación) en el sitio $i\in\{L,R,D\}$, y $\hat{n}_{i}=\hat{d}^\dagger_i\hat{d}_i$ representa el operador número. El término proporcional a $\epsilon_i$ corresponde a la energía de sitio asociada al confinamiento cuántico en cada punto; $g$ describe el acoplamiento de \textit{hopping} coherente entre $L$ y $R$, análogo al acoplamiento entre orbitales atómicos \cite{simon2013oxford}, responsable de generar coherencias en la base de Fock; $U$ modela la interacción de Coulomb repulsiva entre el demonio $D$ y los sitios $L$ y $R$; mientras que $U_f$ representa la interacción de Coulomb repulsiva entre $L$ y $R$.
+El término proporcional a $\epsilon_i$ corresponde a la energía de sitio asociada al confinamiento cuántico en cada punto; $g$ describe el acoplamiento de \textit{hopping} coherente entre $L$ y $R$, análogo al acoplamiento entre orbitales atómicos \cite{simon2013oxford}, responsable de generar coherencias en la base de Fock; $U$ modela la interacción de Coulomb repulsiva entre el demonio $D$ y los sitios $L$ y $R$; mientras que $U_f$ representa la interacción de Coulomb repulsiva entre $L$ y $R$.
+\\
 
 En la base de Fock $|n_{L},n_{R},n_{D} \rangle = (\hat{d}^{\dagger}_{L})^{n_{L}}(\hat{d}^{\dagger}_{R})^{n_{R}}(\hat{d}^{\dagger}_{D})^{n_{D}}|0,0,0\rangle$, ordenada como
 
@@ -1380,8 +1393,8 @@ el Hamiltoniano adopta la forma matricial
         0 & 0 & 0 & 0 & 0 & 0 & 0 & \epsilon_{L} + \epsilon_{R}  + \epsilon_{D} + 2U + U_{f} 
         \end{bmatrix}.
 \end{equation*}
-
 Esta representación muestra que el término de \textit{hopping} $g$ es el único que introduce coherencias en la base de Fock, al acoplar los estados $|1,0,0\rangle \leftrightarrow |0,1,0\rangle$ y $|1,0,1\rangle \leftrightarrow |0,1,1\rangle$. El resto de los términos son puramente diagonales y describen las energías de cada configuración de ocupación.
+\\
 
 El Hamiltoniano total incluye, además, los términos de los reservorios y la interacción sistema–baño: $\hat{H}_{B} = \hat{H}_{L}+\hat{H}_{R}+\hat{H}_{D}$ y $\hat{V} = \hat{V}_{L}+\hat{V}_{R}+\hat{V}_{D}$, con 
 
@@ -1390,6 +1403,7 @@ El Hamiltoniano total incluye, además, los términos de los reservorios y la in
     \hat{V}_{\alpha} = \sum_{l} t_{\alpha, l} \left( \hat{d}^{\dagger}_{\alpha} \hat{c}_{\alpha, l} + \hat{c}^{\dagger}_{\alpha, l} \hat{d}_{\alpha} \right),
 \end{equation*}
 donde $\alpha = L,R,D$ denota los tres reservorios, $\hat{c}_{\alpha,l}$ son los operadores de aniquilación de los modos del reservorio $\alpha$, $\epsilon_{\alpha, l}$ sus energías, y $t_{\alpha, l}$ los parámetros reales de acoplamiento. 
+\\
 
 De $\hat{V}$ se identifican los operadores de sistema y baño como 
 
@@ -1398,7 +1412,7 @@ De $\hat{V}$ se identifican los operadores de sistema y baño como
 \end{equation*}
 
 \begin{equation*}
-    \hat{B}_{\alpha,1} = \sum_{l}t_{\alpha l} \hat{c}_{\alpha l}, \hspace{10mm} \hat{B}_{\alpha,-1} = \sum_{l}t_{\alpha l} \hat{c}^{\dagger}_{\alpha l}.
+    \hat{B}_{\alpha,1} = \sum_{l}t_{\alpha,l} \hat{c}_{\alpha,l}, \hspace{10mm} \hat{B}_{\alpha,-1} = \sum_{l}t_{\alpha,l} \hat{c}^{\dagger}_{\alpha,l}.
 \end{equation*}
 
 La evolución no unitaria del sistema de tres puntos cuánticos, inducida por el acoplamiento a los reservorios, se describe mediante la ecuación maestra de Lindblad:  
@@ -1407,7 +1421,6 @@ La evolución no unitaria del sistema de tres puntos cuánticos, inducida por el
     \mathcal{L} = \mathcal{L}_{R} + \mathcal{L}_{L} + \mathcal{L}_{D},
     \label{Lindbladsec5}
 \end{equation}
-
 donde cada disipador $\mathcal{L}_\alpha$ depende de los operadores locales de su sitio acoplado y adopta la forma explícita siguiente:
 
 \begin{align*}
@@ -1430,17 +1443,18 @@ donde cada disipador $\mathcal{L}_\alpha$ depende de los operadores locales de s
 &+ \kappa_D(\epsilon_D+U) [1-f_D(\epsilon_D+U)]\mathcal{D}[\hat{d}_D(\hat{n}_L(1-\hat{n}_R) + \hat{n}_R(1-\hat{n}_L))]  \\
 &+ \kappa_D(\epsilon_D+2U)\big( f_D(\epsilon_D+2U)\mathcal{D}[\hat{d}^\dagger_D\hat{n}_R\hat{n}_L] + [1-f_D(\epsilon_D+2U)]\mathcal{D}[\hat{d}_D\hat{n}_R\hat{n}_L] \big).
 \end{align*}
+Aquí, $f_\alpha(\omega) = \left(e^{\beta_\alpha(\omega-\mu_\alpha)}+1\right)^{-1}$ corresponde a la función de Fermi, mientras que $\kappa_\alpha(\omega) = 2\pi\sum_l t^2_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$ define las tasas de túnel. Los términos $\kappa_\alpha(\omega)[1-f_\alpha(\omega)]$ y $\kappa_\alpha(\omega)f_{\alpha}(\omega)$ describen, respectivamente, la transición de un electrón desde el sitio hacia el baño térmico y el proceso inverso, del baño hacia el sitio. Además, es importante notar que los disipadores dependen no sólo de los operadores $\hat{d}_{i}$, sino también de los operadores de número asociados a los otros sitios, lo que refleja la naturaleza semilocal del enfoque empleado. La ecuación \eqref{Lindbladsec5} se obtiene a partir de los operadores de salto calculados en \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}. 
+\\
 
-Aquí, $f_\alpha(\omega) = (e^{\beta_\alpha(\omega-\mu_\alpha)}+1)^{-1}$ son las funciones de Fermi y $\kappa_\alpha(\omega) = 2\pi\sum_l t^2_{\alpha,l}\delta(\omega-\epsilon_{\alpha,l})$ las tasas de túnel. 
-
-La ecuación \eqref{Lindbladsec5} se obtiene a partir de los operadores de salto calculados en \ref{apendix5jumpop} y \ref{apendix5frecuencygroup}. Despreciando el término de \textit{Lamb Shift} $\hat{H}_{LS}$, como se realiza en~\cite{prech2023entanglement}, la evolución del sistema está gobernada por  
+Despreciando el término de \textit{Lamb Shift} $\hat{H}_{LS}$, como se realiza en~\cite{prech2023entanglement}, la evolución del sistema está gobernada por  
 
 \begin{equation}
     \frac{d}{dt}\hat{\rho}_{S}(t) = -i[\hat{H}_{S},\hat{\rho}_{S}(t)] + \mathcal{L}(\hat{\rho}_{S}(t)),
 \end{equation}
 donde $\hat{\rho}_{S}(t)$ es la matriz densidad del sistema reducido. Esta ecuación permite calcular numéricamente la dinámica y extraer las magnitudes termodinámicas de interés.  
+\\
 
-Un aspecto relevante es que, en la descripción semilocal, los disipadores se construyen a partir de operadores locales, lo cual facilita asignar cantidades termodinámicas a cada subsistema, en particular los flujos de información. En contraste, en la ecuación maestra global los disipadores dependen de operadores colectivos, lo que dificulta la interpretación local. Es crucial determinar bajo qué condiciones un Hamiltoniano $\hat{H}_S$ conserva la localidad de los operadores tras la agrupación de frecuencias. Un ejemplo en que la localidad no se cumple ocurre cuando las interacciones de Coulomb entre los sitios toman valores distintos.
+Un aspecto relevante es que, en la descripción semilocal, los disipadores se construyen a partir de operadores locales, lo cual facilita asignar cantidades termodinámicas a cada subsistema, en particular los flujos de información. En contraste, en la ecuación maestra global los disipadores dependen de operadores colectivos, lo que dificulta la interpretación local. Es crucial determinar bajo qué condiciones un Hamiltoniano $\hat{H}_S$ conserva la localidad de los operadores tras la agrupación de frecuencias. Un ejemplo en que la localidad no se cumple ocurre cuando todas las interacciones de Coulomb entre los sitios toman valores distintos.
 
 \label{sec5:modelo}
 
@@ -1448,12 +1462,16 @@ Un aspecto relevante es que, en la descripción semilocal, los disipadores se co
 \subsection{Explicación del Demonio de Maxwell autónomo}
 \label{explicaciondem}
 Para que el sistema de tres puntos cuánticos se comporte como un Demonio de Maxwell autónomo, es necesario tratarlo como un sistema bipartito compuesto por dos subsistemas: el subsistema $LR$, que consta de dos niveles de energía $\epsilon$, y el subsistema $D$, cuyo nivel de energía $\epsilon_D$ desempeña el rol de demonio.
+\\
 
 El demonio debe ser capaz de detectar el estado de ocupación del subsistema $LR$ y, en respuesta, modificar su dinámica, actuando de manera análoga a una medición. Gracias a la interacción de Coulomb $U$, el demonio distingue entre las configuraciones en las que $LR$ está vacío, ocupado o doblemente ocupado. A su vez, la dinámica del subsistema $LR$ depende del estado de ocupación del demonio, estableciéndose así una retroalimentación.
+\\
 
 Esta retroalimentación se implementa matemáticamente imponiendo que las tasas de túnel cumplan la condición $\kappa_{i}(\epsilon + U) \neq \kappa_{i}(\epsilon)$, con $i = L, R$. En adelante, se utilizará la notación $\kappa^{U}_{i} \equiv \kappa_{i}(\epsilon+U)$ y $\kappa_{i} \equiv \kappa_{i}(\epsilon)=\kappa_{i}(\epsilon+U_{f})=\kappa_{i}(\epsilon+U+U_{f})$. Por el contrario, las tasas de túnel del demonio no dependen de la ocupación del sistema, de modo que se escriben simplemente como $\kappa_{D}\equiv \kappa_{D}(\epsilon_D)$.
+\\
 
 Para que el demonio detecte de manera efectiva el estado del subsistema $LR$, deben cumplirse dos condiciones físicas. Primero, la energía de interacción debe superar ampliamente las fluctuaciones térmicas de su reservorio asociado, es decir, $\beta_{D} U \gg 1$. Segundo, la dinámica disipativa del demonio debe ser más rápida que la del subsistema $LR$, lo que requiere que $\kappa_{D} > \max\{\kappa_{i}, \kappa^{U}_{i}\}$ con $i = L, R$.
+\\
 
 La dinámica del demonio puede descomponerse en tres etapas, ilustradas en las Figuras~\ref{img:dinamica1}–\ref{img:dinamica3}.  
 
@@ -1489,37 +1507,41 @@ generado por una diferencia de potencial $\mu_{L} - \mu_{R} = eV$, con $\mu_{L}=
 \insertimage[\label{img:transporte1}]{ejemplos/particletp.pdf}{scale=0.40}{Corriente de partículas en función de la razón \( eV/T \). Las temperaturas de los reservorios son \( T_{L} = T_{R} = T = 100 \) y \( T_{D} = 2 \). El parámetro de acoplamiento se fija en \( g = \frac{5}{1000} \). Las energías de sitio corresponden a \( \epsilon = 0 \) y \( \epsilon_{D} = \mu_{D} - \frac{U}{2} \), con $\mu_{D}=2$. Las interacciones de Coulomb se fijan en \( U_{f} = 500 \) y \( U = 40 \).}
 
 La figura muestra que, a medida que aumenta la diferencia de potencial $eV$, la corriente de partículas $\dot{N}_L = -\dot{N}_R$ que fluye del baño $L$ al baño $R$ también crece. Este comportamiento es consistente con lo esperado, ya que un mayor potencial químico en el reservorio $L$ impulsa el transporte hacia $R$.  
+\\
 
 La potencia suministrada al sistema, dada por la ecuación~\eqref{sec2:heatworkeq}, se presenta en la Figura~\ref{img:transporte2}.  
 
 \insertimage[\label{img:transporte2}]{ejemplos/worktp.pdf}{scale=0.40}{Potencia entregada por los reservorios en función de $eV/T$.}
     
 En la Figura~\ref{img:transporte2} se observa que los reservorios $L$ y $R$ entregan trabajo al sistema para mantener la corriente de partículas. Este resultado concuerda con la interpretación física, ya que el transporte de electrones desde un potencial químico mayor hacia uno menor implica una transferencia de energía al sistema en forma de trabajo. Por su parte, dado que el reservorio $D$ no intercambia partículas en promedio, la potencia asociada a este es nula.  
+\\
 
 Los flujos de calor definidos en la ecuación~\eqref{sec2:heatworkeq} se muestran en la Figura~\ref{img:transporte3}.  
 
 \insertimage[\label{img:transporte3}]{ejemplos/heatlrdtp.pdf}{scale=0.40}{Flujo de calor recibido por los sistemas $LR$ y $D$ en función de $eV/T$.}
     
 Se observa que, para $eV/T \lessapprox 2$, el sistema $LR$ recibe calor de los reservorios $L$ y $R$, mientras que para $eV/T \gtrapprox 2$ este sistema entrega calor a dichos reservorios.  
+\\
 
 Para completar el análisis termodinámico, se utilizan las relaciones de la primera ley $\dot{E}_{\alpha} = J_{\alpha} + \dot{W}_{\alpha}$ (ec.~\eqref{sec2:energyeq}) y se grafican los flujos de energía en la Figura~\ref{img:transporte4}.  
 
 \insertimage[\label{img:transporte4}]{ejemplos/energytp.pdf}{scale=0.43}{Flujo de energía entregado por los reservorios en función de $eV/T$.}
 
 En el estado estacionario, la condición $\partial_t E = 0$ implica que $\dot{E}_{LR} = -\dot{E}_D$. Esto se corrobora en la Figura~\ref{img:transporte4}, donde el flujo de energía $\dot{E}_{LR}$ resulta positivo y $\dot{E}_D$ negativo. Como $\dot{W}_{D} = 0$, se deduce que el flujo de calor hacia el demonio está dado por $J_D = \dot{E}_D < 0$, es decir, el reservorio $D$ absorbe calor. En consecuencia, el sistema $LR$ recibe energía de los reservorios $L$ y $R$, la transfiere al subsistema $D$, y esta es finalmente disipada en su respectivo baño térmico. Este comportamiento concuerda con la primera ley de la termodinámica, ya que la energía suministrada por los reservorios de mayor temperatura ($T_L = T_R = T > T_D$) se conserva y fluye hacia el reservorio de menor temperatura.  
+\\
 
 Con el fin de analizar los efectos cuánticos en el estado estacionario, se calculan dos cantidades relevantes. La primera es la norma-$l_{1}$, $\mathcal{C}_{l_{1}}$, que cuantifica las coherencias en el sistema $LR$:  
 
 \[
 \mathcal{C}_{l_{1}} = \sum_{i> j} |\hat{\rho}_{S;i,j}|.
 \]
-
 La segunda cantidad corresponde al entrelazamiento entre modos específicos. En particular, se estudia el entrelazamiento entre los pares de estados $\{|1,0,0\rangle, |0,1,0\rangle\}$ y $\{|1,0,1\rangle, |0,1,1\rangle\}$. Para cuantificar estas correlaciones no clásicas se utiliza la concurrencia $\mathcal{C}_{\text{on}}$ \cite{hill1997entanglement, wootters1998entanglement}, definida como  
 
 \[
 \mathcal{C}_{\text{on}} = \max \left\{ 2|\alpha + \beta| - 2\sqrt{p_0 p_D},\, 0 \right\},
 \]
 donde $p_0$ y $p_D$ representan las probabilidades de que el sistema $LR$ se encuentre vacío o doblemente ocupado, respectivamente. El término $\alpha$ corresponde a la coherencia entre los estados $|1,0,0\rangle$ y $|0,1,0\rangle$, mientras que $\beta$ representa la coherencia entre los estados $|1,0,1\rangle$ y $|0,1,1\rangle$. La deducción de esta expresión se presenta en el Apéndice~\ref{appendix5final}.  
+\\
 
 En la Figura~\ref{img:transporte5} se ilustra la variación de la coherencia y la concurrencia en función de la diferencia de potencial.  
 
@@ -1533,12 +1555,16 @@ Los resultados muestran que la coherencia comienza en cero y aumenta de forma pr
 
 \subsection{Efectos del Demonio de Maxwell autónomo en sistema de 3 puntos cuánticos}
 En esta subsección se eligen distintos valores para las tasas de túnel, dependiendo de la ocupación del sitio $D$. El objetivo es inducir un comportamiento tipo Demonio de Maxwell. Para ello, se estudiará el comportamiento de la matriz densidad, así como los flujos de corriente de partículas, calor, información y potencia, en función de la diferencia de potencial $\mu_{L} - \mu_{R} = eV$.
+\\
 
 Se comenzará analizando las probabilidades de ocupación, extraídas de la matriz densidad en el estado estacionario. Como se muestra en la Figura~\ref{img:densitymatrix}, las tres probabilidades más altas corresponden a los estados $\rho_{001}$, $\rho_{100}$ y $\rho_{010}$, lo cual es coherente con la presencia de interacción de Coulomb, que penaliza las configuraciones con ocupación múltiple.
+\\
 
 Para valores de $eV/T \lessapprox 3.6$, la probabilidad más alta corresponde al estado $\rho_{001}$, lo que indica que el sitio $D$ es, en promedio, el más ocupado. Sin embargo, a medida que la diferencia de potencial aumenta ($eV/T \gtrapprox 3.6$), las probabilidades asociadas a los estados $\rho_{100}$ y $\rho_{010}$ —correspondientes a los sitios $L$ y $R$— superan a $\rho_{001}$, lo que refleja un cambio en la ocupación predominante del sistema.
+\\
 
 Debido a que la interacción de Coulomb penaliza los estados con más de un electrón, cabría esperar que la probabilidad de vacío $\rho_{000}$ fuese del mismo orden de magnitud que $\rho_{100},\rho_{010},\rho_{001}$. Sin embargo, debido a la constante inyección de partículas inducida por la diferencia de potencial, esta probabilidad resulta ser significativamente menor. 
+\\
 
 Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $eV/T \approx 2.4$. Para valores $eV/T \lessapprox 2.4$, la configuración con interacción Coulomb entre los puntos $R$ y $D$ (representada por $\rho_{011}$) es más probable que $\rho_{101}$, esto favorece a que el sistema se encuentre en la configuración de la Figura \ref{img:dinamica1}, y por lo tanto es esperable que favorezca el comportamiento tipo Demonio. En cambio, para $eV/T \gtrapprox 2.4$, la ocupación $\rho_{011}$ se hace menos probable, indicando una menor interacción entre los sitios $R$ y $D$, por lo tanto se suprime el comportamiento tipo Demonio.
 
@@ -1546,10 +1572,13 @@ Se observa además un cruce entre las curvas de $\rho_{101}$ y $\rho_{011}$ en $
 \insertimage[\label{img:densitymatrix}]{ejemplos/matrixdemon.pdf}{scale=0.45}{Elementos diagonales de la matriz densidad en función de $eV/T$. Los resultados se obtuvieron considerando temperaturas $T = 100$ y $T_D = 2$, niveles de energía $\epsilon = 0$ y $\epsilon_D = \mu_D - U/2$ con potencial químico $\mu_D = 2$, tasas de túnel $\kappa_L = \kappa^{U}_{R} = 1/100$, $\kappa_R = \kappa^{U}_{L} = 1/600$, $\kappa_D =  1/50$, acoplamiento entre los sitios $g = 5/1000$ e interacciones de Coulomb $U = 40$ y $U_f = 500$.}
 
 El comportamiento de un Demonio de Maxwell autónomo se puede corrobar analizando las cantidades termodinámicas del sistema. En la Figura~\ref{img:fig1resultado} se muestran: (a) los flujos de calor correspondientes a cada reservorio, y (b) las corrientes de partículas asociadas. Cabe destacar que, dado que no existe un término de hopping entre el sistema y el demonio, la corriente de partículas en el demonio es nula, $\dot{N}_{D} = 0$. Además, por conservación de partículas, se cumple que $\dot{N}_{L} = -\dot{N}_{R}$, lo cual implica que la influencia del demonio sobre el sistema ocurre exclusivamente a través de flujos de energía o información.
+\\
 
 Existe un régimen \( eV/T \lessapprox 2.4 \) donde el sistema \( LR \) recibe calor de los reservorios \( L \) y \( R \), es decir, \( J_L, J_R > 0 \). En este mismo régimen, el demonio disipa calor en su respectivo reservorio, \( J_D < 0 \). 
+\\
 
 Dado que $\mu_L - \mu_R = eV$, se esperaría que $\dot{N}_L > 0$ para todo valor de $eV$. No obstante, en el régimen $eV/T \lessapprox 2.4$, se observa que $\dot{N}_L < 0$, lo que indica un flujo de partículas en contra del gradiente de potencial. Este cambio de signo en la corriente coincide con el cruce entre las probabilidades $\rho_{101}$ y $\rho_{011}$, lo que es consistente con el comportamiento de Demonio de Maxwell. En particular, como se ilustró en la Figura~\ref{img:dinamica1}, dicho régimen requiere una interacción simultánea entre los puntos $R$ y $D$.
+\\
 
 Si se analiza únicamente el subsistema $LR$, la existencia de una corriente contra el gradiente químico representa una violación aparente de la segunda ley de la termodinámica. Para este análisis, se considera la tasa de producción de entropía efectiva del subsistema en el estado estacionario, dada por $\dot{\sigma}^{o}_{LR} = - \sum_{i=L,R} J_i/T$, cuya evolución en función de $eV/T$ se muestra en la Figura~\ref{img:fig2resultado}.
 
@@ -1567,8 +1596,8 @@ En el régimen de parámetros en que \( eV/T \lessapprox 2.4 \), el subsistema \
 \[
 \dot{\mathcal{F}}_{LR} = \dot{E}_{LR} + T\dot{I}_{LR} = -\dot{E}_{D} + T\dot{I}_{LR} \approx T\dot{I}_{LR}, \hspace{10mm} \dot{W}_{LR} \geq \dot{\mathcal{F}}_{LR},
 \]
-
 donde \( \dot{\mathcal{F}}_{LR} \) representa la tasa de cambio de energía libre del subsistema \( LR \), incluyendo una contribución informacional \( T\dot{I}_{LR} \).
+\\
 
 A fin de verificar este comportamiento, se grafican las cantidades termodinámicas relevantes tanto del sistema como del demonio.
 
@@ -1576,12 +1605,16 @@ A fin de verificar este comportamiento, se grafican las cantidades termodinámic
 \insertimage[\label{img:fig4resultado}]{ejemplos/thermoquantitiesdemon}{scale=0.60}{ Flujo de energía, tasa de cambio de energía libre, flujo de información, potencia y flujo de calor del sistema $LR$. (b)  Flujo de energía, tasa de cambio de energía libre, flujo de información y potencia del Demonio. }
 
 La Figura \ref{img:fig4resultado} muestra que, en el régimen en el que el subsistema $LR$ realiza trabajo ($\dot{W}_{LR} < 0$ y $\dot{\mathcal{F}}_{LR} < 0$), la contribución informacional domina sobre el flujo energético, es decir, $\dot{\mathcal{F}}_{LR} \approx T \dot{I}_{LR}$ mientras que $\dot{E}_{LR} \approx 0$. Este resultado respalda la interpretación del dispositivo como un Demonio de Maxwell autónomo.
+\\
 
 La potencia negativa $\dot{W}_{LR} < 0$ indica que el sistema está realizando trabajo en contra del gradiente de potencial, lo cual requiere absorber calor del entorno. En efecto, se verifica que $J_{LR} > 0$, señalando que el subsistema $LR$ extrae calor de sus respectivos reservorios.
+\\
 
 Dado que no hay transporte neto de partículas a través del Demonio ($\dot{N}_{D} = 0$), el flujo de energía asociado se reduce a $J_{D} = \dot{E}_{D}$. Como se observa en la figura, $J_{D} < 0$, lo que implica que el Demonio disipa calor hacia su baño, caracterizado por una temperatura menor a los reservorios $L$ y $R$ ($T_D < T$). 
+\\
 
-Si se adopta una perspectiva global del sistema, es decir, considerando la termodinámica de los tres puntos cuánticos como un conjunto, este comportamiento puede interpretarse como el de una máquina térmica. En este escenario, el sistema total extrae calor del reservorio caliente (\( J_{LR} \)), convierte parte de esa energía en trabajo útil (\( \dot{W}_{LR} \)) y disipa el resto hacia el baño frío (\( J_D \)), cumpliendo así la relación \( J_{LR} + J_D = -\dot{W}_{LR} \).
+Si se adopta una perspectiva global del sistema, es decir, considerando la termodinámica de los tres puntos cuánticos como un conjunto, este comportamiento puede interpretarse como el de una máquina térmica. En este escenario, el sistema total extrae calor del reservorio caliente (\( J_{LR} \)), convierte parte de esa energía en trabajo útil (\( \dot{W}_{LR} \)) y disipa el resto hacia el reservorio frío (\( J_D \)), cumpliendo así la relación \( J_{LR} + J_D = -\dot{W}_{LR} \).
+\\
 
 Al estar cada punto cuántico acoplado a un reservorio distinto, es posible descomponer el flujo de información total como $\dot{I}_{LR} = \dot{I}_{L} + \dot{I}_{R}$, lo que permite analizar la contribución informacional de cada punto cuántico por separado. Esta descomposición se ilustra en la Figura \ref{img:figinforesultado}.
 
@@ -1589,26 +1622,29 @@ Al estar cada punto cuántico acoplado a un reservorio distinto, es posible desc
 \insertimage[\label{img:figinforesultado}]{ejemplos/infolrddemon.pdf}{scale=0.45}{Flujos de información de cada sitio, $L$,$R$ y $D$. }
 
 Es interesante notar que, cuando \( eV/T \gtrapprox 3.6 \), el menor flujo de información corresponde al punto cuántico \( R \), lo que implica que este entrega más información al sistema. En cambio, para \( 1 \lessapprox eV/T \lessapprox 3.6 \), el flujo de información menor proviene del sitio \( L \), de modo que este es el que aporta más información en ese rango. Esta transición se correlaciona con lo observado en la Figura~\ref{img:densitymatrix}: para \( eV/T \gtrapprox 3.6 \) se cumple que \(\rho_{001} < \rho_{010} < \rho_{100}\), lo que indica una mayor probabilidad de ocupación del sitio \( L \). Además, en este mismo rango de parámetros  ($eV/T \gtrapprox 3.6$) la probabilidad del estado \( \rho_{110} \) supera a la de \( \rho_{011} \), lo que implica que la ocupación simultánea de \( L \) y \( R \) ---y por ende su monitoreo mutuo--- es más probable que la de \( R \) y \( D \). Lo anterior puede interpretarse como que, en este régimen, las correlaciones entre \( L \) y \( R \) se intensifican. Pues, en el estado \( \rho_{110} \) los sitios \( L \) y \( R \) interactúan mediante energía de Coulomb, siendo está una interacción mayor al \textit{hopping} ($U_{f}>g$), lo que facilita que \( L \) obtenga información de \( R \) y, en consecuencia, contribuya positivamente a su flujo de información, de modo que \( \dot{I}_{L} > \dot{I}_{R} \). Para diferencias de potencial pequeñas (\( eV/T \lessapprox 1 \)), ambos flujos de información son prácticamente idénticos (\( \dot{I}_{L} \approx \dot{I}_{R} \)).
+\\
 
 Un aspecto relevante de esta dinámica es la posible presencia de efectos cuánticos. Para examinar este fenómeno, se representan dos cantidades: la norma-$l_{1}$ de coherencia \( \mathcal{C}_{l_{1}} \), que permite cuantificar la coherencia cuántica en el subsistema \( LR \), y la concurrencia, que sirve como medida del entrelazamiento entre estados del subsistema $LR$ $(|1,0>,|0,1>)$.
 
 \insertimage[\label{img:fig5resultado}]{ejemplos/quantumdemon.pdf}{scale=0.40}{En línea azul la norma-$l_{1}$ de la coherencia $\mathcal{C}_{l_{1}}$ y en línea rojas la concurrencia $\mathcal{C}_{on}$.}
 
 Se observan dos comportamientos relevantes. Primero, para \( eV/T \lessapprox 1 \), la concurrencia \( \mathcal{C}_{\text{on}} > 0 \), lo que indica la presencia de entrelazamiento entre los sitios \( L \) y \( R \). Segundo, al analizar la coherencia, se aprecia que para \( eV/T \lessapprox 2.4 \) esta disminuye progresivamente hasta anularse, y luego comienza a incrementarse, a partir de \( eV/T \gtrapprox 2.4 \). Este comportamiento es particularmente significativo, ya que la coherencia se anula en un punto cercano al valor en el que la corriente de partículas invierte su dirección. 
+\\
 
 Dado el comportamiento tipo Demonio de Maxwell del sistema, resulta pertinente examinar cómo las cantidades termodinámicas se ven influenciadas por la coherencia, el parámetro del Hamiltoniano $\hat{H}_{S}$ que se encarga de inducir coherencia en el sistema, es el acoplamiento \( g \). Por ende, en la Figura \ref{img:fig6resultado} se muestran las cantidades termodinámicas en función del parámetro \( g/\kappa_{L} \) 
 
 \insertimage[\label{img:fig6resultado}]{ejemplos/thermoquantum.pdf}{scale=0.57}{Cantidades termodinámicas para el sistema $LR$ y el Demonio en función de $g/\kappa_{L}$, considerando $eV/T=1$ y el resto de parámetros corresponden a los de la Figura \ref{img:densitymatrix}. }
 
 Se observa que cuando el acoplamiento se encuentra en un régimen \( g/\kappa_{L} \gtrapprox 10^{-1}\), la potencia generada del subsistema $LR$ ($\dot{W}_{LR}$) y la contribución informacional ($T\dot{I}_{LR}$) decrecen, por ende, el subsistema $LR$ realiza más trabajo, y entrega más información al sitio $D$. Este resultado sugiere que un acoplamiento suficientemente fuerte entre los sitios $L$ y $R$ potencia la conversión de información en trabajo. 
-
 Además, bajo esta misma condición \( g/\kappa_{L} \gtrapprox 10^{-1} \), el flujo de energía del demonio \( \dot{E}_{D} \) se vuelve más negativo, lo que indica mayor transporte energético entre el demonio y el sistema $LR$.
+\\
 
 Por otra parte, el análisis de las contribuciones individuales a los flujos de información revela cómo el acoplamiento modifica la cantidad de información entregada por cada punto cuántico. Estos efectos se visualizan en la Figura \ref{img:fig7resultado}, donde se aprecia la dependencia de los flujos informacionales con respecto al parámetro \( g \).
 
 \insertimage[\label{img:fig7resultado}]{ejemplos/concuinfodemon.pdf}{scale=0.56}{(a)Flujos de información de cada sitio. (b)Concurrencia y coherencia en función de $g/\kappa_{L}$. }
 
 Un comportamiento notable se presenta cuando el acoplamiento alcanza valores comparables a la tasa de túnel, es decir, \( 10^{-1}< g/\kappa_{L}< 10^{0} \). En este régimen, tanto la concurrencia como la coherencia alcanzan valores cercanos a sus máximos, lo que indica una presencia significativa de efectos cuánticos entre los puntos \( L \) y \( R \), resultado que se asemeja a \cite{prech2023entanglement}. 
+\\
 
 Simultáneamente, los flujos de información individuales tienden a igualarse, es decir, \( \dot{I}_{L} \approx \dot{I}_{R} \), lo que sugiere que, en condiciones de entrelazamiento y coherencia elevadas, ambos puntos cuánticos contribuyen de manera equilibrada en el flujo de información del sistema $LR$. 
 
@@ -1623,7 +1659,6 @@ Una de las ventajas del formalismo presentado en \cite{potts2021thermodynamicall
 \begin{equation*}
 \check{\mathcal{L}}_{f}|\hat{\rho}\rangle\rangle = -i[\hat{H}_{S}, \hat{\rho}] + \mathcal{L}(\hat{\rho}),
 \end{equation*}
-
 que combina la dinámica coherente del sistema con la disipación inducida por los baños, como se discute en la ecuación~\eqref{sec2schrodingerthermo}. Este superoperador se descompone como $\check{\mathcal{L}}_{f} = \check{\mathcal{L}}_{0} + \check{\mathcal{V}}$, donde el término $\check{\mathcal{V}}$ representa el acoplamiento entre los sitios y actúa de acuerdo con
 
 \begin{equation*}
@@ -1636,12 +1671,12 @@ Para obtener una ecuación maestra que describa únicamente la dinámica de las 
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle = \left(\check{\mathcal{L}}_{0} - \check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{Q}}\check{\mathcal{L}}^{+}_{0}\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}\right)\check{\mathcal{P}}|\hat{\rho}_{S}(t)\rangle \rangle. 
 \label{ec5:classicalmodel}
 \end{equation}
-
 El operador $\check{\mathcal{L}}_{0}^{+}$ corresponde al inverso de Drazin de $\check{\mathcal{L}}_{0}$, definido como
 \begin{equation*}
 \check{\mathcal{L}}_{0}^{+} = -\int_{0}^{\infty} d\tau\, e^{\check{\mathcal{L}}_{0} \tau} \check{\mathcal{Q}},
 \end{equation*}
 según lo discutido en~\cite{landi2024current}. La demostración detallada de la ecuación~\eqref{ec5:classicalmodel} se presenta en el Apéndice~\ref{appendix5clasic}.
+\\
 
 Disponer de una ecuación maestra que describe únicamente la evolución de las componentes diagonales permite modelar el sistema de manera clásica. Para ello se define el vector de probabilidades de ocupación
 \begin{equation*}
@@ -1654,15 +1689,18 @@ cuya dinámica está gobernada por la ecuación maestra
     \label{sec5:classicsemi}
 \end{equation}
 donde la matriz de transición $\mathbf{W}$ se obtiene a partir de la ecuación~\eqref{ec5:classicalmodel}.
+\\
 
-En lo que sigue, se estudia el estado estacionario de la ecuación~\eqref{sec5:classicsemi}. En particular, se comparan las probabilidades de ocupación obtenidas en este modelo clásico con las resultantes del tratamiento cuántico, como se muestra en las Figuras~\ref{img:rho100} y~\ref{img:rho011}. 
+A continuación, se estudia el estado estacionario de la ecuación~\eqref{sec5:classicsemi}. En particular, se comparan las probabilidades de ocupación obtenidas en este modelo clásico con las resultantes del tratamiento cuántico, como se muestra en las Figuras~\ref{img:rho100} y~\ref{img:rho011}. 
 
 \insertimage[\label{img:rho100}]{ejemplos/rho1004.pdf}{scale=0.46}{Elementos diagonales $\rho_{100}$, $\rho_{010}$, $\rho_{111}$ y $\rho_{110}$ en función de $eV/T$. El caso clásico se representa en línea roja y el cuántico en línea azul. Los parámetros corresponden a los de la Figura \ref{img:densitymatrix}.}
 \insertimage[\label{img:rho011}]{ejemplos/rho1014.pdf}{scale=0.46}{Elementos diagonales $\rho_{101}$, $\rho_{000}$, $\rho_{011}$ y $\rho_{001}$ en función de $eV/T$.}
 
 De las Figuras \ref{img:rho100} y \ref{img:rho011} se observa que, en ambos casos, las probabilidades de ocupación dominantes corresponden a $\rho_{100}$, $\rho_{010}$ y $\rho_{001}$. Por el contrario, la menor probabilidad de ocupación es $\rho_{111}$.
- 
+\\
+
 En torno a $eV/T \approx 2.4$, donde la coherencia es prácticamente nula, todas las probabilidades de ocupación clásicas se cruzan con sus contrapartes cuánticas. En cambio, para $eV/T \lessapprox 1$, los elementos $\rho_{100}$, $\rho_{010}$ y $\rho_{101}$ presentan diferencias apreciables entre los comportamientos clásico y cuántico, lo que puede interpretarse como un efecto de la coherencia sobre dichos elementos.
+\\
 
 A partir de la solución estacionaria, se calculan los flujos de partículas e información asociados a cada baño $\alpha$ mediante
 
@@ -1676,6 +1714,7 @@ A partir de la solución estacionaria, se calculan los flujos de partículas e i
 \end{equation}
 
 donde $\mathbf{P}$ es el vector de probabilidades en la base de Fock, $\mathbf{W}_{\alpha}$ es la contribución del baño $\alpha$ en la evolución $\mathbf{W}$, $\mathbf{N}$ contiene el número de partículas en cada estado, y $\ln \mathbf{P}$ denota el vector cuyos elementos son los logaritmos de cada componente de $\mathbf{P}$, es decir, $(\ln \mathbf{P})_i = \ln P_i$\cite{monsel2025autonomous}.
+\\
 
 En el modelo clásico, la expresión analítica para el flujo de partículas correspondiente al baño $L$ coincide con la versión cuántica. Usando la ecuación~\eqref{sec5:currentsemi}, la corriente de partículas resulta
 
@@ -1699,10 +1738,12 @@ La versión cuántica de los flujos de información se presenta en el Apéndice~
 \insertimage[\label{img:P4clqm}]{ejemplos/currentinfosemi.pdf}{scale=0.54}{Corriente de partículas y flujos de información en el caso clásico (rojo) y cuántico (azul) en función de $eV/T$.}
 
 Como se aprecia en la Figura~\ref{img:P4clqm}, en el régimen $eV/T\lessapprox 2.4$ la corriente de partículas calculada en el caso cuántico es menor que en el caso clásico, lo cual representa una ventaja: una corriente más baja implica un transporte más eficiente en contra del gradiente de potencial. Por el contrario, para $eV/T \gtrapprox 2.4$ la corriente cuántica supera a la clásica. 
+\\
 
 En cuanto al flujo de información, el asociado al sitio $D$ resulta mayor en el caso cuántico, con diferencias apreciables en los rangos $eV/T \lessapprox 1$ y $eV/T \gtrapprox 6$. Este resultado indica que la dinámica cuántica mejora el intercambio de información entre el demonio y el subsistema $LR$. La explicación radica en que el sitio $D$ no solo establece correlaciones clásicas a través de los elementos diagonales, sino que también genera correlaciones cuánticas con el subsistema $LR$, gracias a la presencia de coherencia. Este comportamiento se confirma con los flujos cuánticos obtenidos analíticamente, los cuales incluyen contribuciones provenientes de los elementos no diagonales de la matriz densidad (véase Apéndice~\ref{apendix5infoflow}).
+\\
 
-Finalmente, este aumento en el flujo de información en el régimen cuántico reduce la tasa de cambio de la energía libre del subsistema $LR$, dada por $\dot{\mathcal{F}}_{LR} \approx T\dot{I}_{LR}$. Como consecuencia, se incrementa la capacidad del sistema para realizar trabajo, lo que evidencia el papel beneficioso de la coherencia cuántica como recurso termodinámico.
+Finalmente, este aumento del flujo de información en el régimen cuántico reduce la tasa de cambio de la energía libre del subsistema $LR$, dada por $\dot{\mathcal{F}}_{LR} \approx T\dot{I}_{LR}$. Como consecuencia, se incrementa la capacidad del sistema para realizar trabajo, lo que evidencia el papel beneficioso de la coherencia cuántica como recurso termodinámico.
 
 \label{sec5:demonio}
 
@@ -1712,10 +1753,13 @@ Finalmente, este aumento en el flujo de información en el régimen cuántico re
 % ------------------------------------------------------------------------------
 \chapteranum{Conclusiones}
 En esta tesis se derivó una ecuación maestra en la base local para un sistema compuesto por tres puntos cuánticos, la cual permite incorporar y analizar términos no seculares en su evolución. Se observó que, dependiendo de las tasas de túnel asociadas a los reservorios $L$ y $R$, existen regiones del parámetro $eV/T$ en las cuales el sistema exhibe un comportamiento análogo al de un Demonio de Maxwell autónomo. En dichos regímenes, los flujos de información entre el punto cuántico $D$ y el subsistema $LR$ permiten la realización de trabajo, que se manifiesta como un transporte neto de partículas en contra del gradiente de potencial. Este fenómeno corresponde a una aparente violación de la segunda ley de la termodinámica, en concordancia con resultados previos obtenidos para sistemas de dos puntos cuánticos, donde también se identifica un comportamiento tipo Demonio de Maxwell \cite{horowitz2014thermodynamics}.
+\\
 
 Se encontró que los flujos de información asociados a los sitios $L$ y $R$ dependen explícitamente del parámetro de acoplamiento $g$. En particular, dichos flujos se igualan en torno a $g \sim \kappa_L$, lo cual coincide con un régimen en el que tanto la coherencia cuántica como la concurrencia alcanzan valores cercanos a su máximo. Este resultado evidencia que la coherencia y el entrelazamiento influyen directamente en la dinámica de los flujos de información.
+\\
 
 Asimismo, se comparó la evolución cuántica completa del sistema con una descripción semiclásica que considera únicamente las componentes diagonales de la matriz densidad. Se observó que, para valores de $eV/T \lesssim 2.4$, la corriente de partículas es menor en el caso cuántico. Además, los flujos de información que recibe el sitio $D$ (el Demonio) resultan mayores en la descripción cuántica que en la semiclásica. Esta observación tiene dos implicancias relevantes. Primero, confirma que la coherencia cuántica puede actuar como un recurso termodinámico: al aumentar el flujo de información hacia el demonio, se incrementa la cota superior para el trabajo que el subsistema $LR$ puede realizar. Segundo, muestra que, incluso cuando la interacción entre el demonio y el sistema es puramente clásica (de tipo Coulomb), los efectos cuánticos —en particular la coherencia— continúan desempeñando un rol en la dinámica de la transferencia de información.
+\\
 
 Finalmente, el modelo propuesto admite diversas extensiones. Una posible dirección consiste en derivar una ecuación maestra para el caso en que la interacción de Coulomb entre el sitio $D$ y los sitios $L$ y $R$ sea asimétrica. Este tipo de asimetría podría inducir un comportamiento de tipo Demonio de Maxwell autónomo, análogo al reportado recientemente en modelos clásicos \cite{monsel2025autonomous}. Por otra parte, desde el punto de vista del transporte, sería interesante incorporar más puntos cuánticos al sistema, lo que permitiría introducir acoplamientos adicionales y estudiar efectos de coherencia cuántica más complejos, como los discutidos en \cite{khandelwal2025maximal}.
 
@@ -1767,7 +1811,6 @@ Sea $\hat{A}(0)$ un observable con descomposición espectral asociada a proyecto
     = e^{-i(\lambda/2)\hat{A}(0)}\, \hat{\rho}_{\text{diag}}\, e^{-i(\lambda/2)\hat{A}(0)}.
     \label{apendixobservable}
 \end{equation}
-
 Esta relación permite reescribir la función generadora en términos del observable
 \(
 \hat{A}(0) = \sum_{\alpha}\big[\lambda_{\alpha}(\hat{H}_{\alpha}-\mu_{\alpha}\hat{N}_{\alpha}) + \chi_{\alpha}\mu_{\alpha}\hat{N}_{\alpha}\big]
@@ -1797,8 +1840,7 @@ La ecuación \eqref{sec2FCS:evolution} se puede expandir en serie de Dyson hasta
 \begin{equation*}
 |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  = \left( \mathbf{1} + \epsilon \int_{0}^{t}\check{\mathcal{L}}'_{\lambda}(t_{1})dt_{1} + \epsilon^{2}\int_{0}^{t}dt_{1}\int_{0}^{t_{1}}\check{\mathcal{L}}'_{\lambda}(t_{1})\check{\mathcal{L}}'_{\lambda}(t_{2})dt_{2} \right) |\hat{\rho}_{tot}(0)\rangle \rangle .
 \end{equation*}
-
-Introduciendo el cambio de variables \(t_1=T\) y \(t_2=T-s\), la integral doble adopta una forma más conveniente:
+Realizando el cambio de variables \(t_1=T\) y \(t_2=T-s\), la integral doble adopta una forma más conveniente:
 
 \begin{align*}
 |\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle  
@@ -1806,7 +1848,6 @@ Introduciendo el cambio de variables \(t_1=T\) y \(t_2=T-s\), la integral doble 
 &= \check{\mathcal{W}}(\vec{\lambda},\vec{\chi},t)\,|\hat{\rho}_{tot}(0)\rangle \rangle \\
 &=  \big[\check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) + \epsilon \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) + \epsilon^{2}\check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t)\big] |\hat{\rho}_{tot}(0)\rangle \rangle ,
 \end{align*}
-
 donde los superoperadores se definen por
 
 \begin{align*}
@@ -1814,14 +1855,12 @@ donde los superoperadores se definen por
 \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) &= \int_{0}^{t}dT \,\check{\mathcal{L}}'_{\lambda}(T),\\
 \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) &= \int_{0}^{t}dT \int_{0}^{T}ds \,\check{\mathcal{L}}'_{\lambda}(T)\check{\mathcal{L}}'_{\lambda}(T-s).
 \end{align*}
-
 Al segundo orden en \(\epsilon\), la inversa de \(\check{\mathcal{W}}\) queda
 
 \begin{equation}
 \check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t) =  \check{\mathcal{W}}_{0}(\vec{\lambda},\vec{\chi},t) - \epsilon  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) +  \epsilon^{2}\big[\check{\mathcal{W}}^{2}_{1}(\vec{\lambda},\vec{\chi},t) -  \check{\mathcal{W}}_{2}(\vec{\lambda},\vec{\chi},t) \big],
 \label{apendix2inverseW}
 \end{equation}
-
 y satisface la identidad
 
 \begin{equation}
@@ -1834,13 +1873,11 @@ Para obtener la matriz densidad generalizada del sistema reducido, se proyecta l
 \begin{equation*}
 \check{\mathcal{P}} = \sum_{r}|\rho_{R}^{eq} \rangle \rangle \langle \langle rr|,
 \end{equation*}
-
 donde \(\otimes_{\alpha} \hat{\tau}_{\alpha} \to |\hat{\rho}_{R}^{\mathrm{eq}} \rangle\rangle\) es el estado producto de los equilibrios de cada reservorio, escrito como vector en el espacio de Liouville. Aplicando \(\check{\mathcal{P}}\) se obtiene
 
 \begin{equation*}
 \check{\mathcal{P}}|\hat{\rho}(\vec{\lambda},\vec{\chi},t) \rangle \rangle = |\hat{\rho}_{S}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \otimes |\hat{\rho}^{eq}_{R}\rangle \rangle .
 \end{equation*}
-
 En el marco de Nakajima–Zwanzig, la evolución proyectada viene dada por
 
 \begin{align}
@@ -1848,7 +1885,6 @@ En el marco de Nakajima–Zwanzig, la evolución proyectada viene dada por
 \check{\mathcal{Q}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle &= \check{\mathcal{Q}} \check{\mathcal{W}}(t)( \check{\mathcal{P}} +  \check{\mathcal{Q}})|\hat{\rho}_{tot}(0)\rangle \rangle .
 \label{apendix2proyectionev}
 \end{align}
-
 A continuación, se emplean dos hechos. (i) Como el estado inicial del reservorio es diagonal, se cumple
 \[
 \check{\mathcal{Q}}|\hat{\rho}_{\mathrm{tot}}(0)\rangle\rangle = 0.
@@ -1862,8 +1898,7 @@ lo que permite expresar la evolución proyectada en función del estado actual:
 |\hat{\rho}_{totI}(0)\rangle \rangle &= (\check{\mathcal{P}} + \check{\mathcal{Q}} )\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
 &= \check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)(\check{\mathcal{P}} + \check{\mathcal{Q}})|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle .
 \end{align*}
-
-Derivando temporalmente las ecuaciones \eqref{apendix2proyectionev1}–\eqref{apendix2proyectionev} se obtiene la evolución proyectada exacta:
+Al derivar temporalmente las ecuaciones \eqref{apendix2proyectionev1}–\eqref{apendix2proyectionev} se obtiene la evolución proyectada exacta:
 
 \begin{align*}
 \check{\mathcal{P}}|\dot{\hat{\rho}}_{totI}(\vec{\lambda},\vec{\chi},t) \rangle \rangle &= \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}|\hat{\rho}_{totI}(\vec{\lambda},\vec{\chi},t)\rangle \rangle \\
@@ -1882,13 +1917,11 @@ Para incorporar la hipótesis de acoplamiento débil (expansión en \(\epsilon\)
 &\quad + \epsilon^{2} \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{2}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}}\check{\mathcal{Q}} \\
 &\quad - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{Q}},
 \end{align*}
-
 y los dos primeros términos se anulan porque \(\check{\mathcal{P}}\check{\mathcal{Q}}=0\). Por otro lado,
 
 \begin{align*}
 \check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \sum_{r,r'}|\hat{\rho}^{eq}_{R} \rangle \rangle \langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)|\hat{\rho}_{R}^{eq}\rangle \rangle \langle \langle r'r'|,
 \end{align*}
-
 donde
 
 \begin{equation}
@@ -1903,32 +1936,27 @@ Como \(\hat{\rho}_{R}^{eq}\) conmuta con \(\hat{H}_{R}\), también conmuta con \
 &\quad + \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{2}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} \\
 &\quad - \epsilon^{2}\check{\mathcal{P}}\dot{\check{\mathcal{W}}}_{1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}  \check{\mathcal{W}}_{1}(\vec{\lambda},\vec{\chi},t) \check{\mathcal{P}} .
 \end{align*}
-
 Explícitamente,
 
 \begin{equation*}
 \check{\mathcal{P}}\dot{\check{\mathcal{W}}}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}}\check{\mathcal{W}}^{-1}(\vec{\lambda},\vec{\chi},t)\check{\mathcal{P}} = \epsilon^{2}\check{\mathcal{P}}\int_{0}^{t}ds\, \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)\check{\mathcal{P}} .
 \end{equation*}
-
 Usando \(\check{\mathcal{P}}|\dot{\hat{\rho}}_{tot,I}(\vec{\lambda},\vec{\chi},t)\rangle\rangle = |\dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t)\rangle\rangle \otimes |\hat{\rho}_{R}^{eq}\rangle\rangle\) y multiplicando por la izquierda por \(\sum_{r}\langle\langle rr|\) para trazar el reservorio, se obtiene
 
 \begin{equation*}
 \dot{\hat{\rho}}_{IS}(\vec{\lambda},\vec{\chi},t) = \epsilon^{2} \sum_{r}\langle \langle rr|\int_{0}^{t}ds \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t),
 \end{equation*}
-
 y, por lo tanto,
 
 \begin{align*}
 \sum_{r}\langle \langle rr| \check{\mathcal{L}}'_{\lambda}(t)\check{\mathcal{L}}'_{\lambda}(t-s)|\hat{\rho}_{R}^{eq}\rangle \rangle \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)
 = \text{Tr}_{B}\big\{\mathcal{L}'_{\lambda}(t)\mathcal{L}'_{\lambda}(t-s)\hat{\rho}_{R}^{eq}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \big\}.
 \end{align*}
-
-Desarrollando explícitamente,
+Que al desarrollar explícitamente,
 
 \begin{equation*}
 \mathcal{L}'_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq} = -i\big[\hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} -  \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R}\hat{V}_{-\lambda}(t-s)\big],
 \end{equation*}
-
 y, por consiguiente,
 
 \begin{align*}
@@ -1938,7 +1966,6 @@ y, por consiguiente,
 &\quad + \hat{V}_{\lambda}(t-s)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t)
 - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s)\hat{V}_{-\lambda}(t).
 \end{align*}
-
 Trazando sobre los grados de libertad del reservorio en la última expresión se recupera la ecuación \eqref{ecmaestraVlambda}.
 
 
@@ -1959,19 +1986,16 @@ Para derivar la ecuación maestra generalizada en términos de funciones de corr
 \hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\, \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\,
 \mathrm{Tr}_{B}\{ e^{-(i/2)\hat{A}(\lambda,\chi)}\hat{B}^{\dagger}_{\alpha,k}(t)\hat{B}_{\alpha,k'}(t-s)e^{(i/2)\hat{A}(\lambda,\chi)}\hat{\rho}^{eq}_{R}\}.
 \end{align*}    
-
 Bajo la hipótesis de homogeneidad temporal, $\langle \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \rangle = \langle \hat{V}_{\lambda}(s)\hat{V}_{\lambda}(0) \rangle$, la ecuación se simplifica a  
 
 \begin{align*} 
     \text{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{V}_{\lambda}(t-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)&\hat{\rho}^{eq}_{R} \} = \\ & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{i\omega_{j'}s}\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\text{Tr}_{B}\{\hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k'}\hat{\tau}_{\alpha} \}, \\ \text{Tr}_{B}\{ \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}^{eq}_{R} \hat{V}_{-\lambda}(t-s)&\hat{V}_{-\lambda}(t) \} = \\ & - \sum_{\alpha,k,k';j,j'}e^{i(\omega_{j}-\omega_{j'})t}e^{-i\omega_{j}s}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha k;j}\hat{S}_{\alpha,k';j'} \text{Tr}_{B}\{ \hat{B}^{\dagger}_{\alpha,k}(s)\hat{B}_{\alpha,k'}\hat{\tau}_{\alpha} \}. 
 \end{align*} 
-
 Para analizar el término
 
 \begin{equation*}
     \mathrm{Tr}_{B}\{ \hat{V}_{\lambda}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{\rho}_{R}^{eq}\hat{V}_{-\lambda}(t-s) \},
 \end{equation*}
-
 se emplea la relación de conmutación asociada a la conservación global de partículas,  
 
 \begin{equation*}
@@ -1991,7 +2015,6 @@ con $C$ una constante arbitraria. Esta identidad permite escribir
    \hat{S}_{\alpha,k';j'}\, \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\, \hat{S}^{\dagger}_{\alpha,k;j}\,
    \mathrm{Tr}_{B}\{e^{-i\hat{A}(\lambda,\chi)} \hat{B}_{\alpha,k}(t)e^{i\hat{A}(\lambda,\chi)}\hat{\rho}_{R}^{eq}\hat{B}^{\dagger}_{\alpha,k'}(t-s) \}.
 \end{align*}
-
 Además, para los operadores del baño se cumple la transformación
 
 \begin{align}
@@ -1999,7 +2022,6 @@ Además, para los operadores del baño se cumple la transformación
     &= e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}\, \hat{B}_{\alpha,k}(t+\lambda_{\alpha}), 
     \label{apendix:correlationlambda}
 \end{align}
-
 de modo que, al sustituir la ecuación \eqref{apendix:correlationlambda}, se obtiene  
 
 \begin{align*}
@@ -2015,7 +2037,6 @@ de modo que, al sustituir la ecuación \eqref{apendix:correlationlambda}, se obt
     \hat{S}_{\alpha,k';j'}\, \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\, \hat{S}^{\dagger}_{\alpha,k;j}\,
     C^{\alpha}_{k,k'}(s-\lambda_{\alpha})\, e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}.
  \end{align*}
-   
 Finalmente, se obtienen las expresiones de funciones correlación que aparecen en la ecuación \eqref{ecmaestrafinalI}.
 \label{finalequation}
 
@@ -2033,7 +2054,6 @@ A partir de la ecuación \eqref{ecmaestrafinal} se puede desarrollar la expresi�
     \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k'}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k'}(-s-\lambda_{\alpha}) ) \right.\\
     \left.\times \left(\sum_{j'}e^{-i\omega_{j'}t}\hat{S}_{\alpha,k';j'} \right)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \left(\sum_{j}e^{i\omega_{j}t}\hat{S}^{\dagger}_{\alpha,k;j} \right)    \right],   
 \end{multline*}
-
 donde, por simplicidad, se asumirá que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}$. Esta hipótesis se justifica porque, tanto para fermiones como para bosones, los términos del tipo $\langle \hat{c}^{\dagger}_{k}\hat{c}_{j}\rangle$ suelen anularse al promediar en el baño \cite{potts2021thermodynamically}. Bajo esta consideración, la ecuación se reduce a
 
 \begin{multline*}
@@ -2041,7 +2061,6 @@ donde, por simplicidad, se asumirá que $C_{k,k'}^{\alpha} \propto \delta_{k,k'}
      - \sum_{\alpha,k;q} \int_{0}^{\infty}ds \left[e^{i\omega_{q}s}C^{\alpha}_{k,k}(s) \hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)  +  e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t) \hat{S}_{\alpha,k;q}(t) \right. \\
     \left. - e^{-i\mu_{\alpha}n_{\alpha,k}(\lambda_{\alpha}-\chi_{\alpha})}(e^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) + e^{-i\omega_{q}s}C^{\alpha}_{k,k}(-s-\lambda_{\alpha}) ) \hat{S}_{\alpha,k;q}(t) \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \hat{S}^{\dagger}_{\alpha,k;q}(t)    \right].  
 \end{multline*}
-
 Al utilizar las identidades
 
 \begin{align*}
@@ -2049,20 +2068,17 @@ Al utilizar las identidades
     & = \int_{-\infty}^{\infty}ds e^{i\omega_{q}s}C^{\alpha}_{k,k}(s)/2 + i \left(-\frac{i}{2} \right) \int_{-\infty}^{\infty}ds e^{i\omega_{q}s} \text{sgn}(s)C^{\alpha}_{k,k}(s) \\
     & = \frac{1}{2}\gamma_{k}^{\alpha}(\omega_{q}) + i S^{\alpha}_{k}(\omega_{q}),
 \end{align*}
-
 y 
 
 \begin{equation*}
     \int_{0}^{\infty}dse^{i\omega_{q}s}C^{\alpha}_{k,k}(s-\lambda_{\alpha}) = e^{i\lambda_{\alpha}\omega_{q}}\int_{0}^{\infty}e^{i(s-\lambda_{\alpha})\omega_{q}}C^{\alpha}_{k,k}(s-\lambda_{\alpha}), 
 \end{equation*}
-
 la ecuación maestra toma la forma final
 
 \begin{multline*}
     \frac{d}{dt}\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) = - i \sum_{\alpha,k;q}S^{\alpha}_{k}(\omega_{q})\left[\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) - \hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t) \right] \\
     + \sum_{\alpha,k;q} \gamma_{k}^{\alpha}(\omega_{q})\left[ e^{i\lambda_{\alpha}\omega_{q}+ i(\chi_{\alpha} - \lambda_{\alpha})\mu_{\alpha}n_{\alpha,k}}\hat{S}_{\alpha,k;q}(t)\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t)\hat{S}^{\dagger}_{\alpha,k;q}(t) - \frac{1}{2}\{\hat{S}^{\dagger}_{\alpha,k;q}(t)\hat{S}_{\alpha,k;q}(t),\hat{\rho}_{IS}(\vec{\lambda},\vec{\chi},t) \} \right],
 \end{multline*}
-
 la cual corresponde a la ecuación \eqref{ecmaestracounting}.
 
 \label{apendixGKLSgeneral}
@@ -2085,7 +2101,6 @@ Para obtener la condición KMS, se define una función de correlación auxiliar 
    & = \text{Tr}\{\hat{B}_{\alpha,k}e^{i(s+i\beta_{\alpha})(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{B}^{\dagger}_{\alpha,k}e^{-i(s+i\beta_{\alpha})(\hat{H}_{\alpha} - \mu_{\alpha}\hat{N}_{\alpha})}\hat{\tau}_{\alpha} \} \\
    & = \langle \hat{B}_{\alpha,k} \hat{B}^{\dagger}_{\alpha,k}(s+i\beta_{\alpha})\rangle_{N},
 \end{align*}
-
 la cual se relaciona con la función de correlación estándar de la forma
 
 \begin{align*}
@@ -2093,7 +2108,6 @@ la cual se relaciona con la función de correlación estándar de la forma
  & = \text{Tr}\{\hat{B}^{\dagger}_{\alpha,k}(s)e^{is\mu_{\alpha}\hat{N}_{\alpha}} \hat{B}_{\alpha,k}e^{-is\mu_{\alpha}\hat{N}_{\alpha}}\hat{\tau}_{\alpha}   \}\\
  & = e^{-i\mu_{\alpha}n_{\alpha,k}s} C^{\alpha}_{kk}(s).
 \end{align*}
-
 Las funciones de correlación espectral pueden expresarse en términos de estas funciones auxiliares como
 
 \begin{align*}
@@ -2117,27 +2131,24 @@ Esta relación constituye la condición de Kubo–Martin–Schwinger (KMS) y ase
 
 \subsection{Ley cero}
 
-Para demostrar la validez de la ley cero en este contexto, se evalúan los disipadores $\mathcal{D}[\hat{S}_{\alpha,k;q}]$ y $\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]$ actuando sobre el estado de Gibbs. El punto de partida es la siguiente relación de conmutación:
+Para demostrar la validez de la ley cero, se evalúan los disipadores $\mathcal{D}[\hat{S}_{\alpha,k;q}]$ y $\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]$ actuando sobre el estado de Gibbs. El punto de partida es la siguiente relación de conmutación:
 
 \begin{align*}
     [\hat{S}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = (\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}_{\alpha,k;q},  \\
     [\hat{S}^{\dagger}_{\alpha,k;q},(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})] & = -(\omega_{q} - \mu_{\alpha}n_{\alpha,k})\hat{S}^{\dagger}_{\alpha,k;q}.
 \end{align*}
-
 De aquí se obtiene que
 
 \begin{align*}
     e^{\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\hat{S}_{\alpha,k;q} e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = \hat{S}_{\alpha,k;q}e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}, \\
     e^{\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\hat{S}^{\dagger}_{\alpha,k;q} e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = \hat{S}^{\dagger}_{\alpha,k;q}e^{\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}.
 \end{align*}
-
 Al aplicar el estado de Gibbs en los disipadores, se encuentra
 
 \begin{align*}
     \mathcal{D}[\hat{S}_{\alpha,k;q}]\,e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & =  e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q} e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q}, \\
     \mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]\,e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} & = e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}^{\dagger}_{\alpha,k;q}\hat{S}_{\alpha,k;q} e^{\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})} - e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} \hat{S}_{\alpha,k;q}\hat{S}^{\dagger}_{\alpha,k;q}. 
 \end{align*}
-
 Sumando las contribuciones de ambos disipadores en el superoperador de Lindblad $\mathcal{L}_{\alpha}$, se obtiene
 
 \begin{equation*}
@@ -2145,7 +2156,6 @@ Sumando las contribuciones de ambos disipadores en el superoperador de Lindblad 
     \propto \mathcal{D}[\hat{S}_{\alpha,k;q}]\,e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} 
     + e^{-\beta_{\alpha}(\omega_{q} - \mu_{\alpha}n_{\alpha,k})}\,\mathcal{D}[\hat{S}^{\dagger}_{\alpha,k;q}]\,e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})} = 0.
 \end{equation*}
-
 Con ello se demuestra que el estado de Gibbs es estacionario bajo la dinámica de Lindblad, lo que constituye una manifestación de la ley cero de la termodinámica.
 
 
@@ -2165,7 +2175,6 @@ Para derivar la segunda ley de la termodinámica en este contexto, se comienza c
     - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t)\}  \\
     &= -\sum_{\alpha}\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) \ln \hat{\rho}_{S}(t)\}.
 \end{align*}
-
 Por otra parte, el flujo de calor hacia el sistema desde el reservorio $\alpha$ está dado por
 
 \begin{align*}
@@ -2175,15 +2184,14 @@ Por otra parte, el flujo de calor hacia el sistema desde el reservorio $\alpha$ 
     + \frac{\text{Tr}\{e^{-\beta_{\alpha}(\hat{H}_{TD} - \mu_{\alpha}\hat{N}_{S})}\}}{\beta_{\alpha}} \,\text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\} \\
     &= -\frac{1}{\beta_{\alpha}} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t))\ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha}) \},
 \end{align*}
-
 donde $\hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})$ es el estado de Gibbs correspondiente al reservorio $\alpha$.
+\\
 
 Aplicando la desigualdad de Spohn, se obtiene una forma generalizada de la segunda ley de la termodinámica:
 
 \begin{equation*}
     \dot{\sigma} = - \sum_{\alpha} \text{Tr}\{(\mathcal{L}_{\alpha}\hat{\rho}_{S}(t)) [\ln \hat{\rho}_{S}(t) - \ln \hat{\rho}_{G}(\beta_{\alpha},\mu_{\alpha})] \} \geq 0.
 \end{equation*}
-
 En consecuencia, la tasa de producción de entropía es no negativa, lo cual establece rigurosamente la validez de la segunda ley en este marco.
 \label{apendix:thermolaws}
 	% Imagen, se numerará automáticamente con la letra del anexo según
@@ -2200,7 +2208,6 @@ Consideremos la definición de la entropía conjunta para dos variables aleatori
     S_{XY} = - \sum_{x,y} p(x,y) \ln p(x,y),
     \label{apendixSxy}
 \end{equation}
-
 donde \(p(x,y)\) denota la distribución de probabilidad conjunta de \(X\) e \(Y\).  
 Al derivar temporalmente la expresión \eqref{apendixSxy} y emplear la propiedad de antisimetría de la corriente de probabilidades, \(J_{x,x'}^{y,y'} = - J_{x',x}^{y',y}\), se obtiene
 
@@ -2227,6 +2234,7 @@ y, en consecuencia, su logaritmo es positivo. Dado que el término correspondien
 J_{x,x'}^{y,y'} \ln \left( \frac{W_{x,x'}^{y,y'} p(x',y')}{W_{x',x}^{y',y} p(x,y)} \right),
 \]
 cada contribución es no negativa, y por simetría de los índices la suma total es mayor o igual a cero.
+\\
 
 Por otro lado, la derivada temporal de la información mutua se expresa como
 
@@ -2234,14 +2242,12 @@ Por otro lado, la derivada temporal de la información mutua se expresa como
     \partial_{t} I_{XY} = \sum_{x,y} \dot{p}(x,y) \ln \frac{p(x,y)}{p(x)p(y)} 
     + \sum_{x,y} p(x,y) \frac{\partial}{\partial t} \left( \ln \frac{1}{p(x)p(y)} \right).
 \end{equation*}
-
 Al derivar el logaritmo, se obtiene
 
 \begin{align*}
     \frac{\partial}{\partial t} \left( \ln \frac{1}{p(x)p(y)} \right) 
     &= - \left( \frac{\dot{p}(x)}{p(x)} + \frac{\dot{p}(y)}{p(y)} \right),
 \end{align*}
-
 y, en consecuencia,
 
 \begin{align*}
@@ -2249,21 +2255,18 @@ y, en consecuencia,
     &= \sum_{x,y} \dot{p}(x,y) \ln \frac{p(x,y)}{p(x)p(y)} 
     - \sum_{x,y} p(x,y) \left( \frac{\dot{p}(x)}{p(x)} + \frac{\dot{p}(y)}{p(y)} \right).
 \end{align*}
-
 Reescribiendo los últimos términos con ayuda de la identidad \(\sum_{y} p(x,y) = p(x)\) y de la conservación de la probabilidad (\(\sum_{x} \dot{p}(x) = 0\)), se obtiene
 
 \begin{align}
     \partial_{t} I_{XY} 
     &= \sum_{x,y} \dot{p}(x,y) \ln \frac{p(x,y)}{p(x)p(y)}.
 \end{align}
-
 Utilizando la definición de corriente de probabilidad \(J_{x,x'}^{y,y'}\), se puede reescribir como
 
 \begin{align}
     \partial_{t} I_{XY} 
     &= \sum_{x,x';y,y'} J_{x,x'}^{y,y'} \ln \frac{p(x,y)}{p(x)p(y)}.
 \end{align}
-
 Separando la dinámica de \(X\) e \(Y\), se llega a
 
 \begin{align*}
@@ -2271,7 +2274,6 @@ Separando la dinámica de \(X\) e \(Y\), se llega a
     &= \sum_{x,x';y} J_{x,x'}^{y} \ln \frac{p(x,y)}{p(x)p(y)} 
     + \sum_{x;y,y'} J_{x}^{y,y'} \ln \frac{p(x,y)}{p(x)p(y)}.
 \end{align*}
-
 Agrupando términos simétricos mediante pares ordenados \(x \geq x'\) y \(y \geq y'\), se obtiene
 
 \begin{align*}
@@ -2279,7 +2281,6 @@ Agrupando términos simétricos mediante pares ordenados \(x \geq x'\) y \(y \ge
     &= \sum_{x \geq x';y} J_{x,x'}^{y} \left[ \ln \frac{p(x,y)}{p(x)p(y)} - \ln \frac{p(x',y)}{p(x')p(y)} \right] \\
     &\quad + \sum_{x;y \geq y'} J_{x}^{y,y'} \left[ \ln \frac{p(x,y)}{p(x)p(y)} - \ln \frac{p(x,y')}{p(x)p(y')} \right].
 \end{align*}
-
 Finalmente, aplicando la regla de Bayes, \(p(x,y) = p(x)p(y|x) = p(y)p(x|y)\), se simplifica como
 
 \begin{align*}
@@ -2307,7 +2308,6 @@ Para obtener las funciones de correlación espectral, se comienza escribiendo la
     \hspace{10mm} 
     C_{-1}^{\alpha}(s) = \text{Tr}\!\left[e^{is\hat{H}_{\alpha}}\hat{B}^{\dagger}_{\alpha,-1}e^{-is\hat{H}_{\alpha}}\hat{B}_{\alpha,-1}\hat{\tau}_{\alpha}  \right].
 \end{equation*}
-
 Al reescribir estas funciones en términos de los operadores fermiónicos se obtiene:
 
 \begin{equation*}
@@ -2317,7 +2317,6 @@ Al reescribir estas funciones en términos de los operadores fermiónicos se obt
     C^{\alpha}_{-1}(s) = \sum_{l,l'} t_{\alpha,l}t_{\alpha,l'} e^{-i\epsilon_{\alpha,l}s} 
     \langle \hat{c}_{\alpha,l}\hat{c}^{\dagger}_{\alpha,l'} \rangle.
 \end{equation*}
-
 En el equilibrio gran canónico, el valor de expectación $\langle \hat{c}^{\dagger}_{\alpha,l}\hat{c}_{\alpha,l}\rangle$ corresponde a la distribución de Fermi $f_{\alpha}(\epsilon_{\alpha,l})$. Así,
 
 \begin{equation*}
@@ -2325,20 +2324,19 @@ En el equilibrio gran canónico, el valor de expectación $\langle \hat{c}^{\dag
     \hspace{10mm} 
     C^{\alpha}_{-1}(s) = \sum_{l} t^{2}_{\alpha,l} e^{-i\epsilon_{\alpha,l}s} \left[1-f_{\alpha}(\epsilon_{\alpha,l})\right].
 \end{equation*}
+\\
 
-Definiendo la tasa de túnel correspondiente al baño $\alpha$ como
+Definimos la tasa de túnel correspondiente al baño $\alpha$ como
 
 \begin{equation*}
     \kappa_{\alpha}(\omega) = 2\pi \sum_{l} t_{\alpha,l}^{2} \delta(\omega - \epsilon_{\alpha,l}),
 \end{equation*}
-
 las funciones de correlación pueden expresarse en forma integral:
 
 \begin{align*}
     C_{1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{i\omega s}\, \kappa_{\alpha}(\omega) f_{\alpha}(\omega), \\
     C_{-1}^{\alpha}(s) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega\, e^{-i\omega s}\, \kappa_{\alpha}(\omega)\left[1 - f_{\alpha}(\omega)\right].
 \end{align*}
-
 A partir de estas expresiones temporales, se obtiene la representación espectral mediante la transformada de Fourier:
 
 \begin{align*}
@@ -2347,7 +2345,6 @@ A partir de estas expresiones temporales, se obtiene la representación espectra
     \gamma_{-1}^{\alpha}(\omega) &= \int_{-\infty}^{\infty} ds\, e^{i \omega s} C_{-1}^{\alpha}(s) 
     = \kappa_{\alpha}(\omega)\left[1 - f_{\alpha}(\omega)\right].
 \end{align*}
-
 Estas funciones espectrales codifican tanto la densidad de estados accesibles del entorno como su grado de ocupación.  
 Más adelante, se analizará con detalle el régimen markoviano, discutiendo bajo qué condiciones estas funciones de correlación pueden aproximarse por distribuciones localizadas en el tiempo, lo que permite simplificar la descripción dinámica del sistema.
 
@@ -2363,7 +2360,6 @@ Consideremos un sistema de tres puntos cuánticos descrito por el Hamiltoniano r
     + g(\hat{d}^{\dagger}_{R}\hat{d}_{L} + \hat{d}^{\dagger}_{L}\hat{d}_{R})
     + U \hat{n}_{D}(\hat{n}_{R} + \hat{n}_{L}) + U_{f}\hat{n}_{R}\hat{n}_{L}.
 \end{equation*}
-
 Para identificar los operadores de salto, diagonalizamos primero el término de acoplamiento mediante la transformación unitaria
 \begin{align*}
     \hat{d}_{-} & = \cos(\tfrac{\theta}{2})\hat{d}_{R} - \sin(\tfrac{\theta}{2})\hat{d}_{L}, \\
@@ -2375,14 +2371,12 @@ con
     \qquad 
     \Delta = \frac{\epsilon_{L}-\epsilon_{R}}{2}.
 \end{equation*}
-
 La transformación inversa permite escribir los operadores locales en función de los globales:
 \begin{align*}
     \hat{d}_{R} & = \cos(\tfrac{\theta}{2})\hat{d}_{-} + \sin(\tfrac{\theta}{2})\hat{d}_{+}, \\
     \hat{d}_{L} & = -\sin(\tfrac{\theta}{2})\hat{d}_{-} + \cos(\tfrac{\theta}{2})\hat{d}_{+}.
 \end{align*}
-
-De aquí se sigue que los operadores de número locales se expresan como
+Por lo tanto, los operadores de número locales se expresan como
 \begin{align*}
     \hat{d}^{\dagger}_{R}\hat{d}_{R} & =
     \cos^{2}(\tfrac{\theta}{2}) \hat{d}^{\dagger}_{-}\hat{d}_{-} + \sin^{2}(\tfrac{\theta}{2}) \hat{d}^{\dagger}_{+}\hat{d}_{+}
@@ -2391,12 +2385,11 @@ De aquí se sigue que los operadores de número locales se expresan como
     \sin^{2}(\tfrac{\theta}{2}) \hat{d}^{\dagger}_{-}\hat{d}_{-} + \cos^{2}(\tfrac{\theta}{2}) \hat{d}^{\dagger}_{+}\hat{d}_{+}
     - \cos(\tfrac{\theta}{2})\sin(\tfrac{\theta}{2})\big[\hat{d}^{\dagger}_{+}\hat{d}_{-} + \hat{d}^{\dagger}_{-}\hat{d}_{+} \big].
 \end{align*}
-Por lo tanto,
+Por ende,
 \begin{equation}
     \hat{n}_{L} + \hat{n}_{R} = \hat{n}_{+} + \hat{n}_{-}.
     \label{apendixnumber}
 \end{equation}
-
 Usando la ecuación \eqref{apendixnumber} y definiendo $\bar{\epsilon} = (\epsilon_{R} + \epsilon_{L})/2$, se obtiene
 \begin{equation}
     \epsilon_{R} \hat{n}_{R} + \epsilon_{L} \hat{n}_{L}
@@ -2405,7 +2398,6 @@ Usando la ecuación \eqref{apendixnumber} y definiendo $\bar{\epsilon} = (\epsil
     - \Delta \cos\theta \, (\hat{d}^{\dagger}_{-}\hat{d}_{-} - \hat{d}^{\dagger}_{+}\hat{d}_{+}).
 \label{apendix5:ec1}
 \end{equation}
-
 Además,
 \begin{equation}
     \hat{d}^{\dagger}_{R}\hat{d}_{L} =
@@ -2422,7 +2414,6 @@ Además,
     + \sin(\tfrac{\theta}{2})\cos(\tfrac{\theta}{2})\big( \hat{d}^{\dagger}_{+}\hat{d}_{+} - \hat{d}^{\dagger}_{-}\hat{d}_{-} \big).
     \label{apendix5:ec3}
 \end{equation}
-
 Combinando las ecuaciones \eqref{apendix5:ec1}–\eqref{apendix5:ec3} se obtiene
 \begin{equation*}
     \epsilon_{R} \hat{n}_{R} + \epsilon_{L} \hat{n}_{L}
@@ -2430,7 +2421,6 @@ Combinando las ecuaciones \eqref{apendix5:ec1}–\eqref{apendix5:ec3} se obtiene
     = (\bar{\epsilon} + \sqrt{\Delta^{2} + g^{2}})\hat{n}_{+}
     +  (\bar{\epsilon} - \sqrt{\Delta^{2} + g^{2}})\hat{n}_{-}.
 \end{equation*}
-
 Para el término de Coulomb, usando $\hat{n}^{2}_{i} = \hat{n}_{i}$, se tiene
 \begin{align*}
     2 \hat{n}_{R}\hat{n}_{L}
@@ -2438,21 +2428,18 @@ Para el término de Coulomb, usando $\hat{n}^{2}_{i} = \hat{n}_{i}$, se tiene
      = (\hat{n}_{+} +\hat{n}_{-})^{2} - (\hat{n}_{+} + \hat{n}_{-})
      = 2\hat{n}_{+}\hat{n}_{-}.
 \end{align*}
-
-Definiendo $\epsilon_{\pm} = \bar{\epsilon} \pm \sqrt{\Delta^{2}+g^{2}}$, el Hamiltoniano en la base global queda
+Al definir $\epsilon_{\pm} = \bar{\epsilon} \pm \sqrt{\Delta^{2}+g^{2}}$, el Hamiltoniano en la base global queda
 \begin{equation}
     \hat{H}_{S} = \epsilon_{D}\hat{n}_{D} + \epsilon_{+}\hat{n}_{+} + \epsilon_{-}\hat{n}_{-}
     + U\hat{n}_{D}(\hat{n}_{+} + \hat{n}_{-}) + U_{f}\hat{n}_{+}\hat{n}_{-}.
     \label{apendix5:ec4}
 \end{equation}
-
 La escritura en la base global permite calcular los operadores de salto a partir de
 \begin{align*}
     e^{i \hat{H}_{S}t}\hat{d}_{D}e^{-i\hat{H}_{S}t} & = \hat{d}_{D} + it[\hat{H}_{S},\hat{d}_{D}] + \frac{(it)^{2}}{2} [\hat{H}_{S},[\hat{H}_{S},\hat{d}_{D}]] + \dots, \\
     e^{i \hat{H}_{S}t}\hat{d}_{+}e^{-i\hat{H}_{S}t} & = \hat{d}_{+} + it[\hat{H}_{S},\hat{d}_{+}] + \frac{(it)^{2}}{2} [\hat{H}_{S},[\hat{H}_{S},\hat{d}_{+}]] + \dots, \\
     e^{i \hat{H}_{S}t}\hat{d}_{-}e^{-i\hat{H}_{S}t} & = \hat{d}_{-} + it[\hat{H}_{S},\hat{d}_{-}] + \frac{(it)^{2}}{2} [\hat{H}_{S},[\hat{H}_{S},\hat{d}_{-}]] + \dots.
 \end{align*}
-
 Para $\hat{d}_{D}$, usando la identidad
 \[
 \mathbf{1} = (\mathbf{1} - \hat{n}_{+})(\mathbf{1}-\hat{n}_{-}) + (\mathbf{1} - \hat{n}_{+})\hat{n}_{-} + (\mathbf{1} - \hat{n}_{-})\hat{n}_{+} + \hat{n}_{+}\hat{n}_{-},
@@ -2479,7 +2466,6 @@ De este modo,
     +  e^{-i(\epsilon_{D}+U)t} \hat{d}_{D}\big[(\mathbf{1} - \hat{n}_{+})\hat{n}_{-} + (\mathbf{1} - \hat{n}_{-})\hat{n}_{+}\big] \\
     & \quad + e^{-i(\epsilon_{D} + 2U)t}\hat{d}_{D} \hat{n}_{+}\hat{n}_{-}.
 \end{align*}
-
 Para $\hat{d}_{+}$, con la identidad
 \[
 \mathbf{1} = (\mathbf{1}-\hat{n}_{D})(\mathbf{1}-\hat{n}_{-}) + (\mathbf{1}-\hat{n}_{-})\hat{n}_{D} + (\mathbf{1}-\hat{n}_{D})\hat{n}_{-} + \hat{n}_{D}\hat{n}_{-},
@@ -2499,7 +2485,6 @@ y, por lo tanto,
     & \quad + e^{-i(\epsilon_{+}+U)t}\hat{d}_{+}(\mathbf{1}-\hat{n}_{-})\hat{n}_{D}
     + e^{-i(\epsilon_{+}+U+U_{f})t}\hat{d}_{+}\hat{n}_{-}\hat{n}_{D}.
 \end{align*}
-
 Por simetría, para $\hat{d}_{-}$ se obtiene
 \begin{align*}
     e^{i \hat{H}_{S}t}\hat{d}_{-}e^{-i\hat{H}_{S}t} & =
@@ -2508,7 +2493,6 @@ Por simetría, para $\hat{d}_{-}$ se obtiene
     & \quad + e^{-i(\epsilon_{-}+U)t}\hat{d}_{-}(\mathbf{1}-\hat{n}_{+})\hat{n}_{D}
     + e^{-i(\epsilon_{-}+U+U_{f})t}\hat{d}_{-}\hat{n}_{+}\hat{n}_{D}.
 \end{align*}
-
 Finalmente, los operadores de salto en la base local se expresan como
 \begin{align*}
     e^{i\hat{H}_{S}t}\hat{d}_{R}e^{-i\hat{H}_{S}t} & =
@@ -2518,7 +2502,6 @@ Finalmente, los operadores de salto en la base local se expresan como
     -\sin(\tfrac{\theta}{2})\, e^{i\hat{H}_{S}t}\hat{d}_{-}e^{-i\hat{H}_{S}t}
     + \cos(\tfrac{\theta}{2})\, e^{i\hat{H}_{S}t}\hat{d}_{+}e^{-i\hat{H}_{S}t}.
 \end{align*}
-
 En consecuencia, las frecuencias de Bohr asociadas a los operadores de creación/aniquilación del sistema son
 \begin{align*}
     \hat{d}_{D} & \rightarrow \{\epsilon_{D}, \epsilon_{D}+U, \epsilon_{D}+2U\}, \\
@@ -2570,6 +2553,7 @@ Sustituyendo en la ecuación \eqref{apendix5:ec5x}, se obtiene la identidad
 \]
 lo que asocia la frecuencia agrupada \(\epsilon\) con el operador
 \(\hat{d}_{L}(\mathbf{1}-\hat{n}_{D})(\mathbf{1}-\hat{n}_{R})\).
+\\
 
 De forma análoga, para \((\epsilon_{-}+U,\epsilon_{+}+U)\to \epsilon+U\), el operador efectivo resulta
 \[
@@ -2577,7 +2561,6 @@ De forma análoga, para \((\epsilon_{-}+U,\epsilon_{+}+U)\to \epsilon+U\), el op
 -\frac{\hat{d}_{-}\hat{n}_{D}(\mathbf{1}-\hat{n}_{+})}{\sqrt{2}}
 =\hat{d}_{L}\hat{n}_{D}(\mathbf{1}-\hat{n}_{R}).
 \]
-
 Para \((\epsilon_{-}+U_{f},\epsilon_{+}+U_{f})\to \epsilon+U_{f}\), se agrupan
 \[
 \frac{\hat{d}_{+}\hat{n}_{-}(\mathbf{1}-\hat{n}_{D})}{\sqrt{2}}
@@ -2595,6 +2578,7 @@ donde
 \end{align*}
 lo que asocia la frecuencia \(\epsilon+U_{f}\) al operador
 \(\hat{d}_{L}\hat{n}_{R}(\mathbf{1}-\hat{n}_{D})\).
+\\
 
 Finalmente, para \((\epsilon_{-}+U+U_{f},\epsilon_{+}+U+U_{f})\to \epsilon+U+U_{f}\), el operador efectivo queda
 \[
@@ -2602,7 +2586,6 @@ Finalmente, para \((\epsilon_{-}+U+U_{f},\epsilon_{+}+U+U_{f})\to \epsilon+U+U_{
 -\frac{\hat{d}_{-}\hat{n}_{D}\hat{n}_{+}}{\sqrt{2}}
 =\hat{d}_{L}\hat{n}_{D}\hat{n}_{R}.
 \]
-
 En resumen, tras la agrupación de frecuencias, los operadores de salto asociados a \(\hat{d}_{L}\) son
 \begin{align*}
 &\epsilon \ \ \to\ \ \hat{d}_{L}(\mathbf{1}-\hat{n}_{R})(\mathbf{1}-\hat{n}_{D}),\\
@@ -2631,6 +2614,7 @@ con
 \end{align*}
 por lo cual el operador efectivo para \(\epsilon\) es
 \(\hat{d}_{R}(\mathbf{1}-\hat{n}_{D})(\mathbf{1}-\hat{n}_{L})\).
+\\
 
 Para \((\epsilon_{+}+U,\epsilon_{-}+U)\to \epsilon+U\) se obtiene
 \[
@@ -2638,8 +2622,7 @@ Para \((\epsilon_{+}+U,\epsilon_{-}+U)\to \epsilon+U\) se obtiene
 +\frac{\hat{d}_{-}(\mathbf{1}-\hat{n}_{+})\hat{n}_{D}}{\sqrt{2}}
 =\hat{d}_{R}\hat{n}_{D}(\mathbf{1}-\hat{n}_{L}).
 \]
-
-Para \((\epsilon_{+}+U_{f},\epsilon_{-}+U_{f})\to \epsilon+U_{f}\),
+Mientras que, para \((\epsilon_{+}+U_{f},\epsilon_{-}+U_{f})\to \epsilon+U_{f}\),
 \[
 \frac{\hat{d}_{+}(\mathbf{1}-\hat{n}_{D})\hat{n}_{-}}{\sqrt{2}}
 +\frac{\hat{d}_{-}(\mathbf{1}-\hat{n}_{D})\hat{n}_{+}}{\sqrt{2}}
@@ -2657,6 +2640,7 @@ y
 de donde el operador efectivo es \(\hat{d}_{R}(\mathbf{1}-\hat{n}_{D})\hat{n}_{L}\). Finalmente, para
 \((\epsilon_{+}+U+U_{f},\epsilon_{-}+U+U_{f})\to \epsilon+U+U_{f}\), resulta
 \(\hat{d}_{R}\hat{n}_{D}\hat{n}_{L}\).
+\\
 
 En resumen, los operadores de salto asociados a \(\hat{d}_{R}\) tras la agrupación son
 \begin{align*}
@@ -2679,6 +2663,7 @@ Para que el sistema descrito en la sección \ref{sec5:modelo} exhiba un comporta
     C^{\sigma}_{j}(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t} \kappa_{j}(\omega) f_{F}(\sigma \beta(\omega-\mu)),
 \end{equation*}
 donde $f_{F}(x) = (\exp(x)+1)^{-1}$, \(j\in\{L,R\}\) y $\sigma = \pm$. 
+\\
 
 La distribución de Fermi puede ser calculada mediante aproximantes de Padé \cite{hu2011pade,schinabeck2019hierarchical}. Esto permite expresar la ditribución como una sumatoria 
 
@@ -2701,15 +2686,14 @@ Para obtener tasas de túnel que satisfagan dichas condiciones, se puede plantea
     \kappa_{j}(\epsilon_{0}) & = \kappa_{0} + \kappa_{f} \\
     \kappa_{j}(\epsilon_{0} + U) & = \kappa_{0} + \frac{\kappa_{f} W^{2} }{U^{2} + W^{2}}.
 \end{align*}
-
 A partir de estas igualdades, es posible determinar los parámetros $\kappa_{0}$, $\kappa_{f}$ y $W$. 
+\\
 
-Al sustituir la expresión de $\kappa_{j}(\omega)$ en la función de correlación, se obtiene
+Al sustituir la expresión de $\kappa_{j}(\omega)$ en la función correlación, se obtiene
 
 \begin{align*}
     C^{\sigma}_{j}(t) & = \frac{\kappa_{0}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t} f_{F}(\sigma \beta (\omega-\mu)) + \frac{\kappa_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)).
 \end{align*}
-
 La función correlación puede descomponerse en dos contribuciones
 
 \begin{equation}
@@ -2721,27 +2705,24 @@ La función correlación puede descomponerse en dos contribuciones
     C^{\sigma}_{jf}(t) = \frac{\kappa_{f}}{2\pi} \int_{-\infty}^{\infty}d\omega e^{i\sigma \omega t}\left[ \frac{W^{2}}{(\omega-\epsilon_{0})^{2} + W^{2}} \right] f_{F}(\sigma \beta (\omega-\mu)),
     \label{apendix5:correlacionf}
 \end{equation}
-
 y se podrá determinar el tiempo de correlación del baño como $\tau_{B} = \max\{\tau_{B0}, \tau_{Bf}\}$, donde $\tau_{B0}$ es el tiempo de correlación de la parte $C^{\sigma}_{j0}(t)$ y $\tau_{Bf}$ es el tiempo de correlación de la parte $C^{\sigma}_{jf}(t)$. 
+\\
 
 A continuación, se calculará una expresión analítica aproximada para la función de correlación $C^{\sigma}_{jf}(t)$. Para resolver la integral de la ecuación \eqref{apendix5:correlacionf}, será necesario localizar los polos en el plano complejo. Según la ecuación \eqref{apendix5:pade}, los polos asociados a la aproximación de Padé se encuentran en $\omega = \pm i \xi_{l}/\beta + \mu$, mientras que los polos correspondientes a la forma Lorentziana se ubican en $\omega = \pm i W + \epsilon_{0}$. Para realizar esta integración, se utilizará el teorema del residuo \cite{riley2006mathematical}, considerando un contorno de integración en forma de semicírculo en el hemisferio superior o inferior del plano complejo, dependiendo del signo de $\sigma$. Así, el residuo asociado a la Lorentziana es
 
 \begin{align*}
    \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\epsilon_{0} + iW)(\omega -\epsilon_{0} -iW)}\right]_{\omega = \pm i W + \epsilon_{0}} = \frac{1}{\pm 2iW} ( e^{\mp \sigma Wt} f_{F}[\sigma \beta(\pm iW +\epsilon_{0}-\mu)]e^{i\sigma \epsilon_{0}t}). 
 \end{align*}
-
 Si se cumple que $\sigma > 0$, se toma como contorno de integración el hemisferio inferior del plano complejo; en cambio, si $\sigma < 0$, se considera el hemisferio superior. De esta manera, se obtiene
 
 \begin{align*}
     \text{Res} \left[ \frac{e^{ i\sigma \omega t} f_{F}[\sigma \beta (\omega-\mu)] }{ (\omega-\epsilon_{0} + iW)(\omega -\epsilon_{0} -iW)}\right]_{\omega = \pm i W + \epsilon_{0}} = \frac{1}{ 2iW} ( e^{i\sigma \epsilon_{0}t}e^{- Wt} f_{F}[i\beta W + \sigma \beta(\epsilon_{0}-\mu)]). 
  \end{align*}
-
 Para encontrar el residuo asociado a los polos restantes, se deberá calcular
 
 \begin{align*}
     \text{Res} \left[ \frac{-e^{i\sigma \omega t}}{(\omega - \epsilon_{0})^{2} + W^{2} } \frac{ 2K_{l}[\sigma \beta (\omega-\mu)] }{ (\beta(\omega-\mu) + i \xi_{l} )(\beta(\omega-\mu) - i \xi_{l})} \right]_{\omega = \pm i \xi_{l}/\beta + \mu} & = \frac{-1}{\beta} \frac{e^{- \frac{\sigma \xi_{l}}{\beta}t} e^{i\sigma \mu t}(\pm K_{l}\sigma )}{ [ \frac{ \pm i\xi_{l}}{\beta} + (\mu - \epsilon_{0}) ]^{2} + W^{2} }.
 \end{align*}
-
 Al seleccionar la región de integración en función del signo de $\sigma$ como se hizo anteriormente, se concluye que
 
 \begin{align*}
@@ -2763,32 +2744,27 @@ donde
 \begin{equation*}
     \gamma_{\sigma,l} =  \left\{ \begin{array}{lc} W- \sigma i \epsilon_{0}  & l = 0 \\ \\ \frac{\xi_{l}}{\beta} - \sigma i \mu &  l \neq 0 \end{array} \right..
 \end{equation*}
-
 Esto permite obtener una expresión numérica para la función de correlación $C^{\sigma}_{jf}(t)$, y con ello evaluar su tiempo de correlación característico, $\tau_{Bf}$. Por otro lado, para la otra función de correlación es posible calcular la integral de forma analítica, es decir, evaluar
 
 \begin{align*}
        C_{j0}^{\sigma}(t) = \frac{\kappa_{0}}{2\pi} \int_{-\infty}^{\infty} d\omega e^{i\sigma \omega t }f_{F}(\sigma \beta (\omega -  \mu)).
 \end{align*}    
-
 Se puede  observar que este cálculo equivale a obtener la transformada de Fourier 
 
 \[
 \mathcal{F}\big(f[\sigma (\omega - \mu)]\big)(-\sigma t),
 \]
-
 de la función 
 
 \[
 f(\sigma(\omega-\mu)) = f_{F}(\sigma \beta (\omega-\mu)),
 \]
-
 empleando la propiedad
 
 \begin{equation}
 \mathcal{F}(f[\sigma (\omega - \mu)])(-\sigma t) = e^{-i \sigma \mu t}\mathcal{F}(f[\sigma \omega])(-\sigma t).
 \label{apendiceprop}
 \end{equation}
-
 Usando la ecuación \eqref{apendiceprop} podemos calcular la transformación
 
 \begin{align*}
@@ -2801,13 +2777,11 @@ así
 \begin{equation*}
     C^{\sigma}_{j0}(t) = \frac{\kappa_{0}}{2}e^{-i\sigma \mu t} \left[\delta(t) - \frac{i}{\beta \sigma \sinh(\pi t/\beta \sigma)} \right].
 \end{equation*}
-
 Gracias a que se dispone de una expresión analítica para $C^{\sigma}_{j0}(t)$, es posible determinar el tiempo de correlación $\tau_{B0}$. El análisis se centra principalmente en el término que involucra $\sinh(\pi t/\beta \sigma)$, ya que, dado que $\sigma = \pm 1$, el parámetro relevante es $\pi t/\beta$. Para tiempos $t > \beta$, se puede aproximar que 
 
 \[
 \frac{1}{\sinh(\pi t/\beta \sigma)} \propto e^{-t/\beta},
 \]
-
 lo que implica que el tiempo de correlación del baño está dado por el inverso de la temperatura, es decir, $\tau_{B0} = \beta$. Por consiguiente, el tiempo de correlación efectivo asociado a un único reservorio queda definido como
 
 \[
@@ -2819,6 +2793,7 @@ lo que implica que el tiempo de correlación del baño está dado por el inverso
 \subsection{Cálculo numérico para los tiempos de correlación}
 \label{appendix5tauf}
 Dado que es posible reconstruir las tasas de túnel $\kappa_{L}(\omega)$ y $\kappa_{R}(\omega)$ mediante una función de tipo Lorentziana, se pueden construir perfiles que satisfacen las condiciones $\kappa_{L}(\epsilon) = \kappa_{R}(\epsilon+U) = 1/100$ y $\kappa_{L}(\epsilon+U) = \kappa_{R}(\epsilon) = 1/600$. Con ello es posible calcular numéricamente las funciones de correlación asociadas.  
+\\
 
 Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los baños $L$ y $R$, se emplea la ecuación \eqref{correlationf}. La estimación de $\tau_{Bf}$ se realiza de manera numérica, considerando como referencia el instante en el que las funciones de correlación se vuelven despreciables. Posteriormente, para verificar si el sistema puede describirse mediante una aproximación markoviana, se contrasta con el tiempo característico de relajación $\tau_{R}$, exigiendo que se cumpla $\tau_{R} \gg \tau_{Bf}$.  
 
@@ -2829,6 +2804,7 @@ Para determinar los tiempos de correlación $\tau_{Bf}$ correspondientes a los b
 \insertimage[\label{img:correlacionplusimag}]{ejemplos/cplusimag.pdf}{scale=0.5}{(a) Parte imaginaria de las funciones de correlación $\sigma=+$ del baño $L$ en función del tiempo. (b) Parte imaginaria de las funciones de correlación $\sigma=+$ del baño $R$ en función del tiempo.}
 
 A partir de las Figuras \ref{img:correlacionminus}, \ref{img:correlacionminusimag}, \ref{img:correlacionplus} y \ref{img:correlacionplusimag}, se observa que, para $t > 0.4$, las funciones de correlación correspondientes a ambos baños se vuelven prácticamente nulas.  
+\\
 
 Con el fin de contrastar esta escala temporal con la dinámica del sistema, en la Figura \ref{img:probas} se muestra la evolución temporal de ciertas componentes de la matriz densidad, lo que permite estimar el tiempo de relajación hacia el estado estacionario.  
 
@@ -2843,7 +2819,6 @@ En esta subsección se presenta la deducción de la fórmula de la concurrencia.
 \begin{equation*}
     \hat{\rho}_{LR} = \text{Tr}_{D}\{ \hat{\rho}_{S} \}.
 \end{equation*}
-
 La matriz densidad $\hat{\rho}_{S}$ se expresará en la base  
 \[
 \left\{ |0,0,0\rangle,\ |1,0,0\rangle,\ |0,1,0\rangle,\ |0,0,1\rangle,\ |1,1,0\rangle,\ |1,0,1\rangle,\ |0,1,1\rangle,\ |1,1,1\rangle \right\}.
@@ -2866,6 +2841,7 @@ En esta representación, $\hat{\rho}_{S}$ toma la forma
 \end{equation}
 
 En esta matriz densidad no aparecen coherencias entre estados con distinto número total de partículas, lo que se explica por el principio de superselección de carga \cite{bartlett2007reference,wick1997intrinsic}. Asimismo, dado que el punto cuántico $D$ sólo interactúa con los puntos $L$ y $R$ mediante una interacción de Coulomb, no se generan coherencias del tipo $L$-$D$ ni $R$-$D$. 
+\\
 
 Al proyectar sobre la base $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle\}$ se obtiene la matriz reducida del subsistema $LR$,
 
@@ -2878,7 +2854,6 @@ Al proyectar sobre la base $\{|00\rangle, |10\rangle, |01\rangle, |11\rangle\}$ 
         0 & 0 & 0 & \rho_{110} + \rho_{111} 
         \end{bmatrix}.
 \end{equation*}
-
 Con esta reducción, la concurrencia se define como
 
 \begin{equation*}
@@ -2893,6 +2868,7 @@ donde los $\lambda_{i}$ corresponden a las raíces cuadradas de los autovalores 
     \label{apendixconcu}
 \end{equation}
 y $\sigma_{y}$ es la matriz de Pauli correspondiente.  
+\\
 
 Al aplicar la ecuación \eqref{apendixconcu} se obtiene
 
@@ -2916,7 +2892,6 @@ con  $p_{0}=\rho_{000}+\rho_{001}$, $p_{L}=\rho_{100} + \rho_{101}$, $p_{R}=\rho
         0 & 0 & 0 & p_{0}p_{D}
         \end{bmatrix}.
 \end{equation*}
-
 En el régimen en que $p_{D}$ y $p_{0}$ son pequeños, el orden decreciente de los autovalores queda dado por
 
 \begin{equation*}
@@ -2926,7 +2901,6 @@ En el régimen en que $p_{D}$ y $p_{0}$ son pequeños, el orden decreciente de l
     \hspace{10mm}  
     \lambda_{3}=\lambda_{4} = \sqrt{p_{0}p_{D}}.
 \end{equation*}
-
 Finalmente, la concurrencia del subsistema $LR$ se expresa como
 
 \begin{equation*}
@@ -2952,11 +2926,10 @@ que es una ecuación lineal no homogénea del tipo
 \(
 \frac{dy}{dt}-A(t)y=B(t)
 \).
-Puede resolverse mediante un factor integrante
+La cual puede resolverse mediante un factor integrante
 \begin{equation*}
     \check{\mu}(t)=\exp\!\left(-\int_{0}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\,ds\right).
 \end{equation*}
-
 Multiplicando por $\check{\mu}(t)$ y usando la regla del producto:
 \begin{equation*}
     \check{\mu}(t)\frac{d}{dt}\check{\mathcal{Q}}|\hat{\rho}(t)\rangle\rangle
@@ -2974,7 +2947,7 @@ con solución
         |\hat{\rho}(\tau)\rangle\rangle\,d\tau .
     \label{apendixclasic1}
 \end{equation}
-Multiplicando la ecuación \eqref{apendixclasic1} por $\check{\mu}^{-1}(t)$:
+A continuación, multiplicamos la ecuación \eqref{apendixclasic1} por $\check{\mu}^{-1}(t)$ y se obtiene
 \begin{equation}
     \check{\mathcal{Q}}|\hat{\rho}(t)\rangle\rangle
     =\check{\mu}^{-1}(t)\check{\mathcal{Q}}|\hat{\rho}(0)\rangle\rangle
@@ -2982,6 +2955,8 @@ Multiplicando la ecuación \eqref{apendixclasic1} por $\check{\mu}^{-1}(t)$:
      |\hat{\rho}(\tau)\rangle\rangle\,d\tau .
     \label{apendixclasic2}
 \end{equation}
+
+
 Definimos el propagador restringido
 \begin{equation*}
     \check{\mathcal{G}}(t,s)=\exp\!\left(\int_{s}^{t}\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\,dt'\right),
@@ -2993,8 +2968,7 @@ con lo cual la ecuación \eqref{apendixclasic2} se reescribe como
      +\int_{0}^{t}\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}
         |\hat{\rho}(\tau)\rangle\rangle\,d\tau .
 \end{equation*}
-
-Insertando esta expresión en la ecuación para el subespacio proyectado:
+Insertando esta expresión en la ecuación para el subespacio proyectado obtenemos
 \begin{equation}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle\rangle
     =\check{\mathcal{P}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}|\hat{\rho}(t)\rangle\rangle
@@ -3005,6 +2979,7 @@ Insertando esta expresión en la ecuación para el subespacio proyectado:
 \end{equation}
 La identidad anterior es exacta: el primer término describe la parte markoviana, el segundo un
 corrimiento inicial y el tercero los efectos de memoria.
+\\
 
 Usaremos ahora las propiedades
 \begin{equation*}
@@ -3015,6 +2990,7 @@ Usaremos ahora las propiedades
 donde $\check{\mathcal{L}}_{f}=\check{\mathcal{L}}_{0}+\check{\mathcal{V}}$. Intuitivamente,
 $\check{\mathcal{V}}$ (el acoplamiento que genera túnel coherente) lleva estados diagonales fuera
 del subespacio diagonal; por eso, $\check{\mathcal{P}}\check{\mathcal{V}}\check{\mathcal{P}}=0$.
+\\
 
 Supondremos además un estado inicial sin coherencias:
 $\check{\mathcal{Q}}|\hat{\rho}(0)\rangle\rangle=0$.
@@ -3027,6 +3003,7 @@ Escribimos entonces
       +\check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{Q}}\big]\,dt'\right),
 \end{align*}
 usando que $\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}=\check{\mathcal{Q}}\check{\mathcal{P}}\check{\mathcal{L}}_{0}=0$.
+\\
 
 La ecuación proyectada principal toma la forma
 \begin{equation*}
@@ -3036,7 +3013,6 @@ La ecuación proyectada principal toma la forma
       \int_{0}^{t}\!\check{\mathcal{G}}(t,\tau)\check{\mathcal{Q}}\check{\mathcal{L}}_{f}\check{\mathcal{P}}
       |\hat{\rho}(\tau)\rangle\rangle\,d\tau .
 \end{equation*}
-
 Como el exponencial en $\check{\mathcal{G}}$ está restringido a $\check{\mathcal{Q}}$, al actuar
 $\check{\mathcal{P}}\check{\mathcal{L}}_{0}$ se reduce a una contribución proporcional a $(t-\tau)$
 que se anula por la idempotencia de los proyectores en la cadena resultante; por lo tanto,
@@ -3059,7 +3035,7 @@ exponencial no contribuye en esta cadena, con lo cual
       \check{\mathcal{Q}}\check{\mathcal{V}}\check{\mathcal{P}}
       |\hat{\rho}(\tau)\rangle\rangle\,d\tau .
 \end{equation*}
-Haciendo el cambio $\tau\mapsto t-\tau$:
+Haciendo el cambio $\tau\mapsto t-\tau$, vemos que 
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle\rangle
     =\check{\mathcal{P}}\check{\mathcal{L}}_{0}\check{\mathcal{P}}|\hat{\rho}(t)\rangle\rangle
@@ -3095,12 +3071,12 @@ y segundo, extiende el límite superior de integración a $\infty$:
       |\hat{\rho}(t)\rangle\rangle .
 \end{equation*}
 
-Definiendo el inverso de Drazin del superoperador $\check{\mathcal{L}}_{0}$ como
+Así, se encuentra el inverso de Drazin del superoperador $\check{\mathcal{L}}_{0}$ como
 \[
 \check{\mathcal{L}}_{0}^{+}
 =\int_{0}^{\infty}\!e^{(\check{\mathcal{Q}}\check{\mathcal{L}}_{0}\check{\mathcal{Q}})\tau}\,d\tau,
 \]
-obtenemos finalmente la ecuación para la diagonal de la matriz densidad:
+y obtenemos finalmente la ecuación para la diagonal de la matriz densidad:
 \begin{equation*}
     \frac{d}{dt}\check{\mathcal{P}}|\hat{\rho}(t)\rangle\rangle
     =\big(\check{\mathcal{L}}_{0}
@@ -3123,6 +3099,7 @@ el proyector sobre el subespacio estacionario (núcleo de $\check{\mathcal{L}}_{
 respectivamente, donde $|x_{0}\rangle\rangle$ es el estado estacionario (por la derecha) y
 $\langle\langle y_{0}|$ es el autoestado por la izquierda, de modo que cumplen
 $\langle\langle y_{0}|x_{0}\rangle\rangle=1$.
+\\
 
 En estas condiciones, el \emph{inverso de Drazin} $\check{\mathcal{L}}_{0}^{+}$ es el único operador que satisface
 \begin{align*}
@@ -3130,8 +3107,6 @@ En estas condiciones, el \emph{inverso de Drazin} $\check{\mathcal{L}}_{0}^{+}$ 
     \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} &= \check{\mathcal{L}}_{0}^{+},\\
     \check{\mathcal{L}}_{0}\check{\mathcal{L}}_{0}^{+} &= \check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0} = \check{\mathcal{Q}}.
 \end{align*}
-
-
 Bajo las hipótesis anteriores, una forma útil  de definir
 $\check{\mathcal{L}}_{0}^{+}$ es
 \begin{equation}
@@ -3148,7 +3123,7 @@ estrictamente menor que la del modo estacionario). De la ecuación \eqref{eq:Dra
 = \mathbf{0}-\check{\mathcal{Q}} = \check{\mathcal{Q}},
 \]
 y análogamente $\check{\mathcal{L}}_{0}^{+}\check{\mathcal{L}}_{0}=\check{\mathcal{Q}}$.
-
+\\
 
 Si $\check{\mathcal{L}}_{0}$ es diagonalizable (o al menos tiene base de vectores generalizados) con
 autovectores (generalizados) derechos $|x_{j}\rangle\rangle$ e izquierdos $\langle\langle y_{j}|$:
@@ -3261,7 +3236,7 @@ Equivalente y de forma explícita,
      &\quad + c_{1}|101\rangle \langle 011| + c^{*}_{1}|011\rangle \langle 101|.
 \end{align*}
 
-Por otra parte, las contribuciones de los disipadores en $\mathcal{L}_{L}$ y $\mathcal{L}_{R}$ se expresan, actuando sobre $\hat{\rho}_{S}$, mediante
+Las contribuciones de los disipadores en $\mathcal{L}_{L}$ y $\mathcal{L}_{R}$ se expresan, actuando sobre $\hat{\rho}_{S}$, mediante
 \begin{align*}
     \mathcal{D}[\hat{d}^{\dagger}_{L}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{000}|100\rangle \langle 100| - \rho_{000}|000\rangle \langle 000|, \\ 
     \mathcal{D}[\hat{d}^{\dagger}_{R}(\textbf{1}-\hat{n}_{D})(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{000}|010\rangle \langle 010| - \rho_{000}|000\rangle \langle 000|, \\  
@@ -3280,7 +3255,6 @@ Por otra parte, las contribuciones de los disipadores en $\mathcal{L}_{L}$ y $\m
     \mathcal{D}[\hat{d}_{L}\hat{n}_{D}(\textbf{1}-\hat{n}_{R})\hat{\rho}_{S}] & = \rho_{101}|001\rangle \langle 001| - \rho_{101}|101\rangle \langle 101| - \frac{1}{2}(\beta |101\rangle \langle 011| + \beta^{*}|011\rangle \langle 101|), \\ 
     \mathcal{D}[\hat{d}_{R}\hat{n}_{D}(\textbf{1}-\hat{n}_{L})\hat{\rho}_{S}] & = \rho_{011}|001\rangle \langle 001| - \rho_{011}|011\rangle \langle 011| - \frac{1}{2}(\beta^{*} |011\rangle \langle 101| + \beta|101\rangle \langle 011|).
 \end{align*}
-
 Con estas expresiones, los flujos de información estacionarios se obtienen evaluando
 $\dot{I}_{i} = \mathrm{Tr}\!\big[(\mathcal{L}_{i}\hat{\rho}_{S}) \ln \hat{\rho}_{S}\big]$. En particular,
 \begin{align*}
@@ -3295,24 +3269,25 @@ $\dot{I}_{i} = \mathrm{Tr}\!\big[(\mathcal{L}_{i}\hat{\rho}_{S}) \ln \hat{\rho}_
       \kappa_{R}\!\left(f_{R}(\epsilon)\,[b_{0}\rho_{000} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - b_{0}\rho_{010}] \right) \\ 
       &\quad + \kappa^{U}_{R}\!\left(f_{R}(\epsilon + U)\,[b_{1} \rho_{001} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -a_{1}\rho_{011} - \mathrm{Re}(b^{*}_{1}\beta )] \right) \\  
       &\quad + \kappa_{R}\!\left( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -a_{0}\rho_{100} - \mathrm{Re}(\alpha c^{*}_{0})]  + (1-f_{R}(\epsilon + U_{f}))[a_{0}\rho_{110} - \rho_{110}\ln \rho_{110}] \right) \\  
-      &\quad + \kappa_{R}\!\left( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}] \right).
+      &\quad + \kappa_{R}\!\left( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- a_{1}\rho_{101}] + (1-f_{R}(\epsilon+U+U_{f}) )[a_{1}\rho_{111} - \rho_{111}\ln \rho_{111}] \right). \\
 \end{align*}
-
 Si bien la evaluación numérica de $\dot{I}_{i}$ es directa, disponer de expresiones analíticas permite aislar con claridad la contribución de las coherencias cuánticas, que aparece encapsulada en los parámetros $a_i$, $b_i$ y en los términos $\mathrm{Re}(\alpha c_0^*)$ y $\mathrm{Re}(b_1^* \beta)$. En el límite en que las coherencias se anulan se recupera el caso clásico, es decir
 \begin{align*}
  \lim_{\alpha,\beta \to 0}\dot{I}_{L}  &= \dot{I}_{L\text{classic}}   =
  \kappa_{L}\!\left(f_{L}(\epsilon)[\rho_{000}\ln \rho_{100} - \rho_{000}\ln \rho_{000}] + (1-f_{L}(\epsilon))[\rho_{100}\ln \rho_{000} - \rho_{100}\ln \rho_{100}] \right)  \\ 
       &\quad + \kappa^{U}_{L}\!\left(f_{L}(\epsilon + U)[\rho_{001}\ln \rho_{101} - \rho_{001}\ln \rho_{001}] + (1-f_{L}(\epsilon + U))[\rho_{101}\ln \rho_{001} -\rho_{101}\ln \rho_{101}] \right) \\  
       &\quad + \kappa_{L}\!\left( f_{L}(\epsilon + U_{f})[\rho_{010}\ln \rho_{110} -\rho_{010}\ln \rho_{010}] + (1-f_{L}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{010} - \rho_{110}\ln \rho_{110}] \right) \\  
-      &\quad + \kappa_{L}\!\left( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}] \right)
-      + \kappa_{L}\!\left( (1-f_{L}(\epsilon+U+U_{f}))[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}] \right),
-\end{align*}
+      &\quad + \kappa_{L}\!\left( f_{L}(\epsilon + U + U_{f})[\rho_{011}\ln \rho_{111}- \rho_{011}\ln \rho_{011}] \right) \\
+      & \quad + \kappa_{L}\!\left( (1-f_{L}(\epsilon+U+U_{f}))[\rho_{111}\ln \rho_{011} - \rho_{111}\ln \rho_{111}] \right),
+    \end{align*}
+
 \begin{align*}
  \lim_{\alpha,\beta \to 0}\dot{I}_{R}  &= \dot{I}_{R\text{classic}}   =
  \kappa_{R}\!\left(f_{R}(\epsilon)[\rho_{000}\ln \rho_{010} - \rho_{000}\ln \rho_{000}] + (1-f_{R}(\epsilon))[\rho_{010}\ln \rho_{000} - \rho_{010}\ln \rho_{010}] \right)  \\ 
       &\quad + \kappa^{U}_{R}\!\left(f_{R}(\epsilon + U)[\rho_{001}\ln \rho_{011} - \rho_{001}\ln \rho_{001}] + (1-f_{R}(\epsilon + U))[\rho_{011}\ln \rho_{001} -\rho_{011}\ln \rho_{011}] \right) \\  
       &\quad + \kappa_{R}\!\left( f_{R}(\epsilon + U_{f})[\rho_{100}\ln \rho_{110} -\rho_{100}\ln \rho_{100}] + (1-f_{R}(\epsilon + U_{f}))[\rho_{110}\ln \rho_{100} - \rho_{110}\ln \rho_{110}] \right) \\  
-      &\quad + \kappa_{R}\!\left( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}] \right)
+      &\quad + \kappa_{R}\!\left( f_{R}(\epsilon + U + U_{f})[\rho_{101}\ln \rho_{111}- \rho_{101}\ln \rho_{101}] \right) \\
+      & \quad
       + \kappa_{R}\!\left( (1-f_{R}(\epsilon+U+U_{f}))[\rho_{111}\ln \rho_{101} - \rho_{111}\ln \rho_{111}] \right).
 \end{align*}
 
