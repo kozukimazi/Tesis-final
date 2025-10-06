@@ -32,7 +32,7 @@ Dicha formulación se expresa en la base local e incorpora términos no seculare
 
 Trabajos previos han empleado el formalismo desarrollado por Potts para analizar los efectos cuánticos en modelos compuestos por dos puntos cuánticos, cada uno acoplado a un reservorio distinto. Asimismo, se ha investigado cómo dichos efectos influyen en el transporte de partículas~\cite{prech2023entanglement}. Por otro lado, el trabajo de Esposito y Horowitz investigó los flujos de información en un sistema clásico constituido por dos puntos cuánticos, donde uno de ellos está acoplado a dos reservorios y el otro a un único baño térmico. En dicho estudio, se demostró que el sistema actúa como un Demonio de Maxwell autónomo~\cite{horowitz2014thermodynamics}.\\
 
-En este trabajo se estudia un Demonio de Maxwell autónomo en el régimen cuántico mediante la extensión del modelo de dos puntos cuánticos de \cite{horowitz2014thermodynamics} a un sistema de tres puntos cuánticos, denominados $L,R$ y $D$. Para ello se emplea el formalismo de Potts, a partir del cual se deriva una ecuación de Lindblad semilocal que describe la evolución temporal del sistema. Cada punto cuántico está acoplado a un reservorio distinto. Uno de ellos desempeña el rol de Demonio de Maxwell, mientras que los otros dos conforman el subsistema físico $LR$. \\
+En este trabajo se estudia un Demonio de Maxwell autónomo en el régimen cuántico mediante la extensión del modelo de dos puntos cuánticos de \cite{horowitz2014thermodynamics} a un sistema de tres puntos cuánticos, denominados $L,R$ y $D$. Para ello se emplea el formalismo de Potts, a partir del cual se deriva una ecuación de Lindblad semilocal que describe la evolución temporal del sistema. Cada punto cuántico está acoplado a un reservorio distinto. El sitio $D$ desempeña el rol de Demonio de Maxwell, mientras que los otros dos conforman el subsistema físico $LR$. \\
 
 En este subsistema se introducen interacciones adicionales que permiten explorar la dinámica cuántica, en particular el acoplamiento entre los dos puntos que lo constituyen. Las simulaciones numéricas de la ecuación de Lindblad permiten obtener los flujos de información y diversas magnitudes termodinámicas relevantes. Dichos resultados se calculan en un régimen donde emergen efectos cuánticos como la coherencia y el entrelazamiento entre los sitios que componen el subsistema $LR$. \\ 
 
@@ -388,7 +388,7 @@ El capítulo se organiza de la siguiente manera: en la sección \ref{sec2:estadi
 
 \section{Estadística de medición en dos puntos}
 
-En esta sección se introduce el esquema de medición en dos puntos, ampliamente utilizado en termodinámica cuántica para definir distribuciones de probabilidad de magnitudes estocásticas\cite{esposito2009nonequilibrium}. El objetivo es caracterizar rigurosamente el calor y el trabajo intercambiados con los reservorios como variables aleatorias, en lugar de limitarse únicamente a sus valores promedio. Aunque dichos promedios pueden calcularse mediante las expresiones \eqref{sec3:calor} y \eqref{sec3:trabajo}, la naturaleza cuántica de la evolución implica que los resultados de una medición sobre los reservorios pueden variar en diferentes repeticiones del experimento. Por ello, resulta natural describir el problema en términos de la distribución de probabilidad asociada al calor y al trabajo.
+En esta sección se introduce el esquema de medición en dos puntos, el cual permite definir rigurosamente las distribuciones de probabilidad asociadas a magnitudes termodinámicas estocásticas, y con ello acceder a sus fluctuaciones\cite{esposito2009nonequilibrium}. El objetivo es caracterizar rigurosamente el calor y el trabajo intercambiados con los reservorios como variables aleatorias, en lugar de limitarse únicamente a sus valores promedio. Aunque dichos promedios pueden calcularse mediante las expresiones \eqref{sec3:calor} y \eqref{sec3:trabajo}, la naturaleza cuántica de la evolución implica que los resultados de una medición sobre los reservorios pueden variar en diferentes repeticiones del experimento. Por ello, resulta natural describir el problema en términos de la distribución de probabilidad asociada al calor y al trabajo.
 
 Consideremos un sistema total con condición inicial factorizada
 \[
@@ -886,7 +886,7 @@ En este capítulo se introduce el concepto de información termodinámica. En la
 
 \section{Demonio de Maxwell}
 
-El Demonio de Maxwell es un experimento mental propuesto por James Clerk Maxwell en su obra \cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$ y presión $P$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por un ente denominado ``Demonio'', el cual tiene la capacidad de manipularla sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos, de modo que puede discriminar entre partículas rápidas y lentas. Dado que la temperatura está directamente relacionada con la velocidad promedio de las partículas, esta diferencia influye en la temperatura del compartimiento hacia el cual se dirigen. En particular, el Demonio permite el paso del compartimiento A al B únicamente a las partículas más rápidas, mientras que deja pasar del compartimiento B al A las más lentas. Si el número de partículas en cada compartimiento permanece constante, este proceso conduce a un aumento de la temperatura en A y a una disminución en B, generando así una diferencia $\Delta T$ entre ambos lados.
+El Demonio de Maxwell es un experimento mental propuesto por James Clerk Maxwell en su obra \cite{Maxwell_1871}. Consiste en una caja dividida en dos compartimientos, A y B, cada uno de ellos lleno con un gas ideal a temperatura $T$, como se muestra en la Figura \ref{img:demon}. Entre ambos compartimientos existe una compuerta sin masa, que permite el paso de partículas de un lado a otro. Esta puerta es controlada por un ente denominado ``Demonio'', el cual tiene la capacidad de manipularla sin costo energético. La característica esencial del Demonio es que conoce la velocidad de cada partícula en ambos compartimientos, de modo que puede discriminar entre partículas rápidas y lentas. Dado que la temperatura está directamente relacionada con la velocidad promedio de las partículas, esta diferencia influye en la temperatura del compartimiento hacia el cual se dirigen. En particular, el Demonio permite el paso del compartimiento A al B únicamente a las partículas más rápidas, mientras que deja pasar del compartimiento B al A las más lentas. Si el número de partículas en cada compartimiento permanece constante, este proceso conduce a un aumento de la temperatura en A y a una disminución en B, generando así una diferencia $\Delta T$ entre ambos lados.
 \\
 
 El cambio de entropía del sistema es
@@ -1132,7 +1132,7 @@ donde la entropía de von Neumann del sistema es
 \[
 S=-\,\mathrm{Tr}\{\hat{\rho}_{S}\ln\hat{\rho}_{S}\}.
 \]
-Comparando las ecuaciones \eqref{spohninfo} y \eqref{spohninfolocal} se identifica el flujo de calor desde el reservorio $\alpha$ hacia el sistema como
+En las ecuaciones \eqref{spohninfo} y \eqref{spohninfolocal} se identifica el flujo de calor desde el reservorio $\alpha$ hacia el sistema como
 \[
 J_{\alpha,g}
 =\mathrm{Tr}\!\left\{(\mathcal{L}_{\alpha,g}\hat{\rho}_{S})
@@ -1291,7 +1291,7 @@ Así, la variación de energía libre presenta dos contribuciones: una asociada 
 \[
     \dot{W}_{i} \geq \dot{E}_{i} + T_{i}\dot{I}_{i}.
 \]
-Esta cota muestra que la capacidad del subsistema $i$ para realizar trabajo externo depende no sólo del intercambio energético, sino también del flujo de información que reciba.
+Esta cota muestra que la capacidad del subsistema $i$ para realizar trabajo externo depende no sólo del flujo energético, sino también del flujo de información que reciba.
 \\
 
 En régimen estacionario, la energía total permanece constante,
